@@ -1,0 +1,678 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Video Overview | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a class="sub-nav-item" href="../index.html">SDK 15.04.1</a> &rsaquo;</li>
+
+<li><a class="sub-nav-item" href="../QtMultimedia/index.html">QtMultimedia</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Video Overview</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: videooverview.html -->
+	<!-- Source Format: qdoc -->
+<h1>Video Overview</h1>
+<div id="page_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$videooverview.html-description -->
+<div class="descr"> <a name="details"></a>
+<a name="video-features"></a>
+<h2 id="video-features">Video Features</h2>
+<p>Qt Multimedia offers both high and low level C++ classes for playing and manipulating video data, and QML types for playback and control. Some of these classes also overlap with both <a href="../QtMultimedia.cameraoverview/index.html">camera</a> and <a href="../QtMultimedia.audiooverview/index.html">audio</a> classes, which can be useful.</p>
+<a name="video-implementation-details"></a>
+<h2 id="video-implementation-details">Video Implementation Details</h2>
+<a name="multimedia-playing-video"></a><a name="playing-video-in-c"></a>
+<h3 >Playing Video in C++</h3>
+<p>You can use the QMediaPlayer class to decode a video file, and display it using QVideoWidget, QGraphicsVideoItem, or a custom class.</p>
+<p>Here's an example of using QVideoWidget:</p>
+<pre class="cpp">player <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QMediaPlayer</span>;
+playlist <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QMediaPlaylist</span>(player);
+playlist<span class="operator">-</span><span class="operator">&gt;</span>addMedia(<span class="type">QUrl</span>(<span class="string">&quot;http://example.com/myclip1.mp4&quot;</span>));
+playlist<span class="operator">-</span><span class="operator">&gt;</span>addMedia(<span class="type">QUrl</span>(<span class="string">&quot;http://example.com/myclip2.mp4&quot;</span>));
+videoWidget <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QVideoWidget</span>;
+player<span class="operator">-</span><span class="operator">&gt;</span>setVideoOutput(videoWidget);
+videoWidget<span class="operator">-</span><span class="operator">&gt;</span>show();
+playlist<span class="operator">-</span><span class="operator">&gt;</span>setCurrentIndex(<span class="number">1</span>);
+player<span class="operator">-</span><span class="operator">&gt;</span>play();</pre>
+<p>And an example with QGraphicsVideoItem:</p>
+<pre class="cpp">player <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QMediaPlayer</span>(<span class="keyword">this</span>);
+<span class="type">QGraphicsVideoItem</span> <span class="operator">*</span>item <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QGraphicsVideoItem</span>;
+player<span class="operator">-</span><span class="operator">&gt;</span>setVideoOutput(item);
+graphicsView<span class="operator">-</span><span class="operator">&gt;</span>scene()<span class="operator">-</span><span class="operator">&gt;</span>addItem(item);
+graphicsView<span class="operator">-</span><span class="operator">&gt;</span>show();
+player<span class="operator">-</span><span class="operator">&gt;</span>setMedia(<span class="type">QUrl</span>(<span class="string">&quot;http://example.com/myclip4.ogv&quot;</span>));
+player<span class="operator">-</span><span class="operator">&gt;</span>play();</pre>
+<a name="playing-video-in-qml"></a>
+<h3 >Playing Video in QML</h3>
+<p>You can use <a href="../QtMultimedia.VideoOutput/index.html">VideoOutput</a> to render content that is provided by either a <a href="../QtMultimedia.MediaPlayer/index.html">MediaPlayer</a> or a <a href="../QtMultimedia.qml-multimedia/index.html#camera">Camera</a>. The <a href="../QtMultimedia.VideoOutput/index.html">VideoOutput</a> is a visual component that can be transformed or acted upon by shaders (as the <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04.1/QtMultimedia.video-qmlvideofx/">QML Video Shader Effects Example</a> shows), while all media decoding and playback control is handled by the <a href="../QtMultimedia.MediaPlayer/index.html">MediaPlayer</a>.</p>
+<p>Alternatively there is also a higher level <a href="../QtMultimedia.qml-multimedia/index.html#video">Video</a> type that acts as a single, visual element to play video and control playback.</p>
+<a name="working-with-low-level-video-frames"></a>
+<h3 >Working with Low Level Video Frames</h3>
+<p>Qt Multimedia offers a number of low level classes to make handling video frames a bit easier. These classes are primarily used when writing code that processes video or camera frames (for example, detecting barcodes, or applying a fancy vignette effect), or needs to display video in a special way that is otherwise unsupported.</p>
+<p>The QVideoFrame class encapsulates a video frame and allows the contents to be mapped into system memory for manipulation or processing, while deriving a class from QAbstractVideoSurface allows you to receive these frames from QMediaPlayer and QCamera.</p>
+<pre class="cpp"><span class="keyword">class</span> MyVideoSurface : <span class="keyword">public</span> <span class="type">QAbstractVideoSurface</span>
+{
+    <span class="type">QList</span><span class="operator">&lt;</span><span class="type">QVideoFrame</span><span class="operator">::</span>PixelFormat<span class="operator">&gt;</span> supportedPixelFormats(
+            <span class="type">QAbstractVideoBuffer</span><span class="operator">::</span>HandleType handleType <span class="operator">=</span> <span class="type">QAbstractVideoBuffer</span><span class="operator">::</span>NoHandle) <span class="keyword">const</span>
+    {
+        Q_UNUSED(handleType);
+        <span class="comment">// Return the formats you will support</span>
+        <span class="keyword">return</span> <span class="type">QList</span><span class="operator">&lt;</span><span class="type">QVideoFrame</span><span class="operator">::</span>PixelFormat<span class="operator">&gt;</span>() <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="type">QVideoFrame</span><span class="operator">::</span>Format_RGB565;
+    }
+    bool present(<span class="keyword">const</span> <span class="type">QVideoFrame</span> <span class="operator">&amp;</span>frame)
+    {
+        Q_UNUSED(frame);
+        <span class="comment">// Handle the frame and do your processing</span>
+        <span class="keyword">return</span> <span class="keyword">true</span>;
+    }
+};</pre>
+<p>and with an instance of this surface, <code>myVideoSurface</code>, you can set the surface as the video output for QMediaPlayer.</p>
+<pre class="cpp">player<span class="operator">-</span><span class="operator">&gt;</span>setVideoOutput(myVideoSurface);</pre>
+<p>Several of the built-in Qt classes offer this functionality as well, so if you decode video in your application, you can present it to classes that offer a QVideoRendererControl class, and in QML you can set a custom object for the source of a VideoOutput with either a writable <code>videoSurface</code> property (that the instance will set it's internal video surface to) or a readable <code>mediaObject</code> property with a QMediaObject derived class that implements the QVideoRendererControl interface.</p>
+<p>The following snippet shows a class that has a writable <code>videoSurface</code> property and receives frames through a public slot <code>onNewVideoContentReceived()</code>. These frames are then presented on the surface set in <code>setVideoSurface()</code>.</p>
+<pre class="cpp"><span class="keyword">class</span> MyVideoProducer : <span class="keyword">public</span> <span class="type">QObject</span>
+{
+    Q_OBJECT
+    Q_PROPERTY(<span class="type">QAbstractVideoSurface</span> <span class="operator">*</span>videoSurface READ videoSurface WRITE setVideoSurface)
+<span class="keyword">public</span>:
+    <span class="type">QAbstractVideoSurface</span><span class="operator">*</span> videoSurface() <span class="keyword">const</span> { <span class="keyword">return</span> m_surface; }
+    <span class="type">void</span> setVideoSurface(<span class="type">QAbstractVideoSurface</span> <span class="operator">*</span>surface)
+    {
+        <span class="keyword">if</span> (m_surface <span class="operator">!</span><span class="operator">=</span> surface <span class="operator">&amp;</span><span class="operator">&amp;</span> m_surface <span class="operator">&amp;</span><span class="operator">&amp;</span> m_surface<span class="operator">-</span><span class="operator">&gt;</span>isActive()) {
+            m_surface<span class="operator">-</span><span class="operator">&gt;</span>stop();
+        }
+        m_surface <span class="operator">=</span> surface;
+        <span class="keyword">if</span> (m_surface)
+            m_surface<span class="operator">-</span><span class="operator">&gt;</span>start(m_format);
+    }
+    <span class="comment">// ...</span>
+<span class="keyword">public</span> <span class="keyword">slots</span>:
+    <span class="type">void</span> onNewVideoContentReceived(<span class="keyword">const</span> <span class="type">QVideoFrame</span> <span class="operator">&amp;</span>frame)
+    {
+        <span class="keyword">if</span> (m_surface)
+            m_surface<span class="operator">-</span><span class="operator">&gt;</span>present(frame);
+    }
+<span class="keyword">private</span>:
+    <span class="type">QAbstractVideoSurface</span> <span class="operator">*</span>m_surface;
+    <span class="type">QVideoSurfaceFormat</span> m_format;
+};</pre>
+<a name="recording-video"></a>
+<h3 >Recording Video</h3>
+<p>You can use the QMediaRecorder class in conjunction with other classes to record video to disk. Primarily this is used with the camera, so consult the Camera Overview for more information.</p>
+<a name="monitoring-video-frames"></a>
+<h3 >Monitoring Video Frames</h3>
+<p>You can use the QVideoProbe class to access video frames as they flow through different parts of a media pipeline when using other classes like QMediaPlayer, QMediaRecorder or QCamera. After creating the high level media class, you can set the source of the video probe to that instance. This can be useful for performing some video processing tasks (like barcode recognition, or object detection) while the video is rendered normally. You can not affect the video frames using this class, and they may arrive at a slightly different time than they are being rendered.</p>
+<p>Here's an example of installing a video probe while recording the camera:</p>
+<pre class="cpp">camera <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QCamera</span>;
+viewfinder <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QCameraViewfinder</span>();
+camera<span class="operator">-</span><span class="operator">&gt;</span>setViewfinder(viewfinder);
+camera<span class="operator">-</span><span class="operator">&gt;</span>setCaptureMode(<span class="type">QCamera</span><span class="operator">::</span>CaptureVideo);
+videoProbe <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QVideoProbe</span>(<span class="keyword">this</span>);
+<span class="keyword">if</span> (videoProbe<span class="operator">-</span><span class="operator">&gt;</span>setSource(camera)) {
+    <span class="comment">// Probing succeeded, videoProbe-&gt;isValid() should be true.</span>
+    connect(videoProbe<span class="operator">,</span> SIGNAL(videoFrameProbed(<span class="type">QVideoFrame</span>))<span class="operator">,</span>
+            <span class="keyword">this</span><span class="operator">,</span> SLOT(detectBarcodes(<span class="type">QVideoFrame</span>)));
+}
+camera<span class="operator">-</span><span class="operator">&gt;</span>start();
+<span class="comment">// Viewfinder frames should now also be emitted by</span>
+<span class="comment">// the video probe, even in still image capture mode.</span>
+<span class="comment">// Another alternative is to install the probe on a</span>
+<span class="comment">// QMediaRecorder connected to the camera to get the</span>
+<span class="comment">// recorded frames, if they are different from the</span>
+<span class="comment">// viewfinder frames.</span></pre>
+<a name="examples"></a>
+<h2 id="examples">Examples</h2>
+<p>There are both C++ and QML examples available.</p>
+<a name="c-examples"></a>
+<h3 >C++ Examples</h3>
+<a name="qml-examples"></a>
+<h3 >QML Examples</h3>
+<a name="reference-documentation"></a>
+<h2 id="reference-documentation">Reference Documentation</h2>
+<a name="c-classes"></a>
+<h3 >C++ Classes</h3>
+<div class="table"><table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p>QAbstractPlanarVideoBuffer</p></td><td class="tblDescr"><p>Abstraction for planar video data</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p>QAbstractVideoBuffer</p></td><td class="tblDescr"><p>Abstraction for video data</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p>QAbstractVideoSurface</p></td><td class="tblDescr"><p>Base class for video presentation surfaces</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p>QVideoFrame</p></td><td class="tblDescr"><p>Represents a frame of video data</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p>QVideoProbe</p></td><td class="tblDescr"><p>Allows you to monitor video frames being played or recorded</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p>QVideoSurfaceFormat</p></td><td class="tblDescr"><p>Specifies the stream format of a video presentation surface</p></td></tr>
+</table></div>
+<a name="qml-types"></a>
+<h3 >QML Types</h3>
+<div class="table"><table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="../QtMultimedia.MediaPlayer/index.html">MediaPlayer</a></p></td><td class="tblDescr"><p>Add media playback to a scene</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../QtMultimedia.Playlist/index.html">Playlist</a></p></td><td class="tblDescr"><p>For specifying a list of media to be played</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../QtMultimedia.Video/index.html">Video</a></p></td><td class="tblDescr"><p>A convenience type for showing a specified video</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../QtMultimedia.VideoOutput/index.html">VideoOutput</a></p></td><td class="tblDescr"><p>Render video or camera viewfinder</p></td></tr>
+</table></div>
+</div>
+<!-- @@@videooverview.html -->
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

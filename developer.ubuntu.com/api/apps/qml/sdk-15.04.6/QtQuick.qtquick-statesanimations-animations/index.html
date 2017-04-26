@@ -1,0 +1,782 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Animation and Transitions in Qt Quick | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a class="sub-nav-item" href="../index.html">SDK 15.04.6</a> &rsaquo;</li>
+
+<li><a class="sub-nav-item" href="../QtQuick/index.html">QtQuick</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Animation and Transitions in Qt Quick</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qtquick-statesanimations-animations.html -->
+	<!-- Source Format: qdoc -->
+<h1>Animation and Transitions in Qt Quick</h1>
+<div id="page_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$qtquick-statesanimations-animations.html-description -->
+<div class="descr"> <a name="details"></a>
+<a name="animation-and-transitions-types"></a>
+<h2 id="animation-and-transitions-types">Animation and Transitions Types</h2>
+<ul>
+<li><a href="../QtQuick.qmlexampletoggleswitch/index.html#transition">Transition</a> - Animates transitions during state changes</li>
+<li><a href="../QtQuick.SequentialAnimation/index.html">SequentialAnimation</a> - Runs animations sequentially</li>
+<li><a href="../QtQuick.ParallelAnimation/index.html">ParallelAnimation</a> - Runs animations in parallel</li>
+<li><a href="../QtQuick.Behavior/index.html">Behavior</a> - Specifies a default animation for property changes</li>
+<li><a href="../QtQuick.PropertyAction/index.html">PropertyAction</a> - Sets immediate property changes during animation</li>
+<li><a href="../QtQuick.PauseAnimation/index.html">PauseAnimation</a> - Introduces a pause in an animation</li>
+<li><a href="../QtQuick.SmoothedAnimation/index.html">SmoothedAnimation</a> - Allows a property to smoothly track a value</li>
+<li><a href="../QtQuick.SpringAnimation/index.html">SpringAnimation</a> - Allows a property to track a value in a spring-like motion</li>
+<li><a href="../QtQuick.ScriptAction/index.html">ScriptAction</a> - Runs scripts during an animation</li>
+</ul>
+<p>Types that animate properties based on data types <div class="table"><table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="../QtQuick.AnchorAnimation/index.html">AnchorAnimation</a></p></td><td class="tblDescr"><p>Animates changes in anchor values</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../QtQuick.ColorAnimation/index.html">ColorAnimation</a></p></td><td class="tblDescr"><p>Animates changes in color values</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../QtQuick.NumberAnimation/index.html">NumberAnimation</a></p></td><td class="tblDescr"><p>Animates changes in qreal-type values</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../QtQuick.ParentAnimation/index.html">ParentAnimation</a></p></td><td class="tblDescr"><p>Animates changes in parent values</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../QtQuick.PathAnimation/index.html">PathAnimation</a></p></td><td class="tblDescr"><p>Animates an item along a path</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../QtQuick.PropertyAnimation/index.html">PropertyAnimation</a></p></td><td class="tblDescr"><p>Animates changes in property values</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../QtQuick.RotationAnimation/index.html">RotationAnimation</a></p></td><td class="tblDescr"><p>Animates changes in rotation values</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../QtQuick.Vector3dAnimation/index.html">Vector3dAnimation</a></p></td><td class="tblDescr"><p>Animates changes in QVector3d values</p></td></tr>
+</table></div>
+</p>
+<p>Animations are created by applying animation types to property values. Animation types will interpolate property values to create smooth transitions. As well, state transitions may assign animations to state changes.</p>
+<p>To create an animation, use an appropriate animation type for the type of the property that is to be animated, and apply the animation depending on the type of behavior that is required.</p>
+<a name="triggering-animations"></a>
+<h2 id="triggering-animations">Triggering Animations</h2>
+<p>There are several ways of setting animation to an object.</p>
+<a name="direct-property-animation"></a>
+<h3 >Direct Property Animation</h3>
+<p>Animations are created by applying animation objects to property values to gradually change the properties over time. These <i>property animations</i> apply smooth movements by interpolating values between property value changes. Property animations provide timing controls and allows different interpolations through <a href="index.html#qml-easing-animation">easing curves</a>.</p>
+<pre class="qml"><span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> {
+    <span class="name">id</span>: <span class="name">flashingblob</span>
+    <span class="name">width</span>: <span class="number">75</span>; <span class="name">height</span>: <span class="number">75</span>
+    <span class="name">color</span>: <span class="string">&quot;blue&quot;</span>
+    <span class="name">opacity</span>: <span class="number">1.0</span>
+    <span class="type"><a href="../QtQuick.MouseArea/index.html">MouseArea</a></span> {
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">onClicked</span>: {
+            <span class="name">animateColor</span>.<span class="name">start</span>()
+            <span class="name">animateOpacity</span>.<span class="name">start</span>()
+        }
+    }
+    <span class="type"><a href="../QtQuick.PropertyAnimation/index.html">PropertyAnimation</a></span> {<span class="name">id</span>: <span class="name">animateColor</span>; <span class="name">target</span>: <span class="name">flashingblob</span>; <span class="name">properties</span>: <span class="string">&quot;color&quot;</span>; <span class="name">to</span>: <span class="string">&quot;green&quot;</span>; <span class="name">duration</span>: <span class="number">100</span>}
+    <span class="type"><a href="../QtQuick.NumberAnimation/index.html">NumberAnimation</a></span> {
+        <span class="name">id</span>: <span class="name">animateOpacity</span>
+        <span class="name">target</span>: <span class="name">flashingblob</span>
+        <span class="name">properties</span>: <span class="string">&quot;opacity&quot;</span>
+        <span class="name">from</span>: <span class="number">0.99</span>
+        <span class="name">to</span>: <span class="number">1.0</span>
+        <span class="name">loops</span>: <span class="name">Animation</span>.<span class="name">Infinite</span>
+        <span class="type">easing</span> {<span class="name">type</span>: <span class="name">Easing</span>.<span class="name">OutBack</span>; <span class="name">overshoot</span>: <span class="number">500</span>}
+   }
+}</pre>
+<p>Specialized property animation types have more efficient implementations than the <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04.6/QtQuick.animation/#propertyanimation">PropertyAnimation</a> type. They are for setting animations to different QML types such as <code>int</code>, <code>color</code>, and rotations. Similarly, the <a href="../QtQuick.ParentAnimation/index.html">ParentAnimation</a> can animate parent changes.</p>
+<p>See the <a href="index.html#qml-controlling-animations">Controlling Animations</a> section for more information about the different animation properties.</p>
+<a name="using-predefined-targets-and-properties"></a>
+<h3 >Using Predefined Targets and Properties</h3>
+<p>In the previous example, the <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04.6/QtQuick.animation/#propertyanimation">PropertyAnimation</a> and <a href="../QtQuick.NumberAnimation/index.html">NumberAnimation</a> objects needed to specify particular <a href="../QtQuick.PropertyAnimation/index.html#target-prop">target</a> and <a href="../QtQuick.PropertyAnimation/index.html#properties-prop">properties</a> values to specify the objects and properties that should be animated. This can be avoided by using the <i>&lt;Animation&gt; on &lt;Property&gt;</i> syntax, which specifies the animation is to be applied as a <i>property value source</i>.</p>
+<p>Below are two <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04.6/QtQuick.animation/#propertyanimation">PropertyAnimation</a> objects that are specified using this syntax:</p>
+<pre class="qml">import QtQuick 2.0
+<span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> {
+    <span class="name">id</span>: <span class="name">rect</span>
+    <span class="name">width</span>: <span class="number">100</span>; <span class="name">height</span>: <span class="number">100</span>
+    <span class="name">color</span>: <span class="string">&quot;red&quot;</span>
+    PropertyAnimation on <span class="name">x</span> { <span class="name">to</span>: <span class="number">100</span> }
+    PropertyAnimation on <span class="name">y</span> { <span class="name">to</span>: <span class="number">100</span> }
+}</pre>
+<p>The animation starts as soon as the rectangle is loaded, and will automatically be applied to its <code>x</code> and <code>y</code> values. Since the <i>&lt;Animation&gt; on &lt;Property&gt;</i> syntax has been used, it is not necessary to set the <a href="../QtQuick.PropertyAnimation/index.html#target-prop">target</a> value of the <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04.6/QtQuick.animation/#propertyanimation">PropertyAnimation</a> objects to <code>rect</code>, and neither is it necessary to set the <a href="../QtQuick.PropertyAnimation/index.html#property-prop">property</a> values to <code>x</code> and <code>y</code>.</p>
+<p>This can also be used by <a href="index.html#playing-animations-in-parallel-or-in-sequence">grouped animations</a> to ensure that all animations within a group are applied to the same property. For example, the previous example could instead use <a href="../QtQuick.SequentialAnimation/index.html">SequentialAnimation</a> to animate the rectangle's <code>color</code> first to yellow, then to blue:</p>
+<pre class="qml">import QtQuick 2.0
+<span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> {
+    <span class="name">width</span>: <span class="number">100</span>; <span class="name">height</span>: <span class="number">100</span>
+    <span class="name">color</span>: <span class="string">&quot;red&quot;</span>
+    SequentialAnimation on <span class="name">color</span> {
+        <span class="type"><a href="../QtQuick.ColorAnimation/index.html">ColorAnimation</a></span> { <span class="name">to</span>: <span class="string">&quot;yellow&quot;</span>; <span class="name">duration</span>: <span class="number">1000</span> }
+        <span class="type"><a href="../QtQuick.ColorAnimation/index.html">ColorAnimation</a></span> { <span class="name">to</span>: <span class="string">&quot;blue&quot;</span>; <span class="name">duration</span>: <span class="number">1000</span> }
+    }
+}</pre>
+<p>Since the <a href="../QtQuick.SequentialAnimation/index.html">SequentialAnimation</a> object has been specified on the <code>color</code> property using the <i>&lt;Animation&gt; on &lt;Property&gt;</i> syntax, its child <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04.6/QtQuick.animation/#coloranimation">ColorAnimation</a> objects are also automatically applied to this property and do not need to specify <a href="../QtQuick.PropertyAnimation/index.html#target-prop">target</a> or <a href="../QtQuick.PropertyAnimation/index.html#property-prop">property</a> animation values.</p>
+<a name="qml-transition-animations"></a><a name="transitions-during-state-changes"></a>
+<h3 >Transitions during State Changes</h3>
+<p><a href="../QtQuick.State/index.html">Qt Quick States</a> are property configurations where a property may have different values to reflect different states. State changes introduce abrupt property changes; animations smooth transitions to produce visually appealing state changes.</p>
+<p>The <a href="../QtQuick.qmlexampletoggleswitch/index.html#transition">Transition</a> type can contain animation types to interpolate property changes caused by state changes. To assign the transition to an object, bind it to the <code>transitions</code> property.</p>
+<p>A button might have two states, the <code>pressed</code> state when the user clicks on the button and a <code>released</code> state when the user releases the button. We can assign different property configurations for each state. A transition would animate the change from the <code>pressed</code> state to the <code>released</code> state. Likewise, there would be an animation during the change from the <code>released</code> state to the <code>pressed</code> state.</p>
+<pre class="qml"><span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> {
+    <span class="name">width</span>: <span class="number">75</span>; <span class="name">height</span>: <span class="number">75</span>
+    <span class="name">id</span>: <span class="name">button</span>
+    <span class="name">state</span>: <span class="string">&quot;RELEASED&quot;</span>
+    <span class="type"><a href="../QtQuick.MouseArea/index.html">MouseArea</a></span> {
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">onPressed</span>: <span class="name">button</span>.<span class="name">state</span> <span class="operator">=</span> <span class="string">&quot;PRESSED&quot;</span>
+        <span class="name">onReleased</span>: <span class="name">button</span>.<span class="name">state</span> <span class="operator">=</span> <span class="string">&quot;RELEASED&quot;</span>
+    }
+    <span class="name">states</span>: [
+        <span class="type"><a href="../QtQuick.State/index.html">State</a></span> {
+            <span class="name">name</span>: <span class="string">&quot;PRESSED&quot;</span>
+            <span class="type"><a href="../QtQuick.PropertyChanges/index.html">PropertyChanges</a></span> { <span class="name">target</span>: <span class="name">button</span>; <span class="name">color</span>: <span class="string">&quot;lightblue&quot;</span>}
+        },
+        <span class="type"><a href="../QtQuick.State/index.html">State</a></span> {
+            <span class="name">name</span>: <span class="string">&quot;RELEASED&quot;</span>
+            <span class="type"><a href="../QtQuick.PropertyChanges/index.html">PropertyChanges</a></span> { <span class="name">target</span>: <span class="name">button</span>; <span class="name">color</span>: <span class="string">&quot;lightsteelblue&quot;</span>}
+        }
+    ]
+    <span class="name">transitions</span>: [
+        <span class="type"><a href="../QtQuick.Transition/index.html">Transition</a></span> {
+            <span class="name">from</span>: <span class="string">&quot;PRESSED&quot;</span>
+            <span class="name">to</span>: <span class="string">&quot;RELEASED&quot;</span>
+            <span class="type"><a href="../QtQuick.ColorAnimation/index.html">ColorAnimation</a></span> { <span class="name">target</span>: <span class="name">button</span>; <span class="name">duration</span>: <span class="number">100</span>}
+        },
+        <span class="type"><a href="../QtQuick.Transition/index.html">Transition</a></span> {
+            <span class="name">from</span>: <span class="string">&quot;RELEASED&quot;</span>
+            <span class="name">to</span>: <span class="string">&quot;PRESSED&quot;</span>
+            <span class="type"><a href="../QtQuick.ColorAnimation/index.html">ColorAnimation</a></span> { <span class="name">target</span>: <span class="name">button</span>; <span class="name">duration</span>: <span class="number">100</span>}
+        }
+    ]
+}</pre>
+<p>Binding the <code>to</code> and <code>from</code> properties to the state's name will assign that particular transition to the state change. For simple or symmetric transitions, setting the to <code>to</code> property to the wild card symbol, &quot;<code>*</code>&quot;, denotes that the transition applies to any state change.</p>
+<pre class="qml">    <span class="name">transitions</span>:
+        <span class="name">Transition</span> {
+            <span class="name">to</span>: <span class="string">&quot;*&quot;</span>
+            <span class="type"><a href="../QtQuick.ColorAnimation/index.html">ColorAnimation</a></span> { <span class="name">target</span>: <span class="name">button</span>; <span class="name">duration</span>: <span class="number">100</span>}
+        }</pre>
+<a name="default-animation-as-behaviors"></a>
+<h3 >Default Animation as Behaviors</h3>
+<p>Default property animations are set using <i>behavior animations</i>. Animations declared in <a href="../QtQuick.Behavior/index.html">Behavior</a> types apply to the property and animates any property value changes. However, Behavior types have an <code>enabled</code> property to purposely enable or disable the behavior animations.</p>
+<p>A ball component might have a behavior animation assigned to its <code>x</code>, <code>y</code>, and <code>color</code> properties. The behavior animation could be set up to simulate an elastic effect. In effect, this behavior animation would apply the elastic effect to the properties whenever the ball moves.</p>
+<pre class="qml"><span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> {
+    <span class="name">width</span>: <span class="number">75</span>; <span class="name">height</span>: <span class="number">75</span>; <span class="name">radius</span>: <span class="name">width</span>
+    <span class="name">id</span>: <span class="name">ball</span>
+    <span class="name">color</span>: <span class="string">&quot;salmon&quot;</span>
+    Behavior on <span class="name">x</span> {
+        <span class="type"><a href="../QtQuick.NumberAnimation/index.html">NumberAnimation</a></span> {
+            <span class="name">id</span>: <span class="name">bouncebehavior</span>
+            <span class="type">easing</span> {
+                <span class="name">type</span>: <span class="name">Easing</span>.<span class="name">OutElastic</span>
+                <span class="name">amplitude</span>: <span class="number">1.0</span>
+                <span class="name">period</span>: <span class="number">0.5</span>
+            }
+        }
+    }
+    Behavior on <span class="name">y</span> {
+        <span class="name">animation</span>: <span class="name">bouncebehavior</span>
+    }
+    <span class="type"><a href="../QtQuick.Behavior/index.html">Behavior</a></span> {
+        <span class="type"><a href="../QtQuick.ColorAnimation/index.html">ColorAnimation</a></span> { <span class="name">target</span>: <span class="name">ball</span>; <span class="name">duration</span>: <span class="number">100</span> }
+    }
+}</pre>
+<p>There are several methods of assigning behavior animations to properties. The <code>Behavior on &lt;property&gt;</code> declaration is a convenient way of assigning a behavior animation onto a property.</p>
+<p>See the <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04.6/QtQuick.animation/">Qt Quick Examples - Animation</a> for a demonstration of behavioral animations.</p>
+<a name="playing-animations-in-parallel-or-in-sequence"></a>
+<h2 id="playing-animations-in-parallel-or-in-sequence">Playing Animations in Parallel or in Sequence</h2>
+<p>Animations can run <i>in parallel</i> or <i>in sequence</i>. Parallel animations will play a group of animations at the same time while sequential animations play a group of animations in order: one after the other. Grouping animations in <a href="../QtQuick.SequentialAnimation/index.html">SequentialAnimation</a> and <a href="../QtQuick.ParallelAnimation/index.html">ParallelAnimation</a> will play the animations in sequence or in parallel.</p>
+<p>A banner component may have several icons or slogans to display, one after the other. The <code>opacity</code> property could transform to <code>1.0</code> denoting an opaque object. Using the <a href="../QtQuick.SequentialAnimation/index.html">SequentialAnimation</a> type, the opacity animations will play after the preceding animation finishes. The <a href="../QtQuick.ParallelAnimation/index.html">ParallelAnimation</a> type will play the animations at the same time.</p>
+<pre class="qml"><span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> {
+    <span class="name">id</span>: <span class="name">banner</span>
+    <span class="name">width</span>: <span class="number">150</span>; <span class="name">height</span>: <span class="number">100</span>; <span class="name">border</span>.color: <span class="string">&quot;black&quot;</span>
+    <span class="type"><a href="../QtQuick.Column/index.html">Column</a></span> {
+        <span class="name">anchors</span>.centerIn: <span class="name">parent</span>
+        <span class="type"><a href="../QtQuick.Text/index.html">Text</a></span> {
+            <span class="name">id</span>: <span class="name">code</span>
+            <span class="name">text</span>: <span class="string">&quot;Code less.&quot;</span>
+            <span class="name">opacity</span>: <span class="number">0.01</span>
+        }
+        <span class="type"><a href="../QtQuick.Text/index.html">Text</a></span> {
+            <span class="name">id</span>: <span class="name">create</span>
+            <span class="name">text</span>: <span class="string">&quot;Create more.&quot;</span>
+            <span class="name">opacity</span>: <span class="number">0.01</span>
+        }
+        <span class="type"><a href="../QtQuick.Text/index.html">Text</a></span> {
+            <span class="name">id</span>: <span class="name">deploy</span>
+            <span class="name">text</span>: <span class="string">&quot;Deploy everywhere.&quot;</span>
+            <span class="name">opacity</span>: <span class="number">0.01</span>
+        }
+    }
+    <span class="type"><a href="../QtQuick.MouseArea/index.html">MouseArea</a></span> {
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">onPressed</span>: <span class="name">playbanner</span>.<span class="name">start</span>()
+    }
+    <span class="type"><a href="../QtQuick.SequentialAnimation/index.html">SequentialAnimation</a></span> {
+        <span class="name">id</span>: <span class="name">playbanner</span>
+        <span class="name">running</span>: <span class="number">false</span>
+        <span class="type"><a href="../QtQuick.NumberAnimation/index.html">NumberAnimation</a></span> { <span class="name">target</span>: <span class="name">code</span>; <span class="name">property</span>: <span class="string">&quot;opacity&quot;</span>; <span class="name">to</span>: <span class="number">1.0</span>; <span class="name">duration</span>: <span class="number">200</span>}
+        <span class="type"><a href="../QtQuick.NumberAnimation/index.html">NumberAnimation</a></span> { <span class="name">target</span>: <span class="name">create</span>; <span class="name">property</span>: <span class="string">&quot;opacity&quot;</span>; <span class="name">to</span>: <span class="number">1.0</span>; <span class="name">duration</span>: <span class="number">200</span>}
+        <span class="type"><a href="../QtQuick.NumberAnimation/index.html">NumberAnimation</a></span> { <span class="name">target</span>: <span class="name">deploy</span>; <span class="name">property</span>: <span class="string">&quot;opacity&quot;</span>; <span class="name">to</span>: <span class="number">1.0</span>; <span class="name">duration</span>: <span class="number">200</span>}
+    }
+}</pre>
+<p>Once individual animations are placed into a <a href="../QtQuick.SequentialAnimation/index.html">SequentialAnimation</a> or <a href="../QtQuick.ParallelAnimation/index.html">ParallelAnimation</a>, they can no longer be started and stopped independently. The sequential or parallel animation must be started and stopped as a group.</p>
+<p>The <a href="../QtQuick.SequentialAnimation/index.html">SequentialAnimation</a> type is also useful for playing <a href="index.html#qml-transition-animations">transition animations</a> because animations are played in parallel inside transitions.</p>
+<a name="qml-controlling-animations"></a><a name="controlling-animations"></a>
+<h2 id="controlling-animations">Controlling Animations</h2>
+<p>There are different methods to control animations.</p>
+<a name="animation-playback"></a>
+<h3 >Animation Playback</h3>
+<p>All animation types inherit from the <a href="../QtQuick.Animation/index.html">Animation</a> type. It is not possible to create <a href="../QtQuick.Animation/index.html">Animation</a> objects; instead, this type provides the essential properties and methods for animation types. Animation types have <code>start()</code>, <code>stop()</code>, <code>resume()</code>, <code>pause()</code>, <code>restart()</code>, and <code>complete()</code> -- all of these methods control the execution of animations.</p>
+<a name="qml-easing-animation"></a><a name="easing"></a>
+<h3 >Easing</h3>
+<p>Easing curves define how the animation will interpolate between the start value and the end value. Different easing curves might go beyond the defined range of interpolation. The easing curves simplify the creation of animation effects such as bounce effects, acceleration, deceleration, and cyclical animations.</p>
+<p>A QML object may have different easing curve for each property animation. There are also different parameters to control the curve, some of which are exclusive to a particular curve. For more information about the easing curves, visit the <a href="../QtQuick.PropertyAnimation/index.html#easing.type-prop">easing</a> documentation.</p>
+<p>The easing example visually demonstrates each of the different easing types.</p>
+<a name="other-animation-types"></a>
+<h3 >Other Animation Types</h3>
+<p>In addition, QML provides several other types useful for animation:</p>
+<ul>
+<li><a href="../QtQuick.PauseAnimation/index.html">PauseAnimation</a>: enables pauses during animations</li>
+<li><a href="../QtQuick.ScriptAction/index.html">ScriptAction</a>: allows JavaScript to be executed during an animation, and can be used together with <a href="../QtQuick.StateChangeScript/index.html">StateChangeScript</a> to reused existing scripts</li>
+<li><a href="../QtQuick.PropertyAction/index.html">PropertyAction</a>: changes a property <i>immediately</i> during an animation, without animating the property change</li>
+</ul>
+<p>These are specialized animation types that animate different property types</p>
+<ul>
+<li><a href="../QtQuick.SmoothedAnimation/index.html">SmoothedAnimation</a>: a specialized <a href="../QtQuick.NumberAnimation/index.html">NumberAnimation</a> that provides smooth changes in animation when the target value changes</li>
+<li><a href="../QtQuick.SpringAnimation/index.html">SpringAnimation</a>: provides a spring-like animation with specialized attributes such as <a href="../QtQuick.SpringAnimation/index.html#mass-prop">mass</a>, <a href="../QtQuick.SpringAnimation/index.html#damping-prop">damping</a> and <a href="../QtQuick.SpringAnimation/index.html#epsilon-prop">epsilon</a></li>
+<li><a href="../QtQuick.ParentAnimation/index.html">ParentAnimation</a>: used for animating a parent change (see <a href="../QtQuick.ParentChange/index.html">ParentChange</a>)</li>
+<li><a href="../QtQuick.AnchorAnimation/index.html">AnchorAnimation</a>: used for animating an anchor change (see <a href="../QtQuick.AnchorChanges/index.html">AnchorChanges</a>)</li>
+</ul>
+<a name="sharing-animation-instances"></a>
+<h2 id="sharing-animation-instances">Sharing Animation Instances</h2>
+<p>Sharing animation instances between Transitions or Behaviors is not supported, and may lead to undefined behavior. In the following example, changes to the Rectangle's position will most likely not be correctly animated.</p>
+<pre class="qml"><span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> {
+    <span class="comment">// NOT SUPPORTED: this will not work correctly as both Behaviors</span>
+    <span class="comment">// try to control a single animation instance</span>
+    <span class="type"><a href="../QtQuick.NumberAnimation/index.html">NumberAnimation</a></span> { <span class="name">id</span>: <span class="name">anim</span>; <span class="name">duration</span>: <span class="number">300</span>; <span class="name">easing</span>.type: <span class="name">Easing</span>.<span class="name">InBack</span> }
+    Behavior on <span class="name">x</span> { <span class="name">animation</span>: <span class="name">anim</span> }
+    Behavior on <span class="name">y</span> { <span class="name">animation</span>: <span class="name">anim</span> }
+}</pre>
+<p>The easiest fix is to repeat the <a href="../QtQuick.NumberAnimation/index.html">NumberAnimation</a> for both Behaviors. If the repeated animation is rather complex, you might also consider creating a custom animation component and assigning an instance to each Behavior, for example:</p>
+<pre class="qml"><span class="comment">// MyNumberAnimation.qml</span>
+<span class="type"><a href="../QtQuick.NumberAnimation/index.html">NumberAnimation</a></span> { <span class="name">id</span>: <span class="name">anim</span>; <span class="name">duration</span>: <span class="number">300</span>; <span class="name">easing</span>.type: <span class="name">Easing</span>.<span class="name">InBack</span> }</pre>
+<pre class="qml"><span class="comment">// main.qml</span>
+<span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> {
+    Behavior on <span class="name">x</span> { <span class="type">MyNumberAnimation</span> {} }
+    Behavior on <span class="name">y</span> { <span class="type">MyNumberAnimation</span> {} }
+}</pre>
+</div>
+<p><b>See also </b><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04.6/QtQuick.animation/">Qt Quick Examples - Animation</a>.</p>
+<!-- @@@qtquick-statesanimations-animations.html -->
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

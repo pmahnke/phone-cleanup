@@ -1,0 +1,1102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>MediaPlayer [sdk-15.04.6/QtMultimedia.MediaPlayer] | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a href="../index.html">SDK 15.04.6</a> &rsaquo;</li>
+
+<li><a href="../QtMultimedia/index.html">QtMultimedia</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">MediaPlayer</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qml-qtmultimedia-mediaplayer.html -->
+	<!-- Source Format: qdoc -->
+<h1>MediaPlayer</h1>
+<div id="element_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$MediaPlayer-brief -->
+<p>Add media playback to a scene. More...</p>
+<!-- @@@MediaPlayer -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import QtMultimedia 5.4</td></tr></table></div><ul>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#audioRole-prop">audioRole</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="index.html#autoLoad-prop">autoLoad</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#autoPlay-prop">autoPlay</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#availability-prop">availability</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="index.html#bufferProgress-prop">bufferProgress</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#duration-prop">duration</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#error-prop">error</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="index.html#errorString-prop">errorString</a></b></b> : string</li>
+<li class="fn"><b><b><a href="index.html#hasAudio-prop">hasAudio</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#hasVideo-prop">hasVideo</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#loops-prop">loops</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#metaData.albumArtist-prop">metaData.albumArtist</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.albumTitle-prop">metaData.albumTitle</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.audioBitRate-prop">metaData.audioBitRate</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.audioCodec-prop">metaData.audioCodec</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.author-prop">metaData.author</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.averageLevel-prop">metaData.averageLevel</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.category-prop">metaData.category</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.channelCount-prop">metaData.channelCount</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.chapterNumber-prop">metaData.chapterNumber</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.comment-prop">metaData.comment</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.composer-prop">metaData.composer</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.conductor-prop">metaData.conductor</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.contributingArtist-prop">metaData.contributingArtist</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.copyright-prop">metaData.copyright</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.coverArtUrlLarge-prop">metaData.coverArtUrlLarge</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.coverArtUrlSmall-prop">metaData.coverArtUrlSmall</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.date-prop">metaData.date</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.description-prop">metaData.description</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.director-prop">metaData.director</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.genre-prop">metaData.genre</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.keywords-prop">metaData.keywords</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.language-prop">metaData.language</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.leadPerformer-prop">metaData.leadPerformer</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.lyrics-prop">metaData.lyrics</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.mediaType-prop">metaData.mediaType</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.mood-prop">metaData.mood</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.parentalRating-prop">metaData.parentalRating</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.peakValue-prop">metaData.peakValue</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.pixelAspectRatio-prop">metaData.pixelAspectRatio</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.posterUrl-prop">metaData.posterUrl</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.publisher-prop">metaData.publisher</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.ratingOrganization-prop">metaData.ratingOrganization</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.resolution-prop">metaData.resolution</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.sampleRate-prop">metaData.sampleRate</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.size-prop">metaData.size</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.subTitle-prop">metaData.subTitle</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.title-prop">metaData.title</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.trackCount-prop">metaData.trackCount</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.trackNumber-prop">metaData.trackNumber</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.userRating-prop">metaData.userRating</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.videoBitRate-prop">metaData.videoBitRate</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.videoCodec-prop">metaData.videoCodec</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.videoFrameRate-prop">metaData.videoFrameRate</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.writer-prop">metaData.writer</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#metaData.year-prop">metaData.year</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#muted-prop">muted</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#playbackRate-prop">playbackRate</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#playbackState-prop">playbackState</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="index.html#playlist-prop">playlist</a></b></b> : Playlist</li>
+<li class="fn"><b><b><a href="index.html#position-prop">position</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#seekable-prop">seekable</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#source-prop">source</a></b></b> : url</li>
+<li class="fn"><b><b><a href="index.html#status-prop">status</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="index.html#volume-prop">volume</a></b></b> : real</li>
+</ul>
+<a name="signals"></a>
+<h2 id="signals">Signals</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#error-signal">error</a></b></b>(error, errorString)</li>
+<li class="fn"><b><b><a href="index.html#paused-signal">paused</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#playbackStateChanged-signal">playbackStateChanged</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#playing-signal">playing</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#stopped-signal">stopped</a></b></b>()</li>
+</ul>
+<a name="methods"></a>
+<h2 id="methods">Methods</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#pause-method">pause</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#play-method">play</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#seek-method">seek</a></b></b>(offset)</li>
+<li class="fn"><b><b><a href="index.html#stop-method">stop</a></b></b>()</li>
+<li class="fn">list&lt;int&gt; <b><b><a href="index.html#supportedAudioRoles-method">supportedAudioRoles</a></b></b>()</li>
+</ul>
+<!-- $$$MediaPlayer-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<p>MediaPlayer is part of the <b>QtMultimedia 5.0</b> module.</p>
+<pre class="qml">import QtQuick 2.0
+import QtMultimedia 5.0
+<span class="type">Text</span> {
+    <span class="name">text</span>: <span class="string">&quot;Click Me!&quot;</span>;
+    <span class="name">font</span>.pointSize: <span class="number">24</span>;
+    <span class="name">width</span>: <span class="number">150</span>; <span class="name">height</span>: <span class="number">50</span>;
+    <span class="type"><a href="index.html">MediaPlayer</a></span> {
+        <span class="name">id</span>: <span class="name">playMusic</span>
+        <span class="name">source</span>: <span class="string">&quot;music.wav&quot;</span>
+    }
+    <span class="type">MouseArea</span> {
+        <span class="name">id</span>: <span class="name">playArea</span>
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">onPressed</span>:  { <span class="name">playMusic</span>.<span class="name">play</span>() }
+    }
+}</pre>
+<p>You can use <a href="index.html">MediaPlayer</a> by itself to play audio content (like <a href="../QtMultimedia.qml-multimedia/index.html#audio">Audio</a>), or you can use it in conjunction with a <a href="../QtMultimedia.VideoOutput/index.html">VideoOutput</a> for rendering video.</p>
+<pre class="qml">import QtQuick 2.0
+import QtMultimedia 5.0
+<span class="type">Item</span> {
+    <span class="type"><a href="index.html">MediaPlayer</a></span> {
+        <span class="name">id</span>: <span class="name">mediaplayer</span>
+        <span class="name">source</span>: <span class="string">&quot;groovy_video.mp4&quot;</span>
+    }
+    <span class="type"><a href="../QtMultimedia.VideoOutput/index.html">VideoOutput</a></span> {
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">source</span>: <span class="name">mediaplayer</span>
+    }
+    <span class="type">MouseArea</span> {
+        <span class="name">id</span>: <span class="name">playArea</span>
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">onPressed</span>: <span class="name">mediaplayer</span>.<span class="name">play</span>();
+    }
+}</pre>
+<p><b>See also </b><a href="../QtMultimedia.VideoOutput/index.html">VideoOutput</a>.</p>
+<!-- @@@MediaPlayer -->
+<h2>Property Documentation</h2>
+<!-- $$$audioRole -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="audioRole-prop"><td class="tblQmlPropNode"><p><a name="audioRole-prop"></a><span class="name">audioRole</span> : <span class="type">enumeration</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the role of the audio stream. It can be set to specify the type of audio being played, allowing the system to make appropriate decisions when it comes to volume, routing or post-processing.</p>
+<p>The audio role must be set before setting the source property.</p>
+<p>Supported values can be retrieved with <a href="index.html#supportedAudioRoles-method">supportedAudioRoles()</a>.</p>
+<p>The value can be one of:</p>
+<ul>
+<li>UnknownRole - the role is unknown or undefined.</li>
+<li>MusicRole - music.</li>
+<li>VideoRole - soundtrack from a movie or a video.</li>
+<li>VoiceCommunicationRole - voice communications, such as telephony.</li>
+<li>AlarmRole - alarm.</li>
+<li>NotificationRole - notification, such as an incoming e-mail or a chat request.</li>
+<li>RingtoneRole - ringtone.</li>
+<li>AccessibilityRole - for accessibility, such as with a screen reader.</li>
+<li>SonificationRole - sonification, such as with user interface sounds.</li>
+<li>GameRole - game audio.</li>
+</ul>
+<p>This QML property was introduced in  Qt 5.6.</p>
+</div></div><!-- @@@audioRole -->
+<br/>
+<!-- $$$autoLoad -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="autoLoad-prop"><td class="tblQmlPropNode"><p><a name="autoLoad-prop"></a><span class="name">autoLoad</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property indicates if loading of media should begin immediately.</p>
+<p>Defaults to true, if false media will not be loaded until playback is started.</p>
+</div></div><!-- @@@autoLoad -->
+<br/>
+<!-- $$$autoPlay -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="autoPlay-prop"><td class="tblQmlPropNode"><p><a name="autoPlay-prop"></a><span class="name">autoPlay</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property controls whether the media will begin to play on start up.</p>
+<p>Defaults to <code>false</code>. If set to <code>true</code>, the value of <a href="index.html#autoLoad-prop">autoLoad</a> will be overwritten to <code>true</code>.</p>
+</div></div><!-- @@@autoPlay -->
+<br/>
+<!-- $$$availability -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="availability-prop"><td class="tblQmlPropNode"><p><a name="availability-prop"></a><span class="name">availability</span> : <span class="type">enumeration</span></p></td></tr></table></div></div><div class="qmldoc"><p>Returns the availability state of the media player.</p>
+<p>This is one of:</p>
+<div class="table"><table class="generic">
+ <thead><tr class="qt-style"><th >Value</th><th >Description</th></tr></thead>
+<tr valign="top" class="odd"><td >Available</td><td >The media player is available to use.</td></tr>
+<tr valign="top" class="even"><td >Busy</td><td >The media player is usually available, but some other process is utilizing the hardware necessary to play media.</td></tr>
+<tr valign="top" class="odd"><td >Unavailable</td><td >There are no supported media playback facilities.</td></tr>
+<tr valign="top" class="even"><td >ResourceMissing</td><td >There is one or more resources missing, so the media player cannot be used. It may be possible to try again at a later time.</td></tr>
+</table></div>
+</div></div><!-- @@@availability -->
+<br/>
+<!-- $$$bufferProgress -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="bufferProgress-prop"><td class="tblQmlPropNode"><p><a name="bufferProgress-prop"></a><span class="name">bufferProgress</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds how much of the data buffer is currently filled, from <code>0.0</code> (empty) to <code>1.0</code> (full).</p>
+<p>Playback can start or resume only when the buffer is entirely filled, in which case the status is <code>MediaPlayer.Buffered</code> or <code>MediaPlayer.Buffering</code>. A value lower than <code>1.0</code> implies that the status is <code>MediaPlayer.Stalled</code>.</p>
+<p><b>See also </b><a href="index.html#status-prop">status</a>.</p>
+</div></div><!-- @@@bufferProgress -->
+<br/>
+<!-- $$$duration -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="duration-prop"><td class="tblQmlPropNode"><p><a name="duration-prop"></a><span class="name">duration</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the duration of the media in milliseconds.</p>
+<p>If the media doesn't have a fixed duration (a live stream for example) this will be 0.</p>
+</div></div><!-- @@@duration -->
+<br/>
+<!-- $$$error -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="error-prop"><td class="tblQmlPropNode"><p><a name="error-prop"></a><span class="name">error</span> : <span class="type">enumeration</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the error state of the audio. It can be one of:</p>
+<div class="table"><table class="generic">
+ <thead><tr class="qt-style"><th >Value</th><th >Description</th></tr></thead>
+<tr valign="top" class="odd"><td >NoError</td><td >There is no current error.</td></tr>
+<tr valign="top" class="even"><td >ResourceError</td><td >The audio cannot be played due to a problem allocating resources.</td></tr>
+<tr valign="top" class="odd"><td >FormatError</td><td >The audio format is not supported.</td></tr>
+<tr valign="top" class="even"><td >NetworkError</td><td >The audio cannot be played due to network issues.</td></tr>
+<tr valign="top" class="odd"><td >AccessDenied</td><td >The audio cannot be played due to insufficient permissions.</td></tr>
+<tr valign="top" class="even"><td >ServiceMissing</td><td >The audio cannot be played because the media service could not be instantiated.</td></tr>
+</table></div>
+</div></div><!-- @@@error -->
+<br/>
+<!-- $$$errorString -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="errorString-prop"><td class="tblQmlPropNode"><p><a name="errorString-prop"></a><span class="name">errorString</span> : <span class="type">string</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds a string describing the current error condition in more detail.</p>
+</div></div><!-- @@@errorString -->
+<br/>
+<!-- $$$hasAudio -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="hasAudio-prop"><td class="tblQmlPropNode"><p><a name="hasAudio-prop"></a><span class="name">hasAudio</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds whether the media contains audio.</p>
+</div></div><!-- @@@hasAudio -->
+<br/>
+<!-- $$$hasVideo -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="hasVideo-prop"><td class="tblQmlPropNode"><p><a name="hasVideo-prop"></a><span class="name">hasVideo</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds whether the media contains video.</p>
+</div></div><!-- @@@hasVideo -->
+<br/>
+<!-- $$$loops -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="loops-prop"><td class="tblQmlPropNode"><p><a name="loops-prop"></a><span class="name">loops</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the number of times the media is played. A value of <code>0</code> or <code>1</code> means the media will be played only once; set to <code>MediaPlayer.Infinite</code> to enable infinite looping.</p>
+<p>The value can be changed while the media is playing, in which case it will update the remaining loops to the new value.</p>
+<p>The default is <code>1</code>.</p>
+</div></div><!-- @@@loops -->
+<br/>
+<!-- $$$metaData.albumArtist -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.albumArtist-prop"><td class="tblQmlPropNode"><p><a name="metaData.albumArtist-prop"></a><span class="name">metaData.albumArtist</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the name of the principal artist of the album the media belongs to.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.albumArtist -->
+<br/>
+<!-- $$$metaData.albumTitle -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.albumTitle-prop"><td class="tblQmlPropNode"><p><a name="metaData.albumTitle-prop"></a><span class="name">metaData.albumTitle</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the title of the album the media belongs to.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.albumTitle -->
+<br/>
+<!-- $$$metaData.audioBitRate -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.audioBitRate-prop"><td class="tblQmlPropNode"><p><a name="metaData.audioBitRate-prop"></a><span class="name">metaData.audioBitRate</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the bit rate of the media's audio stream in bits per second.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.audioBitRate -->
+<br/>
+<!-- $$$metaData.audioCodec -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.audioCodec-prop"><td class="tblQmlPropNode"><p><a name="metaData.audioCodec-prop"></a><span class="name">metaData.audioCodec</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the encoding of the media audio stream.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.audioCodec -->
+<br/>
+<!-- $$$metaData.author -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.author-prop"><td class="tblQmlPropNode"><p><a name="metaData.author-prop"></a><span class="name">metaData.author</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the author of the media.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.author -->
+<br/>
+<!-- $$$metaData.averageLevel -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.averageLevel-prop"><td class="tblQmlPropNode"><p><a name="metaData.averageLevel-prop"></a><span class="name">metaData.averageLevel</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the average volume level of the media.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.averageLevel -->
+<br/>
+<!-- $$$metaData.category -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.category-prop"><td class="tblQmlPropNode"><p><a name="metaData.category-prop"></a><span class="name">metaData.category</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the category of the media</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.category -->
+<br/>
+<!-- $$$metaData.channelCount -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.channelCount-prop"><td class="tblQmlPropNode"><p><a name="metaData.channelCount-prop"></a><span class="name">metaData.channelCount</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the number of channels in the media's audio stream.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.channelCount -->
+<br/>
+<!-- $$$metaData.chapterNumber -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.chapterNumber-prop"><td class="tblQmlPropNode"><p><a name="metaData.chapterNumber-prop"></a><span class="name">metaData.chapterNumber</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the chapter number of the media.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.chapterNumber -->
+<br/>
+<!-- $$$metaData.comment -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.comment-prop"><td class="tblQmlPropNode"><p><a name="metaData.comment-prop"></a><span class="name">metaData.comment</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds a user comment about the media.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.comment -->
+<br/>
+<!-- $$$metaData.composer -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.composer-prop"><td class="tblQmlPropNode"><p><a name="metaData.composer-prop"></a><span class="name">metaData.composer</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the composer of the media.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.composer -->
+<br/>
+<!-- $$$metaData.conductor -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.conductor-prop"><td class="tblQmlPropNode"><p><a name="metaData.conductor-prop"></a><span class="name">metaData.conductor</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the conductor of the media.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.conductor -->
+<br/>
+<!-- $$$metaData.contributingArtist -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.contributingArtist-prop"><td class="tblQmlPropNode"><p><a name="metaData.contributingArtist-prop"></a><span class="name">metaData.contributingArtist</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the names of artists contributing to the media.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.contributingArtist -->
+<br/>
+<!-- $$$metaData.copyright -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.copyright-prop"><td class="tblQmlPropNode"><p><a name="metaData.copyright-prop"></a><span class="name">metaData.copyright</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the media's copyright notice.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.copyright -->
+<br/>
+<!-- $$$metaData.coverArtUrlLarge -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.coverArtUrlLarge-prop"><td class="tblQmlPropNode"><p><a name="metaData.coverArtUrlLarge-prop"></a><span class="name">metaData.coverArtUrlLarge</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the URL of a large cover art image.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.coverArtUrlLarge -->
+<br/>
+<!-- $$$metaData.coverArtUrlSmall -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.coverArtUrlSmall-prop"><td class="tblQmlPropNode"><p><a name="metaData.coverArtUrlSmall-prop"></a><span class="name">metaData.coverArtUrlSmall</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the URL of a small cover art image.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.coverArtUrlSmall -->
+<br/>
+<!-- $$$metaData.date -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.date-prop"><td class="tblQmlPropNode"><p><a name="metaData.date-prop"></a><span class="name">metaData.date</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the date of the media.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.date -->
+<br/>
+<!-- $$$metaData.description -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.description-prop"><td class="tblQmlPropNode"><p><a name="metaData.description-prop"></a><span class="name">metaData.description</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds a description of the media.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.description -->
+<br/>
+<!-- $$$metaData.director -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.director-prop"><td class="tblQmlPropNode"><p><a name="metaData.director-prop"></a><span class="name">metaData.director</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the director of the media.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.director -->
+<br/>
+<!-- $$$metaData.genre -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.genre-prop"><td class="tblQmlPropNode"><p><a name="metaData.genre-prop"></a><span class="name">metaData.genre</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the genre of the media.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.genre -->
+<br/>
+<!-- $$$metaData.keywords -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.keywords-prop"><td class="tblQmlPropNode"><p><a name="metaData.keywords-prop"></a><span class="name">metaData.keywords</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds a list of keywords describing the media.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.keywords -->
+<br/>
+<!-- $$$metaData.language -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.language-prop"><td class="tblQmlPropNode"><p><a name="metaData.language-prop"></a><span class="name">metaData.language</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the language of the media, as an ISO 639-2 code.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.language -->
+<br/>
+<!-- $$$metaData.leadPerformer -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.leadPerformer-prop"><td class="tblQmlPropNode"><p><a name="metaData.leadPerformer-prop"></a><span class="name">metaData.leadPerformer</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the lead performer in the media.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.leadPerformer -->
+<br/>
+<!-- $$$metaData.lyrics -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.lyrics-prop"><td class="tblQmlPropNode"><p><a name="metaData.lyrics-prop"></a><span class="name">metaData.lyrics</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the lyrics to the media.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.lyrics -->
+<br/>
+<!-- $$$metaData.mediaType -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.mediaType-prop"><td class="tblQmlPropNode"><p><a name="metaData.mediaType-prop"></a><span class="name">metaData.mediaType</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the type of the media.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.mediaType -->
+<br/>
+<!-- $$$metaData.mood -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.mood-prop"><td class="tblQmlPropNode"><p><a name="metaData.mood-prop"></a><span class="name">metaData.mood</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the mood of the media.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.mood -->
+<br/>
+<!-- $$$metaData.parentalRating -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.parentalRating-prop"><td class="tblQmlPropNode"><p><a name="metaData.parentalRating-prop"></a><span class="name">metaData.parentalRating</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the parental rating of the media.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.parentalRating -->
+<br/>
+<!-- $$$metaData.peakValue -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.peakValue-prop"><td class="tblQmlPropNode"><p><a name="metaData.peakValue-prop"></a><span class="name">metaData.peakValue</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the peak volume of media's audio stream.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.peakValue -->
+<br/>
+<!-- $$$metaData.pixelAspectRatio -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.pixelAspectRatio-prop"><td class="tblQmlPropNode"><p><a name="metaData.pixelAspectRatio-prop"></a><span class="name">metaData.pixelAspectRatio</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the pixel aspect ratio of an image or video.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.pixelAspectRatio -->
+<br/>
+<!-- $$$metaData.posterUrl -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.posterUrl-prop"><td class="tblQmlPropNode"><p><a name="metaData.posterUrl-prop"></a><span class="name">metaData.posterUrl</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the URL of a poster image.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.posterUrl -->
+<br/>
+<!-- $$$metaData.publisher -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.publisher-prop"><td class="tblQmlPropNode"><p><a name="metaData.publisher-prop"></a><span class="name">metaData.publisher</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the publisher of the media.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.publisher -->
+<br/>
+<!-- $$$metaData.ratingOrganization -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.ratingOrganization-prop"><td class="tblQmlPropNode"><p><a name="metaData.ratingOrganization-prop"></a><span class="name">metaData.ratingOrganization</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the name of the rating organization responsible for the parental rating of the media.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.ratingOrganization -->
+<br/>
+<!-- $$$metaData.resolution -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.resolution-prop"><td class="tblQmlPropNode"><p><a name="metaData.resolution-prop"></a><span class="name">metaData.resolution</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the dimension of an image or video.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.resolution -->
+<br/>
+<!-- $$$metaData.sampleRate -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.sampleRate-prop"><td class="tblQmlPropNode"><p><a name="metaData.sampleRate-prop"></a><span class="name">metaData.sampleRate</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the sample rate of the media's audio stream in hertz.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.sampleRate -->
+<br/>
+<!-- $$$metaData.size -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.size-prop"><td class="tblQmlPropNode"><p><a name="metaData.size-prop"></a><span class="name">metaData.size</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property property holds the size of the media in bytes.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.size -->
+<br/>
+<!-- $$$metaData.subTitle -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.subTitle-prop"><td class="tblQmlPropNode"><p><a name="metaData.subTitle-prop"></a><span class="name">metaData.subTitle</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the sub-title of the media.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.subTitle -->
+<br/>
+<!-- $$$metaData.title -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.title-prop"><td class="tblQmlPropNode"><p><a name="metaData.title-prop"></a><span class="name">metaData.title</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the title of the media.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.title -->
+<br/>
+<!-- $$$metaData.trackCount -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.trackCount-prop"><td class="tblQmlPropNode"><p><a name="metaData.trackCount-prop"></a><span class="name">metaData.trackCount</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the number of tracks on the album containing the media.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.trackCount -->
+<br/>
+<!-- $$$metaData.trackNumber -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.trackNumber-prop"><td class="tblQmlPropNode"><p><a name="metaData.trackNumber-prop"></a><span class="name">metaData.trackNumber</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the track number of the media.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.trackNumber -->
+<br/>
+<!-- $$$metaData.userRating -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.userRating-prop"><td class="tblQmlPropNode"><p><a name="metaData.userRating-prop"></a><span class="name">metaData.userRating</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds a user rating of the media in the range of 0 to 100.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.userRating -->
+<br/>
+<!-- $$$metaData.videoBitRate -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.videoBitRate-prop"><td class="tblQmlPropNode"><p><a name="metaData.videoBitRate-prop"></a><span class="name">metaData.videoBitRate</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the bit rate of the media's video stream in bits per second.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.videoBitRate -->
+<br/>
+<!-- $$$metaData.videoCodec -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.videoCodec-prop"><td class="tblQmlPropNode"><p><a name="metaData.videoCodec-prop"></a><span class="name">metaData.videoCodec</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the encoding of the media's video stream.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.videoCodec -->
+<br/>
+<!-- $$$metaData.videoFrameRate -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.videoFrameRate-prop"><td class="tblQmlPropNode"><p><a name="metaData.videoFrameRate-prop"></a><span class="name">metaData.videoFrameRate</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the frame rate of the media's video stream.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.videoFrameRate -->
+<br/>
+<!-- $$$metaData.writer -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.writer-prop"><td class="tblQmlPropNode"><p><a name="metaData.writer-prop"></a><span class="name">metaData.writer</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the writer of the media.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.writer -->
+<br/>
+<!-- $$$metaData.year -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metaData.year-prop"><td class="tblQmlPropNode"><p><a name="metaData.year-prop"></a><span class="name">metaData.year</span> : <span class="type">variant</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the year of release of the media.</p>
+<p><b>See also </b>QMediaMetaData.</p>
+</div></div><!-- @@@metaData.year -->
+<br/>
+<!-- $$$muted -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="muted-prop"><td class="tblQmlPropNode"><p><a name="muted-prop"></a><span class="name">muted</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds whether the audio output is muted.</p>
+<p>Defaults to false.</p>
+</div></div><!-- @@@muted -->
+<br/>
+<!-- $$$playbackRate -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="playbackRate-prop"><td class="tblQmlPropNode"><p><a name="playbackRate-prop"></a><span class="name">playbackRate</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the rate at which audio is played at as a multiple of the normal rate.</p>
+<p>Defaults to 1.0&#x2e;</p>
+</div></div><!-- @@@playbackRate -->
+<br/>
+<!-- $$$playbackState -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="playbackState-prop"><td class="tblQmlPropNode"><p><a name="playbackState-prop"></a><span class="name">playbackState</span> : <span class="type">enumeration</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the state of media playback. It can be one of:</p>
+<ul>
+<li>PlayingState - the media is currently playing.</li>
+<li>PausedState - playback of the media has been suspended.</li>
+<li>StoppedState - playback of the media is yet to begin.</li>
+</ul>
+</div></div><!-- @@@playbackState -->
+<br/>
+<!-- $$$playlist -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="playlist-prop"><td class="tblQmlPropNode"><p><a name="playlist-prop"></a><span class="name">playlist</span> : <span class="type"><a href="../QtMultimedia.Playlist/index.html">Playlist</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the playlist used by the media player.</p>
+<p>Setting the playlist property resets the <a href="index.html#source-prop">source</a> to an empty string.</p>
+</div></div><!-- @@@playlist -->
+<br/>
+<!-- $$$position -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="position-prop"><td class="tblQmlPropNode"><p><a name="position-prop"></a><span class="name">position</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the current playback position in milliseconds.</p>
+<p>To change this position, use the <a href="index.html#seek-method">seek()</a> method.</p>
+<p><b>See also </b><a href="index.html#seek-method">seek()</a>.</p>
+</div></div><!-- @@@position -->
+<br/>
+<!-- $$$seekable -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="seekable-prop"><td class="tblQmlPropNode"><p><a name="seekable-prop"></a><span class="name">seekable</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds whether position of the audio can be changed.</p>
+<p>If true, calling the <a href="index.html#seek-method">seek()</a> method will cause playback to seek to the new position.</p>
+</div></div><!-- @@@seekable -->
+<br/>
+<!-- $$$source -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="source-prop"><td class="tblQmlPropNode"><p><a name="source-prop"></a><span class="name">source</span> : <span class="type">url</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the source URL of the media.</p>
+<p>Setting the source property clears the current <a href="index.html#playlist-prop">playlist</a>, if any.</p>
+</div></div><!-- @@@source -->
+<br/>
+<!-- $$$status -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="status-prop"><td class="tblQmlPropNode"><p><a name="status-prop"></a><span class="name">status</span> : <span class="type">enumeration</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the status of media loading. It can be one of:</p>
+<ul>
+<li>NoMedia - no media has been set.</li>
+<li>Loading - the media is currently being loaded.</li>
+<li>Loaded - the media has been loaded.</li>
+<li>Buffering - the media is buffering data.</li>
+<li>Stalled - playback has been interrupted while the media is buffering data.</li>
+<li>Buffered - the media has buffered data.</li>
+<li>EndOfMedia - the media has played to the end.</li>
+<li>InvalidMedia - the media cannot be played.</li>
+<li>UnknownStatus - the status of the media is unknown.</li>
+</ul>
+</div></div><!-- @@@status -->
+<br/>
+<!-- $$$volume -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="volume-prop"><td class="tblQmlPropNode"><p><a name="volume-prop"></a><span class="name">volume</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the volume of the audio output, from 0.0 (silent) to 1.0 (maximum volume).</p>
+<p>Defaults to 1.0&#x2e;</p>
+</div></div><!-- @@@volume -->
+<br/>
+<h2>Signal Documentation</h2>
+<!-- $$$error -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="error-signal"><td class="tblQmlFuncNode"><p><a name="error-signal"></a><span class="name">error</span>(<span class="type">error</span>, <span class="type">errorString</span>)</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when an error has occurred. The errorString parameter may contain more detailed information about the error.</p>
+<p>The corresponding handler is <code>onError</code>.</p>
+</div></div><!-- @@@error -->
+<br/>
+<!-- $$$paused -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="paused-signal"><td class="tblQmlFuncNode"><p><a name="paused-signal"></a><span class="name">paused</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when playback is paused.</p>
+<p>The corresponding handler is <code>onPaused</code>.</p>
+</div></div><!-- @@@paused -->
+<br/>
+<!-- $$$playbackStateChanged -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="playbackStateChanged-signal"><td class="tblQmlFuncNode"><p><a name="playbackStateChanged-signal"></a><span class="name">playbackStateChanged</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when the <a href="index.html#playbackState-prop">playbackState</a> property is altered.</p>
+<p>The corresponding handler is <code>onPlaybackStateChanged</code>.</p>
+</div></div><!-- @@@playbackStateChanged -->
+<br/>
+<!-- $$$playing -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="playing-signal"><td class="tblQmlFuncNode"><p><a name="playing-signal"></a><span class="name">playing</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when playback is started or resumed.</p>
+<p>The corresponding handler is <code>onPlaying</code>.</p>
+</div></div><!-- @@@playing -->
+<br/>
+<!-- $$$stopped -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="stopped-signal"><td class="tblQmlFuncNode"><p><a name="stopped-signal"></a><span class="name">stopped</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when playback is stopped.</p>
+<p>The corresponding handler is <code>onStopped</code>.</p>
+</div></div><!-- @@@stopped -->
+<br/>
+<h2>Method Documentation</h2>
+<!-- $$$pause -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="pause-method"><td class="tblQmlFuncNode"><p><a name="pause-method"></a><span class="name">pause</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Pauses playback of the media.</p>
+<p>Sets the <a href="index.html#playbackState-prop">playbackState</a> property to PausedState.</p>
+</div></div><!-- @@@pause -->
+<br/>
+<!-- $$$play -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="play-method"><td class="tblQmlFuncNode"><p><a name="play-method"></a><span class="name">play</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Starts playback of the media.</p>
+<p>Sets the <a href="index.html#playbackState-prop">playbackState</a> property to PlayingState.</p>
+</div></div><!-- @@@play -->
+<br/>
+<!-- $$$seek -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="seek-method"><td class="tblQmlFuncNode"><p><a name="seek-method"></a><span class="name">seek</span>(<span class="type">offset</span>)</p></td></tr></table></div></div><div class="qmldoc"><p>If the <a href="index.html#seekable-prop">seekable</a> property is true, seeks the current playback position to <i>offset</i>.</p>
+<p>Seeking may be asynchronous, so the <a href="index.html#position-prop">position</a> property may not be updated immediately.</p>
+<p><b>See also </b><a href="index.html#seekable-prop">seekable</a> and <a href="index.html#position-prop">position</a>.</p>
+</div></div><!-- @@@seek -->
+<br/>
+<!-- $$$stop -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="stop-method"><td class="tblQmlFuncNode"><p><a name="stop-method"></a><span class="name">stop</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Stops playback of the media.</p>
+<p>Sets the <a href="index.html#playbackState-prop">playbackState</a> property to StoppedState.</p>
+</div></div><!-- @@@stop -->
+<br/>
+<!-- $$$supportedAudioRoles -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="supportedAudioRoles-method"><td class="tblQmlFuncNode"><p><a name="supportedAudioRoles-method"></a><span class="type">list</span>&lt;<span class="type">int</span>&gt; <span class="name">supportedAudioRoles</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Returns a list of supported audio roles.</p>
+<p>If setting the audio role is not supported, an empty list is returned.</p>
+<p>This QML method was introduced in  Qt 5.6.</p>
+<p><b>See also </b><a href="index.html#audioRole-prop">audioRole</a>.</p>
+</div></div><!-- @@@supportedAudioRoles -->
+<br/>
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

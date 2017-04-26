@@ -1,0 +1,682 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Qt Quick Demo - Clocks | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a class="sub-nav-item" href="../index.html">SDK 15.04.3</a> &rsaquo;</li>
+
+<li><a class="sub-nav-item" href="../QtQuick/index.html">QtQuick</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Qt Quick Demo - Clocks</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qtquick-demos-clocks-example.html -->
+	<!-- Source Format: qdoc -->
+<h1>Qt Quick Demo - Clocks</h1>
+<div id="page_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$demos/clocks-description -->
+<div class="descr"> <a name="details"></a>
+<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/44c2bfe1-460b-48a5-977a-0e5ae77a8ca5-api/apps/qml/sdk-15.04.3/qtquick-demos-clocks-example/images/qtquick-demo-clocks-small.png" alt="" /></p><p><i>Clocks</i> demonstrates using a <a href="../QtQuick.ListView/index.html">ListView</a> type to display data generated by a <a href="../QtQuick.qtquick-modelviewsdata-modelview/index.html#listmodel">ListModel</a>. The delegate used by the model is specified as a custom QML type that is specified in the Clock.qml file.</p>
+<p>JavaScript methods are used to fetch the current time in several cities in different time zones and QML types are used to display the time on a clock face with animated clock hands.</p>
+<a name="running-the-example"></a>
+<h2 id="running-the-example">Running the Example</h2>
+<p>To run the example from Qt Creator, open the <b>Welcome</b> mode and select the example from <b>Examples</b>. For more information, visit Building and Running an Example.</p>
+<a name="displaying-data-generated-by-list-models"></a>
+<h2 id="displaying-data-generated-by-list-models">Displaying Data Generated by List Models</h2>
+<p>In the clocks.qml file, we use a <a href="../QtQuick.Rectangle/index.html">Rectangle</a> type to create the application main window:</p>
+<pre class="qml"><span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> {
+    <span class="name">id</span>: <span class="name">root</span>
+    <span class="name">width</span>: <span class="number">640</span>; <span class="name">height</span>: <span class="number">320</span>
+    <span class="name">color</span>: <span class="string">&quot;#646464&quot;</span></pre>
+<p>We use a <a href="../QtQuick.ListView/index.html">ListView</a> type to display a list of the items provided by a <a href="../QtQuick.qtquick-modelviewsdata-modelview/index.html#listmodel">ListModel</a> type:</p>
+<pre class="qml">    <span class="type"><a href="../QtQuick.ListView/index.html">ListView</a></span> {
+        <span class="name">id</span>: <span class="name">clockview</span>
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">orientation</span>: <span class="name">ListView</span>.<span class="name">Horizontal</span>
+        <span class="name">cacheBuffer</span>: <span class="number">2000</span>
+        <span class="name">snapMode</span>: <span class="name">ListView</span>.<span class="name">SnapOneItem</span>
+        <span class="name">highlightRangeMode</span>: <span class="name">ListView</span>.<span class="name">ApplyRange</span>
+        <span class="name">delegate</span>: <span class="name">Content</span>.Clock { <span class="name">city</span>: <span class="name">cityName</span>; <span class="name">shift</span>: <span class="name">timeShift</span> }
+        <span class="name">model</span>: <span class="name">ListModel</span> {
+            <span class="type">ListElement</span> { <span class="name">cityName</span>: <span class="string">&quot;New York&quot;</span>; <span class="name">timeShift</span>: -<span class="number">4</span> }
+            <span class="type">ListElement</span> { <span class="name">cityName</span>: <span class="string">&quot;London&quot;</span>; <span class="name">timeShift</span>: <span class="number">0</span> }
+            <span class="type">ListElement</span> { <span class="name">cityName</span>: <span class="string">&quot;Oslo&quot;</span>; <span class="name">timeShift</span>: <span class="number">1</span> }
+            <span class="type">ListElement</span> { <span class="name">cityName</span>: <span class="string">&quot;Mumbai&quot;</span>; <span class="name">timeShift</span>: <span class="number">5.5</span> }
+            <span class="type">ListElement</span> { <span class="name">cityName</span>: <span class="string">&quot;Tokyo&quot;</span>; <span class="name">timeShift</span>: <span class="number">9</span> }
+            <span class="type">ListElement</span> { <span class="name">cityName</span>: <span class="string">&quot;Brisbane&quot;</span>; <span class="name">timeShift</span>: <span class="number">10</span> }
+            <span class="type">ListElement</span> { <span class="name">cityName</span>: <span class="string">&quot;Los Angeles&quot;</span>; <span class="name">timeShift</span>: -<span class="number">8</span> }
+        }
+    }</pre>
+<p>List elements are defined like other QML types except that they contain a collection of <i>role</i> definitions instead of properties. Roles both define how the data is accessed and include the data itself.</p>
+<p>For each list element, we use the <code>cityName</code> role to specify the name of a city and the <code>timeShift</code> role to specify a time zone as a positive or negative offset from UTC (coordinated universal time).</p>
+<p>The Clock custom type is used as the <a href="../QtQuick.ListView/index.html">ListView</a>'s <code>delegate</code>, defining the visual appearance of list items. To use the Clock type, we add an import statement that imports the folder called <code>content</code> where the type is located:</p>
+<pre class="qml">import &quot;content&quot; as Content</pre>
+<p>We use an <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04.3/QtQuick.imageelements/#image">Image</a> type to display arrows that indicate whether users can flick the view to see more clocks on the left or right:</p>
+<pre class="qml">    <span class="type"><a href="../QtQuick.Image/index.html">Image</a></span> {
+        <span class="name">anchors</span>.left: <span class="name">parent</span>.<span class="name">left</span>
+        <span class="name">anchors</span>.bottom: <span class="name">parent</span>.<span class="name">bottom</span>
+        <span class="name">anchors</span>.margins: <span class="number">10</span>
+        <span class="name">source</span>: <span class="string">&quot;content/arrow.png&quot;</span>
+        <span class="name">rotation</span>: -<span class="number">90</span>
+        <span class="name">opacity</span>: <span class="name">clockview</span>.<span class="name">atXBeginning</span> ? <span class="number">0</span> : <span class="number">0.5</span>
+        Behavior on <span class="name">opacity</span> { <span class="type"><a href="../QtQuick.NumberAnimation/index.html">NumberAnimation</a></span> { <span class="name">duration</span>: <span class="number">500</span> } }
+    }
+    <span class="type"><a href="../QtQuick.Image/index.html">Image</a></span> {
+        <span class="name">anchors</span>.right: <span class="name">parent</span>.<span class="name">right</span>
+        <span class="name">anchors</span>.bottom: <span class="name">parent</span>.<span class="name">bottom</span>
+        <span class="name">anchors</span>.margins: <span class="number">10</span>
+        <span class="name">source</span>: <span class="string">&quot;content/arrow.png&quot;</span>
+        <span class="name">rotation</span>: <span class="number">90</span>
+        <span class="name">opacity</span>: <span class="name">clockview</span>.<span class="name">atXEnd</span> ? <span class="number">0</span> : <span class="number">0.5</span>
+        Behavior on <span class="name">opacity</span> { <span class="type"><a href="../QtQuick.NumberAnimation/index.html">NumberAnimation</a></span> { <span class="name">duration</span>: <span class="number">500</span> } }
+    }
+}</pre>
+<p>We use the <code>opacity</code> property to hide the arrows when the list view is located at the beginning or end of the x axis.</p>
+<p>In Clock.qml, we define a <code>timeChanged()</code> function in which we use methods from the JavaScript <code>Date</code> object to fetch the current time in UTC and to adjust it to the correct time zone:</p>
+<pre class="qml">    <span class="keyword">function</span> <span class="name">timeChanged</span>() {
+        var <span class="name">date</span> = new <span class="name">Date</span>;
+        <span class="name">hours</span> <span class="operator">=</span> <span class="name">internationalTime</span> ? <span class="name">date</span>.<span class="name">getUTCHours</span>() <span class="operator">+</span> <span class="name">Math</span>.<span class="name">floor</span>(<span class="name">clock</span>.<span class="name">shift</span>) : <span class="name">date</span>.<span class="name">getHours</span>()
+        <span class="name">night</span> <span class="operator">=</span> ( <span class="name">hours</span> <span class="operator">&lt;</span> <span class="number">7</span> <span class="operator">||</span> <span class="name">hours</span> <span class="operator">&gt;</span> <span class="number">19</span> )
+        <span class="name">minutes</span> <span class="operator">=</span> <span class="name">internationalTime</span> ? <span class="name">date</span>.<span class="name">getUTCMinutes</span>() <span class="operator">+</span> ((<span class="name">clock</span>.<span class="name">shift</span> <span class="operator">%</span> <span class="number">1</span>) <span class="operator">*</span> <span class="number">60</span>) : <span class="name">date</span>.<span class="name">getMinutes</span>()
+        <span class="name">seconds</span> <span class="operator">=</span> <span class="name">date</span>.<span class="name">getUTCSeconds</span>();
+    }</pre>
+<p>We use a Timer type to update the time at intervals of 100 milliseconds:</p>
+<pre class="qml">    <span class="type">Timer</span> {
+        <span class="name">interval</span>: <span class="number">100</span>; <span class="name">running</span>: <span class="number">true</span>; <span class="name">repeat</span>: <span class="number">true</span>;
+        <span class="name">onTriggered</span>: <span class="name">clock</span>.<span class="name">timeChanged</span>()
+    }</pre>
+<p>We use <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04.3/QtQuick.imageelements/#image">Image</a> types within an <a href="../QtQuick.Item/index.html">Item</a> type to display the time on an analog clock face. Different images are used for daytime and nighttime hours:</p>
+<pre class="qml">    <span class="type"><a href="../QtQuick.Item/index.html">Item</a></span> {
+        <span class="name">anchors</span>.centerIn: <span class="name">parent</span>
+        <span class="name">width</span>: <span class="number">200</span>; <span class="name">height</span>: <span class="number">240</span>
+        <span class="type"><a href="../QtQuick.Image/index.html">Image</a></span> { <span class="name">id</span>: <span class="name">background</span>; <span class="name">source</span>: <span class="string">&quot;clock.png&quot;</span>; <span class="name">visible</span>: <span class="name">clock</span>.<span class="name">night</span> <span class="operator">==</span> <span class="number">false</span> }
+        <span class="type"><a href="../QtQuick.Image/index.html">Image</a></span> { <span class="name">source</span>: <span class="string">&quot;clock-night.png&quot;</span>; <span class="name">visible</span>: <span class="name">clock</span>.<span class="name">night</span> <span class="operator">==</span> <span class="number">true</span> }</pre>
+<p>A <a href="../QtQuick.Rotation/index.html">Rotation</a> transform applied to <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04.3/QtQuick.imageelements/#image">Image</a> types provides a way to rotate the clock hands. The <code>origin</code> property holds the point that stays fixed relative to the parent as the rest of the item rotates. The <code>angle</code> property determines the angle to rotate the hands in degrees clockwise.</p>
+<pre class="qml">        <span class="type"><a href="../QtQuick.Image/index.html">Image</a></span> {
+            <span class="name">x</span>: <span class="number">92.5</span>; <span class="name">y</span>: <span class="number">27</span>
+            <span class="name">source</span>: <span class="string">&quot;hour.png&quot;</span>
+            <span class="name">transform</span>: <span class="name">Rotation</span> {
+                <span class="name">id</span>: <span class="name">hourRotation</span>
+                <span class="name">origin</span>.x: <span class="number">7.5</span>; <span class="name">origin</span>.y: <span class="number">73</span>;
+                <span class="name">angle</span>: (<span class="name">clock</span>.<span class="name">hours</span> <span class="operator">*</span> <span class="number">30</span>) <span class="operator">+</span> (<span class="name">clock</span>.<span class="name">minutes</span> <span class="operator">*</span> <span class="number">0.5</span>)
+                Behavior on <span class="name">angle</span> {
+                    <span class="type"><a href="../QtQuick.SpringAnimation/index.html">SpringAnimation</a></span> { <span class="name">spring</span>: <span class="number">2</span>; <span class="name">damping</span>: <span class="number">0.2</span>; <span class="name">modulus</span>: <span class="number">360</span> }
+                }
+            }
+        }
+        <span class="type"><a href="../QtQuick.Image/index.html">Image</a></span> {
+            <span class="name">x</span>: <span class="number">93.5</span>; <span class="name">y</span>: <span class="number">17</span>
+            <span class="name">source</span>: <span class="string">&quot;minute.png&quot;</span>
+            <span class="name">transform</span>: <span class="name">Rotation</span> {
+                <span class="name">id</span>: <span class="name">minuteRotation</span>
+                <span class="name">origin</span>.x: <span class="number">6.5</span>; <span class="name">origin</span>.y: <span class="number">83</span>;
+                <span class="name">angle</span>: <span class="name">clock</span>.<span class="name">minutes</span> <span class="operator">*</span> <span class="number">6</span>
+                Behavior on <span class="name">angle</span> {
+                    <span class="type"><a href="../QtQuick.SpringAnimation/index.html">SpringAnimation</a></span> { <span class="name">spring</span>: <span class="number">2</span>; <span class="name">damping</span>: <span class="number">0.2</span>; <span class="name">modulus</span>: <span class="number">360</span> }
+                }
+            }
+        }
+        <span class="type"><a href="../QtQuick.Image/index.html">Image</a></span> {
+            <span class="name">x</span>: <span class="number">97.5</span>; <span class="name">y</span>: <span class="number">20</span>
+            <span class="name">source</span>: <span class="string">&quot;second.png&quot;</span>
+            <span class="name">transform</span>: <span class="name">Rotation</span> {
+                <span class="name">id</span>: <span class="name">secondRotation</span>
+                <span class="name">origin</span>.x: <span class="number">2.5</span>; <span class="name">origin</span>.y: <span class="number">80</span>;
+                <span class="name">angle</span>: <span class="name">clock</span>.<span class="name">seconds</span> <span class="operator">*</span> <span class="number">6</span>
+                Behavior on <span class="name">angle</span> {
+                    <span class="type"><a href="../QtQuick.SpringAnimation/index.html">SpringAnimation</a></span> { <span class="name">spring</span>: <span class="number">2</span>; <span class="name">damping</span>: <span class="number">0.2</span>; <span class="name">modulus</span>: <span class="number">360</span> }
+                }
+            }
+        }
+        <span class="type"><a href="../QtQuick.Image/index.html">Image</a></span> {
+            <span class="name">anchors</span>.centerIn: <span class="name">background</span>; <span class="name">source</span>: <span class="string">&quot;center.png&quot;</span>
+        }</pre>
+<p>We use a <a href="../QtQuick.Behavior/index.html">Behavior</a> type on the <code>angle</code> property to apply a <a href="../QtQuick.SpringAnimation/index.html">SpringAnimation</a> when the time changes. The <code>spring</code> and <code>damping</code> properties enable the spring-like motion of the clock hands, and a <code>modulus</code> of <code>360</code> makes the animation target values wrap around at a full circle.</p>
+<p>We use a <a href="../QtQuick.qtquick-releasenotes/index.html#text">Text</a> type to display the city name below the clock:</p>
+<pre class="qml">        <span class="type"><a href="../QtQuick.Text/index.html">Text</a></span> {
+            <span class="name">id</span>: <span class="name">cityLabel</span>
+            <span class="name">y</span>: <span class="number">210</span>; <span class="name">anchors</span>.horizontalCenter: <span class="name">parent</span>.<span class="name">horizontalCenter</span>
+            <span class="name">color</span>: <span class="string">&quot;white&quot;</span>
+            <span class="name">font</span>.family: <span class="string">&quot;Helvetica&quot;</span>
+            <span class="name">font</span>.bold: <span class="number">true</span>; <span class="name">font</span>.pixelSize: <span class="number">16</span>
+            <span class="name">style</span>: <span class="name">Text</span>.<span class="name">Raised</span>; <span class="name">styleColor</span>: <span class="string">&quot;black&quot;</span>
+        }</pre>
+<p>Files:</p>
+<ul>
+<li>demos/clocks/clocks.qml</li>
+<li>demos/clocks/content/Clock.qml</li>
+<li>demos/clocks/main.cpp</li>
+<li>demos/clocks/clocks.pro</li>
+<li>demos/clocks/clocks.qmlproject</li>
+<li>demos/clocks/clocks.qrc</li>
+</ul>
+</div>
+<p><b>See also </b>QML Applications.</p>
+<!-- @@@demos/clocks -->
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

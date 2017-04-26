@@ -1,0 +1,688 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Running Autopilot | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/sphinx.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Autopilot</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">Python</a> &rsaquo;</li>
+<li><a class="sub-nav-item" href="../index.html">1.6.0</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Running Autopilot</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: running_ap.fjson -->
+	<!-- Source Format: sphinx -->
+<h1>Running Autopilot</h1>
+<div id="page_content" class="sphinx">
+<!-- Start Element Content -->
+<p>Autopilot test suites can be run with any python test runner (for example, the built-in testtools runner). However, several autopilot features are only available if you use the autopilot runner.</p>
+<div class="section" id="list-tests">
+<h2>List Tests<a class="headerlink" href="index.html#list-tests" title="Permalink to this headline"></a></h2>
+<p>Autopilot can list all tests found within a particular module:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ autopilot3 list &lt;modulename&gt;
+</pre></div>
+</div>
+<p>where <em>&lt;modulename&gt;</em> is the base name of the module you want to look at. The module must either be in the current working directory, or be importable by python. For example, to list the tests inside autopilot itself, you can run:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ autopilot3 list autopilot
+   autopilot.tests.test_ap_apps.GtkTests.test_can_launch_qt_app
+   autopilot.tests.test_ap_apps.QtTests.test_can_launch_qt_app
+   autopilot.tests.test_application_mixin.ApplicationSupportTests.test_can_create
+   autopilot.tests.test_application_mixin.ApplicationSupportTests.test_launch_raises_ValueError_on_unknown_kwargs
+   autopilot.tests.test_application_mixin.ApplicationSupportTests.test_launch_raises_ValueError_on_unknown_kwargs_with_known
+   autopilot.tests.test_application_mixin.ApplicationSupportTests.test_launch_with_bad_types_raises_typeerror
+   autopilot.tests.test_application_registration.ApplicationRegistrationTests.test_can_register_new_application
+   autopilot.tests.test_application_registration.ApplicationRegistrationTests.test_can_unregister_application
+   autopilot.tests.test_application_registration.ApplicationRegistrationTests.test_registering_app_twice_raises_KeyError
+   autopilot.tests.test_application_registration.ApplicationRegistrationTests.test_unregistering_unknown_application_raises_KeyError
+   ...
+
+    81 total tests.
+</pre></div>
+</div>
+<p>Some results have been omitted for clarity.</p>
+<p>The list command takes only one option:</p>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-r<var>o</var></span>, <span class="option">--run-order</span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Display tests in the order in which they will be run,
+rather than alphabetical order (which is the default).</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="run-tests">
+<h2>Run Tests<a class="headerlink" href="index.html#run-tests" title="Permalink to this headline"></a></h2>
+<p>Running autopilot tests is very similar to listing tests:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ autopilot3 run &lt;modulename&gt;
+</pre></div>
+</div>
+<p>However, the run command has many more options to customize the run behavior:</p>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></td>
+<td>show this help message and exit</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-o <var>OUTPUT</var></span>, <span class="option">--output <var>OUTPUT</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Write test result report to file. Defaults to stdout.
+If given a directory instead of a file will write to a
+file in that directory named:
+&lt;hostname&gt;_&lt;dd.mm.yyy_HHMMSS&gt;.log</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-f <var>FORMAT</var></span>, <span class="option">--format <var>FORMAT</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Specify desired output format. Default is &#8220;text&#8221;.
+Other option is &#8216;xml&#8217; to produce junit xml format.</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-r</span>, <span class="option">--record</span></kbd></td>
+<td>Record failing tests. Required &#8216;recordmydesktop&#8217; app
+to be installed. Videos are stored in /tmp/autopilot.</td></tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>-rd PATH, &#8211;record-directory PATH</dt>
+<dd>Directory to put recorded tests (only if -r)
+specified.</dd>
+</dl>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-v</span>, <span class="option">--verbose</span></kbd></td>
+<td>If set, autopilot will output test log data to stderr
+during a test run.</td></tr>
+</tbody>
+</table>
+<div class="section" id="common-use-cases">
+<h3>Common use cases<a class="headerlink" href="index.html#common-use-cases" title="Permalink to this headline"></a></h3>
+<ol class="arabic">
+<li><p class="first"><strong>Run autopilot and save the test log</strong>:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ autopilot3 run -o . &lt;modulename&gt;
+</pre></div>
+</div>
+</li>
+</ol>
+<blockquote>
+<div>Autopilot will create a text log file named &lt;hostname&gt;_&lt;dd.mm.yyy_HHMMSS&gt;.log with the contents of the test log.</div></blockquote>
+<ol class="arabic" start="2">
+<li><p class="first"><strong>Run autopilot and record failing tests</strong>:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ autopilot3 run -r --rd . &lt;modulename&gt;
+</pre></div>
+</div>
+</li>
+</ol>
+<blockquote>
+<div>Videos are recorded as <em>ogg-vorbis</em> files, with an .ogv extension. They will be named with the test id that failed. All videos will be placed in the directory specified by the <tt class="docutils literal"><span class="pre">-rd</span></tt> option - in this case the currect directory. If this option is omitted, videos will be placed in <tt class="docutils literal"><span class="pre">/tmp/autopilot/</span></tt>.</div></blockquote>
+<ol class="arabic" start="3">
+<li><p class="first"><strong>Save the test log as jUnitXml format</strong>:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ autopilot3 run -o results.xml -f xml &lt;modulename&gt;
+</pre></div>
+</div>
+</li>
+</ol>
+<blockquote>
+<div>The file &#8216;results.xml&#8217; will be created when all the tests have completed, and will be in the jUnitXml file format. This is useful when running the autopilot tests within a jenkins environment.</div></blockquote>
+</div>
+</div>
+<div class="section" id="launching-an-application-to-introspect">
+<span id="launching-application-to-introspect"></span><h2>Launching an Application to Introspect<a class="headerlink" href="index.html#launching-an-application-to-introspect" title="Permalink to this headline"></a></h2>
+<p>In order to be able to introspect an application, it must first be launched with introspection enabled. Autopilot provides the <strong>launch</strong> command to enable this:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ autopilot3 launch &lt;application&gt; &lt;app_parameters&gt;
+</pre></div>
+</div>
+<p>The <em>&lt;application&gt;</em> parameter could be the full path to the application, or the name of an application located somewhere on <tt class="docutils literal"><span class="pre">$PATH</span></tt>. <em>&lt;app_parameter&gt;</em> is passed on to the application being launched.</p>
+<p>A simple Gtk example to launch gedit:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ autopilot3 launch gedit
+</pre></div>
+</div>
+<p>A Qt example which passes on parameters to the application being launched:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ autopilot3 launch qmlscene my_app.qml
+</pre></div>
+</div>
+<p>Autopilot launch attempts to detect if you are launching either a Gtk or Qt application so that it can enable the correct libraries. If it is unable to determine this you will need to specify the type of application it is by using the -i argument. This allows &#8220;Gtk&#8221; or &#8220;Qt&#8221; frameworks to be specified when launching the application. The default value (&#8220;Auto&#8221;) will try to detect which interface to load automatically.</p>
+<p>A typical error in this situation will be &#8220;Error: Could not determine introspection type to use for application&#8221;. In which case the -i option should be specified with the correct application framework type to fix the problem:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ autopilot3 launch -i Qt address-book-app
+</pre></div>
+</div>
+<p>Once an application has launched with introspection enabled, it will be possible to launch autopilot vis and view the introspection tree, see: <a class="reference internal" href="index.html#visualise-introspection-tree"><em>Visualise Introspection Tree</em></a>.</p>
+</div>
+<div class="section" id="visualise-introspection-tree">
+<span id="id1"></span><h2>Visualise Introspection Tree<a class="headerlink" href="index.html#visualise-introspection-tree" title="Permalink to this headline"></a></h2>
+<p>A very common thing to want to do while writing autopilot tests is see the structure of the application being tested. To support this, autopilot includes a simple application to help visualize the introspection tree. To start it, make sure the application you wish to test is running (see: <a class="reference internal" href="index.html#launching-application-to-introspect"><em>Launching an Application to Introspect</em></a>), and then run:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ autopilot3 vis
+</pre></div>
+</div>
+<p>The result should be a window similar to below:</p>
+<img alt="../../_images/ap_vis_front_page.png" src="https://developer.ubuntu.com/api/autopilot/python/_images/ap_vis_front_page.png" />
+<p>Selecting a connection from the drop-down box allows you to inspect different autopilot-supporting applications. If Unity is running, the Unity connection should always be present. If other applications have been started with the autopilot support enabled, they should appear in this list as well. Once a connection is selected, the introspection tree is rendered in the left-hand pane, and the details of each object appear in the right-hand pane.</p>
+<img alt="../../_images/ap_vis_object.png" src="https://developer.ubuntu.com/api/autopilot/python/_images/ap_vis_object.png" />
+<p>Autopilot vis also has the ability to search the object tree for nodes that match a given name (such as &#8220;LauncherController&#8221;, for example), and draw a transparent overlay over a widget if it contains position information. These tools, when combined can make finding certain parts of an application introspection tree much easier.</p>
+</div>
+</div>
+
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

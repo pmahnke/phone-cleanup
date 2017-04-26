@@ -1,0 +1,863 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>ActivationResponse [sdk-15.04.5/unity.scopes.ActivationResponse] | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/doxygen.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Scopes</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">C++</a> &rsaquo;</li>
+<li><a href="../index.html">SDK 15.04.5</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">ActivationResponse</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: classunity_1_1scopes_1_1_activation_response.html -->
+	<!-- Source Format: doxygen -->
+<h1>ActivationResponse</h1>
+<div id="element_content" class="doxygen">
+<!-- Start Element Content -->
+<p>Response to a result activation.  
+ <a href="index.html#details">More...</a></p>
+<p><code>#include &lt;unity/scopes/ActivationResponse.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a726cf6ec58d4e035e2cdc14cda152d02"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a726cf6ec58d4e035e2cdc14cda152d02">Status</a> { <br />
+&#160;&#160;<a class="el" href="index.html#a726cf6ec58d4e035e2cdc14cda152d02aa3c4b9a3c5fcb54e5cce7d473cecfde3">NotHandled</a>, 
+<a class="el" href="index.html#a726cf6ec58d4e035e2cdc14cda152d02aa1a5253f6bf4d7a39ebb4e990c05508f">ShowDash</a>, 
+<a class="el" href="index.html#a726cf6ec58d4e035e2cdc14cda152d02af5f1369ea32773936a8339e0811be045">HideDash</a>, 
+<a class="el" href="index.html#a726cf6ec58d4e035e2cdc14cda152d02a8fd3954d3410ba938ee9faf58bda7912">ShowPreview</a>, 
+<br />
+&#160;&#160;<a class="el" href="index.html#a726cf6ec58d4e035e2cdc14cda152d02a91ca5a8fc7bc1e5895336fbca9bc0ac2">PerformQuery</a>, 
+<a class="el" href="index.html#a726cf6ec58d4e035e2cdc14cda152d02a80e4269cf8263509c6a99914d40a1c00">UpdateResult</a>, 
+<a class="el" href="index.html#a726cf6ec58d4e035e2cdc14cda152d02ac0d0d3b809d0f7a051ca474b15a69660">UpdatePreview</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a726cf6ec58d4e035e2cdc14cda152d02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status of a <a class="el" href="../unity.scopes.ScopeBase/index.html#a49a0b9ada0eeb4c71e6a2181c3d8c9e7" title="Called by the scopes runtime when a scope needs to respond to a result activation request...">unity::scopes::ScopeBase::activate</a>, <a class="el" href="../unity.scopes.ScopeBase/index.html#a2f4d476fa790349c9a7de52be3232d11" title="Invoked when a scope is requested to handle a preview action. ">unity::scopes::ScopeBase::perform_action</a>, or <a class="el" href="../unity.scopes.ScopeBase/index.html#a7ac39ca44f4790dd36900657692d0565" title="Invoked when a scope is requested to handle a result in-card action. ">unity::scopes::ScopeBase::activate_result_action</a> request.  <a href="index.html#a726cf6ec58d4e035e2cdc14cda152d02">More...</a><br /></td></tr>
+<tr class="separator:a726cf6ec58d4e035e2cdc14cda152d02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ac3b7700c436ec2413c1d6a3ca785cc92"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#ac3b7700c436ec2413c1d6a3ca785cc92">ActivationResponse</a> (<a class="el" href="index.html#a726cf6ec58d4e035e2cdc14cda152d02">Status</a> <a class="el" href="index.html#a7caef418f9e400017d5c62c9cf25c9b8">status</a>)</td></tr>
+<tr class="memdesc:ac3b7700c436ec2413c1d6a3ca785cc92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates ActivationResponse with given status.  More...<br /></td></tr>
+<tr class="separator:ac3b7700c436ec2413c1d6a3ca785cc92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2c2769688b650df4e6333c052076b71"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#ac2c2769688b650df4e6333c052076b71">ActivationResponse</a> (<a class="el" href="../unity.scopes.CannedQuery/index.html">CannedQuery</a> const &amp;<a class="el" href="index.html#af945b59acaaa90931743ec6ea5b0eac6">query</a>)</td></tr>
+<tr class="memdesc:ac2c2769688b650df4e6333c052076b71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an ActivationResponse with status Status::PerformQuery and a search query to be executed.  More...<br /></td></tr>
+<tr class="separator:ac2c2769688b650df4e6333c052076b71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2221da7ee9e35bbf1cf0a62812120e6b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a2221da7ee9e35bbf1cf0a62812120e6b">ActivationResponse</a> (<a class="el" href="../unity.scopes.Result/index.html">Result</a> const &amp;<a class="el" href="index.html#a342e63bf810daa6ccd7a69520e63fb90">updated_result</a>)</td></tr>
+<tr class="memdesc:a2221da7ee9e35bbf1cf0a62812120e6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an ActivationResponse with status Status::UpdateResult and an updated result that replaces the original result of the action.  More...<br /></td></tr>
+<tr class="separator:a2221da7ee9e35bbf1cf0a62812120e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedfc9aceac4127af885311788201a09f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#aedfc9aceac4127af885311788201a09f">ActivationResponse</a> (<a class="el" href="../unity.scopes/index.html#aed3b7b1daf2e49d0a820ef931caa792d">PreviewWidgetList</a> const &amp;<a class="el" href="index.html#a640e02cda7bff66aed9af88ff872b2ed">updated_widgets</a>)</td></tr>
+<tr class="memdesc:aedfc9aceac4127af885311788201a09f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates ActivationResponse with status Status::UpdatePreview and an updated list of preview widgets that replace the original widgets in the preview. Widgets not included in this list stay intact and are still displayed in the preview. Responding with this type of ActivationResponse outside of a preview context will not have any effect.  More...<br /></td></tr>
+<tr class="separator:aedfc9aceac4127af885311788201a09f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7caef418f9e400017d5c62c9cf25c9b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="index.html#a726cf6ec58d4e035e2cdc14cda152d02">ActivationResponse::Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a7caef418f9e400017d5c62c9cf25c9b8">status</a> () const </td></tr>
+<tr class="memdesc:a7caef418f9e400017d5c62c9cf25c9b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get activation status.  More...<br /></td></tr>
+<tr class="separator:a7caef418f9e400017d5c62c9cf25c9b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abedc7eb1923e89385ee5244a9824524c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#abedc7eb1923e89385ee5244a9824524c">set_scope_data</a> (<a class="el" href="../unity.scopes.Variant/index.html">Variant</a> const &amp;data)</td></tr>
+<tr class="memdesc:abedc7eb1923e89385ee5244a9824524c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attach arbitrary data to this response.  More...<br /></td></tr>
+<tr class="separator:abedc7eb1923e89385ee5244a9824524c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25b12fabb64c492a777dfd4dffc277f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../unity.scopes.Variant/index.html">Variant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a25b12fabb64c492a777dfd4dffc277f3">scope_data</a> () const </td></tr>
+<tr class="memdesc:a25b12fabb64c492a777dfd4dffc277f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get data attached to this response object.  More...<br /></td></tr>
+<tr class="separator:a25b12fabb64c492a777dfd4dffc277f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af945b59acaaa90931743ec6ea5b0eac6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../unity.scopes.CannedQuery/index.html">CannedQuery</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#af945b59acaaa90931743ec6ea5b0eac6">query</a> () const </td></tr>
+<tr class="memdesc:af945b59acaaa90931743ec6ea5b0eac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">A query to be executed if status is Status::PerformQuery.  More...<br /></td></tr>
+<tr class="separator:af945b59acaaa90931743ec6ea5b0eac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a342e63bf810daa6ccd7a69520e63fb90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../unity.scopes.Result/index.html">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a342e63bf810daa6ccd7a69520e63fb90">updated_result</a> () const </td></tr>
+<tr class="memdesc:a342e63bf810daa6ccd7a69520e63fb90"><td class="mdescLeft">&#160;</td><td class="mdescRight">The updated result if status is Status::UpdateResult.  More...<br /></td></tr>
+<tr class="separator:a342e63bf810daa6ccd7a69520e63fb90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a640e02cda7bff66aed9af88ff872b2ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../unity.scopes/index.html#aed3b7b1daf2e49d0a820ef931caa792d">PreviewWidgetList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a640e02cda7bff66aed9af88ff872b2ed">updated_widgets</a> () const </td></tr>
+<tr class="memdesc:a640e02cda7bff66aed9af88ff872b2ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">The updated widgets if status is Status::UpdatePreview.  More...<br /></td></tr>
+<tr class="separator:a640e02cda7bff66aed9af88ff872b2ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Copy and assignment</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Copy and assignment operators (move and non-move versions) have the usual value semantics. </p>
+</div></td></tr>
+<tr class="memitem:a8d4ddca6cb05fafda0e4232ef1e71a59"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8d4ddca6cb05fafda0e4232ef1e71a59"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ActivationResponse</b> (<a class="el" href="index.html">ActivationResponse</a> const &amp;other)</td></tr>
+<tr class="separator:a8d4ddca6cb05fafda0e4232ef1e71a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade34428ee4c6a8ddbebeb887ed8485fb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade34428ee4c6a8ddbebeb887ed8485fb"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ActivationResponse</b> (<a class="el" href="index.html">ActivationResponse</a> &amp;&amp;other)</td></tr>
+<tr class="separator:ade34428ee4c6a8ddbebeb887ed8485fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ef97d840c409700f2aeb42ee4bf5300"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ef97d840c409700f2aeb42ee4bf5300"></a>
+<a class="el" href="index.html">ActivationResponse</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="index.html">ActivationResponse</a> const &amp;other)</td></tr>
+<tr class="separator:a0ef97d840c409700f2aeb42ee4bf5300"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a112b29b61777dc298ced2026eb9ceb42"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a112b29b61777dc298ced2026eb9ceb42"></a>
+<a class="el" href="index.html">ActivationResponse</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="index.html">ActivationResponse</a> &amp;&amp;other)</td></tr>
+<tr class="separator:a112b29b61777dc298ced2026eb9ceb42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Response to a result activation. </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="a726cf6ec58d4e035e2cdc14cda152d02"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="index.html#a726cf6ec58d4e035e2cdc14cda152d02">unity::scopes::ActivationResponse::Status</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Status of a <a class="el" href="../unity.scopes.ScopeBase/index.html#a49a0b9ada0eeb4c71e6a2181c3d8c9e7" title="Called by the scopes runtime when a scope needs to respond to a result activation request...">unity::scopes::ScopeBase::activate</a>, <a class="el" href="../unity.scopes.ScopeBase/index.html#a2f4d476fa790349c9a7de52be3232d11" title="Invoked when a scope is requested to handle a preview action. ">unity::scopes::ScopeBase::perform_action</a>, or <a class="el" href="../unity.scopes.ScopeBase/index.html#a7ac39ca44f4790dd36900657692d0565" title="Invoked when a scope is requested to handle a result in-card action. ">unity::scopes::ScopeBase::activate_result_action</a> request. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a726cf6ec58d4e035e2cdc14cda152d02aa3c4b9a3c5fcb54e5cce7d473cecfde3"></a>NotHandled&#160;</td><td class="fielddoc">
+<p>Activation of this result wasn't handled by the scope </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a726cf6ec58d4e035e2cdc14cda152d02aa1a5253f6bf4d7a39ebb4e990c05508f"></a>ShowDash&#160;</td><td class="fielddoc">
+<p>Activation of this result was handled, show the Dash </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a726cf6ec58d4e035e2cdc14cda152d02af5f1369ea32773936a8339e0811be045"></a>HideDash&#160;</td><td class="fielddoc">
+<p>Activation of this result was handled, hide the Dash </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a726cf6ec58d4e035e2cdc14cda152d02a8fd3954d3410ba938ee9faf58bda7912"></a>ShowPreview&#160;</td><td class="fielddoc">
+<p>Preview should be requested for this result </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a726cf6ec58d4e035e2cdc14cda152d02a91ca5a8fc7bc1e5895336fbca9bc0ac2"></a>PerformQuery&#160;</td><td class="fielddoc">
+<p>Perform new search. This state is implied if creating <a class="el" href="index.html" title="Response to a result activation. ">ActivationResponse</a> with <a class="el" href="../unity.scopes.CannedQuery/index.html" title="Parameters of a search query. ">CannedQuery</a> object and is invalid otherwise </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a726cf6ec58d4e035e2cdc14cda152d02a80e4269cf8263509c6a99914d40a1c00"></a>UpdateResult&#160;</td><td class="fielddoc">
+<p>Update the result. This state is implied if creating <a class="el" href="index.html" title="Response to a result activation. ">ActivationResponse</a> with <a class="el" href="../unity.scopes.Result/index.html" title="The attributes of a result returned by a Scope. ">Result</a> object and is invalid otherwise </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a726cf6ec58d4e035e2cdc14cda152d02ac0d0d3b809d0f7a051ca474b15a69660"></a>UpdatePreview&#160;</td><td class="fielddoc">
+<p>Update the preview. This state is implied if creating <a class="el" href="index.html" title="Response to a result activation. ">ActivationResponse</a> with PreviewWidgetList and is invalid otherwise </p>
+</td></tr>
+</table>
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ac3b7700c436ec2413c1d6a3ca785cc92"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unity::scopes::ActivationResponse::ActivationResponse </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="index.html#a726cf6ec58d4e035e2cdc14cda152d02">Status</a>&#160;</td>
+          <td class="paramname"><em>status</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates <a class="el" href="index.html" title="Response to a result activation. ">ActivationResponse</a> with given status. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">status</td><td>The activation status. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">unity::InvalidArgumentException</td><td>if status is Status::PerformQuery or Status::Update. To create an <a class="el" href="index.html" title="Response to a result activation. ">ActivationResponse</a> for one of these types, use the <a class="el" href="index.html#ac2c2769688b650df4e6333c052076b71" title="Creates an ActivationResponse with status Status::PerformQuery and a search query to be executed...">ActivationResponse(CannedQuery const&amp;)</a> or <a class="el" href="index.html#a2221da7ee9e35bbf1cf0a62812120e6b" title="Creates an ActivationResponse with status Status::UpdateResult and an updated result that replaces th...">ActivationResponse(Result const&amp;)</a> constructors. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ac2c2769688b650df4e6333c052076b71"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unity::scopes::ActivationResponse::ActivationResponse </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.CannedQuery/index.html">CannedQuery</a> const &amp;&#160;</td>
+          <td class="paramname"><em>query</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an <a class="el" href="index.html" title="Response to a result activation. ">ActivationResponse</a> with status Status::PerformQuery and a search query to be executed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">query</td><td>The search query to be executed by the client. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a2221da7ee9e35bbf1cf0a62812120e6b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unity::scopes::ActivationResponse::ActivationResponse </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.Result/index.html">Result</a> const &amp;&#160;</td>
+          <td class="paramname"><em>updated_result</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an <a class="el" href="index.html" title="Response to a result activation. ">ActivationResponse</a> with status Status::UpdateResult and an updated result that replaces the original result of the action. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">updated_result</td><td>The updated result to replace the original result of the action. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aedfc9aceac4127af885311788201a09f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unity::scopes::ActivationResponse::ActivationResponse </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../unity.scopes/index.html#aed3b7b1daf2e49d0a820ef931caa792d">PreviewWidgetList</a> const &amp;&#160;</td>
+          <td class="paramname"><em>updated_widgets</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates <a class="el" href="index.html" title="Response to a result activation. ">ActivationResponse</a> with status Status::UpdatePreview and an updated list of preview widgets that replace the original widgets in the preview. Widgets not included in this list stay intact and are still displayed in the preview. Responding with this type of <a class="el" href="index.html" title="Response to a result activation. ">ActivationResponse</a> outside of a preview context will not have any effect. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">updated_widgets</td><td>The updated widgets to replace the original widgets in the preview. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">unity::InvalidArgumentException</td><td>if updated_widgets list is empty. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="af945b59acaaa90931743ec6ea5b0eac6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../unity.scopes.CannedQuery/index.html">CannedQuery</a> unity::scopes::ActivationResponse::query </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A query to be executed if status is Status::PerformQuery. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">unity::LogicException</td><td>if the status of this <a class="el" href="index.html" title="Response to a result activation. ">ActivationResponse</a> is anything other than Status::PerformQuery. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The query to be executed by the client. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a25b12fabb64c492a777dfd4dffc277f3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../unity.scopes.Variant/index.html">Variant</a> unity::scopes::ActivationResponse::scope_data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get data attached to this response object. </p>
+<dl class="section return"><dt>Returns</dt><dd>The data attached to the response. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="abedc7eb1923e89385ee5244a9824524c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unity::scopes::ActivationResponse::set_scope_data </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.Variant/index.html">Variant</a> const &amp;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Attach arbitrary data to this response. </p>
+<p>The attached data is sent back to the scope if the status of this response is Status::ShowPreview. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>An arbitrary value attached to the response. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a7caef418f9e400017d5c62c9cf25c9b8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="index.html#a726cf6ec58d4e035e2cdc14cda152d02">ActivationResponse::Status</a> unity::scopes::ActivationResponse::status </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get activation status. </p>
+<dl class="section return"><dt>Returns</dt><dd>The activation status. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a342e63bf810daa6ccd7a69520e63fb90"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../unity.scopes.Result/index.html">Result</a> unity::scopes::ActivationResponse::updated_result </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The updated result if status is Status::UpdateResult. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">unity::LogicException</td><td>if the status of this <a class="el" href="index.html" title="Response to a result activation. ">ActivationResponse</a> is anything other than Status::UpdateResult. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The result to be displayed instead of the original result. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a640e02cda7bff66aed9af88ff872b2ed"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../unity.scopes/index.html#aed3b7b1daf2e49d0a820ef931caa792d">PreviewWidgetList</a> unity::scopes::ActivationResponse::updated_widgets </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The updated widgets if status is Status::UpdatePreview. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">unity::LogicException</td><td>if the status of this <a class="el" href="index.html" title="Response to a result activation. ">ActivationResponse</a> is anything other than Status::UpdatePreview. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The widgets to be displayed instead of the original widgets with same IDs. </dd></dl>
+</div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

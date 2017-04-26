@@ -1,0 +1,731 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Ubuntu User Interface Toolkit | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a class="sub-nav-item" href="../index.html">SDK 15.04</a> &rsaquo;</li>
+
+<li><a class="sub-nav-item" href="../UbuntuUserInterfaceToolkit/index.html">UbuntuUserInterfaceToolkit</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Ubuntu User Interface Toolkit</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: overview-ubuntu-sdk.html -->
+	<!-- Source Format: qdoc -->
+<h1>Ubuntu User Interface Toolkit</h1>
+<div id="page_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$overview-ubuntu-sdk.html-description -->
+<div class="descr"> <a name="details"></a>
+<a name="general-topics"></a>
+<h0 id="general-topics">General Topics</h0>
+<ul>
+<li><a href="../UbuntuUserInterfaceToolkit.ubuntu-whatsnew/index.html">What's new in version 1.2?</a></li>
+<li><a href="../UbuntuUserInterfaceToolkit.ubuntu-layouts/index.html">Layouts</a> describes a flexible layouting engine to ease the development of responsive user interfaces.</li>
+<li><a href="../UbuntuUserInterfaceToolkit.resolution-independence/index.html">Resolution Independence</a> describes the facilities that should be used when setting the size of UI elements (widgets, fonts, etc.) in order for them to behave well on a variety of devices.</li>
+<li><a href="../UbuntuUserInterfaceToolkit.statesaving/index.html">Automatic State Saving</a> provides automatic property saving for components.</li>
+</ul>
+<a name="basic-qml-types"></a>
+<h0 id="basic-qml-types">Basic QML Types</h0>
+<p>Available through:</p>
+<pre class="cpp">import Ubuntu<span class="operator">.</span>Components <span class="number">1.2</span></pre>
+<div class="table"><table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.AbstractButton/index.html">AbstractButton</a></p></td><td class="tblDescr"><p>Defines the behavior of the button</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Action/index.html">Action</a></p></td><td class="tblDescr"><p>Describe an action that can be re-used and shared between different components</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.ActionContext/index.html">ActionContext</a></p></td><td class="tblDescr"><p>Groups actions together and by providing multiple contexts the developer is able to control the visibility of the actions. The ActionManager then exposes the actions from these different contexts</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.ActionItem/index.html">ActionItem</a></p></td><td class="tblDescr"><p>A visual representation of an Action. The API of ActionItem is a copy of the API of Action, with additional properties to define visual aspects of the ActionItem</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.ActionList/index.html">ActionList</a></p></td><td class="tblDescr"><p>List of Action items</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.ActionManager/index.html">ActionManager</a></p></td><td class="tblDescr"><p>Manages actions and action contexts withion an application</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.ActivityIndicator/index.html">ActivityIndicator</a></p></td><td class="tblDescr"><p>Component visually indicates that a task of unknown duration is in progress, e.g&#x2e; busy indication, connection in progress indication, etc</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Button/index.html">Button</a></p></td><td class="tblDescr"><p>Standard Ubuntu button</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.CheckBox/index.html">CheckBox</a></p></td><td class="tblDescr"><p>Component with two states, checked or unchecked. It can be used to set boolean options. The behavior is the same as Switch, the only difference is the graphical style</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Clipboard/index.html">Clipboard</a></p></td><td class="tblDescr"><p>This is a singleton type providing access to the system clipboard</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.ComboButton/index.html">ComboButton</a></p></td><td class="tblDescr"><p>Ubuntu button providing a drop-down panel visualizing custom options</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.CrossFadeImage/index.html">CrossFadeImage</a></p></td><td class="tblDescr"><p>An Image like component which smoothly fades when its source is updated</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.FontUtils/index.html">FontUtils</a></p></td><td class="tblDescr"><p>Context property, which provides utility functions for font manipulations</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Icon/index.html">Icon</a></p></td><td class="tblDescr"><p>Component displays an icon from the icon theme</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.InverseMouse/index.html">InverseMouse</a></p></td><td class="tblDescr"><p>Attached object filtering mouse events occured outside the owner</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.InverseMouseArea/index.html">InverseMouseArea</a></p></td><td class="tblDescr"><p>Captures mouse events happening outside of a given area</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Label/index.html">Label</a></p></td><td class="tblDescr"><p>Text with Ubuntu styling</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.MainView/index.html">MainView</a></p></td><td class="tblDescr"><p>The root Item that should be used for all applications. It automatically adds a header and toolbar for its contents and can rotate its content based on the device orientation</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.MimeData/index.html">MimeData</a></p></td><td class="tblDescr"><p>Type provides interface to access and store data to the Clipboard</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Mouse/index.html">Mouse</a></p></td><td class="tblDescr"><p>Attached property filtering mouse events occured inside the owner</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.OrientationHelper/index.html">OrientationHelper</a></p></td><td class="tblDescr"><p>Automatically rotates its children following the orientation of the device</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Page/index.html">Page</a></p></td><td class="tblDescr"><p>A page is the basic Item that must be used inside the MainView, PageStack and Tabs. Anchors and height of a Page are automatically determined to align with the header of the MainView, but can be overridden</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.PageHeadConfiguration/index.html">PageHeadConfiguration</a></p></td><td class="tblDescr"><p>Page.head is used to configure the header for a Page</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.PageHeadSections/index.html">PageHeadSections</a></p></td><td class="tblDescr"><p>Used to configure the sections for a Page</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.PageHeadState/index.html">PageHeadState</a></p></td><td class="tblDescr"><p>Helper component to make it easier to configure the page header when changing states</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.PageStack/index.html">PageStack</a></p></td><td class="tblDescr"><p>A stack of Page items that is used for inter-Page navigation. Pages on the stack can be popped, and new Pages can be pushed. The page on top of the stack is the visible one</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Panel/index.html">Panel</a></p></td><td class="tblDescr"><p>A panel that can be swiped in and out from an edge of the window by the user. For most applications, it is highly recommended to use the MainView instead which includes a toolbar at its bottom that can be swiped in or out</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.ProgressBar10/index.html">ProgressBar10</a></p></td><td class="tblDescr"><p>ProgressBar component visually indicates the progress of a process of determinate or indeterminate duration</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.PullToRefresh/index.html">PullToRefresh</a></p></td><td class="tblDescr"><p>Pull-to-refresh component for Flickables to reload a model upon pull</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Scrollbar/index.html">Scrollbar</a></p></td><td class="tblDescr"><p>ScrollBar component provides scrolling functionality for scrollable views (i.e&#x2e; Flickable, ListView)</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Slider/index.html">Slider</a></p></td><td class="tblDescr"><p>Component to select a value from a continuous range of values</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.SortFilterModel/index.html">SortFilterModel</a></p></td><td class="tblDescr"><p>Sorts and filters rows from an existing model</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Switch/index.html">Switch</a></p></td><td class="tblDescr"><p>Component with two states, checked or unchecked. It can be used to set boolean options. The behavior is the same as CheckBox, the only difference is the graphical style</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Tab/index.html">Tab</a></p></td><td class="tblDescr"><p>Component to represent a single tab in a Tabs environment</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.TabBar/index.html">TabBar</a></p></td><td class="tblDescr"><p>Tab bar that will be shown in the header when Tabs is active. This component does not need to be instantiated by the developer, it is automatically created by the Tabs</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Tabs/index.html">Tabs</a></p></td><td class="tblDescr"><p>Environment where multible Tab children can be added, and the user is presented with a tab bar with tab buttons to select different tab pages</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.TextArea/index.html">TextArea</a></p></td><td class="tblDescr"><p>Item displays a block of editable, scrollable, formatted text</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.TextField/index.html">TextField</a></p></td><td class="tblDescr"><p>Element displays a single line of editable plain text. Input constraints can be set through validator or inputMask. Setting echoMode to an appropriate value enables TextField to be used as password input field</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.ToolbarButton/index.html">ToolbarButton</a></p></td><td class="tblDescr"><p>An ActionItem that represents a button in the toolbar. ToolbarButtons should be included in ToolbarItems to define the tools of a Page. The behavior and look of the toolbar button can be specified by setting an Action for the button, or by setting the other properties inherited by the ActionItem</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Ubuntu/index.html">Ubuntu</a></p></td><td class="tblDescr"><p>Provides global object with different enums</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.UbuntuAnimation/index.html">UbuntuAnimation</a></p></td><td class="tblDescr"><p>Singleton defining standard Ubuntu durations and easing for animations that should be used to ensure that Ubuntu applications are consistent in their animations</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.UbuntuApplication/index.html">UbuntuApplication</a></p></td><td class="tblDescr"><p>QML binding for a subset of QCoreApplication</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.UbuntuColors/index.html">UbuntuColors</a></p></td><td class="tblDescr"><p>Singleton defining the Ubuntu color palette</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.UbuntuListView/index.html">UbuntuListView</a></p></td><td class="tblDescr"><p>A ListView with special features tailored for a look and feel fitting the Ubuntu Touch platform. The UbuntuListView works just like a regular ListView, but it adds special features such as expanding/collapsing items (when used together with the Expandable item). It provides features like automatically positioning the expanding item when it expands and collapsing it again when the user taps outside of it</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.UbuntuNumberAnimation/index.html">UbuntuNumberAnimation</a></p></td><td class="tblDescr"><p>NumberAnimation that has predefined settings to ensure that Ubuntu applications are consistent in their animations</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.UbuntuShape/index.html">UbuntuShape</a></p></td><td class="tblDescr"><p>Rounded rectangle containing a source image blended over a background color</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.UbuntuShapeOverlay/index.html">UbuntuShapeOverlay</a></p></td><td class="tblDescr"><p>Extended UbuntuShape adding a colored overlay layer</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.UriHandler/index.html">UriHandler</a></p></td><td class="tblDescr"><p>Singleton signalling for opened URIs</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.i18n/index.html">i18n</a></p></td><td class="tblDescr"><p>Context property that provides internationalization support</p></td></tr>
+</table></div>
+<a name="list-views-list-items"></a>
+<h0 id="list-views-list-items">List views, list items</h0>
+<p>Components with standardized view items, with conditional actions, multiselect and reordering support on scrollable views. Replaces the Ubuntu.Components.ListItems module components.</p>
+<p>Available through:</p>
+<pre class="cpp">import Ubuntu<span class="operator">.</span>Components <span class="number">1.2</span></pre>
+<div class="table"><table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Captions/index.html">Captions</a></p></td><td class="tblDescr"><p>Container providing captionStyles for a twin-label column that can be used in RowLayout or GridLayout</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.ListItem/index.html">ListItem</a></p></td><td class="tblDescr"><p>Element provides Ubuntu design standards for list or grid views. The ListItem component was designed to be used in a list view. It does not define any specific layout, but while its contents can be freely chosen by the developer, care must be taken to keep the contents light in order to ensure good performance when used in long list views</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.ListItemActions/index.html">ListItemActions</a></p></td><td class="tblDescr"><p>Provides configuration for actions to be added to a ListItem</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.ListItemDrag/index.html">ListItemDrag</a></p></td><td class="tblDescr"><p>Provides information about a ListItem drag event</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.ViewItems/index.html">ViewItems</a></p></td><td class="tblDescr"><p>A set of properties attached to the ListItem's parent item or ListView</p></td></tr>
+</table></div>
+<a name="list-items-module-deprecated"></a>
+<h0 id="list-items-module-deprecated">List Items module - deprecated</h0>
+<p>This module contains the old set of list items.</p>
+<p>Available through:</p>
+<pre class="cpp">import Ubuntu<span class="operator">.</span>Components<span class="operator">.</span>ListItems <span class="number">1.0</span></pre>
+<div class="table"><table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.ListItems.Base/index.html">Base</a></p></td><td class="tblDescr"><p>Parent class of various list item classes that can have an icon and a progression symbol</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.ListItems.Caption/index.html">Caption</a></p></td><td class="tblDescr"><p>List item that shows a piece of text</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.ListItems.Divider/index.html">Divider</a></p></td><td class="tblDescr"><p>To break up list items into groups</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.ListItems.Empty/index.html">Empty</a></p></td><td class="tblDescr"><p>A list item with no contents</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.ListItems.Expandable/index.html">Expandable</a></p></td><td class="tblDescr"><p>An expandable list item with no contents. The Expandable class can be used for generic list items containing other components such as buttons. It subclasses Empty and thus brings all that functionality, but additionally provides means to expand and collapse the item</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.ListItems.ExpandablesColumn/index.html">ExpandablesColumn</a></p></td><td class="tblDescr"><p>A column to be used together with the Expandable item. This lays out its content just like a regular Column inside a Flickable but when used together with items of type Expandable it provides additional features like automatically positioning the expanding item when it expands and collapsing it again when the user taps outside of it</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.ListItems.Header/index.html">Header</a></p></td><td class="tblDescr"><p>For grouping list items together</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.ListItems.ItemSelector/index.html">ItemSelector</a></p></td><td class="tblDescr"><p>ListItem displaying either a single selected value or expanded multiple choice with an optional image and subtext when not expanded, when expanding it opens a listing of all the possible values for selection with an additional option of always being expanded. If multiple choice is selected the list is expanded automatically</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.ListItems.MultiValue/index.html">MultiValue</a></p></td><td class="tblDescr"><p>List item displaying multiple values</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.ListItems.SingleControl/index.html">SingleControl</a></p></td><td class="tblDescr"><p>A list item containing a single control</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.ListItems.SingleValue/index.html">SingleValue</a></p></td><td class="tblDescr"><p>A list item displaying a single value</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.ListItems.Standard/index.html">Standard</a></p></td><td class="tblDescr"><p>Standard list item class. It shows a basic list item with a label (text), and optionally an icon, a progression arrow, and it can have an embedded Item (control) that can be used for including Buttons, Switches etc. inside the list item</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.ListItems.Subtitled/index.html">Subtitled</a></p></td><td class="tblDescr"><p>List item displaying a second string under the main label</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.ListItems.ThinDivider/index.html">ThinDivider</a></p></td><td class="tblDescr"><p>Narrow line used as a divider between ListItems</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.ListItems.ValueSelector/index.html">ValueSelector</a></p></td><td class="tblDescr"><p>List item displaying single selected value when not expanded, where expanding it opens a listing of all the possible values for selection</p></td></tr>
+</table></div>
+<a name="pickers"></a>
+<h0 id="pickers">Pickers</h0>
+<p>Available through:</p>
+<pre class="cpp">import Ubuntu<span class="operator">.</span>Components<span class="operator">.</span>Pickers <span class="number">1.0</span></pre>
+<div class="table"><table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Pickers.DatePicker/index.html">DatePicker</a></p></td><td class="tblDescr"><p>Component provides date and time value picking functionality</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Pickers.Dialer/index.html">Dialer</a></p></td><td class="tblDescr"><p>Phone dialer style picker component</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Pickers.DialerHand/index.html">DialerHand</a></p></td><td class="tblDescr"><p>Represents a value selector on a Dialer</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Pickers.Picker/index.html">Picker</a></p></td><td class="tblDescr"><p>Slot-machine style value selection component</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Pickers.PickerDelegate/index.html">PickerDelegate</a></p></td><td class="tblDescr"><p>Component serves as base for Picker delegates</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.PickerPanel/index.html">PickerPanel</a></p></td><td class="tblDescr"><p>Provides a panel for opening a DatePicker in place of the input panel or as Popover, depending on the form factor</p></td></tr>
+</table></div>
+<a name="popovers-sheets-and-dialogs"></a>
+<h0 id="popovers-sheets-and-dialogs">Popovers, Sheets and Dialogs</h0>
+<p>Available through:</p>
+<pre class="cpp">import Ubuntu<span class="operator">.</span>Components<span class="operator">.</span>Popups <span class="number">1.0</span></pre>
+<div class="table"><table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Popups.ActionSelectionPopover/index.html">ActionSelectionPopover</a></p></td><td class="tblDescr"><p>A special popover presenting actions to the user. The popover is closed automatically when the action is chosen</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Popups.Dialog/index.html">Dialog</a></p></td><td class="tblDescr"><p>Caters for cases in which the application requires the user to determine between optional actions. The Dialog will interrupt the user flow and lock the view for further interaction before the user has selected a desired action. It can only be closed by selecting an optional action confirming or cancelling the operation</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Popups.Popover/index.html">Popover</a></p></td><td class="tblDescr"><p>A popover allows an application to present additional content without changing the view. A popover has a fixed width and automatic height, depending on is contents. It can be closed by clicking anywhere outside of the popover area</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Popups.PopupBase/index.html">PopupBase</a></p></td><td class="tblDescr"><p>Base class for all dialogs, sheets and popovers. Do not use directly</p></td></tr>
+</table></div>
+<a name="layouting"></a>
+<h0 id="layouting">Layouting</h0>
+<p>Available through:</p>
+<pre class="cpp">import Ubuntu<span class="operator">.</span>Layouts <span class="number">1.0</span></pre>
+<div class="table"><table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Layouts.ConditionalLayout/index.html">ConditionalLayout</a></p></td><td class="tblDescr"><p>Defines the layout of a given form factor</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Layouts.ItemLayout/index.html">ItemLayout</a></p></td><td class="tblDescr"><p>Defines a new size &amp; position of a single Item, for the purposes of specifying layouts. This is to be used within a ConditionalLayout definition</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Layouts.Layouts/index.html">Layouts</a></p></td><td class="tblDescr"><p>Component allows one to specify multiple different layouts for a fixed set of Items, and applies the desired layout to those Items</p></td></tr>
+</table></div>
+<a name="theming-elements"></a>
+<h0 id="theming-elements">Theming Elements</h0>
+<p>Available through:</p>
+<pre class="cpp">import Ubuntu<span class="operator">.</span>Components <span class="number">1.2</span></pre>
+<div class="table"><table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.StyledItem/index.html">StyledItem</a></p></td><td class="tblDescr"><p>Allows items to be styled by the theme</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Theme/index.html">Theme</a></p></td><td class="tblDescr"><p>Facilities to interact with the current theme</p></td></tr>
+</table></div>
+<a name="style-api"></a>
+<h0 id="style-api">Style API</h0>
+<p>The Style API defines the interface components use to style the visuals. Themes must make sure that these interfaces are all implemented. Available through:</p>
+<pre class="cpp">import Ubuntu<span class="operator">.</span>Components<span class="operator">.</span>Styles <span class="number">1.2</span></pre>
+<div class="table"><table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Styles.ComboButtonStyle/index.html">ComboButtonStyle</a></p></td><td class="tblDescr"><p>Style API for ComboButton component</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Styles.ListItemStyle/index.html">ListItemStyle</a></p></td><td class="tblDescr"><p>Style API for ListItem component</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Styles.PageHeadStyle/index.html">PageHeadStyle</a></p></td><td class="tblDescr"><p>Style API for page header</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Styles.PullToRefreshStyle/index.html">PullToRefreshStyle</a></p></td><td class="tblDescr"><p>Style API for PullToRefresh component</p></td></tr>
+</table></div>
+<a name="resolution-independence-items"></a>
+<h0 id="resolution-independence-items">Resolution Independence Items</h0>
+<p>Available through:</p>
+<pre class="cpp">import Ubuntu<span class="operator">.</span>Components <span class="number">1.2</span></pre>
+<div class="table"><table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Units/index.html">Units</a></p></td><td class="tblDescr"><p>Of measurement for sizes, spacing, margin, etc</p></td></tr>
+</table></div>
+<a name="parsing-command-line-arguments"></a>
+<h0 id="parsing-command-line-arguments">Parsing Command-Line Arguments</h0>
+<p>Available through:</p>
+<pre class="cpp">import Ubuntu<span class="operator">.</span>Components <span class="number">1.2</span></pre>
+<div class="table"><table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Argument/index.html">Argument</a></p></td><td class="tblDescr"><p>Specifies what type a given command line parameter should be</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Arguments/index.html">Arguments</a></p></td><td class="tblDescr"><p>Way to declare what command line parameters are expected by the application</p></td></tr>
+</table></div>
+<a name="services"></a>
+<h0 id="services">Services</h0>
+<p>Available through:</p>
+<pre class="cpp">import Ubuntu<span class="operator">.</span>Components <span class="number">1.2</span></pre>
+<div class="table"><table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Alarm/index.html">Alarm</a></p></td><td class="tblDescr"><p>Component is a representation of an alarm event</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.AlarmModel/index.html">AlarmModel</a></p></td><td class="tblDescr"><p>Holds the list of alarms defined</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.Haptics/index.html">Haptics</a></p></td><td class="tblDescr"><p>Singleton defining the haptics feedback used in components, where execution of the feedback is controlled by the system settings</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.ServiceProperties/index.html">ServiceProperties</a></p></td><td class="tblDescr"><p>Component enables accessing service properties from QML</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Components.StateSaver/index.html">StateSaver</a></p></td><td class="tblDescr"><p>Attached propertyes to save component property states</p></td></tr>
+</table></div>
+<a name="performance-metrics"></a>
+<h0 id="performance-metrics">Performance Metrics</h0>
+<p>Available through:</p>
+<pre class="cpp">import Ubuntu<span class="operator">.</span>PerformanceMetrics <span class="number">1.0</span></pre>
+<div class="table"><table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.PerformanceMetrics.PerformanceOverlay/index.html">PerformanceOverlay</a></p></td><td class="tblDescr"><p>Overlay displaying performance related metrics (rendering time, CPU usage, etc.)</p></td></tr>
+</table></div>
+<a name="test-extensions"></a>
+<h0 id="test-extensions">Test extensions</h0>
+<p>Available through:</p>
+<pre class="cpp">import Ubuntu Test <span class="number">1.0</span></pre>
+<div class="table"><table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="../Ubuntu.Test.TestExtras/index.html">TestExtras</a></p></td><td class="tblDescr"><p>Singleton type providing additional test functions</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../Ubuntu.Test.UbuntuTestCase/index.html">UbuntuTestCase</a></p></td><td class="tblDescr"><p>Expands the default TestCase class</p></td></tr>
+</table></div>
+</div>
+<!-- @@@overview-ubuntu-sdk.html -->
+</div></div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

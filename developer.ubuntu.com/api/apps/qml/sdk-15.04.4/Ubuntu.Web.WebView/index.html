@@ -1,0 +1,724 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>WebView [sdk-15.04.4/Ubuntu.Web.WebView] | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a href="../index.html">SDK 15.04.4</a> &rsaquo;</li>
+
+<li><a href="../Ubuntu.Web/index.html">Ubuntu.Web</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">WebView</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qml-ubuntu-web-webview.html -->
+	<!-- Source Format: qdoc -->
+<h1>WebView</h1>
+<div id="element_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$WebView-brief -->
+<p>A webview that can be used to render web content in an application. More...</p>
+<!-- @@@WebView -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import Ubuntu.Web 0.2</td></tr></table></div><ul>
+<li>Obsolete members</li>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#alertDialog-prop">alertDialog</a></b></b> : component</li>
+<li class="fn"><b><b><a href="index.html#beforeUnloadDialog-prop">beforeUnloadDialog</a></b></b> : component</li>
+<li class="fn"><b><b><a href="index.html#canGoBack-prop">canGoBack</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#canGoForward-prop">canGoForward</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#confirmDialog-prop">confirmDialog</a></b></b> : component</li>
+<li class="fn"><b><b><a href="index.html#context-prop">context</a></b></b> : WebContext</li>
+<li class="fn"><b><b><a href="index.html#contextModel-prop">contextModel</a></b></b> : QtObject</li>
+<li class="fn"><b><b><a href="index.html#contextualActions-prop">contextualActions</a></b></b> : ActionList</li>
+<li class="fn"><b><b><a href="index.html#filePicker-prop">filePicker</a></b></b> : component</li>
+<li class="fn"><b><b><a href="index.html#fullscreen-prop">fullscreen</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#icon-prop">icon</a></b></b> : url</li>
+<li class="fn"><b><b><a href="index.html#incognito-prop">incognito</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#loadProgress-prop">loadProgress</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#loading-prop">loading</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#navigationHistory-prop">navigationHistory</a></b></b> : list</li>
+<li class="fn"><b><b><a href="index.html#promptDialog-prop">promptDialog</a></b></b> : component</li>
+<li class="fn"><b><b><a href="index.html#title-prop">title</a></b></b> : string</li>
+<li class="fn"><b><b><a href="index.html#url-prop">url</a></b></b> : url</li>
+</ul>
+<a name="methods"></a>
+<h2 id="methods">Methods</h2>
+<ul>
+<li class="fn">void <b><b><a href="index.html#goBack-method">goBack</a></b></b>()</li>
+<li class="fn">void <b><b><a href="index.html#goForward-method">goForward</a></b></b>()</li>
+<li class="fn">void <b><b><a href="index.html#loadHtml-method">loadHtml</a></b></b>(string <i>html</i>, url <i>baseUrl</i>)</li>
+<li class="fn">void <b><b><a href="index.html#reload-method">reload</a></b></b>()</li>
+<li class="fn">void <b><b><a href="index.html#stop-method">stop</a></b></b>()</li>
+</ul>
+<!-- $$$WebView-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<p>Here is a very simple example of how to use a <a href="index.html">WebView</a> to render a web page:</p>
+<pre class="qml">import QtQuick 2.4
+import Ubuntu.Web 0.2
+<span class="type"><a href="index.html">WebView</a></span> {
+    <span class="name">url</span>: <span class="string">&quot;http://ubuntu.com&quot;</span>
+}</pre>
+<p>The <code>WebView</code> component defaults to using a <a href="../Ubuntu.Web.SharedWebContext/index.html">shared <code>WebContext</code></a> that is shared across all <code>WebView</code> instances in a given application.</p>
+<p><b>See also </b><a href="../Ubuntu.Web.SharedWebContext/index.html">SharedWebContext</a>.</p>
+<!-- @@@WebView -->
+<h2>Property Documentation</h2>
+<!-- $$$alertDialog -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="alertDialog-prop"><td class="tblQmlPropNode"><p><a name="alertDialog-prop"></a><span class="name">alertDialog</span> : <span class="type">component</span></p></td></tr></table></div></div><div class="qmldoc"><p>The QML component that will be instantiated to display a JavaScript alert dialog.</p>
+<p><b>See also </b><a href="index.html#confirmDialog-prop">confirmDialog</a>, <a href="index.html#promptDialog-prop">promptDialog</a>, and <a href="index.html#beforeUnloadDialog-prop">beforeUnloadDialog</a>.</p>
+</div></div><!-- @@@alertDialog -->
+<br/>
+<!-- $$$beforeUnloadDialog -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="beforeUnloadDialog-prop"><td class="tblQmlPropNode"><p><a name="beforeUnloadDialog-prop"></a><span class="name">beforeUnloadDialog</span> : <span class="type">component</span></p></td></tr></table></div></div><div class="qmldoc"><p>The QML component that will be instantiated to display a JavaScript confirmation when the user initiates a navigation away from the current page, if the page has defined an <code>onBeforeUnload</code> handler.</p>
+<p><b>See also </b><a href="index.html#alertDialog-prop">alertDialog</a>, <a href="index.html#confirmDialog-prop">confirmDialog</a>, and <a href="index.html#promptDialog-prop">promptDialog</a>.</p>
+</div></div><!-- @@@beforeUnloadDialog -->
+<br/>
+<!-- $$$canGoBack -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="canGoBack-prop"><td class="tblQmlPropNode"><p><a name="canGoBack-prop"></a><span class="name">canGoBack</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>Whether the navigation history has a previous entry to navigate back.</p>
+<p><b>See also </b><a href="index.html#goBack-method">goBack</a> and <a href="index.html#canGoForward-prop">canGoForward</a>.</p>
+</div></div><!-- @@@canGoBack -->
+<br/>
+<!-- $$$canGoForward -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="canGoForward-prop"><td class="tblQmlPropNode"><p><a name="canGoForward-prop"></a><span class="name">canGoForward</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>Whether the navigation history has a next entry to navigate forward.</p>
+<p><b>See also </b><a href="index.html#goForward-method">goForward</a> and <a href="index.html#canGoBack-prop">canGoBack</a>.</p>
+</div></div><!-- @@@canGoForward -->
+<br/>
+<!-- $$$confirmDialog -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="confirmDialog-prop"><td class="tblQmlPropNode"><p><a name="confirmDialog-prop"></a><span class="name">confirmDialog</span> : <span class="type">component</span></p></td></tr></table></div></div><div class="qmldoc"><p>The QML component that will be instantiated to display a JavaScript confirmation dialog.</p>
+<p><b>See also </b><a href="index.html#alertDialog-prop">alertDialog</a>, <a href="index.html#promptDialog-prop">promptDialog</a>, and <a href="index.html#beforeUnloadDialog-prop">beforeUnloadDialog</a>.</p>
+</div></div><!-- @@@confirmDialog -->
+<br/>
+<!-- $$$context -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="context-prop"><td class="tblQmlPropNode"><p><a name="context-prop"></a><span class="name">context</span> : <span class="type"><a href="../Ubuntu.Web.WebContext/index.html">WebContext</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>The web context associated to this <a href="index.html">WebView</a>. By default a <a href="../Ubuntu.Web.SharedWebContext/index.html">shared context</a> is used which should fit most use cases, do not override unless you really need a finer control over the context.</p>
+</div></div><!-- @@@context -->
+<br/>
+<!-- $$$contextModel -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="contextModel-prop"><td class="tblQmlPropNode"><p><a name="contextModel-prop"></a><span class="name">contextModel</span> : <span class="type">QtObject</span></p></td></tr></table></div></div><div class="qmldoc"><p>An object that holds the contextual data associated with the current context menu, as well as methods to interact with this data. User-defined <a href="index.html#contextualActions-prop">contextual actions</a> can use this data to process it when triggered.</p>
+<p>It has the following properties:</p>
+<ul>
+<li>linkUrl (url): the full URI of the hyperlink, if any</li>
+<li>srcUrl (url): the full URI of the image/media, if any</li>
+<li>mediaType (int): the type of media (one of Oxide.<a href="index.html">WebView</a>.MediaTypeNone, Oxide.<a href="index.html">WebView</a>.MediaTypeImage, Oxide.<a href="index.html">WebView</a>.MediaTypeCanvas, Oxide.<a href="index.html">WebView</a>.MediaTypeAudio, Oxide.<a href="index.html">WebView</a>.MediaTypeVideo)</li>
+<li>isEditable (bool): whether the current element is editable</li>
+<li>editFlags (int): for editable elements, an OR-combined list of flags that define the current editing capabilities (Oxide.<a href="index.html">WebView</a>.UndoCapability, Oxide.<a href="index.html">WebView</a>.RedoCapability, Oxide.<a href="index.html">WebView</a>.CutCapability, Oxide.<a href="index.html">WebView</a>.CopyCapability, Oxide.<a href="index.html">WebView</a>.PasteCapability, Oxide.<a href="index.html">WebView</a>.EraseCapability, Oxide.<a href="index.html">WebView</a>.SelectAllCapability)</li>
+</ul>
+<p>It has the following methods:</p>
+<ul>
+<li>saveLink(): initiates a download request for the resource pointed to by the hyperlink, if any</li>
+<li>saveMedia(): initiates a download request for the media (image, canvas, audio, video), if any</li>
+</ul>
+<p>When there is no active context menu, <code>contextModel</code> is null.</p>
+<p><b>See also </b><a href="index.html#contextualActions-prop">contextualActions</a>.</p>
+</div></div><!-- @@@contextModel -->
+<br/>
+<!-- $$$contextualActions -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="contextualActions-prop"><td class="tblQmlPropNode"><p><a name="contextualActions-prop"></a><span class="name">contextualActions</span> : <span class="type">ActionList</span></p></td></tr></table></div></div><div class="qmldoc"><p>A list of actions that the user will be presented with when invoking a context menu (by way of a right click on desktop, or a long press on a touch-enabled device, on an image or a hyperlink). By default the list is empty, and no menu is shown. User-defined actions can access the <a href="index.html#contextModel-prop">context model</a>.</p>
+<p>Example of user-defined actions:</p>
+<pre class="cpp">import Ubuntu<span class="operator">.</span>Components <span class="number">1.3</span>
+import Ubuntu<span class="operator">.</span>Web <span class="number">0.2</span>
+WebView {
+    contextualActions: ActionList {
+        Action {
+            text: i18n<span class="operator">.</span>tr(<span class="string">&quot;Open link in browser&quot;</span>)
+            enabled: contextModel <span class="operator">&amp;</span><span class="operator">&amp;</span> contextModel<span class="operator">.</span>linkUrl<span class="operator">.</span>toString()
+            onTriggered: <span class="type">Qt</span><span class="operator">.</span>openUrlExternally(contextModel<span class="operator">.</span>linkUrl)
+        }
+    }
+}</pre>
+<p><b>See also </b><a href="index.html#contextModel-prop">contextModel</a>.</p>
+</div></div><!-- @@@contextualActions -->
+<br/>
+<!-- $$$filePicker -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="filePicker-prop"><td class="tblQmlPropNode"><p><a name="filePicker-prop"></a><span class="name">filePicker</span> : <span class="type">component</span></p></td></tr></table></div></div><div class="qmldoc"><p>The QML component that will be instantiated to let the user select files when the user clicks an <code>&lt;input type=&quot;file&quot;&gt;</code> element on the current page.</p>
+</div></div><!-- @@@filePicker -->
+<br/>
+<!-- $$$fullscreen -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="fullscreen-prop"><td class="tblQmlPropNode"><p><a name="fullscreen-prop"></a><span class="name">fullscreen</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>Whether the current page requested fullscreen display.</p>
+</div></div><!-- @@@fullscreen -->
+<br/>
+<!-- $$$icon -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="icon-prop"><td class="tblQmlPropNode"><p><a name="icon-prop"></a><span class="name">icon</span> : <span class="type"><a href="index.html#url-prop">url</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>The URL of the favicon of the current page.</p>
+</div></div><!-- @@@icon -->
+<br/>
+<!-- $$$incognito -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="incognito-prop"><td class="tblQmlPropNode"><p><a name="incognito-prop"></a><span class="name">incognito</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>Whether the <a href="index.html">WebView</a> is being used in private browsing mode, where no data is persisted across sessions.</p>
+</div></div><!-- @@@incognito -->
+<br/>
+<!-- $$$loadProgress -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="loadProgress-prop"><td class="tblQmlPropNode"><p><a name="loadProgress-prop"></a><span class="name">loadProgress</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>The load progress of the current page (as a integer value between 0 and 100).</p>
+<p><b>See also </b><a href="index.html#loading-prop">loading</a>.</p>
+</div></div><!-- @@@loadProgress -->
+<br/>
+<!-- $$$loading -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="loading-prop"><td class="tblQmlPropNode"><p><a name="loading-prop"></a><span class="name">loading</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>Whether the current page is loading.</p>
+<p><b>See also </b><a href="index.html#loadProgress-prop">loadProgress</a>, <a href="index.html#stop-method">stop</a>, and <a href="index.html#reload-method">reload</a>.</p>
+</div></div><!-- @@@loading -->
+<br/>
+<!-- $$$navigationHistory -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="navigationHistory-prop"><td class="tblQmlPropNode"><p><a name="navigationHistory-prop"></a><span class="name">navigationHistory</span> : <span class="type">list</span></p></td></tr></table></div></div><div class="qmldoc"><p>The navigation history (back/forward entries) stored as a list model with a <code>currentIndex</code> property. Each entry exposes the URL and title of the corresponding page, as well as a timestamp of when it was visited.</p>
+</div></div><!-- @@@navigationHistory -->
+<br/>
+<!-- $$$promptDialog -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="promptDialog-prop"><td class="tblQmlPropNode"><p><a name="promptDialog-prop"></a><span class="name">promptDialog</span> : <span class="type">component</span></p></td></tr></table></div></div><div class="qmldoc"><p>The QML component that will be instantiated to display a JavaScript prompt dialog.</p>
+<p><b>See also </b><a href="index.html#alertDialog-prop">alertDialog</a>, <a href="index.html#confirmDialog-prop">confirmDialog</a>, and <a href="index.html#beforeUnloadDialog-prop">beforeUnloadDialog</a>.</p>
+</div></div><!-- @@@promptDialog -->
+<br/>
+<!-- $$$title -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="title-prop"><td class="tblQmlPropNode"><p><a name="title-prop"></a><span class="name">title</span> : <span class="type">string</span></p></td></tr></table></div></div><div class="qmldoc"><p>The title of the current page.</p>
+</div></div><!-- @@@title -->
+<br/>
+<!-- $$$url -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="url-prop"><td class="tblQmlPropNode"><p><a name="url-prop"></a><span class="name">url</span> : <span class="type"><a href="index.html#url-prop">url</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>The URL of the current page.</p>
+</div></div><!-- @@@url -->
+<br/>
+<h2>Method Documentation</h2>
+<!-- $$$goBack -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="goBack-method"><td class="tblQmlFuncNode"><p><a name="goBack-method"></a><span class="type">void</span> <span class="name">goBack</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Go back one entry in the navigation history.</p>
+<p><b>See also </b><a href="index.html#canGoBack-prop">canGoBack</a> and <a href="index.html#goForward-method">goForward</a>.</p>
+</div></div><!-- @@@goBack -->
+<br/>
+<!-- $$$goForward -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="goForward-method"><td class="tblQmlFuncNode"><p><a name="goForward-method"></a><span class="type">void</span> <span class="name">goForward</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Go forward one entry in the navigation history.</p>
+<p><b>See also </b><a href="index.html#canGoForward-prop">canGoForward</a> and <a href="index.html#goBack-method">goBack</a>.</p>
+</div></div><!-- @@@goForward -->
+<br/>
+<!-- $$$loadHtml -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="loadHtml-method"><td class="tblQmlFuncNode"><p><a name="loadHtml-method"></a><span class="type">void</span> <span class="name">loadHtml</span>(<span class="type">string</span><i> html</i>, <span class="type"><a href="index.html#url-prop">url</a></span><i> baseUrl</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Load HTML content from memory instead of loading it from a URL. The <code>baseUrl</code> argument is used to resolve relative URLs in the provided content.</p>
+</div></div><!-- @@@loadHtml -->
+<br/>
+<!-- $$$reload -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="reload-method"><td class="tblQmlFuncNode"><p><a name="reload-method"></a><span class="type">void</span> <span class="name">reload</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Reload the current page.</p>
+<p><b>See also </b><a href="index.html#stop-method">stop</a>.</p>
+</div></div><!-- @@@reload -->
+<br/>
+<!-- $$$stop -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="stop-method"><td class="tblQmlFuncNode"><p><a name="stop-method"></a><span class="type">void</span> <span class="name">stop</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Stop loading the current page. Does nothing if there is no page currently loading.</p>
+<p><b>See also </b><a href="index.html#reload-method">reload</a> and <a href="index.html#loading-prop">loading</a>.</p>
+</div></div><!-- @@@stop -->
+<br/>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,1261 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>RangeInputFilter [sdk-15.04.4/unity.scopes.RangeInputFilter] | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/doxygen.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Scopes</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">C++</a> &rsaquo;</li>
+<li><a href="../index.html">SDK 15.04.4</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">RangeInputFilter</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: classunity_1_1scopes_1_1_range_input_filter.html -->
+	<!-- Source Format: doxygen -->
+<h1>RangeInputFilter</h1>
+<div id="element_content" class="doxygen">
+<!-- Start Element Content -->
+<p>A range filter allows a start and end value to be entered by the user.  
+ <a href="index.html#details">More...</a></p>
+<p><code>#include &lt;unity/scopes/RangeInputFilter.h&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for unity::scopes::RangeInputFilter:</div>
+<div class="dyncontent">
+<div class="center"><img src="https://developer.ubuntu.com/static/devportal_uploaded/1654f80c-66f9-48a2-a0d5-726ba01ac327-api/scopes/cpp/sdk-15.04.4/unity.scopes.RangeInputFilter/classunity_1_1scopes_1_1_range_input_filter__inherit__graph.png" border="0" usemap="#unity_1_1scopes_1_1_range_input_filter_inherit__map" alt="Inheritance graph"/></div>
+<map name="unity_1_1scopes_1_1_range_input_filter_inherit__map" id="unity_1_1scopes_1_1_range_input_filter_inherit__map">
+<area shape="rect" id="node2" href="https://developer.ubuntu.com/api/scopes/cpp/sdk-15.04.4/unity.scopes.RangeInputFilter/classunity_1_1scopes_1_1_filter_base.html" title="Base class for all implementations of filters. " alt="" coords="11,5,185,32"/></map>
+<center><span class="legend">[legend]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a1a4cf761c6bfa2e07eb24b6f584ec05b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a1a4cf761c6bfa2e07eb24b6f584ec05b">start_prefix_label</a> () const </td></tr>
+<tr class="memdesc:a1a4cf761c6bfa2e07eb24b6f584ec05b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the prefix label of start value.  More...<br /></td></tr>
+<tr class="separator:a1a4cf761c6bfa2e07eb24b6f584ec05b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e2a6ec4e9c06234ee4759dce2644008"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a9e2a6ec4e9c06234ee4759dce2644008">start_postfix_label</a> () const </td></tr>
+<tr class="memdesc:a9e2a6ec4e9c06234ee4759dce2644008"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the postfix label of start value.  More...<br /></td></tr>
+<tr class="separator:a9e2a6ec4e9c06234ee4759dce2644008"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8acb48c94b3e9b6ca228a0e7ebb26ae5"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a8acb48c94b3e9b6ca228a0e7ebb26ae5">end_prefix_label</a> () const </td></tr>
+<tr class="memdesc:a8acb48c94b3e9b6ca228a0e7ebb26ae5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the prefix label of end value.  More...<br /></td></tr>
+<tr class="separator:a8acb48c94b3e9b6ca228a0e7ebb26ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81dde713bcfb2b2ca24683ba9e808e34"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a81dde713bcfb2b2ca24683ba9e808e34">end_postfix_label</a> () const </td></tr>
+<tr class="memdesc:a81dde713bcfb2b2ca24683ba9e808e34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the postfix label of end value.  More...<br /></td></tr>
+<tr class="separator:a81dde713bcfb2b2ca24683ba9e808e34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41f517d0071ca0f953c478f8272bf41b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a41f517d0071ca0f953c478f8272bf41b">central_label</a> () const </td></tr>
+<tr class="memdesc:a41f517d0071ca0f953c478f8272bf41b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the central label for this filter.  More...<br /></td></tr>
+<tr class="separator:a41f517d0071ca0f953c478f8272bf41b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf545096dacbea4303361527450321fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../unity.scopes.Variant/index.html">Variant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#adf545096dacbea4303361527450321fa">default_start_value</a> () const </td></tr>
+<tr class="memdesc:adf545096dacbea4303361527450321fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the default start value if set (int, double or null).  More...<br /></td></tr>
+<tr class="separator:adf545096dacbea4303361527450321fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf471258f02a8af0f7bfdb186ed61b0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../unity.scopes.Variant/index.html">Variant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#aaf471258f02a8af0f7bfdb186ed61b0e">default_end_value</a> () const </td></tr>
+<tr class="memdesc:aaf471258f02a8af0f7bfdb186ed61b0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get default end value if set (int, double or null).  More...<br /></td></tr>
+<tr class="separator:aaf471258f02a8af0f7bfdb186ed61b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64f2c9ff7ed484f49d26f601f30e8616"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a64f2c9ff7ed484f49d26f601f30e8616">has_start_value</a> (<a class="el" href="../unity.scopes.FilterState/index.html">FilterState</a> const &amp;filter_state) const </td></tr>
+<tr class="memdesc:a64f2c9ff7ed484f49d26f601f30e8616"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if filter state holds a start value for this filter instance.  More...<br /></td></tr>
+<tr class="separator:a64f2c9ff7ed484f49d26f601f30e8616"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae459a665a5dae27445547b1c0be8c7c3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#ae459a665a5dae27445547b1c0be8c7c3">has_end_value</a> (<a class="el" href="../unity.scopes.FilterState/index.html">FilterState</a> const &amp;filter_state) const </td></tr>
+<tr class="memdesc:ae459a665a5dae27445547b1c0be8c7c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if filter state holds an end value for this filter instance.  More...<br /></td></tr>
+<tr class="separator:ae459a665a5dae27445547b1c0be8c7c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd86208a5f8fe8a81877bd0bf4588758"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#afd86208a5f8fe8a81877bd0bf4588758">start_value</a> (<a class="el" href="../unity.scopes.FilterState/index.html">FilterState</a> const &amp;filter_state) const </td></tr>
+<tr class="memdesc:afd86208a5f8fe8a81877bd0bf4588758"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the start value for this filter instance.  More...<br /></td></tr>
+<tr class="separator:afd86208a5f8fe8a81877bd0bf4588758"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5bee0ddf65a375a4a5e19b4313de940"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#af5bee0ddf65a375a4a5e19b4313de940">end_value</a> (<a class="el" href="../unity.scopes.FilterState/index.html">FilterState</a> const &amp;filter_state) const </td></tr>
+<tr class="memdesc:af5bee0ddf65a375a4a5e19b4313de940"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get end value for this filter instance.  More...<br /></td></tr>
+<tr class="separator:af5bee0ddf65a375a4a5e19b4313de940"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fa97b63d86a89e7144a89e0996d1304"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a5fa97b63d86a89e7144a89e0996d1304">update_state</a> (<a class="el" href="../unity.scopes.FilterState/index.html">FilterState</a> &amp;filter_state, <a class="el" href="../unity.scopes.Variant/index.html">Variant</a> const &amp;<a class="el" href="index.html#afd86208a5f8fe8a81877bd0bf4588758">start_value</a>, <a class="el" href="../unity.scopes.Variant/index.html">Variant</a> const &amp;<a class="el" href="index.html#af5bee0ddf65a375a4a5e19b4313de940">end_value</a>) const </td></tr>
+<tr class="memdesc:a5fa97b63d86a89e7144a89e0996d1304"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store start and end value for this filter in the filter state.  More...<br /></td></tr>
+<tr class="separator:a5fa97b63d86a89e7144a89e0996d1304"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classunity_1_1scopes_1_1_filter_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classunity_1_1scopes_1_1_filter_base')"><img src="https://developer.ubuntu.com/static/devportal_uploaded/21c7accc-fcf8-4ffe-a2ac-18d8b17aea09-api/scopes/cpp/sdk-15.04.4/unity.scopes.RangeInputFilter/closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../unity.scopes.FilterBase/index.html">unity::scopes::FilterBase</a></td></tr>
+<tr class="memitem:ab4ab1b600ce3967dc50255e736c6d02e inherit pub_methods_classunity_1_1scopes_1_1_filter_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../unity.scopes.FilterBase/index.html#ab4ab1b600ce3967dc50255e736c6d02e">set_display_hints</a> (int hints)</td></tr>
+<tr class="memdesc:ab4ab1b600ce3967dc50255e736c6d02e inherit pub_methods_classunity_1_1scopes_1_1_filter_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets display hints for the Shell UI.  More...<br /></td></tr>
+<tr class="separator:ab4ab1b600ce3967dc50255e736c6d02e inherit pub_methods_classunity_1_1scopes_1_1_filter_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f20819591155edaab29d535c5c4c261 inherit pub_methods_classunity_1_1scopes_1_1_filter_base"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../unity.scopes.FilterBase/index.html#a8f20819591155edaab29d535c5c4c261">display_hints</a> () const </td></tr>
+<tr class="memdesc:a8f20819591155edaab29d535c5c4c261 inherit pub_methods_classunity_1_1scopes_1_1_filter_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get display hints of this filter.  More...<br /></td></tr>
+<tr class="separator:a8f20819591155edaab29d535c5c4c261 inherit pub_methods_classunity_1_1scopes_1_1_filter_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f2d96647b23af77b1ff1cffc80f3868 inherit pub_methods_classunity_1_1scopes_1_1_filter_base"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../unity.scopes.FilterBase/index.html#a1f2d96647b23af77b1ff1cffc80f3868">id</a> () const </td></tr>
+<tr class="memdesc:a1f2d96647b23af77b1ff1cffc80f3868 inherit pub_methods_classunity_1_1scopes_1_1_filter_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the identifier of this filter.  More...<br /></td></tr>
+<tr class="separator:a1f2d96647b23af77b1ff1cffc80f3868 inherit pub_methods_classunity_1_1scopes_1_1_filter_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadc7344c951961331dcbe67149d56c78 inherit pub_methods_classunity_1_1scopes_1_1_filter_base"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../unity.scopes.FilterBase/index.html#aadc7344c951961331dcbe67149d56c78">filter_type</a> () const </td></tr>
+<tr class="memdesc:aadc7344c951961331dcbe67149d56c78 inherit pub_methods_classunity_1_1scopes_1_1_filter_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type name of this filter.  More...<br /></td></tr>
+<tr class="separator:aadc7344c951961331dcbe67149d56c78 inherit pub_methods_classunity_1_1scopes_1_1_filter_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec8ceae8141811833af087ba2ebe086c inherit pub_methods_classunity_1_1scopes_1_1_filter_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../unity.scopes.FilterBase/index.html#aec8ceae8141811833af087ba2ebe086c">set_title</a> (std::string const &amp;<a class="el" href="../unity.scopes.FilterBase/index.html#a3f0c324b3aac39bb8967fc900f3a909e">title</a>)</td></tr>
+<tr class="memdesc:aec8ceae8141811833af087ba2ebe086c inherit pub_methods_classunity_1_1scopes_1_1_filter_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set an optional title of this filter.  More...<br /></td></tr>
+<tr class="separator:aec8ceae8141811833af087ba2ebe086c inherit pub_methods_classunity_1_1scopes_1_1_filter_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f0c324b3aac39bb8967fc900f3a909e inherit pub_methods_classunity_1_1scopes_1_1_filter_base"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../unity.scopes.FilterBase/index.html#a3f0c324b3aac39bb8967fc900f3a909e">title</a> () const </td></tr>
+<tr class="memdesc:a3f0c324b3aac39bb8967fc900f3a909e inherit pub_methods_classunity_1_1scopes_1_1_filter_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the optional title of this filter.  More...<br /></td></tr>
+<tr class="separator:a3f0c324b3aac39bb8967fc900f3a909e inherit pub_methods_classunity_1_1scopes_1_1_filter_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afff4685371fe67e6f87f58e31f69a037 inherit pub_methods_classunity_1_1scopes_1_1_filter_base"><td class="memItemLeft" align="right" valign="top">FilterGroup::SCPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../unity.scopes.FilterBase/index.html#afff4685371fe67e6f87f58e31f69a037">filter_group</a> () const </td></tr>
+<tr class="memdesc:afff4685371fe67e6f87f58e31f69a037 inherit pub_methods_classunity_1_1scopes_1_1_filter_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the filter group this filter belongs to.  More...<br /></td></tr>
+<tr class="separator:afff4685371fe67e6f87f58e31f69a037 inherit pub_methods_classunity_1_1scopes_1_1_filter_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a0717644ec86abcdc9dabf30302fead5d"><td class="memItemLeft" align="right" valign="top">static RangeInputFilter::SPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a0717644ec86abcdc9dabf30302fead5d">create</a> (std::string const &amp;<a class="el" href="../unity.scopes.FilterBase/index.html#a1f2d96647b23af77b1ff1cffc80f3868">id</a>, std::string const &amp;<a class="el" href="index.html#a1a4cf761c6bfa2e07eb24b6f584ec05b">start_prefix_label</a>, std::string const &amp;<a class="el" href="index.html#a9e2a6ec4e9c06234ee4759dce2644008">start_postfix_label</a>, std::string const &amp;<a class="el" href="index.html#a41f517d0071ca0f953c478f8272bf41b">central_label</a>, std::string const &amp;<a class="el" href="index.html#a8acb48c94b3e9b6ca228a0e7ebb26ae5">end_prefix_label</a>, std::string const &amp;<a class="el" href="index.html#a81dde713bcfb2b2ca24683ba9e808e34">end_postfix_label</a>)</td></tr>
+<tr class="memdesc:a0717644ec86abcdc9dabf30302fead5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a RangeInputFilter.  More...<br /></td></tr>
+<tr class="separator:a0717644ec86abcdc9dabf30302fead5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af011c6e541e7a3776cccacf88fdba2b5"><td class="memItemLeft" align="right" valign="top">static RangeInputFilter::SPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#af011c6e541e7a3776cccacf88fdba2b5">create</a> (std::string const &amp;<a class="el" href="../unity.scopes.FilterBase/index.html#a1f2d96647b23af77b1ff1cffc80f3868">id</a>, <a class="el" href="../unity.scopes.Variant/index.html">Variant</a> const &amp;<a class="el" href="index.html#adf545096dacbea4303361527450321fa">default_start_value</a>, <a class="el" href="../unity.scopes.Variant/index.html">Variant</a> const &amp;<a class="el" href="index.html#aaf471258f02a8af0f7bfdb186ed61b0e">default_end_value</a>, std::string const &amp;<a class="el" href="index.html#a1a4cf761c6bfa2e07eb24b6f584ec05b">start_prefix_label</a>, std::string const &amp;<a class="el" href="index.html#a9e2a6ec4e9c06234ee4759dce2644008">start_postfix_label</a>, std::string const &amp;<a class="el" href="index.html#a41f517d0071ca0f953c478f8272bf41b">central_label</a>, std::string const &amp;<a class="el" href="index.html#a8acb48c94b3e9b6ca228a0e7ebb26ae5">end_prefix_label</a>, std::string const &amp;<a class="el" href="index.html#a81dde713bcfb2b2ca24683ba9e808e34">end_postfix_label</a>)</td></tr>
+<tr class="memdesc:af011c6e541e7a3776cccacf88fdba2b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a RangeInputFilter with specific default values for start and end.  More...<br /></td></tr>
+<tr class="separator:af011c6e541e7a3776cccacf88fdba2b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba826b77159d4d51ec804c2132ff0f62"><td class="memItemLeft" align="right" valign="top">static RangeInputFilter::SPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#aba826b77159d4d51ec804c2132ff0f62">create</a> (std::string const &amp;<a class="el" href="../unity.scopes.FilterBase/index.html#a1f2d96647b23af77b1ff1cffc80f3868">id</a>, std::string const &amp;<a class="el" href="index.html#a1a4cf761c6bfa2e07eb24b6f584ec05b">start_prefix_label</a>, std::string const &amp;<a class="el" href="index.html#a9e2a6ec4e9c06234ee4759dce2644008">start_postfix_label</a>, std::string const &amp;<a class="el" href="index.html#a41f517d0071ca0f953c478f8272bf41b">central_label</a>, std::string const &amp;<a class="el" href="index.html#a8acb48c94b3e9b6ca228a0e7ebb26ae5">end_prefix_label</a>, std::string const &amp;<a class="el" href="index.html#a81dde713bcfb2b2ca24683ba9e808e34">end_postfix_label</a>, FilterGroup::SCPtr const &amp;group)</td></tr>
+<tr class="memdesc:aba826b77159d4d51ec804c2132ff0f62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a RangeInputFilter inside a FilterGroup.  More...<br /></td></tr>
+<tr class="separator:aba826b77159d4d51ec804c2132ff0f62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac782e01462c0f1868fca744119da91c6"><td class="memItemLeft" align="right" valign="top">static RangeInputFilter::SPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#ac782e01462c0f1868fca744119da91c6">create</a> (std::string const &amp;<a class="el" href="../unity.scopes.FilterBase/index.html#a1f2d96647b23af77b1ff1cffc80f3868">id</a>, <a class="el" href="../unity.scopes.Variant/index.html">Variant</a> const &amp;<a class="el" href="index.html#adf545096dacbea4303361527450321fa">default_start_value</a>, <a class="el" href="../unity.scopes.Variant/index.html">Variant</a> const &amp;<a class="el" href="index.html#aaf471258f02a8af0f7bfdb186ed61b0e">default_end_value</a>, std::string const &amp;<a class="el" href="index.html#a1a4cf761c6bfa2e07eb24b6f584ec05b">start_prefix_label</a>, std::string const &amp;<a class="el" href="index.html#a9e2a6ec4e9c06234ee4759dce2644008">start_postfix_label</a>, std::string const &amp;<a class="el" href="index.html#a41f517d0071ca0f953c478f8272bf41b">central_label</a>, std::string const &amp;<a class="el" href="index.html#a8acb48c94b3e9b6ca228a0e7ebb26ae5">end_prefix_label</a>, std::string const &amp;<a class="el" href="index.html#a81dde713bcfb2b2ca24683ba9e808e34">end_postfix_label</a>, FilterGroup::SCPtr const &amp;group)</td></tr>
+<tr class="memdesc:ac782e01462c0f1868fca744119da91c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a RangeInputFilter with specific default values for start and end, inside a FilterGroup.  More...<br /></td></tr>
+<tr class="separator:ac782e01462c0f1868fca744119da91c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cb0b4523641ea4dec9b3c619f5b9c21"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a7cb0b4523641ea4dec9b3c619f5b9c21">update_state</a> (<a class="el" href="../unity.scopes.FilterState/index.html">FilterState</a> &amp;filter_state, std::string const &amp;filter_id, <a class="el" href="../unity.scopes.Variant/index.html">Variant</a> const &amp;<a class="el" href="index.html#afd86208a5f8fe8a81877bd0bf4588758">start_value</a>, <a class="el" href="../unity.scopes.Variant/index.html">Variant</a> const &amp;<a class="el" href="index.html#af5bee0ddf65a375a4a5e19b4313de940">end_value</a>)</td></tr>
+<tr class="memdesc:a7cb0b4523641ea4dec9b3c619f5b9c21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store start and end value in the filter state, without having an instance of RangeInputFilter.  More...<br /></td></tr>
+<tr class="separator:a7cb0b4523641ea4dec9b3c619f5b9c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_classunity_1_1scopes_1_1_filter_base"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classunity_1_1scopes_1_1_filter_base')"><img src="https://developer.ubuntu.com/static/devportal_uploaded/958ffd4c-28fd-4872-b623-b3625f8b0257-api/scopes/cpp/sdk-15.04.4/unity.scopes.RangeInputFilter/closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="../unity.scopes.FilterBase/index.html">unity::scopes::FilterBase</a></td></tr>
+<tr class="memitem:ab9e833d5e4029fed745d15ba63715159 inherit pub_types_classunity_1_1scopes_1_1_filter_base"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../unity.scopes.FilterBase/index.html#ab9e833d5e4029fed745d15ba63715159">DisplayHints</a> { <a class="el" href="../unity.scopes.FilterBase/index.html#ab9e833d5e4029fed745d15ba63715159a277f24de7d0bcc7e8ec8bfe0639f356f">Default</a> = 0, 
+<a class="el" href="../unity.scopes.FilterBase/index.html#ab9e833d5e4029fed745d15ba63715159a8c8262ffd071c61b213ec489b64bdf56">Primary</a> = 1
+ }</td></tr>
+<tr class="memdesc:ab9e833d5e4029fed745d15ba63715159"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display hints for the Shell UI.  <a href="../unity.scopes.FilterBase/index.html#ab9e833d5e4029fed745d15ba63715159">More...</a><br /></td></tr>
+<tr class="separator:ab9e833d5e4029fed745d15ba63715159 inherit pub_types_classunity_1_1scopes_1_1_filter_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A range filter allows a start and end value to be entered by the user. </p>
+<p>A <a class="el" href="index.html" title="A range filter allows a start and end value to be entered by the user. ">RangeInputFilter</a> is composed of two input boxes that accept numeric values (both of them optional). The filter can have prefix and/or postfix labels for the start and end value, respectively, plus a single label that is displayed between the two input boxes. The filter can provide defaults for that start and end value, which are used by the UI if the user does not enter explicit values. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a41f517d0071ca0f953c478f8272bf41b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string unity::scopes::RangeInputFilter::central_label </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the central label for this filter. </p>
+<dl class="section return"><dt>Returns</dt><dd>The central label. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a0717644ec86abcdc9dabf30302fead5d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RangeInputFilter::SPtr unity::scopes::RangeInputFilter::create </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>start_prefix_label</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>start_postfix_label</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>central_label</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>end_prefix_label</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>end_postfix_label</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a <a class="el" href="index.html" title="A range filter allows a start and end value to be entered by the user. ">RangeInputFilter</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>A unique identifier for the filter that can be used to later identify it among several filters. </td></tr>
+    <tr><td class="paramname">start_prefix_label</td><td>A display label for the input box for the start value, displayed to the left (can be empty). </td></tr>
+    <tr><td class="paramname">start_postfix_label</td><td>A display label for the input box for the start value, displayed to the right (can be empty). </td></tr>
+    <tr><td class="paramname">central_label</td><td>A display label that is displayed between the two input boxes (can be empty). </td></tr>
+    <tr><td class="paramname">end_prefix_label</td><td>A display label for the input box for the end value, displayed to the left (can be empty). </td></tr>
+    <tr><td class="paramname">end_postfix_label</td><td>A display label for the input box for the end value, displayed to the right (can be empty). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Instance of <a class="el" href="index.html" title="A range filter allows a start and end value to be entered by the user. ">RangeInputFilter</a>. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="af011c6e541e7a3776cccacf88fdba2b5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RangeInputFilter::SPtr unity::scopes::RangeInputFilter::create </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.Variant/index.html">Variant</a> const &amp;&#160;</td>
+          <td class="paramname"><em>default_start_value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.Variant/index.html">Variant</a> const &amp;&#160;</td>
+          <td class="paramname"><em>default_end_value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>start_prefix_label</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>start_postfix_label</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>central_label</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>end_prefix_label</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>end_postfix_label</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a <a class="el" href="index.html" title="A range filter allows a start and end value to be entered by the user. ">RangeInputFilter</a> with specific default values for start and end. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>A unique identifier for the filter that can be used to later identify it among several filters. </td></tr>
+    <tr><td class="paramname">default_start_value</td><td>A default start value (double, int, or null). </td></tr>
+    <tr><td class="paramname">default_end_value</td><td>A default end value (double, int, or null). </td></tr>
+    <tr><td class="paramname">start_prefix_label</td><td>A display label for the input box for the start value, displayed to the left (can be empty). </td></tr>
+    <tr><td class="paramname">start_postfix_label</td><td>A display label for the input box for the start value, displayed to the right (can be empty). </td></tr>
+    <tr><td class="paramname">central_label</td><td>A display label displayed between the two input boxes (can be empty). </td></tr>
+    <tr><td class="paramname">end_prefix_label</td><td>A display label for the input box for the end value, displayed to the left (can be empty). </td></tr>
+    <tr><td class="paramname">end_postfix_label</td><td>A display label for the input box for the end value, displayed to the right (can be empty). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Instance of <a class="el" href="index.html" title="A range filter allows a start and end value to be entered by the user. ">RangeInputFilter</a>. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="aba826b77159d4d51ec804c2132ff0f62"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RangeInputFilter::SPtr unity::scopes::RangeInputFilter::create </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>start_prefix_label</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>start_postfix_label</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>central_label</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>end_prefix_label</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>end_postfix_label</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FilterGroup::SCPtr const &amp;&#160;</td>
+          <td class="paramname"><em>group</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a <a class="el" href="index.html" title="A range filter allows a start and end value to be entered by the user. ">RangeInputFilter</a> inside a <a class="el" href="../unity.scopes.FilterGroup/index.html" title="Groups several filters into an expandable widget in the UI. ">FilterGroup</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>A unique identifier for the filter that can be used to later identify it among several filters. </td></tr>
+    <tr><td class="paramname">start_prefix_label</td><td>A display label for the input box for the start value, displayed to the left (can be empty). </td></tr>
+    <tr><td class="paramname">start_postfix_label</td><td>A display label for the input box for the start value, displayed to the right (can be empty). </td></tr>
+    <tr><td class="paramname">central_label</td><td>A display label displayed between the two input boxes (can be empty). </td></tr>
+    <tr><td class="paramname">end_prefix_label</td><td>A display label for the input box for the end value, displayed to the left (can be empty). </td></tr>
+    <tr><td class="paramname">end_postfix_label</td><td>A display label for the input box for the end value, displayed to the right (can be empty). </td></tr>
+    <tr><td class="paramname">group</td><td>A filter group this filter should be added to. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Instance of <a class="el" href="index.html" title="A range filter allows a start and end value to be entered by the user. ">RangeInputFilter</a>. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ac782e01462c0f1868fca744119da91c6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RangeInputFilter::SPtr unity::scopes::RangeInputFilter::create </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.Variant/index.html">Variant</a> const &amp;&#160;</td>
+          <td class="paramname"><em>default_start_value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.Variant/index.html">Variant</a> const &amp;&#160;</td>
+          <td class="paramname"><em>default_end_value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>start_prefix_label</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>start_postfix_label</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>central_label</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>end_prefix_label</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>end_postfix_label</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FilterGroup::SCPtr const &amp;&#160;</td>
+          <td class="paramname"><em>group</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a <a class="el" href="index.html" title="A range filter allows a start and end value to be entered by the user. ">RangeInputFilter</a> with specific default values for start and end, inside a <a class="el" href="../unity.scopes.FilterGroup/index.html" title="Groups several filters into an expandable widget in the UI. ">FilterGroup</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>A unique identifier for the filter that can be used to later identify it among several filters. </td></tr>
+    <tr><td class="paramname">default_start_value</td><td>The default start value (double, int, or null). </td></tr>
+    <tr><td class="paramname">default_end_value</td><td>The default end value (double, int, or null). </td></tr>
+    <tr><td class="paramname">start_prefix_label</td><td>A display label for the input box for the start value, displayed to the left (can be empty). </td></tr>
+    <tr><td class="paramname">start_postfix_label</td><td>A display label for the input box for the start value, displayed to the right (can be empty). </td></tr>
+    <tr><td class="paramname">central_label</td><td>A display label displayed between the two input boxes (can be empty). </td></tr>
+    <tr><td class="paramname">end_prefix_label</td><td>A display label for the input box for the end value, displayed to the left (can be empty). </td></tr>
+    <tr><td class="paramname">end_postfix_label</td><td>A display label for the input box for the end value, displayed to the right (can be empty). </td></tr>
+    <tr><td class="paramname">group</td><td>A filter group this filter should be added to. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Instance of <a class="el" href="index.html" title="A range filter allows a start and end value to be entered by the user. ">RangeInputFilter</a>. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="aaf471258f02a8af0f7bfdb186ed61b0e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../unity.scopes.Variant/index.html">Variant</a> unity::scopes::RangeInputFilter::default_end_value </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get default end value if set (int, double or null). </p>
+<p>The default value should be used unless a value is present in the <a class="el" href="../unity.scopes.FilterState/index.html" title="Stores the state of multiple filters. ">FilterState</a> - use <a class="el" href="index.html#ae459a665a5dae27445547b1c0be8c7c3" title="Check if filter state holds an end value for this filter instance. ">unity::scopes::RangeInputFilter::has_end_value()</a> and <a class="el" href="index.html#af5bee0ddf65a375a4a5e19b4313de940" title="Get end value for this filter instance. ">unity::scopes::RangeInputFilter::end_value()</a> before resorting to the default value. </p>
+</div>
+</div>
+<a class="anchor" id="adf545096dacbea4303361527450321fa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../unity.scopes.Variant/index.html">Variant</a> unity::scopes::RangeInputFilter::default_start_value </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the default start value if set (int, double or null). </p>
+<p>The default value should be used unless a value is present in the <a class="el" href="../unity.scopes.FilterState/index.html" title="Stores the state of multiple filters. ">FilterState</a> - use <a class="el" href="index.html#a64f2c9ff7ed484f49d26f601f30e8616" title="Check if filter state holds a start value for this filter instance. ">unity::scopes::RangeInputFilter::has_start_value()</a> and <a class="el" href="index.html#afd86208a5f8fe8a81877bd0bf4588758" title="Get the start value for this filter instance. ">unity::scopes::RangeInputFilter::start_value()</a> before resorting to the default value. </p>
+</div>
+</div>
+<a class="anchor" id="a81dde713bcfb2b2ca24683ba9e808e34"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string unity::scopes::RangeInputFilter::end_postfix_label </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the postfix label of end value. </p>
+<dl class="section return"><dt>Returns</dt><dd>The postfix label of end value. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a8acb48c94b3e9b6ca228a0e7ebb26ae5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string unity::scopes::RangeInputFilter::end_prefix_label </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the prefix label of end value. </p>
+<dl class="section return"><dt>Returns</dt><dd>The prefix label of end value. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="af5bee0ddf65a375a4a5e19b4313de940"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double unity::scopes::RangeInputFilter::end_value </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.FilterState/index.html">FilterState</a> const &amp;&#160;</td>
+          <td class="paramname"><em>filter_state</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get end value for this filter instance. </p>
+<dl class="section return"><dt>Returns</dt><dd>The end value or the default end value if not null. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="../unity.scopes.NotFoundException/index.html" title="Exception to indicate that an object wasn&#39;t found by a lookup function. ">unity::scopes::NotFoundException</a></td><td>if the end value is not set and the default end value is null. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ae459a665a5dae27445547b1c0be8c7c3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool unity::scopes::RangeInputFilter::has_end_value </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.FilterState/index.html">FilterState</a> const &amp;&#160;</td>
+          <td class="paramname"><em>filter_state</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if filter state holds an end value for this filter instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filter_state</td><td>The state of filters. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if filter_state has an end value for this filter. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a64f2c9ff7ed484f49d26f601f30e8616"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool unity::scopes::RangeInputFilter::has_start_value </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.FilterState/index.html">FilterState</a> const &amp;&#160;</td>
+          <td class="paramname"><em>filter_state</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if filter state holds a start value for this filter instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filter_state</td><td>The state of filters. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if filter_state has a start value for this filter. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a9e2a6ec4e9c06234ee4759dce2644008"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string unity::scopes::RangeInputFilter::start_postfix_label </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the postfix label of start value. </p>
+<dl class="section return"><dt>Returns</dt><dd>The postfix label of start value. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a1a4cf761c6bfa2e07eb24b6f584ec05b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string unity::scopes::RangeInputFilter::start_prefix_label </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the prefix label of start value. </p>
+<dl class="section return"><dt>Returns</dt><dd>The prefix label of start value. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="afd86208a5f8fe8a81877bd0bf4588758"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double unity::scopes::RangeInputFilter::start_value </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.FilterState/index.html">FilterState</a> const &amp;&#160;</td>
+          <td class="paramname"><em>filter_state</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the start value for this filter instance. </p>
+<dl class="section return"><dt>Returns</dt><dd>The start value or the default start value if not null. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="../unity.scopes.NotFoundException/index.html" title="Exception to indicate that an object wasn&#39;t found by a lookup function. ">unity::scopes::NotFoundException</a></td><td>if the start value is not set and the default start value is null. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a5fa97b63d86a89e7144a89e0996d1304"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unity::scopes::RangeInputFilter::update_state </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.FilterState/index.html">FilterState</a> &amp;&#160;</td>
+          <td class="paramname"><em>filter_state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.Variant/index.html">Variant</a> const &amp;&#160;</td>
+          <td class="paramname"><em>start_value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.Variant/index.html">Variant</a> const &amp;&#160;</td>
+          <td class="paramname"><em>end_value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Store start and end value for this filter in the filter state. </p>
+<p>Updates filter_state with start and end values for this filter instance. Allowed data types for start_value and end_value are Variant::Type::Null, Variant::Type::Double and Variant::Type::Int. Integer values are converted to double when returned via <a class="el" href="index.html#afd86208a5f8fe8a81877bd0bf4588758" title="Get the start value for this filter instance. ">unity::scopes::RangeInputFilter::start_value()</a> and <a class="el" href="index.html#af5bee0ddf65a375a4a5e19b4313de940" title="Get end value for this filter instance. ">unity::scopes::RangeInputFilter::end_value()</a> methods. Pass <a class="el" href="../unity.scopes.Variant/index.html#a2bd2d5425fdec9af9340c22e3b47ac1c" title="Construct a null variant. ">Variant::null()</a> as start_value or end_value if that value is unspecified (hasn't been entered or was erased by the user from the input box).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filter_state</td><td><a class="el" href="../unity.scopes.FilterState/index.html" title="Stores the state of multiple filters. ">FilterState</a> instance to update </td></tr>
+    <tr><td class="paramname">start_value</td><td>Start value </td></tr>
+    <tr><td class="paramname">end_value</td><td>End value </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a7cb0b4523641ea4dec9b3c619f5b9c21"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unity::scopes::RangeInputFilter::update_state </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.FilterState/index.html">FilterState</a> &amp;&#160;</td>
+          <td class="paramname"><em>filter_state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>filter_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.Variant/index.html">Variant</a> const &amp;&#160;</td>
+          <td class="paramname"><em>start_value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.Variant/index.html">Variant</a> const &amp;&#160;</td>
+          <td class="paramname"><em>end_value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Store start and end value in the filter state, without having an instance of <a class="el" href="index.html" title="A range filter allows a start and end value to be entered by the user. ">RangeInputFilter</a>. </p>
+<p>Updates filter_state with start and end values without an instance of <a class="el" href="index.html" title="A range filter allows a start and end value to be entered by the user. ">RangeInputFilter</a>. This is meant to be used when creating a <a class="el" href="../unity.scopes.CannedQuery/index.html" title="Parameters of a search query. ">CannedQuery</a> that references another scope.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filter_state</td><td><a class="el" href="../unity.scopes.FilterState/index.html" title="Stores the state of multiple filters. ">FilterState</a> instance to update </td></tr>
+    <tr><td class="paramname">filter_id</td><td>Unique identifier of filter </td></tr>
+    <tr><td class="paramname">start_value</td><td>Start value </td></tr>
+    <tr><td class="paramname">end_value</td><td>End value </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

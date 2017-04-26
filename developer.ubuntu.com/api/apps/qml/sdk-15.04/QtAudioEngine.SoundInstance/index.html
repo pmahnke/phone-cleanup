@@ -1,0 +1,751 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>SoundInstance [sdk-15.04/QtAudioEngine.SoundInstance] | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a href="../index.html">SDK 15.04</a> &rsaquo;</li>
+
+<li><a href="../QtAudioEngine/index.html">QtAudioEngine</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">SoundInstance</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qml-qtaudioengine-soundinstance.html -->
+	<!-- Source Format: qdoc -->
+<h1>SoundInstance</h1>
+<div id="element_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$SoundInstance-brief -->
+<p>Play 3d audio content. More...</p>
+<!-- @@@SoundInstance -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import QtAudioEngine 1.0</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Since:</td><td class="memItemRight bottomAlign">  Qt 5.0</td></tr></table></div><ul>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#direction-prop">direction</a></b></b> : vector3d</li>
+<li class="fn"><b><b><a href="index.html#engine-prop">engine</a></b></b> : QtAudioEngine::AudioEngine</li>
+<li class="fn"><b><b><a href="index.html#gain-prop">gain</a></b></b> : vector3d</li>
+<li class="fn"><b><b><a href="index.html#pitch-prop">pitch</a></b></b> : vector3d</li>
+<li class="fn"><b><b><a href="index.html#position-prop">position</a></b></b> : vector3d</li>
+<li class="fn"><b><b><a href="index.html#sound-prop">sound</a></b></b> : string</li>
+<li class="fn"><b><b><a href="index.html#state-prop">state</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="index.html#velocity-prop">velocity</a></b></b> : vector3d</li>
+</ul>
+<a name="signals"></a>
+<h2 id="signals">Signals</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#directionChanged-signal">directionChanged</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#gainChanged-signal">gainChanged</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#pitchChanged-signal">pitchChanged</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#positionChanged-signal">positionChanged</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#soundChanged-signal">soundChanged</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#stateChanged-signal">stateChanged</a></b></b>(state)</li>
+<li class="fn"><b><b><a href="index.html#velocityChanged-signal">velocityChanged</a></b></b>()</li>
+</ul>
+<a name="methods"></a>
+<h2 id="methods">Methods</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#play-method-3">play</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#play-method-2">play</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#play-method">play</a></b></b>()</li>
+</ul>
+<!-- $$$SoundInstance-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<p>This type is part of the <b>QtAudioEngine 1.0</b> module.</p>
+<p>There are two ways to create <a href="index.html">SoundInstance</a> objects. You can obtain it by calling newInstance method of a <a href="../QtAudioEngine.Sound/index.html">Sound</a>:</p>
+<pre class="qml">import QtQuick 2.0
+import QtAudioEngine 1.0
+<span class="type">Rectangle</span> {
+    <span class="name">id</span>:<span class="name">root</span>
+    <span class="name">color</span>:<span class="string">&quot;white&quot;</span>
+    <span class="name">width</span>: <span class="number">300</span>
+    <span class="name">height</span>: <span class="number">500</span>
+    <span class="type"><a href="../QtAudioEngine.AudioEngine/index.html">AudioEngine</a></span> {
+        <span class="name">id</span>:<span class="name">audioengine</span>
+        <span class="type"><a href="../QtAudioEngine.AudioSample/index.html">AudioSample</a></span> {
+            <span class="name">name</span>:<span class="string">&quot;explosion01&quot;</span>
+            <span class="name">source</span>: <span class="string">&quot;explosion-01.wav&quot;</span>
+        }
+        <span class="type"><a href="../QtAudioEngine.Sound/index.html">Sound</a></span> {
+            <span class="name">name</span>:<span class="string">&quot;explosion&quot;</span>
+            <span class="type"><a href="../QtAudioEngine.PlayVariation/index.html">PlayVariation</a></span> {
+                <span class="name">sample</span>:<span class="string">&quot;explosion01&quot;</span>
+            }
+        }
+    }
+    property <span class="type">variant</span> <span class="name">soundEffect</span>: <span class="name">audioengine</span>.<span class="name">sounds</span>[<span class="string">&quot;explosion&quot;</span>].<span class="name">newInstance</span>();
+    <span class="type">MouseArea</span> {
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">onPressed</span>: {
+            <span class="name">root</span>.<span class="name">soundEffect</span>.<span class="name">play</span>();
+        }
+    }
+}</pre>
+<p>Or alternatively, you can explicitly define <a href="index.html">SoundInstance</a> outside of <a href="../QtAudioEngine.AudioEngine/index.html">AudioEngine</a> for easier qml bindings:</p>
+<pre class="qml">import QtQuick 2.0
+import QtAudioEngine 1.0
+<span class="type">Rectangle</span> {
+    <span class="name">id</span>:<span class="name">root</span>
+    <span class="name">color</span>:<span class="string">&quot;white&quot;</span>
+    <span class="name">width</span>: <span class="number">300</span>
+    <span class="name">height</span>: <span class="number">500</span>
+    <span class="type"><a href="../QtAudioEngine.AudioEngine/index.html">AudioEngine</a></span> {
+        <span class="name">id</span>:<span class="name">audioengine</span>
+        <span class="type"><a href="../QtAudioEngine.AudioSample/index.html">AudioSample</a></span> {
+            <span class="name">name</span>:<span class="string">&quot;explosion01&quot;</span>
+            <span class="name">source</span>: <span class="string">&quot;explosion-01.wav&quot;</span>
+        }
+        <span class="type"><a href="../QtAudioEngine.Sound/index.html">Sound</a></span> {
+            <span class="name">name</span>:<span class="string">&quot;explosion&quot;</span>
+            <span class="type"><a href="../QtAudioEngine.PlayVariation/index.html">PlayVariation</a></span> {
+                <span class="name">sample</span>:<span class="string">&quot;explosion01&quot;</span>
+            }
+        }
+    }
+    <span class="type">Item</span> {
+        <span class="name">id</span>: <span class="name">animator</span>
+        <span class="name">x</span>: <span class="number">10</span> <span class="operator">+</span> <span class="name">observer</span>.<span class="name">percent</span> <span class="operator">*</span> <span class="number">100</span>
+        <span class="name">y</span>: <span class="number">20</span> <span class="operator">+</span> <span class="name">observer</span>.<span class="name">percent</span> <span class="operator">*</span> <span class="number">80</span>
+        property <span class="type">real</span> <span class="name">percent</span>: <span class="number">0</span>
+        SequentialAnimation on <span class="name">percent</span> {
+            <span class="name">loops</span>: <span class="name">Animation</span>.<span class="name">Infinite</span>
+            <span class="name">running</span>: <span class="number">true</span>
+            <span class="type">NumberAnimation</span> {
+            <span class="name">duration</span>: <span class="number">8000</span>
+            <span class="name">from</span>: <span class="number">0</span>
+            <span class="name">to</span>: <span class="number">1</span>
+            }
+        }
+    }
+    <span class="type"><a href="index.html">SoundInstance</a></span> {
+        <span class="name">id</span>:<span class="name">soundEffect</span>
+        <span class="name">engine</span>:<span class="name">audioengine</span>
+        <span class="name">sound</span>:<span class="string">&quot;explosion&quot;</span>
+        <span class="name">position</span>:<span class="name">Qt</span>.<span class="name">vector3d</span>(<span class="name">animator</span>.<span class="name">x</span>, <span class="name">animator</span>.<span class="name">y</span>, <span class="number">0</span>);
+    }
+    <span class="type">MouseArea</span> {
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">onPressed</span>: {
+            <span class="name">soundEffect</span>.<span class="name">play</span>();
+        }
+    }
+}</pre>
+<!-- @@@SoundInstance -->
+<h2>Property Documentation</h2>
+<!-- $$$direction -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="direction-prop"><td class="tblQmlPropNode"><p><a name="direction-prop"></a><span class="name">direction</span> : <span class="type">vector3d</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the current 3d direction.</p>
+</div></div><!-- @@@direction -->
+<br/>
+<!-- $$$engine -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="engine-prop"><td class="tblQmlPropNode"><p><a name="engine-prop"></a><span class="name">engine</span> : <span class="type"><a href="../QtAudioEngine.AudioEngine/index.html">QtAudioEngine::AudioEngine</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the reference to <a href="../QtAudioEngine.AudioEngine/index.html">AudioEngine</a>, must be set only once.</p>
+</div></div><!-- @@@engine -->
+<br/>
+<!-- $$$gain -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="gain-prop"><td class="tblQmlPropNode"><p><a name="gain-prop"></a><span class="name">gain</span> : <span class="type">vector3d</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the gain adjustment which will be used to modulate the audio output level from this <a href="index.html">SoundInstance</a>.</p>
+</div></div><!-- @@@gain -->
+<br/>
+<!-- $$$pitch -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="pitch-prop"><td class="tblQmlPropNode"><p><a name="pitch-prop"></a><span class="name">pitch</span> : <span class="type">vector3d</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the pitch adjustment which will be used to modulate the audio pitch from this <a href="index.html">SoundInstance</a>.</p>
+</div></div><!-- @@@pitch -->
+<br/>
+<!-- $$$position -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="position-prop"><td class="tblQmlPropNode"><p><a name="position-prop"></a><span class="name">position</span> : <span class="type">vector3d</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the current 3d position.</p>
+</div></div><!-- @@@position -->
+<br/>
+<!-- $$$sound -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="sound-prop"><td class="tblQmlPropNode"><p><a name="sound-prop"></a><span class="name">sound</span> : <span class="type">string</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property specifies which Sound this <a href="index.html">SoundInstance</a> will use. Unlike some properties in other types, this property can be changed dynamically.</p>
+</div></div><!-- @@@sound -->
+<br/>
+<!-- $$$state -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="state-prop"><td class="tblQmlPropNode"><p><a name="state-prop"></a><span class="name">state</span> : <span class="type">enumeration</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the current playback state. It can be one of:</p>
+<div class="table"><table class="generic">
+ <thead><tr class="qt-style"><th >Value</th><th >Description</th></tr></thead>
+<tr valign="top" class="odd"><td >StopppedState</td><td >The <a href="index.html">SoundInstance</a> is not playing, and when playback begins next it will play from position zero.</td></tr>
+<tr valign="top" class="even"><td >PlayingState</td><td >The <a href="index.html">SoundInstance</a> is playing the media.</td></tr>
+<tr valign="top" class="odd"><td >PausedState</td><td >The <a href="index.html">SoundInstance</a> is not playing, and when playback begins next it will play from the position that it was paused at.</td></tr>
+</table></div>
+</div></div><!-- @@@state -->
+<br/>
+<!-- $$$velocity -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="velocity-prop"><td class="tblQmlPropNode"><p><a name="velocity-prop"></a><span class="name">velocity</span> : <span class="type">vector3d</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the current 3d velocity.</p>
+</div></div><!-- @@@velocity -->
+<br/>
+<h2>Signal Documentation</h2>
+<!-- $$$directionChanged -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="directionChanged-signal"><td class="tblQmlFuncNode"><p><a name="directionChanged-signal"></a><span class="name">directionChanged</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when <a href="index.html#direction-prop">direction</a> is changed</p>
+<p>The corresponding handler is <code>onDirectionChanged</code>.</p>
+</div></div><!-- @@@directionChanged -->
+<br/>
+<!-- $$$gainChanged -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="gainChanged-signal"><td class="tblQmlFuncNode"><p><a name="gainChanged-signal"></a><span class="name">gainChanged</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when <a href="index.html#gain-prop">gain</a> is changed</p>
+<p>The corresponding handler is <code>onGainChanged</code>.</p>
+</div></div><!-- @@@gainChanged -->
+<br/>
+<!-- $$$pitchChanged -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="pitchChanged-signal"><td class="tblQmlFuncNode"><p><a name="pitchChanged-signal"></a><span class="name">pitchChanged</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when <a href="index.html#pitch-prop">pitch</a> is changed</p>
+<p>The corresponding handler is <code>onPitchChanged</code>.</p>
+</div></div><!-- @@@pitchChanged -->
+<br/>
+<!-- $$$positionChanged -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="positionChanged-signal"><td class="tblQmlFuncNode"><p><a name="positionChanged-signal"></a><span class="name">positionChanged</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when <a href="index.html#position-prop">position</a> is changed</p>
+<p>The corresponding handler is <code>onPositionChanged</code>.</p>
+</div></div><!-- @@@positionChanged -->
+<br/>
+<!-- $$$soundChanged -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="soundChanged-signal"><td class="tblQmlFuncNode"><p><a name="soundChanged-signal"></a><span class="name">soundChanged</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when <a href="index.html#sound-prop">sound</a> is changed</p>
+<p>The corresponding handler is <code>onSoundChanged</code>.</p>
+</div></div><!-- @@@soundChanged -->
+<br/>
+<!-- $$$stateChanged -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="stateChanged-signal"><td class="tblQmlFuncNode"><p><a name="stateChanged-signal"></a><span class="name">stateChanged</span>(<span class="type">state</span>)</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when <a href="index.html#state-prop">state</a> is changed</p>
+<p>The corresponding handler is <code>onStateChanged</code>.</p>
+</div></div><!-- @@@stateChanged -->
+<br/>
+<!-- $$$velocityChanged -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="velocityChanged-signal"><td class="tblQmlFuncNode"><p><a name="velocityChanged-signal"></a><span class="name">velocityChanged</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when <a href="index.html#velocity-prop">velocity</a> is changed</p>
+<p>The corresponding handler is <code>onVelocityChanged</code>.</p>
+</div></div><!-- @@@velocityChanged -->
+<br/>
+<h2>Method Documentation</h2>
+<!-- $$$play -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="play-method-3"><td class="tblQmlFuncNode"><p><a name="play-method-3"></a><span class="name">play</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Pauses current playback.</p>
+</div></div><!-- @@@play -->
+<br/>
+<!-- $$$play -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="play-method-2"><td class="tblQmlFuncNode"><p><a name="play-method-2"></a><span class="name">play</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Stops current playback.</p>
+</div></div><!-- @@@play -->
+<br/>
+<!-- $$$play -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="play-method"><td class="tblQmlFuncNode"><p><a name="play-method"></a><span class="name">play</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Starts playback.</p>
+</div></div><!-- @@@play -->
+<br/>
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

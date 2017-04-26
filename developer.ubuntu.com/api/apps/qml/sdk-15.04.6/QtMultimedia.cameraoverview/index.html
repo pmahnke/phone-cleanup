@@ -1,0 +1,723 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Camera Overview | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a class="sub-nav-item" href="../index.html">SDK 15.04.6</a> &rsaquo;</li>
+
+<li><a class="sub-nav-item" href="../QtMultimedia/index.html">QtMultimedia</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Camera Overview</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: cameraoverview.html -->
+	<!-- Source Format: qdoc -->
+<h1>Camera Overview</h1>
+<div id="page_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$cameraoverview.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>The Qt Multimedia API provides a number of camera related classes, so you can access images and videos from mobile device cameras or webcameras. There are both C++ and QML APIs for common tasks.</p>
+<a name="camera-features"></a>
+<h2 id="camera-features">Camera Features</h2>
+<p>In order to use the camera classes a quick overview of the way a camera works is needed. If you're already familiar with this, you can skip ahead to <a href="index.html#camera-tldr">Camera implementation details</a>.</p>
+<a name="the-lens-assembly"></a>
+<h3 >The Lens Assembly</h3>
+<p>At one end of the camera assembly is the lens assembly (one or more lenses, arranged to focus light onto the sensor). The lenses themselves can sometimes be moved to adjust things like focus and zoom, or they might be fixed in an arrangement to give a good balance between objects in focus, and cost.</p>
+<p>Some lens assemblies can automatically be adjusted so that an object at different distances from the camera can be kept in focus. This is usually done by measuring how sharp a particular area of the frame is, and by adjusting the lens assembly until it is maximally sharp. In some cases the camera will always use the center of the frame for this. Other cameras may also allow the region to focus to be specified (for &quot;touch to zoom&quot;, or &quot;face zoom&quot; features).</p>
+<a name="the-sensor"></a>
+<h3 >The Sensor</h3>
+<p>Once light arrives at the sensor, it gets converted into digital pixels. This process can depend on a number of things but ultimately comes down to two things - how long the conversion is allowed to take, and how bright the light is. The longer a conversion can take, the better the quality. Using a flash can assist with letting more light hit the sensor, allowing it to convert pixels faster, giving better quality for the same amount of time. Conversely, allowing a longer conversion time can let you take photos in darker environments, as long as the camera is steady.</p>
+<a name="image-processing"></a>
+<h3 >Image Processing</h3>
+<p>After the image has been captured by the sensor, the camera firmware performs various image processing tasks on it to compensate for various sensor characteristics, current lighting, and desired image properties. Faster sensor pixel conversion times tend to introduce digital noise, so some amount of image processing can be done to remove this based on the camera sensor settings.</p>
+<p>The color of the image can also be adjusted at this stage to compensate for different light sources - fluorescent lights and sunlight give very different appearances to the same object, so the image can be adjusted based on the white balance of the picture (due to the different color temperatures of the light sources).</p>
+<p>Some forms of &quot;special effects&quot; can also be performed at this stage. Black and white, sepia, or &quot;negative&quot; style images can be produced.</p>
+<a name="recording-for-posterity"></a>
+<h3 >Recording for Posterity</h3>
+<p>Finally, once a perfectly focused, exposed and processed image has been created, it can be put to good use. Camera images can be further processed by application code (for example, to detect barcodes, or to stitch together a panoramic image), or saved to a common format like JPEG, or used to create a movie. Many of these tasks have classes to assist them.</p>
+<a name="camera-tldr"></a><a name="camera-implementation-details"></a>
+<h2 id="camera-implementation-details">Camera Implementation Details</h2>
+<a name="detecting-and-selecting-camera"></a>
+<h3 >Detecting and Selecting Camera</h3>
+<p>Before using the camera APIs, you should check that a camera is available at runtime. If there is none, you could for example disable camera related features in your application. To perform this check in C++, use the QCameraInfo::availableCameras() function, as shown in the example below:</p>
+<pre class="cpp">bool checkCameraAvailability()
+{
+    <span class="keyword">if</span> (<span class="type">QCameraInfo</span><span class="operator">::</span>availableCameras()<span class="operator">.</span>count() <span class="operator">&gt;</span> <span class="number">0</span>)
+        <span class="keyword">return</span> <span class="keyword">true</span>;
+    <span class="keyword">else</span>
+        <span class="keyword">return</span> <span class="keyword">false</span>;
+}</pre>
+<p>In QML, use the <a href="../QtMultimedia.QtMultimedia/index.html#availableCameras-prop">QtMultimedia.availableCameras</a> property:</p>
+<pre class="qml">import QtQuick 2.0
+import QtMultimedia 5.4
+<span class="type">Item</span> {
+    property <span class="type">bool</span> <span class="name">isCameraAvailable</span>: <span class="name">QtMultimedia</span>.<span class="name">availableCameras</span>.<span class="name">length</span> <span class="operator">&gt;</span> <span class="number">0</span>
+}</pre>
+<p>After determining whether a camera is available, access it using the QCamera class in C++ or the Camera type in QML.</p>
+<p>When multiple cameras are available, you can specify which one to use.</p>
+<p>In C++:</p>
+<pre class="cpp"><span class="type">QList</span><span class="operator">&lt;</span><span class="type">QCameraInfo</span><span class="operator">&gt;</span> cameras <span class="operator">=</span> <span class="type">QCameraInfo</span><span class="operator">::</span>availableCameras();
+foreach (<span class="keyword">const</span> <span class="type">QCameraInfo</span> <span class="operator">&amp;</span>cameraInfo<span class="operator">,</span> cameras) {
+    <span class="keyword">if</span> (cameraInfo<span class="operator">.</span>deviceName() <span class="operator">=</span><span class="operator">=</span> <span class="string">&quot;mycamera&quot;</span>)
+        camera <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QCamera</span>(cameraInfo);
+}</pre>
+<p>In QML, you can set the <code>Camera</code> <a href="../QtMultimedia.Camera/index.html#deviceId-prop">deviceId</a> property. All available IDs can be retrieved from <a href="../QtMultimedia.QtMultimedia/index.html#availableCameras-prop">QtMultimedia.availableCameras</a>:</p>
+<pre class="qml"><span class="type"><a href="../QtMultimedia.Camera/index.html">Camera</a></span> {
+    <span class="name">deviceId</span>: <span class="name">QtMultimedia</span>.<span class="name">availableCameras</span>[<span class="number">0</span>].<span class="name">deviceId</span>
+}</pre>
+<p>You can also select the camera by its physical position on the system rather than its device ID. This is useful on mobile devices, which often have a front-facing and a back-facing camera.</p>
+<p>In C++:</p>
+<pre class="cpp">camera <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QCamera</span>(<span class="type">QCamera</span><span class="operator">::</span>FrontFace);</pre>
+<p>In QML:</p>
+<pre class="qml"><span class="type"><a href="../QtMultimedia.Camera/index.html">Camera</a></span> {
+    <span class="name">position</span>: <span class="name">Camera</span>.<span class="name">FrontFace</span>
+}</pre>
+<p>If neither device ID nor position is specified, the default camera will be used. On desktop platforms, the default camera is set by the user in the system settings. On a mobile device, the back-facing camera is usually the default camera. You can get information about the default camera using QCameraInfo::defaultCamera() in C++ or QtMultimedia.defaultCamera in QML.</p>
+<a name="viewfinder"></a>
+<h3 >Viewfinder</h3>
+<p>While not strictly necessary, it's often useful to be able to see what the camera is pointing at. Most digital cameras allow an image feed from the camera sensor at a lower resolution (usually up to the size of the display of the camera) so you can compose a photo or video, and then switch to a slower but higher resolution mode for capturing the image.</p>
+<p>Depending on whether you're using QML or C++, you can do this in multiple ways. In QML, you can use <a href="../QtMultimedia.qml-multimedia/index.html#camera">Camera</a> and <a href="../QtMultimedia.VideoOutput/index.html">VideoOutput</a> together to show a simple viewfinder:</p>
+<pre class="qml">import QtQuick 2.0
+import QtMultimedia 5.4
+<span class="type"><a href="../QtMultimedia.VideoOutput/index.html">VideoOutput</a></span> {
+    <span class="name">source</span>: <span class="name">camera</span>
+    <span class="type"><a href="../QtMultimedia.Camera/index.html">Camera</a></span> {
+        <span class="name">id</span>: <span class="name">camera</span>
+        <span class="comment">// You can adjust various settings in here</span>
+    }
+}</pre>
+<p>In C++, your choice depends on whether you are using widgets, or QGraphicsView. The QCameraViewfinder class is used in the widgets case, and QGraphicsVideoItem is useful for QGraphicsView.</p>
+<pre class="cpp">camera <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QCamera</span>;
+viewfinder <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QCameraViewfinder</span>;
+camera<span class="operator">-</span><span class="operator">&gt;</span>setViewfinder(viewfinder);
+viewfinder<span class="operator">-</span><span class="operator">&gt;</span>show();
+camera<span class="operator">-</span><span class="operator">&gt;</span>start(); <span class="comment">// to start the viewfinder</span></pre>
+<p>For advanced usage (like processing viewfinder frames as they come, to detect objects or patterns), you can also derive from QAbstractVideoSurface and set that as the viewfinder for the QCamera object. In this case you will need to render the viewfinder image yourself.</p>
+<pre class="cpp">camera <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QCamera</span>;
+mySurface <span class="operator">=</span> <span class="keyword">new</span> MyVideoSurface;
+camera<span class="operator">-</span><span class="operator">&gt;</span>setViewfinder(mySurface);
+camera<span class="operator">-</span><span class="operator">&gt;</span>start();
+<span class="comment">// MyVideoSurface::present(..) will be called with viewfinder frames</span></pre>
+<p>On mobile devices, the viewfinder image might not always be in the orientation you would expect. The camera sensors on these devices are often mounted in landscape while the natural orientation of the screen is portrait. This results in the image appearing sideways or inverted depending on the device orientation. In order to reflect on screen what the user actually sees, you should make sure the viewfinder frames are always rotated to the correct orientation, taking into account the camera sensor orientation and the current display orientation.</p>
+<pre class="cpp"><span class="comment">// Assuming a QImage has been created from the QVideoFrame that needs to be presented</span>
+<span class="type">QImage</span> videoFrame;
+<span class="type">QCameraInfo</span> cameraInfo(camera); <span class="comment">// needed to get the camera sensor position and orientation</span>
+<span class="comment">// Get the current display orientation</span>
+<span class="keyword">const</span> <span class="type">QScreen</span> <span class="operator">*</span>screen <span class="operator">=</span> <span class="type">QGuiApplication</span><span class="operator">::</span>primaryScreen();
+<span class="keyword">const</span> <span class="type">int</span> screenAngle <span class="operator">=</span> screen<span class="operator">-</span><span class="operator">&gt;</span>angleBetween(screen<span class="operator">-</span><span class="operator">&gt;</span>nativeOrientation()<span class="operator">,</span> screen<span class="operator">-</span><span class="operator">&gt;</span>orientation());
+<span class="type">int</span> rotation;
+<span class="keyword">if</span> (cameraInfo<span class="operator">.</span>position() <span class="operator">=</span><span class="operator">=</span> <span class="type">QCamera</span><span class="operator">::</span>BackFace) {
+    rotation <span class="operator">=</span> (cameraInfo<span class="operator">.</span>orientation() <span class="operator">-</span> screenAngle) <span class="operator">%</span> <span class="number">360</span>;
+} <span class="keyword">else</span> {
+    <span class="comment">// Front position, compensate the mirror</span>
+    rotation <span class="operator">=</span> (<span class="number">360</span> <span class="operator">-</span> cameraInfo<span class="operator">.</span>orientation() <span class="operator">+</span> screenAngle) <span class="operator">%</span> <span class="number">360</span>;
+}
+<span class="comment">// Rotate the frame so it always shows in the correct orientation</span>
+videoFrame <span class="operator">=</span> videoFrame<span class="operator">.</span>transformed(<span class="type">QTransform</span>()<span class="operator">.</span>rotate(rotation));</pre>
+<a name="still-images"></a>
+<h3 >Still Images</h3>
+<p>After setting up a viewfinder and finding something photogenic, to capture an image we need to initialize a new QCameraImageCapture object. All that is then needed is to start the camera, lock it so that things are in focus and the settings are not different from the viewfinder while the image capture occurs, capture the image, and finally unlock the camera ready for the next photo.</p>
+<pre class="cpp">imageCapture <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QCameraImageCapture</span>(camera);
+camera<span class="operator">-</span><span class="operator">&gt;</span>setCaptureMode(<span class="type">QCamera</span><span class="operator">::</span>CaptureStillImage);
+camera<span class="operator">-</span><span class="operator">&gt;</span>start(); <span class="comment">// Viewfinder frames start flowing</span>
+<span class="comment">//on half pressed shutter button</span>
+camera<span class="operator">-</span><span class="operator">&gt;</span>searchAndLock();
+<span class="comment">//on shutter button pressed</span>
+imageCapture<span class="operator">-</span><span class="operator">&gt;</span>capture();
+<span class="comment">//on shutter button released</span>
+camera<span class="operator">-</span><span class="operator">&gt;</span>unlock();</pre>
+<a name="movies"></a>
+<h3 >Movies</h3>
+<p>Previously we saw code that allowed the capture of a still image. Recording video requires the use of a QMediaRecorder object.</p>
+<p>To record video we need to create a camera object as before but this time as well as creating a viewfinder, we will also initialize a media recorder object.</p>
+<pre class="cpp">camera <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QCamera</span>;
+recorder <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QMediaRecorder</span>(camera);
+camera<span class="operator">-</span><span class="operator">&gt;</span>setCaptureMode(<span class="type">QCamera</span><span class="operator">::</span>CaptureVideo);
+camera<span class="operator">-</span><span class="operator">&gt;</span>start();
+<span class="comment">//on shutter button pressed</span>
+recorder<span class="operator">-</span><span class="operator">&gt;</span>record();
+<span class="comment">// sometime later, or on another press</span>
+recorder<span class="operator">-</span><span class="operator">&gt;</span>stop();</pre>
+<p>Signals from the <i>mediaRecorder</i> can be connected to slots to react to changes in the state of the recorder or error events. Recording itself starts with the record() function of mediaRecorder being called, this causes the signal stateChanged() to be emitted. The recording process can be changed with the record(), stop() and setMuted() slots in QMediaRecorder.</p>
+<a name="controlling-the-imaging-pipeline"></a>
+<h3 >Controlling the Imaging Pipeline</h3>
+<p>Now that the basics of capturing images or movies are covered, there are a number of ways to control the imaging pipeline to implement some interesting techniques. As explained earlier, several physical and electronic elements combine to determine the final images, and you can control them with different classes.</p>
+<a name="focus-and-zoom"></a>
+<h4 >Focus and Zoom</h4>
+<p>Focusing (and zoom) is managed primarily by the QCameraFocus class. QCameraFocus allows the developer to set the general policy by means of the enums for the FocusMode and the FocusPointMode. FocusMode deals with settings such as AutoFocus, ContinuousFocus and InfinityFocus, whereas FocusPointMode deals with the various focus zones within the view that are used for autofocus modes. FocusPointMode has support for face recognition (where the camera supports it), center focus and a custom focus where the focus point can be specified.</p>
+<p>For camera hardware that supports it, Macro focus allows imaging of things that are close to the sensor. This is useful in applications like barcode recognition, or business card scanning.</p>
+<p>In addition to focus, QCameraFocus allows you to control any available optical or digital zoom. In general, optical zoom is higher quality, but more expensive to manufacture, so the available zoom range might be limited (or fixed to unity).</p>
+<a name="exposure-aperture-shutter-speed-and-flash"></a>
+<h4 >Exposure, Aperture, Shutter Speed and Flash</h4>
+<p>There are a number of settings that affect the amount of light that hits the camera sensor, and hence the quality of the resulting image. The QCameraExposure class allows you to adjust these settings. You can use this class to implement some techniques like High Dynamic Range (HDR) photos by locking the exposure parameters (with QCamera::searchAndLock()), or motion blur by setting slow shutter speeds with small apertures.</p>
+<p>The main settings for automatic image taking are the exposure mode and flash mode. Several other settings (aperture, ISO setting, shutter speed) are usually managed automatically but can also be overridden if desired.</p>
+<p>You can also adjust the QCameraExposure::meteringMode() to control which parts of the camera frame to measure exposure at. Some camera implementations also allow you to specify a specific point that should be used for exposure metering - this is useful if you can let the user touch or click on an interesting part of the viewfinder, and then use this point so that the image exposure is best at that point.</p>
+<p>Finally, you can control the flash hardware (if present) using this class. In some cases the hardware may also double as a torch (typically when the flash is LED based, rather than a xenon or other bulb). See also <a href="../QtMultimedia.Torch/index.html">Torch</a> for an easy to use API for torch functionality.</p>
+<a name="camera-image-processing"></a><a name="image-processing"></a>
+<h4 >Image Processing</h4>
+<p>The QCameraImageProcessing class lets you adjust the image processing part of the pipeline. This includes the white balance (or color temperature), contrast, saturation, sharpening and denoising. Most cameras support automatic settings for all of these, so you shouldn't need to adjust them unless the user wants a specific setting.</p>
+<p>If you're taking a series of images (for example, to stitch them together for a panoramic image), you should lock the image processing settings so that all the images taken appear similar with <i>QCamera::lock(QCamera::LockWhiteBalance)</i>/</p>
+<a name="canceling-asynchronous-operations"></a>
+<h4 >Canceling Asynchronous Operations</h4>
+<p>Various operations such as image capture and auto focusing occur asynchrously. These operations can often be canceled by the start of a new operation as long as this is supported by the camera. For image capture, the operation can be canceled by calling cancelCapture(). For AutoFocus, autoexposure or white balance cancellation can be done by calling <i>QCamera::unlock(QCamera::LockFocus)</i>.</p>
+<a name="examples"></a>
+<h2 id="examples">Examples</h2>
+<p>There are both C++ and QML examples available.</p>
+<a name="c-examples"></a>
+<h3 >C++ Examples</h3>
+<a name="qml-examples"></a>
+<h3 >QML Examples</h3>
+<a name="reference-documentation"></a>
+<h2 id="reference-documentation">Reference Documentation</h2>
+<a name="c-classes"></a>
+<h3 >C++ Classes</h3>
+<div class="table"><table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p>QCamera</p></td><td class="tblDescr"><p>Interface for system camera devices</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p>QCameraExposure</p></td><td class="tblDescr"><p>Interface for exposure related camera settings</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p>QCameraFocus</p></td><td class="tblDescr"><p>Interface for focus and zoom related camera settings</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p>QCameraFocusZone</p></td><td class="tblDescr"><p>Information on zones used for autofocusing a camera</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p>QCameraImageCapture</p></td><td class="tblDescr"><p>Used for the recording of media content</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p>QCameraImageProcessing</p></td><td class="tblDescr"><p>Interface for image processing related camera settings</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p>QCameraInfo</p></td><td class="tblDescr"><p>General information about camera devices</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p>QImageEncoderSettings</p></td><td class="tblDescr"><p>Set of image encoder settings</p></td></tr>
+</table></div>
+<a name="qml-types"></a>
+<h3 >QML Types</h3>
+<div class="table"><table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="../QtMultimedia.Camera/index.html">Camera</a></p></td><td class="tblDescr"><p>Access viewfinder frames, and take photos and movies</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../QtMultimedia.CameraCapture/index.html">CameraCapture</a></p></td><td class="tblDescr"><p>An interface for capturing camera images</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../QtMultimedia.CameraExposure/index.html">CameraExposure</a></p></td><td class="tblDescr"><p>An interface for exposure related camera settings</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../QtMultimedia.CameraFlash/index.html">CameraFlash</a></p></td><td class="tblDescr"><p>An interface for flash related camera settings</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../QtMultimedia.CameraFocus/index.html">CameraFocus</a></p></td><td class="tblDescr"><p>An interface for focus related camera settings</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../QtMultimedia.CameraImageProcessing/index.html">CameraImageProcessing</a></p></td><td class="tblDescr"><p>An interface for camera capture related settings</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../QtMultimedia.CameraRecorder/index.html">CameraRecorder</a></p></td><td class="tblDescr"><p>Controls video recording with the Camera</p></td></tr>
+</table></div>
+</div>
+<!-- @@@cameraoverview.html -->
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

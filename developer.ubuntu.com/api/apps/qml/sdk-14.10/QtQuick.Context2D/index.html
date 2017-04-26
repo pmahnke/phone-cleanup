@@ -1,0 +1,1075 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Context2D [sdk-14.10/QtQuick.Context2D] | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a href="../index.html">SDK 14.10</a> &rsaquo;</li>
+
+<li><a href="../QtQuick/index.html">QtQuick</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Context2D</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qml-qtquick-context2d.html -->
+	<!-- Source Format: qdoc -->
+<h1>Context2D</h1>
+<div id="element_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$Context2D-brief -->
+<p>Provides 2D context for shapes on a Canvas item More...</p>
+<!-- @@@Context2D -->
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> </b><tt>import QtQuick 2.2</tt></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Since:</td><td class="memItemRight bottomAlign">  Qt 5.0</td></tr></table><ul>
+</ul>
+<a name="properties"></a>
+<h2>Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#canvas-prop">canvas</a></b></b> : QtQuick::Canvas</li>
+<li class="fn"><b><b><a href="index.html#fillRule-prop">fillRule</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="index.html#fillStyle-prop">fillStyle</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#font-prop">font</a></b></b> : string</li>
+<li class="fn"><b><b><a href="index.html#globalAlpha-prop">globalAlpha</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#globalCompositeOperation-prop">globalCompositeOperation</a></b></b> : string</li>
+<li class="fn"><b><b><a href="index.html#lineCap-prop">lineCap</a></b></b> : string</li>
+<li class="fn"><b><b><a href="index.html#lineJoin-prop">lineJoin</a></b></b> : string</li>
+<li class="fn"><b><b><a href="index.html#lineWidth-prop">lineWidth</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#miterLimit-prop">miterLimit</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#shadowBlur-prop">shadowBlur</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#shadowColor-prop">shadowColor</a></b></b> : string</li>
+<li class="fn"><b><b><a href="index.html#shadowOffsetX-prop">shadowOffsetX</a></b></b> : qreal</li>
+<li class="fn"><b><b><a href="index.html#shadowOffsetY-prop">shadowOffsetY</a></b></b> : qreal</li>
+<li class="fn"><b><b><a href="index.html#strokeStyle-prop">strokeStyle</a></b></b> : variant</li>
+<li class="fn"><b><b><a href="index.html#textAlign-prop">textAlign</a></b></b> : string</li>
+<li class="fn"><b><b><a href="index.html#textBaseline-prop">textBaseline</a></b></b> : string</li>
+</ul>
+<a name="methods"></a>
+<h2>Methods</h2>
+<ul>
+<li class="fn">object <b><b><a href="index.html#arc-method">arc</a></b></b>(real <i>x</i>, real <i>y</i>, real <i>radius</i>, real <i>startAngle</i>, real <i>endAngle</i>, bool <i>anticlockwise</i>)</li>
+<li class="fn">object <b><b><a href="index.html#arcTo-method">arcTo</a></b></b>(real <i>x1</i>, real <i>y1</i>, real <i>x2</i>, real <i>y2</i>, real <i>radius</i>)</li>
+<li class="fn">object <b><b><a href="index.html#beginPath-method">beginPath</a></b></b>()</li>
+<li class="fn">object <b><b><a href="index.html#bezierCurveTo-method">bezierCurveTo</a></b></b>(real <i>cp1x</i>, real <i>cp1y</i>, real <i>cp2x</i>, real <i>cp2y</i>, real <i>x</i>, real <i>y</i>)</li>
+<li class="fn">object <b><b><a href="index.html#clearRect-method">clearRect</a></b></b>(real <i>x</i>, real <i>y</i>, real <i>w</i>, real <i>h</i>)</li>
+<li class="fn">object <b><b><a href="index.html#clip-method">clip</a></b></b>()</li>
+<li class="fn">object <b><b><a href="index.html#closePath-method">closePath</a></b></b>()</li>
+<li class="fn">object <b><b><a href="index.html#createConicalGradient-method">createConicalGradient</a></b></b>(real <i>x</i>, real <i>y</i>, real <i>angle</i>)</li>
+<li class="fn">CanvasImageData <b><b><a href="index.html#createImageData-method-3">createImageData</a></b></b>(Url <i>imageUrl</i>)</li>
+<li class="fn">CanvasImageData <b><b><a href="index.html#createImageData-method-2">createImageData</a></b></b>(CanvasImageData <i>imageData</i>)</li>
+<li class="fn">CanvasImageData <b><b><a href="index.html#createImageData-method">createImageData</a></b></b>(real <i>sw</i>, real <i>sh</i>)</li>
+<li class="fn">object <b><b><a href="index.html#createLinearGradient-method">createLinearGradient</a></b></b>(real <i>x0</i>, real <i>y0</i>, real <i>x1</i>, real <i>y1</i>)</li>
+<li class="fn">variant <b><b><a href="index.html#createPattern-method-2">createPattern</a></b></b>(Image <i>image</i>, string <i>repetition</i>)</li>
+<li class="fn">variant <b><b><a href="index.html#createPattern-method">createPattern</a></b></b>(color <i>color</i>, enumeration <i>patternMode</i>)</li>
+<li class="fn">object <b><b><a href="index.html#createRadialGradient-method">createRadialGradient</a></b></b>(real <i>x0</i>, real <i>y0</i>, real <i>r0</i>, real <i>x1</i>, real <i>y1</i>, real <i>r1</i>)</li>
+<li class="fn"><b><b><a href="index.html#drawImage-method-3">drawImage</a></b></b>(variant <i>image</i>, real <i>sx</i>, real <i>sy</i>, real <i>sw</i>, real <i>sh</i>, real <i>dx</i>, real <i>dy</i>, real <i>dw</i>, real <i>dh</i>)</li>
+<li class="fn"><b><b><a href="index.html#drawImage-method-2">drawImage</a></b></b>(variant <i>image</i>, real <i>dx</i>, real <i>dy</i>, real <i>dw</i>, real <i>dh</i>)</li>
+<li class="fn"><b><b><a href="index.html#drawImage-method">drawImage</a></b></b>(variant <i>image</i>, real <i>dx</i>, real <i>dy</i>)</li>
+<li class="fn">object <b><b><a href="index.html#ellipse-method">ellipse</a></b></b>(real <i>x</i>, real <i>y</i>, real <i>w</i>, real <i>h</i>)</li>
+<li class="fn">object <b><b><a href="index.html#fill-method">fill</a></b></b>()</li>
+<li class="fn">object <b><b><a href="index.html#fillRect-method-2">fillRect</a></b></b>(real <i>x</i>, real <i>y</i>, real <i>w</i>, real <i>h</i>)</li>
+<li class="fn">object <b><b><a href="index.html#fillRect-method">fillRect</a></b></b>(real <i>x</i>, real <i>y</i>, real <i>w</i>, real <i>h</i>)</li>
+<li class="fn">object <b><b><a href="index.html#fillText-method">fillText</a></b></b>(text, x, y)</li>
+<li class="fn">CanvasImageData <b><b><a href="index.html#getImageData-method">getImageData</a></b></b>(real <i>sx</i>, real <i>sy</i>, real <i>sw</i>, real <i>sh</i>)</li>
+<li class="fn">object <b><b><a href="index.html#isPointInPath-method">isPointInPath</a></b></b>(real <i>x</i>, real <i>y</i>)</li>
+<li class="fn">object <b><b><a href="index.html#lineTo-method">lineTo</a></b></b>(real <i>x</i>, real <i>y</i>)</li>
+<li class="fn">variant <b><b><a href="index.html#measureText-method">measureText</a></b></b>(text)</li>
+<li class="fn">object <b><b><a href="index.html#moveTo-method">moveTo</a></b></b>(real <i>x</i>, real <i>y</i>)</li>
+<li class="fn">object <b><b><a href="index.html#putImageData-method">putImageData</a></b></b>(CanvasImageData <i>imageData</i>, real <i>dx</i>, real <i>dy</i>, real <i>dirtyX</i>, real <i>dirtyY</i>, real <i>dirtyWidth</i>, real <i>dirtyHeight</i>)</li>
+<li class="fn">object <b><b><a href="index.html#quadraticCurveTo-method">quadraticCurveTo</a></b></b>(real <i>cpx</i>, real <i>cpy</i>, real <i>x</i>, real <i>y</i>)</li>
+<li class="fn">object <b><b><a href="index.html#rect-method">rect</a></b></b>(real <i>x</i>, real <i>y</i>, real <i>w</i>, real <i>h</i>)</li>
+<li class="fn">object <b><b><a href="index.html#reset-method">reset</a></b></b>()</li>
+<li class="fn">object <b><b><a href="index.html#resetTransform-method">resetTransform</a></b></b>()</li>
+<li class="fn">object <b><b><a href="index.html#restore-method">restore</a></b></b>()</li>
+<li class="fn">object <b><b><a href="index.html#rotate-method">rotate</a></b></b>(real <i>angle</i>)</li>
+<li class="fn">object <b><b><a href="index.html#roundedRect-method">roundedRect</a></b></b>(real <i>x</i>, real <i>y</i>, real <i>w</i>, real <i>h</i>, real <i>xRadius</i>, real <i>yRadius</i>)</li>
+<li class="fn">object <b><b><a href="index.html#save-method">save</a></b></b>()</li>
+<li class="fn">object <b><b><a href="index.html#scale-method">scale</a></b></b>(real <i>x</i>, real <i>y</i>)</li>
+<li class="fn">object <b><b><a href="index.html#setTransform-method">setTransform</a></b></b>(real <i>a</i>, real <i>b</i>, real <i>c</i>, real <i>d</i>, real <i>e</i>, real <i>f</i>)</li>
+<li class="fn">object <b><b><a href="index.html#shear-method">shear</a></b></b>(real <i>sh</i>, real <i>sv</i>)</li>
+<li class="fn">object <b><b><a href="index.html#stroke-method">stroke</a></b></b>()</li>
+<li class="fn">object <b><b><a href="index.html#strokeText-method">strokeText</a></b></b>(text, x, y)</li>
+<li class="fn">object <b><b><a href="index.html#text-method">text</a></b></b>(string <i>text</i>, real <i>x</i>, real <i>y</i>)</li>
+<li class="fn">object <b><b><a href="index.html#transform-method">transform</a></b></b>(real <i>a</i>, real <i>b</i>, real <i>c</i>, real <i>d</i>, real <i>e</i>, real <i>f</i>)</li>
+<li class="fn">object <b><b><a href="index.html#translate-method">translate</a></b></b>(real <i>x</i>, real <i>y</i>)</li>
+</ul>
+<!-- $$$Context2D-description -->
+<a name="details"></a>
+<h2>Detailed Description</h2>
+<p>The Context2D object can be created by <tt>Canvas</tt> item's <tt>getContext()</tt> method:</p>
+<pre class="cpp">Canvas {
+  id:canvas
+  onPaint:{
+     var ctx <span class="operator">=</span> canvas<span class="operator">.</span>getContext(<span class="char">'2d'</span>);
+     <span class="comment">//...</span>
+  }
+}</pre>
+<p>The Context2D API implements the same <a href="http://www.w3.org/TR/2dcontext">W3C Canvas 2D Context API standard</a> with some enhanced features.</p>
+<p>The Context2D API provides the rendering <b>context</b> which defines the methods and attributes needed to draw on the <tt>Canvas</tt> item. The following assigns the canvas rendering context to a <tt>context</tt> variable:</p>
+<pre class="cpp">var context <span class="operator">=</span> mycanvas<span class="operator">.</span>getContext(<span class="string">&quot;2d&quot;</span>)</pre>
+<p>The Context2D API renders the canvas as a coordinate system whose origin (0,0) is at the top left corner, as shown in the figure below. Coordinates increase along the <tt>x</tt> axis from left to right and along the <tt>y</tt> axis from top to bottom of the canvas.</p>
+<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/dfa2bc4c-2da0-4ead-b29e-903138c9640c-api/apps/qml/sdk-14.10/QtQuick.Context2D/images/qml-item-canvas-context.gif" alt="" /></p><!-- @@@Context2D -->
+<h2>Property Documentation</h2>
+<!-- $$$canvas -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="canvas-prop"></a><span class="name">canvas</span> : <span class="type"><a href="../QtQuick.Canvas/index.html">QtQuick::Canvas</a></span></p></td></tr></table></div><div class="qmldoc"><p>Holds the canvas item that the context paints on.</p>
+<p>This property is read only.</p>
+</div></div><!-- @@@canvas -->
+<br/>
+<!-- $$$fillRule -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="fillRule-prop"></a><span class="name">fillRule</span> : <span class="type">enumeration</span></p></td></tr></table></div><div class="qmldoc"><p>Holds the current fill rule used for filling shapes. The following fill rules supported:</p>
+<ul>
+<li>Qt.OddEvenFill</li>
+<li>Qt.WindingFill</li>
+</ul>
+<p>Note: Unlike the QPainterPath, the Canvas API uses the winding fill as the default fill rule. The fillRule property is part of the context rendering state.</p>
+<p><b>See also </b><a href="index.html#fillStyle-prop">fillStyle</a>.</p>
+</div></div><!-- @@@fillRule -->
+<br/>
+<!-- $$$fillStyle -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="fillStyle-prop"></a><span class="name">fillStyle</span> : <span class="type">variant</span></p></td></tr></table></div><div class="qmldoc"><p>Holds the current style used for filling shapes. The style can be either a string containing a CSS color, a <a href="../QtQuick.CanvasGradient/index.html">CanvasGradient</a> or CanvasPattern object. Invalid values are ignored. This property accepts several color syntaxes:</p>
+<ul>
+<li>'rgb(red, green, blue)' - for example: 'rgb(255, 100, 55)' or 'rgb(100%, 70%, 30%)'</li>
+<li>'rgba(red, green, blue, alpha)' - for example: 'rgb(255, 100, 55, 1.0)' or 'rgb(100%, 70%, 30%, 0.5)'</li>
+<li>'hsl(hue, saturation, lightness)'</li>
+<li>'hsla(hue, saturation, lightness, alpha)'</li>
+<li>'#RRGGBB' - for example: '#00FFCC'</li>
+<li>Qt.rgba(red, green, blue, alpha) - for example: Qt.rgba(0.3, 0.7, 1, 1.0)</li>
+</ul>
+<p>If the <tt>fillStyle</tt> or <a href="index.html#strokeStyle-prop">strokeStyle</a> is assigned many times in a loop, the last Qt.rgba() syntax should be chosen, as it has the best performance, because it's already a valid QColor value, does not need to be parsed everytime.</p>
+<p>The default value is '#000000'.</p>
+<p><b>See also </b><a href="index.html#createLinearGradient-method">createLinearGradient()</a>, <a href="index.html#createRadialGradient-method">createRadialGradient()</a>, <a href="index.html#createPattern-method">createPattern()</a>, and <a href="index.html#strokeStyle-prop">strokeStyle</a>.</p>
+</div></div><!-- @@@fillStyle -->
+<br/>
+<!-- $$$font -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="font-prop"></a><span class="name">font</span> : <span class="type">string</span></p></td></tr></table></div><div class="qmldoc"><p>Holds the current font settings.</p>
+<p>A subset of the <a href="http://www.w3.org/TR/2dcontext/#dom-context-2d-font">w3C 2d context standard for font</a> is supported:</p>
+<ul>
+<li>font-style (optional): normal | italic | oblique</li>
+<li>font-variant (optional): normal | small-caps</li>
+<li>font-weight (optional): normal | bold | 0 ..&#x2e; 99</li>
+<li>font-size: Npx | Npt (where N is a positive number)</li>
+<li>font-family: See <a href="http://www.w3.org/TR/CSS2/fonts.html#propdef-font-family">http://www.w3.org/TR/CSS2/fonts.html#propdef-font-family</a></li>
+</ul>
+<p><b>Note: </b>The font-size and font-family properties are mandatory and must be in the order they are shown in above. In addition, a font family with spaces in its name must be quoted.</p><p>The default font value is &quot;10px sans-serif&quot;.</p>
+</div></div><!-- @@@font -->
+<br/>
+<!-- $$$globalAlpha -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="globalAlpha-prop"></a><span class="name">globalAlpha</span> : <span class="type">real</span></p></td></tr></table></div><div class="qmldoc"><p>Holds the current alpha value applied to rendering operations. The value must be in the range from <tt>0.0</tt> (fully transparent) to <tt>1.0</tt> (fully opaque). The default value is <tt>1.0</tt>.</p>
+</div></div><!-- @@@globalAlpha -->
+<br/>
+<!-- $$$globalCompositeOperation -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="globalCompositeOperation-prop"></a><span class="name">globalCompositeOperation</span> : <span class="type">string</span></p></td></tr></table></div><div class="qmldoc"><p>Holds the current the current composition operation, from the list below:</p>
+<ul>
+<li>source-atop - A atop B. Display the source image wherever both images are opaque. Display the destination image wherever the destination image is opaque but the source image is transparent. Display transparency elsewhere.</li>
+<li>source-in - A in B. Display the source image wherever both the source image and destination image are opaque. Display transparency elsewhere.</li>
+<li>source-out - A out B. Display the source image wherever the source image is opaque and the destination image is transparent. Display transparency elsewhere.</li>
+<li>source-over - (default) A over B. Display the source image wherever the source image is opaque. Display the destination image elsewhere.</li>
+<li>destination-atop - B atop A. Same as source-atop but using the destination image instead of the source image and vice versa.</li>
+<li>destination-in - B in A. Same as source-in but using the destination image instead of the source image and vice versa.</li>
+<li>destination-out - B out A. Same as source-out but using the destination image instead of the source image and vice versa.</li>
+<li>destination-over - B over A. Same as source-over but using the destination image instead of the source image and vice versa.</li>
+<li>lighter - A plus B. Display the sum of the source image and destination image, with color values approaching 255 (100%) as a limit.</li>
+<li>copy - A (B is ignored). Display the source image instead of the destination image.</li>
+<li>xor - A xor B. Exclusive OR of the source image and destination image.</li>
+</ul>
+<p>Additionally, this property also accepts the compositon modes listed in QPainter::CompositionMode. According to the W3C standard, these extension composition modes are provided as &quot;vendorName-operationName&quot; syntax, for example: QPainter::CompositionMode_Exclusion is provided as &quot;qt-exclusion&quot;.</p>
+</div></div><!-- @@@globalCompositeOperation -->
+<br/>
+<!-- $$$lineCap -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="lineCap-prop"></a><span class="name">lineCap</span> : <span class="type">string</span></p></td></tr></table></div><div class="qmldoc"><p>Holds the current line cap style. The possible line cap styles are:</p>
+<ul>
+<li>butt - the end of each line has a flat edge perpendicular to the direction of the line, this is the default line cap value.</li>
+<li>round - a semi-circle with the diameter equal to the width of the line must then be added on to the end of the line.</li>
+<li>square - a rectangle with the length of the line width and the width of half the line width, placed flat against the edge perpendicular to the direction of the line.</li>
+</ul>
+<p>Other values are ignored.</p>
+</div></div><!-- @@@lineCap -->
+<br/>
+<!-- $$$lineJoin -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="lineJoin-prop"></a><span class="name">lineJoin</span> : <span class="type">string</span></p></td></tr></table></div><div class="qmldoc"><p>Holds the current line join style. A join exists at any point in a subpath shared by two consecutive lines. When a subpath is closed, then a join also exists at its first point (equivalent to its last point) connecting the first and last lines in the subpath.</p>
+<p>The possible line join styles are:</p>
+<ul>
+<li>bevel - this is all that is rendered at joins.</li>
+<li>round - a filled arc connecting the two aforementioned corners of the join, abutting (and not overlapping) the aforementioned triangle, with the diameter equal to the line width and the origin at the point of the join, must be rendered at joins.</li>
+<li>miter - a second filled triangle must (if it can given the miter length) be rendered at the join, this is the default line join style.</li>
+</ul>
+<p>Other values are ignored.</p>
+</div></div><!-- @@@lineJoin -->
+<br/>
+<!-- $$$lineWidth -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="lineWidth-prop"></a><span class="name">lineWidth</span> : <span class="type">real</span></p></td></tr></table></div><div class="qmldoc"><p>Holds the current line width. Values that are not finite values greater than zero are ignored.</p>
+</div></div><!-- @@@lineWidth -->
+<br/>
+<!-- $$$miterLimit -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="miterLimit-prop"></a><span class="name">miterLimit</span> : <span class="type">real</span></p></td></tr></table></div><div class="qmldoc"><p>Holds the current miter limit ratio. The default miter limit value is 10.0&#x2e;</p>
+</div></div><!-- @@@miterLimit -->
+<br/>
+<!-- $$$shadowBlur -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="shadowBlur-prop"></a><span class="name">shadowBlur</span> : <span class="type">real</span></p></td></tr></table></div><div class="qmldoc"><p>Holds the current level of blur applied to shadows</p>
+</div></div><!-- @@@shadowBlur -->
+<br/>
+<!-- $$$shadowColor -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="shadowColor-prop"></a><span class="name">shadowColor</span> : <span class="type">string</span></p></td></tr></table></div><div class="qmldoc"><p>Holds the current shadow color.</p>
+</div></div><!-- @@@shadowColor -->
+<br/>
+<!-- $$$shadowOffsetX -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="shadowOffsetX-prop"></a><span class="name">shadowOffsetX</span> : <span class="type">qreal</span></p></td></tr></table></div><div class="qmldoc"><p>Holds the current shadow offset in the positive horizontal distance.</p>
+<p><b>See also </b><a href="index.html#shadowOffsetY-prop">shadowOffsetY</a>.</p>
+</div></div><!-- @@@shadowOffsetX -->
+<br/>
+<!-- $$$shadowOffsetY -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="shadowOffsetY-prop"></a><span class="name">shadowOffsetY</span> : <span class="type">qreal</span></p></td></tr></table></div><div class="qmldoc"><p>Holds the current shadow offset in the positive vertical distance.</p>
+<p><b>See also </b><a href="index.html#shadowOffsetX-prop">shadowOffsetX</a>.</p>
+</div></div><!-- @@@shadowOffsetY -->
+<br/>
+<!-- $$$strokeStyle -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="strokeStyle-prop"></a><span class="name">strokeStyle</span> : <span class="type">variant</span></p></td></tr></table></div><div class="qmldoc"><p>Holds the current color or style to use for the lines around shapes, The style can be either a string containing a CSS color, a <a href="../QtQuick.CanvasGradient/index.html">CanvasGradient</a> or CanvasPattern object. Invalid values are ignored.</p>
+<p>The default value is '#000000'.</p>
+<p><b>See also </b><a href="index.html#createLinearGradient-method">createLinearGradient()</a>, <a href="index.html#createRadialGradient-method">createRadialGradient()</a>, <a href="index.html#createPattern-method">createPattern()</a>, and <a href="index.html#fillStyle-prop">fillStyle</a>.</p>
+</div></div><!-- @@@strokeStyle -->
+<br/>
+<!-- $$$textAlign -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="textAlign-prop"></a><span class="name">textAlign</span> : <span class="type">string</span></p></td></tr></table></div><div class="qmldoc"><p>Holds the current text alignment settings. The possible values are:</p>
+<ul>
+<li>start</li>
+<li>end</li>
+<li>left</li>
+<li>right</li>
+<li>center</li>
+</ul>
+<p>Other values are ignored. The default value is &quot;start&quot;.</p>
+</div></div><!-- @@@textAlign -->
+<br/>
+<!-- $$$textBaseline -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="textBaseline-prop"></a><span class="name">textBaseline</span> : <span class="type">string</span></p></td></tr></table></div><div class="qmldoc"><p>Holds the current baseline alignment settings. The possible values are:</p>
+<ul>
+<li>top</li>
+<li>hanging</li>
+<li>middle</li>
+<li>alphabetic</li>
+<li>ideographic</li>
+<li>bottom</li>
+</ul>
+<p>Other values are ignored. The default value is &quot;alphabetic&quot;.</p>
+</div></div><!-- @@@textBaseline -->
+<br/>
+<h2>Method Documentation</h2>
+<!-- $$$arc -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="arc-method"></a><span class="type">object</span> <span class="name">arc</span>(<span class="type">real</span><i> x</i>, <span class="type">real</span><i> y</i>, <span class="type">real</span><i> radius</i>, <span class="type">real</span><i> startAngle</i>, <span class="type">real</span><i> endAngle</i>, <span class="type">bool</span><i> anticlockwise</i>)</p></td></tr></table></div><div class="qmldoc"><p>Adds an arc to the current subpath that lies on the circumference of the circle whose center is at the point (<i>x</i>, <i>y</i>) and whose radius is <i>radius</i>.</p>
+<p>Both <tt>startAngle</tt> and <tt>endAngle</tt> are measured from the x-axis in radians.</p>
+<p class="centerAlign"><font color="red">[Missing image qml-item-canvas-arc.png]</font></p><p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/4ffee03c-f966-4bdb-9122-d98df6c42dd5-api/apps/qml/sdk-14.10/QtQuick.Context2D/images/qml-item-canvas-startAngle.png" alt="" /></p><p>The <i>anticlockwise</i> parameter is <tt>true</tt> for each arc in the figure above because they are all drawn in the anticlockwise direction.</p>
+<p><b>See also </b><a href="index.html#arcTo-method">arcTo</a> and <a href="http://www.w3.org/TR/2dcontext/#dom-context-2d-arc">W3C's 2D Context Standard for arc()</a>.</p>
+</div></div><!-- @@@arc -->
+<br/>
+<!-- $$$arcTo -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="arcTo-method"></a><span class="type">object</span> <span class="name">arcTo</span>(<span class="type">real</span><i> x1</i>, <span class="type">real</span><i> y1</i>, <span class="type">real</span><i> x2</i>, <span class="type">real</span><i> y2</i>, <span class="type">real</span><i> radius</i>)</p></td></tr></table></div><div class="qmldoc"><p>Adds an arc with the given control points and radius to the current subpath, connected to the previous point by a straight line. To draw an arc, you begin with the same steps you followed to create a line:</p>
+<ul>
+<li>Call the <a href="index.html#beginPath-method">beginPath()</a> method to set a new path.</li>
+<li>Call the <a href="index.html#moveTo-method">moveTo</a>(<tt>x</tt>, <tt>y</tt>) method to set your starting position on the canvas at the point (<tt>x</tt>, <tt>y</tt>).</li>
+<li>To draw an arc or circle, call the arcTo(<i>x1</i>, <i>y1</i>, <i>x2</i>, <i>y2</i>, <i>radius</i>) method. This adds an arc with starting point (<i>x1</i>, <i>y1</i>), ending point (<i>x2</i>, <i>y2</i>), and <i>radius</i> to the current subpath and connects it to the previous subpath by a straight line.</li>
+</ul>
+<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/22a4edd5-53a4-4ba2-a9a2-65059e9fb535-api/apps/qml/sdk-14.10/QtQuick.Context2D/images/qml-item-canvas-arcTo.png" alt="" /></p><p><b>See also </b><a href="index.html#arc-method">arc</a> and <a href="http://www.w3.org/TR/2dcontext/#dom-context-2d-arcto">W3C's 2D Context Standard for arcTo()</a>.</p>
+</div></div><!-- @@@arcTo -->
+<br/>
+<!-- $$$beginPath -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="beginPath-method"></a><span class="type">object</span> <span class="name">beginPath</span>()</p></td></tr></table></div><div class="qmldoc"><p>Resets the current path to a new path.</p>
+</div></div><!-- @@@beginPath -->
+<br/>
+<!-- $$$bezierCurveTo -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="bezierCurveTo-method"></a><span class="type">object</span> <span class="name">bezierCurveTo</span>(<span class="type">real</span><i> cp1x</i>, <span class="type">real</span><i> cp1y</i>, <span class="type">real</span><i> cp2x</i>, <span class="type">real</span><i> cp2y</i>, <span class="type">real</span><i> x</i>, <span class="type">real</span><i> y</i>)</p></td></tr></table></div><div class="qmldoc"><p>Adds a cubic bezier curve between the current position and the given endPoint using the control points specified by (<tt>cp1x</tt>, cp1y), and (<tt>cp2x</tt>, <tt>cp2y</tt>). After the curve is added, the current position is updated to be at the end point (<tt>x</tt>, <tt>y</tt>) of the curve. The following code produces the path shown below:</p>
+<pre class="cpp">ctx<span class="operator">.</span>strokeStyle <span class="operator">=</span> <span class="type">Qt</span><span class="operator">.</span>rgba(<span class="number">0</span><span class="operator">,</span> <span class="number">0</span><span class="operator">,</span> <span class="number">0</span><span class="operator">,</span> <span class="number">1</span>);
+ctx<span class="operator">.</span>lineWidth <span class="operator">=</span> <span class="number">1</span>;
+ctx<span class="operator">.</span><a href="index.html#beginPath-method">beginPath</a>();
+ctx<span class="operator">.</span><a href="index.html#moveTo-method">moveTo</a>(<span class="number">20</span><span class="operator">,</span> <span class="number">0</span>);<span class="comment">//start point</span>
+ctx<span class="operator">.</span>bezierCurveTo(<span class="operator">-</span><span class="number">10</span><span class="operator">,</span> <span class="number">90</span><span class="operator">,</span> <span class="number">210</span><span class="operator">,</span> <span class="number">90</span><span class="operator">,</span> <span class="number">180</span><span class="operator">,</span> <span class="number">0</span>);
+ctx<span class="operator">.</span><a href="index.html#stroke-method">stroke</a>();</pre>
+<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/6bec6bd2-012b-444e-985a-cedff692789b-api/apps/qml/sdk-14.10/QtQuick.Context2D/images/qml-item-canvas-bezierCurveTo.png" alt="" /></p><p><b>See also </b><a href="http://www.w3.org/TR/2dcontext/#dom-context-2d-beziercurveto">W3C 2d context standard for bezierCurveTo</a> and <a href="http://www.openrise.com/lab/FlowerPower/">The beautiful flower demo by using bezierCurveTo</a>.</p>
+</div></div><!-- @@@bezierCurveTo -->
+<br/>
+<!-- $$$clearRect -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="clearRect-method"></a><span class="type">object</span> <span class="name">clearRect</span>(<span class="type">real</span><i> x</i>, <span class="type">real</span><i> y</i>, <span class="type">real</span><i> w</i>, <span class="type">real</span><i> h</i>)</p></td></tr></table></div><div class="qmldoc"><p>Clears all pixels on the canvas in the given rectangle to transparent black.</p>
+</div></div><!-- @@@clearRect -->
+<br/>
+<!-- $$$clip -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="clip-method"></a><span class="type">object</span> <span class="name">clip</span>()</p></td></tr></table></div><div class="qmldoc"><p>Creates the clipping region from the current path. Any parts of the shape outside the clipping path are not displayed. To create a complex shape using the <tt>clip()</tt> method:</p>
+<ol class="1">
+<li>Call the <tt>context.beginPath()</tt> method to set the clipping path.</li>
+<li>Define the clipping path by calling any combination of the <tt>lineTo</tt>, <tt>arcTo</tt>, <tt>arc</tt>, <tt>moveTo</tt>, etc and <tt>closePath</tt> methods.</li>
+<li>Call the <tt>context.clip()</tt> method.</li>
+</ol>
+<p>The new shape displays. The following shows how a clipping path can modify how an image displays:</p>
+<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/8b9b5f98-1ed2-4b0a-b1cf-ee618157ea4c-api/apps/qml/sdk-14.10/QtQuick.Context2D/images/qml-item-canvas-clip-complex.png" alt="" /></p><p><b>See also </b><a href="index.html#beginPath-method">beginPath()</a>, <a href="index.html#closePath-method">closePath()</a>, <a href="index.html#stroke-method">stroke()</a>, <a href="index.html#fill-method">fill()</a>, and <a href="http://www.w3.org/TR/2dcontext/#dom-context-2d-clip">W3C 2d context standard for clip</a>.</p>
+</div></div><!-- @@@clip -->
+<br/>
+<!-- $$$closePath -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="closePath-method"></a><span class="type">object</span> <span class="name">closePath</span>()</p></td></tr></table></div><div class="qmldoc"><p>Closes the current subpath by drawing a line to the beginning of the subpath, automatically starting a new path. The current point of the new path is the previous subpath's first point.</p>
+<p><b>See also </b><a href="http://www.w3.org/TR/2dcontext/#dom-context-2d-closepath">W3C 2d context standard for closePath</a>.</p>
+</div></div><!-- @@@closePath -->
+<br/>
+<!-- $$$createConicalGradient -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="createConicalGradient-method"></a><span class="type">object</span> <span class="name">createConicalGradient</span>(<span class="type">real</span><i> x</i>, <span class="type">real</span><i> y</i>, <span class="type">real</span><i> angle</i>)</p></td></tr></table></div><div class="qmldoc"><p>Returns a <a href="../QtQuick.CanvasGradient/index.html">CanvasGradient</a> object that represents a conical gradient that interpolate colors counter-clockwise around a center point (<tt>x</tt>, <tt>y</tt>) with start angle <tt>angle</tt> in units of radians.</p>
+<p><b>See also </b><a href="../QtQuick.CanvasGradient/index.html#addColorStop-method">CanvasGradient::addColorStop()</a>, <a href="index.html#createLinearGradient-method">createLinearGradient()</a>, <a href="index.html#createRadialGradient-method">createRadialGradient()</a>, <a href="index.html#createPattern-method">createPattern()</a>, <a href="index.html#fillStyle-prop">fillStyle</a>, and <a href="index.html#strokeStyle-prop">strokeStyle</a>.</p>
+</div></div><!-- @@@createConicalGradient -->
+<br/>
+<!-- $$$createImageData -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="createImageData-method-3"></a><span class="type"><a href="../QtQuick.CanvasImageData/index.html">CanvasImageData</a></span> <span class="name">createImageData</span>(<span class="type">Url</span><i> imageUrl</i>)</p></td></tr></table></div><div class="qmldoc"><p>Creates a <a href="../QtQuick.CanvasImageData/index.html">CanvasImageData</a> object with the given image loaded from <i>imageUrl</i>.</p>
+<p><b>Note: </b>The <i>imageUrl</i> must be already loaded before this function call, otherwise an empty <a href="../QtQuick.CanvasImageData/index.html">CanvasImageData</a> obect will be returned.</p><p><b>See also </b><a href="../QtQuick.Canvas/index.html#loadImage-method">Canvas::loadImage()</a>, <a href="../QtQuick.Canvas/index.html#unloadImage-method">QtQuick::Canvas::unloadImage()</a>, and <a href="../QtQuick.Canvas/index.html#isImageLoaded-method">QtQuick::Canvas::isImageLoaded</a>.</p>
+</div></div><!-- @@@createImageData -->
+<br/>
+<!-- $$$createImageData -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="createImageData-method-2"></a><span class="type"><a href="../QtQuick.CanvasImageData/index.html">CanvasImageData</a></span> <span class="name">createImageData</span>(<span class="type"><a href="../QtQuick.CanvasImageData/index.html">CanvasImageData</a></span><i> imageData</i>)</p></td></tr></table></div><div class="qmldoc"><p>Creates a <a href="../QtQuick.CanvasImageData/index.html">CanvasImageData</a> object with the same dimensions as the argument.</p>
+</div></div><!-- @@@createImageData -->
+<br/>
+<!-- $$$createImageData -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="createImageData-method"></a><span class="type"><a href="../QtQuick.CanvasImageData/index.html">CanvasImageData</a></span> <span class="name">createImageData</span>(<span class="type">real</span><i> sw</i>, <span class="type">real</span><i> sh</i>)</p></td></tr></table></div><div class="qmldoc"><p>Creates a <a href="../QtQuick.CanvasImageData/index.html">CanvasImageData</a> object with the given dimensions(<i>sw</i>, <i>sh</i>).</p>
+</div></div><!-- @@@createImageData -->
+<br/>
+<!-- $$$createLinearGradient -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="createLinearGradient-method"></a><span class="type">object</span> <span class="name">createLinearGradient</span>(<span class="type">real</span><i> x0</i>, <span class="type">real</span><i> y0</i>, <span class="type">real</span><i> x1</i>, <span class="type">real</span><i> y1</i>)</p></td></tr></table></div><div class="qmldoc"><p>Returns a <a href="../QtQuick.CanvasGradient/index.html">CanvasGradient</a> object that represents a linear gradient that transitions the color along a line between the start point (<i>x0</i>, <i>y0</i>) and the end point (<i>x1</i>, <i>y1</i>).</p>
+<p>A gradient is a smooth transition between colors. There are two types of gradients: linear and radial. Gradients must have two or more color stops, representing color shifts positioned from 0 to 1 between to the gradient's starting and end points or circles.</p>
+<p><b>See also </b><a href="../QtQuick.CanvasGradient/index.html#addColorStop-method">CanvasGradient::addColorStop()</a>, <a href="index.html#createRadialGradient-method">createRadialGradient()</a>, <a href="index.html#createConicalGradient-method">createConicalGradient()</a>, <a href="index.html#createPattern-method">createPattern()</a>, <a href="index.html#fillStyle-prop">fillStyle</a>, and <a href="index.html#strokeStyle-prop">strokeStyle</a>.</p>
+</div></div><!-- @@@createLinearGradient -->
+<br/>
+<!-- $$$createPattern -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="createPattern-method-2"></a><span class="type">variant</span> <span class="name">createPattern</span>(<span class="type"><a href="../QtQuick.Image/index.html">Image</a></span><i> image</i>, <span class="type">string</span><i> repetition</i>)</p></td></tr></table></div><div class="qmldoc"><p>Returns a CanvasPattern object that uses the given image and repeats in the direction(s) given by the repetition argument.</p>
+<p>The <i>image</i> parameter must be a valid Image item, a valid <a href="../QtQuick.CanvasImageData/index.html">CanvasImageData</a> object or loaded image url, if there is no image data, throws an INVALID_STATE_ERR exception.</p>
+<p>The allowed values for <i>repetition</i> are:</p>
+<ul>
+<li>&quot;repeat&quot; - both directions</li>
+<li>&quot;repeat-x - horizontal only</li>
+<li>&quot;repeat-y&quot; - vertical only</li>
+<li>&quot;no-repeat&quot; - neither</li>
+</ul>
+<p>If the repetition argument is empty or null, the value &quot;repeat&quot; is used.</p>
+<p><b>See also </b><a href="index.html#strokeStyle-prop">strokeStyle</a> and <a href="index.html#fillStyle-prop">fillStyle</a>.</p>
+</div></div><!-- @@@createPattern -->
+<br/>
+<!-- $$$createPattern -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="createPattern-method"></a><span class="type">variant</span> <span class="name">createPattern</span>(<span class="type">color</span><i> color</i>, <span class="type">enumeration</span><i> patternMode</i>)</p></td></tr></table></div><div class="qmldoc"><p>This is a overload function. Returns a CanvasPattern object that uses the given <i>color</i> and <i>patternMode</i>. The valid pattern modes are:</p>
+<ul>
+<li>Qt.SolidPattern</li>
+<li>Qt.Dense1Pattern</li>
+<li>Qt.Dense2Pattern</li>
+<li>Qt.Dense3Pattern</li>
+<li>Qt.Dense4Pattern</li>
+<li>Qt.Dense5Pattern</li>
+<li>Qt.Dense6Pattern</li>
+<li>Qt.Dense7Pattern</li>
+<li>Qt.HorPattern</li>
+<li>Qt.VerPattern</li>
+<li>Qt.CrossPattern</li>
+<li>Qt.BDiagPattern</li>
+<li>Qt.FDiagPattern</li>
+<li>Qt.DiagCrossPattern</li>
+</ul>
+<p><b>See also </b>Qt::BrushStyle.</p>
+</div></div><!-- @@@createPattern -->
+<br/>
+<!-- $$$createRadialGradient -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="createRadialGradient-method"></a><span class="type">object</span> <span class="name">createRadialGradient</span>(<span class="type">real</span><i> x0</i>, <span class="type">real</span><i> y0</i>, <span class="type">real</span><i> r0</i>, <span class="type">real</span><i> x1</i>, <span class="type">real</span><i> y1</i>, <span class="type">real</span><i> r1</i>)</p></td></tr></table></div><div class="qmldoc"><p>Returns a <a href="../QtQuick.CanvasGradient/index.html">CanvasGradient</a> object that represents a radial gradient that paints along the cone given by the start circle with origin (x0, y0) and radius r0, and the end circle with origin (x1, y1) and radius r1.</p>
+<p><b>See also </b><a href="../QtQuick.CanvasGradient/index.html#addColorStop-method">CanvasGradient::addColorStop()</a>, <a href="index.html#createLinearGradient-method">createLinearGradient()</a>, <a href="index.html#createConicalGradient-method">createConicalGradient()</a>, <a href="index.html#createPattern-method">createPattern()</a>, <a href="index.html#fillStyle-prop">fillStyle</a>, and <a href="index.html#strokeStyle-prop">strokeStyle</a>.</p>
+</div></div><!-- @@@createRadialGradient -->
+<br/>
+<!-- $$$drawImage -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="drawImage-method-3"></a><span class="name">drawImage</span>(<span class="type">variant</span><i> image</i>, <span class="type">real</span><i> sx</i>, <span class="type">real</span><i> sy</i>, <span class="type">real</span><i> sw</i>, <span class="type">real</span><i> sh</i>, <span class="type">real</span><i> dx</i>, <span class="type">real</span><i> dy</i>, <span class="type">real</span><i> dw</i>, <span class="type">real</span><i> dh</i>)</p></td></tr></table></div><div class="qmldoc"><p>This is an overloaded function. Draws the given item as <i>image</i> from source point (<i>sx</i>, <i>sy</i>) and source width <i>sw</i>, source height <i>sh</i> onto the canvas at point (<i>dx</i>, <i>dy</i>) and with width <i>dw</i>, height <i>dh</i>.</p>
+<p>Note: The <i>image</i> type can be an Image or Canvas item, an image url or a <a href="../QtQuick.CanvasImageData/index.html">CanvasImageData</a> object. When given as Image item, if the image isn't fully loaded, this method draws nothing. When given as url string, the image should be loaded by calling Canvas item's <a href="../QtQuick.Canvas/index.html#loadImage-method">Canvas::loadImage()</a> method first. This image been drawing is subject to the current context clip path, even the given <tt>image</tt> is a <a href="../QtQuick.CanvasImageData/index.html">CanvasImageData</a> object.</p>
+<p><b>See also </b><a href="../QtQuick.CanvasImageData/index.html">CanvasImageData</a>, <a href="../QtQuick.Image/index.html">Image</a>, <a href="../QtQuick.Canvas/index.html#loadImage-method">Canvas::loadImage()</a>, <a href="../QtQuick.Canvas/index.html#isImageLoaded-method">Canvas::isImageLoaded</a>, <a href="../QtQuick.Canvas/index.html#imageLoaded-signal">Canvas::imageLoaded</a>, and <a href="http://www.w3.org/TR/2dcontext/#dom-context-2d-drawimage">W3C 2d context standard for drawImage</a>.</p>
+</div></div><!-- @@@drawImage -->
+<br/>
+<!-- $$$drawImage -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="drawImage-method-2"></a><span class="name">drawImage</span>(<span class="type">variant</span><i> image</i>, <span class="type">real</span><i> dx</i>, <span class="type">real</span><i> dy</i>, <span class="type">real</span><i> dw</i>, <span class="type">real</span><i> dh</i>)</p></td></tr></table></div><div class="qmldoc"><p>This is an overloaded function. Draws the given item as <i>image</i> onto the canvas at point (<i>dx</i>, <i>dy</i>) and with width <i>dw</i>, height <i>dh</i>.</p>
+<p>Note: The <i>image</i> type can be an Image item, an image url or a <a href="../QtQuick.CanvasImageData/index.html">CanvasImageData</a> object. When given as Image item, if the image isn't fully loaded, this method draws nothing. When given as url string, the image should be loaded by calling Canvas item's <a href="../QtQuick.Canvas/index.html#loadImage-method">Canvas::loadImage()</a> method first. This image been drawing is subject to the current context clip path, even the given <tt>image</tt> is a <a href="../QtQuick.CanvasImageData/index.html">CanvasImageData</a> object.</p>
+<p><b>See also </b><a href="../QtQuick.CanvasImageData/index.html">CanvasImageData</a>, <a href="../QtQuick.Image/index.html">Image</a>, <a href="../QtQuick.Canvas/index.html#loadImage-method">Canvas::loadImage()</a>, <a href="../QtQuick.Canvas/index.html#isImageLoaded-method">Canvas::isImageLoaded</a>, <a href="../QtQuick.Canvas/index.html#imageLoaded-signal">Canvas::imageLoaded</a>, and <a href="http://www.w3.org/TR/2dcontext/#dom-context-2d-drawimage">W3C 2d context standard for drawImage</a>.</p>
+</div></div><!-- @@@drawImage -->
+<br/>
+<!-- $$$drawImage -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="drawImage-method"></a><span class="name">drawImage</span>(<span class="type">variant</span><i> image</i>, <span class="type">real</span><i> dx</i>, <span class="type">real</span><i> dy</i>)</p></td></tr></table></div><div class="qmldoc"><p>Draws the given <i>image</i> on the canvas at position (<i>dx</i>, <i>dy</i>). Note: The <i>image</i> type can be an Image item, an image url or a <a href="../QtQuick.CanvasImageData/index.html">CanvasImageData</a> object. When given as Image item, if the image isn't fully loaded, this method draws nothing. When given as url string, the image should be loaded by calling Canvas item's <a href="../QtQuick.Canvas/index.html#loadImage-method">Canvas::loadImage()</a> method first. This image been drawing is subject to the current context clip path, even the given <tt>image</tt> is a <a href="../QtQuick.CanvasImageData/index.html">CanvasImageData</a> object.</p>
+<p><b>See also </b><a href="../QtQuick.CanvasImageData/index.html">CanvasImageData</a>, <a href="../QtQuick.Image/index.html">Image</a>, <a href="../QtQuick.Canvas/index.html#loadImage-method">Canvas::loadImage</a>, <a href="../QtQuick.Canvas/index.html#isImageLoaded-method">Canvas::isImageLoaded</a>, <a href="../QtQuick.Canvas/index.html#imageLoaded-signal">Canvas::imageLoaded</a>, and <a href="http://www.w3.org/TR/2dcontext/#dom-context-2d-drawimage">W3C 2d context standard for drawImage</a>.</p>
+</div></div><!-- @@@drawImage -->
+<br/>
+<!-- $$$ellipse -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="ellipse-method"></a><span class="type">object</span> <span class="name">ellipse</span>(<span class="type">real</span><i> x</i>, <span class="type">real</span><i> y</i>, <span class="type">real</span><i> w</i>, <span class="type">real</span><i> h</i>)</p></td></tr></table></div><div class="qmldoc"><p>Creates an ellipse within the bounding rectangle defined by its top-left corner at (<i>x</i>, y), width <i>w</i> and height <i>h</i>, and adds it to the path as a closed subpath.</p>
+<p>The ellipse is composed of a clockwise curve, starting and finishing at zero degrees (the 3 o'clock position).</p>
+</div></div><!-- @@@ellipse -->
+<br/>
+<!-- $$$fill -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="fill-method"></a><span class="type">object</span> <span class="name">fill</span>()</p></td></tr></table></div><div class="qmldoc"><p>Fills the subpaths with the current fill style.</p>
+<p><b>See also </b><a href="http://www.w3.org/TR/2dcontext/#dom-context-2d-fill">W3C 2d context standard for fill</a> and <a href="index.html#fillStyle-prop">fillStyle</a>.</p>
+</div></div><!-- @@@fill -->
+<br/>
+<!-- $$$fillRect -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="fillRect-method-2"></a><span class="type">object</span> <span class="name">fillRect</span>(<span class="type">real</span><i> x</i>, <span class="type">real</span><i> y</i>, <span class="type">real</span><i> w</i>, <span class="type">real</span><i> h</i>)</p></td></tr></table></div><div class="qmldoc"><p>Stroke the specified rectangle's path using the <a href="index.html#strokeStyle-prop">strokeStyle</a>, <a href="index.html#lineWidth-prop">lineWidth</a>, <a href="index.html#lineJoin-prop">lineJoin</a>, and (if appropriate) <a href="index.html#miterLimit-prop">miterLimit</a> attributes.</p>
+<p><b>See also </b><a href="index.html#strokeStyle-prop">strokeStyle</a>, <a href="index.html#lineWidth-prop">lineWidth</a>, <a href="index.html#lineJoin-prop">lineJoin</a>, and <a href="index.html#miterLimit-prop">miterLimit</a>.</p>
+</div></div><!-- @@@fillRect -->
+<br/>
+<!-- $$$fillRect -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="fillRect-method"></a><span class="type">object</span> <span class="name">fillRect</span>(<span class="type">real</span><i> x</i>, <span class="type">real</span><i> y</i>, <span class="type">real</span><i> w</i>, <span class="type">real</span><i> h</i>)</p></td></tr></table></div><div class="qmldoc"><p>Paint the specified rectangular area using the <a href="index.html#fillStyle-prop">fillStyle</a>.</p>
+<p><b>See also </b><a href="index.html#fillStyle-prop">fillStyle</a>.</p>
+</div></div><!-- @@@fillRect -->
+<br/>
+<!-- $$$fillText -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="fillText-method"></a><span class="type">object</span> <span class="name">fillText</span>(<span class="type"><a href="index.html#text-method">text</a></span>, <span class="type">x</span>, <span class="type">y</span>)</p></td></tr></table></div><div class="qmldoc"><p>Fills the given text at the given position.</p>
+<p><b>See also </b><a href="index.html#font-prop">font</a>, <a href="index.html#textAlign-prop">textAlign</a>, <a href="index.html#textBaseline-prop">textBaseline</a>, and <a href="index.html#strokeText-method">strokeText</a>.</p>
+</div></div><!-- @@@fillText -->
+<br/>
+<!-- $$$getImageData -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="getImageData-method"></a><span class="type"><a href="../QtQuick.CanvasImageData/index.html">CanvasImageData</a></span> <span class="name">getImageData</span>(<span class="type">real</span><i> sx</i>, <span class="type">real</span><i> sy</i>, <span class="type">real</span><i> sw</i>, <span class="type">real</span><i> sh</i>)</p></td></tr></table></div><div class="qmldoc"><p>Returns an <a href="../QtQuick.CanvasImageData/index.html">CanvasImageData</a> object containing the image data for the given rectangle of the canvas.</p>
+</div></div><!-- @@@getImageData -->
+<br/>
+<!-- $$$isPointInPath -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="isPointInPath-method"></a><span class="type">object</span> <span class="name">isPointInPath</span>(<span class="type">real</span><i> x</i>, <span class="type">real</span><i> y</i>)</p></td></tr></table></div><div class="qmldoc"><p>Returns true if the given point is in the current path.</p>
+<p><b>See also </b><a href="http://www.w3.org/TR/2dcontext/#dom-context-2d-ispointinpath">W3C 2d context standard for isPointInPath</a>.</p>
+</div></div><!-- @@@isPointInPath -->
+<br/>
+<!-- $$$lineTo -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="lineTo-method"></a><span class="type">object</span> <span class="name">lineTo</span>(<span class="type">real</span><i> x</i>, <span class="type">real</span><i> y</i>)</p></td></tr></table></div><div class="qmldoc"><p>Draws a line from the current position to the point (x, y).</p>
+</div></div><!-- @@@lineTo -->
+<br/>
+<!-- $$$measureText -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="measureText-method"></a><span class="type">variant</span> <span class="name">measureText</span>(<span class="type"><a href="index.html#text-method">text</a></span>)</p></td></tr></table></div><div class="qmldoc"><p>Returns a <a href="../QtQuick.TextMetrics/index.html">TextMetrics</a> object with the metrics of the given text in the current font.</p>
+</div></div><!-- @@@measureText -->
+<br/>
+<!-- $$$moveTo -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="moveTo-method"></a><span class="type">object</span> <span class="name">moveTo</span>(<span class="type">real</span><i> x</i>, <span class="type">real</span><i> y</i>)</p></td></tr></table></div><div class="qmldoc"><p>Creates a new subpath with the given point.</p>
+</div></div><!-- @@@moveTo -->
+<br/>
+<!-- $$$putImageData -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="putImageData-method"></a><span class="type">object</span> <span class="name">putImageData</span>(<span class="type"><a href="../QtQuick.CanvasImageData/index.html">CanvasImageData</a></span><i> imageData</i>, <span class="type">real</span><i> dx</i>, <span class="type">real</span><i> dy</i>, <span class="type">real</span><i> dirtyX</i>, <span class="type">real</span><i> dirtyY</i>, <span class="type">real</span><i> dirtyWidth</i>, <span class="type">real</span><i> dirtyHeight</i>)</p></td></tr></table></div><div class="qmldoc"><p>Paints the data from the given ImageData object onto the canvas. If a dirty rectangle (<i>dirtyX</i>, <i>dirtyY</i>, <i>dirtyWidth</i>, <i>dirtyHeight</i>) is provided, only the pixels from that rectangle are painted.</p>
+</div></div><!-- @@@putImageData -->
+<br/>
+<!-- $$$quadraticCurveTo -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="quadraticCurveTo-method"></a><span class="type">object</span> <span class="name">quadraticCurveTo</span>(<span class="type">real</span><i> cpx</i>, <span class="type">real</span><i> cpy</i>, <span class="type">real</span><i> x</i>, <span class="type">real</span><i> y</i>)</p></td></tr></table></div><div class="qmldoc"><p>Adds a quadratic bezier curve between the current point and the endpoint (<tt>x</tt>, <tt>y</tt>) with the control point specified by (<tt>cpx</tt>, <tt>cpy</tt>).</p>
+<p>See <a href="http://www.w3.org/TR/2dcontext/#dom-context-2d-quadraticcurveto">W3C 2d context standard for for quadraticCurveTo</a></p>
+</div></div><!-- @@@quadraticCurveTo -->
+<br/>
+<!-- $$$rect -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="rect-method"></a><span class="type">object</span> <span class="name">rect</span>(<span class="type">real</span><i> x</i>, <span class="type">real</span><i> y</i>, <span class="type">real</span><i> w</i>, <span class="type">real</span><i> h</i>)</p></td></tr></table></div><div class="qmldoc"><p>Adds a rectangle at position (<tt>x</tt>, <tt>y</tt>), with the given width <tt>w</tt> and height <tt>h</tt>, as a closed subpath.</p>
+</div></div><!-- @@@rect -->
+<br/>
+<!-- $$$reset -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="reset-method"></a><span class="type">object</span> <span class="name">reset</span>()</p></td></tr></table></div><div class="qmldoc"><p>Resets the context state and properties to the default values.</p>
+</div></div><!-- @@@reset -->
+<br/>
+<!-- $$$resetTransform -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="resetTransform-method"></a><span class="type">object</span> <span class="name">resetTransform</span>()</p></td></tr></table></div><div class="qmldoc"><p>Reset the transformation matrix to the default value (equivalent to calling <a href="index.html#setTransform-method">setTransform</a>(<tt>1</tt>, <tt>0</tt>, <tt>0</tt>, <tt>1</tt>, <tt>0</tt>, <tt>0</tt>)).</p>
+<p><b>See also </b><a href="index.html#transform-method">transform()</a>, <a href="index.html#setTransform-method">setTransform()</a>, and <a href="index.html#reset-method">reset()</a>.</p>
+</div></div><!-- @@@resetTransform -->
+<br/>
+<!-- $$$restore -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="restore-method"></a><span class="type">object</span> <span class="name">restore</span>()</p></td></tr></table></div><div class="qmldoc"><p>Pops the top state on the stack, restoring the context to that state.</p>
+<p><b>See also </b><a href="index.html#save-method">save()</a>.</p>
+</div></div><!-- @@@restore -->
+<br/>
+<!-- $$$rotate -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="rotate-method"></a><span class="type">object</span> <span class="name">rotate</span>(<span class="type">real</span><i> angle</i>)</p></td></tr></table></div><div class="qmldoc"><p>Rotate the canvas around the current origin by <i>angle</i> in radians and clockwise direction.</p>
+<pre class="cpp">ctx<span class="operator">.</span>rotate(Math<span class="operator">.</span>PI<span class="operator">/</span><span class="number">2</span>);</pre>
+<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/6417161b-ba6a-4313-8b78-bf805265744d-api/apps/qml/sdk-14.10/QtQuick.Context2D/images/qml-item-canvas-rotate.png" alt="" /></p><p>The rotation transformation matrix is as follows:</p>
+<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/4cd0002d-ce28-4271-a834-ed29ef66e926-api/apps/qml/sdk-14.10/QtQuick.Context2D/images/qml-item-canvas-math-rotate.png" alt="" /></p><p>where the <i>angle</i> of rotation is in radians.</p>
+</div></div><!-- @@@rotate -->
+<br/>
+<!-- $$$roundedRect -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="roundedRect-method"></a><span class="type">object</span> <span class="name">roundedRect</span>(<span class="type">real</span><i> x</i>, <span class="type">real</span><i> y</i>, <span class="type">real</span><i> w</i>, <span class="type">real</span><i> h</i>, <span class="type">real</span><i> xRadius</i>, <span class="type">real</span><i> yRadius</i>)</p></td></tr></table></div><div class="qmldoc"><p>Adds the given rectangle rect with rounded corners to the path. The <tt>xRadius</tt> and <tt>yRadius</tt> arguments specify the radius of the ellipses defining the corners of the rounded rectangle.</p>
+</div></div><!-- @@@roundedRect -->
+<br/>
+<!-- $$$save -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="save-method"></a><span class="type">object</span> <span class="name">save</span>()</p></td></tr></table></div><div class="qmldoc"><p>Pushes the current state onto the state stack.</p>
+<p>Before changing any state attributes, you should save the current state for future reference. The context maintains a stack of drawing states. Each state consists of the current transformation matrix, clipping region, and values of the following attributes:</p>
+<ul>
+<li><a href="index.html#strokeStyle-prop">strokeStyle</a></li>
+<li><a href="index.html#fillStyle-prop">fillStyle</a></li>
+<li><a href="index.html#fillRule-prop">fillRule</a></li>
+<li><a href="index.html#globalAlpha-prop">globalAlpha</a></li>
+<li><a href="index.html#lineWidth-prop">lineWidth</a></li>
+<li><a href="index.html#lineCap-prop">lineCap</a></li>
+<li><a href="index.html#lineJoin-prop">lineJoin</a></li>
+<li><a href="index.html#miterLimit-prop">miterLimit</a></li>
+<li><a href="index.html#shadowOffsetX-prop">shadowOffsetX</a></li>
+<li><a href="index.html#shadowOffsetY-prop">shadowOffsetY</a></li>
+<li><a href="index.html#shadowBlur-prop">shadowBlur</a></li>
+<li><a href="index.html#shadowColor-prop">shadowColor</a></li>
+<li><a href="index.html#globalCompositeOperation-prop">globalCompositeOperation</a></li>
+<li><a href="index.html#font-prop">font</a></li>
+<li><a href="index.html#textAlign-prop">textAlign</a></li>
+<li><a href="index.html#textBaseline-prop">textBaseline</a></li>
+</ul>
+<p>The current path is NOT part of the drawing state. The path can be reset by invoking the <a href="index.html#beginPath-method">beginPath()</a> method.</p>
+</div></div><!-- @@@save -->
+<br/>
+<!-- $$$scale -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="scale-method"></a><span class="type">object</span> <span class="name">scale</span>(<span class="type">real</span><i> x</i>, <span class="type">real</span><i> y</i>)</p></td></tr></table></div><div class="qmldoc"><p>Increases or decreases the size of each unit in the canvas grid by multiplying the scale factors to the current tranform matrix. <i>x</i> is the scale factor in the horizontal direction and <i>y</i> is the scale factor in the vertical direction.</p>
+<p>The following code doubles the horizontal size of an object drawn on the canvas and halves its vertical size:</p>
+<pre class="cpp">ctx<span class="operator">.</span>scale(<span class="number">2.0</span><span class="operator">,</span> <span class="number">0.5</span>);</pre>
+<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/5827f8cd-53de-4284-805f-5953b1c673c4-api/apps/qml/sdk-14.10/QtQuick.Context2D/images/qml-item-canvas-scale.png" alt="" /></p></div></div><!-- @@@scale -->
+<br/>
+<!-- $$$setTransform -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="setTransform-method"></a><span class="type">object</span> <span class="name">setTransform</span>(<span class="type">real</span><i> a</i>, <span class="type">real</span><i> b</i>, <span class="type">real</span><i> c</i>, <span class="type">real</span><i> d</i>, <span class="type">real</span><i> e</i>, <span class="type">real</span><i> f</i>)</p></td></tr></table></div><div class="qmldoc"><p>Changes the transformation matrix to the matrix given by the arguments as described below.</p>
+<p>Modifying the transformation matrix directly enables you to perform scaling, rotating, and translating transformations in a single step.</p>
+<p>Each point on the canvas is multiplied by the matrix before anything is drawn. The <a href="http://www.w3.org/TR/2dcontext/#transformations">HTML Canvas 2D Context specification</a> defines the transformation matrix as:</p>
+<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/8751f305-27fb-4825-93b0-9fc1ac4da03c-api/apps/qml/sdk-14.10/QtQuick.Context2D/images/qml-item-canvas-math.png" alt="" /></p><p>where:</p>
+<ul>
+<li><tt>a</tt> is the scale factor in the horizontal (x) direction<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/ce8eb84b-5f1f-42dc-8e5c-48288dd5507c-api/apps/qml/sdk-14.10/QtQuick.Context2D/images/qml-item-canvas-scalex.png" alt="" /></p></li>
+<li><tt>c</tt> is the skew factor in the x direction<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/17413e5c-5d87-4f28-a1b2-a283393b187e-api/apps/qml/sdk-14.10/QtQuick.Context2D/images/qml-item-canvas-skewx.png" alt="" /></p></li>
+<li><tt>e</tt> is the translation in the x direction<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/d9ac8073-5086-464a-b5b5-270accf78ac9-api/apps/qml/sdk-14.10/QtQuick.Context2D/images/qml-item-canvas-translate.png" alt="" /></p></li>
+<li><tt>b</tt> is the skew factor in the y (vertical) direction<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/32cc6dfa-b623-48b7-afe1-19dc1c1c5eec-api/apps/qml/sdk-14.10/QtQuick.Context2D/images/qml-item-canvas-skewy.png" alt="" /></p></li>
+<li><tt>d</tt> is the scale factor in the y direction<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/8de3617d-6042-44e7-aec6-dc279004a7c6-api/apps/qml/sdk-14.10/QtQuick.Context2D/images/qml-item-canvas-scaley.png" alt="" /></p></li>
+<li><tt>f</tt> is the translation in the y direction<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/72284e57-2621-48fb-b1f2-5d5df16e0785-api/apps/qml/sdk-14.10/QtQuick.Context2D/images/qml-item-canvas-translatey.png" alt="" /></p></li>
+<li>the last row remains constant</li>
+</ul>
+<p>The scale factors and skew factors are multiples; <tt>e</tt> and <tt>f</tt> are coordinate space units, just like the units in the translate(x,y) method.</p>
+<p><b>See also </b><a href="index.html#transform-method">transform()</a>.</p>
+</div></div><!-- @@@setTransform -->
+<br/>
+<!-- $$$shear -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="shear-method"></a><span class="type">object</span> <span class="name">shear</span>(<span class="type">real</span><i> sh</i>, <span class="type">real</span><i> sv</i>)</p></td></tr></table></div><div class="qmldoc"><p>Shears the transformation matrix by <i>sh</i> in the horizontal direction and <i>sv</i> in the vertical direction.</p>
+</div></div><!-- @@@shear -->
+<br/>
+<!-- $$$stroke -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="stroke-method"></a><span class="type">object</span> <span class="name">stroke</span>()</p></td></tr></table></div><div class="qmldoc"><p>Strokes the subpaths with the current stroke style.</p>
+<p>See <a href="http://www.w3.org/TR/2dcontext/#dom-context-2d-stroke">W3C 2d context standard for stroke</a></p>
+<p><b>See also </b><a href="index.html#strokeStyle-prop">strokeStyle</a>.</p>
+</div></div><!-- @@@stroke -->
+<br/>
+<!-- $$$strokeText -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="strokeText-method"></a><span class="type">object</span> <span class="name">strokeText</span>(<span class="type"><a href="index.html#text-method">text</a></span>, <span class="type">x</span>, <span class="type">y</span>)</p></td></tr></table></div><div class="qmldoc"><p>Strokes the given text at the given position.</p>
+<p><b>See also </b><a href="index.html#font-prop">font</a>, <a href="index.html#textAlign-prop">textAlign</a>, <a href="index.html#textBaseline-prop">textBaseline</a>, and <a href="index.html#fillText-method">fillText</a>.</p>
+</div></div><!-- @@@strokeText -->
+<br/>
+<!-- $$$text -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="text-method"></a><span class="type">object</span> <span class="name">text</span>(<span class="type">string</span><i> text</i>, <span class="type">real</span><i> x</i>, <span class="type">real</span><i> y</i>)</p></td></tr></table></div><div class="qmldoc"><p>Adds the given <tt>text</tt> to the path as a set of closed subpaths created from the current context font supplied. The subpaths are positioned so that the left end of the text's baseline lies at the point specified by (<tt>x</tt>, <tt>y</tt>).</p>
+</div></div><!-- @@@text -->
+<br/>
+<!-- $$$transform -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="transform-method"></a><span class="type">object</span> <span class="name">transform</span>(<span class="type">real</span><i> a</i>, <span class="type">real</span><i> b</i>, <span class="type">real</span><i> c</i>, <span class="type">real</span><i> d</i>, <span class="type">real</span><i> e</i>, <span class="type">real</span><i> f</i>)</p></td></tr></table></div><div class="qmldoc"><p>This method is very similar to <a href="index.html#setTransform-method">setTransform()</a>, but instead of replacing the old transform matrix, this method applies the given tranform matrix to the current matrix by multiplying to it.</p>
+<p>The <a href="index.html#setTransform-method">setTransform</a>(a, b, c, d, e, f) method actually resets the current transform to the identity matrix, and then invokes the transform(a, b, c, d, e, f) method with the same arguments.</p>
+<p><b>See also </b><a href="index.html#setTransform-method">setTransform()</a>.</p>
+</div></div><!-- @@@transform -->
+<br/>
+<!-- $$$translate -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="translate-method"></a><span class="type">object</span> <span class="name">translate</span>(<span class="type">real</span><i> x</i>, <span class="type">real</span><i> y</i>)</p></td></tr></table></div><div class="qmldoc"><p>Translates the origin of the canvas by a horizontal distance of <i>x</i>, and a vertical distance of <i>y</i>, in coordinate space units.</p>
+<p>Translating the origin enables you to draw patterns of different objects on the canvas without having to measure the coordinates manually for each shape.</p>
+</div></div><!-- @@@translate -->
+<br/>
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

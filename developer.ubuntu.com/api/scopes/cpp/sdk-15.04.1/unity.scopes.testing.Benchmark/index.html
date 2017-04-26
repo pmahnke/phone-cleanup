@@ -1,0 +1,790 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Benchmark [sdk-15.04.1/unity.scopes.testing.Benchmark] | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/doxygen.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Scopes</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">C++</a> &rsaquo;</li>
+<li><a href="../index.html">SDK 15.04.1</a> &rsaquo;</li>
+
+<li><a href="../unity.scopes.testing/index.html">unity.scopes.testing</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Benchmark</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: classunity_1_1scopes_1_1testing_1_1_benchmark.html -->
+	<!-- Source Format: doxygen -->
+<h1>Benchmark</h1>
+<div id="element_content" class="doxygen">
+<!-- Start Element Content -->
+<p>The <a class="el" href="index.html" title="The Benchmark class defines an interface to provide scope authors with runtime benchmarking capabilit...">Benchmark</a> class defines an interface to provide scope authors with runtime benchmarking capabilities to be used in their own testing.  
+ <a href="index.html#details">More...</a></p>
+<p><code>#include &lt;unity/scopes/testing/Benchmark.h&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for unity::scopes::testing::Benchmark:</div>
+<div class="dyncontent">
+<div class="center"><img src="https://developer.ubuntu.com/static/devportal_uploaded/163d240f-bdb2-4d04-8bac-6f9e4f0341a1-api/scopes/cpp/sdk-15.04.1/unity.scopes.testing.Benchmark/classunity_1_1scopes_1_1testing_1_1_benchmark__inherit__graph.png" border="0" usemap="#unity_1_1scopes_1_1testing_1_1_benchmark_inherit__map" alt="Inheritance graph"/></div>
+<map name="unity_1_1scopes_1_1testing_1_1_benchmark_inherit__map" id="unity_1_1scopes_1_1testing_1_1_benchmark_inherit__map">
+<area shape="rect" id="node2" href="https://developer.ubuntu.com/api/scopes/cpp/sdk-15.04.1/unity.scopes.testing.Benchmark/classunity_1_1scopes_1_1testing_1_1_in_process_benchmark.html" title="The InProcessBenchmark class provides scope authors with runtime benchmarking capabilities. The actual runs are executed in the same process. " alt="" coords="19,95,183,136"/><area shape="rect" id="node3" href="https://developer.ubuntu.com/api/scopes/cpp/sdk-15.04.1/unity.scopes.testing.Benchmark/classunity_1_1scopes_1_1testing_1_1_out_of_process_benchmark.html" title="The OutOfProcessBenchmark class provides scope authors with runtime benchmarking capabilities. The actual runs are executed in another process. " alt="" coords="5,184,196,225"/></map>
+<center><span class="legend">[legend]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../unity.scopes.testing.Benchmark.ActionConfiguration/index.html">ActionConfiguration</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../unity.scopes.testing.Benchmark.ActionConfiguration/index.html" title="The ActionConfiguration struct constains all options controlling the benchmark of scope action activa...">ActionConfiguration</a> struct constains all options controlling the benchmark of scope action activation operations.  <a href="../unity.scopes.testing.Benchmark.ActionConfiguration/index.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../unity.scopes.testing.Benchmark.ActivationConfiguration/index.html">ActivationConfiguration</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../unity.scopes.testing.Benchmark.ActivationConfiguration/index.html" title="The ActivationConfiguration struct constains all options controlling the benchmark of scope activatio...">ActivationConfiguration</a> struct constains all options controlling the benchmark of scope activation operations.  <a href="../unity.scopes.testing.Benchmark.ActivationConfiguration/index.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../unity.scopes.testing.Benchmark.PreviewConfiguration/index.html">PreviewConfiguration</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../unity.scopes.testing.Benchmark.PreviewConfiguration/index.html" title="The PreviewConfiguration struct constains all options controlling the benchmark of scope preview oper...">PreviewConfiguration</a> struct constains all options controlling the benchmark of scope preview operations.  <a href="../unity.scopes.testing.Benchmark.PreviewConfiguration/index.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../unity.scopes.testing.Benchmark.QueryConfiguration/index.html">QueryConfiguration</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../unity.scopes.testing.Benchmark.QueryConfiguration/index.html" title="The QueryConfiguration struct constains all options controlling the benchmark of scope query operatio...">QueryConfiguration</a> struct constains all options controlling the benchmark of scope query operations.  <a href="../unity.scopes.testing.Benchmark.QueryConfiguration/index.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../unity.scopes.testing.Benchmark.Result/index.html">Result</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../unity.scopes.testing.Benchmark.Result/index.html" title="The Result struct encapsulates all of the result gathered from one individual benchmark run consistin...">Result</a> struct encapsulates all of the result gathered from one individual benchmark run consisting of multiple independent trials.  <a href="../unity.scopes.testing.Benchmark.Result/index.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../unity.scopes.testing.Benchmark.StatisticsConfiguration/index.html">StatisticsConfiguration</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../unity.scopes.testing.Benchmark.StatisticsConfiguration/index.html" title="The StatisticsConfiguration struct contains options controlling the calculation of benchmark result s...">StatisticsConfiguration</a> struct contains options controlling the calculation of benchmark result statistics.  <a href="../unity.scopes.testing.Benchmark.StatisticsConfiguration/index.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../unity.scopes.testing.Benchmark.TrialConfiguration/index.html">TrialConfiguration</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../unity.scopes.testing.Benchmark.TrialConfiguration/index.html" title="The TrialConfiguration struct contains options controlling the execution of individual trials...">TrialConfiguration</a> struct contains options controlling the execution of individual trials.  <a href="../unity.scopes.testing.Benchmark.TrialConfiguration/index.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ad815c88ce0d76e4a6abc82438237e987"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../unity.scopes.testing.Benchmark.Result/index.html">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#ad815c88ce0d76e4a6abc82438237e987">for_query</a> (const std::shared_ptr&lt; <a class="el" href="../unity.scopes.ScopeBase/index.html">unity::scopes::ScopeBase</a> &gt; &amp;scope, <a class="el" href="../unity.scopes.testing.Benchmark.QueryConfiguration/index.html">QueryConfiguration</a> configuration)=0</td></tr>
+<tr class="memdesc:ad815c88ce0d76e4a6abc82438237e987"><td class="mdescLeft">&#160;</td><td class="mdescRight">for_query executes a benchmark to measure the scope's query performance.  More...<br /></td></tr>
+<tr class="separator:ad815c88ce0d76e4a6abc82438237e987"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37da073840cfbeb22ed20c2d4631b7ff"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../unity.scopes.testing.Benchmark.Result/index.html">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a37da073840cfbeb22ed20c2d4631b7ff">for_preview</a> (const std::shared_ptr&lt; <a class="el" href="../unity.scopes.ScopeBase/index.html">unity::scopes::ScopeBase</a> &gt; &amp;scope, <a class="el" href="../unity.scopes.testing.Benchmark.PreviewConfiguration/index.html">PreviewConfiguration</a> configuration)=0</td></tr>
+<tr class="memdesc:a37da073840cfbeb22ed20c2d4631b7ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">for_preview executes a benchmark to measure the scope's preview performance.  More...<br /></td></tr>
+<tr class="separator:a37da073840cfbeb22ed20c2d4631b7ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a531fbb8fd2259337123495bf7de0bd4a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../unity.scopes.testing.Benchmark.Result/index.html">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a531fbb8fd2259337123495bf7de0bd4a">for_activation</a> (const std::shared_ptr&lt; <a class="el" href="../unity.scopes.ScopeBase/index.html">unity::scopes::ScopeBase</a> &gt; &amp;scope, <a class="el" href="../unity.scopes.testing.Benchmark.ActivationConfiguration/index.html">ActivationConfiguration</a> configuration)=0</td></tr>
+<tr class="memdesc:a531fbb8fd2259337123495bf7de0bd4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">for_preview executes a benchmark to measure the scope's activation performance.  More...<br /></td></tr>
+<tr class="separator:a531fbb8fd2259337123495bf7de0bd4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad31b1781960e3edd0018a9cf8df4a506"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../unity.scopes.testing.Benchmark.Result/index.html">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#ad31b1781960e3edd0018a9cf8df4a506">for_action</a> (const std::shared_ptr&lt; <a class="el" href="../unity.scopes.ScopeBase/index.html">unity::scopes::ScopeBase</a> &gt; &amp;scope, <a class="el" href="../unity.scopes.testing.Benchmark.ActionConfiguration/index.html">ActionConfiguration</a> configuration)=0</td></tr>
+<tr class="memdesc:ad31b1781960e3edd0018a9cf8df4a506"><td class="mdescLeft">&#160;</td><td class="mdescRight">for_preview executes a benchmark to measure the scope's action activation performance.  More...<br /></td></tr>
+<tr class="separator:ad31b1781960e3edd0018a9cf8df4a506"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="index.html" title="The Benchmark class defines an interface to provide scope authors with runtime benchmarking capabilit...">Benchmark</a> class defines an interface to provide scope authors with runtime benchmarking capabilities to be used in their own testing. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ad31b1781960e3edd0018a9cf8df4a506"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../unity.scopes.testing.Benchmark.Result/index.html">Result</a> unity::scopes::testing::Benchmark::for_action </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="../unity.scopes.ScopeBase/index.html">unity::scopes::ScopeBase</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>scope</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.testing.Benchmark.ActionConfiguration/index.html">ActionConfiguration</a>&#160;</td>
+          <td class="paramname"><em>configuration</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>for_preview executes a benchmark to measure the scope's action activation performance. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>in case of timeouts. </td></tr>
+    <tr><td class="paramname">std::logic_error</td><td>in case of misconfiguration. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scope</td><td>The scope instance to benchmark. </td></tr>
+    <tr><td class="paramname">configuration</td><td>Options controlling the experiment. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An instance of <a class="el" href="../unity.scopes.testing.Benchmark.Result/index.html" title="The Result struct encapsulates all of the result gathered from one individual benchmark run consistin...">Result</a>. </dd></dl>
+<p>Implemented in <a class="el" href="../unity.scopes.testing.OutOfProcessBenchmark/index.html#a47874911c026c201699d8fce0443e4bb">unity::scopes::testing::OutOfProcessBenchmark</a>, and <a class="el" href="../unity.scopes.testing.InProcessBenchmark/index.html#a570e17bc7fbb0c7aafb3ed720a5fc35c">unity::scopes::testing::InProcessBenchmark</a>.</p>
+</div>
+</div>
+<a class="anchor" id="a531fbb8fd2259337123495bf7de0bd4a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../unity.scopes.testing.Benchmark.Result/index.html">Result</a> unity::scopes::testing::Benchmark::for_activation </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="../unity.scopes.ScopeBase/index.html">unity::scopes::ScopeBase</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>scope</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.testing.Benchmark.ActivationConfiguration/index.html">ActivationConfiguration</a>&#160;</td>
+          <td class="paramname"><em>configuration</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>for_preview executes a benchmark to measure the scope's activation performance. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>in case of timeouts. </td></tr>
+    <tr><td class="paramname">std::logic_error</td><td>in case of misconfiguration. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scope</td><td>The scope instance to benchmark. </td></tr>
+    <tr><td class="paramname">configuration</td><td>Options controlling the experiment. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An instance of <a class="el" href="../unity.scopes.testing.Benchmark.Result/index.html" title="The Result struct encapsulates all of the result gathered from one individual benchmark run consistin...">Result</a>. </dd></dl>
+<p>Implemented in <a class="el" href="../unity.scopes.testing.OutOfProcessBenchmark/index.html#ad918f6c89543eabb3492eb834712e38f">unity::scopes::testing::OutOfProcessBenchmark</a>, and <a class="el" href="../unity.scopes.testing.InProcessBenchmark/index.html#adc815bde331263487183e38836811610">unity::scopes::testing::InProcessBenchmark</a>.</p>
+</div>
+</div>
+<a class="anchor" id="a37da073840cfbeb22ed20c2d4631b7ff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../unity.scopes.testing.Benchmark.Result/index.html">Result</a> unity::scopes::testing::Benchmark::for_preview </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="../unity.scopes.ScopeBase/index.html">unity::scopes::ScopeBase</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>scope</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.testing.Benchmark.PreviewConfiguration/index.html">PreviewConfiguration</a>&#160;</td>
+          <td class="paramname"><em>configuration</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>for_preview executes a benchmark to measure the scope's preview performance. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>in case of timeouts. </td></tr>
+    <tr><td class="paramname">std::logic_error</td><td>in case of misconfiguration. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scope</td><td>The scope instance to benchmark. </td></tr>
+    <tr><td class="paramname">configuration</td><td>Options controlling the experiment. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An instance of <a class="el" href="../unity.scopes.testing.Benchmark.Result/index.html" title="The Result struct encapsulates all of the result gathered from one individual benchmark run consistin...">Result</a>. </dd></dl>
+<p>Implemented in <a class="el" href="../unity.scopes.testing.OutOfProcessBenchmark/index.html#a397be9ae5eaca3d6ca96fa2957498c86">unity::scopes::testing::OutOfProcessBenchmark</a>, and <a class="el" href="../unity.scopes.testing.InProcessBenchmark/index.html#a8823d30698cba5f6a03c4989e7356195">unity::scopes::testing::InProcessBenchmark</a>.</p>
+</div>
+</div>
+<a class="anchor" id="ad815c88ce0d76e4a6abc82438237e987"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../unity.scopes.testing.Benchmark.Result/index.html">Result</a> unity::scopes::testing::Benchmark::for_query </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="../unity.scopes.ScopeBase/index.html">unity::scopes::ScopeBase</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>scope</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.testing.Benchmark.QueryConfiguration/index.html">QueryConfiguration</a>&#160;</td>
+          <td class="paramname"><em>configuration</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>for_query executes a benchmark to measure the scope's query performance. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>in case of timeouts. </td></tr>
+    <tr><td class="paramname">std::logic_error</td><td>in case of misconfiguration. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scope</td><td>The scope instance to benchmark. </td></tr>
+    <tr><td class="paramname">configuration</td><td>Options controlling the experiment. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An instance of <a class="el" href="../unity.scopes.testing.Benchmark.Result/index.html" title="The Result struct encapsulates all of the result gathered from one individual benchmark run consistin...">Result</a>. </dd></dl>
+<p>Implemented in <a class="el" href="../unity.scopes.testing.OutOfProcessBenchmark/index.html#a530a08db775c38ea13478a3d8e1c5bbc">unity::scopes::testing::OutOfProcessBenchmark</a>, and <a class="el" href="../unity.scopes.testing.InProcessBenchmark/index.html#a72460e26d0aa98ae7091f634d0089aa9">unity::scopes::testing::InProcessBenchmark</a>.</p>
+</div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

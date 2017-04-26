@@ -1,0 +1,735 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Scene Graph - Simple Material | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a class="sub-nav-item" href="../index.html">SDK 15.04.1</a> &rsaquo;</li>
+
+<li><a class="sub-nav-item" href="../QtQuick/index.html">QtQuick</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Scene Graph - Simple Material</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qtquick-scenegraph-simplematerial-example.html -->
+	<!-- Source Format: qdoc -->
+<h1>Scene Graph - Simple Material</h1>
+<div id="page_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$scenegraph/simplematerial-description -->
+<div class="descr"> <a name="details"></a>
+<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/9d1ddcf3-f0e5-4ebd-9980-47f27d47643f-api/apps/qml/sdk-15.04.1/qtquick-scenegraph-simplematerial-example/images/simplematerial-example.jpg" alt="" /></p><p>In this example, we will make use of the QSGSimpleMaterialShader class to fill a shape in the scene graph. This is a convenience class intended to avoid a lot of the boilerplate code required when creating materials with the QSGMaterial, QSGMaterialShader and QSGMaterialType classes directly.</p>
+<p>A simple material consists of two parts: the material state and the material shader. The material shader has one instance per scene graph and contains the actual OpenGL shader program and information about which attributes and uniforms it uses. The material state is what we assign to each individual node; in this case to give them different colors.</p>
+<pre class="cpp"><span class="keyword">struct</span> State
+{
+    <span class="type">QColor</span> color;
+    <span class="type">int</span> compare(<span class="keyword">const</span> State <span class="operator">*</span>other) <span class="keyword">const</span> {
+        <span class="type">uint</span> rgb <span class="operator">=</span> color<span class="operator">.</span>rgba();
+        <span class="type">uint</span> otherRgb <span class="operator">=</span> other<span class="operator">-</span><span class="operator">&gt;</span>color<span class="operator">.</span>rgba();
+        <span class="keyword">if</span> (rgb <span class="operator">=</span><span class="operator">=</span> otherRgb) {
+            <span class="keyword">return</span> <span class="number">0</span>;
+        } <span class="keyword">else</span> <span class="keyword">if</span> (rgb <span class="operator">&lt;</span> otherRgb) {
+            <span class="keyword">return</span> <span class="operator">-</span><span class="number">1</span>;
+        } <span class="keyword">else</span> {
+            <span class="keyword">return</span> <span class="number">1</span>;
+        }
+    }
+};</pre>
+<p>The first thing we do when creating custom materials with the simplified scheme is to create a state class. In this case the state class contains only one member, a QColor. It also defines a compare function which the scene graph can use to reorder the node rendering.</p>
+<pre class="cpp"><span class="keyword">class</span> Shader : <span class="keyword">public</span> <span class="type">QSGSimpleMaterialShader</span><span class="operator">&lt;</span>State<span class="operator">&gt;</span>
+{
+    QSG_DECLARE_SIMPLE_COMPARABLE_SHADER(Shader<span class="operator">,</span> State);</pre>
+<p>Next we define the material shader, by subclassing a template instantiation of QSGSimpleMaterialShader with our <code>State</code>.</p>
+<p>Then we use the macro QSG_DECLARE_SIMPLE_COMPARABLE_SHADER() which will generate some boilerplate code for us. Since our <code>State</code> class has a compare function, we declare that the states can be compared. It would have been possible to remove the <code>State::compare()</code> function and instead declare the shader with QSG_DECLARE_SIMPLE_SHADER(), but this could then reduce performance in certain use cases.</p>
+<p>The state struct is used as a template parameter to automatically generate a QSGMaterialType for us, so it is crucial that the pair of shader and state are made up of unique classes. Using the same <code>State</code> class in multiple shaders will will lead to undefined behavior.</p>
+<pre class="cpp"><span class="keyword">public</span>:
+    <span class="keyword">const</span> <span class="type">char</span> <span class="operator">*</span>vertexShader() <span class="keyword">const</span> {
+        <span class="keyword">return</span>
+                <span class="string">&quot;attribute highp vec4 aVertex;                              \n&quot;</span>
+                <span class="string">&quot;attribute highp vec2 aTexCoord;                            \n&quot;</span>
+                <span class="string">&quot;uniform highp mat4 qt_Matrix;                              \n&quot;</span>
+                <span class="string">&quot;varying highp vec2 texCoord;                               \n&quot;</span>
+                <span class="string">&quot;void main() {                                              \n&quot;</span>
+                <span class="string">&quot;    gl_Position = qt_Matrix * aVertex;                     \n&quot;</span>
+                <span class="string">&quot;    texCoord = aTexCoord;                                  \n&quot;</span>
+                <span class="string">&quot;}&quot;</span>;
+    }
+    <span class="keyword">const</span> <span class="type">char</span> <span class="operator">*</span>fragmentShader() <span class="keyword">const</span> {
+        <span class="keyword">return</span>
+                <span class="string">&quot;uniform lowp float qt_Opacity;                             \n&quot;</span>
+                <span class="string">&quot;uniform lowp vec4 color;                                   \n&quot;</span>
+                <span class="string">&quot;varying highp vec2 texCoord;                               \n&quot;</span>
+                <span class="string">&quot;void main ()                                               \n&quot;</span>
+                <span class="string">&quot;{                                                          \n&quot;</span>
+                <span class="string">&quot;    gl_FragColor = texCoord.y * texCoord.x * color * qt_Opacity;  \n&quot;</span>
+                <span class="string">&quot;}&quot;</span>;
+    }</pre>
+<p>Next comes the declaration of the shader source code, where we define a vertex and fragment shader. The simple material assumes the presence of <code>qt_Matrix</code> in the vertex shader and <code>qt_Opacity</code> in the fragment shader.</p>
+<pre class="cpp">    <span class="type">QList</span><span class="operator">&lt;</span><span class="type">QByteArray</span><span class="operator">&gt;</span> attributes() <span class="keyword">const</span>
+    {
+        <span class="keyword">return</span> <span class="type">QList</span><span class="operator">&lt;</span><span class="type">QByteArray</span><span class="operator">&gt;</span>() <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">&quot;aVertex&quot;</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">&quot;aTexCoord&quot;</span>;
+    }</pre>
+<p>We reimplement the <code>attributes</code> function to return the name of the <code>aVertex</code> and <code>aTexCoord</code> attributes. These attributes will be mapped to attribute indices 0 and 1 in the node's geometry.</p>
+<pre class="cpp">    <span class="type">void</span> resolveUniforms()
+    {
+        id_color <span class="operator">=</span> program()<span class="operator">-</span><span class="operator">&gt;</span>uniformLocation(<span class="string">&quot;color&quot;</span>);
+    }
+<span class="keyword">private</span>:
+    <span class="type">int</span> id_color;</pre>
+<p>Uniforms can be accessed either by name or by index, where index is faster than name. We reimplement the <code>resolveUniforms()</code> function to find the index of the <code>color</code> uniform. We do not have to worry about resolving <code>qt_Opacity</code> or <code>qt_Matrix</code> as these are handled by the baseclass.</p>
+<pre class="cpp">    <span class="type">void</span> updateState(<span class="keyword">const</span> State <span class="operator">*</span>state<span class="operator">,</span> <span class="keyword">const</span> State <span class="operator">*</span>)
+    {
+        program()<span class="operator">-</span><span class="operator">&gt;</span>setUniformValue(id_color<span class="operator">,</span> state<span class="operator">-</span><span class="operator">&gt;</span>color);
+    }</pre>
+<p>The <code>updateState()</code> function is called once for every unique state and we use it to update the shader program with the current color. The previous state is passed in as a second parameter so that the user can update only that which has changed. In our usecase, where all the colors are different, the updateState will be called once for every node.</p>
+<pre class="cpp"><span class="keyword">class</span> ColorNode : <span class="keyword">public</span> <span class="type">QSGGeometryNode</span>
+{
+<span class="keyword">public</span>:
+    ColorNode()
+        : m_geometry(<span class="type">QSGGeometry</span><span class="operator">::</span>defaultAttributes_TexturedPoint2D()<span class="operator">,</span> <span class="number">4</span>)
+    {
+        setGeometry(<span class="operator">&amp;</span>m_geometry);
+        <span class="type">QSGSimpleMaterial</span><span class="operator">&lt;</span>State<span class="operator">&gt;</span> <span class="operator">*</span>material <span class="operator">=</span> Shader<span class="operator">::</span>createMaterial();
+        material<span class="operator">-</span><span class="operator">&gt;</span>setFlag(<span class="type">QSGMaterial</span><span class="operator">::</span>Blending);
+        setMaterial(material);
+        setFlag(OwnsMaterial);
+    }
+    <span class="type">QSGGeometry</span> m_geometry;
+};</pre>
+<p>The <code>ColorNode</code> class is supposed to draw something, so it needs to be a subclass of QSGGeometryNode.</p>
+<p>Since our shader expects both a position and a texture coordinate, we use the default attribute set QSGGeometry::defaultAttributes_TexturedPoint2D() and declare that the geometry consists of a total of four vertices. To avoid the allocation, we make the QSGGeometry a member of the QSGGeometryNode.</p>
+<p>When we used the macro QSG_DECLARE_SIMPLE_COMPARABLE_SHADER() above, it defined the <code>createMaterial()</code> function which we use to instantiate materials for our <code>State</code> struct.</p>
+<p>As we will be making use of opacity in our custom material, we need to set the QSGMaterial::Blending flag. The scene graph may use this flag to either disable or enable <code>GL_BLEND</code> when drawing the node or to reorder the drawing of the node.</p>
+<p>Finally, we tell the node to take ownership of the material, so we do not have to explicitly memory-manage it.</p>
+<pre class="cpp"><span class="keyword">class</span> Item : <span class="keyword">public</span> <span class="type">QQuickItem</span>
+{
+    Q_OBJECT
+    Q_PROPERTY(<span class="type">QColor</span> color READ color WRITE setColor NOTIFY colorChanged)
+<span class="keyword">public</span>:
+    Item()
+    {
+        setFlag(ItemHasContents<span class="operator">,</span> <span class="keyword">true</span>);
+    }
+    <span class="type">void</span> setColor(<span class="keyword">const</span> <span class="type">QColor</span> <span class="operator">&amp;</span>color) {
+        <span class="keyword">if</span> (m_color <span class="operator">!</span><span class="operator">=</span> color) {
+            m_color <span class="operator">=</span> color;
+            <span class="keyword">emit</span> colorChanged();
+            update();
+        }
+    }
+    <span class="type">QColor</span> color() <span class="keyword">const</span> {
+        <span class="keyword">return</span> m_color;
+    }
+<span class="keyword">signals</span>:
+    <span class="type">void</span> colorChanged();
+<span class="keyword">private</span>:
+  <span class="type">QColor</span> m_color;</pre>
+<p>Since the Item is providing its own graphics to the scene graph, we set the flag QQuickItem::ItemHasContents.</p>
+<pre class="cpp"><span class="keyword">public</span>:
+    <span class="type">QSGNode</span> <span class="operator">*</span>updatePaintNode(<span class="type">QSGNode</span> <span class="operator">*</span>node<span class="operator">,</span> UpdatePaintNodeData <span class="operator">*</span>)
+    {
+        ColorNode <span class="operator">*</span>n <span class="operator">=</span> <span class="keyword">static_cast</span><span class="operator">&lt;</span>ColorNode <span class="operator">*</span><span class="operator">&gt;</span>(node);
+        <span class="keyword">if</span> (<span class="operator">!</span>node)
+            n <span class="operator">=</span> <span class="keyword">new</span> ColorNode();
+        <span class="type">QSGGeometry</span><span class="operator">::</span>updateTexturedRectGeometry(n<span class="operator">-</span><span class="operator">&gt;</span>geometry()<span class="operator">,</span> boundingRect()<span class="operator">,</span> <span class="type">QRectF</span>(<span class="number">0</span><span class="operator">,</span> <span class="number">0</span><span class="operator">,</span> <span class="number">1</span><span class="operator">,</span> <span class="number">1</span>));
+        <span class="keyword">static_cast</span><span class="operator">&lt;</span><span class="type">QSGSimpleMaterial</span><span class="operator">&lt;</span>State<span class="operator">&gt;</span><span class="operator">*</span><span class="operator">&gt;</span>(n<span class="operator">-</span><span class="operator">&gt;</span>material())<span class="operator">-</span><span class="operator">&gt;</span>state()<span class="operator">-</span><span class="operator">&gt;</span>color <span class="operator">=</span> m_color;
+        n<span class="operator">-</span><span class="operator">&gt;</span>markDirty(<span class="type">QSGNode</span><span class="operator">::</span>DirtyGeometry <span class="operator">|</span> <span class="type">QSGNode</span><span class="operator">::</span>DirtyMaterial);
+        <span class="keyword">return</span> n;
+    }
+};</pre>
+<p>Whenever the Item has changed graphically, the QQuickItem::updatePaintNode() function is called.</p>
+<p><b>Note: </b>The scene graph may be rendered in a different thread than the GUI thread and QQuickItem::updatePaintNode() is one of the few places where it is safe to access properties of the QML object. Any interaction with the scene graph from a custom QQuickItem should be contained within this function. The function is called on the rendering thread while the GUI thread is blocked.</p><p>The first time this function is called for an <code>Item</code> instance, the node will be 0, and so we create a new one. For every consecutive call, the node will be what we returned previously. There are scenarios where the scene graph will be removed and rebuilt from scratch however, so one should always check the node and recreate it if required.</p>
+<p>Once we have a <code>ColorNode</code>, we update its geometry and material state. Finally, we notify the scene graph that the node has undergone changes to its geometry and material.</p>
+<pre class="cpp"><span class="type">int</span> main(<span class="type">int</span> argc<span class="operator">,</span> <span class="type">char</span> <span class="operator">*</span><span class="operator">*</span>argv)
+{
+    <span class="type">QGuiApplication</span> app(argc<span class="operator">,</span> argv);
+    qmlRegisterType<span class="operator">&lt;</span>Item<span class="operator">&gt;</span>(<span class="string">&quot;SimpleMaterial&quot;</span><span class="operator">,</span> <span class="number">1</span><span class="operator">,</span> <span class="number">0</span><span class="operator">,</span> <span class="string">&quot;SimpleMaterialItem&quot;</span>);
+    <span class="type">QQuickView</span> view;
+    view<span class="operator">.</span>setResizeMode(<span class="type">QQuickView</span><span class="operator">::</span>SizeRootObjectToView);
+    view<span class="operator">.</span>setSource(<span class="type">QUrl</span>(<span class="string">&quot;qrc:///scenegraph/simplematerial/main.qml&quot;</span>));
+    view<span class="operator">.</span>show();
+    <span class="keyword">return</span> app<span class="operator">.</span>exec();
+}
+<span class="preprocessor">#include &quot;simplematerial.moc&quot;</span></pre>
+<p>The <code>main()</code> function of the application adds the custom QML type using qmlRegisterType() and opens up a QQuickView with our QML file.</p>
+<pre class="qml">import QtQuick 2.0
+import SimpleMaterial 1.0
+<span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> {
+    <span class="name">width</span>: <span class="number">320</span>
+    <span class="name">height</span>: <span class="number">480</span>
+    <span class="name">color</span>: <span class="string">&quot;black&quot;</span></pre>
+<p>In the QML file, we import our custom type so we can instantiate it.</p>
+<pre class="qml">    <span class="type"><a href="../QtQuick.Column/index.html">Column</a></span> {
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="type">SimpleMaterialItem</span> {
+            <span class="name">width</span>: <span class="name">parent</span>.<span class="name">width</span>;
+            <span class="name">height</span>: <span class="name">parent</span>.<span class="name">height</span> <span class="operator">/</span> <span class="number">3</span>;
+            <span class="name">color</span>: <span class="string">&quot;steelblue&quot;</span>
+        }
+        <span class="type">SimpleMaterialItem</span> {
+            <span class="name">width</span>: <span class="name">parent</span>.<span class="name">width</span>;
+            <span class="name">height</span>: <span class="name">parent</span>.<span class="name">height</span> <span class="operator">/</span> <span class="number">3</span>;
+            <span class="name">color</span>: <span class="string">&quot;darkorchid&quot;</span>
+        }
+         <span class="type">SimpleMaterialItem</span> {
+            <span class="name">width</span>: <span class="name">parent</span>.<span class="name">width</span>;
+            <span class="name">height</span>: <span class="name">parent</span>.<span class="name">height</span> <span class="operator">/</span> <span class="number">3</span>;
+            <span class="name">color</span>: <span class="string">&quot;springgreen&quot;</span>
+        }
+    }</pre>
+<p>Then we create a column containing three instances of our custom item, each with a different color.</p>
+<pre class="qml">    <span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> {
+        <span class="name">color</span>: <span class="name">Qt</span>.<span class="name">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.8</span>)
+        <span class="name">radius</span>: <span class="number">10</span>
+        <span class="name">antialiasing</span>: <span class="number">true</span>
+        <span class="name">border</span>.width: <span class="number">1</span>
+        <span class="name">border</span>.color: <span class="string">&quot;black&quot;</span>
+        <span class="name">anchors</span>.fill: <span class="name">label</span>
+        <span class="name">anchors</span>.margins: -<span class="number">10</span>
+    }
+    <span class="type"><a href="../QtQuick.Text/index.html">Text</a></span> {
+        <span class="name">id</span>: <span class="name">label</span>
+        <span class="name">color</span>: <span class="string">&quot;white&quot;</span>
+        <span class="name">wrapMode</span>: <span class="name">Text</span>.<span class="name">WordWrap</span>
+        <span class="name">text</span>: <span class="string">&quot;These three gradient boxes are colorized using a custom material.&quot;</span>
+        <span class="name">anchors</span>.right: <span class="name">parent</span>.<span class="name">right</span>
+        <span class="name">anchors</span>.left: <span class="name">parent</span>.<span class="name">left</span>
+        <span class="name">anchors</span>.bottom: <span class="name">parent</span>.<span class="name">bottom</span>
+        <span class="name">anchors</span>.margins: <span class="number">20</span>
+    }
+}</pre>
+<p>And finally we overlay a short descriptive text.</p>
+<p>Files:</p>
+<ul>
+<li>scenegraph/simplematerial/main.qml</li>
+<li>scenegraph/simplematerial/simplematerial.cpp</li>
+<li>scenegraph/simplematerial/simplematerial.pro</li>
+<li>scenegraph/simplematerial/simplematerial.qrc</li>
+</ul>
+</div>
+<!-- @@@scenegraph/simplematerial -->
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,734 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Map Viewer (QML) | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a class="sub-nav-item" href="../index.html">SDK 15.04.4</a> &rsaquo;</li>
+
+<li><a class="sub-nav-item" href="../QtLocation/index.html">QtLocation</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Map Viewer (QML)</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qtlocation-mapviewer-example.html -->
+	<!-- Source Format: qdoc -->
+<h1>Map Viewer (QML)</h1>
+<div id="page_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$mapviewer-description -->
+<div class="descr"> <a name="details"></a>
+<p>This is a large example covering many basic uses of maps, positioning, and navigation services in Qt Location. This page is divided into sections covering each of these areas of functionality with snippets from the code.</p>
+<p>The Map Viewer example can work with any of the available geo services plugins. However, some plugins may require additional <a href="../../sdk-15.04.1/QtLocation.PluginParameter/index.html">plugin parameters</a> in order to function correctly. <a href="../../sdk-15.04.1/QtLocation.PluginParameter/index.html">Plugin parameters</a> can be passed on the command line using the <code>--plugin</code> argument, which takes the form:</p>
+<pre class="cpp"><span class="operator">-</span><span class="operator">-</span>plugin<span class="operator">.</span><span class="operator">&lt;</span>parameter name<span class="operator">&gt;</span> <span class="operator">&lt;</span>parameter value<span class="operator">&gt;</span></pre>
+<p>Refer to the documentation for each of the geo services plugins for details on what plugin parameters they support. The Nokia services plugin supplied with Qt requires an <i>app_id</i> and <i>token</i> pair. See &quot;<a href="../../sdk-15.04.1/QtLocation.location-plugin-nokia/index.html">Qt Location Nokia Plugin</a>&quot; for details.</p>
+<p>QML types shown in this example:</p>
+<ul>
+<li>Displaying a map<ul>
+<li><a href="../../sdk-15.04.1/QtLocation.Map/index.html">Map</a></li>
+<li><a href="../../sdk-15.04.1/QtLocation.MapGestureArea/index.html">MapGestureArea</a></li>
+<li>coordinate</li>
+</ul>
+</li>
+<li>Finding an address<ul>
+<li><a href="../../sdk-15.04.1/QtLocation.GeocodeModel/index.html">GeocodeModel</a></li>
+<li><a href="../../sdk-15.04.1/QtLocation.MapItemView/index.html">MapItemView</a></li>
+<li><a href="../../sdk-15.04.1/QtLocation.MapCircle/index.html">MapCircle</a></li>
+</ul>
+</li>
+<li>Directions and travel routes<ul>
+<li><a href="../../sdk-15.04.1/QtLocation.RouteModel/index.html">RouteModel</a></li>
+<li><a href="../../sdk-15.04.1/QtLocation.MapRoute/index.html">MapRoute</a></li>
+</ul>
+</li>
+</ul>
+<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/011bd6d2-c505-42c3-8044-175a014ac70f-api/apps/qml/sdk-15.04.1/qtlocation-mapviewer-example/images/example-mapviewer.png" alt="" /></p><a name="displaying-a-map"></a>
+<h3 >Displaying a Map</h3>
+<p>Drawing a map on-screen is accomplished using the Map type, as shown below.</p>
+<pre class="qml"><span class="type"><a href="../../sdk-15.04.1/QtLocation.Map/index.html">Map</a></span> {
+    <span class="name">id</span>: <span class="name">map</span>
+    <span class="name">zoomLevel</span>: (<span class="name">maximumZoomLevel</span> <span class="operator">-</span> <span class="name">minimumZoomLevel</span>)<span class="operator">/</span><span class="number">2</span>
+    <span class="type">center</span> {
+        <span class="name">latitude</span>: -<span class="number">27.5796</span>
+        <span class="name">longitude</span>: <span class="number">153.1003</span>
+    }
+    <span class="comment">// Enable pinch gestures to zoom in and out</span>
+    <span class="name">gesture</span>.flickDeceleration: <span class="number">3000</span>
+    <span class="name">gesture</span>.enabled: <span class="number">true</span>
+<span class="type">center</span> {
+    <span class="name">latitude</span>: -<span class="number">27.5796</span>
+    <span class="name">longitude</span>: <span class="number">153.1003</span>
+}
+}</pre>
+<p>In this example, we give the map an initial center coordinate with a set latitude and longitude. We also set the initial zoom level to 50% (halfway between the maximum and minimum).</p>
+<p>The calls to &quot;pinch&quot; and &quot;flick&quot; are used to enable gestures on the map. The flick gesture is also sometimes known as &quot;kinetic panning&quot;, and provides a more intuitive feel for panning the map both on touch screens and with a mouse.</p>
+<p>As we do not specify a plugin for supplying map data, the platform default will be used. This is typically the &quot;nokia&quot; plugin, which provides data from Nokia services. Additional licensing conditions do apply to the use of this data, please see the documentation for further details.</p>
+<a name="finding-an-address-geocoding"></a>
+<h3 >Finding an Address (Geocoding)</h3>
+<p>To locate a certain address or place on the map uses a process called geocoding. In order to perform a geocode operation, we first need to adjust our Map object to be able to receive the result.</p>
+<p>Receiving results of geocoding is done through a <a href="../../sdk-15.04.1/QtLocation.GeocodeModel/index.html">GeocodeModel</a>, which is typically instantiated as a property of the Map component:</p>
+<pre class="qml">    property <span class="type"><a href="../../sdk-15.04.1/QtLocation.GeocodeModel/index.html">GeocodeModel</a></span> <span class="name">geocodeModel</span>: <span class="name">GeocodeModel</span> {
+    }</pre>
+<p>Then, to display the contents of the <a href="../../sdk-15.04.1/QtLocation.GeocodeModel/index.html">GeocodeModel</a> we use a <a href="../../sdk-15.04.1/QtLocation.MapItemView/index.html">MapItemView</a>:</p>
+<pre class="qml">    <span class="type"><a href="../../sdk-15.04.1/QtLocation.MapItemView/index.html">MapItemView</a></span> {
+        <span class="name">model</span>: <span class="name">geocodeModel</span>
+        <span class="name">delegate</span>: <span class="name">pointDelegate</span>
+    }</pre>
+<p><a href="../../sdk-15.04.1/QtLocation.MapItemView/index.html">MapItemView</a> uses an object called a &quot;delegate&quot; to act as a template for the items it creates. This can contain any map object desired, but in this case we show a <a href="../../sdk-15.04.1/QtLocation.MapCircle/index.html">MapCircle</a>:</p>
+<pre class="qml">    <span class="type">Component</span> {
+        <span class="name">id</span>: <span class="name">pointDelegate</span>
+        <span class="type"><a href="../../sdk-15.04.1/QtLocation.MapCircle/index.html">MapCircle</a></span> {
+            <span class="name">radius</span>: <span class="number">1000</span>
+            <span class="name">color</span>: <span class="name">circleMouseArea</span>.<span class="name">containsMouse</span> ? <span class="string">&quot;lime&quot;</span> : <span class="string">&quot;red&quot;</span>
+            <span class="name">opacity</span>: <span class="number">0.6</span>
+            <span class="name">center</span>: <span class="name">locationData</span>.<span class="name">coordinate</span>
+        }
+    }</pre>
+<p>With these three objects, we have enough to receive Geocode responses and display them on our Map. The final piece is to send the actual Geocode request.</p>
+<p>In this example, we have a utility component called Dialog which we use to display the user interface requesting geocoding parameters. You can create a similar component yourself using Dialog.qml in this example as a reference, or drive the process using any other UI you wish.</p>
+<p>To send a geocode request, first we create an Address object, and fill it in with the desired parameters. Then we set &quot;map.geocodeModel.query&quot; to the filled in Address, and call update() on the <a href="../../sdk-15.04.1/QtLocation.GeocodeModel/index.html">GeocodeModel</a>.</p>
+<pre class="qml">    <span class="type">InputDialog</span> {
+        <span class="name">id</span>: <span class="name">geocodeDialog</span>
+        <span class="type">Address</span> {
+            <span class="name">id</span>: <span class="name">geocodeAddress</span>
+        }
+        <span class="name">onGoButtonClicked</span>: {
+            <span class="comment">// manage the UI state transitions</span>
+            <span class="name">page</span>.<span class="name">state</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>
+            <span class="name">messageDialog</span>.<span class="name">state</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>
+            <span class="comment">// fill out the Address element</span>
+            <span class="name">geocodeAddress</span>.<span class="name">street</span> <span class="operator">=</span> <span class="name">dialogModel</span>.<span class="name">get</span>(<span class="number">0</span>).<span class="name">inputText</span>
+            <span class="name">geocodeAddress</span>.<span class="name">city</span> <span class="operator">=</span> <span class="name">dialogModel</span>.<span class="name">get</span>(<span class="number">1</span>).<span class="name">inputText</span>
+            <span class="name">geocodeAddress</span>.<span class="name">state</span> <span class="operator">=</span> <span class="name">dialogModel</span>.<span class="name">get</span>(<span class="number">2</span>).<span class="name">inputText</span>
+            <span class="name">geocodeAddress</span>.<span class="name">country</span> <span class="operator">=</span> <span class="name">dialogModel</span>.<span class="name">get</span>(<span class="number">3</span>).<span class="name">inputText</span>
+            <span class="name">geocodeAddress</span>.<span class="name">postalCode</span> <span class="operator">=</span> <span class="name">dialogModel</span>.<span class="name">get</span>(<span class="number">4</span>).<span class="name">inputText</span>
+            <span class="comment">// send the geocode request</span>
+            <span class="name">map</span>.<span class="name">geocodeModel</span>.<span class="name">query</span> <span class="operator">=</span> <span class="name">geocodeAddress</span>
+            <span class="name">map</span>.<span class="name">geocodeModel</span>.<span class="name">update</span>()
+        }
+    }</pre>
+<a name="directions-and-travel-routes"></a>
+<h3 >Directions and Travel Routes</h3>
+<p>Similar to the <a href="../../sdk-15.04.1/QtLocation.GeocodeModel/index.html">GeocodeModel</a>, Qt Location also features the <a href="../../sdk-15.04.1/QtLocation.RouteModel/index.html">RouteModel</a> type, which allows information about routes (for example driving directions) between two or more points, to be received and used with a Map.</p>
+<p>Here again, we instantiate the <a href="../../sdk-15.04.1/QtLocation.RouteModel/index.html">RouteModel</a> as a property of our Map:</p>
+<pre class="qml">    property <span class="type"><a href="../../sdk-15.04.1/QtLocation.RouteQuery/index.html">RouteQuery</a></span> <span class="name">routeQuery</span>: <span class="name">RouteQuery</span> {}
+    property <span class="type"><a href="../../sdk-15.04.1/QtLocation.RouteModel/index.html">RouteModel</a></span> <span class="name">routeModel</span>: <span class="name">RouteModel</span> {
+        <span class="name">plugin</span> : <span class="name">map</span>.<span class="name">plugin</span>
+        <span class="name">query</span>: <span class="name">routeQuery</span>
+    }</pre>
+<p>To display the contents of a model to the user, we need a view. Once again we will use a <a href="../../sdk-15.04.1/QtLocation.MapItemView/index.html">MapItemView</a>, to display the Routes as objects on the Map:</p>
+<pre class="qml">    <span class="type"><a href="../../sdk-15.04.1/QtLocation.MapItemView/index.html">MapItemView</a></span> {
+        <span class="name">model</span>: <span class="name">routeModel</span>
+        <span class="name">delegate</span>: <span class="name">routeDelegate</span>
+        <span class="name">autoFitViewport</span>: <span class="number">true</span>
+    }</pre>
+<p>To act as a template for the objects we wish the view to create, we create a delegate component:</p>
+<pre class="qml">    <span class="type">Component</span> {
+        <span class="name">id</span>: <span class="name">routeDelegate</span>
+        <span class="type"><a href="../../sdk-15.04.1/QtLocation.MapRoute/index.html">MapRoute</a></span> {
+            <span class="name">route</span>: <span class="name">routeData</span>
+            <span class="name">line</span>.color: <span class="name">routeMouseArea</span>.<span class="name">containsMouse</span> ? <span class="string">&quot;lime&quot;</span> : <span class="string">&quot;red&quot;</span>
+            <span class="name">line</span>.width: <span class="number">5</span>
+            <span class="name">smooth</span>: <span class="number">true</span>
+            <span class="name">opacity</span>: <span class="number">0.8</span>
+    }</pre>
+<p>With the model, view and delegate now complete, the only missing component is some kind of control over the model to begin the Route request process. In the simplest case, we can fill out a Route request using two already available coordinates, which we store inside the RouteDialog component:</p>
+<pre class="qml">    <span class="type">RouteDialog</span> {
+        <span class="name">id</span>: <span class="name">routeDialog</span>
+        property <span class="type">variant</span> <span class="name">startCoordinate</span>
+        property <span class="type">variant</span> <span class="name">endCoordinate</span>
+    }</pre>
+<p>In the next snippet, we show how to set up the request object and instruct the model to update. We also instruct the map to center on the start coordinate for our routing request.</p>
+<pre class="qml">        <span class="keyword">function</span> <span class="name">calculateRoute</span>() {
+            <span class="comment">// clear away any old data in the query</span>
+            <span class="name">map</span>.<span class="name">routeQuery</span>.<span class="name">clearWaypoints</span>();
+            <span class="comment">// add the start and end coords as waypoints on the route</span>
+            <span class="name">map</span>.<span class="name">routeQuery</span>.<span class="name">addWaypoint</span>(<span class="name">startCoordinate</span>)
+            <span class="name">map</span>.<span class="name">routeQuery</span>.<span class="name">addWaypoint</span>(<span class="name">endCoordinate</span>)
+            <span class="name">map</span>.<span class="name">routeQuery</span>.<span class="name">travelModes</span> <span class="operator">=</span> <span class="name">routeDialog</span>.<span class="name">travelMode</span>
+            <span class="name">map</span>.<span class="name">routeQuery</span>.<span class="name">routeOptimizations</span> <span class="operator">=</span> <span class="name">routeDialog</span>.<span class="name">routeOptimization</span>
+            <span class="name">map</span>.<span class="name">routeModel</span>.<span class="name">update</span>();
+            <span class="comment">// center the map on the start coord</span>
+            <span class="name">map</span>.<span class="name">center</span> <span class="operator">=</span> <span class="name">startCoordinate</span>;</pre>
+<p>This is all that is required to display a Route on the Map. However, it is also useful to be able to retrieve the written directions and explanation of the travel route. In the example, these are displayed in the pull-out on the left-hand side of the map. To create this pull-out's contents, we use a standard ListModel and ListView pair. The data in the ListModel is built from the routeModel's output:</p>
+<pre class="qml">    <span class="type">ListModel</span> {
+        <span class="name">id</span>: <span class="name">routeInfoModel</span>
+        property <span class="type">string</span> <span class="name">travelTime</span>
+        property <span class="type">string</span> <span class="name">distance</span>
+        <span class="keyword">function</span> <span class="name">update</span>() {
+            <span class="name">clear</span>()
+            <span class="keyword">if</span> (<span class="name">routeModel</span>.<span class="name">count</span> <span class="operator">&gt;</span> <span class="number">0</span>) {
+                <span class="keyword">for</span> (<span class="keyword">var</span> <span class="name">i</span> = <span class="number">0</span>; <span class="name">i</span> <span class="operator">&lt;</span> <span class="name">routeModel</span>.<span class="name">get</span>(<span class="number">0</span>).<span class="name">segments</span>.<span class="name">length</span>; i++) {
+                    <span class="name">append</span>({
+                        &quot;instruction&quot;: <span class="name">routeModel</span>.<span class="name">get</span>(<span class="number">0</span>).<span class="name">segments</span>[<span class="name">i</span>].<span class="name">maneuver</span>.<span class="name">instructionText</span>,
+                        &quot;distance&quot;: <span class="name">formatDistance</span>(<span class="name">routeModel</span>.<span class="name">get</span>(<span class="number">0</span>).<span class="name">segments</span>[<span class="name">i</span>].<span class="name">maneuver</span>.<span class="name">distanceToNextInstruction</span>)
+                    });
+                }
+            }
+            <span class="name">travelTime</span> <span class="operator">=</span> <span class="name">routeModel</span>.<span class="name">count</span> <span class="operator">==</span> <span class="number">0</span> ? <span class="string">&quot;&quot;</span> : <span class="name">formatTime</span>(<span class="name">routeModel</span>.<span class="name">get</span>(<span class="number">0</span>).<span class="name">travelTime</span>)
+            <span class="name">distance</span> <span class="operator">=</span> <span class="name">routeModel</span>.<span class="name">count</span> <span class="operator">==</span> <span class="number">0</span> ? <span class="string">&quot;&quot;</span> : <span class="name">formatDistance</span>(<span class="name">routeModel</span>.<span class="name">get</span>(<span class="number">0</span>).<span class="name">distance</span>)
+        }
+    }</pre>
+<p>Inside the <a href="../../sdk-15.04.1/QtLocation.RouteModel/index.html">RouteModel</a>, we add an <a href="../../sdk-15.04.1/QtLocation.RouteModel/index.html#status-prop">onStatusChanged</a> handler, which calls the <code>update()</code> function we defined on the model:</p>
+<pre class="qml">        <span class="name">onStatusChanged</span>: {
+            <span class="keyword">if</span> (<span class="name">status</span> <span class="operator">==</span> <span class="name">RouteModel</span>.<span class="name">Ready</span>) {
+                <span class="keyword">switch</span> (<span class="name">count</span>) {
+                <span class="keyword">case</span> <span class="number">0</span>:
+                    <span class="name">clearAll</span>() <span class="comment">// technically not an error</span>
+                    <span class="name">map</span>.<span class="name">routeError</span>()
+                    <span class="keyword">break</span>
+                <span class="keyword">case</span> <span class="number">1</span>:
+                    <span class="name">routeInfoModel</span>.<span class="name">update</span>()
+                    <span class="keyword">break</span>
+                }
+            } <span class="keyword">else</span> <span class="keyword">if</span> (<span class="name">status</span> <span class="operator">==</span> <span class="name">RouteModel</span>.<span class="name">Error</span>) {
+                <span class="name">clearAll</span>()
+                <span class="name">map</span>.<span class="name">routeError</span>()
+            }
+        }</pre>
+<p>Files:</p>
+<ul>
+<li>mapviewer/mapviewer.qml</li>
+<li>mapviewer/qmlmapviewerwrapper.cpp</li>
+<li>mapviewer/content/dialogs/Message.qml</li>
+<li>mapviewer/content/dialogs/RouteDialog.qml</li>
+<li>mapviewer/content/map/3dItem.qml</li>
+<li>mapviewer/content/map/CircleItem.qml</li>
+<li>mapviewer/content/map/ImageItem.qml</li>
+<li>mapviewer/content/map/MapComponent.qml</li>
+<li>mapviewer/content/map/Marker.qml</li>
+<li>mapviewer/content/map/MiniMap.qml</li>
+<li>mapviewer/content/map/PolygonItem.qml</li>
+<li>mapviewer/content/map/PolylineItem.qml</li>
+<li>mapviewer/content/map/RectangleItem.qml</li>
+<li>mapviewer/content/map/VideoItem.qml</li>
+<li>mapviewer/mapviewer.pro</li>
+<li>mapviewer/mapviewerwrapper.qrc</li>
+</ul>
+</div>
+<!-- @@@mapviewer -->
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

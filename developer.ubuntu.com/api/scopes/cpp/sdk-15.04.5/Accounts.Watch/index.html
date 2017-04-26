@@ -1,0 +1,715 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Watch [sdk-15.04.5/Accounts.Watch] | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/doxygen.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Scopes</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">C++</a> &rsaquo;</li>
+<li><a href="../index.html">SDK 15.04.5</a> &rsaquo;</li>
+
+<li><a href="../Accounts/index.html">Accounts</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Watch</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: classAccounts_1_1Watch.html -->
+	<!-- Source Format: doxygen -->
+<h1>Watch</h1>
+<div id="element_content" class="doxygen">
+<!-- Start Element Content -->
+<p>Monitors an account key or group of keys.  
+ <a href="../../sdk-15.04.1/Accounts.Watch/index.html#details">More...</a></p>
+<p><code>#include &lt;Accounts/Account&gt;</code></p>
+<p>Inherits QObject.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
+Signals</h2></td></tr>
+<tr class="memitem:a6c9329531974648e3ea3f05f3ea36129"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6c9329531974648e3ea3f05f3ea36129"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>displayNameChanged</b> (const QString &amp;displayName)</td></tr>
+<tr class="separator:a6c9329531974648e3ea3f05f3ea36129"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc008e2f46ae60c14005e24f4cbf41e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc008e2f46ae60c14005e24f4cbf41e5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>enabledChanged</b> (const QString &amp;serviceName, bool enabled)</td></tr>
+<tr class="separator:abc008e2f46ae60c14005e24f4cbf41e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae89dad11eccb775ceb9925d0ff27dd7d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae89dad11eccb775ceb9925d0ff27dd7d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>error</b> (<a class="el" href="../../sdk-15.04.1/Accounts.Error/index.html">Accounts::Error</a> error)</td></tr>
+<tr class="separator:ae89dad11eccb775ceb9925d0ff27dd7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fa6a9f29874eb5ad79fbc70532f71a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4fa6a9f29874eb5ad79fbc70532f71a6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>synced</b> ()</td></tr>
+<tr class="separator:a4fa6a9f29874eb5ad79fbc70532f71a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc2a0e638d7742d828062eeafd6769ab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc2a0e638d7742d828062eeafd6769ab"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>removed</b> ()</td></tr>
+<tr class="separator:adc2a0e638d7742d828062eeafd6769ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a483d9a1edcbc46d7070eb70ae23b5989"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../sdk-15.04.1/Accounts.Watch/index.html#a483d9a1edcbc46d7070eb70ae23b5989">credentialsId</a> ()</td></tr>
+<tr class="separator:a483d9a1edcbc46d7070eb70ae23b5989"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54a9de969058292a257d9d692785ca63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../sdk-15.04.1/Accounts.Watch/index.html#a54a9de969058292a257d9d692785ca63">setCredentialsId</a> (const uint id)</td></tr>
+<tr class="memdesc:a54a9de969058292a257d9d692785ca63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the accounts credentials ID.  More...<br /></td></tr>
+<tr class="separator:a54a9de969058292a257d9d692785ca63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9def71dea12661002bb3a63b3b91d08d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9def71dea12661002bb3a63b3b91d08d"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>displayName</b> () const </td></tr>
+<tr class="separator:a9def71dea12661002bb3a63b3b91d08d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac036a365819266590db91caa64b4fff0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac036a365819266590db91caa64b4fff0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setDisplayName</b> (const QString &amp;displayName)</td></tr>
+<tr class="separator:ac036a365819266590db91caa64b4fff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65a95a0e50cf1761a9a21d21c0db412e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a65a95a0e50cf1761a9a21d21c0db412e"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>providerName</b> () const </td></tr>
+<tr class="separator:a65a95a0e50cf1761a9a21d21c0db412e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2bf7a26f8729dfb6a8595b6294f5565"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2bf7a26f8729dfb6a8595b6294f5565"></a>
+<a class="el" href="../../sdk-15.04.1/Accounts.Provider/index.html">Provider</a>&#160;</td><td class="memItemRight" valign="bottom"><b>provider</b> () const </td></tr>
+<tr class="separator:ab2bf7a26f8729dfb6a8595b6294f5565"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c7532fb7377ee33ab449d36200522b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8c7532fb7377ee33ab449d36200522b9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>selectService</b> (const <a class="el" href="../../sdk-15.04.1/Accounts.Service/index.html">Service</a> &amp;service=<a class="el" href="../../sdk-15.04.1/Accounts.Service/index.html">Service</a>())</td></tr>
+<tr class="separator:a8c7532fb7377ee33ab449d36200522b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4831783cce39d897dc35b57ce233d735"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4831783cce39d897dc35b57ce233d735"></a>
+<a class="el" href="../../sdk-15.04.1/Accounts.Service/index.html">Service</a>&#160;</td><td class="memItemRight" valign="bottom"><b>selectedService</b> () const </td></tr>
+<tr class="separator:a4831783cce39d897dc35b57ce233d735"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9936a9bd6fca45f1d03a63b1b485ed88"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9936a9bd6fca45f1d03a63b1b485ed88"></a>
+QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>allKeys</b> () const </td></tr>
+<tr class="separator:a9936a9bd6fca45f1d03a63b1b485ed88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa889966b87d4315aea74c30088e9c8fa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa889966b87d4315aea74c30088e9c8fa"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>beginGroup</b> (const QString &amp;prefix)</td></tr>
+<tr class="separator:aa889966b87d4315aea74c30088e9c8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5b653c82d3a3d7765da47fe5db0e128"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af5b653c82d3a3d7765da47fe5db0e128"></a>
+QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>childGroups</b> () const </td></tr>
+<tr class="separator:af5b653c82d3a3d7765da47fe5db0e128"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09f8085bca6d1c8b4837beabcea7b639"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a09f8085bca6d1c8b4837beabcea7b639"></a>
+QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>childKeys</b> () const </td></tr>
+<tr class="separator:a09f8085bca6d1c8b4837beabcea7b639"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8bb3912a3ce86b15842e79d0b421204"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac8bb3912a3ce86b15842e79d0b421204"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
+<tr class="separator:ac8bb3912a3ce86b15842e79d0b421204"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab9f06bc42480ab555a9757e14303e5f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab9f06bc42480ab555a9757e14303e5f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>contains</b> (const QString &amp;key) const </td></tr>
+<tr class="separator:aab9f06bc42480ab555a9757e14303e5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af964cd7bde81d0f118ea09e201e155dd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af964cd7bde81d0f118ea09e201e155dd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>endGroup</b> ()</td></tr>
+<tr class="separator:af964cd7bde81d0f118ea09e201e155dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5adb315467de1866550658b4679bf9f9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5adb315467de1866550658b4679bf9f9"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>group</b> () const </td></tr>
+<tr class="separator:a5adb315467de1866550658b4679bf9f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa741717fa726eea03300fdde9934808a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa741717fa726eea03300fdde9934808a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isWritable</b> () const </td></tr>
+<tr class="separator:aa741717fa726eea03300fdde9934808a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89c0a3a6c660a5f577e5241a63052f2c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a89c0a3a6c660a5f577e5241a63052f2c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>remove</b> (const QString &amp;key)</td></tr>
+<tr class="separator:a89c0a3a6c660a5f577e5241a63052f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48d1031ae51455e458b881c49c65a92e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a48d1031ae51455e458b881c49c65a92e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setValue</b> (const QString &amp;key, const QVariant &amp;value)</td></tr>
+<tr class="separator:a48d1031ae51455e458b881c49c65a92e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11e51b34244f3e9288dacb30b6230085"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11e51b34244f3e9288dacb30b6230085"></a>
+QVariant&#160;</td><td class="memItemRight" valign="bottom"><b>value</b> (const QString &amp;key, const QVariant &amp;defaultValue=QVariant(), SettingSource *source=0) const </td></tr>
+<tr class="separator:a11e51b34244f3e9288dacb30b6230085"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d1dedb9c7a20fc62310946d4e6881a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d1dedb9c7a20fc62310946d4e6881a6"></a>
+SettingSource&#160;</td><td class="memItemRight" valign="bottom"><b>value</b> (const QString &amp;key, QVariant &amp;value) const </td></tr>
+<tr class="separator:a6d1dedb9c7a20fc62310946d4e6881a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b737faa22b94f329d0c377b94f9ecf3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b737faa22b94f329d0c377b94f9ecf3"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>valueAsString</b> (const QString &amp;key, QString default_value=QString::null, SettingSource *source=0) const </td></tr>
+<tr class="separator:a9b737faa22b94f329d0c377b94f9ecf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a950ddc85d587c0d9372c031ce431edfe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a950ddc85d587c0d9372c031ce431edfe"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>valueAsInt</b> (const QString &amp;key, int default_value=0, SettingSource *source=0) const </td></tr>
+<tr class="separator:a950ddc85d587c0d9372c031ce431edfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af26f7d7e660864d08b75dce98565684e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af26f7d7e660864d08b75dce98565684e"></a>
+quint64&#160;</td><td class="memItemRight" valign="bottom"><b>valueAsUInt64</b> (const QString &amp;key, quint64 default_value=0, SettingSource *source=0) const </td></tr>
+<tr class="separator:af26f7d7e660864d08b75dce98565684e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d639022739d7f3ef53ca0b0195f30ce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d639022739d7f3ef53ca0b0195f30ce"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>valueAsBool</b> (const QString &amp;key, bool default_value=false, SettingSource *source=0) const </td></tr>
+<tr class="separator:a7d639022739d7f3ef53ca0b0195f30ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e36b49426df748e27d189b2b11faf92"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e36b49426df748e27d189b2b11faf92"></a>
+<a class="el" href="../../sdk-15.04.1/Accounts.Watch/index.html">Watch</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>watchKey</b> (const QString &amp;key=QString())</td></tr>
+<tr class="separator:a5e36b49426df748e27d189b2b11faf92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad55f80ed3cd8b6c4f247763b747016af"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad55f80ed3cd8b6c4f247763b747016af"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>sync</b> ()</td></tr>
+<tr class="separator:ad55f80ed3cd8b6c4f247763b747016af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c182d464e5a7978fdf1817ce50d9531"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c182d464e5a7978fdf1817ce50d9531"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>syncAndBlock</b> ()</td></tr>
+<tr class="separator:a4c182d464e5a7978fdf1817ce50d9531"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fcb45e5d2428352eb36b487d1d4eea3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1fcb45e5d2428352eb36b487d1d4eea3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>remove</b> ()</td></tr>
+<tr class="separator:a1fcb45e5d2428352eb36b487d1d4eea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ebb90703ca3ec222b5822474e058547"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ebb90703ca3ec222b5822474e058547"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>sign</b> (const QString &amp;key, const char *token)</td></tr>
+<tr class="separator:a4ebb90703ca3ec222b5822474e058547"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f1aed052f72d4a55a35a2a1621fc391"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f1aed052f72d4a55a35a2a1621fc391"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>verify</b> (const QString &amp;key, const char **token)</td></tr>
+<tr class="separator:a4f1aed052f72d4a55a35a2a1621fc391"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af491d2638521b57cfa5f01e47a539b33"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af491d2638521b57cfa5f01e47a539b33"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>verifyWithTokens</b> (const QString &amp;key, QList&lt; const char * &gt; tokens)</td></tr>
+<tr class="separator:af491d2638521b57cfa5f01e47a539b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Monitors an account key or group of keys. </p>
+<p>A watch is created via the Account::watch method and is a simple object which will emit the notify() signal when the value of the key (or group) that it is monitoring is changed. </p>
+<p>Definition at line 70 of file account.h.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a483d9a1edcbc46d7070eb70ae23b5989"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint credentialsId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Q_SIGNALS: void notify(const char *key); };</p>
+<p>class ACCOUNTS_EXPORT Account: public QObject { Q_OBJECT</p>
+<p>public: Account(<a class="el" href="../../sdk-15.04.1/Accounts.Manager/index.html" title="Manager of accounts, services and providers. ">Manager</a> *manager, const QString &amp;provider, QObject *parent = 0); virtual ~Account();</p>
+<p>static Account *fromId(<a class="el" href="../../sdk-15.04.1/Accounts.Manager/index.html" title="Manager of accounts, services and providers. ">Manager</a> *manager, AccountId id, QObject *parent = 0);</p>
+<p>AccountId id() const;</p>
+<p><a class="el" href="../../sdk-15.04.1/Accounts.Manager/index.html" title="Manager of accounts, services and providers. ">Manager</a> *manager() const;</p>
+<p>bool supportsService(const QString &amp;serviceType) const;</p>
+<p>ServiceList services(const QString &amp;serviceType = QString()) const; ServiceList enabledServices() const;</p>
+<p>bool enabled() const; bool isEnabled() const; void setEnabled(bool);</p>
+<p>/*! Gets the account's credentials ID in Signon database.</p>
+<p>The credentials ID is first read from the currently selected service; if it is not found, then it is ready from the global account settings. In any case, the currently selected service is not altered. </p>
+</div>
+</div>
+<a class="anchor" id="a54a9de969058292a257d9d692785ca63"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setCredentialsId </td>
+          <td>(</td>
+          <td class="paramtype">const uint&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the accounts credentials ID. </p>
+<p>The change will be written only when sync() is called.</p>
+<p>This method operates on the currently selected service. </p>
+<p>Definition at line 134 of file account.h.</p>
+</div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

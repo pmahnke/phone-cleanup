@@ -1,0 +1,790 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>DelegateModel [sdk-15.04.6/QtQml.DelegateModel] | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a href="../index.html">SDK 15.04.6</a> &rsaquo;</li>
+
+<li><a href="../QtQml/index.html">QtQml</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">DelegateModel</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qml-qtqml-models-delegatemodel.html -->
+	<!-- Source Format: qdoc -->
+<h1>DelegateModel</h1>
+<div id="element_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$DelegateModel-brief -->
+<p>Encapsulates a model and delegate More...</p>
+<!-- @@@DelegateModel -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import QtQml.Models 2.1</td></tr></table></div><ul>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#count-prop">count</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#delegate-prop">delegate</a></b></b> : Component</li>
+<li class="fn"><b><b><a href="index.html#filterOnGroup-prop">filterOnGroup</a></b></b> : string</li>
+<li class="fn"><b><b><a href="index.html#groups-prop">groups</a></b></b> : list&lt;DelegateModelGroup&gt;</li>
+<li class="fn"><b><b><a href="index.html#items-prop">items</a></b></b> : DelegateModelGroup</li>
+<li class="fn"><b><b><a href="index.html#model-prop">model</a></b></b> : model</li>
+<li class="fn"><b><b><a href="index.html#parts-prop">parts</a></b></b> : object</li>
+<li class="fn"><b><b><a href="index.html#persistedItems-prop">persistedItems</a></b></b> : DelegateModelGroup</li>
+<li class="fn"><b><b><a href="index.html#rootIndex-prop">rootIndex</a></b></b> : QModelIndex</li>
+</ul>
+<a name="attached-properties"></a>
+<h2 id="attached-properties">Attached Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#groups-attached-prop">groups</a></b></b> : stringlist</li>
+<li class="fn"><b><b><a href="index.html#inItems-attached-prop">inItems</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#inPersistedItems-attached-prop">inPersistedItems</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#isUnresolved-attached-prop">isUnresolved</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#itemsIndex-attached-prop">itemsIndex</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#model-attached-prop">model</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#persistedItemsIndex-attached-prop">persistedItemsIndex</a></b></b> : int</li>
+</ul>
+<a name="methods"></a>
+<h2 id="methods">Methods</h2>
+<ul>
+<li class="fn">QModelIndex <b><b><a href="index.html#modelIndex-method">modelIndex</a></b></b>(int <i>index</i>)</li>
+<li class="fn">QModelIndex <b><b><a href="index.html#parentModelIndex-method">parentModelIndex</a></b></b>()</li>
+</ul>
+<!-- $$$DelegateModel-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<p>The <a href="index.html">DelegateModel</a> type encapsulates a model and the delegate that will be instantiated for items in the model.</p>
+<p>It is usually not necessary to create a <a href="index.html">DelegateModel</a>. However, it can be useful for manipulating and accessing the <a href="index.html#modelIndex-method">modelIndex</a> when a QAbstractItemModel subclass is used as the model. Also, <a href="index.html">DelegateModel</a> is used together with <a href="../QtQml.Package/index.html">Package</a> to provide delegates to multiple views, and with <a href="../QtQml.DelegateModelGroup/index.html">DelegateModelGroup</a> to sort and filter delegate items.</p>
+<p>The example below illustrates using a <a href="index.html">DelegateModel</a> with a ListView.</p>
+<pre class="qml">import QtQuick 2.0
+<span class="type">Rectangle</span> {
+    <span class="name">width</span>: <span class="number">200</span>; <span class="name">height</span>: <span class="number">100</span>
+    <span class="type"><a href="../QtQml.VisualDataModel/index.html">VisualDataModel</a></span> {
+        <span class="name">id</span>: <span class="name">visualModel</span>
+        <span class="name">model</span>: <span class="name">ListModel</span> {
+            <span class="type"><a href="../QtQml.ListElement/index.html">ListElement</a></span> { <span class="name">name</span>: <span class="string">&quot;Apple&quot;</span> }
+            <span class="type"><a href="../QtQml.ListElement/index.html">ListElement</a></span> { <span class="name">name</span>: <span class="string">&quot;Orange&quot;</span> }
+        }
+        <span class="name">delegate</span>: <span class="name">Rectangle</span> {
+            <span class="name">height</span>: <span class="number">25</span>
+            <span class="name">width</span>: <span class="number">100</span>
+            <span class="type">Text</span> { <span class="name">text</span>: <span class="string">&quot;Name: &quot;</span> <span class="operator">+</span> <span class="name">name</span>}
+        }
+    }
+    <span class="type">ListView</span> {
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">model</span>: <span class="name">visualModel</span>
+    }
+}</pre>
+<p><b>Note: </b>This type is also available as <a href="../QtQml.VisualDataModel/index.html">VisualDataModel</a> in the <a href="../QtQml.qtqml-index/index.html">Qt QML</a> module due to compatibility reasons.</p><!-- @@@DelegateModel -->
+<h2>Property Documentation</h2>
+<!-- $$$count -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="count-prop"><td class="tblQmlPropNode"><p><a name="count-prop"></a><span class="name">count</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@count -->
+<br/>
+<!-- $$$delegate -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="delegate-prop"><td class="tblQmlPropNode"><p><a name="delegate-prop"></a><span class="name">delegate</span> : <span class="type"><a href="../QtQml.Component/index.html">Component</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>The delegate provides a template defining each item instantiated by a view. The index is exposed as an accessible <code>index</code> property. Properties of the model are also available depending upon the type of Data Model.</p>
+</div></div><!-- @@@delegate -->
+<br/>
+<!-- $$$filterOnGroup -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="filterOnGroup-prop"><td class="tblQmlPropNode"><p><a name="filterOnGroup-prop"></a><span class="name">filterOnGroup</span> : <span class="type">string</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the name of the group used to filter the visual data model.</p>
+<p>Only items which belong to this group are visible to a view.</p>
+<p>By default this is the <a href="index.html#items-prop">items</a> group.</p>
+</div></div><!-- @@@filterOnGroup -->
+<br/>
+<!-- $$$groups -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="groups-prop"><td class="tblQmlPropNode"><p><a name="groups-prop"></a><span class="name">groups</span> : <span class="type">list</span>&lt;<span class="type"><a href="../QtQml.DelegateModelGroup/index.html">DelegateModelGroup</a></span>&gt;</p></td></tr></table></div></div><div class="qmldoc"><p>This property holds a delegate model's group definitions.</p>
+<p>Groups define a sub-set of the items in a delegate model and can be used to filter a model.</p>
+<p>For every group defined in a <a href="index.html">DelegateModel</a> two attached properties are added to each delegate item. The first of the form <a href="index.html">DelegateModel</a>.in<i>GroupName</i> holds whether the item belongs to the group and the second <a href="index.html">DelegateModel</a>.<i>groupName</i>Index holds the index of the item in that group.</p>
+<p>The following example illustrates using groups to select items in a model.</p>
+<pre class="qml">import QtQuick 2.0
+<span class="type">Rectangle</span> {
+    <span class="name">width</span>: <span class="number">200</span>; <span class="name">height</span>: <span class="number">100</span>
+    <span class="type"><a href="../QtQml.VisualDataModel/index.html">VisualDataModel</a></span> {
+        <span class="name">id</span>: <span class="name">visualModel</span>
+        <span class="name">model</span>: <span class="name">ListModel</span> {
+            <span class="type"><a href="../QtQml.ListElement/index.html">ListElement</a></span> { <span class="name">name</span>: <span class="string">&quot;Apple&quot;</span> }
+            <span class="type"><a href="../QtQml.ListElement/index.html">ListElement</a></span> { <span class="name">name</span>: <span class="string">&quot;Orange&quot;</span> }
+        }
+        <span class="name">groups</span>: [
+            <span class="type"><a href="../QtQml.VisualDataGroup/index.html">VisualDataGroup</a></span> { <span class="name">name</span>: <span class="string">&quot;selected&quot;</span> }
+        ]
+        <span class="name">delegate</span>: <span class="name">Rectangle</span> {
+            <span class="name">id</span>: <span class="name">item</span>
+            <span class="name">height</span>: <span class="number">25</span>
+            <span class="name">width</span>: <span class="number">200</span>
+            <span class="type">Text</span> {
+                <span class="name">text</span>: {
+                    var <span class="name">text</span> = <span class="string">&quot;Name: &quot;</span> <span class="operator">+</span> <span class="name">name</span>
+                    <span class="keyword">if</span> (<span class="name">item</span>.<span class="name">VisualDataModel</span>.<span class="name">inSelected</span>)
+                        <span class="name">text</span> <span class="operator">+=</span> <span class="string">&quot; (&quot;</span> <span class="operator">+</span> <span class="name">item</span>.<span class="name">VisualDataModel</span>.<span class="name">selectedIndex</span> <span class="operator">+</span> <span class="string">&quot;)&quot;</span>
+                    <span class="keyword">return</span> <span class="name">text</span>;
+                }
+            }
+            <span class="type">MouseArea</span> {
+                <span class="name">anchors</span>.fill: <span class="name">parent</span>
+                <span class="name">onClicked</span>: <span class="name">item</span>.<span class="name">VisualDataModel</span>.<span class="name">inSelected</span> <span class="operator">=</span> !<span class="name">item</span>.<span class="name">VisualDataModel</span>.<span class="name">inSelected</span>
+            }
+        }
+    }
+    <span class="type">ListView</span> {
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">model</span>: <span class="name">visualModel</span>
+    }
+}</pre>
+</div></div><!-- @@@groups -->
+<br/>
+<!-- $$$items -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="items-prop"><td class="tblQmlPropNode"><p><a name="items-prop"></a><span class="name">items</span> : <span class="type"><a href="../QtQml.DelegateModelGroup/index.html">DelegateModelGroup</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds visual data model's default group to which all new items are added.</p>
+</div></div><!-- @@@items -->
+<br/>
+<!-- $$$model -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="model-prop"><td class="tblQmlPropNode"><p><a name="model-prop"></a><span class="name">model</span> : <span class="type"><a href="index.html#model-attached-prop">model</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the model providing data for the <a href="index.html">DelegateModel</a>.</p>
+<p>The model provides a set of data that is used to create the items for a view. For large or dynamic datasets the model is usually provided by a C++ model object. The C++ model object must be a QAbstractItemModel subclass or a simple list.</p>
+<p>Models can also be created directly in QML, using a <a href="../QtQml.ListModel/index.html">ListModel</a> or XmlListModel.</p>
+<p><b>See also </b>Data Models.</p>
+</div></div><!-- @@@model -->
+<br/>
+<!-- $$$parts -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="parts-prop"><td class="tblQmlPropNode"><p><a name="parts-prop"></a><span class="name">parts</span> : <span class="type">object</span></p></td></tr></table></div></div><div class="qmldoc"><p>The <i>parts</i> property selects a <a href="index.html">DelegateModel</a> which creates delegates from the part named. This is used in conjunction with the <a href="../QtQml.Package/index.html">Package</a> type.</p>
+<p>For example, the code below selects a model which creates delegates named <i>list</i> from a <a href="../QtQml.Package/index.html">Package</a>:</p>
+<pre class="cpp">DelegateModel {
+    id: visualModel
+    delegate: Package {
+        Item { Package<span class="operator">.</span>name: <span class="string">&quot;list&quot;</span> }
+    }
+    model: myModel
+}
+ListView {
+    width: <span class="number">200</span>; height:<span class="number">200</span>
+    model: visualModel<span class="operator">.</span>parts<span class="operator">.</span>list
+}</pre>
+<p><b>See also </b><a href="../QtQml.Package/index.html">Package</a>.</p>
+</div></div><!-- @@@parts -->
+<br/>
+<!-- $$$persistedItems -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="persistedItems-prop"><td class="tblQmlPropNode"><p><a name="persistedItems-prop"></a><span class="name">persistedItems</span> : <span class="type"><a href="../QtQml.DelegateModelGroup/index.html">DelegateModelGroup</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds visual data model's persisted items group.</p>
+<p>Items in this group are not destroyed when released by a view, instead they are persisted until removed from the group.</p>
+<p>An item can be removed from the persistedItems group by setting the <a href="index.html">DelegateModel</a>.<a href="index.html#inPersistedItems-attached-prop">inPersistedItems</a> property to false. If the item is not referenced by a view at that time it will be destroyed. Adding an item to this group will not create a new instance.</p>
+<p>Items returned by the <a href="../QtQml.DelegateModelGroup/index.html#create-method">QtQml.Models::DelegateModelGroup::create()</a> function are automatically added to this group.</p>
+</div></div><!-- @@@persistedItems -->
+<br/>
+<!-- $$$rootIndex -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="rootIndex-prop"><td class="tblQmlPropNode"><p><a name="rootIndex-prop"></a><span class="name">rootIndex</span> : <span class="type">QModelIndex</span></p></td></tr></table></div></div><div class="qmldoc"><p>QAbstractItemModel provides a hierarchical tree of data, whereas QML only operates on list data. <code>rootIndex</code> allows the children of any node in a QAbstractItemModel to be provided by this model.</p>
+<p>This property only affects models of type QAbstractItemModel that are hierarchical (e.g, a tree model).</p>
+<p>For example, here is a simple interactive file system browser. When a directory name is clicked, the view's <code>rootIndex</code> is set to the QModelIndex node of the clicked directory, thus updating the view to show the new directory's contents.</p>
+<p><code>main.cpp</code>:</p>
+<pre class="cpp"><span class="type">int</span> main(<span class="type">int</span> argc<span class="operator">,</span> <span class="type">char</span> <span class="operator">*</span><span class="operator">*</span> argv)
+{
+    <span class="type">QApplication</span> app(argc<span class="operator">,</span> argv);
+    <span class="type">QQuickView</span> view;
+    <span class="type">QDirModel</span> model;
+    view<span class="operator">.</span>rootContext()<span class="operator">-</span><span class="operator">&gt;</span>setContextProperty(<span class="string">&quot;dirModel&quot;</span><span class="operator">,</span> <span class="operator">&amp;</span>model);
+    view<span class="operator">.</span>setSource(<span class="type">QUrl</span><span class="operator">::</span>fromLocalFile(<span class="string">&quot;view.qml&quot;</span>));
+    view<span class="operator">.</span>show();
+    <span class="keyword">return</span> app<span class="operator">.</span>exec();
+}</pre>
+<p><code>view.qml</code>:</p>
+<pre class="qml">import QtQuick 2.0
+<span class="type">ListView</span> {
+    <span class="name">id</span>: <span class="name">view</span>
+    <span class="name">width</span>: <span class="number">300</span>
+    <span class="name">height</span>: <span class="number">400</span>
+    <span class="name">model</span>: <span class="name">VisualDataModel</span> {
+        <span class="name">model</span>: <span class="name">dirModel</span>
+        <span class="name">delegate</span>: <span class="name">Rectangle</span> {
+            <span class="name">width</span>: <span class="number">200</span>; <span class="name">height</span>: <span class="number">25</span>
+            <span class="type">Text</span> { <span class="name">text</span>: <span class="name">filePath</span> }
+            <span class="type">MouseArea</span> {
+                <span class="name">anchors</span>.fill: <span class="name">parent</span>
+                <span class="name">onClicked</span>: {
+                    <span class="keyword">if</span> (<span class="name">model</span>.<span class="name">hasModelChildren</span>)
+                        <span class="name">view</span>.<span class="name">model</span>.<span class="name">rootIndex</span> <span class="operator">=</span> <span class="name">view</span>.<span class="name">model</span>.<span class="name">modelIndex</span>(<span class="name">index</span>)
+                }
+            }
+        }
+    }
+}</pre>
+<p>If the <a href="index.html#model-attached-prop">model</a> is a QAbstractItemModel subclass, the delegate can also reference a <code>hasModelChildren</code> property (optionally qualified by a <i>model</i>. prefix) that indicates whether the delegate's model item has any child nodes.</p>
+<p><b>See also </b><a href="index.html#modelIndex-method">modelIndex()</a> and <a href="index.html#parentModelIndex-method">parentModelIndex()</a>.</p>
+</div></div><!-- @@@rootIndex -->
+<br/>
+<h2>Attached Property Documentation</h2>
+<!-- $$$groups -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="groups-attached-prop"><td class="tblQmlPropNode"><p><a name="groups-attached-prop"></a><span class="name">DelegateModel.groups</span> : <span class="type">stringlist</span></p></td></tr></table></div></div><div class="qmldoc"><p>This attached property holds the name of DelegateModelGroups the item belongs to.</p>
+<p>It is attached to each instance of the delegate.</p>
+</div></div><!-- @@@groups -->
+<br/>
+<!-- $$$inItems -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="inItems-attached-prop"><td class="tblQmlPropNode"><p><a name="inItems-attached-prop"></a><span class="name">DelegateModel.inItems</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>This attached property holds whether the item belongs to the default <a href="index.html#items-prop">items</a> <a href="../QtQml.DelegateModelGroup/index.html">DelegateModelGroup</a>.</p>
+<p>Changing this property will add or remove the item from the items group.</p>
+<p>It is attached to each instance of the delegate.</p>
+</div></div><!-- @@@inItems -->
+<br/>
+<!-- $$$inPersistedItems -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="inPersistedItems-attached-prop"><td class="tblQmlPropNode"><p><a name="inPersistedItems-attached-prop"></a><span class="name">DelegateModel.inPersistedItems</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>This attached property holds whether the item belongs to the <a href="index.html#persistedItems-prop">persistedItems</a> <a href="../QtQml.DelegateModelGroup/index.html">DelegateModelGroup</a>.</p>
+<p>Changing this property will add or remove the item from the items group. Change with caution as removing an item from the <a href="index.html#persistedItems-prop">persistedItems</a> group will destroy the current instance if it is not referenced by a model.</p>
+<p>It is attached to each instance of the delegate.</p>
+</div></div><!-- @@@inPersistedItems -->
+<br/>
+<!-- $$$isUnresolved -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="isUnresolved-attached-prop"><td class="tblQmlPropNode"><p><a name="isUnresolved-attached-prop"></a><span class="name">DelegateModel.isUnresolved</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This attached property holds whether the visual item is bound to a data model index. Returns true if the item is not bound to the model, and false if it is.</p>
+<p>An unresolved item can be bound to the data model using the <a href="../QtQml.DelegateModelGroup/index.html#resolve-method">DelegateModelGroup::resolve()</a> function.</p>
+<p>It is attached to each instance of the delegate.</p>
+</div></div><!-- @@@isUnresolved -->
+<br/>
+<!-- $$$itemsIndex -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="itemsIndex-attached-prop"><td class="tblQmlPropNode"><p><a name="itemsIndex-attached-prop"></a><span class="name">DelegateModel.itemsIndex</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>This attached property holds the index of the item in the default <a href="index.html#items-prop">items</a> <a href="../QtQml.DelegateModelGroup/index.html">DelegateModelGroup</a>.</p>
+<p>It is attached to each instance of the delegate.</p>
+</div></div><!-- @@@itemsIndex -->
+<br/>
+<!-- $$$model -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="model-attached-prop"><td class="tblQmlPropNode"><p><a name="model-attached-prop"></a><span class="name">DelegateModel.model</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>This attached property holds the visual data model this delegate instance belongs to.</p>
+<p>It is attached to each instance of the delegate.</p>
+</div></div><!-- @@@model -->
+<br/>
+<!-- $$$persistedItemsIndex -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="persistedItemsIndex-attached-prop"><td class="tblQmlPropNode"><p><a name="persistedItemsIndex-attached-prop"></a><span class="name">DelegateModel.persistedItemsIndex</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>This attached property holds the index of the item in the <a href="index.html#persistedItems-prop">persistedItems</a> <a href="../QtQml.DelegateModelGroup/index.html">DelegateModelGroup</a>.</p>
+<p>It is attached to each instance of the delegate.</p>
+</div></div><!-- @@@persistedItemsIndex -->
+<br/>
+<h2>Method Documentation</h2>
+<!-- $$$modelIndex -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="modelIndex-method"><td class="tblQmlFuncNode"><p><a name="modelIndex-method"></a><span class="type">QModelIndex</span> <span class="name">modelIndex</span>(<span class="type">int</span><i> index</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>QAbstractItemModel provides a hierarchical tree of data, whereas QML only operates on list data. This function assists in using tree models in QML.</p>
+<p>Returns a QModelIndex for the specified index. This value can be assigned to <a href="index.html#rootIndex-prop">rootIndex</a>.</p>
+<p><b>See also </b><a href="index.html#rootIndex-prop">rootIndex</a>.</p>
+</div></div><!-- @@@modelIndex -->
+<br/>
+<!-- $$$parentModelIndex -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="parentModelIndex-method"><td class="tblQmlFuncNode"><p><a name="parentModelIndex-method"></a><span class="type">QModelIndex</span> <span class="name">parentModelIndex</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>QAbstractItemModel provides a hierarchical tree of data, whereas QML only operates on list data. This function assists in using tree models in QML.</p>
+<p>Returns a QModelIndex for the parent of the current <a href="index.html#rootIndex-prop">rootIndex</a>. This value can be assigned to <a href="index.html#rootIndex-prop">rootIndex</a>.</p>
+<p><b>See also </b><a href="index.html#rootIndex-prop">rootIndex</a>.</p>
+</div></div><!-- @@@parentModelIndex -->
+<br/>
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

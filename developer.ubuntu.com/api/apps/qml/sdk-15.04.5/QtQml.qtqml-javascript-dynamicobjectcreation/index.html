@@ -1,0 +1,674 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Dynamic QML Object Creation from JavaScript | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a class="sub-nav-item" href="../index.html">SDK 15.04.5</a> &rsaquo;</li>
+
+<li><a class="sub-nav-item" href="../QtQml/index.html">QtQml</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Dynamic QML Object Creation from JavaScript</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qtqml-javascript-dynamicobjectcreation.html -->
+	<!-- Source Format: qdoc -->
+<h1>Dynamic QML Object Creation from JavaScript</h1>
+<div id="page_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$qtqml-javascript-dynamicobjectcreation.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>QML supports the dynamic creation of objects from within JavaScript. This is useful to delay instantiation of objects until necessary, thereby improving application startup time. It also allows visual objects to be dynamically created and added to the scene in reaction to user input or other events.</p>
+<p>See the <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04.5/QtQml.dynamicscene/">Dynamic Scene example</a> for a demonstration of the concepts discussed on this page.</p>
+<a name="creating-objects-dynamically"></a>
+<h2 id="creating-objects-dynamically">Creating Objects Dynamically</h2>
+<p>There are two ways to create objects dynamically from JavaScript. You can either call <a href="../QtQml.Qt/index.html#createComponent-method">Qt.createComponent()</a> to dynamically create a <a href="../QtQml.Component/index.html">Component</a> object, or use <a href="../QtQml.Qt/index.html#createQmlObject-method">Qt.createQmlObject()</a> to create an object from a string of QML. Creating a component is better if you have an existing component defined in a QML document and you want to dynamically create instances of that component. Otherwise, creating an object from a string of QML is useful when the object QML itself is generated at runtime.</p>
+<a name="creating-a-component-dynamically"></a>
+<h3 >Creating a Component Dynamically</h3>
+<p>To dynamically load a component defined in a QML file, call the <a href="../QtQml.Qt/index.html#createComponent-method">Qt.createComponent()</a> function in the <a href="../QtQml.Qt/index.html#qmlglobalqtobject">Qt object</a>. This function takes the URL of the QML file as its only argument and creates a <a href="../QtQml.Component/index.html">Component</a> object from this URL.</p>
+<p>Once you have a <a href="../QtQml.Component/index.html">Component</a>, you can call its <a href="../QtQml.Component/index.html#createObject-method">createObject()</a> method to create an instance of the component. This function can take one or two arguments:</p>
+<ul>
+<li>The first is the parent for the new object. The parent can be a graphical object (i.e&#x2e; of the Item type) or non-graphical object (i.e&#x2e; of the <a href="../QtQml.QtObject/index.html">QtObject</a> or C++ QObject type). Only graphical objects with graphical parent objects will be rendered to the Qt Quick visual canvas. If you wish to set the parent later you can safely pass <code>null</code> to this function.</li>
+<li>The second is optional and is a map of property-value pairs that define initial any property values for the object. Property values specified by this argument are applied to the object before its creation is finalized, avoiding binding errors that may occur if particular properties must be initialized to enable other property bindings. Additionally, there are small performance benefits when compared to defining property values and bindings after the object is created.</li>
+</ul>
+<p>Here is an example. First there is <code>Sprite.qml</code>, which defines a simple QML component:</p>
+<pre class="qml">import QtQuick 2.0
+<span class="type">Rectangle</span> { <span class="name">width</span>: <span class="number">80</span>; <span class="name">height</span>: <span class="number">50</span>; <span class="name">color</span>: <span class="string">&quot;red&quot;</span> }</pre>
+<p>Our main application file, <code>main.qml</code>, imports a <code>componentCreation.js</code> JavaScript file that will create <code>Sprite</code> objects:</p>
+<pre class="qml">import QtQuick 2.0
+import &quot;componentCreation.js&quot; as MyScript
+<span class="type">Rectangle</span> {
+    <span class="name">id</span>: <span class="name">appWindow</span>
+    <span class="name">width</span>: <span class="number">300</span>; <span class="name">height</span>: <span class="number">300</span>
+    <span class="name">Component</span>.onCompleted: <span class="name">MyScript</span>.<span class="name">createSpriteObjects</span>();
+}</pre>
+<p>Here is <code>componentCreation.js</code>. Notice it checks whether the component <a href="../QtQml.Component/index.html#status-prop">status</a> is <code>Component.Ready</code> before calling <a href="../QtQml.Component/index.html#createObject-method">createObject()</a> in case the QML file is loaded over a network and thus is not ready immediately.</p>
+<pre class="js">var <span class="name">component</span>;
+var <span class="name">sprite</span>;
+<span class="keyword">function</span> <span class="name">createSpriteObjects</span>() {
+    <span class="name">component</span> <span class="operator">=</span> <span class="name">Qt</span>.<span class="name">createComponent</span>(<span class="string">&quot;Sprite.qml&quot;</span>);
+    <span class="keyword">if</span> (<span class="name">component</span>.<span class="name">status</span> <span class="operator">==</span> <span class="name">Component</span>.<span class="name">Ready</span>)
+        <span class="name">finishCreation</span>();
+    <span class="keyword">else</span>
+        <span class="name">component</span>.<span class="name">statusChanged</span>.<span class="name">connect</span>(<span class="name">finishCreation</span>);
+}
+<span class="keyword">function</span> <span class="name">finishCreation</span>() {
+    <span class="keyword">if</span> (<span class="name">component</span>.<span class="name">status</span> <span class="operator">==</span> <span class="name">Component</span>.<span class="name">Ready</span>) {
+        <span class="name">sprite</span> <span class="operator">=</span> <span class="name">component</span>.<span class="name">createObject</span>(<span class="name">appWindow</span>, {&quot;x&quot;: <span class="number">100</span>, &quot;y&quot;: <span class="number">100</span>});
+        <span class="keyword">if</span> (<span class="name">sprite</span> <span class="operator">==</span> <span class="number">null</span>) {
+            <span class="comment">// Error Handling</span>
+            <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;Error creating object&quot;</span>);
+        }
+    } <span class="keyword">else</span> <span class="keyword">if</span> (<span class="name">component</span>.<span class="name">status</span> <span class="operator">==</span> <span class="name">Component</span>.<span class="name">Error</span>) {
+        <span class="comment">// Error Handling</span>
+        <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;Error loading component:&quot;</span>, <span class="name">component</span>.<span class="name">errorString</span>());
+    }
+}</pre>
+<p>If you are certain the QML file to be loaded is a local file, you could omit the <code>finishCreation()</code> function and call <a href="../QtQml.Component/index.html#createObject-method">createObject()</a> immediately:</p>
+<pre class="js"><span class="keyword">function</span> <span class="name">createSpriteObjects</span>() {
+    <span class="name">component</span> <span class="operator">=</span> <span class="name">Qt</span>.<span class="name">createComponent</span>(<span class="string">&quot;Sprite.qml&quot;</span>);
+    <span class="name">sprite</span> <span class="operator">=</span> <span class="name">component</span>.<span class="name">createObject</span>(<span class="name">appWindow</span>, {&quot;x&quot;: <span class="number">100</span>, &quot;y&quot;: <span class="number">100</span>});
+    <span class="keyword">if</span> (<span class="name">sprite</span> <span class="operator">==</span> <span class="number">null</span>) {
+        <span class="comment">// Error Handling</span>
+        <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;Error creating object&quot;</span>);
+    }
+}</pre>
+<p>Notice in both instances, <a href="../QtQml.Component/index.html#createObject-method">createObject()</a> is called with <code>appWindow</code> passed as the parent argument, since the dynamically created object is a visual (Qt Quick) object. The created object will become a child of the <code>appWindow</code> object in <code>main.qml</code>, and appear in the scene.</p>
+<p>When using files with relative paths, the path should be relative to the file where <a href="../QtQml.Qt/index.html#createComponent-method">Qt.createComponent()</a> is executed.</p>
+<p>To connect signals to (or receive signals from) dynamically created objects, use the signal <code>connect()</code> method. See <a href="../QtQml.qtqml-syntax-signals/index.html#connecting-signals-to-methods-and-signals">Connecting Signals to Methods and Signals</a> for more information.</p>
+<p>It is also possible to instantiate components without blocking via the <a href="../QtQml.Component/index.html#incubateObject-method">incubateObject()</a> function.</p>
+<a name="creating-an-object-from-a-string-of-qml"></a>
+<h3 >Creating an Object from a String of QML</h3>
+<p>If the QML is not defined until runtime, you can create a QML object from a string of QML using the <a href="../QtQml.Qt/index.html#createQmlObject-method">Qt.createQmlObject()</a> function, as in the following example:</p>
+<pre class="qml">var <span class="name">newObject</span> = <span class="name">Qt</span>.<span class="name">createQmlObject</span>(<span class="string">'import QtQuick 2.0; Rectangle {color: &quot;red&quot;; width: 20; height: 20}'</span>,
+    <span class="name">parentItem</span>, <span class="string">&quot;dynamicSnippet1&quot;</span>);</pre>
+<p>The first argument is the string of QML to create. Just like in a new file, you will need to import any types you wish to use. The second argument is the parent object for the new object, and the parent argument semantics which apply to components are similarly applicable for <code>createQmlObject()</code>. The third argument is the file path to associate with the new object; this is used for error reporting.</p>
+<p>If the string of QML imports files using relative paths, the path should be relative to the file in which the parent object (the second argument to the method) is defined.</p>
+<a name="maintaining-dynamically-created-objects"></a>
+<h2 id="maintaining-dynamically-created-objects">Maintaining Dynamically Created Objects</h2>
+<p>When managing dynamically created objects, you must ensure the creation context outlives the created object. Otherwise, if the creation context is destroyed first, the bindings in the dynamic object will no longer work.</p>
+<p>The actual creation context depends on how an object is created:</p>
+<ul>
+<li>If Qt.createComponent() is used, the creation context is the QQmlContext in which this method is called</li>
+<li>If <a href="../QtQml.Qt/index.html#createQmlObject-method">Qt.createQmlObject()</a> is called, the creation context is the context of the parent object passed to this method</li>
+<li>If a <code>Component{}</code> object is defined and <a href="../QtQml.Component/index.html#createObject-method">createObject()</a> or <a href="../QtQml.Component/index.html#incubateObject-method">incubateObject()</a> is called on that object, the creation context is the context in which the <code>Component</code> is defined</li>
+</ul>
+<p>Also, note that while dynamically created objects may be used the same as other objects, they do not have an id in QML.</p>
+<a name="deleting-objects-dynamically"></a>
+<h2 id="deleting-objects-dynamically">Deleting Objects Dynamically</h2>
+<p>In many user interfaces, it is sufficient to set a visual object's opacity to 0 or to move the visual object off the screen instead of deleting it. If you have lots of dynamically created objects, however, you may receive a worthwhile performance benefit if unused objects are deleted.</p>
+<p>Note that you should never manually delete objects that were dynamically created by convenience QML object factories (such as Loader and Repeater). Also, you should avoid deleting objects that you did not dynamically create yourself.</p>
+<p>Items can be deleted using the <code>destroy()</code> method. This method has an optional argument (which defaults to 0) that specifies the approximate delay in milliseconds before the object is to be destroyed.</p>
+<p>Here is an example. The <code>application.qml</code> creates five instances of the <code>SelfDestroyingRect.qml</code> component. Each instance runs a NumberAnimation, and when the animation has finished, calls <code>destroy()</code> on its root object to destroy itself:</p>
+<div class="table"><table class="generic">
+ <tr valign="top" class="odd"><td ><code>application.qml</code></td><td ><code>SelfDestroyingRect.qml</code></td></tr>
+<tr valign="top" class="even"><td ><pre class="qml">import QtQuick 2.0
+<span class="type">Item</span> {
+    <span class="name">id</span>: <span class="name">container</span>
+    <span class="name">width</span>: <span class="number">500</span>; <span class="name">height</span>: <span class="number">100</span>
+    <span class="name">Component</span>.onCompleted: {
+        var <span class="name">component</span> = <span class="name">Qt</span>.<span class="name">createComponent</span>(<span class="string">&quot;SelfDestroyingRect.qml&quot;</span>);
+        <span class="keyword">for</span> (<span class="keyword">var</span> <span class="name">i</span>=<span class="number">0</span>; <span class="name">i</span><span class="operator">&lt;</span><span class="number">5</span>; i++) {
+            var <span class="name">object</span> = <span class="name">component</span>.<span class="name">createObject</span>(<span class="name">container</span>);
+            <span class="name">object</span>.<span class="name">x</span> <span class="operator">=</span> (<span class="name">object</span>.<span class="name">width</span> <span class="operator">+</span> <span class="number">10</span>) <span class="operator">*</span> <span class="name">i</span>;
+        }
+    }
+}</pre>
+</td><td ><pre class="qml">import QtQuick 2.0
+<span class="type">Rectangle</span> {
+    <span class="name">id</span>: <span class="name">rect</span>
+    <span class="name">width</span>: <span class="number">80</span>; <span class="name">height</span>: <span class="number">80</span>
+    <span class="name">color</span>: <span class="string">&quot;red&quot;</span>
+    NumberAnimation on <span class="name">opacity</span> {
+        <span class="name">to</span>: <span class="number">0</span>
+        <span class="name">duration</span>: <span class="number">1000</span>
+        <span class="name">onRunningChanged</span>: {
+            <span class="keyword">if</span> (!<span class="name">running</span>) {
+                <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;Destroying...&quot;</span>)
+                <span class="name">rect</span>.<span class="name">destroy</span>();
+            }
+        }
+    }
+}</pre>
+</td></tr>
+</table></div>
+<p>Alternatively, the <code>application.qml</code> could have destroyed the created object by calling <code>object.destroy()</code>.</p>
+<p>Note that it is safe to call destroy() on an object within that object. Objects are not destroyed the instant destroy() is called, but are cleaned up sometime between the end of that script block and the next frame (unless you specified a non-zero delay).</p>
+<p>Note also that if a <code>SelfDestroyingRect</code> instance was created statically like this:</p>
+<pre class="qml"><span class="type">Item</span> {
+    <span class="type">SelfDestroyingRect</span> {
+        <span class="comment">// ...</span>
+    }
+}</pre>
+<p>This would result in an error, since objects can only be dynamically destroyed if they were dynamically created.</p>
+<p>Objects created with <a href="../QtQml.Qt/index.html#createQmlObject-method">Qt.createQmlObject()</a> can similarly be destroyed using <code>destroy()</code>:</p>
+<pre class="qml">var <span class="name">newObject</span> = <span class="name">Qt</span>.<span class="name">createQmlObject</span>(<span class="string">'import QtQuick 2.0; Rectangle {color: &quot;red&quot;; width: 20; height: 20}'</span>,
+    <span class="name">parentItem</span>, <span class="string">&quot;dynamicSnippet1&quot;</span>);
+<span class="name">newObject</span>.<span class="name">destroy</span>(<span class="number">1000</span>);</pre>
+</div>
+<!-- @@@qtqml-javascript-dynamicobjectcreation.html -->
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

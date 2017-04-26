@@ -1,0 +1,927 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>MouseArea [sdk-15.04/QtQuick.MouseArea] | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a href="../index.html">SDK 15.04</a> &rsaquo;</li>
+
+<li><a href="../QtQuick/index.html">QtQuick</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">MouseArea</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qml-qtquick-mousearea.html -->
+	<!-- Source Format: qdoc -->
+<h1>MouseArea</h1>
+<div id="element_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$MouseArea-brief -->
+<p>Enables simple mouse handling More...</p>
+<!-- @@@MouseArea -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import QtQuick 2.4</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="../QtQuick.Item/index.html">Item</a></p>
+</td></tr></table></div><ul>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#acceptedButtons-prop">acceptedButtons</a></b></b> : Qt::MouseButtons</li>
+<li class="fn"><b><b><a href="index.html#containsMouse-prop">containsMouse</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#containsPress-prop">containsPress</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#cursorShape-prop">cursorShape</a></b></b> : Qt::CursorShape</li>
+<li class="fn"><b><b><a href="index.html#drag-prop">drag</a></b></b><ul>
+<li class="fn"><b><b><a href="index.html#drag.target-prop">drag.target</a></b></b> : Item</li>
+<li class="fn"><b><b><a href="index.html#drag.active-prop">drag.active</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#drag.axis-prop">drag.axis</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="index.html#drag.minimumX-prop">drag.minimumX</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#drag.maximumX-prop">drag.maximumX</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#drag.minimumY-prop">drag.minimumY</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#drag.maximumY-prop">drag.maximumY</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#drag.filterChildren-prop">drag.filterChildren</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#drag.threshold-prop">drag.threshold</a></b></b> : real</li>
+</ul>
+</li>
+<li class="fn"><b><b><a href="index.html#enabled-prop">enabled</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#hoverEnabled-prop">hoverEnabled</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#mouseX-prop">mouseX</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#mouseY-prop">mouseY</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#pressed-prop">pressed</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#pressedButtons-prop">pressedButtons</a></b></b> : MouseButtons</li>
+<li class="fn"><b><b><a href="index.html#preventStealing-prop">preventStealing</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#propagateComposedEvents-prop">propagateComposedEvents</a></b></b> : bool</li>
+</ul>
+<a name="signals"></a>
+<h2 id="signals">Signals</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#canceled-signal">canceled</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#clicked-signal">clicked</a></b></b>(MouseEvent <i>mouse</i>)</li>
+<li class="fn"><b><b><a href="index.html#doubleClicked-signal">doubleClicked</a></b></b>(MouseEvent <i>mouse</i>)</li>
+<li class="fn"><b><b><a href="index.html#entered-signal">entered</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#exited-signal">exited</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#positionChanged-signal">positionChanged</a></b></b>(MouseEvent <i>mouse</i>)</li>
+<li class="fn"><b><b><a href="index.html#pressAndHold-signal">pressAndHold</a></b></b>(MouseEvent <i>mouse</i>)</li>
+<li class="fn"><b><b><a href="index.html#pressed-signal">pressed</a></b></b>(MouseEvent <i>mouse</i>)</li>
+<li class="fn"><b><b><a href="index.html#released-signal">released</a></b></b>(MouseEvent <i>mouse</i>)</li>
+<li class="fn"><b><b><a href="index.html#wheel-signal">wheel</a></b></b>(WheelEvent <i>wheel</i>)</li>
+</ul>
+<!-- $$$MouseArea-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<p>A <a href="index.html">MouseArea</a> is an invisible item that is typically used in conjunction with a visible item in order to provide mouse handling for that item. By effectively acting as a proxy, the logic for mouse handling can be contained within a <a href="index.html">MouseArea</a> item.</p>
+<p>The <a href="index.html#enabled-prop">enabled</a> property is used to enable and disable mouse handling for the proxied item. When disabled, the mouse area becomes transparent to mouse events.</p>
+<p>The <a href="index.html#pressed-prop">pressed</a> read-only property indicates whether or not the user is holding down a mouse button over the mouse area. This property is often used in bindings between properties in a user interface. The <a href="index.html#containsMouse-prop">containsMouse</a> read-only property indicates the presence of the mouse cursor over the mouse area but, by default, only when a mouse button is held down; see the <a href="index.html#containsMouse-prop">containsMouse</a> documentation for details.</p>
+<p>Information about the mouse position and button clicks are provided via signals for which event handler properties are defined. The most commonly used involved handling mouse presses and clicks: onClicked, onDoubleClicked, onPressed, onReleased and onPressAndHold. It's also possible to handle mouse wheel events via the onWheel signal.</p>
+<p>If a <a href="index.html">MouseArea</a> overlaps with the area of other <a href="index.html">MouseArea</a> items, you can choose to propagate <code>clicked</code>, <code>doubleClicked</code> and <code>pressAndHold</code> events to these other items by setting <a href="index.html#propagateComposedEvents-prop">propagateComposedEvents</a> to true and rejecting events that should be propagated. See the <a href="index.html#propagateComposedEvents-prop">propagateComposedEvents</a> documentation for details.</p>
+<p>By default, <a href="index.html">MouseArea</a> items only report mouse clicks and not changes to the position of the mouse cursor. Setting the <a href="index.html#hoverEnabled-prop">hoverEnabled</a> property ensures that handlers defined for onPositionChanged, onEntered and onExited are used and that the <a href="index.html#containsMouse-prop">containsMouse</a> property is updated even when no mouse buttons are pressed.</p>
+<a name="example-usage"></a>
+<h2 id="example-usage">Example Usage</h2>
+<div class="float-right"><p><img src="https://developer.ubuntu.com/static/devportal_uploaded/efdd305c-3b9c-4e06-8396-cf4bd91fe406-api/apps/qml/sdk-15.04/QtQuick.MouseArea/images/qml-mousearea-snippet.png" alt="" /></p>
+</div><p>The following example uses a <a href="index.html">MouseArea</a> in a <a href="../QtQuick.Rectangle/index.html">Rectangle</a> that changes the <a href="../QtQuick.Rectangle/index.html">Rectangle</a> color to red when clicked:</p>
+<pre class="qml">import QtQuick 2.0
+<span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> {
+    <span class="name">width</span>: <span class="number">100</span>; <span class="name">height</span>: <span class="number">100</span>
+    <span class="name">color</span>: <span class="string">&quot;green&quot;</span>
+    <span class="type"><a href="index.html">MouseArea</a></span> {
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">onClicked</span>: { <span class="name">parent</span>.<span class="name">color</span> <span class="operator">=</span> <span class="string">'red'</span> }
+    }
+}</pre>
+<br style="clear: both" /><p>Many <a href="index.html">MouseArea</a> signals pass a <a href="../QtQuick.MouseEvent/index.html">mouse</a> parameter that contains additional information about the mouse event, such as the position, button, and any key modifiers.</p>
+<p>Here is an extension of the previous example that produces a different color when the area is right clicked:</p>
+<pre class="qml"><span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> {
+    <span class="name">width</span>: <span class="number">100</span>; <span class="name">height</span>: <span class="number">100</span>
+    <span class="name">color</span>: <span class="string">&quot;green&quot;</span>
+    <span class="type"><a href="index.html">MouseArea</a></span> {
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">acceptedButtons</span>: <span class="name">Qt</span>.<span class="name">LeftButton</span> <span class="operator">|</span> <span class="name">Qt</span>.<span class="name">RightButton</span>
+        <span class="name">onClicked</span>: {
+            <span class="keyword">if</span> (<span class="name">mouse</span>.<span class="name">button</span> <span class="operator">==</span> <span class="name">Qt</span>.<span class="name">RightButton</span>)
+                <span class="name">parent</span>.<span class="name">color</span> <span class="operator">=</span> <span class="string">'blue'</span>;
+            <span class="keyword">else</span>
+                <span class="name">parent</span>.<span class="name">color</span> <span class="operator">=</span> <span class="string">'red'</span>;
+        }
+    }
+}</pre>
+<p><b>See also </b><a href="../QtQuick.MouseEvent/index.html">MouseEvent</a>, <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.mousearea/">MouseArea example</a>, and <a href="../QtQuick.qtquick-input-topic/index.html">Important Concepts In Qt Quick - User Input</a>.</p>
+<!-- @@@MouseArea -->
+<h2>Property Documentation</h2>
+<!-- $$$acceptedButtons -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="acceptedButtons-prop"><td class="tblQmlPropNode"><p><a name="acceptedButtons-prop"></a><span class="name">acceptedButtons</span> : <span class="type">Qt::MouseButtons</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the mouse buttons that the mouse area reacts to.</p>
+<p>To specify that the <a href="index.html">MouseArea</a> will react to multiple buttons, Qt::MouseButtons flag values are combined using the &quot;|&quot; (or) operator:</p>
+<pre class="cpp">MouseArea { acceptedButtons: <span class="type">Qt</span><span class="operator">.</span>LeftButton <span class="operator">|</span> <span class="type">Qt</span><span class="operator">.</span>RightButton }</pre>
+<p>To indicate that all possible mouse buttons are to be accepted, the special value 'Qt.AllButtons' may be used:</p>
+<pre class="cpp">MouseArea { acceptedButtons: <span class="type">Qt</span><span class="operator">.</span>AllButtons }</pre>
+<p>The default value is <code>Qt.LeftButton</code>.</p>
+</div></div><!-- @@@acceptedButtons -->
+<br/>
+<!-- $$$containsMouse -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="containsMouse-prop"><td class="tblQmlPropNode"><p><a name="containsMouse-prop"></a><span class="name">containsMouse</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds whether the mouse is currently inside the mouse area.</p>
+<p><b>Warning:</b> This property is not updated if the area moves under the mouse: <i>containsMouse</i> will not change. In addition, if <a href="index.html#hoverEnabled-prop">hoverEnabled</a> is false, containsMouse will only be valid when the mouse is pressed while the mouse cursor is inside the <a href="index.html">MouseArea</a>.</p>
+</div></div><!-- @@@containsMouse -->
+<br/>
+<!-- $$$containsPress -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="containsPress-prop"><td class="tblQmlPropNode"><p><a name="containsPress-prop"></a><span class="name">containsPress</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This is a convenience property equivalent to <code>pressed &amp;&amp; containsMouse</code>, i.e&#x2e; it holds whether any of the <a href="index.html#acceptedButtons-prop">acceptedButtons</a> are currently pressed and the mouse is currently within the <a href="index.html">MouseArea</a>.</p>
+<p>This property is particularly useful for highlighting an item while the mouse is pressed within its bounds.</p>
+<p>This QML property was introduced in  Qt 5.4.</p>
+<p><b>See also </b><a href="index.html#pressed-prop">pressed</a> and <a href="index.html#containsMouse-prop">containsMouse</a>.</p>
+</div></div><!-- @@@containsPress -->
+<br/>
+<!-- $$$cursorShape -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="cursorShape-prop"><td class="tblQmlPropNode"><p><a name="cursorShape-prop"></a><span class="name">cursorShape</span> : <span class="type">Qt::CursorShape</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the cursor shape for this mouse area. Note that on platforms that do not display a mouse cursor this may have no effect.</p>
+<p>The available cursor shapes are:</p>
+<ul>
+<li>Qt.ArrowCursor</li>
+<li>Qt.UpArrowCursor</li>
+<li>Qt.CrossCursor</li>
+<li>Qt.WaitCursor</li>
+<li>Qt.IBeamCursor</li>
+<li>Qt.SizeVerCursor</li>
+<li>Qt.SizeHorCursor</li>
+<li>Qt.SizeBDiagCursor</li>
+<li>Qt.SizeFDiagCursor</li>
+<li>Qt.SizeAllCursor</li>
+<li>Qt.BlankCursor</li>
+<li>Qt.SplitVCursor</li>
+<li>Qt.SplitHCursor</li>
+<li>Qt.PointingHandCursor</li>
+<li>Qt.ForbiddenCursor</li>
+<li>Qt.WhatsThisCursor</li>
+<li>Qt.BusyCursor</li>
+<li>Qt.OpenHandCursor</li>
+<li>Qt.ClosedHandCursor</li>
+<li>Qt.DragCopyCursor</li>
+<li>Qt.DragMoveCursor</li>
+<li>Qt.DragLinkCursor</li>
+</ul>
+<p>In order to only set a mouse cursor shape for a region without reacting to mouse events set the <a href="index.html#acceptedButtons-prop">acceptedButtons</a> to none:</p>
+<pre class="cpp">MouseArea { cursorShape: <span class="type">Qt</span><span class="operator">.</span>IBeamCursor; acceptedButtons: <span class="type">Qt</span><span class="operator">.</span>NoButton }</pre>
+<p>The default value is <code>Qt.ArrowCursor</code>.</p>
+<p><b>See also </b>Qt::CursorShape.</p>
+</div></div><!-- @@@cursorShape -->
+<br/>
+<!-- $$$drag -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="even" id="drag-prop"><th class="centerAlign"><p><a name="drag-prop"></a><b>drag group</b></p></th></tr><tr valign="top" class="odd" id="drag.target-prop"><td class="tblQmlPropNode"><p><a name="drag.target-prop"></a><span class="name">drag.target</span> : <span class="type"><a href="../QtQuick.Item/index.html">Item</a></span></p></td></tr><tr valign="top" class="odd" id="drag.active-prop"><td class="tblQmlPropNode"><p><a name="drag.active-prop"></a><span class="name">drag.active</span> : <span class="type">bool</span></p></td></tr><tr valign="top" class="odd" id="drag.axis-prop"><td class="tblQmlPropNode"><p><a name="drag.axis-prop"></a><span class="name">drag.axis</span> : <span class="type">enumeration</span></p></td></tr><tr valign="top" class="odd" id="drag.minimumX-prop"><td class="tblQmlPropNode"><p><a name="drag.minimumX-prop"></a><span class="name">drag.minimumX</span> : <span class="type">real</span></p></td></tr><tr valign="top" class="odd" id="drag.maximumX-prop"><td class="tblQmlPropNode"><p><a name="drag.maximumX-prop"></a><span class="name">drag.maximumX</span> : <span class="type">real</span></p></td></tr><tr valign="top" class="odd" id="drag.minimumY-prop"><td class="tblQmlPropNode"><p><a name="drag.minimumY-prop"></a><span class="name">drag.minimumY</span> : <span class="type">real</span></p></td></tr><tr valign="top" class="odd" id="drag.maximumY-prop"><td class="tblQmlPropNode"><p><a name="drag.maximumY-prop"></a><span class="name">drag.maximumY</span> : <span class="type">real</span></p></td></tr><tr valign="top" class="odd" id="drag.filterChildren-prop"><td class="tblQmlPropNode"><p><a name="drag.filterChildren-prop"></a><span class="name">drag.filterChildren</span> : <span class="type">bool</span></p></td></tr><tr valign="top" class="odd" id="drag.threshold-prop"><td class="tblQmlPropNode"><p><a name="drag.threshold-prop"></a><span class="name">drag.threshold</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p><code>drag</code> provides a convenient way to make an item draggable.</p>
+<ul>
+<li><code>drag.target</code> specifies the id of the item to drag.</li>
+<li><code>drag.active</code> specifies if the target item is currently being dragged.</li>
+<li><code>drag.axis</code> specifies whether dragging can be done horizontally (<code>Drag.XAxis</code>), vertically (<code>Drag.YAxis</code>), or both (<code>Drag.XAndYAxis</code>)</li>
+<li><code>drag.minimum</code> and <code>drag.maximum</code> limit how far the target can be dragged along the corresponding axes.</li>
+</ul>
+<p>The following example displays a <a href="../QtQuick.Rectangle/index.html">Rectangle</a> that can be dragged along the X-axis. The opacity of the rectangle is reduced when it is dragged to the right.</p>
+<pre class="qml"><span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> {
+    <span class="name">id</span>: <span class="name">container</span>
+    <span class="name">width</span>: <span class="number">600</span>; <span class="name">height</span>: <span class="number">200</span>
+    <span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> {
+        <span class="name">id</span>: <span class="name">rect</span>
+        <span class="name">width</span>: <span class="number">50</span>; <span class="name">height</span>: <span class="number">50</span>
+        <span class="name">color</span>: <span class="string">&quot;red&quot;</span>
+        <span class="name">opacity</span>: (<span class="number">600.0</span> <span class="operator">-</span> <span class="name">rect</span>.<span class="name">x</span>) <span class="operator">/</span> <span class="number">600</span>
+        <span class="type"><a href="index.html">MouseArea</a></span> {
+            <span class="name">anchors</span>.fill: <span class="name">parent</span>
+            <span class="name">drag</span>.target: <span class="name">rect</span>
+            <span class="name">drag</span>.axis: <span class="name">Drag</span>.<span class="name">XAxis</span>
+            <span class="name">drag</span>.minimumX: <span class="number">0</span>
+            <span class="name">drag</span>.maximumX: <span class="name">container</span>.<span class="name">width</span> <span class="operator">-</span> <span class="name">rect</span>.<span class="name">width</span>
+        }
+    }
+}</pre>
+<p><b>Note: </b>Items cannot be dragged if they are anchored for the requested <code>drag.axis</code>. For example, if <code>anchors.left</code> or <code>anchors.right</code> was set for <code>rect</code> in the above example, it cannot be dragged along the X-axis. This can be avoided by settng the anchor value to <code>undefined</code> in an <a href="index.html#pressed-prop">onPressed</a> handler.</p><p>If <code>drag.filterChildren</code> is set to true, a drag can override descendant MouseAreas. This enables a parent <a href="index.html">MouseArea</a> to handle drags, for example, while descendants handle clicks:</p>
+<p><code>drag.threshold</code> determines the threshold in pixels of when the drag operation should start. By default this is bound to a platform dependent value. This property was added in Qt Quick 2.2&#x2e;</p>
+<p>If <code>drag.smoothed</code> is <code>true</code>, the target will be moved only after the drag operation has started. If set to <code>false</code>, the target will be moved straight to the current mouse position. By default, this property is <code>true</code>. This property was added in Qt Quick 2.4</p>
+<pre class="qml">import QtQuick 2.0
+<span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> {
+    <span class="name">width</span>: <span class="number">480</span>
+    <span class="name">height</span>: <span class="number">320</span>
+    <span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> {
+        <span class="name">x</span>: <span class="number">30</span>; <span class="name">y</span>: <span class="number">30</span>
+        <span class="name">width</span>: <span class="number">300</span>; <span class="name">height</span>: <span class="number">240</span>
+        <span class="name">color</span>: <span class="string">&quot;lightsteelblue&quot;</span>
+        <span class="type"><a href="index.html">MouseArea</a></span> {
+            <span class="name">anchors</span>.fill: <span class="name">parent</span>
+            <span class="name">drag</span>.target: <span class="name">parent</span>;
+            <span class="name">drag</span>.axis: <span class="string">&quot;XAxis&quot;</span>
+            <span class="name">drag</span>.minimumX: <span class="number">30</span>
+            <span class="name">drag</span>.maximumX: <span class="number">150</span>
+            <span class="name">drag</span>.filterChildren: <span class="number">true</span>
+            <span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> {
+                <span class="name">color</span>: <span class="string">&quot;yellow&quot;</span>
+                <span class="name">x</span>: <span class="number">50</span>; <span class="name">y</span> : <span class="number">50</span>
+                <span class="name">width</span>: <span class="number">100</span>; <span class="name">height</span>: <span class="number">100</span>
+                <span class="type"><a href="index.html">MouseArea</a></span> {
+                    <span class="name">anchors</span>.fill: <span class="name">parent</span>
+                    <span class="name">onClicked</span>: <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;Clicked&quot;</span>)
+                }
+            }
+        }
+    }
+}</pre>
+</div></div><!-- @@@drag -->
+<br/>
+<!-- $$$enabled -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="enabled-prop"><td class="tblQmlPropNode"><p><a name="enabled-prop"></a><span class="name">enabled</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds whether the item accepts mouse events.</p>
+<p><b>Note: </b>Due to historical reasons, this property is not equivalent to Item.enabled. It only affects mouse events, and its effect does not propagate to child items.</p><p>By default, this property is true.</p>
+</div></div><!-- @@@enabled -->
+<br/>
+<!-- $$$hoverEnabled -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="hoverEnabled-prop"><td class="tblQmlPropNode"><p><a name="hoverEnabled-prop"></a><span class="name">hoverEnabled</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds whether hover events are handled.</p>
+<p>By default, mouse events are only handled in response to a button event, or when a button is pressed. Hover enables handling of all mouse events even when no mouse button is pressed.</p>
+<p>This property affects the <a href="index.html#containsMouse-prop">containsMouse</a> property and the onEntered, onExited and onPositionChanged signals.</p>
+</div></div><!-- @@@hoverEnabled -->
+<br/>
+<!-- $$$mouseX -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="mouseX-prop"><td class="tblQmlPropNode"><p><a name="mouseX-prop"></a><span class="name">mouseX</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>These properties hold the coordinates of the mouse cursor.</p>
+<p>If the <a href="index.html#hoverEnabled-prop">hoverEnabled</a> property is false then these properties will only be valid while a button is pressed, and will remain valid as long as the button is held down even if the mouse is moved outside the area.</p>
+<p>By default, this property is false.</p>
+<p>If <a href="index.html#hoverEnabled-prop">hoverEnabled</a> is true then these properties will be valid when:</p>
+<ul>
+<li>no button is pressed, but the mouse is within the <a href="index.html">MouseArea</a> (<a href="index.html#containsMouse-prop">containsMouse</a> is true).</li>
+<li>a button is pressed and held, even if it has since moved out of the area.</li>
+</ul>
+<p>The coordinates are relative to the <a href="index.html">MouseArea</a>.</p>
+</div></div><!-- @@@mouseX -->
+<br/>
+<!-- $$$mouseY -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="mouseY-prop"><td class="tblQmlPropNode"><p><a name="mouseY-prop"></a><span class="name">mouseY</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>These properties hold the coordinates of the mouse cursor.</p>
+<p>If the <a href="index.html#hoverEnabled-prop">hoverEnabled</a> property is false then these properties will only be valid while a button is pressed, and will remain valid as long as the button is held down even if the mouse is moved outside the area.</p>
+<p>By default, this property is false.</p>
+<p>If <a href="index.html#hoverEnabled-prop">hoverEnabled</a> is true then these properties will be valid when:</p>
+<ul>
+<li>no button is pressed, but the mouse is within the <a href="index.html">MouseArea</a> (<a href="index.html#containsMouse-prop">containsMouse</a> is true).</li>
+<li>a button is pressed and held, even if it has since moved out of the area.</li>
+</ul>
+<p>The coordinates are relative to the <a href="index.html">MouseArea</a>.</p>
+</div></div><!-- @@@mouseY -->
+<br/>
+<!-- $$$pressed -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="pressed-prop"><td class="tblQmlPropNode"><p><a name="pressed-prop"></a><span class="name">pressed</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds whether any of the <a href="index.html#acceptedButtons-prop">acceptedButtons</a> are currently pressed.</p>
+</div></div><!-- @@@pressed -->
+<br/>
+<!-- $$$pressedButtons -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="pressedButtons-prop"><td class="tblQmlPropNode"><p><a name="pressedButtons-prop"></a><span class="name">pressedButtons</span> : <span class="type">MouseButtons</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the mouse buttons currently pressed.</p>
+<p>It contains a bitwise combination of:</p>
+<ul>
+<li>Qt.LeftButton</li>
+<li>Qt.RightButton</li>
+<li>Qt.MiddleButton</li>
+</ul>
+<p>The code below displays &quot;right&quot; when the right mouse buttons is pressed:</p>
+<pre class="qml"><span class="type"><a href="../QtQuick.Text/index.html">Text</a></span> {
+    <span class="name">text</span>: <span class="name">mouseArea</span>.<span class="name">pressedButtons</span> <span class="operator">&amp;</span> <span class="name">Qt</span>.<span class="name">RightButton</span> ? <span class="string">&quot;right&quot;</span> : <span class="string">&quot;&quot;</span>
+    <span class="name">horizontalAlignment</span>: <span class="name">Text</span>.<span class="name">AlignHCenter</span>
+    <span class="name">verticalAlignment</span>: <span class="name">Text</span>.<span class="name">AlignVCenter</span>
+    <span class="type"><a href="index.html">MouseArea</a></span> {
+        <span class="name">id</span>: <span class="name">mouseArea</span>
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">acceptedButtons</span>: <span class="name">Qt</span>.<span class="name">LeftButton</span> <span class="operator">|</span> <span class="name">Qt</span>.<span class="name">RightButton</span>
+    }
+}</pre>
+<p><b>Note: </b>this property only handles buttons specified in <a href="index.html#acceptedButtons-prop">acceptedButtons</a>.</p><p><b>See also </b><a href="index.html#acceptedButtons-prop">acceptedButtons</a>.</p>
+</div></div><!-- @@@pressedButtons -->
+<br/>
+<!-- $$$preventStealing -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="preventStealing-prop"><td class="tblQmlPropNode"><p><a name="preventStealing-prop"></a><span class="name">preventStealing</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds whether the mouse events may be stolen from this <a href="index.html">MouseArea</a>.</p>
+<p>If a <a href="index.html">MouseArea</a> is placed within an item that filters child mouse events, such as Flickable, the mouse events may be stolen from the <a href="index.html">MouseArea</a> if a gesture is recognized by the parent item, e.g&#x2e; a flick gesture. If preventStealing is set to true, no item will steal the mouse events.</p>
+<p>Note that setting preventStealing to true once an item has started stealing events will have no effect until the next press event.</p>
+<p>By default this property is false.</p>
+</div></div><!-- @@@preventStealing -->
+<br/>
+<!-- $$$propagateComposedEvents -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="propagateComposedEvents-prop"><td class="tblQmlPropNode"><p><a name="propagateComposedEvents-prop"></a><span class="name">propagateComposedEvents</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds whether composed mouse events will automatically propagate to other MouseAreas that overlap with this <a href="index.html">MouseArea</a> but are lower in the visual stacking order. By default, this property is false.</p>
+<p><a href="index.html">MouseArea</a> contains several composed events: <code>clicked</code>, <code>doubleClicked</code> and <code>pressAndHold</code>. These are composed of basic mouse events, like <code>pressed</code>, and can be propagated differently in comparison to basic events.</p>
+<p>If propagateComposedEvents is set to true, then composed events will be automatically propagated to other MouseAreas in the same location in the scene. Each event is propagated to the next <a href="index.html#enabled-prop">enabled</a> <a href="index.html">MouseArea</a> beneath it in the stacking order, propagating down this visual hierarchy until a <a href="index.html">MouseArea</a> accepts the event. Unlike <code>pressed</code> events, composed events will not be automatically accepted if no handler is present.</p>
+<p>For example, below is a yellow <a href="../QtQuick.Rectangle/index.html">Rectangle</a> that contains a blue <a href="../QtQuick.Rectangle/index.html">Rectangle</a>. The blue rectangle is the top-most item in the hierarchy of the visual stacking order; it will visually rendered above the yellow rectangle. Since the blue rectangle sets propagateComposedEvents to true, and also sets <a href="../QtQuick.MouseEvent/index.html#accepted-prop">MouseEvent::accepted</a> to false for all received <code>clicked</code> events, any <code>clicked</code> events it receives are propagated to the <a href="index.html">MouseArea</a> of the yellow rectangle beneath it.</p>
+<pre class="qml">import QtQuick 2.0
+<span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> {
+    <span class="name">color</span>: <span class="string">&quot;yellow&quot;</span>
+    <span class="name">width</span>: <span class="number">100</span>; <span class="name">height</span>: <span class="number">100</span>
+    <span class="type"><a href="index.html">MouseArea</a></span> {
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">onClicked</span>: <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;clicked yellow&quot;</span>)
+    }
+    <span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> {
+        <span class="name">color</span>: <span class="string">&quot;blue&quot;</span>
+        <span class="name">width</span>: <span class="number">50</span>; <span class="name">height</span>: <span class="number">50</span>
+        <span class="type"><a href="index.html">MouseArea</a></span> {
+            <span class="name">anchors</span>.fill: <span class="name">parent</span>
+            <span class="name">propagateComposedEvents</span>: <span class="number">true</span>
+            <span class="name">onClicked</span>: {
+                <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;clicked blue&quot;</span>)
+                <span class="name">mouse</span>.<span class="name">accepted</span> <span class="operator">=</span> <span class="number">false</span>
+            }
+        }
+    }
+}</pre>
+<p>Clicking on the blue rectangle will cause the <code>onClicked</code> handler of its child <a href="index.html">MouseArea</a> to be invoked; the event will then be propagated to the <a href="index.html">MouseArea</a> of the yellow rectangle, causing its own <code>onClicked</code> handler to be invoked.</p>
+<p>This property greatly simplifies the usecase of when you want to have overlapping MouseAreas handling the composed events together. For example: if you want one <a href="index.html">MouseArea</a> to handle <code>clicked</code> signals and the other to handle <code>pressAndHold</code>, or if you want one <a href="index.html">MouseArea</a> to handle <code>clicked</code> most of the time, but pass it through when certain conditions are met.</p>
+</div></div><!-- @@@propagateComposedEvents -->
+<br/>
+<h2>Signal Documentation</h2>
+<!-- $$$canceled -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="canceled-signal"><td class="tblQmlFuncNode"><p><a name="canceled-signal"></a><span class="name">canceled</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when mouse events have been canceled, either because an event was not accepted, or because another item stole the mouse event handling.</p>
+<p>This signal is for advanced use: it is useful when there is more than one <a href="index.html">MouseArea</a> that is handling input, or when there is a <a href="index.html">MouseArea</a> inside a <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.touchinteraction/#flickable">Flickable</a>. In the latter case, if you execute some logic in the <code>onPressed</code> signal handler and then start dragging, the <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.touchinteraction/#flickable">Flickable</a> will steal the mouse handling from the <a href="index.html">MouseArea</a>. In these cases, to reset the logic when the <a href="index.html">MouseArea</a> has lost the mouse handling to the <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.touchinteraction/#flickable">Flickable</a>, <code>canceled</code> should be handled in addition to <a href="index.html#released-signal">released</a>.</p>
+<p>The corresponding handler is <code>onCanceled</code>.</p>
+</div></div><!-- @@@canceled -->
+<br/>
+<!-- $$$clicked -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="clicked-signal"><td class="tblQmlFuncNode"><p><a name="clicked-signal"></a><span class="name">clicked</span>(<span class="type"><a href="../QtQuick.MouseEvent/index.html">MouseEvent</a></span><i> mouse</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when there is a click. A click is defined as a press followed by a release, both inside the <a href="index.html">MouseArea</a> (pressing, moving outside the <a href="index.html">MouseArea</a>, and then moving back inside and releasing is also considered a click).</p>
+<p>The <a href="../QtQuick.MouseEvent/index.html">mouse</a> parameter provides information about the click, including the x and y position of the release of the click, and whether the click was held.</p>
+<p>When handling this signal, changing the <a href="../QtQuick.MouseEvent/index.html#accepted-prop">accepted</a> property of the <i>mouse</i> parameter has no effect.</p>
+<p>The corresponding handler is <code>onClicked</code>.</p>
+</div></div><!-- @@@clicked -->
+<br/>
+<!-- $$$doubleClicked -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="doubleClicked-signal"><td class="tblQmlFuncNode"><p><a name="doubleClicked-signal"></a><span class="name">doubleClicked</span>(<span class="type"><a href="../QtQuick.MouseEvent/index.html">MouseEvent</a></span><i> mouse</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when there is a double-click (a press followed by a release followed by a press). The <a href="../QtQuick.MouseEvent/index.html">mouse</a> parameter provides information about the click, including the x and y position of the release of the click, and whether the click was held.</p>
+<p>When handling this signal, if the <a href="../QtQuick.MouseEvent/index.html#accepted-prop">accepted</a> property of the <i>mouse</i> parameter is set to false, the pressed/released/clicked signals will be emitted for the second click; otherwise they are suppressed. The <code>accepted</code> property defaults to true.</p>
+<p>The corresponding handler is <code>onDoubleClicked</code>.</p>
+</div></div><!-- @@@doubleClicked -->
+<br/>
+<!-- $$$entered -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="entered-signal"><td class="tblQmlFuncNode"><p><a name="entered-signal"></a><span class="name">entered</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when the mouse enters the mouse area.</p>
+<p>By default this signal is only emitted if a button is currently pressed. Set <a href="index.html#hoverEnabled-prop">hoverEnabled</a> to true to emit this signal even when no mouse button is pressed.</p>
+<p>The corresponding handler is <code>onEntered</code>.</p>
+<p><b>See also </b><a href="index.html#hoverEnabled-prop">hoverEnabled</a>.</p>
+</div></div><!-- @@@entered -->
+<br/>
+<!-- $$$exited -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="exited-signal"><td class="tblQmlFuncNode"><p><a name="exited-signal"></a><span class="name">exited</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when the mouse exits the mouse area.</p>
+<p>By default this signal is only emitted if a button is currently pressed. Set <a href="index.html#hoverEnabled-prop">hoverEnabled</a> to true to emit this signal even when no mouse button is pressed.</p>
+<p>The example below shows a fairly typical relationship between two MouseAreas, with <code>mouseArea2</code> on top of <code>mouseArea1</code>. Moving the mouse into <code>mouseArea2</code> from <code>mouseArea1</code> will cause <code>mouseArea1</code> to emit the <code>exited</code> signal.</p>
+<pre class="qml"><span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> {
+    <span class="name">width</span>: <span class="number">400</span>; <span class="name">height</span>: <span class="number">400</span>
+    <span class="type"><a href="index.html">MouseArea</a></span> {
+        <span class="name">id</span>: <span class="name">mouseArea1</span>
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">hoverEnabled</span>: <span class="number">true</span>
+    }
+    <span class="type"><a href="index.html">MouseArea</a></span> {
+        <span class="name">id</span>: <span class="name">mouseArea2</span>
+        <span class="name">width</span>: <span class="number">100</span>; <span class="name">height</span>: <span class="number">100</span>
+        <span class="name">anchors</span>.centerIn: <span class="name">parent</span>
+        <span class="name">hoverEnabled</span>: <span class="number">true</span>
+    }
+}</pre>
+<p>If instead you give the two MouseAreas a parent-child relationship, moving the mouse into <code>mouseArea2</code> from <code>mouseArea1</code> will <b>not</b> cause <code>mouseArea1</code> to emit <code>exited</code>. Instead, they will both be considered to be simultaneously hovered.</p>
+<p>The corresponding handler is <code>onExited</code>.</p>
+<p><b>See also </b><a href="index.html#hoverEnabled-prop">hoverEnabled</a>.</p>
+</div></div><!-- @@@exited -->
+<br/>
+<!-- $$$positionChanged -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="positionChanged-signal"><td class="tblQmlFuncNode"><p><a name="positionChanged-signal"></a><span class="name">positionChanged</span>(<span class="type"><a href="../QtQuick.MouseEvent/index.html">MouseEvent</a></span><i> mouse</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when the mouse position changes.</p>
+<p>The <a href="../QtQuick.MouseEvent/index.html">mouse</a> parameter provides information about the mouse, including the x and y position, and any buttons currently pressed.</p>
+<p>By default this signal is only emitted if a button is currently pressed. Set <a href="index.html#hoverEnabled-prop">hoverEnabled</a> to true to emit this signal even when no mouse button is pressed.</p>
+<p>When handling this signal, changing the <a href="../QtQuick.MouseEvent/index.html#accepted-prop">accepted</a> property of the <i>mouse</i> parameter has no effect.</p>
+<p>The corresponding handler is <code>onPositionChanged</code>.</p>
+</div></div><!-- @@@positionChanged -->
+<br/>
+<!-- $$$pressAndHold -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="pressAndHold-signal"><td class="tblQmlFuncNode"><p><a name="pressAndHold-signal"></a><span class="name">pressAndHold</span>(<span class="type"><a href="../QtQuick.MouseEvent/index.html">MouseEvent</a></span><i> mouse</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when there is a long press (currently 800ms). The <a href="../QtQuick.MouseEvent/index.html">mouse</a> parameter provides information about the press, including the x and y position of the press, and which button is pressed.</p>
+<p>When handling this signal, changing the <a href="../QtQuick.MouseEvent/index.html#accepted-prop">accepted</a> property of the <i>mouse</i> parameter has no effect.</p>
+<p>The corresponding handler is <code>onPressAndHold</code>.</p>
+</div></div><!-- @@@pressAndHold -->
+<br/>
+<!-- $$$pressed -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="pressed-signal"><td class="tblQmlFuncNode"><p><a name="pressed-signal"></a><span class="name">pressed</span>(<span class="type"><a href="../QtQuick.MouseEvent/index.html">MouseEvent</a></span><i> mouse</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when there is a press. The <a href="../QtQuick.MouseEvent/index.html">mouse</a> parameter provides information about the press, including the x and y position and which button was pressed.</p>
+<p>When handling this signal, use the <a href="../QtQuick.MouseEvent/index.html#accepted-prop">accepted</a> property of the <i>mouse</i> parameter to control whether this <a href="index.html">MouseArea</a> handles the press and all future mouse events until release. The default is to accept the event and not allow other MouseAreas beneath this one to handle the event. If <i>accepted</i> is set to false, no further events will be sent to this <a href="index.html">MouseArea</a> until the button is next pressed.</p>
+<p>The corresponding handler is <code>onPressed</code>.</p>
+</div></div><!-- @@@pressed -->
+<br/>
+<!-- $$$released -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="released-signal"><td class="tblQmlFuncNode"><p><a name="released-signal"></a><span class="name">released</span>(<span class="type"><a href="../QtQuick.MouseEvent/index.html">MouseEvent</a></span><i> mouse</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when there is a release. The <a href="../QtQuick.MouseEvent/index.html">mouse</a> parameter provides information about the click, including the x and y position of the release of the click, and whether the click was held.</p>
+<p>When handling this signal, changing the <a href="../QtQuick.MouseEvent/index.html#accepted-prop">accepted</a> property of the <i>mouse</i> parameter has no effect.</p>
+<p>The corresponding handler is <code>onReleased</code>.</p>
+<p><b>See also </b><a href="index.html#canceled-signal">canceled</a>.</p>
+</div></div><!-- @@@released -->
+<br/>
+<!-- $$$wheel -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="wheel-signal"><td class="tblQmlFuncNode"><p><a name="wheel-signal"></a><span class="name">wheel</span>(<span class="type"><a href="../QtQuick.WheelEvent/index.html">WheelEvent</a></span><i> wheel</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted in response to both mouse wheel and trackpad scroll gestures.</p>
+<p>The <a href="../QtQuick.WheelEvent/index.html">wheel</a> parameter provides information about the event, including the x and y position, any buttons currently pressed, and information about the wheel movement, including angleDelta and pixelDelta.</p>
+<p>The corresponding handler is <code>onWheel</code>.</p>
+</div></div><!-- @@@wheel -->
+<br/>
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

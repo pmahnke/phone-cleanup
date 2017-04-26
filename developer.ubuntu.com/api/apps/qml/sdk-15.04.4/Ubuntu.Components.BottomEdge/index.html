@@ -1,0 +1,768 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>BottomEdge [sdk-15.04.4/Ubuntu.Components.BottomEdge] | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a href="../index.html">SDK 15.04.4</a> &rsaquo;</li>
+
+<li><a href="../Ubuntu.Components/index.html">Ubuntu.Components</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">BottomEdge</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qml-ubuntu-components-bottomedge.html -->
+	<!-- Source Format: qdoc -->
+<h1>BottomEdge</h1>
+<div id="element_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$BottomEdge-brief -->
+<p>A component to handle bottom edge gesture and content. More...</p>
+<!-- @@@BottomEdge -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import Ubuntu.Components 1.3</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Since:</td><td class="memItemRight bottomAlign">  Ubuntu.Components 1.3</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="../Ubuntu.Components.StyledItem/index.html">StyledItem</a></p>
+</td></tr></table></div><ul>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#activeRegion-prop">activeRegion</a></b></b> : BottomEdgeRegion</li>
+<li class="fn"><b><b><a href="index.html#contentComponent-prop">contentComponent</a></b></b> : Component</li>
+<li class="fn"><b><b><a href="index.html#contentItem-prop">contentItem</a></b></b> : Item</li>
+<li class="fn"><b><b><a href="index.html#contentUrl-prop">contentUrl</a></b></b> : url</li>
+<li class="fn"><b><b><a href="index.html#dragDirection-prop">dragDirection</a></b></b> : DragDirection</li>
+<li class="fn"><b><b><a href="index.html#dragProgress-prop">dragProgress</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#hint-prop">hint</a></b></b> : BottomEdgeHint</li>
+<li class="fn"><b><b><a href="index.html#regions-prop">regions</a></b></b> : list&lt;BottomEdgeRegion&gt;</li>
+<li class="fn"><b><b><a href="index.html#status-prop">status</a></b></b> : Status</li>
+</ul>
+<a name="signals"></a>
+<h2 id="signals">Signals</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#collapseCompleted-signal">collapseCompleted</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#collapseStarted-signal">collapseStarted</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#commitCompleted-signal">commitCompleted</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#commitStarted-signal">commitStarted</a></b></b>()</li>
+</ul>
+<a name="methods"></a>
+<h2 id="methods">Methods</h2>
+<ul>
+<li class="fn">void <b><b><a href="index.html#collapse-method">collapse</a></b></b>()</li>
+<li class="fn">void <b><b><a href="index.html#commit-method">commit</a></b></b>()</li>
+</ul>
+<!-- $$$BottomEdge-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<p>The component provides bottom edge content handling. The bottom egde feature is typically composed of a hint and some content. The <a href="index.html#contentUrl-prop">contentUrl</a> is committed (i.e&#x2e; fully shown) when the drag is completed after it has been dragged for a certain amount, that is 30% of the height of the <a href="index.html">BottomEdge</a>. The <a href="index.html#contentUrl-prop">contentUrl</a> can be anything, defined by <a href="index.html#contentUrl-prop">contentUrl</a> or <a href="index.html#contentComponent-prop">contentComponent</a>.</p>
+<p>As the name suggests, the component automatically anchors to the bottom of its parent and takes the width of the parent. The drag is detected within the parent area, and the height drives till what extent the bottom edge content should be exposed on <a href="index.html#commit-method">commit</a> call. The content is centered into a panel which is dragged from the bottom of the <a href="index.html">BottomEdge</a>. The content must specify its width and height.</p>
+<pre class="qml">import QtQuick 2.4
+import Ubuntu.Components 1.3
+<span class="type"><a href="../Ubuntu.Components.MainView/index.html">MainView</a></span> {
+    <span class="name">width</span>: <span class="name">units</span>.<span class="name">gu</span>(<span class="number">40</span>)
+    <span class="name">height</span>: <span class="name">units</span>.<span class="name">gu</span>(<span class="number">70</span>)
+    <span class="type"><a href="../Ubuntu.Components.Page/index.html">Page</a></span> {
+        <span class="name">id</span>: <span class="name">page</span>
+        <span class="name">title</span>: <span class="string">&quot;BottomEdge&quot;</span>
+        <span class="type"><a href="index.html">BottomEdge</a></span> {
+            <span class="name">height</span>: <span class="name">parent</span>.<span class="name">height</span> <span class="operator">-</span> <span class="name">units</span>.<span class="name">gu</span>(<span class="number">20</span>)
+            <span class="name">hint</span>.text: <span class="string">&quot;My bottom edge&quot;</span>
+            <span class="name">contentComponent</span>: <span class="name">Rectangle</span> {
+                <span class="name">width</span>: <span class="name">page</span>.<span class="name">width</span>
+                <span class="name">height</span>: <span class="name">page</span>.<span class="name">height</span>
+                <span class="name">color</span>: <span class="name">UbuntuColors</span>.<span class="name">green</span>
+            }
+        }
+    }
+}</pre>
+<p><b>Note: </b>The content is specified either through <a href="index.html#contentUrl-prop">contentUrl</a> or <a href="index.html#contentComponent-prop">contentComponent</a>, where <a href="index.html#contentComponent-prop">contentComponent</a> has precedence over <a href="index.html#contentUrl-prop">contentUrl</a>.</p><p>There can be situations when the content depends on the progress of the drag. There are two possibilities to follow this, depending on the use case. The <a href="index.html#dragProgress-prop">dragProgress</a> provides live updates about the fraction of the drag.</p>
+<pre class="qml"><span class="type"><a href="index.html">BottomEdge</a></span> {
+    <span class="name">id</span>: <span class="name">bottomEdge</span>
+    <span class="name">height</span>: <span class="name">parent</span>.<span class="name">height</span>
+    <span class="name">hint</span>.text: <span class="string">&quot;progression&quot;</span>
+    <span class="name">contentComponent</span>: <span class="name">Rectangle</span> {
+        <span class="name">width</span>: <span class="name">bottomEdge</span>.<span class="name">width</span>
+        <span class="name">height</span>: <span class="name">bottomEdge</span>.<span class="name">height</span>
+        <span class="name">color</span>: <span class="name">Qt</span>.<span class="name">rgba</span>(<span class="number">0.5</span>, <span class="number">1</span>, <span class="name">bottomEdge</span>.<span class="name">dragProgress</span>, <span class="number">1</span>);
+    }
+}</pre>
+<p>The other use case is when the content needs to be completely different in certain regions of the area. These regions can be defined through <a href="../Ubuntu.Components.BottomEdgeRegion/index.html">BottomEdgeRegion</a> elements listed in the <a href="index.html#regions-prop">regions</a> property.</p>
+<pre class="qml">import QtQuick 2.4
+import Ubuntu.Components 1.3
+<span class="type"><a href="../Ubuntu.Components.MainView/index.html">MainView</a></span> {
+    <span class="name">width</span>: <span class="name">units</span>.<span class="name">gu</span>(<span class="number">40</span>)
+    <span class="name">height</span>: <span class="name">units</span>.<span class="name">gu</span>(<span class="number">70</span>)
+    <span class="type"><a href="../Ubuntu.Components.Page/index.html">Page</a></span> {
+        <span class="name">title</span>: <span class="string">&quot;BottomEdge&quot;</span>
+        <span class="type"><a href="index.html">BottomEdge</a></span> {
+            <span class="name">id</span>: <span class="name">bottomEdge</span>
+            <span class="name">height</span>: <span class="name">parent</span>.<span class="name">height</span> <span class="operator">-</span> <span class="name">units</span>.<span class="name">gu</span>(<span class="number">20</span>)
+            <span class="name">hint</span>.text: <span class="string">&quot;My bottom edge&quot;</span>
+            <span class="name">contentComponent</span>: <span class="name">Rectangle</span> {
+                <span class="name">width</span>: <span class="name">bottomEdge</span>.<span class="name">width</span>
+                <span class="name">height</span>: <span class="name">bottomEdge</span>.<span class="name">height</span>
+                <span class="name">color</span>: <span class="name">bottomEdge</span>.<span class="name">activeRegion</span> ?
+                         <span class="name">bottomEdge</span>.<span class="name">activeRegion</span>.<span class="name">color</span> : <span class="name">UbuntuColors</span>.<span class="name">green</span>
+            }
+            <span class="name">regions</span>: [
+                <span class="type"><a href="../Ubuntu.Components.BottomEdgeRegion/index.html">BottomEdgeRegion</a></span> {
+                    <span class="name">from</span>: <span class="number">0.4</span>
+                    <span class="name">to</span>: <span class="number">0.6</span>
+                    property <span class="type">color</span> <span class="name">color</span>: <span class="name">UbuntuColors</span>.<span class="name">red</span>
+                },
+                <span class="type"><a href="../Ubuntu.Components.BottomEdgeRegion/index.html">BottomEdgeRegion</a></span> {
+                    <span class="name">from</span>: <span class="number">0.6</span>
+                    <span class="name">to</span>: <span class="number">1.0</span>
+                    property <span class="type">color</span> <span class="name">color</span>: <span class="name">UbuntuColors</span>.<span class="name">silk</span>
+                }
+            ]
+        }
+    }
+}</pre>
+<p><b>Note: </b>Custom regions override the default declared ones. Therefore there must be one region which has its <a href="../Ubuntu.Components.BottomEdgeRegion/index.html#to-prop">to</a> limit set to 1.0 otherwise the content will not be committed at all.</p><p><b>Note: </b>Regions can also be declared as child elements the same way as resources.</p><p>The <a href="index.html">BottomEdge</a> takes ownership over the custom BottomEdgeRegions, therefore we cannot 'reuse' regions declared in other <a href="index.html">BottomEdge</a> components, as those will be destroyed together with the reusing <a href="index.html">BottomEdge</a> component. The following scenario only works if the <i>customRegion</i> is not used in any other regions.</p>
+<pre class="qml"><span class="type"><a href="../Ubuntu.Components.Page/index.html">Page</a></span> {
+    <span class="type"><a href="index.html">BottomEdge</a></span> {
+        <span class="name">id</span>: <span class="name">bottomEdge</span>
+        <span class="name">hint</span>.text: <span class="string">&quot;reusing regions&quot;</span>
+        <span class="comment">// put your content and setup here</span>
+        <span class="name">regions</span>: [<span class="name">customRegion</span>]
+    }
+    <span class="type"><a href="../Ubuntu.Components.BottomEdgeRegion/index.html">BottomEdgeRegion</a></span> {
+        <span class="name">id</span>: <span class="name">customRegion</span>
+        <span class="name">from</span>: <span class="number">0.2</span>
+    }
+}</pre>
+<a name="page-as-content"></a>
+<h3 >Page As Content</h3>
+<p><a href="index.html">BottomEdge</a> accepts any component to be set as content. Also it can detect whether the content has a <a href="../Ubuntu.Components.PageHeader/index.html">PageHeader</a> component declared, and will inject a collapse navigation action automatically. In case the content has no header, the collapse must be provided by the content itself by calling the <a href="index.html#collapse-method">collapse</a> function.</p>
+<pre class="qml"><span class="type"><a href="index.html">BottomEdge</a></span> {
+    <span class="name">id</span>: <span class="name">bottomEdge</span>
+    <span class="name">height</span>: <span class="name">parent</span>.<span class="name">height</span>
+    <span class="name">hint</span>.text: <span class="string">&quot;Sample collapse&quot;</span>
+    <span class="name">contentComponent</span>: <span class="name">Rectangle</span> {
+        <span class="name">width</span>: <span class="name">bottomEdge</span>.<span class="name">width</span>
+        <span class="name">height</span>: <span class="name">bottomEdge</span>.<span class="name">height</span>
+        <span class="name">color</span>: <span class="name">Qt</span>.<span class="name">rgba</span>(<span class="number">0.5</span>, <span class="number">1</span>, <span class="name">bottomEdge</span>.<span class="name">dragProgress</span>, <span class="number">1</span>);
+        <span class="type"><a href="../Ubuntu.Components.Button/index.html">Button</a></span> {
+            <span class="name">text</span>: <span class="string">&quot;Collapse&quot;</span>
+            <span class="name">onClicked</span>: <span class="name">bottomEdge</span>.<span class="name">collapse</span>()
+        }
+    }
+}</pre>
+<p>Alternatively you can put a <a href="../Ubuntu.Components.PageHeader/index.html">PageHeader</a> component in your custom content as follows:</p>
+<pre class="qml"><span class="type"><a href="index.html">BottomEdge</a></span> {
+    <span class="name">id</span>: <span class="name">bottomEdge</span>
+    <span class="name">height</span>: <span class="name">parent</span>.<span class="name">height</span>
+    <span class="name">hint</span>.text: <span class="string">&quot;Injected collapse&quot;</span>
+    <span class="name">contentComponent</span>: <span class="name">Rectangle</span> {
+        <span class="name">width</span>: <span class="name">bottomEdge</span>.<span class="name">width</span>
+        <span class="name">height</span>: <span class="name">bottomEdge</span>.<span class="name">height</span>
+        <span class="name">color</span>: <span class="name">Qt</span>.<span class="name">rgba</span>(<span class="number">0.5</span>, <span class="number">1</span>, <span class="name">bottomEdge</span>.<span class="name">dragProgress</span>, <span class="number">1</span>);
+        <span class="type"><a href="../Ubuntu.Components.PageHeader/index.html">PageHeader</a></span> {
+            <span class="name">title</span>: <span class="string">&quot;Fancy content&quot;</span>
+        }
+    }
+}</pre>
+<a name="styling"></a>
+<h3 >Styling</h3>
+<p>Similar to the other components the default style is expected to be defined in the theme's <i>BottomEdgeStyle</i>. However the style is not parented to the <a href="index.html">BottomEdge</a> itself, but to the <a href="index.html">BottomEdge</a>'s parent item. When loaded, the style does not fill the parent but its bottom anchor is set to the bottom of the <a href="index.html">BottomEdge</a>. Beside this the hint is also parented to the style instance. Custom styles are expected to implement the BottomEgdeStyle API.</p>
+<p><b>See also </b><a href="../Ubuntu.Components.BottomEdgeRegion/index.html">BottomEdgeRegion</a>.</p>
+<!-- @@@BottomEdge -->
+<h2>Property Documentation</h2>
+<!-- $$$activeRegion -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="activeRegion-prop"><td class="tblQmlPropNode"><p><a name="activeRegion-prop"></a><span class="qmlreadonly">read-only</span><span class="name">activeRegion</span> : <span class="type"><a href="../Ubuntu.Components.BottomEdgeRegion/index.html">BottomEdgeRegion</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>Specifies the current active region.</p>
+</div></div><!-- @@@activeRegion -->
+<br/>
+<!-- $$$contentComponent -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="contentComponent-prop"><td class="tblQmlPropNode"><p><a name="contentComponent-prop"></a><span class="name">contentComponent</span> : <span class="type"><a href="../../sdk-14.10/QtQml.Component/index.html">Component</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>The property holds the component defining the content of the bottom edge. The property behaves the same way as Loader's <i>sourceComponent</i> property.</p>
+</div></div><!-- @@@contentComponent -->
+<br/>
+<!-- $$$contentItem -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="contentItem-prop"><td class="tblQmlPropNode"><p><a name="contentItem-prop"></a><span class="qmlreadonly">read-only</span><span class="name">contentItem</span> : <span class="type"><a href="../../sdk-14.10/QtQuick.Item/index.html">Item</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>The property holds the item created either from <a href="index.html#contentUrl-prop">contentUrl</a> or <a href="index.html#contentComponent-prop">contentComponent</a> properties.</p>
+</div></div><!-- @@@contentItem -->
+<br/>
+<!-- $$$contentUrl -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="contentUrl-prop"><td class="tblQmlPropNode"><p><a name="contentUrl-prop"></a><span class="name">contentUrl</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-url.html">url</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>The property holds the url to the document defining the content of the bottom edge. The property behaves the same way as Loader's <i>source</i> property.</p>
+</div></div><!-- @@@contentUrl -->
+<br/>
+<!-- $$$dragDirection -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="dragDirection-prop"><td class="tblQmlPropNode"><p><a name="dragDirection-prop"></a><span class="qmlreadonly">read-only</span><span class="name">dragDirection</span> : <span class="type">DragDirection</span></p></td></tr></table></div></div><div class="qmldoc"><p>The property reports the current direction of the drag. The direction is flipped when the drag passes the drag threshold.</p>
+<div class="table"><table class="generic">
+ <thead><tr class="qt-style"><th >DragDirection</th><th >Description</th></tr></thead>
+<tr valign="top" class="odd"><td >Undefined</td><td >Default. The drag is not performed or the direction is not detected.</td></tr>
+<tr valign="top" class="even"><td >Upwards</td><td >The drag is performed from bottom up or it passed the drag threshold from from the last point the drag was going downwards.</td></tr>
+<tr valign="top" class="odd"><td >Downwards</td><td >The drag is performed from up to bottom or it passed the drag threshold from from the last point the drag was going upwards.</td></tr>
+</table></div>
+<p>Defaults to <i>Undefined</i></p>
+</div></div><!-- @@@dragDirection -->
+<br/>
+<!-- $$$dragProgress -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="dragProgress-prop"><td class="tblQmlPropNode"><p><a name="dragProgress-prop"></a><span class="qmlreadonly">read-only</span><span class="name">dragProgress</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>The property specifies the proggress of the drag within [0..1] interval.</p>
+</div></div><!-- @@@dragProgress -->
+<br/>
+<!-- $$$hint -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="hint-prop"><td class="tblQmlPropNode"><p><a name="hint-prop"></a><span class="name">hint</span> : <span class="type"><a href="../Ubuntu.Components.BottomEdgeHint/index.html">BottomEdgeHint</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>The property holds the component to display the hint for the bottom edge element.</p>
+</div></div><!-- @@@hint -->
+<br/>
+<!-- $$$regions -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="regions-prop"><td class="tblQmlPropNode"><p><a name="regions-prop"></a><span class="name">regions</span> : <span class="type">list</span>&lt;<span class="type"><a href="../Ubuntu.Components.BottomEdgeRegion/index.html">BottomEdgeRegion</a></span>&gt;</p></td></tr></table></div></div><div class="qmldoc"><p>The property holds the custom regions configured for the <a href="index.html">BottomEdge</a>. The default configuration contains one region, which commits the content when reached. The defaults can be restored by setting an empty list to the property or by calling regions.clear(). See <a href="../Ubuntu.Components.BottomEdgeRegion/index.html">BottomEdgeRegion</a>.</p>
+</div></div><!-- @@@regions -->
+<br/>
+<!-- $$$status -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="status-prop"><td class="tblQmlPropNode"><p><a name="status-prop"></a><span class="qmlreadonly">read-only</span><span class="name">status</span> : <span class="type">Status</span></p></td></tr></table></div></div><div class="qmldoc"><p>The property reports the actual state of the bottom edge. It can have the following values:</p>
+<div class="table"><table class="generic">
+ <thead><tr class="qt-style"><th >Status</th><th >Description</th></tr></thead>
+<tr valign="top" class="odd"><td >Hidden</td><td >The bottom edge is hidden. This does not contain the hint states.</td></tr>
+<tr valign="top" class="even"><td >Revealed</td><td >The Bottom edge content is revealed. The state can be reached only if the <a href="index.html#hint-prop">hint</a> is in &quot;Active&quot; state.</td></tr>
+<tr valign="top" class="odd"><td >Committed</td><td >The bottom edge content is fully exposed.</td></tr>
+</table></div>
+<p><b>Note: </b>Once <i>Commited</i> status is set, no further draging is possible on the content.</p></div></div><!-- @@@status -->
+<br/>
+<h2>Signal Documentation</h2>
+<!-- $$$collapseCompleted -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="collapseCompleted-signal"><td class="tblQmlFuncNode"><p><a name="collapseCompleted-signal"></a><span class="name">collapseCompleted</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Signal emitted when the content collapse is completed.</p>
+</div></div><!-- @@@collapseCompleted -->
+<br/>
+<!-- $$$collapseStarted -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="collapseStarted-signal"><td class="tblQmlFuncNode"><p><a name="collapseStarted-signal"></a><span class="name">collapseStarted</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Signal emitted when the content collapse is started.</p>
+</div></div><!-- @@@collapseStarted -->
+<br/>
+<!-- $$$commitCompleted -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="commitCompleted-signal"><td class="tblQmlFuncNode"><p><a name="commitCompleted-signal"></a><span class="name">commitCompleted</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Signal emitted when the content commit is completed.</p>
+</div></div><!-- @@@commitCompleted -->
+<br/>
+<!-- $$$commitStarted -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="commitStarted-signal"><td class="tblQmlFuncNode"><p><a name="commitStarted-signal"></a><span class="name">commitStarted</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Signal emitted when the content commit is started.</p>
+</div></div><!-- @@@commitStarted -->
+<br/>
+<h2>Method Documentation</h2>
+<!-- $$$collapse -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="collapse-method"><td class="tblQmlFuncNode"><p><a name="collapse-method"></a><span class="type">void</span> <span class="name">collapse</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>The function forces the bottom edge content to be hidden. Emits <a href="index.html#collapseStarted-signal">collapseStarted</a> and <a href="index.html#collapseCompleted-signal">collapseCompleted</a> signals to notify the start and the completion of the collapse operation.</p>
+</div></div><!-- @@@collapse -->
+<br/>
+<!-- $$$commit -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="commit-method"><td class="tblQmlFuncNode"><p><a name="commit-method"></a><span class="type">void</span> <span class="name">commit</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>The function forces the bottom edge content to be fully exposed. Emits <a href="index.html#commitStarted-signal">commitStarted</a> and <a href="index.html#commitCompleted-signal">commitCompleted</a> signals to notify the start and the completion of the commit operation. It is safe to call commit() multiple times.</p>
+</div></div><!-- @@@commit -->
+<br/>
+</div></div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

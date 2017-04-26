@@ -1,0 +1,717 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Date [sdk-15.04.5/QtQml.Date] | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a href="../index.html">SDK 15.04.5</a> &rsaquo;</li>
+
+<li><a href="../QtQml/index.html">QtQml</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Date</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qml-qtqml-date.html -->
+	<!-- Source Format: qdoc -->
+<h1>Date</h1>
+<div id="element_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$Date-brief -->
+<p>Provides date functions More...</p>
+<!-- @@@Date -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import QtQml 2.2</td></tr></table></div><ul>
+</ul>
+<a name="methods"></a>
+<h2 id="methods">Methods</h2>
+<ul>
+<li class="fn">string <b><b><a href="index.html#fromLocaleDateString-method">fromLocaleDateString</a></b></b>(locale, dateString, format)</li>
+<li class="fn">string <b><b><a href="index.html#fromLocaleString-method">fromLocaleString</a></b></b>(locale, dateTimeString, format)</li>
+<li class="fn">string <b><b><a href="index.html#fromLocaleTimeString-method">fromLocaleTimeString</a></b></b>(locale, timeString, format)</li>
+<li class="fn">string <b><b><a href="index.html#timeZoneUpdated-method">timeZoneUpdated</a></b></b>()</li>
+<li class="fn">string <b><b><a href="index.html#toLocaleDateString-method">toLocaleDateString</a></b></b>(locale, format)</li>
+<li class="fn">string <b><b><a href="index.html#toLocaleString-method">toLocaleString</a></b></b>(locale, format)</li>
+<li class="fn">string <b><b><a href="index.html#toLocaleTimeString-method">toLocaleTimeString</a></b></b>(locale, format)</li>
+</ul>
+<!-- $$$Date-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<p>The QML Date object extends the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">JS Date object</a> with locale aware functions.</p>
+<p>Functions that accept a locale format may be either an enumeration value:</p>
+<div class="table"><table class="generic">
+ <tr valign="top" class="odd"><td >Locale.LongFormat</td><td >The long version of the string; for example, returning &quot;January&quot; as a month name.</td></tr>
+<tr valign="top" class="even"><td >Locale.ShortFormat</td><td >The short version of the string; for example, returning &quot;Jan&quot; as a month name.</td></tr>
+<tr valign="top" class="odd"><td >Locale.NarrowFormat</td><td >A special version for use when space is limited; for example, returning &quot;J&quot; as a month name. Note that the narrow format might contain the same text for different months and days or it can even be an empty string if the locale doesn't support narrow names, so you should avoid using it for date formatting. Also, for the system locale this format is the same as ShortFormat.</td></tr>
+</table></div>
+<p>or a string specifying the format These expressions may be used for format dates:</p>
+<div class="table"><table class="generic">
+ <thead><tr class="qt-style"><th >Expression</th><th >Output</th></tr></thead>
+<tr valign="top" class="odd"><td >d</td><td >the day as number without a leading zero (1 to 31)</td></tr>
+<tr valign="top" class="even"><td >dd</td><td >the day as number with a leading zero (01 to 31)</td></tr>
+<tr valign="top" class="odd"><td >ddd</td><td >the abbreviated localized day name (e.g&#x2e; 'Mon' to 'Sun').</td></tr>
+<tr valign="top" class="even"><td >dddd</td><td >the long localized day name (e.g&#x2e; 'Monday' to 'Sunday').</td></tr>
+<tr valign="top" class="odd"><td >M</td><td >the month as number without a leading zero (1 to 12)</td></tr>
+<tr valign="top" class="even"><td >MM</td><td >the month as number with a leading zero (01 to 12)</td></tr>
+<tr valign="top" class="odd"><td >MMM</td><td >the abbreviated localized month name (e.g&#x2e; 'Jan' to 'Dec').</td></tr>
+<tr valign="top" class="even"><td >MMMM</td><td >the long localized month name (e.g&#x2e; 'January' to 'December').</td></tr>
+<tr valign="top" class="odd"><td >yy</td><td >the year as two digit number (00 to 99)</td></tr>
+<tr valign="top" class="even"><td >yyyy</td><td >the year as four digit number. If the year is negative, a minus sign is prepended in addition.</td></tr>
+</table></div>
+<p>All other input characters will be ignored. Any sequence of characters that are enclosed in singlequotes will be treated as text and not be used as an expression. Two consecutive singlequotes (&quot;''&quot;) are replaced by a singlequote in the output.</p>
+<p>Example format strings (assuming that the Date is the 20 July 1969):</p>
+<div class="table"><table class="generic">
+ <thead><tr class="qt-style"><th >Format</th><th >Result</th></tr></thead>
+<tr valign="top" class="odd"><td >dd.MM.yyyy</td><td >20.07.1969</td></tr>
+<tr valign="top" class="even"><td >ddd MMMM d yy</td><td >Sun July 20 69</td></tr>
+<tr valign="top" class="odd"><td >'The day is' dddd</td><td >The day is Sunday</td></tr>
+</table></div>
+<p>These expressions may be used for formatting time:</p>
+<div class="table"><table class="generic">
+ <thead><tr class="qt-style"><th >Expression</th><th >Output</th></tr></thead>
+<tr valign="top" class="odd"><td >h</td><td >the hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)</td></tr>
+<tr valign="top" class="even"><td >hh</td><td >the hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)</td></tr>
+<tr valign="top" class="odd"><td >H</td><td >the hour without a leading zero (0 to 23, even with AM/PM display)</td></tr>
+<tr valign="top" class="even"><td >HH</td><td >the hour with a leading zero (00 to 23, even with AM/PM display)</td></tr>
+<tr valign="top" class="odd"><td >m</td><td >the minute without a leading zero (0 to 59)</td></tr>
+<tr valign="top" class="even"><td >mm</td><td >the minute with a leading zero (00 to 59)</td></tr>
+<tr valign="top" class="odd"><td >s</td><td >the second without a leading zero (0 to 59)</td></tr>
+<tr valign="top" class="even"><td >ss</td><td >the second with a leading zero (00 to 59)</td></tr>
+<tr valign="top" class="odd"><td >z</td><td >the milliseconds without leading zeroes (0 to 999)</td></tr>
+<tr valign="top" class="even"><td >zzz</td><td >the milliseconds with leading zeroes (000 to 999)</td></tr>
+<tr valign="top" class="odd"><td >AP or A</td><td >use AM/PM display. <i>AP</i> will be replaced by either &quot;AM&quot; or &quot;PM&quot;.</td></tr>
+<tr valign="top" class="even"><td >ap or a</td><td >use am/pm display. <i>ap</i> will be replaced by either &quot;am&quot; or &quot;pm&quot;.</td></tr>
+<tr valign="top" class="odd"><td >t</td><td >the timezone (for example &quot;CEST&quot;)</td></tr>
+</table></div>
+<p>All other input characters will be ignored. Any sequence of characters that are enclosed in singlequotes will be treated as text and not be used as an expression. Two consecutive singlequotes (&quot;''&quot;) are replaced by a singlequote in the output.</p>
+<p>Example format strings (assuming that the QTime is 14:13:09.042)</p>
+<div class="table"><table class="generic">
+ <thead><tr class="qt-style"><th >Format</th><th >Result</th></tr></thead>
+<tr valign="top" class="odd"><td >hh:mm:ss.zzz</td><td >14:13:09.042</td></tr>
+<tr valign="top" class="even"><td >h:m:s ap</td><td >2:13:9 pm</td></tr>
+<tr valign="top" class="odd"><td >H:m:s a</td><td >14:13:9 pm</td></tr>
+</table></div>
+<p>If the date is invalid, an empty string will be returned.</p>
+<p>Note: Using the locale-aware functions to perform date or time formatting can result in incorrectly formatted times, due to an inconsistency in specification between Qt and JS. ECMA-262 specifies that historical dates should be intrepreted by projecting the current rules for daylight-saving onto past years, while Qt uses historical data (where available) to determine whether daylight-saving was in effect for a given date. Therefore, constructing a Date value in JS and converting it to a string using the locale-aware functions can yield a result incorrect by one hour, if DST is currently in effect, while it was not for the time specified, or vice versa.</p>
+<p><b>See also </b><a href="../QtQml.Locale/index.html">Locale</a>.</p>
+<!-- @@@Date -->
+<h2>Method Documentation</h2>
+<!-- $$$fromLocaleDateString -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="fromLocaleDateString-method"><td class="tblQmlFuncNode"><p><a name="fromLocaleDateString-method"></a><span class="type">string</span> <span class="name">fromLocaleDateString</span>(<span class="type">locale</span>, <span class="type">dateString</span>, <span class="type">format</span>)</p></td></tr></table></div></div><div class="qmldoc"><p>Converts the date string <i>dateString</i> to a <a href="index.html">Date</a> object using <i>locale</i> and <i>format</i>.</p>
+<p>If <i>format</i> is not specified, <a href="../QtQml.Locale/index.html">Locale.LongFormat</a> will be used.</p>
+<p>If <i>locale</i> is not specified, the default locale will be used.</p>
+<p>The following example shows the current date first being formatted as a date string using the default locale and format, then parsed back again in the same manner:</p>
+<pre class="cpp">import <span class="type">QtQml</span> <span class="number">2.0</span>
+<span class="type"><a href="../QtQml.QtObject/index.html">QtObject</a></span> {
+    property var locale: <span class="type"><a href="../QtQml.Qt/index.html">Qt</a></span><span class="operator">.</span>locale()
+    property date currentDate: <span class="keyword">new</span> Date()
+    property string dateString
+    Component<span class="operator">.</span>onCompleted: {
+        dateString <span class="operator">=</span> currentDate<span class="operator">.</span>toLocaleDateString();
+        print(Date<span class="operator">.</span>fromLocaleDateString(dateString));
+    }
+}</pre>
+</div></div><!-- @@@fromLocaleDateString -->
+<br/>
+<!-- $$$fromLocaleString -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="fromLocaleString-method"><td class="tblQmlFuncNode"><p><a name="fromLocaleString-method"></a><span class="type">string</span> <span class="name">fromLocaleString</span>(<span class="type">locale</span>, <span class="type">dateTimeString</span>, <span class="type">format</span>)</p></td></tr></table></div></div><div class="qmldoc"><p>Converts the datetime string <i>dateTimeString</i> to a <a href="index.html">Date</a> object using <i>locale</i> and <i>format</i>.</p>
+<p>If <i>format</i> is not specified, <a href="../QtQml.Locale/index.html">Locale.LongFormat</a> will be used.</p>
+<p>If <i>locale</i> is not specified, the default locale will be used.</p>
+<p>The following example shows a datetime being parsed from a datetime string in a certain format using the default locale:</p>
+<pre class="cpp">import <span class="type">QtQml</span> <span class="number">2.0</span>
+<span class="type"><a href="../QtQml.QtObject/index.html">QtObject</a></span> {
+    property var locale: <span class="type"><a href="../QtQml.Qt/index.html">Qt</a></span><span class="operator">.</span>locale()
+    property string dateTimeString: <span class="string">&quot;Tue 2013-09-17 10:56:06&quot;</span>
+    Component<span class="operator">.</span>onCompleted: {
+        print(Date<span class="operator">.</span>fromLocaleString(locale<span class="operator">,</span> dateTimeString<span class="operator">,</span> <span class="string">&quot;ddd yyyy-MM-dd hh:mm:ss&quot;</span>));
+    }
+}</pre>
+</div></div><!-- @@@fromLocaleString -->
+<br/>
+<!-- $$$fromLocaleTimeString -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="fromLocaleTimeString-method"><td class="tblQmlFuncNode"><p><a name="fromLocaleTimeString-method"></a><span class="type">string</span> <span class="name">fromLocaleTimeString</span>(<span class="type">locale</span>, <span class="type">timeString</span>, <span class="type">format</span>)</p></td></tr></table></div></div><div class="qmldoc"><p>Converts the time string <i>timeString</i> to a <a href="index.html">Date</a> object using <i>locale</i> and <i>format</i>.</p>
+<p>If <i>format</i> is not specified, <a href="../QtQml.Locale/index.html">Locale.LongFormat</a> will be used.</p>
+<p>If <i>locale</i> is not specified, the default locale will be used.</p>
+<p>The following example shows the current time first being formatted as a time string using the default locale and a short format, then parsed back again in the same manner:</p>
+<pre class="cpp">import <span class="type">QtQml</span> <span class="number">2.2</span>
+<span class="type"><a href="../QtQml.QtObject/index.html">QtObject</a></span> {
+    property var locale: <span class="type"><a href="../QtQml.Qt/index.html">Qt</a></span><span class="operator">.</span>locale()
+    property date currentTime: <span class="keyword">new</span> Date()
+    property string timeString
+    Component<span class="operator">.</span>onCompleted: {
+        timeString <span class="operator">=</span> currentTime<span class="operator">.</span>toLocaleTimeString(locale<span class="operator">,</span> Locale<span class="operator">.</span>ShortFormat);
+        print(Date<span class="operator">.</span>fromLocaleTimeString(locale<span class="operator">,</span> timeString<span class="operator">,</span> Locale<span class="operator">.</span>ShortFormat));
+    }
+}</pre>
+</div></div><!-- @@@fromLocaleTimeString -->
+<br/>
+<!-- $$$timeZoneUpdated -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="timeZoneUpdated-method"><td class="tblQmlFuncNode"><p><a name="timeZoneUpdated-method"></a><span class="type">string</span> <span class="name">timeZoneUpdated</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Informs the JS engine that the system's timezone has been changed, which is necessary for the correct manipulation of datetime data.</p>
+<p>JS stores Date objects in UTC time; all access to and from Date components in local time involves the application of the current offset from UTC. If the current offset changes due to the timezone being updated, the JS engine needs to be informed so that it can recalculate the offset.</p>
+<p>This function should be called after the system's timezone has been updated.</p>
+<p>For example, an application that changes the timezone would call timeZoneUpdated() after setting the new time zone:</p>
+<pre class="cpp">property string selectedTimeZone
+onSelectedTimeZoneChanged: {
+    MyFunctions<span class="operator">.</span>setSystemTimeZone(selectedTimeZone)
+    Date<span class="operator">.</span>timeZoneUpdated()
+}</pre>
+</div></div><!-- @@@timeZoneUpdated -->
+<br/>
+<!-- $$$toLocaleDateString -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="toLocaleDateString-method"><td class="tblQmlFuncNode"><p><a name="toLocaleDateString-method"></a><span class="type">string</span> <span class="name">toLocaleDateString</span>(<span class="type">locale</span>, <span class="type">format</span>)</p></td></tr></table></div></div><div class="qmldoc"><p>Converts the Date to a string containing the date suitable for the specified <i>locale</i> in the specified <i>format</i>.</p>
+<p>If <i>format</i> is not specified, <a href="../QtQml.Locale/index.html">Locale.LongFormat</a> will be used.</p>
+<p>If <i>locale</i> is not specified, the default locale will be used.</p>
+<p>The following example shows the current date formatted for the German locale:</p>
+<pre class="cpp">import <span class="type">QtQuick</span> <span class="number">2.0</span>
+Text {
+    text: <span class="string">&quot;The date is: &quot;</span> <span class="operator">+</span> <span class="keyword">new</span> Date()<span class="operator">.</span>toLocaleDateString(<span class="type"><a href="../QtQml.Qt/index.html">Qt</a></span><span class="operator">.</span>locale(<span class="string">&quot;de_DE&quot;</span>))
+}</pre>
+</div></div><!-- @@@toLocaleDateString -->
+<br/>
+<!-- $$$toLocaleString -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="toLocaleString-method"><td class="tblQmlFuncNode"><p><a name="toLocaleString-method"></a><span class="type">string</span> <span class="name">toLocaleString</span>(<span class="type">locale</span>, <span class="type">format</span>)</p></td></tr></table></div></div><div class="qmldoc"><p>Converts the Date to a string containing the date and time suitable for the specified <i>locale</i> in the specified <i>format</i>.</p>
+<p>If <i>format</i> is not specified, <a href="../QtQml.Locale/index.html">Locale.LongFormat</a> will be used.</p>
+<p>If <i>locale</i> is not specified, the default locale will be used.</p>
+<p>The following example shows the current date and time formatted for the German locale:</p>
+<pre class="cpp">import <span class="type">QtQuick</span> <span class="number">2.0</span>
+Text {
+    text: <span class="string">&quot;The date is: &quot;</span> <span class="operator">+</span> <span class="keyword">new</span> Date()<span class="operator">.</span>toLocaleString(<span class="type"><a href="../QtQml.Qt/index.html">Qt</a></span><span class="operator">.</span>locale(<span class="string">&quot;de_DE&quot;</span>))
+}</pre>
+</div></div><!-- @@@toLocaleString -->
+<br/>
+<!-- $$$toLocaleTimeString -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="toLocaleTimeString-method"><td class="tblQmlFuncNode"><p><a name="toLocaleTimeString-method"></a><span class="type">string</span> <span class="name">toLocaleTimeString</span>(<span class="type">locale</span>, <span class="type">format</span>)</p></td></tr></table></div></div><div class="qmldoc"><p>Converts the Date to a string containing the time suitable for the specified <i>locale</i> in the specified <i>format</i>.</p>
+<p>If <i>format</i> is not specified, <a href="../QtQml.Locale/index.html">Locale.LongFormat</a> will be used.</p>
+<p>If <i>locale</i> is not specified, the default locale will be used.</p>
+<p>The following example shows the current time formatted for the German locale:</p>
+<pre class="cpp">import <span class="type">QtQuick</span> <span class="number">2.0</span>
+Text {
+    text: <span class="string">&quot;The date is: &quot;</span> <span class="operator">+</span> <span class="keyword">new</span> Date()<span class="operator">.</span>toLocaleTimeString(<span class="type"><a href="../QtQml.Qt/index.html">Qt</a></span><span class="operator">.</span>locale(<span class="string">&quot;de_DE&quot;</span>))
+}</pre>
+</div></div><!-- @@@toLocaleTimeString -->
+<br/>
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

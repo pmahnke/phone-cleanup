@@ -1,0 +1,822 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Window [sdk-15.04.6/QtQuick.Window.Window] | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a href="../index.html">SDK 15.04.6</a> &rsaquo;</li>
+
+<li><a href="../QtQuick.Window/index.html">QtQuick.Window</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Window</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qml-qtquick-window-window.html -->
+	<!-- Source Format: qdoc -->
+<h1>Window</h1>
+<div id="element_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$Window-brief -->
+<p>Creates a new top-level window More...</p>
+<!-- @@@Window -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import QtQuick.Window 2.2</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Instantiates:</td><td class="memItemRight bottomAlign"> <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04.6/QtQuick.Window.Window/qquickwindow.html">QQuickWindow</td></tr></table></div><ul>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#activeFocusItem-prop">activeFocusItem</a></b></b> : Item</li>
+<li class="fn"><b><b><a href="index.html#color-prop">color</a></b></b> : color</li>
+<li class="fn"><b><b><a href="index.html#contentOrientation-prop">contentOrientation</a></b></b> : Qt::ScreenOrientation</li>
+<li class="fn"><b><b><a href="index.html#data-prop">data</a></b></b> : list&lt;Object&gt;</li>
+<li class="fn"><b><b><a href="index.html#flags-prop">flags</a></b></b> : Qt::WindowFlags</li>
+<li class="fn"><b><b><a href="index.html#height-prop">height</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#maximumHeight-prop">maximumHeight</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#maximumWidth-prop">maximumWidth</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#minimumHeight-prop">minimumHeight</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#minimumWidth-prop">minimumWidth</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#modality-prop">modality</a></b></b> : Qt::WindowModality</li>
+<li class="fn"><b><b><a href="index.html#opacity-prop">opacity</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#title-prop">title</a></b></b> : string</li>
+<li class="fn"><b><b><a href="index.html#visibility-prop">visibility</a></b></b> : QWindow::Visibility</li>
+<li class="fn"><b><b><a href="index.html#visible-prop">visible</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#width-prop">width</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#x-prop">x</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#y-prop">y</a></b></b> : int</li>
+</ul>
+<a name="attached-properties"></a>
+<h2 id="attached-properties">Attached Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#active-attached-prop">active</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#activeFocusItem-attached-prop">activeFocusItem</a></b></b> : Item</li>
+<li class="fn"><b><b><a href="index.html#contentItem-attached-prop">contentItem</a></b></b> : Item</li>
+<li class="fn"><b><b><a href="index.html#visibility-attached-prop">visibility</a></b></b> : QWindow::Visibility</li>
+</ul>
+<a name="signals"></a>
+<h2 id="signals">Signals</h2>
+<ul>
+<li class="fn">void <b><b><a href="index.html#closing-signal">closing</a></b></b>(CloseEvent <i>close</i>)</li>
+</ul>
+<a name="methods"></a>
+<h2 id="methods">Methods</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#alert-method">alert</a></b></b>(int <i>msec</i>)</li>
+<li class="fn"><b><b><a href="index.html#close-method">close</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#hide-method">hide</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#lower-method">lower</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#raise-method">raise</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#requestActivate-method">requestActivate</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#show-method">show</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#showFullScreen-method">showFullScreen</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#showMaximized-method">showMaximized</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#showMinimized-method">showMinimized</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#showNormal-method">showNormal</a></b></b>()</li>
+</ul>
+<!-- $$$Window-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<p>The Window object creates a new top-level window for a Qt Quick scene. It automatically sets up the window for use with <code>QtQuick 2.x</code> graphical types.</p>
+<p>To use this type, you will need to import the module with the following line:</p>
+<pre class="cpp">import <span class="type">QtQuick</span><span class="operator">.</span>Window <span class="number">2.2</span></pre>
+<p>Omitting this import will allow you to have a QML environment without access to window system features.</p>
+<p>A Window can be declared inside an Item or inside another Window; in that case the inner Window will automatically become &quot;transient for&quot; the outer Window: that is, most platforms will show it centered upon the outer window by default, and there may be other platform-dependent behaviors, depending also on the <a href="index.html#flags-prop">flags</a>. If the nested window is intended to be a dialog in your application, you should also set <a href="index.html#flags-prop">flags</a> to Qt.Dialog, because some window managers will not provide the centering behavior without that flag. You can also declare multiple windows inside a top-level QtObject, in which case the windows will have no transient relationship.</p>
+<p>Alternatively you can set or bind <a href="index.html#x-prop">x</a> and <a href="index.html#y-prop">y</a> to position the Window explicitly on the screen.</p>
+<p>When the user attempts to close a window, the <a href="index.html#closing-signal">closing</a> signal will be emitted. You can force the window to stay open (for example to prompt the user to save changes) by writing an <code>onClosing</code> handler and setting <code>close.accepted = false</code>.</p>
+<!-- @@@Window -->
+<h2>Property Documentation</h2>
+<!-- $$$activeFocusItem -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="activeFocusItem-prop"><td class="tblQmlPropNode"><p><a name="activeFocusItem-prop"></a><span class="name">activeFocusItem</span> : <span class="type"><a href="../QtQuick.Item/index.html">Item</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>The item which currently has active focus or <code>null</code> if there is no item with active focus.</p>
+<p>This QML property was introduced in  Qt 5.1.</p>
+</div></div><!-- @@@activeFocusItem -->
+<br/>
+<!-- $$$color -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="color-prop"><td class="tblQmlPropNode"><p><a name="color-prop"></a><span class="name">color</span> : <span class="type">color</span></p></td></tr></table></div></div><div class="qmldoc"><p>The background color for the window.</p>
+<p>Setting this property is more efficient than using a separate Rectangle.</p>
+</div></div><!-- @@@color -->
+<br/>
+<!-- $$$contentOrientation -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="contentOrientation-prop"><td class="tblQmlPropNode"><p><a name="contentOrientation-prop"></a><span class="name">contentOrientation</span> : <span class="type">Qt::ScreenOrientation</span></p></td></tr></table></div></div><div class="qmldoc"><p>This is a hint to the window manager in case it needs to display additional content like popups, dialogs, status bars, or similar in relation to the window.</p>
+<p>The recommended orientation is <a href="../QtQuick.Window.Screen/index.html#orientation-attached-prop">Screen.orientation</a>, but an application doesn't have to support all possible orientations, and thus can opt to ignore the current screen orientation.</p>
+<p>The difference between the window and the content orientation determines how much to rotate the content by.</p>
+<p>The default value is Qt::PrimaryOrientation.</p>
+<p>This QML property was introduced in  Qt 5.1.</p>
+<p><b>See also </b><a href="../QtQuick.Window.Screen/index.html">Screen</a>.</p>
+</div></div><!-- @@@contentOrientation -->
+<br/>
+<!-- $$$data -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="data-prop"><td class="tblQmlPropNode"><p><a name="data-prop"></a><span class="qmldefault">[default] </span><span class="name">data</span> : <span class="type">list</span>&lt;<span class="type">Object</span>&gt;</p></td></tr></table></div></div><div class="qmldoc"><p>The data property allows you to freely mix visual children, resources and other Windows in a Window.</p>
+<p>If you assign another Window to the data list, the nested window will become &quot;transient for&quot; the outer Window.</p>
+<p>If you assign an <a href="../QtQuick.Item/index.html">Item</a> to the data list, it becomes a child of the Window's <a href="index.html#contentItem-attached-prop">contentItem</a>, so that it appears inside the window. The item's parent will be the window's <a href="index.html#contentItem-attached-prop">contentItem</a>, which is the root of the Item ownership tree within that Window.</p>
+<p>If you assign any other object type, it is added as a resource.</p>
+<p>It should not generally be necessary to refer to the <code>data</code> property, as it is the default property for Window and thus all child items are automatically assigned to this property.</p>
+<p><b>See also </b>QWindow::transientParent().</p>
+</div></div><!-- @@@data -->
+<br/>
+<!-- $$$flags -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="flags-prop"><td class="tblQmlPropNode"><p><a name="flags-prop"></a><span class="name">flags</span> : <span class="type">Qt::WindowFlags</span></p></td></tr></table></div></div><div class="qmldoc"><p>The window flags of the window.</p>
+<p>The window flags control the window's appearance in the windowing system, whether it's a dialog, popup, or a regular window, and whether it should have a title bar, etc.</p>
+<p>The flags which you read from this property might differ from the ones that you set if the requested flags could not be fulfilled.</p>
+</div></div><!-- @@@flags -->
+<br/>
+<!-- $$$height -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="height-prop"><td class="tblQmlPropNode"><p><a name="height-prop"></a><span class="name">height</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>Defines the window's position and size.</p>
+<p>The (x,y) position is relative to the <a href="../QtQuick.Window.Screen/index.html">Screen</a> if there is only one, or to the virtual desktop (arrangement of multiple screens).</p>
+<pre class="qml"><span class="type"><a href="index.html">Window</a></span> { <span class="name">x</span>: <span class="number">100</span>; <span class="name">y</span>: <span class="number">100</span>; <span class="name">width</span>: <span class="number">100</span>; <span class="name">height</span>: <span class="number">100</span> }</pre>
+<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/42fbda2b-01a4-45df-97c7-65ff858ababf-api/apps/qml/sdk-15.04.6/QtQuick.Window.Window/images/screen-and-window-dimensions.jpg" alt="" /></p></div></div><!-- @@@height -->
+<br/>
+<!-- $$$maximumHeight -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="maximumHeight-prop"><td class="tblQmlPropNode"><p><a name="maximumHeight-prop"></a><span class="name">maximumHeight</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>Defines the window's maximum size.</p>
+<p>This is a hint to the window manager to prevent resizing above the specified width and height.</p>
+<p>This QML property was introduced in  Qt 5.1.</p>
+</div></div><!-- @@@maximumHeight -->
+<br/>
+<!-- $$$maximumWidth -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="maximumWidth-prop"><td class="tblQmlPropNode"><p><a name="maximumWidth-prop"></a><span class="name">maximumWidth</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>Defines the window's maximum size.</p>
+<p>This is a hint to the window manager to prevent resizing above the specified width and height.</p>
+<p>This QML property was introduced in  Qt 5.1.</p>
+</div></div><!-- @@@maximumWidth -->
+<br/>
+<!-- $$$minimumHeight -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="minimumHeight-prop"><td class="tblQmlPropNode"><p><a name="minimumHeight-prop"></a><span class="name">minimumHeight</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>Defines the window's minimum size.</p>
+<p>This is a hint to the window manager to prevent resizing below the specified width and height.</p>
+<p>This QML property was introduced in  Qt 5.1.</p>
+</div></div><!-- @@@minimumHeight -->
+<br/>
+<!-- $$$minimumWidth -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="minimumWidth-prop"><td class="tblQmlPropNode"><p><a name="minimumWidth-prop"></a><span class="name">minimumWidth</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>Defines the window's minimum size.</p>
+<p>This is a hint to the window manager to prevent resizing below the specified width and height.</p>
+<p>This QML property was introduced in  Qt 5.1.</p>
+</div></div><!-- @@@minimumWidth -->
+<br/>
+<!-- $$$modality -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="modality-prop"><td class="tblQmlPropNode"><p><a name="modality-prop"></a><span class="name">modality</span> : <span class="type">Qt::WindowModality</span></p></td></tr></table></div></div><div class="qmldoc"><p>The modality of the window.</p>
+<p>A modal window prevents other windows from receiving input events. Possible values are Qt.NonModal (the default), Qt.WindowModal, and Qt.ApplicationModal.</p>
+</div></div><!-- @@@modality -->
+<br/>
+<!-- $$$opacity -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="opacity-prop"><td class="tblQmlPropNode"><p><a name="opacity-prop"></a><span class="name">opacity</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>The opacity of the window.</p>
+<p>If the windowing system supports window opacity, this can be used to fade the window in and out, or to make it semitransparent.</p>
+<p>A value of 1.0 or above is treated as fully opaque, whereas a value of 0.0 or below is treated as fully transparent. Values inbetween represent varying levels of translucency between the two extremes.</p>
+<p>The default value is 1.0&#x2e;</p>
+<p>This QML property was introduced in  Qt 5.1.</p>
+</div></div><!-- @@@opacity -->
+<br/>
+<!-- $$$title -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="title-prop"><td class="tblQmlPropNode"><p><a name="title-prop"></a><span class="name">title</span> : <span class="type">string</span></p></td></tr></table></div></div><div class="qmldoc"><p>The window's title in the windowing system.</p>
+<p>The window title might appear in the title area of the window decorations, depending on the windowing system and the window flags. It might also be used by the windowing system to identify the window in other contexts, such as in the task switcher.</p>
+</div></div><!-- @@@title -->
+<br/>
+<!-- $$$visibility -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="visibility-prop"><td class="tblQmlPropNode"><p><a name="visibility-prop"></a><span class="name">visibility</span> : <span class="type">QWindow::Visibility</span></p></td></tr></table></div></div><div class="qmldoc"><p>The screen-occupation state of the window.</p>
+<p>Visibility is whether the window should appear in the windowing system as normal, minimized, maximized, fullscreen or hidden.</p>
+<p>To set the visibility to AutomaticVisibility means to give the window a default visible state, which might be FullScreen or Windowed depending on the platform. However when reading the visibility property you will always get the actual state, never <code>AutomaticVisibility</code>.</p>
+<p>When a window is not visible its visibility is Hidden, and setting visibility to Hidden is the same as setting <a href="index.html#visible-prop">visible</a> to <code>false</code>.</p>
+<p>This QML property was introduced in  Qt 5.1.</p>
+<p><b>See also </b><a href="index.html#visible-prop">visible</a>.</p>
+</div></div><!-- @@@visibility -->
+<br/>
+<!-- $$$visible -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="visible-prop"><td class="tblQmlPropNode"><p><a name="visible-prop"></a><span class="name">visible</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>Whether the window is visible on the screen.</p>
+<p>Setting visible to false is the same as setting <a href="index.html#visibility-attached-prop">visibility</a> to Hidden.</p>
+<p><b>See also </b><a href="index.html#visibility-attached-prop">visibility</a>.</p>
+</div></div><!-- @@@visible -->
+<br/>
+<!-- $$$width -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="width-prop"><td class="tblQmlPropNode"><p><a name="width-prop"></a><span class="name">width</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>Defines the window's position and size.</p>
+<p>The (x,y) position is relative to the <a href="../QtQuick.Window.Screen/index.html">Screen</a> if there is only one, or to the virtual desktop (arrangement of multiple screens).</p>
+<pre class="qml"><span class="type"><a href="index.html">Window</a></span> { <span class="name">x</span>: <span class="number">100</span>; <span class="name">y</span>: <span class="number">100</span>; <span class="name">width</span>: <span class="number">100</span>; <span class="name">height</span>: <span class="number">100</span> }</pre>
+<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/8ac2d524-ac5f-450b-a832-f27e91939493-api/apps/qml/sdk-15.04.6/QtQuick.Window.Window/images/screen-and-window-dimensions.jpg" alt="" /></p></div></div><!-- @@@width -->
+<br/>
+<!-- $$$x -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="x-prop"><td class="tblQmlPropNode"><p><a name="x-prop"></a><span class="name">x</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>Defines the window's position and size.</p>
+<p>The (x,y) position is relative to the <a href="../QtQuick.Window.Screen/index.html">Screen</a> if there is only one, or to the virtual desktop (arrangement of multiple screens).</p>
+<pre class="qml"><span class="type"><a href="index.html">Window</a></span> { <span class="name">x</span>: <span class="number">100</span>; <span class="name">y</span>: <span class="number">100</span>; <span class="name">width</span>: <span class="number">100</span>; <span class="name">height</span>: <span class="number">100</span> }</pre>
+<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/510301fe-874d-49a1-aa4e-d6ade79432bf-api/apps/qml/sdk-15.04.6/QtQuick.Window.Window/images/screen-and-window-dimensions.jpg" alt="" /></p></div></div><!-- @@@x -->
+<br/>
+<!-- $$$y -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="y-prop"><td class="tblQmlPropNode"><p><a name="y-prop"></a><span class="name">y</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>Defines the window's position and size.</p>
+<p>The (x,y) position is relative to the <a href="../QtQuick.Window.Screen/index.html">Screen</a> if there is only one, or to the virtual desktop (arrangement of multiple screens).</p>
+<pre class="qml"><span class="type"><a href="index.html">Window</a></span> { <span class="name">x</span>: <span class="number">100</span>; <span class="name">y</span>: <span class="number">100</span>; <span class="name">width</span>: <span class="number">100</span>; <span class="name">height</span>: <span class="number">100</span> }</pre>
+<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/261a33a9-e26d-4e78-aa29-85589698cecc-api/apps/qml/sdk-15.04.6/QtQuick.Window.Window/images/screen-and-window-dimensions.jpg" alt="" /></p></div></div><!-- @@@y -->
+<br/>
+<h2>Attached Property Documentation</h2>
+<!-- $$$active -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="active-attached-prop"><td class="tblQmlPropNode"><p><a name="active-attached-prop"></a><span class="name">Window.active</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This attached property tells whether the window is active. The Window attached property can be attached to any Item.</p>
+<p>Here is an example which changes a label to show the active state of the window in which it is shown:</p>
+<pre class="qml">import QtQuick 2.4
+import QtQuick.Window 2.2
+<span class="type"><a href="../QtQuick.Text/index.html">Text</a></span> {
+    <span class="name">text</span>: <span class="name">Window</span>.<span class="name">active</span> ? <span class="string">&quot;active&quot;</span> : <span class="string">&quot;inactive&quot;</span>
+}</pre>
+<p>This QML property was introduced in  Qt 5.4.</p>
+</div></div><!-- @@@active -->
+<br/>
+<!-- $$$activeFocusItem -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="activeFocusItem-attached-prop"><td class="tblQmlPropNode"><p><a name="activeFocusItem-attached-prop"></a><span class="name">Window.activeFocusItem</span> : <span class="type"><a href="../QtQuick.Item/index.html">Item</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This attached property holds the item which currently has active focus or <code>null</code> if there is no item with active focus. The Window attached property can be attached to any Item.</p>
+<p>This QML property was introduced in  Qt 5.4.</p>
+</div></div><!-- @@@activeFocusItem -->
+<br/>
+<!-- $$$contentItem -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="contentItem-attached-prop"><td class="tblQmlPropNode"><p><a name="contentItem-attached-prop"></a><span class="name">Window.contentItem</span> : <span class="type"><a href="../QtQuick.Item/index.html">Item</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This attached property holds the invisible root item of the scene or <code>null</code> if the item is not in a window. The Window attached property can be attached to any Item.</p>
+<p>This QML property was introduced in  Qt 5.4.</p>
+</div></div><!-- @@@contentItem -->
+<br/>
+<!-- $$$visibility -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="visibility-attached-prop"><td class="tblQmlPropNode"><p><a name="visibility-attached-prop"></a><span class="name">Window.visibility</span> : <span class="type">QWindow::Visibility</span></p></td></tr></table></div></div><div class="qmldoc"><p>This attached property holds whether the window is currently shown in the windowing system as normal, minimized, maximized, fullscreen or hidden. The <code>Window</code> attached property can be attached to any Item. If the item is not shown in any window, the value will be Hidden.</p>
+<p>This QML property was introduced in  Qt 5.4.</p>
+<p><b>See also </b><a href="index.html#visible-prop">visible</a> and visibility.</p>
+</div></div><!-- @@@visibility -->
+<br/>
+<h2>Signal Documentation</h2>
+<!-- $$$closing -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="closing-signal"><td class="tblQmlFuncNode"><p><a name="closing-signal"></a><span class="type">void</span> <span class="name">closing</span>(<span class="type"><a href="../QtQuick.Window.CloseEvent/index.html">CloseEvent</a></span><i> close</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when the user tries to close the window.</p>
+<p>This signal includes a <i>close</i> parameter. The <i>close</i> accepted property is true by default so that the window is allowed to close; but you can implement an <code>onClosing</code> handler and set <code>close.accepted = false</code> if you need to do something else before the window can be closed.</p>
+<p>The corresponding handler is <code>onClosing</code>.</p>
+<p>This QML signal was introduced in  Qt 5.1.</p>
+</div></div><!-- @@@closing -->
+<br/>
+<h2>Method Documentation</h2>
+<!-- $$$alert -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="alert-method"><td class="tblQmlFuncNode"><p><a name="alert-method"></a><span class="name">alert</span>(<span class="type">int</span><i> msec</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Causes an alert to be shown for <i>msec</i> milliseconds. If <i>msec</i> is <code>0</code> (the default), then the alert is shown indefinitely until the window becomes active again.</p>
+<p>In alert state, the window indicates that it demands attention, for example by flashing or bouncing the taskbar entry.</p>
+<p>This QML method was introduced in  Qt 5.1.</p>
+</div></div><!-- @@@alert -->
+<br/>
+<!-- $$$close -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="close-method"><td class="tblQmlFuncNode"><p><a name="close-method"></a><span class="name">close</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Closes the window.</p>
+<p>When this method is called, or when the user tries to close the window by its title bar button, the <a href="index.html#closing-signal">closing</a> signal will be emitted. If there is no handler, or the handler does not revoke permission to close, the window will subsequently close. If the QGuiApplication::quitOnLastWindowClosed property is <code>true</code>, and there are no other windows open, the application will quit.</p>
+</div></div><!-- @@@close -->
+<br/>
+<!-- $$$hide -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="hide-method"><td class="tblQmlFuncNode"><p><a name="hide-method"></a><span class="name">hide</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Hides the window.</p>
+<p>Equivalent to setting <a href="index.html#visible-prop">visible</a> to <code>false</code> or <a href="index.html#visibility-attached-prop">visibility</a> to Hidden.</p>
+<p><b>See also </b><a href="index.html#show-method">show()</a>.</p>
+</div></div><!-- @@@hide -->
+<br/>
+<!-- $$$lower -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="lower-method"><td class="tblQmlFuncNode"><p><a name="lower-method"></a><span class="name">lower</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Lowers the window in the windowing system.</p>
+<p>Requests that the window be lowered to appear below other windows.</p>
+</div></div><!-- @@@lower -->
+<br/>
+<!-- $$$raise -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="raise-method"><td class="tblQmlFuncNode"><p><a name="raise-method"></a><span class="name">raise</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Raises the window in the windowing system.</p>
+<p>Requests that the window be raised to appear above other windows.</p>
+</div></div><!-- @@@raise -->
+<br/>
+<!-- $$$requestActivate -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="requestActivate-method"><td class="tblQmlFuncNode"><p><a name="requestActivate-method"></a><span class="name">requestActivate</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Requests the window to be activated, i.e&#x2e; receive keyboard focus.</p>
+<p>This QML method was introduced in  Qt 5.1.</p>
+</div></div><!-- @@@requestActivate -->
+<br/>
+<!-- $$$show -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="show-method"><td class="tblQmlFuncNode"><p><a name="show-method"></a><span class="name">show</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Shows the window.</p>
+<p>This is equivalent to calling <a href="index.html#showFullScreen-method">showFullScreen()</a>, <a href="index.html#showMaximized-method">showMaximized()</a>, or <a href="index.html#showNormal-method">showNormal()</a>, depending on the platform's default behavior for the window type and flags.</p>
+<p><b>See also </b><a href="index.html#showFullScreen-method">showFullScreen()</a>, <a href="index.html#showMaximized-method">showMaximized()</a>, <a href="index.html#showNormal-method">showNormal()</a>, <a href="index.html#hide-method">hide()</a>, and flags().</p>
+</div></div><!-- @@@show -->
+<br/>
+<!-- $$$showFullScreen -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="showFullScreen-method"><td class="tblQmlFuncNode"><p><a name="showFullScreen-method"></a><span class="name">showFullScreen</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Shows the window as fullscreen.</p>
+<p>Equivalent to setting <a href="index.html#visibility-attached-prop">visibility</a> to FullScreen.</p>
+</div></div><!-- @@@showFullScreen -->
+<br/>
+<!-- $$$showMaximized -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="showMaximized-method"><td class="tblQmlFuncNode"><p><a name="showMaximized-method"></a><span class="name">showMaximized</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Shows the window as maximized.</p>
+<p>Equivalent to setting <a href="index.html#visibility-attached-prop">visibility</a> to Maximized.</p>
+</div></div><!-- @@@showMaximized -->
+<br/>
+<!-- $$$showMinimized -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="showMinimized-method"><td class="tblQmlFuncNode"><p><a name="showMinimized-method"></a><span class="name">showMinimized</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Shows the window as minimized.</p>
+<p>Equivalent to setting <a href="index.html#visibility-attached-prop">visibility</a> to Minimized.</p>
+</div></div><!-- @@@showMinimized -->
+<br/>
+<!-- $$$showNormal -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="showNormal-method"><td class="tblQmlFuncNode"><p><a name="showNormal-method"></a><span class="name">showNormal</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Shows the window as normal, i.e&#x2e; neither maximized, minimized, nor fullscreen.</p>
+<p>Equivalent to setting <a href="index.html#visibility-attached-prop">visibility</a> to Windowed.</p>
+</div></div><!-- @@@showNormal -->
+<br/>
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

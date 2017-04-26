@@ -1,0 +1,1046 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>QResult [sdk-15.04.1/unity.scopes.qt.QResult] | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/doxygen.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Scopes</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">C++</a> &rsaquo;</li>
+<li><a href="../index.html">SDK 15.04.1</a> &rsaquo;</li>
+
+<li><a href="../unity.scopes.qt/index.html">unity.scopes.qt</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">QResult</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: classunity_1_1scopes_1_1qt_1_1_q_result.html -->
+	<!-- Source Format: doxygen -->
+<h1>QResult</h1>
+<div id="element_content" class="doxygen">
+<!-- Start Element Content -->
+<p>The attributes of a result returned by a <a class="el" href="../unity.scopes.Scope/index.html" title="Allows queries, preview requests, and activation requests to be sent to a scope. ">Scope</a>.  
+ <a href="index.html#details">More...</a></p>
+<p><code>#include &lt;unity/scopes/qt/QResult.h&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for unity::scopes::qt::QResult:</div>
+<div class="dyncontent">
+<div class="center"><img src="https://developer.ubuntu.com/static/devportal_uploaded/b6685d7f-6560-41cd-a110-fffe99f9ca91-api/scopes/cpp/sdk-15.04.1/unity.scopes.qt.QResult/classunity_1_1scopes_1_1qt_1_1_q_result__inherit__graph.png" border="0" usemap="#unity_1_1scopes_1_1qt_1_1_q_result_inherit__map" alt="Inheritance graph"/></div>
+<map name="unity_1_1scopes_1_1qt_1_1_q_result_inherit__map" id="unity_1_1scopes_1_1qt_1_1_q_result_inherit__map">
+<area shape="rect" id="node2" href="https://developer.ubuntu.com/api/scopes/cpp/sdk-15.04.1/unity.scopes.qt.QResult/classunity_1_1scopes_1_1qt_1_1_q_categorised_result.html" title="A result, including the category it belongs to. " alt="" coords="5,95,152,136"/></map>
+<center><span class="legend">[legend]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ad1bc050f67237c601821cc5836c76b94"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#ad1bc050f67237c601821cc5836c76b94">~QResult</a> ()</td></tr>
+<tr class="separator:ad1bc050f67237c601821cc5836c76b94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56592ac2bbf7a752f9aa99ea26226cee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a56592ac2bbf7a752f9aa99ea26226cee">store</a> (<a class="el" href="index.html">QResult</a> const &amp;other, bool intercept_activation=false)</td></tr>
+<tr class="memdesc:a56592ac2bbf7a752f9aa99ea26226cee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores a Result inside this Result instance.  More...<br /></td></tr>
+<tr class="separator:a56592ac2bbf7a752f9aa99ea26226cee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affcb80d29930b57d8dc6aa268820d451"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#affcb80d29930b57d8dc6aa268820d451">has_stored_result</a> () const </td></tr>
+<tr class="memdesc:affcb80d29930b57d8dc6aa268820d451"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this Result instance has a stored result.  More...<br /></td></tr>
+<tr class="separator:affcb80d29930b57d8dc6aa268820d451"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3827c6b06d202ca6079f08b666f2c0ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="index.html">QResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a3827c6b06d202ca6079f08b666f2c0ea">retrieve</a> () const </td></tr>
+<tr class="memdesc:a3827c6b06d202ca6079f08b666f2c0ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a stored result.  More...<br /></td></tr>
+<tr class="separator:a3827c6b06d202ca6079f08b666f2c0ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aa2ae9082f1e6507d18dc650f4d6d9d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1aa2ae9082f1e6507d18dc650f4d6d9d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a1aa2ae9082f1e6507d18dc650f4d6d9d">set_uri</a> (QString const &amp;<a class="el" href="index.html#a253c1f08aae4338a3f89e192538e99f8">uri</a>)</td></tr>
+<tr class="memdesc:a1aa2ae9082f1e6507d18dc650f4d6d9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the "uri" attribute of this result. <br /></td></tr>
+<tr class="separator:a1aa2ae9082f1e6507d18dc650f4d6d9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f3defe1265de15c763a591b0da87cf0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a1f3defe1265de15c763a591b0da87cf0">set_title</a> (QString const &amp;<a class="el" href="index.html#aafcb8c20516636cadb4be0e285ab20f6">title</a>)</td></tr>
+<tr class="memdesc:a1f3defe1265de15c763a591b0da87cf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the "title" attribute of this result.  More...<br /></td></tr>
+<tr class="separator:a1f3defe1265de15c763a591b0da87cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f4f912a02b84f077bc85879a72a90be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a1f4f912a02b84f077bc85879a72a90be">set_art</a> (QString const &amp;image)</td></tr>
+<tr class="memdesc:a1f4f912a02b84f077bc85879a72a90be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the "art" attribute of this result.  More...<br /></td></tr>
+<tr class="separator:a1f4f912a02b84f077bc85879a72a90be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa091842db377921d6b0dd388f823a245"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#aa091842db377921d6b0dd388f823a245">set_dnd_uri</a> (QString const &amp;<a class="el" href="index.html#a3da993e25ee4a714fc5feedb29892d05">dnd_uri</a>)</td></tr>
+<tr class="memdesc:aa091842db377921d6b0dd388f823a245"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the "dnd_uri" attribute of this result.  More...<br /></td></tr>
+<tr class="separator:aa091842db377921d6b0dd388f823a245"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92fcf6ff2271c442c5190dab63ec4042"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a92fcf6ff2271c442c5190dab63ec4042">set_intercept_activation</a> ()</td></tr>
+<tr class="memdesc:a92fcf6ff2271c442c5190dab63ec4042"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates to the receiver that this scope should intercept activation requests for this result.  More...<br /></td></tr>
+<tr class="separator:a92fcf6ff2271c442c5190dab63ec4042"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa905c2b7854efd8d8031cb80044ccb9f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#aa905c2b7854efd8d8031cb80044ccb9f">direct_activation</a> () const </td></tr>
+<tr class="memdesc:aa905c2b7854efd8d8031cb80044ccb9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this result should be activated directly by the shell because the scope doesn't handle activation of this result.  More...<br /></td></tr>
+<tr class="separator:aa905c2b7854efd8d8031cb80044ccb9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a273100ac7b782044294250f939e3dba0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../unity.scopes/index.html#a94db15da410f8419e4da711db842aaae">ScopeProxy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a273100ac7b782044294250f939e3dba0">target_scope_proxy</a> () const </td></tr>
+<tr class="memdesc:a273100ac7b782044294250f939e3dba0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the proxy of a scope that handles activation and preview of this result.  More...<br /></td></tr>
+<tr class="separator:a273100ac7b782044294250f939e3dba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b939c0d073ad78286e3cb8b8525ba2a"><td class="memItemLeft" align="right" valign="top">QVariant &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a3b939c0d073ad78286e3cb8b8525ba2a">operator[]</a> (QString const &amp;key)</td></tr>
+<tr class="memdesc:a3b939c0d073ad78286e3cb8b8525ba2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns reference of a Result attribute.  More...<br /></td></tr>
+<tr class="separator:a3b939c0d073ad78286e3cb8b8525ba2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a205f7595cf44c96b610cc7813b126db2"><td class="memItemLeft" align="right" valign="top">QVariant const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a205f7595cf44c96b610cc7813b126db2">operator[]</a> (QString const &amp;key) const </td></tr>
+<tr class="memdesc:a205f7595cf44c96b610cc7813b126db2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to a Result attribute.  More...<br /></td></tr>
+<tr class="separator:a205f7595cf44c96b610cc7813b126db2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a253c1f08aae4338a3f89e192538e99f8"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a253c1f08aae4338a3f89e192538e99f8">uri</a> () const noexcept</td></tr>
+<tr class="memdesc:a253c1f08aae4338a3f89e192538e99f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the "uri" property of this Result.  More...<br /></td></tr>
+<tr class="separator:a253c1f08aae4338a3f89e192538e99f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafcb8c20516636cadb4be0e285ab20f6"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#aafcb8c20516636cadb4be0e285ab20f6">title</a> () const noexcept</td></tr>
+<tr class="memdesc:aafcb8c20516636cadb4be0e285ab20f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the "title" property of this Result.  More...<br /></td></tr>
+<tr class="separator:aafcb8c20516636cadb4be0e285ab20f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada4ef189c8a95ceb96bcf777dc312b24"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#ada4ef189c8a95ceb96bcf777dc312b24">art</a> () const noexcept</td></tr>
+<tr class="memdesc:ada4ef189c8a95ceb96bcf777dc312b24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the "art" property of this Result.  More...<br /></td></tr>
+<tr class="separator:ada4ef189c8a95ceb96bcf777dc312b24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3da993e25ee4a714fc5feedb29892d05"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a3da993e25ee4a714fc5feedb29892d05">dnd_uri</a> () const noexcept</td></tr>
+<tr class="memdesc:a3da993e25ee4a714fc5feedb29892d05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the "dnd_uri" property of this Result.  More...<br /></td></tr>
+<tr class="separator:a3da993e25ee4a714fc5feedb29892d05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adde088969220153fde8dca7a4c4d117a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#adde088969220153fde8dca7a4c4d117a">contains</a> (QString const &amp;key) const </td></tr>
+<tr class="memdesc:adde088969220153fde8dca7a4c4d117a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this Result has an attribute.  More...<br /></td></tr>
+<tr class="separator:adde088969220153fde8dca7a4c4d117a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ed3240ad58f23d88e9de63e15062598"><td class="memItemLeft" align="right" valign="top">QVariant const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a7ed3240ad58f23d88e9de63e15062598">value</a> (QString const &amp;key) const </td></tr>
+<tr class="memdesc:a7ed3240ad58f23d88e9de63e15062598"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of an attribute.  More...<br /></td></tr>
+<tr class="separator:a7ed3240ad58f23d88e9de63e15062598"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9188d2a2e431c71d85b142539f654e44"><td class="memItemLeft" align="right" valign="top">QVariantMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a9188d2a2e431c71d85b142539f654e44">serialize</a> () const </td></tr>
+<tr class="memdesc:a9188d2a2e431c71d85b142539f654e44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a dictionary of all attributes of this Result instance.  More...<br /></td></tr>
+<tr class="separator:a9188d2a2e431c71d85b142539f654e44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Copy and assignment</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Copy and assignment (move and non-move versions) have the usual value semantics. </p>
+</div></td></tr>
+<tr class="memitem:a3842831df719702fef51c9d82c010f5d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3842831df719702fef51c9d82c010f5d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>QResult</b> (<a class="el" href="index.html">QResult</a> const &amp;other)</td></tr>
+<tr class="separator:a3842831df719702fef51c9d82c010f5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7bc9ad81a8c518970e7b5a6534b408a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad7bc9ad81a8c518970e7b5a6534b408a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>QResult</b> (<a class="el" href="index.html">QResult</a> &amp;&amp;)</td></tr>
+<tr class="separator:ad7bc9ad81a8c518970e7b5a6534b408a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a2a982ce76d99dbc2b45ec82f6c399c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a2a982ce76d99dbc2b45ec82f6c399c"></a>
+<a class="el" href="index.html">QResult</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="index.html">QResult</a> const &amp;other)</td></tr>
+<tr class="separator:a9a2a982ce76d99dbc2b45ec82f6c399c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dc063c82c63669214a207ac3411fc07"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3dc063c82c63669214a207ac3411fc07"></a>
+<a class="el" href="index.html">QResult</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="index.html">QResult</a> &amp;&amp;)</td></tr>
+<tr class="separator:a3dc063c82c63669214a207ac3411fc07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The attributes of a result returned by a <a class="el" href="../unity.scopes.Scope/index.html" title="Allows queries, preview requests, and activation requests to be sent to a scope. ">Scope</a>. </p>
+<p>The <a class="el" href="../unity.scopes.Result/index.html" title="The attributes of a result returned by a Scope. ">Result</a> API provides convenience methods for some typical attributes (title, art), but scopes are free to add and use any custom attributes with <code>operator[]</code>. The only required attribute is 'uri' and it must not be empty before calling Reply::push(). </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ad1bc050f67237c601821cc5836c76b94"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unity::scopes::qt::QResult::~QResult </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Destructor. </p>
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ada4ef189c8a95ceb96bcf777dc312b24"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString unity::scopes::qt::QResult::art </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the "art" property of this <a class="el" href="../unity.scopes.Result/index.html" title="The attributes of a result returned by a Scope. ">Result</a>. </p>
+<p>This method returns an empty string if this attribute is not of type Variant::Type::String (e.g. it was set with operator[]). </p><dl class="section return"><dt>Returns</dt><dd>The value of "art" or the empty string. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="adde088969220153fde8dca7a4c4d117a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool unity::scopes::qt::QResult::contains </td>
+          <td>(</td>
+          <td class="paramtype">QString const &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if this <a class="el" href="../unity.scopes.Result/index.html" title="The attributes of a result returned by a Scope. ">Result</a> has an attribute. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The attribute name. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the attribute is set. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="aa905c2b7854efd8d8031cb80044ccb9f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool unity::scopes::qt::QResult::direct_activation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if this result should be activated directly by the shell because the scope doesn't handle activation of this result. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if this result needs to be activated directly. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a3da993e25ee4a714fc5feedb29892d05"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString unity::scopes::qt::QResult::dnd_uri </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the "dnd_uri" property of this <a class="el" href="../unity.scopes.Result/index.html" title="The attributes of a result returned by a Scope. ">Result</a>. </p>
+<p>This method returns an empty string if this attribute is not of type Variant::Type::String type (e.g. it was set with operator[]). </p><dl class="section return"><dt>Returns</dt><dd>The value of "dnd_uri" or the empty string. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="affcb80d29930b57d8dc6aa268820d451"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool unity::scopes::qt::QResult::has_stored_result </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if this <a class="el" href="../unity.scopes.Result/index.html" title="The attributes of a result returned by a Scope. ">Result</a> instance has a stored result. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if there is a stored result </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a3b939c0d073ad78286e3cb8b8525ba2a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVariant&amp; unity::scopes::qt::QResult::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">QString const &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns reference of a <a class="el" href="../unity.scopes.Result/index.html" title="The attributes of a result returned by a Scope. ">Result</a> attribute. </p>
+<p>This method can be used to read or initialize both standard ("uri", "title", "art", "dnd_uri") and custom metadata attributes. Referencing a non-existing attribute automatically creates it with a default value of Variant::Type::Null. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The name of the attribute. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the attribute. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">unity::Invalidargument</td><td>if no attribute with the given name exists. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a205f7595cf44c96b610cc7813b126db2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVariant const&amp; unity::scopes::qt::QResult::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">QString const &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns a const reference to a <a class="el" href="../unity.scopes.Result/index.html" title="The attributes of a result returned by a Scope. ">Result</a> attribute. </p>
+<p>This method can be used for read-only access to both standard ("uri", "title", "art", "dnd_uri") and custom metadata attributes. Referencing a non-existing attribute throws unity::InvalidArgumentException. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The name of the attribute. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A const reference to the attribute. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">unity::Invalidargument</td><td>if no attribute with the given name exists. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a3827c6b06d202ca6079f08b666f2c0ea"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="index.html">QResult</a> unity::scopes::qt::QResult::retrieve </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get a stored result. </p>
+<dl class="section return"><dt>Returns</dt><dd>stored result </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">unity::InvalidArgumentException</td><td>if no result was stored in this <a class="el" href="../unity.scopes.Result/index.html" title="The attributes of a result returned by a Scope. ">Result</a> instance. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a9188d2a2e431c71d85b142539f654e44"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVariantMap unity::scopes::qt::QResult::serialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns a dictionary of all attributes of this <a class="el" href="../unity.scopes.Result/index.html" title="The attributes of a result returned by a Scope. ">Result</a> instance. </p>
+<dl class="section return"><dt>Returns</dt><dd>All base attributes and custom attributes set with add_metadata(). </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a1f4f912a02b84f077bc85879a72a90be"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unity::scopes::qt::QResult::set_art </td>
+          <td>(</td>
+          <td class="paramtype">QString const &amp;&#160;</td>
+          <td class="paramname"><em>image</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the "art" attribute of this result. </p>
+<p>Equivalent to calling <code>result["art"] = image;</code> </p>
+</div>
+</div>
+<a class="anchor" id="aa091842db377921d6b0dd388f823a245"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unity::scopes::qt::QResult::set_dnd_uri </td>
+          <td>(</td>
+          <td class="paramtype">QString const &amp;&#160;</td>
+          <td class="paramname"><em>dnd_uri</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the "dnd_uri" attribute of this result. </p>
+<p>Equivalent to calling <code>result["dnd_uri"] = dnd_uri;</code> </p>
+</div>
+</div>
+<a class="anchor" id="a92fcf6ff2271c442c5190dab63ec4042"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unity::scopes::qt::QResult::set_intercept_activation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Indicates to the receiver that this scope should intercept activation requests for this result. </p>
+<p>By default, a scope receives preview requests for the results it creates, but does not receive activation requests (they are handled directly by the shell). Intercepting activation implies intercepting preview requests as well; this is important for scopes that forward results from other scopes and call <a class="el" href="index.html#a92fcf6ff2271c442c5190dab63ec4042" title="Indicates to the receiver that this scope should intercept activation requests for this result...">set_intercept_activation()</a> on these scopes. A scope that sets intercept activation flag for a result should re-implement <a class="el" href="../unity.scopes.ScopeBase/index.html#a49a0b9ada0eeb4c71e6a2181c3d8c9e7" title="Called by the scopes runtime when a scope needs to respond to a result activation request...">ScopeBase::activate()</a> and provide an implementation of <a class="el" href="../unity.scopes.ActivationQueryBase/index.html" title="Base class for an activation request that is executed inside a scope. ">ActivationQueryBase</a> that handles the actual activation. If not called, the result will be activated directly by the Unity shell whithout involving the scope, assuming an appropriate URI schema handler is present on the system. </p>
+</div>
+</div>
+<a class="anchor" id="a1f3defe1265de15c763a591b0da87cf0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unity::scopes::qt::QResult::set_title </td>
+          <td>(</td>
+          <td class="paramtype">QString const &amp;&#160;</td>
+          <td class="paramname"><em>title</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the "title" attribute of this result. </p>
+<p>Equivalent to calling <code>result["title"] = title;</code> </p>
+</div>
+</div>
+<a class="anchor" id="a56592ac2bbf7a752f9aa99ea26226cee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unity::scopes::qt::QResult::store </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="index.html">QResult</a> const &amp;&#160;</td>
+          <td class="paramname"><em>other</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>intercept_activation</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Stores a <a class="el" href="../unity.scopes.Result/index.html" title="The attributes of a result returned by a Scope. ">Result</a> inside this <a class="el" href="../unity.scopes.Result/index.html" title="The attributes of a result returned by a Scope. ">Result</a> instance. </p>
+<p>This method is meant to be used by aggregator scopes which want to modify results they receive, but want to keep a copy of the original result so that they can be correctly handled by the original scopes who created them when it comes to activation or previews. Scopes middleware will automatically pass the correct inner stored result to the activation or preview request handler of a scope which created it. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The original result to store within this result. </td></tr>
+    <tr><td class="paramname">intercept_activation</td><td>True if this scope should receive activation and preview requests. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a273100ac7b782044294250f939e3dba0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../unity.scopes/index.html#a94db15da410f8419e4da711db842aaae">ScopeProxy</a> unity::scopes::qt::QResult::target_scope_proxy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the proxy of a scope that handles activation and preview of this result. </p>
+<p>The proxy is available only when receiving this result from a scope, otherwise this method throws LogicException. Activation requests should be sent to a scope returned by this method only if <a class="el" href="index.html#aa905c2b7854efd8d8031cb80044ccb9f" title="Check if this result should be activated directly by the shell because the scope doesn&#39;t handle activ...">direct_activation()</a> is false. </p><dl class="section return"><dt>Returns</dt><dd>The scope proxy. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="aafcb8c20516636cadb4be0e285ab20f6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString unity::scopes::qt::QResult::title </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the "title" property of this <a class="el" href="../unity.scopes.Result/index.html" title="The attributes of a result returned by a Scope. ">Result</a>. </p>
+<p>This method returns an empty string if this attribute is not of type Variant::Type::String (e.g. it was set with operator[]). </p><dl class="section return"><dt>Returns</dt><dd>The value of "title" or the empty string. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a253c1f08aae4338a3f89e192538e99f8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString unity::scopes::qt::QResult::uri </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the "uri" property of this <a class="el" href="../unity.scopes.Result/index.html" title="The attributes of a result returned by a Scope. ">Result</a>. </p>
+<p>This method returns an empty string if this attribute is not of type Variant::Type::String (e.g. it was set with operator[]). </p><dl class="section return"><dt>Returns</dt><dd>The value of "uri" or the empty string. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a7ed3240ad58f23d88e9de63e15062598"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVariant const&amp; unity::scopes::qt::QResult::value </td>
+          <td>(</td>
+          <td class="paramtype">QString const &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the value of an attribute. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The attribute name. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The attribute value. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">unity::InvalidArgumentException</td><td>if given attribute hasn't been set. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

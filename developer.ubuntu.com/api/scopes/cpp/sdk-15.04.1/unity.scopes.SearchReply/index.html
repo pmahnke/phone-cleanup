@@ -1,0 +1,991 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>SearchReply [sdk-15.04.1/unity.scopes.SearchReply] | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/doxygen.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Scopes</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">C++</a> &rsaquo;</li>
+<li><a href="../index.html">SDK 15.04.1</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">SearchReply</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: classunity_1_1scopes_1_1_search_reply.html -->
+	<!-- Source Format: doxygen -->
+<h1>SearchReply</h1>
+<div id="element_content" class="doxygen">
+<!-- Start Element Content -->
+<p>Allows the results of a search query to be sent to the query source.  
+ <a href="index.html#details">More...</a></p>
+<p><code>#include &lt;unity/scopes/SearchReply.h&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for unity::scopes::SearchReply:</div>
+<div class="dyncontent">
+<div class="center"><img src="https://developer.ubuntu.com/static/devportal_uploaded/36734a7c-1aaf-4ddb-adbe-394572c4b7ed-api/scopes/cpp/sdk-15.04.1/unity.scopes.SearchReply/classunity_1_1scopes_1_1_search_reply__inherit__graph.png" border="0" usemap="#unity_1_1scopes_1_1_search_reply_inherit__map" alt="Inheritance graph"/></div>
+<map name="unity_1_1scopes_1_1_search_reply_inherit__map" id="unity_1_1scopes_1_1_search_reply_inherit__map">
+<area shape="rect" id="node4" href="https://developer.ubuntu.com/api/scopes/cpp/sdk-15.04.1/unity.scopes.SearchReply/classunity_1_1scopes_1_1testing_1_1_mock_search_reply.html" title="Mock for unity::scopes::SearchReply class. " alt="" coords="22,229,179,271"/><area shape="rect" id="node2" href="https://developer.ubuntu.com/api/scopes/cpp/sdk-15.04.1/unity.scopes.SearchReply/classunity_1_1scopes_1_1_reply.html" title="Allows query termination to be sent to the source of a query. " alt="" coords="27,80,174,107"/><area shape="rect" id="node3" href="https://developer.ubuntu.com/api/scopes/cpp/sdk-15.04.1/unity.scopes.SearchReply/classunity_1_1scopes_1_1_object.html" title="The root base class for all proxies. " alt="" coords="23,5,178,32"/></map>
+<center><span class="legend">[legend]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a17fdd52a4a8b19d6f8e13e5d7f576344"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a17fdd52a4a8b19d6f8e13e5d7f576344">register_departments</a> (Department::SCPtr const &amp;parent)=0</td></tr>
+<tr class="memdesc:a17fdd52a4a8b19d6f8e13e5d7f576344"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register departments for the current search reply and provide the current department.  More...<br /></td></tr>
+<tr class="separator:a17fdd52a4a8b19d6f8e13e5d7f576344"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa061806a96f50ff66abc6184135ea66"><td class="memItemLeft" align="right" valign="top">virtual Category::SCPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#aaa061806a96f50ff66abc6184135ea66">register_category</a> (std::string const &amp;id, std::string const &amp;title, std::string const &amp;icon, <a class="el" href="../unity.scopes.CategoryRenderer/index.html">CategoryRenderer</a> const &amp;renderer_template=<a class="el" href="../unity.scopes.CategoryRenderer/index.html">CategoryRenderer</a>())=0</td></tr>
+<tr class="memdesc:aaa061806a96f50ff66abc6184135ea66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register new category and send it to the source of the query.  More...<br /></td></tr>
+<tr class="separator:aaa061806a96f50ff66abc6184135ea66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bf901e2b5c8b6db3c8e758a9ccbef1c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a3bf901e2b5c8b6db3c8e758a9ccbef1c">register_category</a> (Category::SCPtr category)=0</td></tr>
+<tr class="memdesc:a3bf901e2b5c8b6db3c8e758a9ccbef1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register an existing category instance and send it to the source of the query.  More...<br /></td></tr>
+<tr class="separator:a3bf901e2b5c8b6db3c8e758a9ccbef1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55335c829bf950d36dee6c394569688a"><td class="memItemLeft" align="right" valign="top">virtual Category::SCPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a55335c829bf950d36dee6c394569688a">lookup_category</a> (std::string const &amp;id)=0</td></tr>
+<tr class="memdesc:a55335c829bf950d36dee6c394569688a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a previously registered category.  More...<br /></td></tr>
+<tr class="separator:a55335c829bf950d36dee6c394569688a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63d6de93152b3a972901c2d406ef5760"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a63d6de93152b3a972901c2d406ef5760">push</a> (<a class="el" href="../unity.scopes.CategorisedResult/index.html">CategorisedResult</a> const &amp;result)=0</td></tr>
+<tr class="memdesc:a63d6de93152b3a972901c2d406ef5760"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a single result to the source of a query.  More...<br /></td></tr>
+<tr class="separator:a63d6de93152b3a972901c2d406ef5760"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6c02e387248cfe382dd3d8c7cc9c589"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#ad6c02e387248cfe382dd3d8c7cc9c589">push</a> (experimental::Annotation const &amp;annotation)=0</td></tr>
+<tr class="memdesc:ad6c02e387248cfe382dd3d8c7cc9c589"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push an annotation.  More...<br /></td></tr>
+<tr class="separator:ad6c02e387248cfe382dd3d8c7cc9c589"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a121842b4206980360c208a1f5828ef12"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a121842b4206980360c208a1f5828ef12">push</a> (<a class="el" href="../unity.scopes/index.html#adab58c13cf604e0e64bd6b1a745364d3">Filters</a> const &amp;filters, <a class="el" href="../unity.scopes.FilterState/index.html">FilterState</a> const &amp;filter_state)=0</td></tr>
+<tr class="memdesc:a121842b4206980360c208a1f5828ef12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends all filters and their state to the source of a query.  More...<br /></td></tr>
+<tr class="separator:a121842b4206980360c208a1f5828ef12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafc76a74146ebed8b8849797838ef5c5"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#aafc76a74146ebed8b8849797838ef5c5">~SearchReply</a> ()</td></tr>
+<tr class="memdesc:aafc76a74146ebed8b8849797838ef5c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys a Reply.  More...<br /></td></tr>
+<tr class="separator:aafc76a74146ebed8b8849797838ef5c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73d044ea7719f3538e391477d8dd7afb"><td class="memItemLeft" align="right" valign="top">virtual Category::SCPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a73d044ea7719f3538e391477d8dd7afb">register_category</a> (std::string const &amp;id, std::string const &amp;title, std::string const &amp;icon, <a class="el" href="../unity.scopes.CannedQuery/index.html">CannedQuery</a> const &amp;query, <a class="el" href="../unity.scopes.CategoryRenderer/index.html">CategoryRenderer</a> const &amp;renderer_template=<a class="el" href="../unity.scopes.CategoryRenderer/index.html">CategoryRenderer</a>())=0</td></tr>
+<tr class="memdesc:a73d044ea7719f3538e391477d8dd7afb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register new category and send it to the source of the query.  More...<br /></td></tr>
+<tr class="separator:a73d044ea7719f3538e391477d8dd7afb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ba805136164b11bb358917070cde24d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a4ba805136164b11bb358917070cde24d">push_surfacing_results_from_cache</a> ()=0</td></tr>
+<tr class="memdesc:a4ba805136164b11bb358917070cde24d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push the results that were produced by the most recent surfacing query.  More...<br /></td></tr>
+<tr class="separator:a4ba805136164b11bb358917070cde24d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classunity_1_1scopes_1_1_reply"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classunity_1_1scopes_1_1_reply')"><img src="https://developer.ubuntu.com/static/devportal_uploaded/b9db8ef4-2b07-4abc-9bce-e1653cc7e6cf-api/scopes/cpp/sdk-15.04.1/unity.scopes.SearchReply/closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../unity.scopes.Reply/index.html">unity::scopes::Reply</a></td></tr>
+<tr class="memitem:a9ca653d5d7f7c97a781bc362f2af7749 inherit pub_methods_classunity_1_1scopes_1_1_reply"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../unity.scopes.Reply/index.html#a9ca653d5d7f7c97a781bc362f2af7749">finished</a> ()=0</td></tr>
+<tr class="memdesc:a9ca653d5d7f7c97a781bc362f2af7749 inherit pub_methods_classunity_1_1scopes_1_1_reply"><td class="mdescLeft">&#160;</td><td class="mdescRight">Informs the source of a query that the query results are complete.  More...<br /></td></tr>
+<tr class="separator:a9ca653d5d7f7c97a781bc362f2af7749 inherit pub_methods_classunity_1_1scopes_1_1_reply"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a526c9cbb11f896210835fb3420324ba8 inherit pub_methods_classunity_1_1scopes_1_1_reply"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../unity.scopes.Reply/index.html#a526c9cbb11f896210835fb3420324ba8">error</a> (std::exception_ptr ex)=0</td></tr>
+<tr class="memdesc:a526c9cbb11f896210835fb3420324ba8 inherit pub_methods_classunity_1_1scopes_1_1_reply"><td class="mdescLeft">&#160;</td><td class="mdescRight">Informs the source of a query that the query was terminated due to an error.  More...<br /></td></tr>
+<tr class="separator:a526c9cbb11f896210835fb3420324ba8 inherit pub_methods_classunity_1_1scopes_1_1_reply"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af35cbaba152e4919306f32b06bd81029 inherit pub_methods_classunity_1_1scopes_1_1_reply"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../unity.scopes.Reply/index.html#af35cbaba152e4919306f32b06bd81029">info</a> (<a class="el" href="../unity.scopes.OperationInfo/index.html">OperationInfo</a> const &amp;op_info)=0</td></tr>
+<tr class="memdesc:af35cbaba152e4919306f32b06bd81029 inherit pub_methods_classunity_1_1scopes_1_1_reply"><td class="mdescLeft">&#160;</td><td class="mdescRight">Informs the source of a query that additional information regarding the reply is available.  More...<br /></td></tr>
+<tr class="separator:af35cbaba152e4919306f32b06bd81029 inherit pub_methods_classunity_1_1scopes_1_1_reply"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f0cfeeee75a27e111ebd955523e1bb0 inherit pub_methods_classunity_1_1scopes_1_1_reply"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../unity.scopes.Reply/index.html#a9f0cfeeee75a27e111ebd955523e1bb0">~Reply</a> ()</td></tr>
+<tr class="memdesc:a9f0cfeeee75a27e111ebd955523e1bb0 inherit pub_methods_classunity_1_1scopes_1_1_reply"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys a Reply.  More...<br /></td></tr>
+<tr class="separator:a9f0cfeeee75a27e111ebd955523e1bb0 inherit pub_methods_classunity_1_1scopes_1_1_reply"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classunity_1_1scopes_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classunity_1_1scopes_1_1_object')"><img src="https://developer.ubuntu.com/static/devportal_uploaded/66973182-b75e-445e-a274-b52508c26459-api/scopes/cpp/sdk-15.04.1/unity.scopes.SearchReply/closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../unity.scopes.Object/index.html">unity::scopes::Object</a></td></tr>
+<tr class="memitem:ad7618cc9d878c40b389361d4acd473ae inherit pub_methods_classunity_1_1scopes_1_1_object"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../unity.scopes.Object/index.html#ad7618cc9d878c40b389361d4acd473ae">endpoint</a> ()=0</td></tr>
+<tr class="memdesc:ad7618cc9d878c40b389361d4acd473ae inherit pub_methods_classunity_1_1scopes_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the endpoint this proxy connects to.  More...<br /></td></tr>
+<tr class="separator:ad7618cc9d878c40b389361d4acd473ae inherit pub_methods_classunity_1_1scopes_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b55aea886f0a68cb8a578f7ee0b1cfd inherit pub_methods_classunity_1_1scopes_1_1_object"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../unity.scopes.Object/index.html#a1b55aea886f0a68cb8a578f7ee0b1cfd">identity</a> ()=0</td></tr>
+<tr class="memdesc:a1b55aea886f0a68cb8a578f7ee0b1cfd inherit pub_methods_classunity_1_1scopes_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the identity of the target object of this proxy.  More...<br /></td></tr>
+<tr class="separator:a1b55aea886f0a68cb8a578f7ee0b1cfd inherit pub_methods_classunity_1_1scopes_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40a997516629df3dacca9742dbddd6cb inherit pub_methods_classunity_1_1scopes_1_1_object"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../unity.scopes.Object/index.html#a40a997516629df3dacca9742dbddd6cb">target_category</a> ()=0</td></tr>
+<tr class="memdesc:a40a997516629df3dacca9742dbddd6cb inherit pub_methods_classunity_1_1scopes_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the category of the target object of this proxy.  More...<br /></td></tr>
+<tr class="separator:a40a997516629df3dacca9742dbddd6cb inherit pub_methods_classunity_1_1scopes_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41d9839f1e3cbcd6d8baee0736feccab inherit pub_methods_classunity_1_1scopes_1_1_object"><td class="memItemLeft" align="right" valign="top">virtual int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../unity.scopes.Object/index.html#a41d9839f1e3cbcd6d8baee0736feccab">timeout</a> ()=0</td></tr>
+<tr class="memdesc:a41d9839f1e3cbcd6d8baee0736feccab inherit pub_methods_classunity_1_1scopes_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the timeout in milliseconds if this proxy is a twoway proxy.  More...<br /></td></tr>
+<tr class="separator:a41d9839f1e3cbcd6d8baee0736feccab inherit pub_methods_classunity_1_1scopes_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ae27e1f30dc755abcd796a1e8a25150 inherit pub_methods_classunity_1_1scopes_1_1_object"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../unity.scopes.Object/index.html#a9ae27e1f30dc755abcd796a1e8a25150">to_string</a> ()=0</td></tr>
+<tr class="memdesc:a9ae27e1f30dc755abcd796a1e8a25150 inherit pub_methods_classunity_1_1scopes_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a proxy into its string representation.  More...<br /></td></tr>
+<tr class="separator:a9ae27e1f30dc755abcd796a1e8a25150 inherit pub_methods_classunity_1_1scopes_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Allows the results of a search query to be sent to the query source. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="aafc76a74146ebed8b8849797838ef5c5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unity::scopes::SearchReply::~SearchReply </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Destroys a <a class="el" href="../unity.scopes.Reply/index.html" title="Allows query termination to be sent to the source of a query. ">Reply</a>. </p>
+<p>If a <a class="el" href="../unity.scopes.Reply/index.html" title="Allows query termination to be sent to the source of a query. ">Reply</a> goes out of scope without a prior call to <a class="el" href="../unity.scopes.Reply/index.html#a9ca653d5d7f7c97a781bc362f2af7749" title="Informs the source of a query that the query results are complete. ">finished()</a>, the destructor implicitly calls <a class="el" href="../unity.scopes.Reply/index.html#a9ca653d5d7f7c97a781bc362f2af7749" title="Informs the source of a query that the query results are complete. ">finished()</a>. </p>
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a55335c829bf950d36dee6c394569688a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Category::SCPtr unity::scopes::SearchReply::lookup_category </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a previously registered category. </p>
+<dl class="section return"><dt>Returns</dt><dd>The category instance or <code>nullptr</code> if the category does not exist. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a63d6de93152b3a972901c2d406ef5760"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool unity::scopes::SearchReply::push </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.CategorisedResult/index.html">CategorisedResult</a> const &amp;&#160;</td>
+          <td class="paramname"><em>result</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sends a single result to the source of a query. </p>
+<p>Any calls to <a class="el" href="index.html#a63d6de93152b3a972901c2d406ef5760" title="Sends a single result to the source of a query. ">push()</a> after <a class="el" href="../unity.scopes.Reply/index.html#a9ca653d5d7f7c97a781bc362f2af7749" title="Informs the source of a query that the query results are complete. ">finished()</a> was called are ignored. </p><dl class="section return"><dt>Returns</dt><dd>The return value is true if the result was accepted, false otherwise. A false return value can be due to <a class="el" href="../unity.scopes.Reply/index.html#a9ca653d5d7f7c97a781bc362f2af7749" title="Informs the source of a query that the query results are complete. ">finished()</a> having been called earlier, or the client that sent the query having cancelled that query. The return value is false also if the query has a cardinality limit and is reached or exceeded. (The return value is false for the last valid push and subsequent pushes.) </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ad6c02e387248cfe382dd3d8c7cc9c589"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool unity::scopes::SearchReply::push </td>
+          <td>(</td>
+          <td class="paramtype">experimental::Annotation const &amp;&#160;</td>
+          <td class="paramname"><em>annotation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Push an annotation. </p>
+<p>The annotation will be rendered at a next available spot below the category of last pushed result. To render an annotation in the top annotation area, push it before pushing search results. </p><dl class="section note"><dt>Note</dt><dd>The Unity shell can ignore some or all annotations, depending on available screen real estate. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a121842b4206980360c208a1f5828ef12"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool unity::scopes::SearchReply::push </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../unity.scopes/index.html#adab58c13cf604e0e64bd6b1a745364d3">Filters</a> const &amp;&#160;</td>
+          <td class="paramname"><em>filters</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.FilterState/index.html">FilterState</a> const &amp;&#160;</td>
+          <td class="paramname"><em>filter_state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sends all filters and their state to the source of a query. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if the filters were accepted, false otherwise. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a4ba805136164b11bb358917070cde24d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void unity::scopes::SearchReply::push_surfacing_results_from_cache </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Push the results that were produced by the most recent surfacing query. </p>
+<p>The runtime automatically saves the results of the most recent surfacing query. If a scope cannot produce a result for a surfacing query (presumably, due to connectivity problems), calling <a class="el" href="index.html#a4ba805136164b11bb358917070cde24d" title="Push the results that were produced by the most recent surfacing query. ">push_surfacing_results_from_cache()</a> pushes the results that were produced by the most recent successful surfacing query from the cache. If a scope cannot produce surfacing results, it can call this method to "replay" the previous results. In turn, this avoids the user being presented with an empty screen if he/she swipes to the scope while the device does not have connectivity.</p>
+<p>This method has an effect only if called for a surfacing query (that is, a query with an empty query string). If called for a non-empty query, it does nothing.</p>
+<p>You must call this method before calling <a class="el" href="../unity.scopes.Reply/index.html#a9ca653d5d7f7c97a781bc362f2af7749" title="Informs the source of a query that the query results are complete. ">finished()</a>, otherwise no cached results will be pushed (<a class="el" href="index.html#a4ba805136164b11bb358917070cde24d" title="Push the results that were produced by the most recent surfacing query. ">push_surfacing_results_from_cache()</a> implicitly calls <a class="el" href="../unity.scopes.Reply/index.html#a9ca653d5d7f7c97a781bc362f2af7749" title="Informs the source of a query that the query results are complete. ">finished()</a>). </p>
+</div>
+</div>
+<a class="anchor" id="aaa061806a96f50ff66abc6184135ea66"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Category::SCPtr unity::scopes::SearchReply::register_category </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>title</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>icon</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.CategoryRenderer/index.html">CategoryRenderer</a> const &amp;&#160;</td>
+          <td class="paramname"><em>renderer_template</em> = <code><a class="el" href="../unity.scopes.CategoryRenderer/index.html">CategoryRenderer</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Register new category and send it to the source of the query. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The identifier of the category </td></tr>
+    <tr><td class="paramname">title</td><td>The title of the category </td></tr>
+    <tr><td class="paramname">icon</td><td>The icon of the category </td></tr>
+    <tr><td class="paramname">renderer_template</td><td>The renderer template to be used for results in this category</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The category instance </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">unity::scopes::InvalidArgumentException</td><td>if category with that id has already been registered.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The UI uses category IDs for incremental rendering when refreshing search results. For this to work correctly, you need to make sure that you use the same category ID for different queries if the search results apply to the same category as for a previous search. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a3bf901e2b5c8b6db3c8e758a9ccbef1c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void unity::scopes::SearchReply::register_category </td>
+          <td>(</td>
+          <td class="paramtype">Category::SCPtr&#160;</td>
+          <td class="paramname"><em>category</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Register an existing category instance and send it to the source of the query. </p>
+<p>The purpose of this call is to register a category obtained via <a class="el" href="../unity.scopes.SearchListenerBase/index.html#af246bd38c8ba9cec36dfae3d0607dbfc" title="Called once by the scopes runtime for each category that is returned by a query(). ">SearchListenerBase::push(Category::SCPtr const&amp;)</a> when aggregating results and categories from other scope(s).</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">unity::InvalidArgumentException</td><td>if category is already registered. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a73d044ea7719f3538e391477d8dd7afb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Category::SCPtr unity::scopes::SearchReply::register_category </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>title</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>icon</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.CannedQuery/index.html">CannedQuery</a> const &amp;&#160;</td>
+          <td class="paramname"><em>query</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.CategoryRenderer/index.html">CategoryRenderer</a> const &amp;&#160;</td>
+          <td class="paramname"><em>renderer_template</em> = <code><a class="el" href="../unity.scopes.CategoryRenderer/index.html">CategoryRenderer</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Register new category and send it to the source of the query. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The identifier of the category </td></tr>
+    <tr><td class="paramname">title</td><td>The title of the category </td></tr>
+    <tr><td class="paramname">icon</td><td>The icon of the category </td></tr>
+    <tr><td class="paramname">query</td><td>Query to perform when expanding this category </td></tr>
+    <tr><td class="paramname">renderer_template</td><td>The renderer template to be used for results in this category</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The category instance </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">unity::scopes::InvalidArgumentException</td><td>if category with that id has already been registered. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a17fdd52a4a8b19d6f8e13e5d7f576344"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void unity::scopes::SearchReply::register_departments </td>
+          <td>(</td>
+          <td class="paramtype">Department::SCPtr const &amp;&#160;</td>
+          <td class="paramname"><em>parent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Register departments for the current search reply and provide the current department. </p>
+<p>Departments are optional. If scope supports departments, it is expected to register departments on every search as follows:</p>
+<ul>
+<li>
+create a <a class="el" href="../unity.scopes.Department/index.html" title="A department with optional sub-departments. ">Department</a> node for current department and attach to it a list of its subdepartments (unless current department is a leaf department) using <a class="el" href="../unity.scopes.Department/index.html#ab17057cef9ce35f1302f5421a087c067" title="Set sub-departments of this department. ">unity::scopes::Department::set_subdepartments()</a> method. For every subdepartment on the list set "has_subdepartments" flag if applicable. </li>
+<li>
+provide an alternate label for current department with <a class="el" href="../unity.scopes.Department/index.html#a9ab1192cdfcbce44b9164df11290c217" title="Set the alternate label (plural of the normal label) of this department. ">unity::scopes::Department::set_alternate_label()</a>. </li>
+<li>
+create a <a class="el" href="../unity.scopes.Department/index.html" title="A department with optional sub-departments. ">Department</a> node for parent of current department (if applicable - not when in root department), and attach current <a class="el" href="../unity.scopes.Department/index.html" title="A department with optional sub-departments. ">Department</a> node to it with <a class="el" href="../unity.scopes.Department/index.html#ab17057cef9ce35f1302f5421a087c067" title="Set sub-departments of this department. ">unity::scopes::Department::set_subdepartments()</a> method. </li>
+<li>
+register the parent department with <a class="el" href="index.html#a17fdd52a4a8b19d6f8e13e5d7f576344" title="Register departments for the current search reply and provide the current department. ">unity::scopes::SearchReply::register_departments()</a>. </li>
+</ul>
+<p>For example, assuming the user is visiting a "History" department in "Books", and "History" has sub-departments such as "World War Two" and "Ancient", the code that registers departments for current search in "History" may look like this: </p><div class="fragment"><div class="line">unity::scopes::Department::SPtr books = move(<a class="code" href="../unity.scopes.Department/index.html#a11a3b8e9a3317f963d4bc9f46f79922b">unity::scopes::Department::create</a>(<span class="stringliteral">&quot;books&quot;</span>, query, <span class="stringliteral">&quot;Books&quot;</span>)); <span class="comment">// the parent of &quot;History&quot;</span></div>
+<div class="line">unity::scopes::Department::SPtr history = move(<a class="code" href="../unity.scopes.Department/index.html#a11a3b8e9a3317f963d4bc9f46f79922b">unity::scopes::Department::create</a>(<span class="stringliteral">&quot;history&quot;</span>, query, <span class="stringliteral">&quot;History&quot;</span>));</div>
+<div class="line"><a class="code" href="../unity.scopes/index.html#ab8effc4ea05a59f2ddea896833f07231">unity::scopes::DepartmentList</a> history_depts({</div>
+<div class="line">                                            move(<a class="code" href="../unity.scopes.Department/index.html#a11a3b8e9a3317f963d4bc9f46f79922b">unity::scopes::Department::create</a>(<span class="stringliteral">&quot;ww2&quot;</span>, query, <span class="stringliteral">&quot;World War Two&quot;</span>)),</div>
+<div class="line">                                            move(<a class="code" href="../unity.scopes.Department/index.html#a11a3b8e9a3317f963d4bc9f46f79922b">unity::scopes::Department::create</a>(<span class="stringliteral">&quot;ancient&quot;</span>, query, <span class="stringliteral">&quot;Ancient&quot;</span>))});</div>
+<div class="line">history-&gt;set_subdepartments(history_depts);</div>
+<div class="line">books-&gt;set_subdepartments({history});</div>
+<div class="line">reply-&gt;register_departments(books);</div>
+</div><!-- fragment --><p>Current department should be the department returned by <a class="el" href="../unity.scopes.CannedQuery/index.html#a61351960149bb4c0840f020c4e645f66" title="Returns the department id of this CannedQuery. ">unity::scopes::CannedQuery::department_id()</a>. Empty department id denotes the root deparment.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>The parent department of current department, or current one if visiting root department. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">unity::LogicException</td><td>if departments are invalid (nullptr passed, current department not present in the parent's tree, duplicated department ids present in the tree). </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

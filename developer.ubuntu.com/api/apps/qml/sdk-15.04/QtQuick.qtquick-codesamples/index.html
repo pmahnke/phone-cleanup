@@ -1,0 +1,648 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Qt Quick Examples and Tutorials | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a class="sub-nav-item" href="../index.html">SDK 15.04</a> &rsaquo;</li>
+
+<li><a class="sub-nav-item" href="../QtQuick/index.html">QtQuick</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Qt Quick Examples and Tutorials</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qtquick-codesamples.html -->
+	<!-- Source Format: qdoc -->
+<h1>Qt Quick Examples and Tutorials</h1>
+<div id="page_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$qtquick-codesamples.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>This page lists the Qt QML and <a href="../QtQuick.qtquick-index/index.html">Qt Quick</a> examples, however, many other Qt modules contain examples related to their QML API.</p>
+<a name="running-the-examples-and-demos"></a>
+<h2 id="running-the-examples-and-demos">Running the Examples and Demos</h2>
+<p>The examples are packaged with the Qt installers and are accessed through Qt Creator. For more information about running examples in Qt Creator, visit the Building and Running an Example page.</p>
+<p>Open and run examples within Qt Creator's <b>Welcome</b> mode. Most of the examples run on various platforms and to search for platform-specific examples, type the platform name (or any keywords) in the search field. For example, typing <code>mobile</code> in the search field lists the examples that are fully compatible with the mobile platforms.</p>
+<p>To view other examples and tutorials, visit the Qt Examples And Tutorials page.</p>
+<a name="qt-quick-demos"></a>
+<h2 id="qt-quick-demos">Qt Quick Demos</h2>
+<p>Here is a list of fully-functional demo applications. They are full applications that show how a deployable Qt application is built and structured. Many of the demos are deployable to mobile and desktop platforms.</p>
+<div class="table"><table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.demos-calqlatr/">Qt Quick Demo - Calqlatr</a></p></td><td class="tblDescr"><p>A QML app designed for portrait devices that uses custom components, animated with AnimationController, and JavaScript for the application logic.</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.demos-clocks/">Qt Quick Demo - Clocks</a></p></td><td class="tblDescr"><p>A QML clock application that demonstrates using a ListView type to display data generated by a ListModel and a SpringAnimation type to animate images.</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.demos-maroon/">Qt Quick Demo - Maroon in Trouble</a></p></td><td class="tblDescr"><p>A Qt Quick game for touch devices that uses SpriteSequence, ParticleSystem, Emitter, and Wander types to animate objects and the SoundEffect type to play sound effects.</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.demos-photosurface/">Qt Quick Demo - Photo Surface</a></p></td><td class="tblDescr"><p>A QML app for touch devices that uses a Repeater with a FolderListModel to access content in a folder, and a PinchArea that contains a MouseArea to handle pinch gestures on the fetched content.</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.demos-photoviewer/">Qt Quick Demo - Photo Viewer</a></p></td><td class="tblDescr"><p>A QML photo viewer that that uses XmlListModel and XmlRole to download Flickr feeds, and Package to display the photos in different views.</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.demos-rssnews/">Qt Quick Demo - RSS News</a></p></td><td class="tblDescr"><p>A QML RSS news reader that uses XmlListModel and XmlRole to download XML data, ListModel and ListElement to create a category list, and ListView to display the data.</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.demos-samegame/">Qt Quick Demo - Same Game</a></p></td><td class="tblDescr"><p>A QML implementation of the popular puzzle game by Kuniaki Moribe.</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.demos-stocqt/">Qt Quick Demo - StocQt</a></p></td><td class="tblDescr"><p>A configurable stock chart for the NASDAQ-100.</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.demos-tweetsearch/">Qt Quick Demo - Tweet Search</a></p></td><td class="tblDescr"><p>A Twitter search client with 3D effects.</p></td></tr>
+</table></div>
+<a name="developing-qt-quick-applications"></a>
+<h2 id="developing-qt-quick-applications">Developing Qt Quick Applications</h2>
+<p>The following pages show how to develop Qt applications using Qt Creator and Qt Quick. The pages demonstrate various steps such as use cases and introductory material. For more information about Qt Quick Applications and related modules, visit the QML Applications page.</p>
+<div class="multi-column"><div class="doc-column"><p><b>Development Environment</b></p>
+<ul>
+<li>Creating Qt Quick Projects</li>
+<li>Using Qt Quick Designer</li>
+<li>Creating Components</li>
+<li>Creating Screens</li>
+<li>Exporting Designs from Graphics Software</li>
+<li>Using QML Modules with Plugins</li>
+</ul>
+</div><div class="doc-column"><p><b>Beginning with QML and Qt Quick</b></p>
+<ul>
+<li>First Steps with QML</li>
+<li>Qt Quick Text Editor</li>
+<li><a href="../QtQuick.qml-advtutorial/index.html">SameGame</a></li>
+</ul>
+</div><div class="doc-column"><p><b>Use Cases</b></p>
+<ul>
+<li>Visual types in QML</li>
+<li>Responding to User Input in QML</li>
+<li>Animations in QML</li>
+<li>Displaying Text in QML</li>
+<li>Layouts in QML</li>
+<li>Style and Theme Support</li>
+<li>Integrating JavaScript in QML</li>
+</ul>
+</div></div><a name="extending-qml"></a>
+<h3 >Extending QML</h3>
+<p>The following tutorials show how a QML-based application can be combined with C++ code using the Qt QML module. For information about extending QML, visit the Integrating QML and C++ page.</p>
+<a name="examples"></a>
+<h2 id="examples">Examples</h2>
+<p>Examples are small applications which show how to implement various Qt Quick features. The examples run on various platforms and are opened from within Qt Creator.</p>
+<div class="multi-column"><div class="doc-column"><p><b>QML Types and Controls</b></p>
+<ul>
+<li>Controls Gallery</li>
+<li>Dialog Examples</li>
+<li>Calendar Example</li>
+<li>TableView</li>
+<li><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.text/">Text and Fonts</a></li>
+<li><a href="../QtQuick.qmlexampletoggleswitch/index.html">Custom Toggle Switch</a></li>
+</ul>
+</div><div class="doc-column"><p><b>Layouts and Views</b></p>
+<ul>
+<li>Basic Layouts</li>
+<li><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.positioners/">Positioners</a></li>
+<li><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.views/">Views</a></li>
+<li><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.window/">Windows and Screen</a></li>
+<li><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.righttoleft/">Right-to-Left and Text Layout</a></li>
+</ul>
+</div><div class="doc-column"><p><b>Image and Graphics</b></p>
+<ul>
+<li><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.imageelements/">Image Elements</a></li>
+<li><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.animation/">Animation</a></li>
+<li><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.canvas/">Canvas API</a></li>
+<li><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.shadereffects/">Shader Effects</a></li>
+</ul>
+</div></div><div class="multi-column"><div class="doc-column"><p><b>Keyboard, Focus, and Touch</b></p>
+<ul>
+<li><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.keyinteraction/">Key Interaction</a></li>
+<li><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.mousearea/">MouseArea</a></li>
+<li>Touch Gallery</li>
+</ul>
+</div><div class="doc-column"><p><b>System and Events</b></p>
+<ul>
+<li><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.threading/">Threading</a></li>
+<li><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.quick-accessibility/">Accessibility</a></li>
+<li><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.externaldraganddrop/">External Drag and Drop</a></li>
+<li><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.draganddrop/">Drag and Drop</a></li>
+</ul>
+</div><div class="doc-column"><p><b>Scene Graph</b></p>
+<ul>
+<li><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.scenegraph-openglunderqml/">OpenGL Under QML</a></li>
+<li><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.customitems-painteditem/">Painted Item</a></li>
+<li><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.scenegraph-customgeometry/">Custom Geometry</a></li>
+<li><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.scenegraph-graph/">Graph</a></li>
+<li><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.scenegraph-simplematerial/">Simple Material</a></li>
+<li><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.scenegraph-textureinsgnode/">Rendering FBOs</a></li>
+<li><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.scenegraph-textureinthread/">Rendering FBOs in a thread</a></li>
+</ul>
+</div></div></div>
+<!-- @@@qtquick-codesamples.html -->
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

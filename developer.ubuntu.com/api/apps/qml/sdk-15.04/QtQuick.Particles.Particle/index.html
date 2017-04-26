@@ -1,0 +1,720 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Particle [sdk-15.04/QtQuick.Particles.Particle] | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a href="../index.html">SDK 15.04</a> &rsaquo;</li>
+
+<li><a href="../QtQuick.Particles/index.html">QtQuick.Particles</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Particle</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qml-qtquick-particles-particle.html -->
+	<!-- Source Format: qdoc -->
+<h1>Particle</h1>
+<div id="element_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$Particle-brief -->
+<p>Represents particles manipulated by emitters and affectors More...</p>
+<!-- @@@Particle -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import QtQuick.Particles 2.0</td></tr></table></div><ul>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#alpha-prop">alpha</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#autoRotate-prop">autoRotate</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#ax-prop">ax</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#ay-prop">ay</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#blue-prop">blue</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#currentSize-prop">currentSize</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#endSize-prop">endSize</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#green-prop">green</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#initialAX-prop">initialAX</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#initialAY-prop">initialAY</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#initialVX-prop">initialVX</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#initialVY-prop">initialVY</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#initialX-prop">initialX</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#initialY-prop">initialY</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#lifeLeft-prop">lifeLeft</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#lifeSpan-prop">lifeSpan</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#red-prop">red</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#rotation-prop">rotation</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#rotationVelocity-prop">rotationVelocity</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#startSize-prop">startSize</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#t-prop">t</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#update-prop">update</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#vx-prop">vx</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#vy-prop">vy</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#x-prop">x</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#xDeformationVectorX-prop">xDeformationVectorX</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#xDeformationVectorY-prop">xDeformationVectorY</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#y-prop">y</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#yDeformationVectorX-prop">yDeformationVectorX</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#yDeformationVectorY-prop">yDeformationVectorY</a></b></b> : real</li>
+</ul>
+<!-- $$$Particle-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<p>Particle elements are always managed internally by the <a href="../QtQuick.Particles.ParticleSystem/index.html">ParticleSystem</a> and cannot be created in QML. However, sometimes they are exposed via signals so as to allow arbitrary changes to the particle state</p>
+<!-- @@@Particle -->
+<h2>Property Documentation</h2>
+<!-- $$$alpha -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="alpha-prop"><td class="tblQmlPropNode"><p><a name="alpha-prop"></a><span class="name">alpha</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p><a href="../QtQuick.Particles.ImageParticle/index.html">ImageParticle</a> can draw colorized particles. When it does so, alpha is used as the alpha channel of the color applied to the source image.</p>
+<p>Values are from 0.0 to 1.0&#x2e;</p>
+</div></div><!-- @@@alpha -->
+<br/>
+<!-- $$$autoRotate -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="autoRotate-prop"><td class="tblQmlPropNode"><p><a name="autoRotate-prop"></a><span class="name">autoRotate</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>If autoRotate is true, then the particle's rotation will be set so that it faces the direction of travel, plus any rotation from the rotation or <a href="index.html#rotationVelocity-prop">rotationVelocity</a> properties.</p>
+</div></div><!-- @@@autoRotate -->
+<br/>
+<!-- $$$ax -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="ax-prop"><td class="tblQmlPropNode"><p><a name="ax-prop"></a><span class="name">ax</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>The current x acceleration of the particle.</p>
+</div></div><!-- @@@ax -->
+<br/>
+<!-- $$$ay -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="ay-prop"><td class="tblQmlPropNode"><p><a name="ay-prop"></a><span class="name">ay</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>The current y acceleration of the particle.</p>
+</div></div><!-- @@@ay -->
+<br/>
+<!-- $$$blue -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="blue-prop"><td class="tblQmlPropNode"><p><a name="blue-prop"></a><span class="name">blue</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p><a href="../QtQuick.Particles.ImageParticle/index.html">ImageParticle</a> can draw colorized particles. When it does so, blue is used as the blue channel of the color applied to the source image.</p>
+<p>Values are from 0.0 to 1.0&#x2e;</p>
+</div></div><!-- @@@blue -->
+<br/>
+<!-- $$$currentSize -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="currentSize-prop"><td class="tblQmlPropNode"><p><a name="currentSize-prop"></a><span class="name">currentSize</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>The currentSize of the particle, interpolating between <a href="index.html#startSize-prop">startSize</a> and <a href="index.html#endSize-prop">endSize</a> based on the currentTime.</p>
+</div></div><!-- @@@currentSize -->
+<br/>
+<!-- $$$endSize -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="endSize-prop"><td class="tblQmlPropNode"><p><a name="endSize-prop"></a><span class="name">endSize</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>The size in pixels that the particle image is at the end of its life. If this value is less than 0, then it is disregarded and the particle will have its <a href="index.html#startSize-prop">startSize</a> for the entire lifetime.</p>
+</div></div><!-- @@@endSize -->
+<br/>
+<!-- $$$green -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="green-prop"><td class="tblQmlPropNode"><p><a name="green-prop"></a><span class="name">green</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p><a href="../QtQuick.Particles.ImageParticle/index.html">ImageParticle</a> can draw colorized particles. When it does so, green is used as the green channel of the color applied to the source image.</p>
+<p>Values are from 0.0 to 1.0&#x2e;</p>
+</div></div><!-- @@@green -->
+<br/>
+<!-- $$$initialAX -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="initialAX-prop"><td class="tblQmlPropNode"><p><a name="initialAX-prop"></a><span class="name">initialAX</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>The x acceleration of the particle at the beginning of its lifetime.</p>
+<p>The method of simulation prefers to have the initial values changed, rather than determining and changing the value at a given time. Change initial values in CustomEmitters instead of the current values.</p>
+</div></div><!-- @@@initialAX -->
+<br/>
+<!-- $$$initialAY -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="initialAY-prop"><td class="tblQmlPropNode"><p><a name="initialAY-prop"></a><span class="name">initialAY</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>The y acceleration of the particle at the beginning of its lifetime.</p>
+<p>The method of simulation prefers to have the initial values changed, rather than determining and changing the value at a given time. Change initial values in CustomEmitters instead of the current values.</p>
+</div></div><!-- @@@initialAY -->
+<br/>
+<!-- $$$initialVX -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="initialVX-prop"><td class="tblQmlPropNode"><p><a name="initialVX-prop"></a><span class="name">initialVX</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>The x velocity of the particle at the beginning of its lifetime.</p>
+<p>The method of simulation prefers to have the initial values changed, rather than determining and changing the value at a given time. Change initial values in CustomEmitters instead of the current values.</p>
+</div></div><!-- @@@initialVX -->
+<br/>
+<!-- $$$initialVY -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="initialVY-prop"><td class="tblQmlPropNode"><p><a name="initialVY-prop"></a><span class="name">initialVY</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>The y velocity of the particle at the beginning of its lifetime.</p>
+<p>The method of simulation prefers to have the initial values changed, rather than determining and changing the value at a given time. Change initial values in CustomEmitters instead of the current values.</p>
+</div></div><!-- @@@initialVY -->
+<br/>
+<!-- $$$initialX -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="initialX-prop"><td class="tblQmlPropNode"><p><a name="initialX-prop"></a><span class="name">initialX</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>The x coordinate of the particle at the beginning of its lifetime.</p>
+<p>The method of simulation prefers to have the initial values changed, rather than determining and changing the value at a given time. Change initial values in CustomEmitters instead of the current values.</p>
+</div></div><!-- @@@initialX -->
+<br/>
+<!-- $$$initialY -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="initialY-prop"><td class="tblQmlPropNode"><p><a name="initialY-prop"></a><span class="name">initialY</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>The y coordinate of the particle at the beginning of its lifetime.</p>
+<p>The method of simulation prefers to have the initial values changed, rather than determining and changing the value at a given time. Change initial values in CustomEmitters instead of the current values.</p>
+</div></div><!-- @@@initialY -->
+<br/>
+<!-- $$$lifeLeft -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="lifeLeft-prop"><td class="tblQmlPropNode"><p><a name="lifeLeft-prop"></a><span class="name">lifeLeft</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>The time in seconds that the particle has left to live at the current point in time.</p>
+</div></div><!-- @@@lifeLeft -->
+<br/>
+<!-- $$$lifeSpan -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="lifeSpan-prop"><td class="tblQmlPropNode"><p><a name="lifeSpan-prop"></a><span class="name">lifeSpan</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>The time in seconds that the particle will live for.</p>
+</div></div><!-- @@@lifeSpan -->
+<br/>
+<!-- $$$red -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="red-prop"><td class="tblQmlPropNode"><p><a name="red-prop"></a><span class="name">red</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p><a href="../QtQuick.Particles.ImageParticle/index.html">ImageParticle</a> can draw colorized particles. When it does so, red is used as the red channel of the color applied to the source image.</p>
+<p>Values are from 0.0 to 1.0&#x2e;</p>
+</div></div><!-- @@@red -->
+<br/>
+<!-- $$$rotation -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="rotation-prop"><td class="tblQmlPropNode"><p><a name="rotation-prop"></a><span class="name">rotation</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>Degrees clockwise that the particle image is rotated at the beginning of its life.</p>
+</div></div><!-- @@@rotation -->
+<br/>
+<!-- $$$rotationVelocity -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="rotationVelocity-prop"><td class="tblQmlPropNode"><p><a name="rotationVelocity-prop"></a><span class="name">rotationVelocity</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>Degrees clockwise per second that the particle image is rotated at while alive.</p>
+</div></div><!-- @@@rotationVelocity -->
+<br/>
+<!-- $$$startSize -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="startSize-prop"><td class="tblQmlPropNode"><p><a name="startSize-prop"></a><span class="name">startSize</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>The size in pixels that the particle image is at the start of its life.</p>
+</div></div><!-- @@@startSize -->
+<br/>
+<!-- $$$t -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="t-prop"><td class="tblQmlPropNode"><p><a name="t-prop"></a><span class="name">t</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>The time, in seconds since the beginning of the simulation, that the particle was born.</p>
+</div></div><!-- @@@t -->
+<br/>
+<!-- $$$update -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="update-prop"><td class="tblQmlPropNode"><p><a name="update-prop"></a><span class="name">update</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>Inside an Affector, the changes made to the particle will only be applied if update is set to true.</p>
+</div></div><!-- @@@update -->
+<br/>
+<!-- $$$vx -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="vx-prop"><td class="tblQmlPropNode"><p><a name="vx-prop"></a><span class="name">vx</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>The current x velocity of the particle.</p>
+</div></div><!-- @@@vx -->
+<br/>
+<!-- $$$vy -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="vy-prop"><td class="tblQmlPropNode"><p><a name="vy-prop"></a><span class="name">vy</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>The current y velocity of the particle.</p>
+</div></div><!-- @@@vy -->
+<br/>
+<!-- $$$x -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="x-prop"><td class="tblQmlPropNode"><p><a name="x-prop"></a><span class="name">x</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>The current x coordinate of the particle.</p>
+</div></div><!-- @@@x -->
+<br/>
+<!-- $$$xDeformationVectorX -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="xDeformationVectorX-prop"><td class="tblQmlPropNode"><p><a name="xDeformationVectorX-prop"></a><span class="name">xDeformationVectorX</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>The x component of the deformation vector along the X axis. <a href="../QtQuick.Particles.ImageParticle/index.html">ImageParticle</a> can draw particles across non-square shapes. It will draw the texture rectangle across the parallelogram drawn with the x and y deformation vectors.</p>
+</div></div><!-- @@@xDeformationVectorX -->
+<br/>
+<!-- $$$xDeformationVectorY -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="xDeformationVectorY-prop"><td class="tblQmlPropNode"><p><a name="xDeformationVectorY-prop"></a><span class="name">xDeformationVectorY</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>The x component of the deformation vector along the X axis. <a href="../QtQuick.Particles.ImageParticle/index.html">ImageParticle</a> can draw particles across non-square shapes. It will draw the texture rectangle across the parallelogram drawn with the x and y deformation vectors.</p>
+</div></div><!-- @@@xDeformationVectorY -->
+<br/>
+<!-- $$$y -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="y-prop"><td class="tblQmlPropNode"><p><a name="y-prop"></a><span class="name">y</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>The current y coordinate of the particle.</p>
+</div></div><!-- @@@y -->
+<br/>
+<!-- $$$yDeformationVectorX -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="yDeformationVectorX-prop"><td class="tblQmlPropNode"><p><a name="yDeformationVectorX-prop"></a><span class="name">yDeformationVectorX</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>The y component of the deformation vector along the X axis. <a href="../QtQuick.Particles.ImageParticle/index.html">ImageParticle</a> can draw particles across non-square shapes. It will draw the texture rectangle across the parallelogram drawn with the x and y deformation vectors.</p>
+</div></div><!-- @@@yDeformationVectorX -->
+<br/>
+<!-- $$$yDeformationVectorY -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="yDeformationVectorY-prop"><td class="tblQmlPropNode"><p><a name="yDeformationVectorY-prop"></a><span class="name">yDeformationVectorY</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>The y component of the deformation vector along the Y axis. <a href="../QtQuick.Particles.ImageParticle/index.html">ImageParticle</a> can draw particles across non-square shapes. It will draw the texture rectangle across the parallelogram drawn with the x and y deformation vectors.</p>
+</div></div><!-- @@@yDeformationVectorY -->
+<br/>
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,722 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>CameraRecorder [sdk-15.04.5/QtMultimedia.CameraRecorder] | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a href="../index.html">SDK 15.04.5</a> &rsaquo;</li>
+
+<li><a href="../QtMultimedia/index.html">QtMultimedia</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">CameraRecorder</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qml-qtmultimedia-camerarecorder.html -->
+	<!-- Source Format: qdoc -->
+<h1>CameraRecorder</h1>
+<div id="element_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$CameraRecorder-brief -->
+<p>Controls video recording with the Camera. More...</p>
+<!-- @@@CameraRecorder -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import QtMultimedia 5.4</td></tr></table></div><ul>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#actualLocation-prop">actualLocation</a></b></b> : string</li>
+<li class="fn"><b><b><a href="index.html#audioBitRate-prop">audioBitRate</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#audioChannels-prop">audioChannels</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#audioCodec-prop">audioCodec</a></b></b> : string</li>
+<li class="fn"><b><b><a href="index.html#audioEncodingMode-prop">audioEncodingMode</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="index.html#audioSampleRate-prop">audioSampleRate</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#duration-prop">duration</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#errorCode-prop">errorCode</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="index.html#errorString-prop">errorString</a></b></b> : string</li>
+<li class="fn"><b><b><a href="index.html#frameRate-prop">frameRate</a></b></b> : qreal</li>
+<li class="fn"><b><b><a href="index.html#mediaContainer-prop">mediaContainer</a></b></b> : string</li>
+<li class="fn"><b><b><a href="index.html#muted-prop">muted</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#outputLocation-prop">outputLocation</a></b></b> : string</li>
+<li class="fn"><b><b><a href="index.html#recorderState-prop">recorderState</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="index.html#recorderStatus-prop">recorderStatus</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="index.html#resolution-prop">resolution</a></b></b> : size</li>
+<li class="fn"><b><b><a href="index.html#videoBitRate-prop">videoBitRate</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#videoCodec-prop">videoCodec</a></b></b> : string</li>
+<li class="fn"><b><b><a href="index.html#videoEncodingMode-prop">videoEncodingMode</a></b></b> : enumeration</li>
+</ul>
+<a name="methods"></a>
+<h2 id="methods">Methods</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#record-method">record</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#setMetadata-method">setMetadata</a></b></b>(key, value)</li>
+<li class="fn"><b><b><a href="index.html#stop-method">stop</a></b></b>()</li>
+</ul>
+<!-- $$$CameraRecorder-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<p><a href="index.html">CameraRecorder</a> allows recording camera streams to files, and adjusting recording settings and metadata for videos.</p>
+<p>It should not be constructed separately, instead the <code>videoRecorder</code> property of a <a href="../QtMultimedia.qml-multimedia/index.html#camera">Camera</a> should be used.</p>
+<pre class="qml"><span class="type"><a href="../QtMultimedia.Camera/index.html">Camera</a></span> {
+    <span class="name">videoRecorder</span>.audioEncodingMode: <span class="name">CameraRecorder</span>.<span class="name">ConstantBitrateEncoding</span>;
+    <span class="name">videoRecorder</span>.audioBitRate: <span class="number">128000</span>
+    <span class="name">videoRecorder</span>.mediaContainer: <span class="string">&quot;mp4&quot;</span>
+    <span class="comment">// ...</span>
+}</pre>
+<p>There are many different settings for each part of the recording process (audio, video, and output formats), as well as control over muting and where to store the output file.</p>
+<p><b>See also </b>QAudioEncoderSettings and QVideoEncoderSettings.</p>
+<!-- @@@CameraRecorder -->
+<h2>Property Documentation</h2>
+<!-- $$$actualLocation -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="actualLocation-prop"><td class="tblQmlPropNode"><p><a name="actualLocation-prop"></a><span class="name">actualLocation</span> : <span class="type">string</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the actual location of the last saved media content. The actual location is usually available after the recording starts, and reset when new location is set or the new recording starts.</p>
+</div></div><!-- @@@actualLocation -->
+<br/>
+<!-- $$$audioBitRate -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="audioBitRate-prop"><td class="tblQmlPropNode"><p><a name="audioBitRate-prop"></a><span class="name">audioBitRate</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the audio bit rate (in bits per second) to be used for recording video.</p>
+</div></div><!-- @@@audioBitRate -->
+<br/>
+<!-- $$$audioChannels -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="audioChannels-prop"><td class="tblQmlPropNode"><p><a name="audioChannels-prop"></a><span class="name">audioChannels</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property indicates the number of audio channels to be encoded while recording video (1 is mono, 2 is stereo).</p>
+</div></div><!-- @@@audioChannels -->
+<br/>
+<!-- $$$audioCodec -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="audioCodec-prop"><td class="tblQmlPropNode"><p><a name="audioCodec-prop"></a><span class="name">audioCodec</span> : <span class="type">string</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the audio codec to be used for recording video. Typically this is <code>aac</code> or <code>amr-wb</code>.</p>
+<p><b>See also </b><a href="../QtMultimedia.CameraImageProcessing/index.html#whiteBalanceMode-prop">whileBalanceMode</a>.</p>
+</div></div><!-- @@@audioCodec -->
+<br/>
+<!-- $$$audioEncodingMode -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="audioEncodingMode-prop"><td class="tblQmlPropNode"><p><a name="audioEncodingMode-prop"></a><span class="name">audioEncodingMode</span> : <span class="type">enumeration</span></p></td></tr></table></div></div><div class="qmldoc"><p>The type of encoding method to use when recording audio.</p>
+<div class="table"><table class="generic">
+ <thead><tr class="qt-style"><th >Value</th><th >Description</th></tr></thead>
+<tr valign="top" class="odd"><td >ConstantQualityEncoding</td><td >Encoding will aim to have a constant quality, adjusting bitrate to fit. This is the default. The bitrate setting will be ignored.</td></tr>
+<tr valign="top" class="even"><td >ConstantBitRateEncoding</td><td >Encoding will use a constant bit rate, adjust quality to fit. This is appropriate if you are trying to optimize for space.</td></tr>
+<tr valign="top" class="odd"><td >AverageBitRateEncoding</td><td >Encoding will try to keep an average bitrate setting, but will use more or less as needed.</td></tr>
+</table></div>
+</div></div><!-- @@@audioEncodingMode -->
+<br/>
+<!-- $$$audioSampleRate -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="audioSampleRate-prop"><td class="tblQmlPropNode"><p><a name="audioSampleRate-prop"></a><span class="name">audioSampleRate</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the sample rate to be used to encode audio while recording video.</p>
+</div></div><!-- @@@audioSampleRate -->
+<br/>
+<!-- $$$duration -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="duration-prop"><td class="tblQmlPropNode"><p><a name="duration-prop"></a><span class="name">duration</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the duration (in miliseconds) of the last recording.</p>
+</div></div><!-- @@@duration -->
+<br/>
+<!-- $$$errorCode -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="errorCode-prop"><td class="tblQmlPropNode"><p><a name="errorCode-prop"></a><span class="name">errorCode</span> : <span class="type">enumeration</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the last error code.</p>
+<div class="table"><table class="generic">
+ <thead><tr class="qt-style"><th >Value</th><th >Description</th></tr></thead>
+<tr valign="top" class="odd"><td >NoError</td><td >No Errors</td></tr>
+<tr valign="top" class="even"><td >ResourceError</td><td >Device is not ready or not available.</td></tr>
+<tr valign="top" class="odd"><td >FormatError</td><td >Current format is not supported.</td></tr>
+<tr valign="top" class="even"><td >OutOfSpaceError</td><td >No space left on device.</td></tr>
+</table></div>
+</div></div><!-- @@@errorCode -->
+<br/>
+<!-- $$$errorString -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="errorString-prop"><td class="tblQmlPropNode"><p><a name="errorString-prop"></a><span class="name">errorString</span> : <span class="type">string</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the description of the last error.</p>
+</div></div><!-- @@@errorString -->
+<br/>
+<!-- $$$frameRate -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="frameRate-prop"><td class="tblQmlPropNode"><p><a name="frameRate-prop"></a><span class="name">frameRate</span> : <span class="type">qreal</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the framerate (in frames per second) to be used for recording video.</p>
+</div></div><!-- @@@frameRate -->
+<br/>
+<!-- $$$mediaContainer -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="mediaContainer-prop"><td class="tblQmlPropNode"><p><a name="mediaContainer-prop"></a><span class="name">mediaContainer</span> : <span class="type">string</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the media container to be used for recording video. Typically this is <code>mp4</code>.</p>
+</div></div><!-- @@@mediaContainer -->
+<br/>
+<!-- $$$muted -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="muted-prop"><td class="tblQmlPropNode"><p><a name="muted-prop"></a><span class="name">muted</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property indicates whether the audio input is muted during recording.</p>
+</div></div><!-- @@@muted -->
+<br/>
+<!-- $$$outputLocation -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="outputLocation-prop"><td class="tblQmlPropNode"><p><a name="outputLocation-prop"></a><span class="name">outputLocation</span> : <span class="type">string</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the destination location of the media content. If the location is empty, the recorder uses the system-specific place and file naming scheme.</p>
+</div></div><!-- @@@outputLocation -->
+<br/>
+<!-- $$$recorderState -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="recorderState-prop"><td class="tblQmlPropNode"><p><a name="recorderState-prop"></a><span class="name">recorderState</span> : <span class="type">enumeration</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the current state of the camera recorder object.</p>
+<p>The state can be one of these two:</p>
+<div class="table"><table class="generic">
+ <thead><tr class="qt-style"><th >Value</th><th >Description</th></tr></thead>
+<tr valign="top" class="odd"><td >StoppedState</td><td >The camera is not recording video.</td></tr>
+<tr valign="top" class="even"><td >RecordingState</td><td >The camera is recording video.</td></tr>
+</table></div>
+</div></div><!-- @@@recorderState -->
+<br/>
+<!-- $$$recorderStatus -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="recorderStatus-prop"><td class="tblQmlPropNode"><p><a name="recorderStatus-prop"></a><span class="name">recorderStatus</span> : <span class="type">enumeration</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the current status of media recording.</p>
+<div class="table"><table class="generic">
+ <thead><tr class="qt-style"><th >Value</th><th >Description</th></tr></thead>
+<tr valign="top" class="odd"><td >UnavailableStatus</td><td >Recording is not supported by the camera.</td></tr>
+<tr valign="top" class="even"><td >UnloadedStatus</td><td >The recorder is available but not loaded.</td></tr>
+<tr valign="top" class="odd"><td >LoadingStatus</td><td >The recorder is initializing.</td></tr>
+<tr valign="top" class="even"><td >LoadedStatus</td><td >The recorder is initialized and ready to record media.</td></tr>
+<tr valign="top" class="odd"><td >StartingStatus</td><td >Recording is requested but not active yet.</td></tr>
+<tr valign="top" class="even"><td >RecordingStatus</td><td >Recording is active.</td></tr>
+<tr valign="top" class="odd"><td >PausedStatus</td><td >Recording is paused.</td></tr>
+<tr valign="top" class="even"><td >FinalizingStatus</td><td >Recording is stopped with media being finalized.</td></tr>
+</table></div>
+</div></div><!-- @@@recorderStatus -->
+<br/>
+<!-- $$$resolution -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="resolution-prop"><td class="tblQmlPropNode"><p><a name="resolution-prop"></a><span class="name">resolution</span> : <span class="type">size</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the video frame dimensions to be used for video capture.</p>
+</div></div><!-- @@@resolution -->
+<br/>
+<!-- $$$videoBitRate -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="videoBitRate-prop"><td class="tblQmlPropNode"><p><a name="videoBitRate-prop"></a><span class="name">videoBitRate</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the bit rate (in bits per second) to be used for recording video.</p>
+</div></div><!-- @@@videoBitRate -->
+<br/>
+<!-- $$$videoCodec -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="videoCodec-prop"><td class="tblQmlPropNode"><p><a name="videoCodec-prop"></a><span class="name">videoCodec</span> : <span class="type">string</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the video codec to be used for recording video. Typically this is <code>h264</code>.</p>
+</div></div><!-- @@@videoCodec -->
+<br/>
+<!-- $$$videoEncodingMode -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="videoEncodingMode-prop"><td class="tblQmlPropNode"><p><a name="videoEncodingMode-prop"></a><span class="name">videoEncodingMode</span> : <span class="type">enumeration</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the type of encoding method to be used for recording video.</p>
+<p>The following are the different encoding methods used:</p>
+<div class="table"><table class="generic">
+ <thead><tr class="qt-style"><th >Value</th><th >Description</th></tr></thead>
+<tr valign="top" class="odd"><td >ConstantQualityEncoding</td><td >Encoding will aim to have a constant quality, adjusting bitrate to fit. This is the default. The bitrate setting will be ignored.</td></tr>
+<tr valign="top" class="even"><td >ConstantBitRateEncoding</td><td >Encoding will use a constant bit rate, adjust quality to fit. This is appropriate if you are trying to optimize for space.</td></tr>
+<tr valign="top" class="odd"><td >AverageBitRateEncoding</td><td >Encoding will try to keep an average bitrate setting, but will use more or less as needed.</td></tr>
+</table></div>
+</div></div><!-- @@@videoEncodingMode -->
+<br/>
+<h2>Method Documentation</h2>
+<!-- $$$record -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="record-method"><td class="tblQmlFuncNode"><p><a name="record-method"></a><span class="name">record</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Starts recording.</p>
+</div></div><!-- @@@record -->
+<br/>
+<!-- $$$setMetadata -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="setMetadata-method"><td class="tblQmlFuncNode"><p><a name="setMetadata-method"></a><span class="name">setMetadata</span>(<span class="type">key</span>, <span class="type">value</span>)</p></td></tr></table></div></div><div class="qmldoc"><p>Sets metadata for the next video to be recorder, with the given <i>key</i> being associated with <i>value</i>.</p>
+</div></div><!-- @@@setMetadata -->
+<br/>
+<!-- $$$stop -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="stop-method"><td class="tblQmlFuncNode"><p><a name="stop-method"></a><span class="name">stop</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Stops recording.</p>
+</div></div><!-- @@@stop -->
+<br/>
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,962 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>PathView [sdk-15.04/QtQuick.PathView] | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a href="../index.html">SDK 15.04</a> &rsaquo;</li>
+
+<li><a href="../QtQuick/index.html">QtQuick</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">PathView</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qml-qtquick-pathview.html -->
+	<!-- Source Format: qdoc -->
+<h1>PathView</h1>
+<div id="element_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$PathView-brief -->
+<p>Lays out model-provided items on a path More...</p>
+<!-- @@@PathView -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import QtQuick 2.4</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="../QtQuick.Item/index.html">Item</a></p>
+</td></tr></table></div><ul>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#cacheItemCount-prop">cacheItemCount</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#count-prop">count</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#currentIndex-prop">currentIndex</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#currentItem-prop">currentItem</a></b></b> : Item</li>
+<li class="fn"><b><b><a href="index.html#delegate-prop">delegate</a></b></b> : Component</li>
+<li class="fn"><b><b><a href="index.html#dragMargin-prop">dragMargin</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#dragging-prop">dragging</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#flickDeceleration-prop">flickDeceleration</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#flicking-prop">flicking</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#highlight-prop">highlight</a></b></b> : Component</li>
+<li class="fn"><b><b><a href="index.html#highlightItem-prop">highlightItem</a></b></b> : Item</li>
+<li class="fn"><b><b><a href="index.html#highlightMoveDuration-prop">highlightMoveDuration</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#highlightRangeMode-prop">highlightRangeMode</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="index.html#interactive-prop">interactive</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#maximumFlickVelocity-prop">maximumFlickVelocity</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#model-prop">model</a></b></b> : model</li>
+<li class="fn"><b><b><a href="index.html#moving-prop">moving</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#offset-prop">offset</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#path-prop">path</a></b></b> : Path</li>
+<li class="fn"><b><b><a href="index.html#pathItemCount-prop">pathItemCount</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#preferredHighlightBegin-prop">preferredHighlightBegin</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#preferredHighlightEnd-prop">preferredHighlightEnd</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#snapMode-prop">snapMode</a></b></b> : enumeration</li>
+</ul>
+<a name="attached-properties"></a>
+<h2 id="attached-properties">Attached Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#isCurrentItem-attached-prop">isCurrentItem</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#onPath-attached-prop">onPath</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#view-attached-prop">view</a></b></b> : PathView</li>
+</ul>
+<a name="signals"></a>
+<h2 id="signals">Signals</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#dragEnded-signal">dragEnded</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#dragStarted-signal">dragStarted</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#flickEnded-signal">flickEnded</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#flickStarted-signal">flickStarted</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#movementEnded-signal">movementEnded</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#movementStarted-signal">movementStarted</a></b></b>()</li>
+</ul>
+<a name="methods"></a>
+<h2 id="methods">Methods</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#decrementCurrentIndex-method">decrementCurrentIndex</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#incrementCurrentIndex-method">incrementCurrentIndex</a></b></b>()</li>
+<li class="fn">int <b><b><a href="index.html#indexAt-method">indexAt</a></b></b>(int <i>x</i>, int <i>y</i>)</li>
+<li class="fn">Item <b><b><a href="index.html#itemAt-method">itemAt</a></b></b>(int <i>x</i>, int <i>y</i>)</li>
+<li class="fn"><b><b><a href="index.html#positionViewAtIndex-method">positionViewAtIndex</a></b></b>(int <i>index</i>, PositionMode <i>mode</i>)</li>
+</ul>
+<!-- $$$PathView-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<p>A <a href="index.html">PathView</a> displays data from models created from built-in QML types like <a href="../QtQuick.qtquick-modelviewsdata-modelview/index.html#listmodel">ListModel</a> and <a href="../QtQuick.qtquick-modelviewsdata-modelview/index.html#xmllistmodel">XmlListModel</a>, or custom model classes defined in C++ that inherit from QAbstractListModel.</p>
+<p>The view has a <a href="index.html#model-prop">model</a>, which defines the data to be displayed, and a <a href="index.html#delegate-prop">delegate</a>, which defines how the data should be displayed. The <a href="index.html#delegate-prop">delegate</a> is instantiated for each item on the <a href="index.html#path-prop">path</a>. The items may be flicked to move them along the path.</p>
+<p>For example, if there is a simple list model defined in a file <code>ContactModel.qml</code> like this:</p>
+<pre class="qml">import QtQuick 2.0
+<span class="type">ListModel</span> {
+    <span class="type">ListElement</span> {
+        <span class="name">name</span>: <span class="string">&quot;Bill Jones&quot;</span>
+        <span class="name">icon</span>: <span class="string">&quot;pics/qtlogo.png&quot;</span>
+    }
+    <span class="type">ListElement</span> {
+        <span class="name">name</span>: <span class="string">&quot;Jane Doe&quot;</span>
+        <span class="name">icon</span>: <span class="string">&quot;pics/qtlogo.png&quot;</span>
+    }
+    <span class="type">ListElement</span> {
+        <span class="name">name</span>: <span class="string">&quot;John Smith&quot;</span>
+        <span class="name">icon</span>: <span class="string">&quot;pics/qtlogo.png&quot;</span>
+    }
+}</pre>
+<p>This data can be represented as a <a href="index.html">PathView</a>, like this:</p>
+<pre class="qml">import QtQuick 2.0
+<span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> {
+    <span class="name">width</span>: <span class="number">240</span>; <span class="name">height</span>: <span class="number">200</span>
+    <span class="type">Component</span> {
+        <span class="name">id</span>: <span class="name">delegate</span>
+        <span class="type"><a href="../QtQuick.Column/index.html">Column</a></span> {
+            <span class="name">id</span>: <span class="name">wrapper</span>
+            <span class="type"><a href="../QtQuick.Image/index.html">Image</a></span> {
+                <span class="name">anchors</span>.horizontalCenter: <span class="name">nameText</span>.<span class="name">horizontalCenter</span>
+                <span class="name">width</span>: <span class="number">64</span>; <span class="name">height</span>: <span class="number">64</span>
+                <span class="name">source</span>: <span class="name">icon</span>
+            }
+            <span class="type"><a href="../QtQuick.Text/index.html">Text</a></span> {
+                <span class="name">id</span>: <span class="name">nameText</span>
+                <span class="name">text</span>: <span class="name">name</span>
+                <span class="name">font</span>.pointSize: <span class="number">16</span>
+                <span class="name">color</span>: <span class="name">wrapper</span>.<span class="name">PathView</span>.<span class="name">isCurrentItem</span> ? <span class="string">&quot;red&quot;</span> : <span class="string">&quot;black&quot;</span>
+            }
+        }
+    }
+    <span class="type"><a href="index.html">PathView</a></span> {
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">model</span>: <span class="name">ContactModel</span> {}
+        <span class="name">delegate</span>: <span class="name">delegate</span>
+        <span class="name">path</span>: <span class="name">Path</span> {
+            <span class="name">startX</span>: <span class="number">120</span>; <span class="name">startY</span>: <span class="number">100</span>
+            <span class="type"><a href="../QtQuick.PathQuad/index.html">PathQuad</a></span> { <span class="name">x</span>: <span class="number">120</span>; <span class="name">y</span>: <span class="number">25</span>; <span class="name">controlX</span>: <span class="number">260</span>; <span class="name">controlY</span>: <span class="number">75</span> }
+            <span class="type"><a href="../QtQuick.PathQuad/index.html">PathQuad</a></span> { <span class="name">x</span>: <span class="number">120</span>; <span class="name">y</span>: <span class="number">100</span>; <span class="name">controlX</span>: -<span class="number">20</span>; <span class="name">controlY</span>: <span class="number">75</span> }
+        }
+    }
+}</pre>
+<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/f197693f-e608-4668-8c7f-3995379806ac-api/apps/qml/sdk-15.04/QtQuick.PathView/images/pathview.gif" alt="" /></p><p>(Note the above example uses <a href="../QtQuick.PathAttribute/index.html">PathAttribute</a> to scale and modify the opacity of the items as they rotate. This additional code can be seen in the <a href="../QtQuick.PathAttribute/index.html">PathAttribute</a> documentation.)</p>
+<p><a href="index.html">PathView</a> does not automatically handle keyboard navigation. This is because the keys to use for navigation will depend upon the shape of the path. Navigation can be added quite simply by setting <code>focus</code> to <code>true</code> and calling <a href="index.html#decrementCurrentIndex-method">decrementCurrentIndex()</a> or <a href="index.html#incrementCurrentIndex-method">incrementCurrentIndex()</a>, for example to navigate using the left and right arrow keys:</p>
+<pre class="qml"><span class="type"><a href="index.html">PathView</a></span> {
+    <span class="comment">// ...</span>
+    <span class="name">focus</span>: <span class="number">true</span>
+    <span class="name">Keys</span>.onLeftPressed: <span class="name">decrementCurrentIndex</span>()
+    <span class="name">Keys</span>.onRightPressed: <span class="name">incrementCurrentIndex</span>()
+}</pre>
+<p>The path view itself is a focus scope (see <a href="../QtQuick.qtquick-input-focus/index.html">Keyboard Focus in Qt Quick</a> for more details).</p>
+<p>Delegates are instantiated as needed and may be destroyed at any time. State should <i>never</i> be stored in a delegate.</p>
+<p><a href="index.html">PathView</a> attaches a number of properties to the root item of the delegate, for example <code>PathView.isCurrentItem</code>. In the following example, the root delegate item can access this attached property directly as <code>PathView.isCurrentItem</code>, while the child <code>nameText</code> object must refer to this property as <code>wrapper.PathView.isCurrentItem</code>.</p>
+<pre class="qml">    <span class="type">Component</span> {
+        <span class="name">id</span>: <span class="name">delegate</span>
+        <span class="type"><a href="../QtQuick.Column/index.html">Column</a></span> {
+            <span class="name">id</span>: <span class="name">wrapper</span>
+            <span class="type"><a href="../QtQuick.Image/index.html">Image</a></span> {
+                <span class="name">anchors</span>.horizontalCenter: <span class="name">nameText</span>.<span class="name">horizontalCenter</span>
+                <span class="name">width</span>: <span class="number">64</span>; <span class="name">height</span>: <span class="number">64</span>
+                <span class="name">source</span>: <span class="name">icon</span>
+            }
+            <span class="type"><a href="../QtQuick.Text/index.html">Text</a></span> {
+                <span class="name">id</span>: <span class="name">nameText</span>
+                <span class="name">text</span>: <span class="name">name</span>
+                <span class="name">font</span>.pointSize: <span class="number">16</span>
+                <span class="name">color</span>: <span class="name">wrapper</span>.<span class="name">PathView</span>.<span class="name">isCurrentItem</span> ? <span class="string">&quot;red&quot;</span> : <span class="string">&quot;black&quot;</span>
+            }
+        }
+    }</pre>
+<p><b>Note</b> that views do not enable <i>clip</i> automatically. If the view is not clipped by another item or the screen, it will be necessary to set <i>clip: true</i> in order to have the out of view items clipped nicely.</p>
+<p><b>See also </b><a href="../QtQuick.Path/index.html">Path</a>, <a href="../QtQuick.qtquick-modelviewsdata-modelview/index.html#qml-data-models">QML Data Models</a>, <a href="../QtQuick.ListView/index.html">ListView</a>, <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.draganddrop/#gridview">GridView</a>, and <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.views/">Qt Quick Examples - Views</a>.</p>
+<!-- @@@PathView -->
+<h2>Property Documentation</h2>
+<!-- $$$cacheItemCount -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="cacheItemCount-prop"><td class="tblQmlPropNode"><p><a name="cacheItemCount-prop"></a><span class="name">cacheItemCount</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the maximum number of items to cache off the path.</p>
+<p>For example, a <a href="index.html">PathView</a> with a model containing 20 items, a <a href="index.html#pathItemCount-prop">pathItemCount</a> of 10, and an cacheItemCount of 4 will create up to 14 items, with 10 visible on the path and 4 invisible cached items.</p>
+<p>The cached delegates are created asynchronously, allowing creation to occur across multiple frames and reducing the likelihood of skipping frames.</p>
+<p>Setting this value can improve the smoothness of scrolling behavior at the expense of additional memory usage. It is not a substitute for creating efficient delegates; the fewer objects and bindings in a delegate, the faster a view can be moved.</p>
+<p><b>See also </b><a href="index.html#pathItemCount-prop">pathItemCount</a>.</p>
+</div></div><!-- @@@cacheItemCount -->
+<br/>
+<!-- $$$count -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="count-prop"><td class="tblQmlPropNode"><p><a name="count-prop"></a><span class="name">count</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the number of items in the model.</p>
+</div></div><!-- @@@count -->
+<br/>
+<!-- $$$currentIndex -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="currentIndex-prop"><td class="tblQmlPropNode"><p><a name="currentIndex-prop"></a><span class="name">currentIndex</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the index of the current item.</p>
+</div></div><!-- @@@currentIndex -->
+<br/>
+<!-- $$$currentItem -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="currentItem-prop"><td class="tblQmlPropNode"><p><a name="currentItem-prop"></a><span class="name">currentItem</span> : <span class="type"><a href="../QtQuick.Item/index.html">Item</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the current item in the view.</p>
+</div></div><!-- @@@currentItem -->
+<br/>
+<!-- $$$delegate -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="delegate-prop"><td class="tblQmlPropNode"><p><a name="delegate-prop"></a><span class="name">delegate</span> : <span class="type">Component</span></p></td></tr></table></div></div><div class="qmldoc"><p>The delegate provides a template defining each item instantiated by the view. The index is exposed as an accessible <code>index</code> property. Properties of the model are also available depending upon the type of <a href="../QtQuick.qtquick-modelviewsdata-modelview/index.html#qml-data-models">Data Model</a>.</p>
+<p>The number of objects and bindings in the delegate has a direct effect on the flicking performance of the view when <a href="index.html#pathItemCount-prop">pathItemCount</a> is specified. If at all possible, place functionality that is not needed for the normal display of the delegate in a <a href="../QtQuick.Loader/index.html">Loader</a> which can load additional components when needed.</p>
+<p>Note that the <a href="index.html">PathView</a> will layout the items based on the size of the root item in the delegate.</p>
+<p>Here is an example delegate:</p>
+<pre class="qml">    <span class="type">Component</span> {
+        <span class="name">id</span>: <span class="name">delegate</span>
+        <span class="type"><a href="../QtQuick.Column/index.html">Column</a></span> {
+            <span class="name">id</span>: <span class="name">wrapper</span>
+            <span class="type"><a href="../QtQuick.Image/index.html">Image</a></span> {
+                <span class="name">anchors</span>.horizontalCenter: <span class="name">nameText</span>.<span class="name">horizontalCenter</span>
+                <span class="name">width</span>: <span class="number">64</span>; <span class="name">height</span>: <span class="number">64</span>
+                <span class="name">source</span>: <span class="name">icon</span>
+            }
+            <span class="type"><a href="../QtQuick.Text/index.html">Text</a></span> {
+                <span class="name">id</span>: <span class="name">nameText</span>
+                <span class="name">text</span>: <span class="name">name</span>
+                <span class="name">font</span>.pointSize: <span class="number">16</span>
+                <span class="name">color</span>: <span class="name">wrapper</span>.<span class="name">PathView</span>.<span class="name">isCurrentItem</span> ? <span class="string">&quot;red&quot;</span> : <span class="string">&quot;black&quot;</span>
+            }
+        }
+    }</pre>
+</div></div><!-- @@@delegate -->
+<br/>
+<!-- $$$dragMargin -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="dragMargin-prop"><td class="tblQmlPropNode"><p><a name="dragMargin-prop"></a><span class="name">dragMargin</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the maximum distance from the path that initiate mouse dragging.</p>
+<p>By default the path can only be dragged by clicking on an item. If dragMargin is greater than zero, a drag can be initiated by clicking within dragMargin pixels of the path.</p>
+</div></div><!-- @@@dragMargin -->
+<br/>
+<!-- $$$dragging -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="dragging-prop"><td class="tblQmlPropNode"><p><a name="dragging-prop"></a><span class="name">dragging</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds whether the view is currently moving due to the user dragging the view.</p>
+</div></div><!-- @@@dragging -->
+<br/>
+<!-- $$$flickDeceleration -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="flickDeceleration-prop"><td class="tblQmlPropNode"><p><a name="flickDeceleration-prop"></a><span class="name">flickDeceleration</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the rate at which a flick will decelerate.</p>
+<p>The default is 100.</p>
+</div></div><!-- @@@flickDeceleration -->
+<br/>
+<!-- $$$flicking -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="flicking-prop"><td class="tblQmlPropNode"><p><a name="flicking-prop"></a><span class="name">flicking</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds whether the view is currently moving due to the user flicking the view.</p>
+</div></div><!-- @@@flicking -->
+<br/>
+<!-- $$$highlight -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="highlight-prop"><td class="tblQmlPropNode"><p><a name="highlight-prop"></a><span class="name">highlight</span> : <span class="type">Component</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the component to use as the highlight.</p>
+<p>An instance of the highlight component will be created for each view. The geometry of the resultant component instance will be managed by the view so as to stay with the current item.</p>
+<p>The below example demonstrates how to make a simple highlight. Note the use of the <a href="index.html#onPath-attached-prop">PathView.onPath</a> attached property to ensure that the highlight is hidden when flicked away from the path.</p>
+<pre class="qml"><span class="type">Component</span> {
+    <span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> {
+        <span class="name">visible</span>: <span class="name">PathView</span>.<span class="name">onPath</span>
+        <span class="comment">// ...</span>
+    }
+}</pre>
+<p><b>See also </b><a href="index.html#highlightItem-prop">highlightItem</a> and <a href="index.html#highlightRangeMode-prop">highlightRangeMode</a>.</p>
+</div></div><!-- @@@highlight -->
+<br/>
+<!-- $$$highlightItem -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="highlightItem-prop"><td class="tblQmlPropNode"><p><a name="highlightItem-prop"></a><span class="name">highlightItem</span> : <span class="type"><a href="../QtQuick.Item/index.html">Item</a></span></p></td></tr></table></div></div><div class="qmldoc"><p><code>highlightItem</code> holds the highlight item, which was created from the <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.views/#highlight">highlight</a> component.</p>
+<p><b>See also </b><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/QtQuick.views/#highlight">highlight</a>.</p>
+</div></div><!-- @@@highlightItem -->
+<br/>
+<!-- $$$highlightMoveDuration -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="highlightMoveDuration-prop"><td class="tblQmlPropNode"><p><a name="highlightMoveDuration-prop"></a><span class="name">highlightMoveDuration</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the move animation duration of the highlight delegate.</p>
+<p>If the <a href="index.html#highlightRangeMode-prop">highlightRangeMode</a> is StrictlyEnforceRange then this property determines the speed that the items move along the path.</p>
+<p>The default value for the duration is 300ms.</p>
+</div></div><!-- @@@highlightMoveDuration -->
+<br/>
+<!-- $$$highlightRangeMode -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="highlightRangeMode-prop"><td class="tblQmlPropNode"><p><a name="highlightRangeMode-prop"></a><span class="name">highlightRangeMode</span> : <span class="type">enumeration</span></p></td></tr></table></div></div><div class="qmldoc"><p>These properties set the preferred range of the highlight (current item) within the view. The preferred values must be in the range 0.0-1.0&#x2e;</p>
+<p>Valid values for <code>highlightRangeMode</code> are:</p>
+<ul>
+<li><i>PathView.NoHighlightRange</i> - no range is applied and the highlight will move freely within the view.</li>
+<li><i>PathView.ApplyRange</i> - the view will attempt to maintain the highlight within the range, however the highlight can move outside of the range at the ends of the path or due to a mouse interaction.</li>
+<li><i>PathView.StrictlyEnforceRange</i> - the highlight will never move outside of the range. This means that the current item will change if a keyboard or mouse action would cause the highlight to move outside of the range.</li>
+</ul>
+<p>The default value is <i>PathView.StrictlyEnforceRange</i>.</p>
+<p>Defining a highlight range is the correct way to influence where the current item ends up when the view moves. For example, if you want the currently selected item to be in the middle of the path, then set the highlight range to be 0.5,0.5 and highlightRangeMode to <i>PathView.StrictlyEnforceRange</i>. Then, when the path scrolls, the currently selected item will be the item at that position. This also applies to when the currently selected item changes - it will scroll to within the preferred highlight range. Furthermore, the behaviour of the current item index will occur whether or not a highlight exists.</p>
+<p><b>Note: </b>A valid range requires <code>preferredHighlightEnd</code> to be greater than or equal to <code>preferredHighlightBegin</code>.</p></div></div><!-- @@@highlightRangeMode -->
+<br/>
+<!-- $$$interactive -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="interactive-prop"><td class="tblQmlPropNode"><p><a name="interactive-prop"></a><span class="name">interactive</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>A user cannot drag or flick a <a href="index.html">PathView</a> that is not interactive.</p>
+<p>This property is useful for temporarily disabling flicking. This allows special interaction with <a href="index.html">PathView</a>'s children.</p>
+</div></div><!-- @@@interactive -->
+<br/>
+<!-- $$$maximumFlickVelocity -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="maximumFlickVelocity-prop"><td class="tblQmlPropNode"><p><a name="maximumFlickVelocity-prop"></a><span class="name">maximumFlickVelocity</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the approximate maximum velocity that the user can flick the view in pixels/second.</p>
+<p>The default value is platform dependent.</p>
+</div></div><!-- @@@maximumFlickVelocity -->
+<br/>
+<!-- $$$model -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="model-prop"><td class="tblQmlPropNode"><p><a name="model-prop"></a><span class="name">model</span> : <span class="type"><a href="index.html#model-prop">model</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the model providing data for the view.</p>
+<p>The model provides a set of data that is used to create the items for the view. For large or dynamic datasets the model is usually provided by a C++ model object. Models can also be created directly in QML, using the <a href="../QtQuick.qtquick-modelviewsdata-modelview/index.html#listmodel">ListModel</a> type.</p>
+<p><b>Note: </b>changing the model will reset the offset and <a href="index.html#currentIndex-prop">currentIndex</a> to 0.</p><p><b>See also </b><a href="../QtQuick.qtquick-modelviewsdata-modelview/index.html#qml-data-models">Data Models</a>.</p>
+</div></div><!-- @@@model -->
+<br/>
+<!-- $$$moving -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="moving-prop"><td class="tblQmlPropNode"><p><a name="moving-prop"></a><span class="name">moving</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds whether the view is currently moving due to the user either dragging or flicking the view.</p>
+</div></div><!-- @@@moving -->
+<br/>
+<!-- $$$offset -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="offset-prop"><td class="tblQmlPropNode"><p><a name="offset-prop"></a><span class="name">offset</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>The offset specifies how far along the path the items are from their initial positions. This is a real number that ranges from 0.0 to the count of items in the model.</p>
+</div></div><!-- @@@offset -->
+<br/>
+<!-- $$$path -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="path-prop"><td class="tblQmlPropNode"><p><a name="path-prop"></a><span class="name">path</span> : <span class="type"><a href="../QtQuick.Path/index.html">Path</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the path used to lay out the items. For more information see the <a href="../QtQuick.Path/index.html">Path</a> documentation.</p>
+</div></div><!-- @@@path -->
+<br/>
+<!-- $$$pathItemCount -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="pathItemCount-prop"><td class="tblQmlPropNode"><p><a name="pathItemCount-prop"></a><span class="name">pathItemCount</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the number of items visible on the path at any one time.</p>
+<p>Setting pathItemCount to undefined will show all items on the path.</p>
+</div></div><!-- @@@pathItemCount -->
+<br/>
+<!-- $$$preferredHighlightBegin -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="preferredHighlightBegin-prop"><td class="tblQmlPropNode"><p><a name="preferredHighlightBegin-prop"></a><span class="name">preferredHighlightBegin</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>These properties set the preferred range of the highlight (current item) within the view. The preferred values must be in the range 0.0-1.0&#x2e;</p>
+<p>Valid values for <code>highlightRangeMode</code> are:</p>
+<ul>
+<li><i>PathView.NoHighlightRange</i> - no range is applied and the highlight will move freely within the view.</li>
+<li><i>PathView.ApplyRange</i> - the view will attempt to maintain the highlight within the range, however the highlight can move outside of the range at the ends of the path or due to a mouse interaction.</li>
+<li><i>PathView.StrictlyEnforceRange</i> - the highlight will never move outside of the range. This means that the current item will change if a keyboard or mouse action would cause the highlight to move outside of the range.</li>
+</ul>
+<p>The default value is <i>PathView.StrictlyEnforceRange</i>.</p>
+<p>Defining a highlight range is the correct way to influence where the current item ends up when the view moves. For example, if you want the currently selected item to be in the middle of the path, then set the highlight range to be 0.5,0.5 and <a href="index.html#highlightRangeMode-prop">highlightRangeMode</a> to <i>PathView.StrictlyEnforceRange</i>. Then, when the path scrolls, the currently selected item will be the item at that position. This also applies to when the currently selected item changes - it will scroll to within the preferred highlight range. Furthermore, the behaviour of the current item index will occur whether or not a highlight exists.</p>
+<p><b>Note: </b>A valid range requires <code>preferredHighlightEnd</code> to be greater than or equal to <code>preferredHighlightBegin</code>.</p></div></div><!-- @@@preferredHighlightBegin -->
+<br/>
+<!-- $$$preferredHighlightEnd -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="preferredHighlightEnd-prop"><td class="tblQmlPropNode"><p><a name="preferredHighlightEnd-prop"></a><span class="name">preferredHighlightEnd</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>These properties set the preferred range of the highlight (current item) within the view. The preferred values must be in the range 0.0-1.0&#x2e;</p>
+<p>Valid values for <code>highlightRangeMode</code> are:</p>
+<ul>
+<li><i>PathView.NoHighlightRange</i> - no range is applied and the highlight will move freely within the view.</li>
+<li><i>PathView.ApplyRange</i> - the view will attempt to maintain the highlight within the range, however the highlight can move outside of the range at the ends of the path or due to a mouse interaction.</li>
+<li><i>PathView.StrictlyEnforceRange</i> - the highlight will never move outside of the range. This means that the current item will change if a keyboard or mouse action would cause the highlight to move outside of the range.</li>
+</ul>
+<p>The default value is <i>PathView.StrictlyEnforceRange</i>.</p>
+<p>Defining a highlight range is the correct way to influence where the current item ends up when the view moves. For example, if you want the currently selected item to be in the middle of the path, then set the highlight range to be 0.5,0.5 and <a href="index.html#highlightRangeMode-prop">highlightRangeMode</a> to <i>PathView.StrictlyEnforceRange</i>. Then, when the path scrolls, the currently selected item will be the item at that position. This also applies to when the currently selected item changes - it will scroll to within the preferred highlight range. Furthermore, the behaviour of the current item index will occur whether or not a highlight exists.</p>
+<p><b>Note: </b>A valid range requires <code>preferredHighlightEnd</code> to be greater than or equal to <code>preferredHighlightBegin</code>.</p></div></div><!-- @@@preferredHighlightEnd -->
+<br/>
+<!-- $$$snapMode -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="snapMode-prop"><td class="tblQmlPropNode"><p><a name="snapMode-prop"></a><span class="name">snapMode</span> : <span class="type">enumeration</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property determines how the items will settle following a drag or flick. The possible values are:</p>
+<ul>
+<li><a href="index.html">PathView</a>.NoSnap (default) - the items stop anywhere along the path.</li>
+<li><a href="index.html">PathView</a>.SnapToItem - the items settle with an item aligned with the <a href="index.html#preferredHighlightBegin-prop">preferredHighlightBegin</a>.</li>
+<li><a href="index.html">PathView</a>.SnapOneItem - the items settle no more than one item away from the item nearest <a href="index.html#preferredHighlightBegin-prop">preferredHighlightBegin</a> at the time the press is released. This mode is particularly useful for moving one page at a time.</li>
+</ul>
+<p><code>snapMode</code> does not affect the <a href="index.html#currentIndex-prop">currentIndex</a>. To update the <a href="index.html#currentIndex-prop">currentIndex</a> as the view is moved, set <a href="index.html#highlightRangeMode-prop">highlightRangeMode</a> to <code>PathView.StrictlyEnforceRange</code> (default for <a href="index.html">PathView</a>).</p>
+<p><b>See also </b><a href="index.html#highlightRangeMode-prop">highlightRangeMode</a>.</p>
+</div></div><!-- @@@snapMode -->
+<br/>
+<h2>Attached Property Documentation</h2>
+<!-- $$$isCurrentItem -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="isCurrentItem-attached-prop"><td class="tblQmlPropNode"><p><a name="isCurrentItem-attached-prop"></a><span class="name">PathView.isCurrentItem</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This attached property is true if this delegate is the current item; otherwise false.</p>
+<p>It is attached to each instance of the delegate.</p>
+<p>This property may be used to adjust the appearance of the current item.</p>
+<pre class="qml">    <span class="type">Component</span> {
+        <span class="name">id</span>: <span class="name">delegate</span>
+        <span class="type"><a href="../QtQuick.Column/index.html">Column</a></span> {
+            <span class="name">id</span>: <span class="name">wrapper</span>
+            <span class="type"><a href="../QtQuick.Image/index.html">Image</a></span> {
+                <span class="name">anchors</span>.horizontalCenter: <span class="name">nameText</span>.<span class="name">horizontalCenter</span>
+                <span class="name">width</span>: <span class="number">64</span>; <span class="name">height</span>: <span class="number">64</span>
+                <span class="name">source</span>: <span class="name">icon</span>
+            }
+            <span class="type"><a href="../QtQuick.Text/index.html">Text</a></span> {
+                <span class="name">id</span>: <span class="name">nameText</span>
+                <span class="name">text</span>: <span class="name">name</span>
+                <span class="name">font</span>.pointSize: <span class="number">16</span>
+                <span class="name">color</span>: <span class="name">wrapper</span>.<span class="name">PathView</span>.<span class="name">isCurrentItem</span> ? <span class="string">&quot;red&quot;</span> : <span class="string">&quot;black&quot;</span>
+            }
+        }
+    }</pre>
+</div></div><!-- @@@isCurrentItem -->
+<br/>
+<!-- $$$onPath -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="onPath-attached-prop"><td class="tblQmlPropNode"><p><a name="onPath-attached-prop"></a><span class="name">PathView.onPath</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This attached property holds whether the item is currently on the path.</p>
+<p>If a <a href="index.html#pathItemCount-prop">pathItemCount</a> has been set, it is possible that some items may be instantiated, but not considered to be currently on the path. Usually, these items would be set invisible, for example:</p>
+<pre class="qml"><span class="type">Component</span> {
+    <span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> {
+        <span class="name">visible</span>: <span class="name">PathView</span>.<span class="name">onPath</span>
+        <span class="comment">// ...</span>
+    }
+}</pre>
+<p>It is attached to each instance of the delegate.</p>
+</div></div><!-- @@@onPath -->
+<br/>
+<!-- $$$view -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="view-attached-prop"><td class="tblQmlPropNode"><p><a name="view-attached-prop"></a><span class="name">PathView.view</span> : <span class="type"><a href="index.html">PathView</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This attached property holds the view that manages this delegate instance.</p>
+<p>It is attached to each instance of the delegate.</p>
+</div></div><!-- @@@view -->
+<br/>
+<h2>Signal Documentation</h2>
+<!-- $$$dragEnded -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="dragEnded-signal"><td class="tblQmlFuncNode"><p><a name="dragEnded-signal"></a><span class="name">dragEnded</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when the user stops dragging the view.</p>
+<p>If the velocity of the drag is suffient at the time the touch/mouse button is released then a flick will start.</p>
+<p>The corresponding handler is <code>onDragEnded</code>.</p>
+</div></div><!-- @@@dragEnded -->
+<br/>
+<!-- $$$dragStarted -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="dragStarted-signal"><td class="tblQmlFuncNode"><p><a name="dragStarted-signal"></a><span class="name">dragStarted</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when the view starts to be dragged due to user interaction.</p>
+<p>The corresponding handler is <code>onDragStarted</code>.</p>
+</div></div><!-- @@@dragStarted -->
+<br/>
+<!-- $$$flickEnded -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="flickEnded-signal"><td class="tblQmlFuncNode"><p><a name="flickEnded-signal"></a><span class="name">flickEnded</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when the view stops moving due to a flick.</p>
+<p>The corresponding handler is <code>onFlickEnded</code>.</p>
+</div></div><!-- @@@flickEnded -->
+<br/>
+<!-- $$$flickStarted -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="flickStarted-signal"><td class="tblQmlFuncNode"><p><a name="flickStarted-signal"></a><span class="name">flickStarted</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when the view is flicked. A flick starts from the point that the mouse or touch is released, while still in motion.</p>
+<p>The corresponding handler is <code>onFlickStarted</code>.</p>
+</div></div><!-- @@@flickStarted -->
+<br/>
+<!-- $$$movementEnded -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="movementEnded-signal"><td class="tblQmlFuncNode"><p><a name="movementEnded-signal"></a><span class="name">movementEnded</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when the view stops moving due to user interaction. If a flick was generated, this signal will be emitted once the flick stops. If a flick was not generated, this signal will be emitted when the user stops dragging - i.e&#x2e; a mouse or touch release.</p>
+<p>The corresponding handler is <code>onMovementEnded</code>.</p>
+</div></div><!-- @@@movementEnded -->
+<br/>
+<!-- $$$movementStarted -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="movementStarted-signal"><td class="tblQmlFuncNode"><p><a name="movementStarted-signal"></a><span class="name">movementStarted</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when the view begins moving due to user interaction.</p>
+<p>The corresponding handler is <code>onMovementStarted</code>.</p>
+</div></div><!-- @@@movementStarted -->
+<br/>
+<h2>Method Documentation</h2>
+<!-- $$$decrementCurrentIndex -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="decrementCurrentIndex-method"><td class="tblQmlFuncNode"><p><a name="decrementCurrentIndex-method"></a><span class="name">decrementCurrentIndex</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Decrements the current index.</p>
+<p><b>Note</b>: methods should only be called after the Component has completed.</p>
+</div></div><!-- @@@decrementCurrentIndex -->
+<br/>
+<!-- $$$incrementCurrentIndex -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="incrementCurrentIndex-method"><td class="tblQmlFuncNode"><p><a name="incrementCurrentIndex-method"></a><span class="name">incrementCurrentIndex</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Increments the current index.</p>
+<p><b>Note</b>: methods should only be called after the Component has completed.</p>
+</div></div><!-- @@@incrementCurrentIndex -->
+<br/>
+<!-- $$$indexAt -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="indexAt-method"><td class="tblQmlFuncNode"><p><a name="indexAt-method"></a><span class="type">int</span> <span class="name">indexAt</span>(<span class="type">int</span><i> x</i>, <span class="type">int</span><i> y</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Returns the index of the item containing the point <i>x</i>, <i>y</i> in content coordinates. If there is no item at the point specified, -1 is returned.</p>
+<p><b>Note</b>: methods should only be called after the Component has completed.</p>
+</div></div><!-- @@@indexAt -->
+<br/>
+<!-- $$$itemAt -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="itemAt-method"><td class="tblQmlFuncNode"><p><a name="itemAt-method"></a><span class="type"><a href="../QtQuick.Item/index.html">Item</a></span> <span class="name">itemAt</span>(<span class="type">int</span><i> x</i>, <span class="type">int</span><i> y</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Returns the item containing the point <i>x</i>, <i>y</i> in content coordinates. If there is no item at the point specified, null is returned.</p>
+<p><b>Note</b>: methods should only be called after the Component has completed.</p>
+</div></div><!-- @@@itemAt -->
+<br/>
+<!-- $$$positionViewAtIndex -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="positionViewAtIndex-method"><td class="tblQmlFuncNode"><p><a name="positionViewAtIndex-method"></a><span class="name">positionViewAtIndex</span>(<span class="type">int</span><i> index</i>, <span class="type">PositionMode</span><i> mode</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Positions the view such that the <i>index</i> is at the position specified by <i>mode</i>:</p>
+<ul>
+<li><a href="index.html">PathView</a>.Beginning - position item at the beginning of the path.</li>
+<li><a href="index.html">PathView</a>.Center - position item in the center of the path.</li>
+<li><a href="index.html">PathView</a>.End - position item at the end of the path.</li>
+<li><a href="index.html">PathView</a>.Contain - ensure the item is positioned on the path.</li>
+<li><a href="index.html">PathView</a>.SnapPosition - position the item at <a href="index.html#preferredHighlightBegin-prop">preferredHighlightBegin</a>. This mode is only valid if <a href="index.html#highlightRangeMode-prop">highlightRangeMode</a> is StrictlyEnforceRange or snapping is enabled via <a href="index.html#snapMode-prop">snapMode</a>.</li>
+</ul>
+<p><b>Note</b>: methods should only be called after the Component has completed. To position the view at startup, this method should be called by Component.onCompleted. For example, to position the view at the end:</p>
+<pre class="cpp">Component<span class="operator">.</span>onCompleted: positionViewAtIndex(count <span class="operator">-</span> <span class="number">1</span><span class="operator">,</span> PathView<span class="operator">.</span>End)</pre>
+</div></div><!-- @@@positionViewAtIndex -->
+<br/>
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

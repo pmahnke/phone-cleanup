@@ -1,0 +1,752 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Page Object Pattern | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/sphinx.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Autopilot</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">Python</a> &rsaquo;</li>
+<li><a class="sub-nav-item" href="../index.html">1.5.0</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Page Object Pattern</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: page_object.fjson -->
+	<!-- Source Format: sphinx -->
+<h1>Page Object Pattern</h1>
+<div id="page_content" class="sphinx">
+<!-- Start Element Content -->
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="index.html#page-object-pattern" id="id1">Page Object Pattern</a><ul>
+<li><a class="reference internal" href="index.html#introducing-the-page-object-pattern" id="id2">Introducing the Page Object Pattern</a><ul>
+<li><a class="reference internal" href="index.html#the-public-methods-represent-the-services-that-the-page-offers" id="id3">1. The public methods represent the services that the page offers.</a></li>
+<li><a class="reference internal" href="index.html#try-not-to-expose-the-internals-of-the-page" id="id4">2. Try not to expose the internals of the page.</a></li>
+<li><a class="reference internal" href="index.html#methods-return-other-pageobjects" id="id5">3. Methods return other PageObjects</a></li>
+<li><a class="reference internal" href="index.html#assertions-should-exist-only-in-tests" id="id6">4. Assertions should exist only in tests</a></li>
+<li><a class="reference internal" href="index.html#need-not-represent-an-entire-page" id="id7">5. Need not represent an entire page</a></li>
+<li><a class="reference internal" href="index.html#actions-which-produce-multiple-results-should-have-a-test-for-each-result" id="id8">6. Actions which produce multiple results should have a test for each result</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="introducing-the-page-object-pattern">
+<h2><a class="toc-backref" href="index.html#id2">Introducing the Page Object Pattern</a><a class="headerlink" href="index.html#introducing-the-page-object-pattern" title="Permalink to this headline"></a></h2>
+<p>Automated testing of an application through the Graphical User Interface (GUI) is inherently fragile.
+These tests require regular review and attention during the development cycle. This is known as Interface Sensitivity (<a class="reference external" href="https://books.google.com/books?isbn=0132797461">&#8220;even minor changes to the interface can cause tests to fail&#8221;</a>).
+Utilizing the page-object pattern, alleviates some of the problems stemming from this fragility, allowing us to do automated user acceptance testing (UAT) in a sustainable manner.</p>
+<p>The Page Object Pattern comes from the <a class="reference external" href="https://code.google.com/p/selenium/wiki/PageObjects">Selenium community</a> and is the best way to turn a flaky and unmaintainable user acceptance test into a stable and useful
+part of your release process. A page is what&#8217;s visible on the screen at a single moment.
+A user story consists of a user jumping from page to page until they achieve their goal.
+Thus pages are modeled as objects following these guidelines:</p>
+<ol class="arabic simple">
+<li>The public methods represent the services that the page offers.</li>
+<li>Try not to expose the internals of the page.</li>
+<li>Methods return other PageObjects.</li>
+<li>Assertions should exist only in tests</li>
+<li>Objects need not represent the entire page.</li>
+<li>Actions which produce multiple results should have a test for each result</li>
+</ol>
+<p>Lets take the page objects of the <a class="reference external" href="http://bazaar.launchpad.net/~ubuntu-clock-dev/ubuntu-clock-app/trunk/view/399/tests/autopilot/ubuntu_clock_app/emulators.py">Ubuntu Clock App</a> as an example, with some simplifications. This application is written in
+QML and Javascript using the <a class="reference external" href="http://developer.ubuntu.com/apps/sdk/">Ubuntu SDK</a>.</p>
+<div class="section" id="the-public-methods-represent-the-services-that-the-page-offers">
+<h3><a class="toc-backref" href="index.html#id3">1. The public methods represent the services that the page offers.</a><a class="headerlink" href="index.html#the-public-methods-represent-the-services-that-the-page-offers" title="Permalink to this headline"></a></h3>
+<p>This application has a stopwatch page that lets users measure elapsed
+time. It offers services to start, stop and reset the watch, so we start
+by defining the stop watch page object as follows:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Stopwatch</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="try-not-to-expose-the-internals-of-the-page">
+<h3><a class="toc-backref" href="index.html#id4">2. Try not to expose the internals of the page.</a><a class="headerlink" href="index.html#try-not-to-expose-the-internals-of-the-page" title="Permalink to this headline"></a></h3>
+<p>The internals of the page are more likely to change than the services it
+offers. A stopwatch will keep the same three services we defined above
+even if the whole design changes. In this case, we reset the stop watch
+by clicking a button on the bottom-left of the window, but we hide that
+as an implementation detail behind the public methods. In Python, we can
+indicate that a method is for internal use only by adding a single
+leading underscore to its name. So, lets implement the reset_stopwatch
+method:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_click_reset_button</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">_click_reset_button</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">reset_button</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">wait_select_single</span><span class="p">(</span>
+        <span class="s">&#39;ImageButton&#39;</span><span class="p">,</span> <span class="n">objectName</span><span class="o">=</span><span class="s">&#39;resetButton&#39;</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">pointing_device</span><span class="o">.</span><span class="n">click_object</span><span class="p">(</span><span class="n">reset_button</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now if the designers go crazy and decide that it&#8217;s better to reset the
+stop watch in a different way, we will have to make the change only in
+one place to keep all the tests working. Remember that this type of
+tests has Interface Sensitivity, that&#8217;s unavoidable; but we can reduce
+the impact of interface changes with proper encapsulation and turn these
+tests into a useful way to verify that a change in the GUI didn&#8217;t
+introduce any regressions.</p>
+</div>
+<div class="section" id="methods-return-other-pageobjects">
+<span id="page-object-guide-guideline-3"></span><h3><a class="toc-backref" href="index.html#id5">3. Methods return other PageObjects</a><a class="headerlink" href="index.html#methods-return-other-pageobjects" title="Permalink to this headline"></a></h3>
+<p>An UAT checks a user story. It will involve the journey of the user
+through the system, so he will move from one page to another. Lets take
+a look at how a journey to reset the stop watch will look like:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">stopwatch</span> <span class="o">=</span> <span class="n">clock_page</span><span class="o">.</span><span class="n">open_stopwatch</span><span class="p">()</span>
+<span class="n">stopwatch</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+<span class="n">stopwatch</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>In our sample application, the first page that the user will encounter
+is the Clock. One of the things the user can do from this page is to
+open the stopwatch page, so we model that as a service that the Clock
+page provides. Then return the new page object that will be visible to
+the user after completing that step.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Clock</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="o">...</span>
+
+    <span class="k">def</span> <span class="nf">open_stopwatch</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_switch_to_tab</span><span class="p">(</span><span class="s">&#39;StopwatchTab&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">wait_select_single</span><span class="p">(</span><span class="n">Stopwatch</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now the return value of open_stopwatch will make available to the
+caller all the available services that the stopwatch exposes to the
+user. Thus it can be chained as a user journey from one page to the
+other.</p>
+</div>
+<div class="section" id="assertions-should-exist-only-in-tests">
+<h3><a class="toc-backref" href="index.html#id6">4. Assertions should exist only in tests</a><a class="headerlink" href="index.html#assertions-should-exist-only-in-tests" title="Permalink to this headline"></a></h3>
+<p>A well written UAT consists of a sequence of
+steps or user actions and ends with one single assertion that verifies
+that the user achieved its goal. The page objects are the helpers for
+the user actions part of the test, so it&#8217;s better to leave the check for
+success out of them. With that in mind, a test for the reset of the
+stopwatch would look like this:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">test_restart_button_must_restart_stopwatch_time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="c"># Set up.</span>
+    <span class="n">stopwatch</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">clock_page</span><span class="o">.</span><span class="n">open_stopwatch</span><span class="p">()</span>
+
+    <span class="n">stopwatch</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+    <span class="n">stopwatch</span><span class="o">.</span><span class="n">reset_stopwatch</span><span class="p">()</span>
+
+    <span class="c"># Check that the stopwatch has been reset.</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">assertThat</span><span class="p">(</span>
+        <span class="n">stopwatch</span><span class="o">.</span><span class="n">get_time</span><span class="p">,</span>
+        <span class="n">Eventually</span><span class="p">(</span><span class="n">Equals</span><span class="p">(</span><span class="s">&#39;00:00.0&#39;</span><span class="p">)))</span>
+</pre></div>
+</div>
+<p>We have to add a new method to the stopwatch page object: get_time. But
+it only returns the state of the GUI as the user sees it. We leave in
+the test method the assertion that checks it&#8217;s the expected value.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Stopwatch</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="o">...</span>
+
+    <span class="k">def</span> <span class="nf">get_time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">wait_select_single</span><span class="p">(</span>
+            <span class="s">&#39;Label&#39;</span><span class="p">,</span> <span class="n">objectName</span><span class="o">=</span><span class="s">&#39;time&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="need-not-represent-an-entire-page">
+<h3><a class="toc-backref" href="index.html#id7">5. Need not represent an entire page</a><a class="headerlink" href="index.html#need-not-represent-an-entire-page" title="Permalink to this headline"></a></h3>
+<p>The objects we are modeling here can just represent a part of the page.
+Then we build the entire page that the user is seeing by composition of
+page parts. This way we can reuse test code for parts of the GUI that
+are reused in the application or between different applications. As an
+example, take the _switch_to_tab(&#8216;StopwatchTab&#8217;) method that we are
+using to open the stopwatch page. The Clock application is using the
+Header component provided by the Ubuntu SDK, as all the other Ubuntu
+applications are doing too. So, the Ubuntu SDK also provides helpers to
+make it easier the user acceptance testing of the applications, and you
+will find an object like this:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Header</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">switch_to_tab</span><span class="p">(</span><span class="n">tab_object_name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Open a tab.</span>
+
+<span class="sd">        :parameter tab_object_name: The QML objectName property of the tab.</span>
+<span class="sd">        :return: The newly opened tab.</span>
+<span class="sd">        :raise ToolkitException: If there is no tab with that object</span>
+<span class="sd">            name.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<p>This object just represents the header of the page, and inside the
+object we define the services that the header provides to the users. If
+you dig into the full implementation of the Clock test class you will
+find that in order to open the stopwatch page we end up calling Header
+methods.</p>
+</div>
+<div class="section" id="actions-which-produce-multiple-results-should-have-a-test-for-each-result">
+<h3><a class="toc-backref" href="index.html#id8">6. Actions which produce multiple results should have a test for each result</a><a class="headerlink" href="index.html#actions-which-produce-multiple-results-should-have-a-test-for-each-result" title="Permalink to this headline"></a></h3>
+<p>According to the guideline <a class="reference internal" href="index.html#page-object-guide-guideline-3"><em>3. Methods return other PageObjects</em></a>, we are returning page objects every time
+that a user action opens the option for new actions to execute.
+Sometimes the same action has different results depending on the context
+or the values used for the action. For example, the Clock app has an
+Alarm page. In this page you can add new alarms, but if you try to add
+an alarm for sometime in the past, it will result in an error. So, we
+will have two different tests that will look something like this:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">test_add_alarm_for_tomorrow_must_add_to_alarm_list</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">tomorrow</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="n">test_alarm_name</span> <span class="o">=</span> <span class="s">&#39;Test alarm for tomorrow&#39;</span>
+    <span class="n">alarm_page</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">alarm_page</span><span class="o">.</span><span class="n">add_alarm</span><span class="p">(</span>
+        <span class="n">test_alarm_name</span><span class="p">,</span> <span class="n">tomorrow</span><span class="p">)</span>
+
+    <span class="n">saved_alarms</span> <span class="o">=</span> <span class="n">alarm_page</span><span class="o">.</span><span class="n">get_saved_alarms</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">assertIn</span><span class="p">(</span>
+        <span class="p">(</span><span class="n">test_alarm_name</span><span class="p">,</span> <span class="n">tomorrow</span><span class="p">),</span>
+        <span class="n">saved_alarms</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">test_add_alarm_for_earlier_today_must_display_error</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">earlier_today</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="n">test_alarm_name</span> <span class="o">=</span> <span class="s">&#39;Test alarm for earlier_today&#39;</span>
+    <span class="n">error_dialog</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">alarm_page</span><span class="o">.</span><span class="n">add_alarm_with_error</span><span class="p">(</span>
+        <span class="n">test_alarm_name</span><span class="p">,</span> <span class="n">earlier_today</span><span class="p">)</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span>
+        <span class="n">error_dialog</span><span class="o">.</span><span class="n">text</span><span class="p">,</span>
+        <span class="s">&#39;Please select a time in the future.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Take a look at the methods add_alarm and add_alarm_with_error. The
+first one returns the Alarm page again, where the user can continue his
+journey or finish the test checking the result. The second one returns
+the error dialog that&#8217;s expected when you try to add an alarm with the
+wrong values.</p>
+</div>
+</div>
+</div>
+
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,806 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>QML Video Shader Effects Example | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a class="sub-nav-item" href="../index.html">SDK 15.04.5</a> &rsaquo;</li>
+
+<li><a class="sub-nav-item" href="../QtMultimedia/index.html">QtMultimedia</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">QML Video Shader Effects Example</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qtmultimedia-video-qmlvideofx-example.html -->
+	<!-- Source Format: qdoc -->
+<h1>QML Video Shader Effects Example</h1>
+<div id="page_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$video/qmlvideofx-description -->
+<div class="descr"> <a name="details"></a>
+<a name="running-the-example"></a>
+<h2 id="running-the-example">Running the Example</h2>
+<p>To run the example from Qt Creator, open the <b>Welcome</b> mode and select the example from <b>Examples</b>. For more information, visit Building and Running an Example.</p>
+<a name="overview"></a>
+<h2 id="overview">Overview</h2>
+<p><i>QML Video Shader Effects</i> demonstrates how a ShaderEffect can be used to apply postprocessing effects, expressed in GLSL, to QML <a href="../QtMultimedia.VideoOutput/index.html">VideoOutput</a> type.</p>
+<p>It also shows how native code can be combined with QML to implement more advanced functionality - in this case, C++ code is used to calculate the QML frame rate. This value is rendered in QML in a semi-transparent item overlaid on the video content.</p>
+<p>The following screenshots show shader effects being applied. In each case, the effect is implemented using a fragment shader.</p>
+<p>Here we see an edge detection algorithm being applied to a video clip (<a href="http://durian.blender.org/">Sintel from blender.org</a>).</p>
+<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/60295aa3-b730-4e5f-9ad8-654f62475bcc-api/apps/qml/sdk-15.04.5/qtmultimedia-video-qmlvideofx-example/images/qmlvideofx-video-edgedetection.jpg" alt="" /></p><p>This image shows a page curl effect, applied to the same video clip.</p>
+<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/38c42bb4-c5e2-4984-80e4-6f4cb8714454-api/apps/qml/sdk-15.04.5/qtmultimedia-video-qmlvideofx-example/images/qmlvideofx-video-pagecurl.jpg" alt="" /></p><p>Here we see a 'glow' effect (edge detection plus colour quantization) being applied to the camera viewfinder.</p>
+<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/fa5fa663-7adc-4cb6-8f9a-e8bca557191d-api/apps/qml/sdk-15.04.5/qtmultimedia-video-qmlvideofx-example/images/qmlvideofx-camera-glow.jpg" alt="" /></p><p>This image shows a 'wobble' effect applied to the viewfinder.</p>
+<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/8103f29f-1558-41f3-9502-4182e410ab75-api/apps/qml/sdk-15.04.5/qtmultimedia-video-qmlvideofx-example/images/qmlvideofx-camera-wobble.jpg" alt="" /></p><p>The application includes many more effects than the ones shown here - look for Effect*.qml files in the list of files below to see the full range.</p>
+<a name="application-structure"></a>
+<h2 id="application-structure">Application structure</h2>
+<p>Shader effects can be applied to video or viewfinder content using ShaderEffect, as shown in the following example, which applies a wiggly effect to the content:</p>
+<pre class="cpp">import <span class="type">QtQuick</span> <span class="number">2.0</span>
+import <span class="type">QtMultimedia</span> <span class="number">5.0</span>
+Rectangle {
+    width: <span class="number">300</span>
+    height: <span class="number">300</span>
+    color: <span class="string">&quot;black&quot;</span>
+    MediaPlayer {
+        id: mediaPlayer
+        source: <span class="string">&quot;test.mp4&quot;</span>
+        playing: <span class="keyword">true</span>
+    }
+    VideoOutput {
+        id: video
+        anchors<span class="operator">.</span>fill: parent
+        source: mediaPlayer
+    }
+    ShaderEffect {
+        property variant source: ShaderEffectSource { sourceItem: video; hideSource: <span class="keyword">true</span> }
+        property real wiggleAmount: <span class="number">0.005</span>
+        anchors<span class="operator">.</span>fill: video
+        fragmentShader: <span class="string">&quot;
+            varying highp vec2 qt_TexCoord0;
+            uniform sampler2D source;
+            uniform highp float wiggleAmount;
+            void main(void)
+            {
+                highp vec2 wiggledTexCoord = qt_TexCoord0;
+                wiggledTexCoord.s += sin(4.0 * 3.141592653589 * wiggledTexCoord.t) * wiggleAmount;
+                gl_FragColor = texture2D(source, wiggledTexCoord.st);
+            }
+        &quot;</span>
+    }
+}</pre>
+<p>In this application, the usage of the ShaderEffect and <a href="../QtMultimedia.VideoOutput/index.html">VideoOutput</a> types is a bit more complicated, for the following reasons:</p>
+<ul>
+<li>Each effect can be applied to either a <a href="../QtMultimedia.VideoOutput/index.html">VideoOutput</a> or an Image item, so the type of the source item must be abstracted away from the effect implementation</li>
+<li>For some effects (such as the edge detection and glow examples shown in the screenshots above), the transformation is applied only to pixels to the left of a dividing line - this allows the effect to be easily compared with the untransformed image on the right</li>
+<li>Most effects have one or more parameters which can be modified by the user - these are controlled by sliders in the UI which are connected to uniform values passed into the GLSL code</li>
+</ul>
+<p>The abstraction of source item type is achieved by the Content, which uses a Loader to create either a MediaPlayer, Camera or Image:</p>
+<pre class="qml">import QtQuick 2.1
+<span class="type">Rectangle</span> {
+    ...
+    <span class="type">Loader</span> {
+        <span class="name">id</span>: <span class="name">contentLoader</span>
+    }
+    ...
+    <span class="keyword">function</span> <span class="name">openImage</span>(<span class="name">path</span>) {
+        <span class="name">stop</span>()
+        <span class="name">contentLoader</span>.<span class="name">source</span> <span class="operator">=</span> <span class="string">&quot;ContentImage.qml&quot;</span>
+        <span class="name">contentLoader</span>.<span class="name">item</span>.<span class="name">source</span> <span class="operator">=</span> <span class="name">path</span>
+    }
+    <span class="keyword">function</span> <span class="name">openVideo</span>(<span class="name">path</span>) {
+        <span class="name">stop</span>()
+        <span class="name">contentLoader</span>.<span class="name">source</span> <span class="operator">=</span> <span class="string">&quot;ContentVideo.qml&quot;</span>
+        <span class="name">contentLoader</span>.<span class="name">item</span>.<span class="name">mediaSource</span> <span class="operator">=</span> <span class="name">path</span>
+    }
+    <span class="keyword">function</span> <span class="name">openCamera</span>() {
+        <span class="name">stop</span>()
+        <span class="name">contentLoader</span>.<span class="name">source</span> <span class="operator">=</span> <span class="string">&quot;ContentCamera.qml&quot;</span>
+    }
+}</pre>
+<p>Each effect is implemented as a QML item which is based on the Effect, which in turn is based on the ShaderEffect:</p>
+<pre class="qml">import QtQuick 2.0
+<span class="type">ShaderEffect</span> {
+    property <span class="type">variant</span> <span class="name">source</span>
+    property <span class="type">ListModel</span> <span class="name">parameters</span>: <span class="name">ListModel</span> { }
+    property <span class="type">bool</span> <span class="name">divider</span>: <span class="number">true</span>
+    property <span class="type">real</span> <span class="name">dividerValue</span>: <span class="number">0.5</span>
+    property <span class="type">real</span> <span class="name">targetWidth</span>: <span class="number">0</span>
+    property <span class="type">real</span> <span class="name">targetHeight</span>: <span class="number">0</span>
+    property <span class="type">string</span> <span class="name">fragmentShaderFilename</span>
+    property <span class="type">string</span> <span class="name">vertexShaderFilename</span>
+    <span class="type">QtObject</span> {
+        <span class="name">id</span>: <span class="name">d</span>
+        property <span class="type">string</span> <span class="name">fragmentShaderCommon</span>: <span class="string">&quot;
+            #ifdef GL_ES
+                precision mediump float;
+            #else
+            #   define lowp
+            #   define mediump
+            #   define highp
+            #endif // GL_ES
+        &quot;</span>
+    }
+    <span class="comment">// The following is a workaround for the fact that ShaderEffect</span>
+    <span class="comment">// doesn't provide a way for shader programs to be read from a file,</span>
+    <span class="comment">// rather than being inline in the QML file</span>
+    <span class="name">onFragmentShaderFilenameChanged</span>:
+        <span class="name">fragmentShader</span> <span class="operator">=</span> <span class="name">d</span>.<span class="name">fragmentShaderCommon</span> <span class="operator">+</span> <span class="name">fileReader</span>.<span class="name">readFile</span>(<span class="string">&quot;:shaders/&quot;</span> <span class="operator">+</span> <span class="name">fragmentShaderFilename</span>)
+    <span class="name">onVertexShaderFilenameChanged</span>:
+        <span class="name">vertexShader</span> <span class="operator">=</span> <span class="name">fileReader</span>.<span class="name">readFile</span>(<span class="name">vertexShaderFilename</span>)
+}</pre>
+<p>The interface of Effect allows for derived effects to specify the number of parameters which they support (and therefore the number of sliders which should be displayed), and whether a vertical dividing line should be drawn between transformed and untransformed image regions. As an example, here is the implementation of the pixelation effect. As you can see, the pixelation effect supports one parameter (which controls the pixelation granularity), and states that the divider should be displayed.</p>
+<pre class="qml">import QtQuick 2.0
+<span class="type">Effect</span> {
+    <span class="name">parameters</span>: <span class="name">ListModel</span> {
+        <span class="type">ListElement</span> {
+            <span class="name">name</span>: <span class="string">&quot;Granularity&quot;</span>
+            <span class="name">value</span>: <span class="number">0.5</span>
+        }
+    }
+    <span class="comment">// Transform slider values, and bind result to shader uniforms</span>
+    property <span class="type">real</span> <span class="name">granularity</span>: <span class="name">parameters</span>.<span class="name">get</span>(<span class="number">0</span>).<span class="name">value</span> <span class="operator">*</span> <span class="number">20</span>
+    <span class="name">fragmentShaderFilename</span>: <span class="string">&quot;pixelate.fsh&quot;</span>
+}</pre>
+<p>The main.qml file shows a FileOpen, which allows the user to select the input source and an EffectSelectionPanel item, which lists each of the available shader effects. As described above, a Content item is used to load the appropriate input and effect type. A Divider item draws the vertical dividing line, which can be dragged left / right by the user. Finally, a ParameterPanel item renders the sliders corresponding to each effect parameter.</p>
+<p>Here is the effect selection menu:</p>
+<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/0facc1e3-b7d2-4611-a07d-3ccc61096b05-api/apps/qml/sdk-15.04.5/qtmultimedia-video-qmlvideofx-example/images/qmlvideofx-effects-menu.jpg" alt="" /></p><a name="calculating-and-displaying-qml-painting-rate"></a>
+<h2 id="calculating-and-displaying-qml-painting-rate">Calculating and displaying QML painting rate</h2>
+<p>The QML painting rate is calculated by the FrequencyMonitor class, which turns a stream of events (received via the notify() slot), into an instantaneous and an averaged frequency:</p>
+<pre class="qml"><span class="keyword">class</span> FrequencyMonitor : <span class="keyword">public</span> <span class="type">QObject</span>
+{
+    Q_OBJECT
+    Q_PROPERTY(<span class="type">qreal</span> instantaneousFrequency READ instantaneousFrequency NOTIFY instantaneousFrequencyChanged)
+    Q_PROPERTY(<span class="type">qreal</span> averageFrequency READ averageFrequency NOTIFY averageFrequencyChanged)
+<span class="keyword">public</span>:
+    ...
+    <span class="keyword">static</span> <span class="type">void</span> qmlRegisterType();
+<span class="keyword">public</span> <span class="keyword">slots</span>:
+    Q_INVOKABLE <span class="type">void</span> notify();
+};</pre>
+<p>The FrequencyMonitor class is exposed to QML like this</p>
+<pre class="qml"><span class="type">void</span> FrequencyMonitor<span class="operator">::</span>qmlRegisterType()
+{
+    <span class="operator">::</span>qmlRegisterType<span class="operator">&lt;</span>FrequencyMonitor<span class="operator">&gt;</span>(<span class="string">&quot;FrequencyMonitor&quot;</span><span class="operator">,</span> <span class="number">1</span><span class="operator">,</span> <span class="number">0</span><span class="operator">,</span> <span class="string">&quot;FrequencyMonitor&quot;</span>);
+}</pre>
+<p>and its data is displayed by defining a QML item called FrequencyItem, like this:</p>
+<pre class="qml">import FrequencyMonitor 1.0
+<span class="type">Rectangle</span> {
+    <span class="name">id</span>: <span class="name">root</span>
+    ...
+    <span class="keyword">function</span> <span class="name">notify</span>() {
+        <span class="name">monitor</span>.<span class="name">notify</span>()
+    }
+    <span class="type">FrequencyMonitor</span> {
+        <span class="name">id</span>: <span class="name">monitor</span>
+        <span class="name">onAverageFrequencyChanged</span>: {
+            <span class="name">averageFrequencyText</span>.<span class="name">text</span> <span class="operator">=</span> <span class="name">monitor</span>.<span class="name">averageFrequency</span>.<span class="name">toFixed</span>(<span class="number">2</span>)
+        }
+    }
+    <span class="type">Text</span> {
+        <span class="name">id</span>: <span class="name">labelText</span>
+        <span class="type">anchors</span> {
+            <span class="name">left</span>: <span class="name">parent</span>.<span class="name">left</span>
+            <span class="name">top</span>: <span class="name">parent</span>.<span class="name">top</span>
+            <span class="name">margins</span>: <span class="number">10</span>
+        }
+        <span class="name">color</span>: <span class="name">root</span>.<span class="name">textColor</span>
+        <span class="name">font</span>.pixelSize: <span class="number">0.6</span> <span class="operator">*</span> <span class="name">root</span>.<span class="name">textSize</span>
+        <span class="name">text</span>: <span class="name">root</span>.<span class="name">label</span>
+        <span class="name">width</span>: <span class="name">root</span>.<span class="name">width</span> <span class="operator">-</span> <span class="number">2</span><span class="operator">*</span><span class="name">anchors</span>.<span class="name">margins</span>
+        <span class="name">elide</span>: <span class="name">Text</span>.<span class="name">ElideRight</span>
+    }
+    <span class="type">Text</span> {
+        <span class="name">id</span>: <span class="name">averageFrequencyText</span>
+        <span class="type">anchors</span> {
+            <span class="name">right</span>: <span class="name">parent</span>.<span class="name">right</span>
+            <span class="name">bottom</span>: <span class="name">parent</span>.<span class="name">bottom</span>
+            <span class="name">margins</span>: <span class="number">10</span>
+        }
+        <span class="name">color</span>: <span class="name">root</span>.<span class="name">textColor</span>
+        <span class="name">font</span>.pixelSize: <span class="name">root</span>.<span class="name">textSize</span>
+    }
+}</pre>
+<p>The result looks like this:</p>
+<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/016ea051-6d2d-4b31-88a4-16e574de0ece-api/apps/qml/sdk-15.04.5/qtmultimedia-video-qmlvideofx-example/images/video-qml-paint-rate.png" alt="" /></p><p>All that remains is to connect the afterRendering() signal of the QQuickView object to a JavaScript function, which will eventually call frequencyItem.notify():</p>
+<pre class="qml"><span class="preprocessor">#include &lt;QtGui/QGuiApplication&gt;</span>
+<span class="preprocessor">#include &lt;QtQuick/QQuickItem&gt;</span>
+<span class="preprocessor">#include &lt;QtQuick/QQuickView&gt;</span>
+<span class="preprocessor">#include &quot;filereader.h&quot;</span>
+<span class="preprocessor">#include &quot;trace.h&quot;</span>
+<span class="preprocessor">#ifdef PERFORMANCEMONITOR_SUPPORT</span>
+<span class="preprocessor">#include &quot;performancemonitordeclarative.h&quot;</span>
+<span class="preprocessor">#endif</span>
+<span class="type">int</span> main(<span class="type">int</span> argc<span class="operator">,</span> <span class="type">char</span> <span class="operator">*</span>argv<span class="operator">[</span><span class="operator">]</span>)
+{
+    <span class="type">QGuiApplication</span> app(argc<span class="operator">,</span> argv);
+    ...
+    <span class="type">QQuickItem</span> <span class="operator">*</span>rootObject <span class="operator">=</span> viewer<span class="operator">.</span>rootObject();
+    ...
+    <span class="type">QObject</span><span class="operator">::</span>connect(<span class="operator">&amp;</span>viewer<span class="operator">,</span> SIGNAL(afterRendering())<span class="operator">,</span>
+                     rootObject<span class="operator">,</span> SLOT(qmlFramePainted()));</pre>
+<p>Files:</p>
+<ul>
+<li>video/qmlvideofx/filereader.cpp</li>
+<li>video/qmlvideofx/filereader.h</li>
+<li>video/qmlvideofx/qmlvideofx.svg</li>
+<li>video/qmlvideofx/trace.h</li>
+<li>video/qmlvideofx/android/AndroidManifest.xml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/Button.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/Content.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/ContentImage.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/ContentVideo.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/Curtain.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/Divider.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/Effect.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/EffectBillboard.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/EffectBlackAndWhite.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/EffectEmboss.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/EffectGaussianBlur.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/EffectGlow.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/EffectIsolate.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/EffectMagnify.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/EffectPageCurl.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/EffectPassThrough.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/EffectPixelate.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/EffectPosterize.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/EffectRipple.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/EffectSelectionList.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/EffectSepia.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/EffectSharpen.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/EffectShockwave.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/EffectSobelEdgeDetection1.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/EffectTiltShift.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/EffectToon.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/EffectVignette.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/EffectWarhol.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/EffectWobble.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/FileBrowser.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/FileOpen.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/HintedMouseArea.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/Main.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/ParameterPanel.qml</li>
+<li>video/qmlvideofx/qml/qmlvideofx/Slider.qml</li>
+<li>video/qmlvideofx/qmlapplicationviewer/qmlapplicationviewer.cpp</li>
+<li>video/qmlvideofx/qmlapplicationviewer/qmlapplicationviewer.h</li>
+<li>video/qmlvideofx/main.cpp</li>
+<li>video/qmlvideofx/qmlvideofx.pro</li>
+<li>video/qmlvideofx/qmlvideofx.qrc</li>
+</ul>
+<p>Images:</p>
+<ul>
+<li>video/qmlvideofx/images/Dropdown_arrows.png</li>
+<li>video/qmlvideofx/images/Slider_bar.png</li>
+<li>video/qmlvideofx/images/Slider_handle.png</li>
+<li>video/qmlvideofx/images/Triangle_Top.png</li>
+<li>video/qmlvideofx/images/Triangle_bottom.png</li>
+<li>video/qmlvideofx/images/icon_BackArrow.png</li>
+<li>video/qmlvideofx/images/icon_Folder.png</li>
+<li>video/qmlvideofx/images/icon_Menu.png</li>
+<li>video/qmlvideofx/images/qt-logo.png</li>
+</ul>
+</div>
+<!-- @@@video/qmlvideofx -->
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

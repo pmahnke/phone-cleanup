@@ -1,0 +1,723 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Variant [sdk-15.04/unity.scopes.Variant] | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/doxygen.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Scopes</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">C++</a> &rsaquo;</li>
+<li><a href="../index.html">SDK 15.04</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Variant</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: classunity_1_1scopes_1_1_variant.html -->
+	<!-- Source Format: doxygen -->
+<h1>Variant</h1>
+<div id="element_content" class="doxygen">
+<!-- Start Element Content -->
+<p>Simple variant class that can hold an integer, boolean, string, double, dictionary, array or null value.  
+ <a href="index.html#details">More...</a></p>
+<p><code>#include &lt;unity/scopes/Variant.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a84e79f64156503599a549d86230a2cf5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84e79f64156503599a549d86230a2cf5"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a84e79f64156503599a549d86230a2cf5">Type</a> { <br />
+&#160;&#160;<b>Null</b>, 
+<b>Int</b>, 
+<b>Bool</b>, 
+<b>String</b>, 
+<br />
+&#160;&#160;<b>Double</b>, 
+<b>Dict</b>, 
+<b>Array</b>, 
+<b>Int64</b>
+<br />
+ }</td></tr>
+<tr class="memdesc:a84e79f64156503599a549d86230a2cf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of value held by a <a class="el" href="index.html" title="Simple variant class that can hold an integer, boolean, string, double, dictionary, array or null value. ">Variant</a> instance. <br /></td></tr>
+<tr class="separator:a84e79f64156503599a549d86230a2cf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Copy and assignment</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Copy and assignment operators (move and non-move versions) have the usual value semantics. </p>
+</div></td></tr>
+<tr class="memitem:a88075e23bac5f3e6cffa68425f82b92f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a88075e23bac5f3e6cffa68425f82b92f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Variant</b> (<a class="el" href="index.html">Variant</a> const &amp;)</td></tr>
+<tr class="separator:a88075e23bac5f3e6cffa68425f82b92f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1c818282bc22ccec1f32127a4b8eda8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1c818282bc22ccec1f32127a4b8eda8"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Variant</b> (<a class="el" href="index.html">Variant</a> &amp;&amp;)</td></tr>
+<tr class="separator:aa1c818282bc22ccec1f32127a4b8eda8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0039129c79ca9c762c49950e8495c178"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0039129c79ca9c762c49950e8495c178"></a>
+<a class="el" href="index.html">Variant</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="index.html">Variant</a> const &amp;)</td></tr>
+<tr class="separator:a0039129c79ca9c762c49950e8495c178"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f29c80e9f2c0b768b992df6492e6e27"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f29c80e9f2c0b768b992df6492e6e27"></a>
+<a class="el" href="index.html">Variant</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="index.html">Variant</a> &amp;&amp;)</td></tr>
+<tr class="separator:a1f29c80e9f2c0b768b992df6492e6e27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Value assignment</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>The assignment operators replace the value currently held by a <a class="el" href="index.html" title="Simple variant class that can hold an integer, boolean, string, double, dictionary, array or null value. ">Variant</a> with the supplied value, potentially changing the type of the value held by the <a class="el" href="index.html" title="Simple variant class that can hold an integer, boolean, string, double, dictionary, array or null value. ">Variant</a>. Assigning a <code>const char*</code> to a <a class="el" href="index.html" title="Simple variant class that can hold an integer, boolean, string, double, dictionary, array or null value. ">Variant</a> stores the corresponding <code>std::string</code> value. </p>
+</div></td></tr>
+<tr class="memitem:a3c8fd52c00ecf529f09bd79349587824"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c8fd52c00ecf529f09bd79349587824"></a>
+<a class="el" href="index.html">Variant</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (int val) noexcept</td></tr>
+<tr class="separator:a3c8fd52c00ecf529f09bd79349587824"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa3d729ae97d84cc20a97ecd8688d65d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa3d729ae97d84cc20a97ecd8688d65d"></a>
+<a class="el" href="index.html">Variant</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (int64_t val) noexcept</td></tr>
+<tr class="separator:aaa3d729ae97d84cc20a97ecd8688d65d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77c823e6017c38415bf57745285c2fee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77c823e6017c38415bf57745285c2fee"></a>
+<a class="el" href="index.html">Variant</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (double val) noexcept</td></tr>
+<tr class="separator:a77c823e6017c38415bf57745285c2fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af40496a8c192e4fecadc8e3531cb4735"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af40496a8c192e4fecadc8e3531cb4735"></a>
+<a class="el" href="index.html">Variant</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (bool val) noexcept</td></tr>
+<tr class="separator:af40496a8c192e4fecadc8e3531cb4735"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af477dc59fa9c181a4ceafbe71bfec9ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af477dc59fa9c181a4ceafbe71bfec9ed"></a>
+<a class="el" href="index.html">Variant</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (std::string const &amp;val)</td></tr>
+<tr class="separator:af477dc59fa9c181a4ceafbe71bfec9ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e816393dd9cfc2851c0f2ecd9a5b29c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e816393dd9cfc2851c0f2ecd9a5b29c"></a>
+<a class="el" href="index.html">Variant</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (char const *val)</td></tr>
+<tr class="separator:a0e816393dd9cfc2851c0f2ecd9a5b29c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52371fcea776de20a73682022eee9614"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52371fcea776de20a73682022eee9614"></a>
+<a class="el" href="index.html">Variant</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="../unity.scopes/index.html#ad5d8ccfa11a327fca6f3e4cee11f4c10">VariantMap</a> const &amp;val)</td></tr>
+<tr class="separator:a52371fcea776de20a73682022eee9614"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cc6b40a50a9bef153d651f6d0e44ffb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1cc6b40a50a9bef153d651f6d0e44ffb"></a>
+<a class="el" href="index.html">Variant</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="../unity.scopes/index.html#aa3bf32d584efd902bca79698a07dd934">VariantArray</a> const &amp;val)</td></tr>
+<tr class="separator:a1cc6b40a50a9bef153d651f6d0e44ffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Comparison operators</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Two variants are considered equal if they both store values of the same type and equal value.</p>
+<p>For Variants storing values of different type, ordering follows the types defined in the Type enum. For example, any integer value compares less than any boolean value. For Variants of the same type, the stored values determine order as usual. </p>
+</div></td></tr>
+<tr class="memitem:a7e5ee7524e25bc5ab18fc164c584fb8f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e5ee7524e25bc5ab18fc164c584fb8f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (<a class="el" href="index.html">Variant</a> const &amp;) const noexcept</td></tr>
+<tr class="separator:a7e5ee7524e25bc5ab18fc164c584fb8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec73b890f6afbb1d72faa12e9a8bd913"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec73b890f6afbb1d72faa12e9a8bd913"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;</b> (<a class="el" href="index.html">Variant</a> const &amp;) const noexcept</td></tr>
+<tr class="separator:aec73b890f6afbb1d72faa12e9a8bd913"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Value accessors</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>The accessor methods retrieve a value of the specified type.</p>
+<p>If a <a class="el" href="index.html" title="Simple variant class that can hold an integer, boolean, string, double, dictionary, array or null value. ">Variant</a> currently stores a value of different type, these methods throw <code>unity::LogicException</code>. </p>
+</div></td></tr>
+<tr class="memitem:a96853808c0257b08a203c6222865083f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a96853808c0257b08a203c6222865083f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>get_int</b> () const </td></tr>
+<tr class="separator:a96853808c0257b08a203c6222865083f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62ad848e4203e189b40d70fcda438ed8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a62ad848e4203e189b40d70fcda438ed8"></a>
+int64_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_int64_t</b> () const </td></tr>
+<tr class="separator:a62ad848e4203e189b40d70fcda438ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd729790b187ccf8c32689c78a22f286"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd729790b187ccf8c32689c78a22f286"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>get_double</b> () const </td></tr>
+<tr class="separator:abd729790b187ccf8c32689c78a22f286"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9d6463eb83feef67888ce14d22fc9a2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa9d6463eb83feef67888ce14d22fc9a2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_bool</b> () const </td></tr>
+<tr class="separator:aa9d6463eb83feef67888ce14d22fc9a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada6e4905661dab460c5021f7a57bed28"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada6e4905661dab460c5021f7a57bed28"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>get_string</b> () const </td></tr>
+<tr class="separator:ada6e4905661dab460c5021f7a57bed28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade7909d9798c3ee98c4da4bc210a6c08"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade7909d9798c3ee98c4da4bc210a6c08"></a>
+<a class="el" href="../unity.scopes/index.html#ad5d8ccfa11a327fca6f3e4cee11f4c10">VariantMap</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_dict</b> () const </td></tr>
+<tr class="separator:ade7909d9798c3ee98c4da4bc210a6c08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04950b07c204b40c5ed1a07fee0f981d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04950b07c204b40c5ed1a07fee0f981d"></a>
+<a class="el" href="../unity.scopes/index.html#aa3bf32d584efd902bca79698a07dd934">VariantArray</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_array</b> () const </td></tr>
+<tr class="separator:a04950b07c204b40c5ed1a07fee0f981d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcbee9f21657da6ccabff844bb5f472f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#abcbee9f21657da6ccabff844bb5f472f">is_null</a> () const </td></tr>
+<tr class="memdesc:abcbee9f21657da6ccabff844bb5f472f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if variant holds null value.  More...<br /></td></tr>
+<tr class="separator:abcbee9f21657da6ccabff844bb5f472f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Observers</div></td></tr>
+<tr class="memitem:a5d5234019ce1069df485d539852f23be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d5234019ce1069df485d539852f23be"></a>
+<a class="el" href="index.html#a84e79f64156503599a549d86230a2cf5">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a5d5234019ce1069df485d539852f23be">which</a> () const noexcept</td></tr>
+<tr class="memdesc:a5d5234019ce1069df485d539852f23be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the type of value currently stored by this <a class="el" href="index.html" title="Simple variant class that can hold an integer, boolean, string, double, dictionary, array or null value. ">Variant</a>. <br /></td></tr>
+<tr class="separator:a5d5234019ce1069df485d539852f23be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Modifiers</div></td></tr>
+<tr class="memitem:a84e3a3281dd078fc7a690e17104f0c07"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84e3a3281dd078fc7a690e17104f0c07"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a84e3a3281dd078fc7a690e17104f0c07">swap</a> (<a class="el" href="index.html">Variant</a> &amp;other) noexcept</td></tr>
+<tr class="memdesc:a84e3a3281dd078fc7a690e17104f0c07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps the contents of this <a class="el" href="index.html" title="Simple variant class that can hold an integer, boolean, string, double, dictionary, array or null value. ">Variant</a> with <code>other</code>. <br /></td></tr>
+<tr class="separator:a84e3a3281dd078fc7a690e17104f0c07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Constructors and destructor</h2></td></tr>
+<tr class="memitem:afb7dc4ba8297d82003009cd5e22a0056"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb7dc4ba8297d82003009cd5e22a0056"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#afb7dc4ba8297d82003009cd5e22a0056">Variant</a> () noexcept</td></tr>
+<tr class="memdesc:afb7dc4ba8297d82003009cd5e22a0056"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default constructor creates a <a class="el" href="index.html" title="Simple variant class that can hold an integer, boolean, string, double, dictionary, array or null value. ">Variant</a> instance containing a null. <br /></td></tr>
+<tr class="separator:afb7dc4ba8297d82003009cd5e22a0056"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c011541041207fb0aac2455a004dd91"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c011541041207fb0aac2455a004dd91"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a4c011541041207fb0aac2455a004dd91">Variant</a> (int val) noexcept</td></tr>
+<tr class="memdesc:a4c011541041207fb0aac2455a004dd91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="index.html" title="Simple variant class that can hold an integer, boolean, string, double, dictionary, array or null value. ">Variant</a> instance that stores the supplied integer. <br /></td></tr>
+<tr class="separator:a4c011541041207fb0aac2455a004dd91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b506516f565c8a28ceeba9e75922b9f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b506516f565c8a28ceeba9e75922b9f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Variant</b> (int64_t val) noexcept</td></tr>
+<tr class="separator:a1b506516f565c8a28ceeba9e75922b9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0965c3cf5bf396709b90f88e9e84069"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa0965c3cf5bf396709b90f88e9e84069"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#aa0965c3cf5bf396709b90f88e9e84069">Variant</a> (double val) noexcept</td></tr>
+<tr class="memdesc:aa0965c3cf5bf396709b90f88e9e84069"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="index.html" title="Simple variant class that can hold an integer, boolean, string, double, dictionary, array or null value. ">Variant</a> instance that stores the supplied double. <br /></td></tr>
+<tr class="separator:aa0965c3cf5bf396709b90f88e9e84069"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10b5eeaa5716be6e87878e9abfa4a54d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a10b5eeaa5716be6e87878e9abfa4a54d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a10b5eeaa5716be6e87878e9abfa4a54d">Variant</a> (bool val) noexcept</td></tr>
+<tr class="memdesc:a10b5eeaa5716be6e87878e9abfa4a54d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="index.html" title="Simple variant class that can hold an integer, boolean, string, double, dictionary, array or null value. ">Variant</a> instance that stores the supplied boolean. <br /></td></tr>
+<tr class="separator:a10b5eeaa5716be6e87878e9abfa4a54d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeef78caa145819293d14672537f299f2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeef78caa145819293d14672537f299f2"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#aeef78caa145819293d14672537f299f2">Variant</a> (std::string const &amp;val)</td></tr>
+<tr class="memdesc:aeef78caa145819293d14672537f299f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="index.html" title="Simple variant class that can hold an integer, boolean, string, double, dictionary, array or null value. ">Variant</a> instance that stores the supplied string. <br /></td></tr>
+<tr class="separator:aeef78caa145819293d14672537f299f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5608d071cccb81fa5f6840210df332c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5608d071cccb81fa5f6840210df332c9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a5608d071cccb81fa5f6840210df332c9">Variant</a> (char const *val)</td></tr>
+<tr class="memdesc:a5608d071cccb81fa5f6840210df332c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the supplied pointer to a string and stores the string in the <a class="el" href="index.html" title="Simple variant class that can hold an integer, boolean, string, double, dictionary, array or null value. ">Variant</a> instance. <br /></td></tr>
+<tr class="separator:a5608d071cccb81fa5f6840210df332c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92e5f8e75066ce878e267d692a42fd23"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a92e5f8e75066ce878e267d692a42fd23"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Variant</b> (<a class="el" href="../unity.scopes/index.html#ad5d8ccfa11a327fca6f3e4cee11f4c10">VariantMap</a> const &amp;val)</td></tr>
+<tr class="separator:a92e5f8e75066ce878e267d692a42fd23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0ea8a32cdff0b810e0956e62ae4fa17"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0ea8a32cdff0b810e0956e62ae4fa17"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Variant</b> (<a class="el" href="../unity.scopes/index.html#aa3bf32d584efd902bca79698a07dd934">VariantArray</a> const &amp;val)</td></tr>
+<tr class="separator:ad0ea8a32cdff0b810e0956e62ae4fa17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac03ed47f49e4c5f4ec4d4a663fdd3945"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac03ed47f49e4c5f4ec4d4a663fdd3945"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#ac03ed47f49e4c5f4ec4d4a663fdd3945">~Variant</a> ()</td></tr>
+<tr class="memdesc:ac03ed47f49e4c5f4ec4d4a663fdd3945"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
+<tr class="separator:ac03ed47f49e4c5f4ec4d4a663fdd3945"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bd2d5425fdec9af9340c22e3b47ac1c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2bd2d5425fdec9af9340c22e3b47ac1c"></a>
+static <a class="el" href="index.html">Variant</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a2bd2d5425fdec9af9340c22e3b47ac1c">null</a> ()</td></tr>
+<tr class="memdesc:a2bd2d5425fdec9af9340c22e3b47ac1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a null variant. <br /></td></tr>
+<tr class="separator:a2bd2d5425fdec9af9340c22e3b47ac1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Serialization</h2></td></tr>
+<tr class="memitem:a60d63bafa627e24f14c39790573b34db"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60d63bafa627e24f14c39790573b34db"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a60d63bafa627e24f14c39790573b34db">serialize_json</a> () const </td></tr>
+<tr class="memdesc:a60d63bafa627e24f14c39790573b34db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serializes the variant to a JSON encoded string. <br /></td></tr>
+<tr class="separator:a60d63bafa627e24f14c39790573b34db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2defbe2d1601c38c2a2188eb547b44b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa2defbe2d1601c38c2a2188eb547b44b"></a>
+static <a class="el" href="index.html">Variant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#aa2defbe2d1601c38c2a2188eb547b44b">deserialize_json</a> (std::string const &amp;json_string)</td></tr>
+<tr class="memdesc:aa2defbe2d1601c38c2a2188eb547b44b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deserializes a JSON encoded string to a <code><a class="el" href="index.html" title="Simple variant class that can hold an integer, boolean, string, double, dictionary, array or null value. ">Variant</a></code>. <br /></td></tr>
+<tr class="separator:aa2defbe2d1601c38c2a2188eb547b44b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Simple variant class that can hold an integer, boolean, string, double, dictionary, array or null value. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="abcbee9f21657da6ccabff844bb5f472f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool unity::scopes::Variant::is_null </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Test if variant holds null value. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if variant holds null. </dd></dl>
+</div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

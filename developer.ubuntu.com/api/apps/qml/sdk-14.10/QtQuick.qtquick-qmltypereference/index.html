@@ -1,0 +1,778 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Qt Quick QML Types | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a class="sub-nav-item" href="../index.html">SDK 14.10</a> &rsaquo;</li>
+
+<li><a class="sub-nav-item" href="../QtQuick/index.html">QtQuick</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Qt Quick QML Types</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qtquick-qmltypereference.html -->
+	<!-- Source Format: qdoc -->
+<h1>Qt Quick QML Types</h1>
+<div id="page_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$qtquick-qmltypereference.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>The <tt>QtQuick</tt> QML module provides a variety of QML types for creating user interfaces and applications with QML. This page lists every QML type provided by this module, organized according to category and purpose.</p>
+<a name="importing-qtquick"></a><a name="importing-qt-quick"></a>
+<h2>Importing Qt Quick</h2>
+<p>The types provided by the <a href="../QtQuick.qtquick-index/index.html">Qt Quick</a> module are only available in a QML document if that document imports the <tt>QtQuick</tt> namespace.</p>
+<p>The current version of the <tt>QtQuick</tt> module is version 2.2, and thus it may be imported via the following statement:</p>
+<pre class="qml">import QtQuick 2.2</pre>
+<p>See the <a href="../QtQuick.qtquick-index/index.html">Qt Quick</a> module documentation for more information about the concepts which are central to <tt>QtQuick</tt>.</p>
+<a name="submodules"></a>
+<h3>Submodules</h3>
+<p>Qt Quick includes several submodules which contain additional types.</p>
+<ul>
+<li>XML List Model - contains types for creating models from XML data</li>
+<li>Local Storage - a submodule containing a JavaScript interface for an SQLite database</li>
+<li>Particles - provides a particle system for QML applications</li>
+<li>Window - contains types for creating top-level windows and accessing screen information</li>
+<li>Dialogs - contains types for creating and interacting with system dialogs</li>
+<li>Controls - provides a set of reusable UI components</li>
+<li>Layouts - contains types that are used to arrange items in the user interface</li>
+</ul>
+<a name="basic-types"></a><a name="basic-types"></a>
+<h2>Basic Types</h2>
+<p>There are a number of basic types that are supported by default in the QML language.</p>
+<p>In addition, the <tt>QtQuick</tt> module provides the following basic types: <table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p>color</p></td><td class="tblDescr"><p>an ARGB color value.  The color type refers to an ARGB color value. It can be specified in a number of ways:</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p>font</p></td><td class="tblDescr"><p>a font value with the properties of QFont.  The font type refers to a font value with the properties of QFont.</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p>vector2d</p></td><td class="tblDescr"><p>A vector2d type has x and y attributes.</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p>vector3d</p></td><td class="tblDescr"><p>a value with x, y, and z attributes.</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p>vector4d</p></td><td class="tblDescr"><p>A vector4d type has x, y, z and w attributes.</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p>quaternion</p></td><td class="tblDescr"><p>A quaternion type has scalar, x, y, and z attributes.</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p>matrix4x4</p></td><td class="tblDescr"><p>A matrix4x4 type is a 4-row and 4-column matrix</p></td></tr>
+</table>
+ <a name="object-types"></a></p>
+<a name="object-types"></a>
+<h2>Object Types</h2>
+<p>All of the object types provided by <tt>QtQuick</tt> are based on the <a href="../QtQuick.Item/index.html">Item</a> type, which itself derives from QtObject. QML object types provided by the Qt QML module (such as QtObject and Component) are also available when you import <tt>QtQuick</tt>. <a name="visual-types"></a></p>
+<a name="visual-types"></a>
+<h3>Visual Types</h3>
+<ul>
+<li><a href="../QtQuick.Item/index.html">Item</a> - Basic visual object type inherited by visual object types (visual items)</li>
+<li><a href="../QtQuick.Rectangle/index.html">Rectangle</a> - A rectangle type</li>
+<li><a href="../QtQuick.Image/index.html">Image</a> - For incorporating bitmaps into a scene</li>
+<li><a href="../QtQuick.BorderImage/index.html">BorderImage</a> - Allows the use of images as borders</li>
+<li><a href="../QtQuick.AnimatedImage/index.html">AnimatedImage</a> - For playing animations stored as an animated GIF</li>
+<li><a href="../QtQuick.AnimatedSprite/index.html">AnimatedSprite</a> - For playing animations stored as a series of frames</li>
+<li><a href="../QtQuick.SpriteSequence/index.html">SpriteSequence</a> - For playing and transitioning between multiple animations stored as a series of frames</li>
+<li><a href="../QtQuick.Text/index.html">Text</a> - For inserting formatted text into a scene</li>
+<li><a href="../QtQuick.Window.Window/index.html">Window</a> - Provides a top-level window</li>
+</ul>
+<p>Visual Item Utility</p>
+<ul>
+<li><a href="../QtQuick.Accessible/index.html">Accessible</a> - Attached property to make components accessible</li>
+<li><a href="../QtQuick.Gradient/index.html">Gradient</a> - For defining a color gradient</li>
+<li><a href="../QtQuick.GradientStop/index.html">GradientStop</a> - Used to define a color within a <a href="../QtQuick.Gradient/index.html">Gradient</a></li>
+<li><a href="../QtQuick.SystemPalette/index.html">SystemPalette</a> - Provides access to the Qt palettes</li>
+<li><a href="../QtQuick.Window.Screen/index.html">Screen</a> - Provides information about the screen on which an <a href="../QtQuick.Item/index.html">Item</a> is displayed</li>
+<li><a href="../QtQuick.Sprite/index.html">Sprite</a> - Specifies sprite animations for other Items to display</li>
+<li><a href="../QtQuick.FontLoader/index.html">FontLoader</a> - Loads fonts by name or URL</li>
+</ul>
+<p>Visual Item Generation</p>
+<ul>
+<li><a href="../QtQuick.Repeater/index.html">Repeater</a> - Uses a model to create multiple Item instances</li>
+<li><a href="../QtQuick.Loader/index.html">Loader</a> - Eases on-demand loading of Items</li>
+</ul>
+<p>Visual Item Transformations</p>
+<ul>
+<li><a href="../QtQuick.Transform/index.html">Transform</a> - Allows specification of advanced transformations on Items</li>
+<li><a href="../QtQuick.Scale/index.html">Scale</a> - Assigns item scaling behaviors</li>
+<li><a href="../QtQuick.Rotation/index.html">Rotation</a> - Assigns item rotation behaviors</li>
+<li><a href="../QtQuick.Translate/index.html">Translate</a> - Assigns item translation behaviors</li>
+</ul>
+<a name="user-input"></a><a name="user-input"></a>
+<h3>User Input</h3>
+<ul>
+<li><a href="../QtQuick.MouseArea/index.html">MouseArea</a> - Sets up an area for mouse interaction</li>
+<li><a href="../QtQuick.Keys/index.html">Keys</a> - Provides components with attached properties to handle key input.</li>
+<li><a href="../QtQuick.KeyNavigation/index.html">KeyNavigation</a> - Supports key navigation by arrow keys</li>
+<li><a href="../QtQuick.FocusScope/index.html">FocusScope</a> - Mediates keyboard focus changes</li>
+<li><a href="../QtQuick.Flickable/index.html">Flickable</a> - Provides a surface that can be &quot;flicked&quot;</li>
+<li><a href="../QtQuick.PinchArea/index.html">PinchArea</a> - Enables simple pinch gesture handling</li>
+<li><a href="../QtQuick.MultiPointTouchArea/index.html">MultiPointTouchArea</a> - Enables handling of multiple touch points</li>
+<li><a href="../QtQuick.Drag/index.html">Drag</a> - For specifying drag and drop events for visual items</li>
+<li><a href="../QtQuick.DropArea/index.html">DropArea</a> - For specifying drag and drop event handling in an area</li>
+<li><a href="../QtQuick.TextInput/index.html">TextInput</a> - Captures user key input</li>
+<li><a href="../QtQuick.TextEdit/index.html">TextEdit</a> - Displays multiple lines of editable formatted text</li>
+</ul>
+<p>Text Input Utility</p>
+<ul>
+<li><a href="../QtQuick.IntValidator/index.html">IntValidator</a> - Validates values as integers</li>
+<li><a href="../QtQuick.DoubleValidator/index.html">DoubleValidator</a> - Validates real values</li>
+<li><a href="../QtQuick.RegExpValidator/index.html">RegExpValidator</a> - Validator for string regular expressions</li>
+</ul>
+<p>User Input Events</p>
+<ul>
+<li><a href="../QtQuick.TouchPoint/index.html">TouchPoint</a> - Describes a touch point in a <a href="../QtQuick.MultiPointTouchArea/index.html">MultiPointTouchArea</a></li>
+<li><a href="../QtQuick.PinchEvent/index.html">PinchEvent</a> - Specifies information about a pinch event</li>
+<li><a href="../QtQuick.WheelEvent/index.html">WheelEvent</a> - Provides information about a mouse wheel event</li>
+<li><a href="../QtQuick.MouseEvent/index.html">MouseEvent</a> - Provides information about a mouse click event</li>
+<li><a href="../QtQuick.KeyEvent/index.html">KeyEvent</a> - Provides information about a key press event</li>
+<li><a href="../QtQuick.DragEvent/index.html">DragEvent</a> -Provides information about a drag event</li>
+</ul>
+<a name="positioning"></a><a name="positioning"></a>
+<h3>Positioning</h3>
+<ul>
+<li><a href="../QtQuick.Positioner/index.html">Positioner</a> - Attached property which provides information about where an Item has been positioned</li>
+<li><a href="../QtQuick.Column/index.html">Column</a> - Arranges its children vertically</li>
+<li><a href="../QtQuick.Row/index.html">Row</a> - Arranges its children horizontally</li>
+<li><a href="../QtQuick.Grid/index.html">Grid</a> - Positions its children in a grid</li>
+<li><a href="../QtQuick.Flow/index.html">Flow</a> - Positions its children with wrapping support</li>
+<li><a href="../QtQuick.LayoutMirroring/index.html">LayoutMirroring</a> - Attached property used to mirror layout behavior</li>
+</ul>
+<a name="states-transitions-and-animations"></a><a name="states-transitions-and-animations"></a>
+<h3>States, Transitions and Animations</h3>
+<p>States</p>
+<ul>
+<li><a href="../QtQuick.State/index.html">State</a> - Defines sets of configurations of objects and properties</li>
+<li><a href="../QtQuick.PropertyChanges/index.html">PropertyChanges</a> - Describes property changes within a state</li>
+<li><a href="../QtQuick.StateGroup/index.html">StateGroup</a> - Contains a set of states and state transitions</li>
+<li><a href="../QtQuick.StateChangeScript/index.html">StateChangeScript</a> - Allows script binding in a state</li>
+<li><a href="../QtQuick.ParentChange/index.html">ParentChange</a> - Re-parent an Item in a state change</li>
+<li><a href="../QtQuick.AnchorChanges/index.html">AnchorChanges</a> - Change the anchors of an item in a state</li>
+</ul>
+<p>Transitions and Animations</p>
+<ul>
+<li><a href="../QtQuick.Transition/index.html">Transition</a> - Animates transitions during state changes</li>
+<li><a href="../QtQuick.ViewTransition/index.html">ViewTransition</a> - Specifies items under transition in a view</li>
+<li><a href="../QtQuick.SequentialAnimation/index.html">SequentialAnimation</a> - Runs animations sequentially</li>
+<li><a href="../QtQuick.ParallelAnimation/index.html">ParallelAnimation</a> - Runs animations in parallel</li>
+<li><a href="../QtQuick.Behavior/index.html">Behavior</a> - Specifies a default animation for property changes</li>
+<li><a href="../QtQuick.PropertyAction/index.html">PropertyAction</a> - Sets immediate property changes during animation</li>
+<li><a href="../QtQuick.PauseAnimation/index.html">PauseAnimation</a> - Introduces a pause in an animation</li>
+<li><a href="../QtQuick.SmoothedAnimation/index.html">SmoothedAnimation</a> - Allows a property to smoothly track a value</li>
+<li><a href="../QtQuick.SpringAnimation/index.html">SpringAnimation</a> - Allows a property to track a value in a spring-like motion</li>
+<li><a href="../QtQuick.ScriptAction/index.html">ScriptAction</a> - Runs scripts during an animation</li>
+</ul>
+<p>Type-specific Animations</p>
+<ul>
+<li><a href="../QtQuick.PropertyAnimation/index.html">PropertyAnimation</a> - Animates property changes</li>
+<li><a href="../QtQuick.NumberAnimation/index.html">NumberAnimation</a> - Animates properties of type qreal</li>
+<li><a href="../QtQuick.Vector3dAnimation/index.html">Vector3dAnimation</a> - Animates properties of type QVector3d</li>
+<li><a href="../QtQuick.ColorAnimation/index.html">ColorAnimation</a> - Animates color changes</li>
+<li><a href="../QtQuick.RotationAnimation/index.html">RotationAnimation</a> - Animates rotations</li>
+<li><a href="../QtQuick.ParentAnimation/index.html">ParentAnimation</a> - Animates parent changes</li>
+<li><a href="../QtQuick.AnchorAnimation/index.html">AnchorAnimation</a> - Animates anchor changes</li>
+<li><a href="../QtQuick.PathAnimation/index.html">PathAnimation</a> - Animates position along a path</li>
+<li><a href="../QtQuick.XAnimator/index.html">XAnimator</a> - Animates x position asynchronously</li>
+<li><a href="../QtQuick.YAnimator/index.html">YAnimator</a> - Animates y position asynchronously</li>
+<li><a href="../QtQuick.ScaleAnimator/index.html">ScaleAnimator</a> - Animates scale asynchronously</li>
+<li><a href="../QtQuick.RotationAnimator/index.html">RotationAnimator</a> - Animates rotation asynchronously</li>
+<li><a href="../QtQuick.OpacityAnimator/index.html">OpacityAnimator</a> - Animates opacity asynchronously</li>
+<li><a href="../QtQuick.UniformAnimator/index.html">UniformAnimator</a> - Animates a <a href="../QtQuick.ShaderEffect/index.html">ShaderEffect</a> uniform asynchronously</li>
+</ul>
+<p>Lower-level Animation Types</p>
+<ul>
+<li><a href="../QtQuick.PathInterpolator/index.html">PathInterpolator</a> - Allows manual animation along a path</li>
+<li><a href="../QtQuick.AnimationController/index.html">AnimationController</a> - Allows manual control of animation progress</li>
+</ul>
+<p>Animation paths</p>
+<ul>
+<li><a href="../QtQuick.Path/index.html">Path</a> - Defines a path used by <a href="../QtQuick.PathView/index.html">PathView</a></li>
+<li><a href="../QtQuick.PathLine/index.html">PathLine</a> - Defines a line in <a href="../QtQuick.Path/index.html">Path</a></li>
+<li><a href="../QtQuick.PathQuad/index.html">PathQuad</a> - Defines a quadratic Bezier curve in a <a href="../QtQuick.Path/index.html">Path</a></li>
+<li><a href="../QtQuick.PathCubic/index.html">PathCubic</a> - Defines a cubic Bezier curve in a <a href="../QtQuick.Path/index.html">Path</a></li>
+<li><a href="../QtQuick.PathArc/index.html">PathArc</a> - Defines an arc in a <a href="../QtQuick.Path/index.html">Path</a></li>
+<li><a href="../QtQuick.PathCurve/index.html">PathCurve</a> - Defines a point on a Catmull-Rom curve in a <a href="../QtQuick.Path/index.html">Path</a></li>
+<li><a href="../QtQuick.PathSvg/index.html">PathSvg</a> - Defines a sub-path specified as a SVG path data string in a <a href="../QtQuick.Path/index.html">Path</a></li>
+<li><a href="../QtQuick.PathAttribute/index.html">PathAttribute</a> - Allows the setting of attributes along a <a href="../QtQuick.Path/index.html">Path</a></li>
+<li><a href="../QtQuick.PathPercent/index.html">PathPercent</a> - Modifies the item distribution along a <a href="../QtQuick.Path/index.html">Path</a></li>
+</ul>
+<a name="model-view-types-and-data-storage-and-access"></a><a name="model-view-types-and-data-storage-and-access"></a>
+<h3>Model/View Types And Data Storage And Access</h3>
+<p>QML Lists and Models</p>
+<p>The Qt QML Models submodule provides the types for structuring data with models and lists.</p>
+<ul>
+<li><a href="../QtQuick.qtquick-modelviewsdata-modelview/index.html#listmodel">ListModel</a> - Defines a list of data</li>
+<li>ListElement - Defines a data item in a <a href="../QtQuick.qtquick-modelviewsdata-modelview/index.html#listmodel">ListModel</a></li>
+</ul>
+<p>These QML types are part of Qt Quick for backwards compatibility, but for newer applications, Qt QML Models provides the same functionality.</p>
+<ul>
+<li><a href="../QtQuick.qtquick-modelviewsdata-modelview/index.html#visualitemmodel">VisualItemModel</a> - Contains items that already defines its own visual delegate</li>
+<li>VisualDataModel - Encapsulates a model and a delegate</li>
+<li>VisualDataGroup - Encapsulates a filtered set of visual data items</li>
+</ul>
+<p>XML Lists</p>
+<ul>
+<li><a href="../QtQuick.XmlListModel.XmlListModel/index.html">XmlListModel</a> - Specifies a model using XPath expressions</li>
+<li><a href="../QtQuick.XmlListModel.XmlRole/index.html">XmlRole</a> - Specifies a role for an <a href="../QtQuick.XmlListModel.XmlListModel/index.html">XmlListModel</a></li>
+</ul>
+<p>Views</p>
+<ul>
+<li><a href="../QtQuick.ListView/index.html">ListView</a> - Provides a list visualization of a model</li>
+<li><a href="../QtQuick.GridView/index.html">GridView</a> - Provides a grid visualization of a model</li>
+<li><a href="../QtQuick.PathView/index.html">PathView</a> - Visualizes a model's contents along a path. See <a href="../QtQuick.Path/index.html">Path</a> for more information.</li>
+<li>Package - Collection that enables sharing of items within different views</li>
+</ul>
+<p>Data Storage</p>
+<ul>
+<li>QtQuick.LocalStorage 2 - Singleton type providing simplified SQL access</li>
+</ul>
+<a name="graphical-effects"></a><a name="graphical-effects"></a>
+<h3>Graphical Effects</h3>
+<ul>
+<li><a href="../QtQuick.Flipable/index.html">Flipable</a> - Provides a surface that produces &quot;flipping&quot; effects</li>
+<li><a href="../QtQuick.ShaderEffect/index.html">ShaderEffect</a> - Allows GLSL shaders to be used as graphical effects</li>
+<li><a href="../QtQuick.ShaderEffectSource/index.html">ShaderEffectSource</a> - Usable as a texture in <a href="../QtQuick.ShaderEffect/index.html">ShaderEffect</a></li>
+<li><a href="../QtQuick.GridMesh/index.html">GridMesh</a> - Generates a grid mesh of vertices for use by <a href="../QtQuick.ShaderEffect/index.html">ShaderEffect</a></li>
+<li>The QtQuick.Particles 2 module provides a set of Particle System types for Qt Quick 2</li>
+</ul>
+<a name="convenience-types"></a><a name="convenience-types"></a>
+<h3>Convenience Types</h3>
+<ul>
+<li>Connections - Explicitly connects signals and signal handlers</li>
+<li>Binding - Binds any value to any property</li>
+<li>Timer - Provides timed triggers</li>
+<li>WorkerScript - Enables the use of threads in a Qt Quick application</li>
+</ul>
+<a name="canvas-similar-to-html5-canvas"></a><a name="canvas-similar-to-html5-canvas"></a>
+<h3>Canvas (similar to HTML5 canvas)</h3>
+<ul>
+<li><a href="../QtQuick.Canvas/index.html">Canvas</a> - Provides a 2D canvas type similar to the HTML5 canvas</li>
+<li><a href="../QtQuick.Context2D/index.html">Context2D</a> - Provides 2D context for shapes on a Canvas item</li>
+<li><a href="../QtQuick.CanvasGradient/index.html">CanvasGradient</a> - Allows specification of a gradient on a Canvas</li>
+<li><a href="../QtQuick.CanvasPixelArray/index.html">CanvasPixelArray</a> - Allows specification of a pixel array for use in a Canvas</li>
+<li><a href="../QtQuick.CanvasImageData/index.html">CanvasImageData</a> - Allows specification of image data for use in a Canvas</li>
+<li><a href="../QtQuick.TextMetrics/index.html">TextMetrics</a> - Provides text and font measurement data for use in a Canvas</li>
+</ul>
+<a name="qttest-types"></a><a name="qttest-types"></a>
+<h3>QtTest Types</h3>
+<ul>
+<li><a href="../QtTest.TestCase/index.html">TestCase</a> - Represents a unit test case</li>
+<li><a href="../QtTest.SignalSpy/index.html">SignalSpy</a> - Enables introspection of signal emission</li>
+</ul>
+</div>
+<!-- @@@qtquick-qmltypereference.html -->
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

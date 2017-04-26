@@ -1,0 +1,783 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>CannedQuery [sdk-15.04.5/unity.scopes.CannedQuery] | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/doxygen.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Scopes</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">C++</a> &rsaquo;</li>
+<li><a href="../index.html">SDK 15.04.5</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">CannedQuery</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: classunity_1_1scopes_1_1_canned_query.html -->
+	<!-- Source Format: doxygen -->
+<h1>CannedQuery</h1>
+<div id="element_content" class="doxygen">
+<!-- Start Element Content -->
+<p>Parameters of a search query.  
+ <a href="index.html#details">More...</a></p>
+<p><code>#include &lt;unity/scopes/CannedQuery.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a590181347391bcd1115579187fb70995"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a590181347391bcd1115579187fb70995"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a590181347391bcd1115579187fb70995">CannedQuery</a> (std::string const &amp;<a class="el" href="index.html#a406aa5a8fb73a602664e254d8efe25c9">scope_id</a>)</td></tr>
+<tr class="memdesc:a590181347391bcd1115579187fb70995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a query for given scope with empty query string. <br /></td></tr>
+<tr class="separator:a590181347391bcd1115579187fb70995"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeffdaa76040590f874c86d4bfd884afc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeffdaa76040590f874c86d4bfd884afc"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#aeffdaa76040590f874c86d4bfd884afc">CannedQuery</a> (std::string const &amp;<a class="el" href="index.html#a406aa5a8fb73a602664e254d8efe25c9">scope_id</a>, std::string const &amp;query_str, std::string const &amp;<a class="el" href="index.html#a61351960149bb4c0840f020c4e645f66">department_id</a>)</td></tr>
+<tr class="memdesc:aeffdaa76040590f874c86d4bfd884afc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a query for given scope with specific query string and in given department. <br /></td></tr>
+<tr class="separator:aeffdaa76040590f874c86d4bfd884afc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41981f398edaa4d7dc7623b323c952c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41981f398edaa4d7dc7623b323c952c3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a41981f398edaa4d7dc7623b323c952c3">set_department_id</a> (std::string const &amp;dep_id)</td></tr>
+<tr class="memdesc:a41981f398edaa4d7dc7623b323c952c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets or updates the department. <br /></td></tr>
+<tr class="separator:a41981f398edaa4d7dc7623b323c952c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc65fc4671dae0bccaba0aa811d05bc2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc65fc4671dae0bccaba0aa811d05bc2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#acc65fc4671dae0bccaba0aa811d05bc2">set_query_string</a> (std::string const &amp;query_str)</td></tr>
+<tr class="memdesc:acc65fc4671dae0bccaba0aa811d05bc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets or updates the query string. <br /></td></tr>
+<tr class="separator:acc65fc4671dae0bccaba0aa811d05bc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca9bbdc1ff14b20f3e7b04f2584b6a41"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca9bbdc1ff14b20f3e7b04f2584b6a41"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#aca9bbdc1ff14b20f3e7b04f2584b6a41">set_filter_state</a> (<a class="el" href="../unity.scopes.FilterState/index.html">FilterState</a> const &amp;<a class="el" href="index.html#a94eab58b1e02501f49fba55418b043bf">filter_state</a>)</td></tr>
+<tr class="memdesc:aca9bbdc1ff14b20f3e7b04f2584b6a41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets filter state. <br /></td></tr>
+<tr class="separator:aca9bbdc1ff14b20f3e7b04f2584b6a41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a406aa5a8fb73a602664e254d8efe25c9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a406aa5a8fb73a602664e254d8efe25c9">scope_id</a> () const </td></tr>
+<tr class="memdesc:a406aa5a8fb73a602664e254d8efe25c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the scope identifier of this CannedQuery.  More...<br /></td></tr>
+<tr class="separator:a406aa5a8fb73a602664e254d8efe25c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61351960149bb4c0840f020c4e645f66"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a61351960149bb4c0840f020c4e645f66">department_id</a> () const </td></tr>
+<tr class="memdesc:a61351960149bb4c0840f020c4e645f66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the department id of this CannedQuery.  More...<br /></td></tr>
+<tr class="separator:a61351960149bb4c0840f020c4e645f66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29d05795a3255655a5de3754e3dfa73f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a29d05795a3255655a5de3754e3dfa73f">query_string</a> () const </td></tr>
+<tr class="memdesc:a29d05795a3255655a5de3754e3dfa73f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the query string of this CannedQuery.  More...<br /></td></tr>
+<tr class="separator:a29d05795a3255655a5de3754e3dfa73f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a993c2d80b4d3c15b22f58fe6951e8c3d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a993c2d80b4d3c15b22f58fe6951e8c3d">to_uri</a> () const </td></tr>
+<tr class="memdesc:a993c2d80b4d3c15b22f58fe6951e8c3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string representation of this CannedQuery object as a URI using scope:// schema.  More...<br /></td></tr>
+<tr class="separator:a993c2d80b4d3c15b22f58fe6951e8c3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94eab58b1e02501f49fba55418b043bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../unity.scopes.FilterState/index.html">FilterState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a94eab58b1e02501f49fba55418b043bf">filter_state</a> () const </td></tr>
+<tr class="memdesc:a94eab58b1e02501f49fba55418b043bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get state of the filters for this CannedQuery.  More...<br /></td></tr>
+<tr class="separator:a94eab58b1e02501f49fba55418b043bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6799b92d42f8f19116604b0cdd81135f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a6799b92d42f8f19116604b0cdd81135f">set_user_data</a> (<a class="el" href="../unity.scopes.Variant/index.html">Variant</a> const &amp;value)</td></tr>
+<tr class="memdesc:a6799b92d42f8f19116604b0cdd81135f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attach arbitrary data.  More...<br /></td></tr>
+<tr class="separator:a6799b92d42f8f19116604b0cdd81135f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac495aa13c8fa07b623baa7b7795fa214"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#ac495aa13c8fa07b623baa7b7795fa214">has_user_data</a> () const </td></tr>
+<tr class="memdesc:ac495aa13c8fa07b623baa7b7795fa214"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if user data has been attached to this query.  More...<br /></td></tr>
+<tr class="separator:ac495aa13c8fa07b623baa7b7795fa214"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec4f31c9decc1ef1cb58e3ca924fa2f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../unity.scopes.Variant/index.html">Variant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#aec4f31c9decc1ef1cb58e3ca924fa2f1">user_data</a> () const </td></tr>
+<tr class="memdesc:aec4f31c9decc1ef1cb58e3ca924fa2f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get user data attached to this query.  More...<br /></td></tr>
+<tr class="separator:aec4f31c9decc1ef1cb58e3ca924fa2f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Copy and assignment</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Copy and assignment operators (move and non-move versions) have the usual value semantics. </p>
+</div></td></tr>
+<tr class="memitem:a5010b18abe5eb65e0733ae250a03b9b8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5010b18abe5eb65e0733ae250a03b9b8"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CannedQuery</b> (<a class="el" href="index.html">CannedQuery</a> const &amp;other)</td></tr>
+<tr class="separator:a5010b18abe5eb65e0733ae250a03b9b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45495af2b392e76307e706e77d3d3cfe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45495af2b392e76307e706e77d3d3cfe"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CannedQuery</b> (<a class="el" href="index.html">CannedQuery</a> &amp;&amp;)</td></tr>
+<tr class="separator:a45495af2b392e76307e706e77d3d3cfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8b5babe831ccc7e7787b3645a509eed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab8b5babe831ccc7e7787b3645a509eed"></a>
+<a class="el" href="index.html">CannedQuery</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="index.html">CannedQuery</a> const &amp;other)</td></tr>
+<tr class="separator:ab8b5babe831ccc7e7787b3645a509eed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab19c9686b813f23abc6358933b76cd2b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab19c9686b813f23abc6358933b76cd2b"></a>
+<a class="el" href="index.html">CannedQuery</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="index.html">CannedQuery</a> &amp;&amp;)</td></tr>
+<tr class="separator:ab19c9686b813f23abc6358933b76cd2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a30fbeb531d683f6d6c032c703b15a634"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="index.html">CannedQuery</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a30fbeb531d683f6d6c032c703b15a634">from_uri</a> (std::string const &amp;uri)</td></tr>
+<tr class="memdesc:a30fbeb531d683f6d6c032c703b15a634"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recreates a CannedQuery object from a scope:// URI.  More...<br /></td></tr>
+<tr class="separator:a30fbeb531d683f6d6c032c703b15a634"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Parameters of a search query. </p>
+<p>Holds all parameters of a search query: the target scope id, query string, department id, and state of the filters. <a class="el" href="index.html" title="Parameters of a search query. ">CannedQuery</a> can also carry arbitrary data (set by calling <a class="el" href="index.html#a6799b92d42f8f19116604b0cdd81135f" title="Attach arbitrary data. ">CannedQuery::set_user_data(Variant const&amp;)</a>) which can then be retrieved back with <a class="el" href="index.html#aec4f31c9decc1ef1cb58e3ca924fa2f1" title="Get user data attached to this query. ">CannedQuery::user_data()</a> when <a class="el" href="index.html" title="Parameters of a search query. ">CannedQuery</a> object is received in <a class="el" href="../unity.scopes.ScopeBase/index.html#a0e4969ff26dc1d396d74c56d896fd564" title="Called by the scopes runtime when a scope needs to instantiate a query. ">ScopeBase::search</a>. This arbitrary data can be used to store any state-related information that may be useful for the scope when new search request is performed.</p>
+<p>Can be converted to/from scope:// uri schema string. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a61351960149bb4c0840f020c4e645f66"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string unity::scopes::CannedQuery::department_id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the department id of this <a class="el" href="index.html" title="Parameters of a search query. ">CannedQuery</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>The department id. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a94eab58b1e02501f49fba55418b043bf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../unity.scopes.FilterState/index.html">FilterState</a> unity::scopes::CannedQuery::filter_state </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get state of the filters for this <a class="el" href="index.html" title="Parameters of a search query. ">CannedQuery</a>. </p>
+<p>Pass this state to methods of specific filter instances (such as <a class="el" href="../unity.scopes.OptionSelectorFilter/index.html#a3015abeb0439ccd29bd61afa9b7059df" title="Get the active options from a FilterState instance for this filter. ">unity::scopes::OptionSelectorFilter::active_options()</a>)to examine filter state. </p><dl class="section return"><dt>Returns</dt><dd>The state of the filters. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a30fbeb531d683f6d6c032c703b15a634"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="index.html">CannedQuery</a> unity::scopes::CannedQuery::from_uri </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>uri</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Recreates a <a class="el" href="index.html" title="Parameters of a search query. ">CannedQuery</a> object from a scope:// URI. </p>
+<dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="index.html" title="Parameters of a search query. ">CannedQuery</a> instance </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">InvalidArgumentException</td><td>if the URI cannot be parsed. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ac495aa13c8fa07b623baa7b7795fa214"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool unity::scopes::CannedQuery::has_user_data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Checks if user data has been attached to this query. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if data is available. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a29d05795a3255655a5de3754e3dfa73f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string unity::scopes::CannedQuery::query_string </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the query string of this <a class="el" href="index.html" title="Parameters of a search query. ">CannedQuery</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>The query string. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a406aa5a8fb73a602664e254d8efe25c9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string unity::scopes::CannedQuery::scope_id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the scope identifier of this <a class="el" href="index.html" title="Parameters of a search query. ">CannedQuery</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>The scope identifier. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a6799b92d42f8f19116604b0cdd81135f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unity::scopes::CannedQuery::set_user_data </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.Variant/index.html">Variant</a> const &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Attach arbitrary data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Data to attach to this canned query </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a993c2d80b4d3c15b22f58fe6951e8c3d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string unity::scopes::CannedQuery::to_uri </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns a string representation of this <a class="el" href="index.html" title="Parameters of a search query. ">CannedQuery</a> object as a URI using scope:// schema. </p>
+<dl class="section return"><dt>Returns</dt><dd>The URI for the query. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="aec4f31c9decc1ef1cb58e3ca924fa2f1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../unity.scopes.Variant/index.html">Variant</a> unity::scopes::CannedQuery::user_data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get user data attached to this query. </p>
+<dl class="section return"><dt>Returns</dt><dd>Data variant </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">unity::LogicException</td><td>if user data is not available. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

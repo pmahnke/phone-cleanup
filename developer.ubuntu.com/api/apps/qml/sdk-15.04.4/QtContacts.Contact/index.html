@@ -1,0 +1,805 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Contact [sdk-15.04.4/QtContacts.Contact] | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a href="../index.html">SDK 15.04.4</a> &rsaquo;</li>
+
+<li><a href="../QtContacts/index.html">QtContacts</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Contact</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qml-qtcontacts-contact.html -->
+	<!-- Source Format: qdoc -->
+<h1>Contact</h1>
+<div id="element_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$Contact-brief -->
+<p>The Contact element represents an addressbook contact. More...</p>
+<!-- @@@Contact -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import QtContacts 5.0</td></tr></table></div><ul>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#address-prop">address</a></b></b> : Address</li>
+<li class="fn"><b><b><a href="index.html#addresses-prop">addresses</a></b></b> : list&lt;Address&gt;</li>
+<li class="fn"><b><b><a href="index.html#anniversary-prop">anniversary</a></b></b> : Anniversary</li>
+<li class="fn"><b><b><a href="index.html#avatar-prop">avatar</a></b></b> : Avatar</li>
+<li class="fn"><b><b><a href="index.html#birthday-prop">birthday</a></b></b> : Birthday</li>
+<li class="fn"><b><b><a href="index.html#contactDetails-prop">contactDetails</a></b></b> : list&lt;ContactDetail&gt;</li>
+<li class="fn"><b><b><a href="index.html#contactId-prop">contactId</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#displayLabel-prop">displayLabel</a></b></b> : DisplayLabel</li>
+<li class="fn"><b><b><a href="index.html#email-prop">email</a></b></b> : EmailAddress</li>
+<li class="fn"><b><b><a href="index.html#emails-prop">emails</a></b></b> : list&lt;EmailAddress&gt;</li>
+<li class="fn"><b><b><a href="index.html#extendedDetail-prop">extendedDetail</a></b></b> : ExtendedDetail</li>
+<li class="fn"><b><b><a href="index.html#extendedDetails-prop">extendedDetails</a></b></b> : list&lt;ExtendedDetail&gt;</li>
+<li class="fn"><b><b><a href="index.html#family-prop">family</a></b></b> : Family</li>
+<li class="fn"><b><b><a href="index.html#favorite-prop">favorite</a></b></b> : Favorite</li>
+<li class="fn"><b><b><a href="index.html#gender-prop">gender</a></b></b> : Gender</li>
+<li class="fn"><b><b><a href="index.html#geolocation-prop">geolocation</a></b></b> : GeoLocation</li>
+<li class="fn"><b><b><a href="index.html#globalPresence-prop">globalPresence</a></b></b> : GlobalPresence</li>
+<li class="fn"><b><b><a href="index.html#guid-prop">guid</a></b></b> : Guid</li>
+<li class="fn"><b><b><a href="index.html#hobby-prop">hobby</a></b></b> : Hobby</li>
+<li class="fn"><b><b><a href="index.html#manager-prop">manager</a></b></b> : string</li>
+<li class="fn"><b><b><a href="index.html#modified-prop">modified</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#name-prop">name</a></b></b> : Name</li>
+<li class="fn"><b><b><a href="index.html#nickname-prop">nickname</a></b></b> : Nickname</li>
+<li class="fn"><b><b><a href="index.html#note-prop">note</a></b></b> : Note</li>
+<li class="fn"><b><b><a href="index.html#onlineAccount-prop">onlineAccount</a></b></b> : OnlineAccount</li>
+<li class="fn"><b><b><a href="index.html#organization-prop">organization</a></b></b> : Organization</li>
+<li class="fn"><b><b><a href="index.html#organizations-prop">organizations</a></b></b> : list&lt;Organization&gt;</li>
+<li class="fn"><b><b><a href="index.html#phoneNumber-prop">phoneNumber</a></b></b> : PhoneNumber</li>
+<li class="fn"><b><b><a href="index.html#phoneNumbers-prop">phoneNumbers</a></b></b> : list&lt;PhoneNumber&gt;</li>
+<li class="fn"><b><b><a href="index.html#presence-prop">presence</a></b></b> : Presence</li>
+<li class="fn"><b><b><a href="index.html#ringtone-prop">ringtone</a></b></b> : Ringtone</li>
+<li class="fn"><b><b><a href="index.html#syncTarget-prop">syncTarget</a></b></b> : SyncTarget</li>
+<li class="fn"><b><b><a href="index.html#tag-prop">tag</a></b></b> : Tag</li>
+<li class="fn"><b><b><a href="index.html#timestamp-prop">timestamp</a></b></b> : Timestamp</li>
+<li class="fn"><b><b><a href="index.html#type-prop">type</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="index.html#url-prop">url</a></b></b> : Url</li>
+<li class="fn"><b><b><a href="index.html#urls-prop">urls</a></b></b> : list&lt;Url&gt;</li>
+<li class="fn"><b><b><a href="index.html#version-prop">version</a></b></b> : Version</li>
+</ul>
+<a name="methods"></a>
+<h2 id="methods">Methods</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#addDetail-method">addDetail</a></b></b>(detail)</li>
+<li class="fn"><b><b><a href="index.html#clearDetails-method">clearDetails</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#isPreferredDetail-method">isPreferredDetail</a></b></b>(actionName, detail)</li>
+<li class="fn"><b><b><a href="index.html#preferredDetail-method">preferredDetail</a></b></b>(actionName, detail)</li>
+<li class="fn"><b><b><a href="index.html#removeDetail-method">removeDetail</a></b></b>(detail)</li>
+<li class="fn"><b><b><a href="index.html#save-method">save</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#setPreferredDetail-method">setPreferredDetail</a></b></b>(actionName, detail)</li>
+</ul>
+<!-- $$$Contact-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<p>The Contact element is part of the <b>QtContacts</b> module.</p>
+<p>A Contact object has a collection of details (like a name, phone numbers and email addresses). Each detail (which can have multiple fields) is stored in an appropriate subclass of <a href="../QtContacts.ContactDetail/index.html">ContactDetail</a>, and the Contact allows retrieving these details in various ways.</p>
+<p>If some of the contact details are not unique details, all of this type of detail values can be accessed by the property with the name in plural. For example, if there are 3 phone numbers stored in a contact, they can be accessed by contact.<a href="index.html#phoneNumbers-prop">phoneNumbers</a> property, which holds a list of all <a href="../QtContacts.PhoneNumber/index.html">PhoneNumber</a> details. If a contact does not contain a detail of particular type, the value of the corresponding singular property (e.g&#x2e; <a href="index.html#phoneNumber-prop">phoneNumber</a>) in undefined and the plural (e.g&#x2e; <a href="index.html#phoneNumbers-prop">phoneNumbers</a>) is empty. The list of properties which support multiple detail instances depends on the contact engine implementations.</p>
+<p><b>See also </b>QContact.</p>
+<!-- @@@Contact -->
+<h2>Property Documentation</h2>
+<!-- $$$address -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="address-prop"><td class="tblQmlPropNode"><p><a name="address-prop"></a><span class="name">address</span> : <span class="type"><a href="../QtContacts.Address/index.html">Address</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the address detail of the Contact object. In case a contact has several addresses then the first one is returned.</p>
+</div></div><!-- @@@address -->
+<br/>
+<!-- $$$addresses -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="addresses-prop"><td class="tblQmlPropNode"><p><a name="addresses-prop"></a><span class="name">addresses</span> : <span class="type">list</span>&lt;<span class="type"><a href="../QtContacts.Address/index.html">Address</a></span>&gt;</p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the address details of the Contact object.</p>
+</div></div><!-- @@@addresses -->
+<br/>
+<!-- $$$anniversary -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="anniversary-prop"><td class="tblQmlPropNode"><p><a name="anniversary-prop"></a><span class="name">anniversary</span> : <span class="type"><a href="../QtContacts.Anniversary/index.html">Anniversary</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the anniversary detail of the Contact object.</p>
+</div></div><!-- @@@anniversary -->
+<br/>
+<!-- $$$avatar -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="avatar-prop"><td class="tblQmlPropNode"><p><a name="avatar-prop"></a><span class="name">avatar</span> : <span class="type"><a href="../QtContacts.Avatar/index.html">Avatar</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the avatar detail of the Contact object.</p>
+</div></div><!-- @@@avatar -->
+<br/>
+<!-- $$$birthday -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="birthday-prop"><td class="tblQmlPropNode"><p><a name="birthday-prop"></a><span class="name">birthday</span> : <span class="type"><a href="../QtContacts.Birthday/index.html">Birthday</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the birthday detail of the Contact object.</p>
+</div></div><!-- @@@birthday -->
+<br/>
+<!-- $$$contactDetails -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="contactDetails-prop"><td class="tblQmlPropNode"><p><a name="contactDetails-prop"></a><span class="name">contactDetails</span> : <span class="type">list</span>&lt;<span class="type"><a href="../QtContacts.ContactDetail/index.html">ContactDetail</a></span>&gt;</p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the list of all the details that the contact has.</p>
+</div></div><!-- @@@contactDetails -->
+<br/>
+<!-- $$$contactId -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="contactId-prop"><td class="tblQmlPropNode"><p><a name="contactId-prop"></a><span class="name">contactId</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the id of the Contact object. This property is read only.</p>
+</div></div><!-- @@@contactId -->
+<br/>
+<!-- $$$displayLabel -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="displayLabel-prop"><td class="tblQmlPropNode"><p><a name="displayLabel-prop"></a><span class="name">displayLabel</span> : <span class="type"><a href="../QtContacts.DisplayLabel/index.html">DisplayLabel</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the displayLabel detail of the Contact object. display label is the one which gets displayed when a contact is created as per versit doc specs this is a &quot;FN&quot; property</p>
+</div></div><!-- @@@displayLabel -->
+<br/>
+<!-- $$$email -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="email-prop"><td class="tblQmlPropNode"><p><a name="email-prop"></a><span class="name">email</span> : <span class="type"><a href="../QtContacts.EmailAddress/index.html">EmailAddress</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the email address detail of the Contact object. In case a contact has several email addresses then the first one is returned.</p>
+</div></div><!-- @@@email -->
+<br/>
+<!-- $$$emails -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="emails-prop"><td class="tblQmlPropNode"><p><a name="emails-prop"></a><span class="name">emails</span> : <span class="type">list</span>&lt;<span class="type"><a href="../QtContacts.EmailAddress/index.html">EmailAddress</a></span>&gt;</p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the email address details of the Contact object.</p>
+</div></div><!-- @@@emails -->
+<br/>
+<!-- $$$extendedDetail -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="extendedDetail-prop"><td class="tblQmlPropNode"><p><a name="extendedDetail-prop"></a><span class="name">extendedDetail</span> : <span class="type"><a href="../QtContacts.ExtendedDetail/index.html">ExtendedDetail</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the extended detail of the Contact object. In case a contact has several extended details then the first one is returned.</p>
+</div></div><!-- @@@extendedDetail -->
+<br/>
+<!-- $$$extendedDetails -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="extendedDetails-prop"><td class="tblQmlPropNode"><p><a name="extendedDetails-prop"></a><span class="name">extendedDetails</span> : <span class="type">list</span>&lt;<span class="type"><a href="../QtContacts.ExtendedDetail/index.html">ExtendedDetail</a></span>&gt;</p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the extended details of the Contact object.</p>
+</div></div><!-- @@@extendedDetails -->
+<br/>
+<!-- $$$family -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="family-prop"><td class="tblQmlPropNode"><p><a name="family-prop"></a><span class="name">family</span> : <span class="type"><a href="../QtContacts.Family/index.html">Family</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the family detail of the Contact object.</p>
+</div></div><!-- @@@family -->
+<br/>
+<!-- $$$favorite -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="favorite-prop"><td class="tblQmlPropNode"><p><a name="favorite-prop"></a><span class="name">favorite</span> : <span class="type"><a href="../QtContacts.Favorite/index.html">Favorite</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the favorite detail of the Contact object.</p>
+</div></div><!-- @@@favorite -->
+<br/>
+<!-- $$$gender -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="gender-prop"><td class="tblQmlPropNode"><p><a name="gender-prop"></a><span class="name">gender</span> : <span class="type"><a href="../QtContacts.Gender/index.html">Gender</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the gender detail of the Contact object.</p>
+</div></div><!-- @@@gender -->
+<br/>
+<!-- $$$geolocation -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="geolocation-prop"><td class="tblQmlPropNode"><p><a name="geolocation-prop"></a><span class="name">geolocation</span> : <span class="type"><a href="../QtContacts.GeoLocation/index.html">GeoLocation</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the geolocation detail of the Contact object.</p>
+</div></div><!-- @@@geolocation -->
+<br/>
+<!-- $$$globalPresence -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="globalPresence-prop"><td class="tblQmlPropNode"><p><a name="globalPresence-prop"></a><span class="name">globalPresence</span> : <span class="type"><a href="../QtContacts.GlobalPresence/index.html">GlobalPresence</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the globalPresence detail of the Contact object.</p>
+</div></div><!-- @@@globalPresence -->
+<br/>
+<!-- $$$guid -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="guid-prop"><td class="tblQmlPropNode"><p><a name="guid-prop"></a><span class="name">guid</span> : <span class="type"><a href="../QtContacts.Guid/index.html">Guid</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the guid detail of the Contact object.</p>
+</div></div><!-- @@@guid -->
+<br/>
+<!-- $$$hobby -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="hobby-prop"><td class="tblQmlPropNode"><p><a name="hobby-prop"></a><span class="name">hobby</span> : <span class="type"><a href="../QtContacts.Hobby/index.html">Hobby</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the hobby detail of the Contact object.</p>
+</div></div><!-- @@@hobby -->
+<br/>
+<!-- $$$manager -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="manager-prop"><td class="tblQmlPropNode"><p><a name="manager-prop"></a><span class="name">manager</span> : <span class="type">string</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the manager name which the Contact object comes from.</p>
+</div></div><!-- @@@manager -->
+<br/>
+<!-- $$$modified -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="modified-prop"><td class="tblQmlPropNode"><p><a name="modified-prop"></a><span class="name">modified</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the dirty flag of the Contact object. If the Contact has been changed, returns true, otherwise returns false.</p>
+</div></div><!-- @@@modified -->
+<br/>
+<!-- $$$name -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="name-prop"><td class="tblQmlPropNode"><p><a name="name-prop"></a><span class="name">name</span> : <span class="type"><a href="../QtContacts.Name/index.html">Name</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the name detail of the Contact object.</p>
+</div></div><!-- @@@name -->
+<br/>
+<!-- $$$nickname -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="nickname-prop"><td class="tblQmlPropNode"><p><a name="nickname-prop"></a><span class="name">nickname</span> : <span class="type"><a href="../QtContacts.Nickname/index.html">Nickname</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the nickname detail of the Contact object.</p>
+</div></div><!-- @@@nickname -->
+<br/>
+<!-- $$$note -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="note-prop"><td class="tblQmlPropNode"><p><a name="note-prop"></a><span class="name">note</span> : <span class="type"><a href="../QtContacts.Note/index.html">Note</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the note detail of the Contact object.</p>
+</div></div><!-- @@@note -->
+<br/>
+<!-- $$$onlineAccount -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="onlineAccount-prop"><td class="tblQmlPropNode"><p><a name="onlineAccount-prop"></a><span class="name">onlineAccount</span> : <span class="type"><a href="../QtContacts.OnlineAccount/index.html">OnlineAccount</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the onlineAccount detail of the Contact object. In case a contact has several accounts then the first one is returned.</p>
+</div></div><!-- @@@onlineAccount -->
+<br/>
+<!-- $$$organization -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="organization-prop"><td class="tblQmlPropNode"><p><a name="organization-prop"></a><span class="name">organization</span> : <span class="type"><a href="../QtContacts.Organization/index.html">Organization</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the organization detail of the Contact object.</p>
+</div></div><!-- @@@organization -->
+<br/>
+<!-- $$$organizations -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="organizations-prop"><td class="tblQmlPropNode"><p><a name="organizations-prop"></a><span class="name">organizations</span> : <span class="type">list</span>&lt;<span class="type"><a href="../QtContacts.Organization/index.html">Organization</a></span>&gt;</p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the organization details of the Contact object.</p>
+</div></div><!-- @@@organizations -->
+<br/>
+<!-- $$$phoneNumber -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="phoneNumber-prop"><td class="tblQmlPropNode"><p><a name="phoneNumber-prop"></a><span class="name">phoneNumber</span> : <span class="type"><a href="../QtContacts.PhoneNumber/index.html">PhoneNumber</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the phone number detail of the Contact object. In case a contact has several numbers then the first one is returned.</p>
+</div></div><!-- @@@phoneNumber -->
+<br/>
+<!-- $$$phoneNumbers -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="phoneNumbers-prop"><td class="tblQmlPropNode"><p><a name="phoneNumbers-prop"></a><span class="name">phoneNumbers</span> : <span class="type">list</span>&lt;<span class="type"><a href="../QtContacts.PhoneNumber/index.html">PhoneNumber</a></span>&gt;</p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the phone number details of the Contact object.</p>
+</div></div><!-- @@@phoneNumbers -->
+<br/>
+<!-- $$$presence -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="presence-prop"><td class="tblQmlPropNode"><p><a name="presence-prop"></a><span class="name">presence</span> : <span class="type"><a href="../QtContacts.Presence/index.html">Presence</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the presence detail of the Contact object.</p>
+</div></div><!-- @@@presence -->
+<br/>
+<!-- $$$ringtone -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="ringtone-prop"><td class="tblQmlPropNode"><p><a name="ringtone-prop"></a><span class="name">ringtone</span> : <span class="type"><a href="../QtContacts.Ringtone/index.html">Ringtone</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the ringtone detail of the Contact object.</p>
+</div></div><!-- @@@ringtone -->
+<br/>
+<!-- $$$syncTarget -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="syncTarget-prop"><td class="tblQmlPropNode"><p><a name="syncTarget-prop"></a><span class="name">syncTarget</span> : <span class="type"><a href="../QtContacts.SyncTarget/index.html">SyncTarget</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the syncTarget detail of the Contact object.</p>
+</div></div><!-- @@@syncTarget -->
+<br/>
+<!-- $$$tag -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="tag-prop"><td class="tblQmlPropNode"><p><a name="tag-prop"></a><span class="name">tag</span> : <span class="type"><a href="../QtContacts.Tag/index.html">Tag</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the tag detail of the Contact object.</p>
+</div></div><!-- @@@tag -->
+<br/>
+<!-- $$$timestamp -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="timestamp-prop"><td class="tblQmlPropNode"><p><a name="timestamp-prop"></a><span class="name">timestamp</span> : <span class="type"><a href="../QtContacts.Timestamp/index.html">Timestamp</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the timestamp detail of the Contact object.</p>
+</div></div><!-- @@@timestamp -->
+<br/>
+<!-- $$$type -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="type-prop"><td class="tblQmlPropNode"><p><a name="type-prop"></a><span class="name">type</span> : <span class="type">enumeration</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds type of the Contact, the value can be one of:</p>
+<ul>
+<li>Contact.Contact</li>
+<li>Contact.Group</li>
+</ul>
+</div></div><!-- @@@type -->
+<br/>
+<!-- $$$url -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="url-prop"><td class="tblQmlPropNode"><p><a name="url-prop"></a><span class="name">url</span> : <span class="type"><a href="../QtContacts.Url/index.html">Url</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the url detail of the Contact object.</p>
+</div></div><!-- @@@url -->
+<br/>
+<!-- $$$urls -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="urls-prop"><td class="tblQmlPropNode"><p><a name="urls-prop"></a><span class="name">urls</span> : <span class="type">list</span>&lt;<span class="type"><a href="../QtContacts.Url/index.html">Url</a></span>&gt;</p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the url details of the Contact object.</p>
+</div></div><!-- @@@urls -->
+<br/>
+<!-- $$$version -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="version-prop"><td class="tblQmlPropNode"><p><a name="version-prop"></a><span class="name">version</span> : <span class="type">Version</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the version detail of the Contact object.</p>
+</div></div><!-- @@@version -->
+<br/>
+<h2>Method Documentation</h2>
+<!-- $$$addDetail -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="addDetail-method"><td class="tblQmlFuncNode"><p><a name="addDetail-method"></a><span class="name">addDetail</span>(<span class="type">detail</span>)</p></td></tr></table></div></div><div class="qmldoc"><p>Adds the given contact <i>detail</i> to the contact, returns true if successful, otherwise returns false.</p>
+<p>Note: If the <i>detail</i> has been added into the same contact before, this operation will be ignored, so if you want to add a <i>detail</i> multiple times, the <i>detail</i> should be copied before calling this function.</p>
+</div></div><!-- @@@addDetail -->
+<br/>
+<!-- $$$clearDetails -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="clearDetails-method"><td class="tblQmlFuncNode"><p><a name="clearDetails-method"></a><span class="name">clearDetails</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Remove all detail objects in this contact.</p>
+</div></div><!-- @@@clearDetails -->
+<br/>
+<!-- $$$isPreferredDetail -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="isPreferredDetail-method"><td class="tblQmlFuncNode"><p><a name="isPreferredDetail-method"></a><span class="name">isPreferredDetail</span>(<span class="type">actionName</span>, <span class="type">detail</span>)</p></td></tr></table></div></div><div class="qmldoc"><p>Returns true if the given <i>detail</i> is a preferred detail for the given <i>actionName</i>, or for any action if the <i>actionName</i> is empty.</p>
+<p><b>See also </b><a href="index.html#preferredDetail-method">preferredDetail()</a>.</p>
+</div></div><!-- @@@isPreferredDetail -->
+<br/>
+<!-- $$$preferredDetail -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="preferredDetail-method"><td class="tblQmlFuncNode"><p><a name="preferredDetail-method"></a><span class="name">preferredDetail</span>(<span class="type">actionName</span>, <span class="type">detail</span>)</p></td></tr></table></div></div><div class="qmldoc"><p>Returns the preferred detail for a given <i>actionName</i>.</p>
+<p>If the <i>actionName</i> is empty, or there is no preference recorded for the supplied <i>actionName</i>, returns null.</p>
+<p><b>See also </b>preferredDetails().</p>
+</div></div><!-- @@@preferredDetail -->
+<br/>
+<!-- $$$removeDetail -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="removeDetail-method"><td class="tblQmlFuncNode"><p><a name="removeDetail-method"></a><span class="name">removeDetail</span>(<span class="type">detail</span>)</p></td></tr></table></div></div><div class="qmldoc"><p>Removes the given contact <i>detail</i> from the contact, returns true if successful, otherwise returns false.</p>
+</div></div><!-- @@@removeDetail -->
+<br/>
+<!-- $$$save -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="save-method"><td class="tblQmlFuncNode"><p><a name="save-method"></a><span class="name">save</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Saves this Contact if the contact has been modified.</p>
+<p><b>See also </b><a href="index.html#modified-prop">Contact::modified</a>.</p>
+</div></div><!-- @@@save -->
+<br/>
+<!-- $$$setPreferredDetail -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="setPreferredDetail-method"><td class="tblQmlFuncNode"><p><a name="setPreferredDetail-method"></a><span class="name">setPreferredDetail</span>(<span class="type">actionName</span>, <span class="type">detail</span>)</p></td></tr></table></div></div><div class="qmldoc"><p>Set a particular detail (<i>preferredDetail</i>) as the preferred detail for any actions with the given <i>actionName</i>.</p>
+<p>The <i>preferredDetail</i> object must exist in this object, and the <i>actionName</i> cannot be empty.</p>
+<p>Returns true if the preference could be recorded, and false otherwise.</p>
+<p><b>See also </b><a href="index.html#preferredDetail-method">preferredDetail()</a>.</p>
+</div></div><!-- @@@setPreferredDetail -->
+<br/>
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

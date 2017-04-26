@@ -1,0 +1,833 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Mouse [sdk-15.04.1/Ubuntu.Components.Mouse] | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a href="../index.html">SDK 15.04.1</a> &rsaquo;</li>
+
+<li><a href="../Ubuntu.Components/index.html">Ubuntu.Components</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Mouse</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qml-ubuntu-components-mouse.html -->
+	<!-- Source Format: qdoc -->
+<h1>Mouse</h1>
+<div id="element_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$Mouse-brief -->
+<p>Attached property filtering mouse events occured inside the owner. More...</p>
+<!-- @@@Mouse -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import Ubuntu.Components 1.3</td></tr></table></div><ul>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#acceptedButtons-prop">acceptedButtons</a></b></b> : Qt::MouseButtons</li>
+<li class="fn"><b><b><a href="index.html#clickAndHoldThreshold-prop">clickAndHoldThreshold</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#enabled-prop">enabled</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#forwardTo-prop">forwardTo</a></b></b> : list&lt;Item&gt;</li>
+<li class="fn"><b><b><a href="index.html#hoverEnabled-prop">hoverEnabled</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#ignoreSynthesizedEvents-prop">ignoreSynthesizedEvents</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#priority-prop">priority</a></b></b> : enumeration</li>
+</ul>
+<a name="signals"></a>
+<h2 id="signals">Signals</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#onClicked-signal">onClicked</a></b></b>(MouseEvent <i>event</i>)</li>
+<li class="fn"><b><b><a href="index.html#onDoubleClicked-signal">onDoubleClicked</a></b></b>(MouseEvent <i>event</i>)</li>
+<li class="fn"><b><b><a href="index.html#onEntered-signal">onEntered</a></b></b>(MouseEvent <i>event</i>)</li>
+<li class="fn"><b><b><a href="index.html#onExited-signal">onExited</a></b></b>(MouseEvent <i>event</i>)</li>
+<li class="fn"><b><b><a href="index.html#onPositionChanged-signal">onPositionChanged</a></b></b>(MouseEvent <i>event</i>)</li>
+<li class="fn"><b><b><a href="index.html#onPressAndHold-signal">onPressAndHold</a></b></b>(MouseEvent <i>event</i>)</li>
+<li class="fn"><b><b><a href="index.html#onPressed-signal">onPressed</a></b></b>(MouseEvent <i>event</i>, Item <i>host</i>)</li>
+<li class="fn"><b><b><a href="index.html#onReleased-signal">onReleased</a></b></b>(MouseEvent <i>event</i>)</li>
+</ul>
+<!-- $$$Mouse-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<p>Sometimes we need to provide additional functionality on mouse events beside a QML element's default behavior. Placing a <a href="../../sdk-14.10/QtQuick.MouseArea/index.html">MouseArea</a> over a component however will grab the mouse events from the component underneath, no matter if we set <i>preventStealing</i> to false or not. Setting mouse.accepted to false in <i>onPressed</i> would result in having the event forwarded to the <a href="../../sdk-14.10/QtQuick.MouseArea/index.html">MouseArea</a>'s parent, however <a href="../../sdk-14.10/QtQuick.MouseArea/index.html">MouseArea</a> will no longer receive other mouse events.</p>
+<pre class="qml">import QtQuick 2.4
+<span class="type"><a href="../../sdk-14.10/QtQuick.TextInput/index.html">TextInput</a></span> {
+    <span class="name">width</span>: <span class="number">100</span>
+    <span class="name">height</span>: <span class="number">20</span>
+    <span class="type"><a href="../../sdk-14.10/QtQuick.MouseArea/index.html">MouseArea</a></span> {
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">preventStealing</span>: <span class="number">false</span>
+        <span class="comment">// do not accept event so it gets propagated to the parent item</span>
+        <span class="name">onPressed</span>: <span class="name">mouse</span>.<span class="name">accepted</span> <span class="operator">=</span> <span class="number">false</span>;
+        <span class="name">onReleased</span>: <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;this will not be printed&quot;</span>)
+    }
+}</pre>
+<p>Ubuntu UI Toolkit declares filter components similar to Keys, which can be attached to any visual primitve. Mouse filter however will have effect only when attached to items handling mouse events. Events are handled through signals, where the event data is presented through the <i>mouse</i> parameter. Events should be accepted if the propagation of those to the owner is not wanted. This is not valid to <a href="index.html#onClicked-signal">onClicked</a>, <a href="index.html#onPressAndHold-signal">onPressAndHold</a> composed events.</p>
+<p>The previous code sample using Mouse filter, which will print the pressed and released mouse buttons would look as follows:</p>
+<pre class="qml">import QtQuick 2.4
+import Ubuntu.Components 1.2
+<span class="type"><a href="../../sdk-14.10/QtQuick.TextInput/index.html">TextInput</a></span> {
+    <span class="name">width</span>: <span class="number">100</span>
+    <span class="name">height</span>: <span class="number">20</span>
+    <span class="comment">// do not accept event so it gets propagated to the parent item</span>
+    <span class="name">Mouse</span>.onPressed: <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;mouse button pressed: &quot;</span> <span class="operator">+</span> <span class="name">mouse</span>.<span class="name">button</span>)
+    <span class="name">Mouse</span>.onReleased: <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;mouse button released: &quot;</span> <span class="operator">+</span> <span class="name">mouse</span>.<span class="name">button</span>)
+}</pre>
+<p>The event details are reported in the <i>mouse</i> parameter, of <a href="../../sdk-14.10/QtQuick.MouseEvent/index.html">MouseEvent</a> type, which extends <a href="http://doc.qt.io/qt-5/qtquick-qmlmodule.html">QtQuick</a>'s <a href="../../sdk-14.10/QtQuick.MouseEvent/index.html">MouseEvent</a> with additional properties.</p>
+<p>The filter will accept the same mouse buttons the owner accepts, and will accept hover events if the owner does. However it is not possible to alter these settings through the filter. If button handling other than the default ones specified for the primitive is required, MouseAreas can be declared to handle those events.</p>
+<p>Example of handling right button clicks over a <a href="../../sdk-14.10/QtQuick.TextInput/index.html">TextInput</a>:</p>
+<pre class="qml">import QtQuick 2.4
+import Ubuntu.Components 1.2
+<span class="type"><a href="../../sdk-14.10/QtQuick.TextInput/index.html">TextInput</a></span> {
+    <span class="name">width</span>: <span class="number">100</span>
+    <span class="name">height</span>: <span class="number">20</span>
+    <span class="type"><a href="../../sdk-14.10/QtQuick.MouseArea/index.html">MouseArea</a></span> {
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">acceptedButtons</span>: <span class="name">Qt</span>.<span class="name">RightButton</span>
+        <span class="name">onClicked</span>: <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;right button clicked&quot;</span>)
+    }
+}</pre>
+<p>In this example left and middle mouse button clicks will reach <a href="../../sdk-14.10/QtQuick.TextInput/index.html">TextInput</a> as <a href="../../sdk-14.10/QtQuick.MouseArea/index.html">MouseArea</a> only grabs right button events.</p>
+<p>Mouse filter can be used in combination with <a href="../../sdk-14.10/QtQuick.MouseArea/index.html">MouseArea</a>, where the filter brings additional functionality on top of existing primitive functionality, and <a href="../../sdk-14.10/QtQuick.MouseArea/index.html">MouseArea</a> add new functionality to the primitive.</p>
+<pre class="qml">import QtQuick 2.4
+import Ubuntu.Components 1.2
+<span class="type"><a href="../../sdk-14.10/QtQuick.TextInput/index.html">TextInput</a></span> {
+    <span class="name">width</span>: <span class="number">100</span>
+    <span class="name">height</span>: <span class="number">20</span>
+    <span class="comment">// do not accept event so it gets propagated to the parent item</span>
+    <span class="name">Mouse</span>.onPressed: {
+        <span class="keyword">if</span> (<span class="name">mouse</span>.<span class="name">button</span> <span class="operator">===</span> <span class="name">Qt</span>.<span class="name">LeftButton</span>) {
+            <span class="comment">// do something</span>
+        }
+    }
+    <span class="type"><a href="../../sdk-14.10/QtQuick.MouseArea/index.html">MouseArea</a></span> {
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">acceptedButtons</span>: <span class="name">Qt</span>.<span class="name">RightButton</span>
+        <span class="name">Mouse</span>.onPressed: <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;right button clicked&quot;</span>)
+    }
+}</pre>
+<p>As mentioned, mouse filters can be attached to any visual item. Attaching it to items that do not handle any mouse events will not have any effect. However child items which handle mouse events can forward the events they handle to their parent. In this way mouse events will land in these items too, and mouse filter attached to those can also handle the event. This is useful when creating custom types where the mouse handling item is nested into a non-mouse handling one, and we want to provide additional filtering possibility to the user. These type of items are called proxy handlers.</p>
+<pre class="qml"><span class="type"><a href="../../sdk-14.10/QtQuick.Item/index.html">Item</a></span> {
+    <span class="name">id</span>: <span class="name">top</span>
+    <span class="name">width</span>: <span class="number">100</span>
+    <span class="name">height</span>: <span class="number">50</span>
+    <span class="name">Mouse</span>.onPressed: <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;mouse received from input&quot;</span>)
+    <span class="type">TextItem</span> {
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">Mouse</span>.forvardTo: [<span class="name">top</span>]
+        <span class="name">Mouse</span>.onPressed: <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;pressed over input&quot;</span>)
+        <span class="name">Mouse</span>.onPressAndHold: <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;longpress handled here&quot;</span>)
+    }
+}</pre>
+<p>In this example the mouse press is first handled by the mouse filter attached to <a href="../../sdk-14.10/QtQuick.TextInput/index.html">TextInput</a>, then it is forwarded to the top item and finally to the <a href="../../sdk-14.10/QtQuick.TextInput/index.html">TextInput</a>. Accepting the mouse event will stop propagation to the top item as well as to the <a href="../../sdk-14.10/QtQuick.TextInput/index.html">TextInput</a>. The topmost item itself does not handle mouse events, therefore it will be a sinple proxy handler item. However, proxies can themself handle mouse events. Therefore each mouse event signal has the <i>host</i> parameter specifying the sender of the mouse event reported.</p>
+<p><b>Note: </b>The forwarded events are handled in the proxy handlers only if the mouse position points inside their area. If the forwarded mouse position falls outside the target area, the event will not be reported, however will be forwarded further to the items in the list. In the following example the mouse press in red rectangle will be printed as well as the proxied mouse press from the main item.</p><pre class="qml">import QtQuick 2.4
+import Ubuntu.Components 1.2
+<span class="type"><a href="../../sdk-14.10/QtQuick.Item/index.html">Item</a></span> {
+    <span class="name">id</span>: <span class="name">main</span>
+    <span class="name">width</span>: <span class="name">units</span>.<span class="name">gu</span>(<span class="number">40</span>)
+    <span class="name">height</span>: <span class="name">units</span>.<span class="name">gu</span>(<span class="number">71</span>)
+    <span class="name">Mouse</span>.onPressed: <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;got the mouse press forwarded by &quot;</span> <span class="operator">+</span> <span class="name">host</span>.<span class="name">objectName</span>)
+    <span class="type"><a href="../../sdk-14.10/QtQuick.Column/index.html">Column</a></span> {
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">spacing</span>: <span class="name">units</span>.<span class="name">gu</span>(<span class="number">1</span>)
+        <span class="type"><a href="../../sdk-14.10/QtQuick.Rectangle/index.html">Rectangle</a></span> {
+            <span class="name">id</span>: <span class="name">blueRect</span>
+            <span class="name">objectName</span>: <span class="string">&quot;BlueRect&quot;</span>
+            <span class="name">width</span>: <span class="name">parent</span>.<span class="name">width</span>
+            <span class="name">height</span>: <span class="name">units</span>.<span class="name">gu</span>(<span class="number">20</span>)
+            <span class="name">color</span>: <span class="string">&quot;blue&quot;</span>
+            <span class="name">Mouse</span>.forwardTo: [<span class="name">main</span>]
+            <span class="name">Mouse</span>.onPressed: <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;This should not be printed&quot;</span>)
+        }
+        <span class="type"><a href="../../sdk-14.10/QtQuick.Rectangle/index.html">Rectangle</a></span> {
+            <span class="name">objectName</span>: <span class="string">&quot;RedRect&quot;</span>
+            <span class="name">width</span>: <span class="name">parent</span>.<span class="name">width</span>
+            <span class="name">height</span>: <span class="name">units</span>.<span class="name">gu</span>(<span class="number">20</span>)
+            <span class="name">color</span>: <span class="string">&quot;red&quot;</span>
+            <span class="type"><a href="../../sdk-14.10/QtQuick.MouseArea/index.html">MouseArea</a></span> {
+                <span class="name">anchors</span>.fill: <span class="name">parent</span>
+                <span class="name">Mouse</span>.forwardTo: [<span class="name">blueRect</span>]
+                <span class="name">Mouse</span>.onPressed: <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;Pressed in &quot;</span> <span class="operator">+</span> <span class="name">host</span>.<span class="name">objectName</span>)
+            }
+        }
+    }
+}</pre>
+<p>An interesting feature that can be achieved using Mouse filter is the event &quot;transparency&quot; towards the <a href="../../sdk-14.10/QtQuick.MouseArea/index.html">MouseArea</a> lying behind the items which handle mouse events. This means for example that by forwarding mouse events occurred on a <a href="../../sdk-14.10/QtQuick.TextInput/index.html">TextInput</a> to a <a href="../../sdk-14.10/QtQuick.MouseArea/index.html">MouseArea</a> that stays behind it in the item hierarchy, the <a href="../../sdk-14.10/QtQuick.MouseArea/index.html">MouseArea</a> will also get all the events occurred on the area covered by the <a href="../../sdk-14.10/QtQuick.TextInput/index.html">TextInput</a>, acting like it would be above the <a href="../../sdk-14.10/QtQuick.TextInput/index.html">TextInput</a>. However, due to the nature of the <a href="../../sdk-14.10/QtQuick.MouseArea/index.html">MouseArea</a> event acceptance policy (all events are accepted by default) <a href="../../sdk-14.10/QtQuick.TextInput/index.html">TextInput</a> will not get these mouse events unless we set the <i>accepted</i> field of the mouse event to false in <a href="../../sdk-14.10/QtQuick.MouseArea/index.html">MouseArea</a>. This normally leads to the <a href="../../sdk-14.10/QtQuick.MouseArea/index.html">MouseArea</a> no longer getting further mouse events. However, Mouse filter will continue to forward other mouse events to the <a href="../../sdk-14.10/QtQuick.MouseArea/index.html">MouseArea</a>, so setting <i>accepted</i> to false in <i>onPressed</i>, <i>onReleased</i> will not have the default effect. This is only valid to press and release events, double-click or mouse position change will be blocked by the <a href="../../sdk-14.10/QtQuick.MouseArea/index.html">MouseArea</a> still.</p>
+<pre class="qml">import QtQuick 2.4
+import Ubuntu.Components 1.2
+<span class="type"><a href="../../sdk-14.10/QtQuick.MouseArea/index.html">MouseArea</a></span> {
+    <span class="name">id</span>: <span class="name">topArea</span>
+    <span class="name">width</span>: <span class="name">units</span>.<span class="name">gu</span>(<span class="number">50</span>)
+    <span class="name">height</span>: <span class="name">units</span>.<span class="name">gu</span>(<span class="number">10</span>)
+    <span class="name">onPressed</span>: {
+        <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;forwarded pressed&quot;</span>)
+        <span class="name">mouse</span>.<span class="name">accepted</span> <span class="operator">=</span> <span class="number">false</span>
+    }
+    <span class="name">onReleased</span>: {
+        <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;released&quot;</span>)
+        <span class="name">mouse</span>.<span class="name">accepted</span> <span class="operator">=</span> <span class="number">false</span>
+    }
+    <span class="type"><a href="../../sdk-14.10/QtQuick.TextInput/index.html">TextInput</a></span> {
+        <span class="name">width</span>: <span class="name">units</span>.<span class="name">gu</span>(<span class="number">40</span>)
+        <span class="name">height</span>: <span class="name">units</span>.<span class="name">gu</span>(<span class="number">5</span>)
+        <span class="name">anchors</span>.centerIn: <span class="name">parent</span>
+        <span class="name">Mouse</span>.forwardTo: [<span class="name">topArea</span>]
+        <span class="name">Mouse</span>.onPressed: <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;input pressed&quot;</span>)
+        <span class="name">Mouse</span>.onReleased: <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;input released&quot;</span>)
+    }
+}</pre>
+<p>Mouse filter provides ability to control the order of the event dispatching. The filter can receive the events prior the owner or after the owner. This can be controlled through the <a href="index.html#priority-prop">priority</a> property. In the following example we make sure the <a href="../../sdk-14.10/QtQuick.TextInput/index.html">TextInput</a> always receives the events before the filter:</p>
+<pre class="qml">import QtQuick 2.4
+import Ubuntu.Components 1.2
+<span class="type"><a href="../../sdk-14.10/QtQuick.TextInput/index.html">TextInput</a></span> {
+    <span class="name">id</span>: <span class="name">input</span>
+    <span class="name">width</span>: <span class="name">units</span>.<span class="name">gu</span>(<span class="number">40</span>)
+    <span class="name">height</span>: <span class="name">units</span>.<span class="name">gu</span>(<span class="number">5</span>)
+    <span class="name">activeFocusOnPress</span>: <span class="number">true</span>
+    <span class="name">Mouse</span>.prority: <span class="name">Mouse</span>.<span class="name">AfterItem</span>
+    <span class="name">Mouse</span>.onPressed: <span class="keyword">if</span> (<span class="name">input</span>.<span class="name">activeFocus</span>) <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;Text input already handled it&quot;</span>)
+}</pre>
+<p>Another feature of the mouse filters is the ability to restrict when the composed events like <a href="index.html#onClicked-signal">onClicked</a> and <a href="index.html#onPressAndHold-signal">onPressAndHold</a> should be triggered. By default these events are triggered no matter what is the distance between the mouse pressed position and the current position after a certain timeout (for <a href="index.html#onPressAndHold-signal">onPressAndHold</a>) or upon mouse release (for <a href="index.html#onClicked-signal">onClicked</a>). In this way the <a href="index.html#onClicked-signal">onClicked</a> will be emitted even if the user presses the mouse at the left-top edge of the component, then moves it to the right-bottom corner and releases it. This may not be the preferred behavior on certain components (like <a href="../../sdk-14.10/QtQuick.TextInput/index.html">TextInput</a>). Therefore MouseFilter provides a property which can alter this behavior, the <a href="index.html#clickAndHoldThreshold-prop">clickAndHoldThreshold</a>. This property specifies the radius of the area the up-mentioned composed events are emitted during a mouse move.</p>
+<pre class="qml">import QtQuick 2.4
+import Ubuntu.Components 1.2
+<span class="type"><a href="../../sdk-14.10/QtQuick.TextInput/index.html">TextInput</a></span> {
+    <span class="name">width</span>: <span class="name">units</span>.<span class="name">gu</span>(<span class="number">40</span>)
+    <span class="name">height</span>: <span class="name">units</span>.<span class="name">gu</span>(<span class="number">5</span>)
+    <span class="name">activeFocusOnPress</span>: <span class="number">true</span>
+    <span class="name">selectByMouse</span>: <span class="number">true</span>
+    <span class="comment">// emit composed events only if the mouse moves within 2 GU radius area</span>
+    <span class="name">Mouse</span>.clickAndHoldThreshold: <span class="name">units</span>.<span class="name">gu</span>(<span class="number">2</span>)
+    <span class="name">Mouse</span>.onClicked: <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;click happened within threshold value&quot;</span>)
+    <span class="name">Mouse</span>.onPressAndHold: <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;pressAndHold happened within threshold value&quot;</span>)
+}</pre>
+<p>Similar functionality for the case when the mouse event occurs outside of the owner is brought by the <a href="../Ubuntu.Components.InverseMouse/index.html">InverseMouse</a> attached property.</p>
+<a name="mouse-events-synthesis"></a>
+<h2 id="mouse-events-synthesis">Mouse events synthesis</h2>
+<p><a href="http://doc.qt.io/qt-5/qtquick-qmlmodule.html">QtQuick</a> automatically creates artificial mouse events whenever a scene receives touch events that are not consumed by any item (either by using <a href="../../sdk-14.10/QtQuick.MultiPointTouchArea/index.html">MultiPointTouchArea</a> or a custom C++ item). The Mouse filter provides the possibility to ignore synthesized mouse events by enabling the <a href="index.html#ignoreSynthesizedEvents-prop">ignoreSynthesizedEvents</a> property.</p>
+<p>This is really useful when, while developing a convergent application, the app developer wants to avoid triggering the hovering logic using a touchscreen, but still be able to handle the hover events when using a mouse, and at the same time doesn't want to stop the mouse and touch events from propagating to items underneath the <a href="../../sdk-14.10/QtQuick.MouseArea/index.html">MouseArea</a> which handles the hovering. The following is an example of how that functionaly can be implemented:</p>
+<pre class="qml"> <span class="type"><a href="../../sdk-14.10/QtQuick.MouseArea/index.html">MouseArea</a></span> {
+     <span class="name">id</span>: <span class="name">proximityArea</span>
+     <span class="name">anchors</span>.fill: <span class="name">parent</span>
+     <span class="name">propagateComposedEvents</span>: <span class="number">true</span>
+     <span class="name">hoverEnabled</span>: <span class="number">true</span>
+     <span class="comment">//We use a separate variable to detect whether the area contains</span>
+     <span class="comment">//a mouse, because MouseArea's containsMouse is true even when</span>
+     <span class="comment">//tapping on it using a touchscreen (due to the touch events being</span>
+     <span class="comment">//converted to mouse events if no item consumes them).</span>
+     property <span class="type">bool</span> <span class="name">containsPointerDevice</span>: <span class="number">false</span>
+     <span class="comment">//handle hover events using the Mouse filter instead of MouseArea, so that</span>
+     <span class="comment">//we can ignore synthesized mouse events and not trigger hover logic when the</span>
+     <span class="comment">//user is interacting with the app using a touch device.</span>
+     <span class="name">Mouse</span>.ignoreSynthesizedEvents: <span class="number">true</span>
+     <span class="name">Mouse</span>.onEntered: {
+         <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;ONLY A MOUSE CAN TRIGGER THIS SLOT&quot;</span>)
+         <span class="name">proximityArea</span>.<span class="name">containsPointerDevice</span> <span class="operator">=</span> <span class="number">true</span>
+     }
+     <span class="name">Mouse</span>.onExited: <span class="name">proximityArea</span>.<span class="name">containsPointerDevice</span> <span class="operator">=</span> <span class="number">false</span>
+     <span class="comment">//let mouse and touch events propagate underneath the mouse area</span>
+     <span class="name">onPressed</span>: <span class="name">mouse</span>.<span class="name">accepted</span> <span class="operator">=</span> <span class="number">false</span>
+ }</pre>
+<!-- @@@Mouse -->
+<h2>Property Documentation</h2>
+<!-- $$$acceptedButtons -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="acceptedButtons-prop"><td class="tblQmlPropNode"><p><a name="acceptedButtons-prop"></a><span class="qmlreadonly">read-only</span><span class="name">acceptedButtons</span> : <span class="type">Qt::MouseButtons</span></p></td></tr></table></div></div><div class="qmldoc"><p>The property holds the accepted mouse buttons of the owner.</p>
+</div></div><!-- @@@acceptedButtons -->
+<br/>
+<!-- $$$clickAndHoldThreshold -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="clickAndHoldThreshold-prop"><td class="tblQmlPropNode"><p><a name="clickAndHoldThreshold-prop"></a><span class="name">clickAndHoldThreshold</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>The property holds the radius of the tolerance area the mouse can move in both x and y axis when the mouse is pressed, during which the composed events such as <a href="index.html#onClicked-signal">onClicked</a> and <a href="index.html#onPressAndHold-signal">onPressAndHold</a> will still be emitted. If the mouse is moved out of this area while the button is pressed, no composed events will be emitted.</p>
+<p>When this value is 0, the signals will be emitted as in <a href="../../sdk-14.10/QtQuick.MouseArea/index.html">MouseArea</a>, meaning the composed events will come until the mouse is moved inside the owner's area.</p>
+<p>The default value is 0.</p>
+<p><b>Note: </b>The value has no effect for the forwarded events. The threshold is only valid when the host handles mouse events.</p></div></div><!-- @@@clickAndHoldThreshold -->
+<br/>
+<!-- $$$enabled -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="enabled-prop"><td class="tblQmlPropNode"><p><a name="enabled-prop"></a><span class="name">enabled</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@enabled -->
+<br/>
+<!-- $$$forwardTo -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="forwardTo-prop"><td class="tblQmlPropNode"><p><a name="forwardTo-prop"></a><span class="name">forwardTo</span> : <span class="type">list</span>&lt;<span class="type"><a href="../../sdk-14.10/QtQuick.Item/index.html">Item</a></span>&gt;</p></td></tr></table></div></div><div class="qmldoc"><p>The property provides a way to forward mouse presses, releases, moves and double click events to other items. This can be useful when you want other items to handle different parts of the same mouse event or to handle other mouse events.</p>
+<p>The items listed will receive the event only if the mouse event falls into their area. Once an item that has forwarded mouse events accepts the event, that will no longer be delivered to the rest of the items in the list. This rule is also applied on the owner when the priority is set to <i>BeforeItem</i>.</p>
+</div></div><!-- @@@forwardTo -->
+<br/>
+<!-- $$$hoverEnabled -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="hoverEnabled-prop"><td class="tblQmlPropNode"><p><a name="hoverEnabled-prop"></a><span class="qmlreadonly">read-only</span><span class="name">hoverEnabled</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>The property reports whether the owner accepts hover events or not. When events are accepted <a href="index.html#onEntered-signal">onEntered</a>, <a href="index.html#onPositionChanged-signal">onPositionChanged</a> and <a href="index.html#onExited-signal">onExited</a> signals containing the mouse cursor position.</p>
+</div></div><!-- @@@hoverEnabled -->
+<br/>
+<!-- $$$ignoreSynthesizedEvents -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="ignoreSynthesizedEvents-prop"><td class="tblQmlPropNode"><p><a name="ignoreSynthesizedEvents-prop"></a><span class="name">ignoreSynthesizedEvents</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property controls how the filter handles the mouse events synthesized by Qt (e.g&#x2e; the artificial mouse events created when an original touch event is not consumed by any Item in the scene).</p>
+<p>If the value is true, the filter will ignore the synthesized mouse events.</p>
+<p>More info at <a href="index.html#mouse-events-synthesis">Mouse events synthesis</a>.</p>
+<p>The default value is false.</p>
+</div></div><!-- @@@ignoreSynthesizedEvents -->
+<br/>
+<!-- $$$priority -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="priority-prop"><td class="tblQmlPropNode"><p><a name="priority-prop"></a><span class="name">priority</span> : <span class="type">enumeration</span></p></td></tr></table></div></div><div class="qmldoc"><p>The property specifies the event dispach relation between the filter, the elements the event is forwarded to and the owner. Similar to Keys' <i>priority</i> property, the event dispach is performed in two ways: berfore (<i>BeforeItem</i>) or after (<i>AfterItem</i>) the owner receives the events.</p>
+<p>When <i>BeforeItem</i> is set the event dispach happens based as follows:</p>
+<ol class="i">
+<li>the event is handled by the mouse filter</li>
+<li>if there are items listed in <a href="index.html#forwardTo-prop">forwardTo</a> property, the event will be forwarded to those items</li>
+<li>the event is handed over the owner.</li>
+</ol>
+    <br />
+  <p>When <i>AfterItem</i> is set the event dispach happens based as follows:</p>
+<ol class="i">
+<li>the event is handed over the owner;</li>
+<li>the event is handled by the mouse filter;</li>
+<li>if there are items listed in <a href="index.html#forwardTo-prop">forwardTo</a> property, the event will be forwarded to those items.</li>
+</ol>
+<p>The default value is <i>BeforeItem</i>.</p>
+</div></div><!-- @@@priority -->
+<br/>
+<h2>Signal Documentation</h2>
+<!-- $$$onClicked -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="onClicked-signal"><td class="tblQmlFuncNode"><p><a name="onClicked-signal"></a><span class="name">onClicked</span>(<span class="type"><a href="../../sdk-14.10/QtQuick.MouseEvent/index.html">MouseEvent</a></span><i> event</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>The signal reports the mouse click. The signal is not emitted if the <a href="index.html#onPressAndHold-signal">onPressAndHold</a> got triggered or if <a href="index.html#onDoubleClicked-signal">onDoubleClicked</a> is handled (a slot is connected to it). The <i>host</i> specifies the item that triggered the event.</p>
+</div></div><!-- @@@onClicked -->
+<br/>
+<!-- $$$onDoubleClicked -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="onDoubleClicked-signal"><td class="tblQmlFuncNode"><p><a name="onDoubleClicked-signal"></a><span class="name">onDoubleClicked</span>(<span class="type"><a href="../../sdk-14.10/QtQuick.MouseEvent/index.html">MouseEvent</a></span><i> event</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>The signal reports mouse double click. The <i>host</i> specifies the item that triggered the event.</p>
+</div></div><!-- @@@onDoubleClicked -->
+<br/>
+<!-- $$$onEntered -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="onEntered-signal"><td class="tblQmlFuncNode"><p><a name="onEntered-signal"></a><span class="name">onEntered</span>(<span class="type"><a href="../../sdk-14.10/QtQuick.MouseEvent/index.html">MouseEvent</a></span><i> event</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>The signal reports that the mouse has entered into the area. The signal is emitted when the hover events are enabled and the mouse enters the area or when one of the accepted mouse button is pressed. The <i>host</i> specifies the item that triggered the event.</p>
+</div></div><!-- @@@onEntered -->
+<br/>
+<!-- $$$onExited -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="onExited-signal"><td class="tblQmlFuncNode"><p><a name="onExited-signal"></a><span class="name">onExited</span>(<span class="type"><a href="../../sdk-14.10/QtQuick.MouseEvent/index.html">MouseEvent</a></span><i> event</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>The signal reports that the mouse has left the area. The signal is emitted when the hover events are enabled for the owner or if not, when one of the accepted button is released. The <i>host</i> specifies the item that triggered the event.</p>
+</div></div><!-- @@@onExited -->
+<br/>
+<!-- $$$onPositionChanged -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="onPositionChanged-signal"><td class="tblQmlFuncNode"><p><a name="onPositionChanged-signal"></a><span class="name">onPositionChanged</span>(<span class="type"><a href="../../sdk-14.10/QtQuick.MouseEvent/index.html">MouseEvent</a></span><i> event</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>The signal reports the mouse pointer position change. If the hover events are enabled for the owner, the signal will come continuously. Otherwise the position chanes are reported when one of the accepted mouse buttons are being kept pressed. The <i>host</i> specifies the item that triggered the event.</p>
+</div></div><!-- @@@onPositionChanged -->
+<br/>
+<!-- $$$onPressAndHold -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="onPressAndHold-signal"><td class="tblQmlFuncNode"><p><a name="onPressAndHold-signal"></a><span class="name">onPressAndHold</span>(<span class="type"><a href="../../sdk-14.10/QtQuick.MouseEvent/index.html">MouseEvent</a></span><i> event</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>The signal reports the mouse press and hold. The <i>host</i> specifies the item that triggered the event.</p>
+</div></div><!-- @@@onPressAndHold -->
+<br/>
+<!-- $$$onPressed -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="onPressed-signal"><td class="tblQmlFuncNode"><p><a name="onPressed-signal"></a><span class="name">onPressed</span>(<span class="type"><a href="../../sdk-14.10/QtQuick.MouseEvent/index.html">MouseEvent</a></span><i> event</i>, <span class="type"><a href="../../sdk-14.10/QtQuick.Item/index.html">Item</a></span><i> host</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>The signal reports the mouse press. The <i>host</i> specifies the item that triggered the event.</p>
+</div></div><!-- @@@onPressed -->
+<br/>
+<!-- $$$onReleased -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="onReleased-signal"><td class="tblQmlFuncNode"><p><a name="onReleased-signal"></a><span class="name">onReleased</span>(<span class="type"><a href="../../sdk-14.10/QtQuick.MouseEvent/index.html">MouseEvent</a></span><i> event</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>The signal reports the mouse release. The <i>host</i> specifies the item that triggered the event.</p>
+</div></div><!-- @@@onReleased -->
+<br/>
+</div></div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

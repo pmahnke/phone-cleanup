@@ -1,0 +1,688 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>JavaScript Expressions in QML Documents | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a class="sub-nav-item" href="../index.html">SDK 15.04.3</a> &rsaquo;</li>
+
+<li><a class="sub-nav-item" href="../QtQml/index.html">QtQml</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">JavaScript Expressions in QML Documents</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qtqml-javascript-expressions.html -->
+	<!-- Source Format: qdoc -->
+<h1>JavaScript Expressions in QML Documents</h1>
+<div id="page_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$qtqml-javascript-expressions.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>The <a href="../QtQml.qtqml-javascript-hostenvironment/index.html">JavaScript Host Environment</a> provided by QML can run valid standard JavaScript constructs such as conditional operators, arrays, variable setting, loops. In addition to the standard JavaScript properties, the <a href="../QtQml.qtqml-javascript-qmlglobalobject/index.html">QML Global Object</a> includes a number of helper methods that simplify building UIs and interacting with the QML environment.</p>
+<p>The JavaScript environment provided by QML is stricter than that in a web browser. For example, in QML you cannot add to, or modify, members of the JavaScript global object. In regular JavaScript, it is possible to do this accidentally by using a variable without declaring it. In QML this will throw an exception, so all local variables must be explicitly declared. See <a href="../QtQml.qtqml-javascript-hostenvironment/index.html#javascript-environment-restrictions">JavaScript Environment Restrictions</a> for a complete description of the restrictions on JavaScript code executed from QML.</p>
+<p>Various parts of <a href="../QtQml.qtqml-documents-topic/index.html">QML documents</a> can contain JavaScript code:</p>
+<ol class="1">
+<li>The body of <a href="../QtQml.qtqml-syntax-propertybinding/index.html">property bindings</a>. These JavaScript expressions describe relationships between QML object <a href="../QtQml.qtqml-syntax-objectattributes/index.html#property-attributes">properties</a>. When any of a property's <i>dependencies</i> change, the property is automatically updated too, according to the specified relationship.</li>
+<li>The body of <a href="../QtQml.qtqml-syntax-objectattributes/index.html#signal-attributes">Signal handlers</a>. These JavaScript statements are automatically evaluated whenever a QML object emits the associated signal.</li>
+<li>The definition of <a href="../QtQml.qtqml-syntax-objectattributes/index.html#method-attributes">custom methods</a>. JavaScript functions that are defined within the body of a QML object become methods of that object.</li>
+<li>Standalone <a href="../QtQml.qtqml-javascript-imports/index.html">JavaScript resource (.js) files</a>. These files are actually separate from QML documents, but they can be imported into QML documents. Functions and variables that are defined within the imported files can be used in property bindings, signal handlers, and custom methods.</li>
+</ol>
+<a name="javascript-in-property-bindings"></a>
+<h2 id="javascript-in-property-bindings">JavaScript in Property Bindings</h2>
+<p>In the following example, the Rectangle's <code>color</code> depends on the MouseArea's <code>pressed</code> property. This relationship is described using a conditional expression:</p>
+<pre class="qml">import QtQuick 2.0
+<span class="type">Rectangle</span> {
+    <span class="name">id</span>: <span class="name">colorbutton</span>
+    <span class="name">width</span>: <span class="number">200</span>; <span class="name">height</span>: <span class="number">80</span>;
+    <span class="name">color</span>: <span class="name">mousearea</span>.<span class="name">pressed</span> ? <span class="string">&quot;steelblue&quot;</span> : <span class="string">&quot;lightsteelblue&quot;</span>
+    <span class="type">MouseArea</span> {
+        <span class="name">id</span>: <span class="name">mousearea</span>
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+    }
+}</pre>
+<p>In fact, any JavaScript expression (no matter how complex) may be used in a property binding definition, as long as the result of the expression is a value whose type can be assigned to the property. This includes side effects. However, complex bindings and side effects are discouraged because they can reduce the performance, readability, and maintainability of the code.</p>
+<p>There are two ways to define a property binding: the first (and most common) is, as previously shown, in a <a href="../QtQml.qtqml-syntax-objectattributes/index.html#value-assignment-on-initialization">property initialization</a>. The second (and much rarer) way is to assign the property a function returned from the <a href="../QtQml.Qt/index.html#binding-method">Qt.binding()</a> function, from within imperative JavaScript code, as shown below:</p>
+<pre class="qml">import QtQuick 2.0
+<span class="type">Rectangle</span> {
+    <span class="name">id</span>: <span class="name">colorbutton</span>
+    <span class="name">width</span>: <span class="number">200</span>; <span class="name">height</span>: <span class="number">80</span>;
+    <span class="name">color</span>: <span class="string">&quot;red&quot;</span>
+    <span class="type">MouseArea</span> {
+        <span class="name">id</span>: <span class="name">mousearea</span>
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+    }
+    <span class="name">Component</span>.onCompleted: {
+        <span class="name">color</span> <span class="operator">=</span> <span class="name">Qt</span>.<span class="name">binding</span>(<span class="keyword">function</span>() { <span class="keyword">return</span> <span class="name">mousearea</span>.<span class="name">pressed</span> ? <span class="string">&quot;steelblue&quot;</span> : <span class="string">&quot;lightsteelblue&quot;</span> });
+    }
+}</pre>
+<p>See the <a href="../QtQml.qtqml-syntax-propertybinding/index.html">property bindings</a> documentation for more information about how to define property bindings, and see the documentation about <a href="../QtQml.qtqml-syntax-propertybinding/index.html#qml-javascript-assignment">Property Assignment versus Property Binding</a> for information about how bindings differ from value assignments.</p>
+<a name="javascript-in-signal-handlers"></a>
+<h2 id="javascript-in-signal-handlers">JavaScript in Signal Handlers</h2>
+<p>QML object types can emit signals in reaction to certain events occurring. Those signals can be handled by signal handler functions, which can be defined by clients to implement custom program logic.</p>
+<p>Suppose that a button represented by a Rectangle type has a MouseArea and a Text label. The MouseArea will emit its pressed signal when the user presses the defined interactive area, which will automatically trigger the <code>onPressed</code> handler, which can be defined by clients. The QML engine will execute the JavaScript expressions defined in the <code>onPressed</code> and <code>onReleased</code> handlers, as required. Typically, a signal handler is bound to JavaScript expressions to initiate other events or to simply assign property values.</p>
+<pre class="qml">import QtQuick 2.0
+<span class="type">Rectangle</span> {
+    <span class="name">id</span>: <span class="name">button</span>
+    <span class="name">width</span>: <span class="number">200</span>; <span class="name">height</span>: <span class="number">80</span>; <span class="name">color</span>: <span class="string">&quot;lightsteelblue&quot;</span>
+    <span class="type">MouseArea</span> {
+        <span class="name">id</span>: <span class="name">mousearea</span>
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">onPressed</span>: {
+            <span class="comment">// arbitrary JavaScript expression</span>
+            <span class="name">label</span>.<span class="name">text</span> <span class="operator">=</span> <span class="string">&quot;I am Pressed!&quot;</span>
+        }
+        <span class="name">onReleased</span>: {
+            <span class="comment">// arbitrary JavaScript expression</span>
+            <span class="name">label</span>.<span class="name">text</span> <span class="operator">=</span> <span class="string">&quot;Click Me!&quot;</span>
+        }
+    }
+    <span class="type">Text</span> {
+        <span class="name">id</span>: <span class="name">label</span>
+        <span class="name">anchors</span>.centerIn: <span class="name">parent</span>
+        <span class="name">text</span>: <span class="string">&quot;Press Me!&quot;</span>
+    }
+}</pre>
+<p>Please see the <a href="../QtQml.qtqml-syntax-signals/index.html">Signal and Handler Event System</a> documentation for in-depth discussion of signals and signal handlers, and see the <a href="../QtQml.qtqml-syntax-objectattributes/index.html">QML Object Attributes</a> documentation for in-depth discussion of how to define the implementation of signal handlers in QML with JavaScript.</p>
+<a name="javascript-in-standalone-functions"></a>
+<h2 id="javascript-in-standalone-functions">JavaScript in Standalone Functions</h2>
+<p>Program logic can also be defined in JavaScript functions. These functions can be defined inline in QML documents (as custom methods) or externally in imported JavaScript files.</p>
+<a name="javascript-in-custom-object-methods"></a>
+<h3 >JavaScript in Custom Object Methods</h3>
+<p>Custom methods can be defined in QML documents and may be called from signal handlers, property bindings, or functions in other QML objects. Methods defined in this way are often referred to as <i>inline JavaScript functions</i> because their implementation is included in the QML object type definition (QML document), as opposed to an external JavaScript file.</p>
+<p>An example of an inline custom method is as follows:</p>
+<pre class="qml">import QtQuick 2.0
+<span class="type">Item</span> {
+    <span class="keyword">function</span> <span class="name">factorial</span>(<span class="name">a</span>) {
+        <span class="name">a</span> <span class="operator">=</span> <span class="name">parseInt</span>(<span class="name">a</span>);
+        <span class="keyword">if</span> (<span class="name">a</span> <span class="operator">&lt;=</span> <span class="number">0</span>)
+            <span class="keyword">return</span> <span class="number">1</span>;
+        <span class="keyword">else</span>
+            <span class="keyword">return</span> <span class="name">a</span> <span class="operator">*</span> <span class="name">factorial</span>(<span class="name">a</span> <span class="operator">-</span> <span class="number">1</span>);
+    }
+    <span class="type">MouseArea</span> {
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">onClicked</span>: <span class="name">console</span>.<span class="name">log</span>(<span class="name">factorial</span>(<span class="number">10</span>))
+    }
+}</pre>
+<p>The factorial function will run whenever the MouseArea detects a <code>clicked</code> signal.</p>
+<p>Importantly, custom methods defined inline in a QML document are exposed to other objects, and therefore inline functions on the root object in a QML component can be invoked by callers outside the component. If this is not desired, the method can be added to a non-root object or, preferably, written in an external JavaScript file.</p>
+<p>See the <a href="../QtQml.qtqml-syntax-objectattributes/index.html">QML Object Attributes</a> documentation for in-depth discussion of how to define custom methods in QML with JavaScript code implementations.</p>
+<a name="functions-in-imported-javascript-files"></a>
+<h3 >Functions in Imported JavaScript Files</h3>
+<p>Non-trivial program logic is best separated into external JavaScript files. These files can be imported into QML files using an <code>import</code> statement, in the same way that <a href="../QtQml.qtqml-modules-topic/index.html">modules</a> are imported.</p>
+<p>For example, the <code>factorial()</code> method in the above example could be moved into an external file named <code>factorial.js</code>, and accessed like this:</p>
+<pre class="qml">import &quot;factorial.js&quot; as MathFunctions
+<span class="type">Item</span> {
+    <span class="type">MouseArea</span> {
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">onClicked</span>: <span class="name">console</span>.<span class="name">log</span>(<span class="name">MathFunctions</span>.<span class="name">factorial</span>(<span class="number">10</span>))
+    }
+}</pre>
+<p>For more information about loading external JavaScript files into QML, read the section about <a href="../QtQml.qtqml-javascript-imports/index.html">Importing JavaScript Resources in QML</a>.</p>
+<a name="connecting-signals-to-javascript-functions"></a>
+<h3 >Connecting Signals to JavaScript Functions</h3>
+<p>QML object types which emit signals also provide default signal handlers for their signals, as described in a previous section. Sometimes, however, a client will want to cause a signal emitted from one object to trigger a function defined in another object; and in that case, a signal connection is often preferable.</p>
+<p>A signal emitted by a QML object may be connected to a JavaScript function by calling the signal's <code>connect()</code> method and passing the JavaScript function as an argument. For example, the following code connects the MouseArea <code>clicked</code> signal to the <code>jsFunction()</code> in <code>script.js</code>:</p>
+<div class="table"><table class="generic">
+ <tr valign="top" class="odd"><td ><pre class="qml">import QtQuick 2.0
+import &quot;script.js&quot; as MyScript
+<span class="type">Item</span> {
+    <span class="name">id</span>: <span class="name">item</span>
+    <span class="name">width</span>: <span class="number">200</span>; <span class="name">height</span>: <span class="number">200</span>
+    <span class="type">MouseArea</span> {
+        <span class="name">id</span>: <span class="name">mouseArea</span>
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+    }
+    <span class="name">Component</span>.onCompleted: {
+        <span class="name">mouseArea</span>.<span class="name">clicked</span>.<span class="name">connect</span>(<span class="name">MyScript</span>.<span class="name">jsFunction</span>)
+    }
+}</pre>
+</td><td ><pre class="js"><span class="comment">// script.js</span>
+<span class="keyword">function</span> <span class="name">jsFunction</span>() {
+    <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;Called JavaScript function!&quot;</span>)
+}</pre>
+</td></tr>
+</table></div>
+<p>The <code>jsFunction()</code> will now be called whenever MouseArea's <code>clicked</code> signal is emitted.</p>
+<p>See <a href="../QtQml.qtqml-syntax-signals/index.html">Connecting Signals to Methods and Signals</a> for more information.</p>
+<a name="javascript-in-application-startup-code"></a>
+<h2 id="javascript-in-application-startup-code">JavaScript in Application Startup Code</h2>
+<p>It is occasionally necessary to run some imperative code at application (or component instance) startup. While it is tempting to just include the startup script as <i>global code</i> in an external script file, this can have severe limitations as the QML environment may not have been fully established. For example, some objects might not have been created or some <a href="../QtQml.qtqml-syntax-propertybinding/index.html">property bindings</a> may not have been established. See <a href="../QtQml.qtqml-javascript-hostenvironment/index.html#javascript-environment-restrictions">JavaScript Environment Restrictions</a> for the exact limitations of global script code.</p>
+<p>A QML object will emit the <code>Component.completed</code> <a href="../QtQml.qtqml-syntax-signals/index.html#attached-signal-handlers">attached signal</a> when its instantiation is complete. JavaScript code in the corresponding <code>Component.onCompleted</code> handler runs after the object is instantiated. Thus, the best place to write application startup code is in the <code>Component.onCompleted</code> handler of the top-level object, because this object emits <code>Component.completed</code> when the QML environment is fully established.</p>
+<p>For example:</p>
+<pre class="qml">import QtQuick 2.0
+<span class="type">Rectangle</span> {
+    <span class="keyword">function</span> <span class="name">startupFunction</span>() {
+        <span class="comment">// ... startup code</span>
+    }
+    <span class="name">Component</span>.onCompleted: <span class="name">startupFunction</span>();
+}</pre>
+<p>Any object in a QML file - including nested objects and nested QML component instances - can use this attached property. If there is more than one <code>onCompleted()</code> handler to execute at startup, they are run sequentially in an undefined order.</p>
+<p>Likewise, every <code>Component</code> will emit a <a href="../QtQml.Component/index.html#destruction-signal">destruction()</a> signal just before being destroyed.</p>
+</div>
+<!-- @@@qtqml-javascript-expressions.html -->
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

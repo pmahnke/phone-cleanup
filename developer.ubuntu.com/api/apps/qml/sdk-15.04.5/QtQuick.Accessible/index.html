@@ -1,0 +1,750 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Accessible [sdk-15.04.5/QtQuick.Accessible] | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a href="../index.html">SDK 15.04.5</a> &rsaquo;</li>
+
+<li><a href="../QtQuick/index.html">QtQuick</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Accessible</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qml-qtquick-accessible.html -->
+	<!-- Source Format: qdoc -->
+<h1>Accessible</h1>
+<div id="element_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$Accessible-brief -->
+<p>Enables accessibility of QML items More...</p>
+<!-- @@@Accessible -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import QtQuick 2.4</td></tr></table></div><ul>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#checkStateMixed-prop">checkStateMixed</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#checkable-prop">checkable</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#checked-prop">checked</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#defaultButton-prop">defaultButton</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#description-prop">description</a></b></b> : string</li>
+<li class="fn"><b><b><a href="index.html#editable-prop">editable</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#focusable-prop">focusable</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#focused-prop">focused</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#ignored-prop">ignored</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#multiLine-prop">multiLine</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#name-prop">name</a></b></b> : string</li>
+<li class="fn"><b><b><a href="index.html#passwordEdit-prop">passwordEdit</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#pressed-prop">pressed</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#readOnly-prop">readOnly</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#role-prop">role</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="index.html#searchEdit-prop">searchEdit</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#selectable-prop">selectable</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#selectableText-prop">selectableText</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#selected-prop">selected</a></b></b> : bool</li>
+</ul>
+<a name="signals"></a>
+<h2 id="signals">Signals</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#decreaseAction-signal">decreaseAction</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#increaseAction-signal">increaseAction</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#pressAction-signal">pressAction</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#toggleAction-signal">toggleAction</a></b></b>()</li>
+</ul>
+<!-- $$$Accessible-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<p>This class is part of the Accessibility for Qt Quick Applications.</p>
+<p>Items the user interacts with or that give information to the user need to expose their information to the accessibility framework. Then assistive tools can make use of that information to enable users to interact with the application in various ways. This enables Qt Quick applications to be used with screen-readers for example.</p>
+<p>The most important properties are <a href="index.html#name-prop">name</a>, <a href="index.html#description-prop">description</a> and <a href="index.html#role-prop">role</a>.</p>
+<p>Example implementation of a simple button:</p>
+<pre class="qml"><span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> {
+    <span class="name">id</span>: <span class="name">myButton</span>
+    <span class="type"><a href="../QtQuick.Text/index.html">Text</a></span> {
+        <span class="name">id</span>: <span class="name">label</span>
+        <span class="name">text</span>: <span class="string">&quot;next&quot;</span>
+    }
+    <span class="name">Accessible</span>.role: <span class="name">Accessible</span>.<span class="name">Button</span>
+    <span class="name">Accessible</span>.name: <span class="name">label</span>.<span class="name">text</span>
+    <span class="name">Accessible</span>.description: <span class="string">&quot;shows the next page&quot;</span>
+    <span class="name">Accessible</span>.onPressAction: {
+        <span class="comment">// do a button click</span>
+    }
+}</pre>
+<p>The <a href="index.html#role-prop">role</a> is set to <code>Button</code> to indicate the type of control. Accessible.name is the most important information and bound to the text on the button. The name is a short and consise description of the control and should reflect the visual label. In this case it is not clear what the button does with the name only, so <a href="index.html#description-prop">description</a> contains an explanation. There is also a signal handler <a href="index.html#pressAction-signal">Accessible.pressAction</a> which can be invoked by assistive tools to trigger the button. This signal handler needs to have the same effect as tapping or clicking the button would have.</p>
+<p><b>See also </b>Accessibility.</p>
+<!-- @@@Accessible -->
+<h2>Property Documentation</h2>
+<!-- $$$checkStateMixed -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="checkStateMixed-prop"><td class="tblQmlPropNode"><p><a name="checkStateMixed-prop"></a><span class="name">checkStateMixed</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds whether this item is in the partially checked state.</p>
+<p>By default this property is <code>false</code>.</p>
+<p><b>See also </b><a href="index.html#checked-prop">checked</a> and <a href="index.html#checkable-prop">checkable</a>.</p>
+</div></div><!-- @@@checkStateMixed -->
+<br/>
+<!-- $$$checkable -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="checkable-prop"><td class="tblQmlPropNode"><p><a name="checkable-prop"></a><span class="name">checkable</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds whether this item is checkable (like a check box or some buttons).</p>
+<p>By default this property is <code>false</code>.</p>
+<p><b>See also </b><a href="index.html#checked-prop">checked</a>.</p>
+</div></div><!-- @@@checkable -->
+<br/>
+<!-- $$$checked -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="checked-prop"><td class="tblQmlPropNode"><p><a name="checked-prop"></a><span class="name">checked</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds whether this item is currently checked.</p>
+<p>By default this property is <code>false</code>.</p>
+<p><b>See also </b><a href="index.html#checkable-prop">checkable</a>.</p>
+</div></div><!-- @@@checked -->
+<br/>
+<!-- $$$defaultButton -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="defaultButton-prop"><td class="tblQmlPropNode"><p><a name="defaultButton-prop"></a><span class="name">defaultButton</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds whether this item is the default button of a dialog.</p>
+<p>By default this property is <code>false</code>.</p>
+</div></div><!-- @@@defaultButton -->
+<br/>
+<!-- $$$description -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="description-prop"><td class="tblQmlPropNode"><p><a name="description-prop"></a><span class="name">description</span> : <span class="type">string</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property sets an accessible description. Similar to the name it describes the item. The description can be a little more verbose and tell what the item does, for example the functionallity of the button it describes.</p>
+</div></div><!-- @@@description -->
+<br/>
+<!-- $$$editable -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="editable-prop"><td class="tblQmlPropNode"><p><a name="editable-prop"></a><span class="name">editable</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds whether this item has editable text.</p>
+<p>By default this property is <code>false</code>.</p>
+</div></div><!-- @@@editable -->
+<br/>
+<!-- $$$focusable -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="focusable-prop"><td class="tblQmlPropNode"><p><a name="focusable-prop"></a><span class="name">focusable</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds whether this item is focusable.</p>
+<p>By default, this property is <code>false</code> except for items where the role is one of <code>CheckBox</code>, <code>RadioButton</code>, <code>Button</code>, <code>MenuItem</code>, <code>PageTab</code>, <code>EditableText</code>, <code>SpinBox</code>, <code>ComboBox</code>, <code>Terminal</code> or <code>ScrollBar</code>.</p>
+<p><b>See also </b><a href="index.html#focused-prop">focused</a>.</p>
+</div></div><!-- @@@focusable -->
+<br/>
+<!-- $$$focused -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="focused-prop"><td class="tblQmlPropNode"><p><a name="focused-prop"></a><span class="name">focused</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds whether this item currently has the active focus.</p>
+<p>By default, this property is <code>false</code>, but it will return <code>true</code> for items that have QQuickItem::hasActiveFocus() returning <code>true</code>.</p>
+<p><b>See also </b><a href="index.html#focusable-prop">focusable</a>.</p>
+</div></div><!-- @@@focused -->
+<br/>
+<!-- $$$ignored -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="ignored-prop"><td class="tblQmlPropNode"><p><a name="ignored-prop"></a><span class="name">ignored</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds whether this item should be ignored by the accessibility framework.</p>
+<p>Sometimes an item is part of a group of items that should be treated as one. For example two labels might be visually placed next to each other, but separate items. For accessibility purposes they should be treated as one and thus they are represented by a third invisible item with the right geometry.</p>
+<p>For example a speed display adds &quot;m/s&quot; as a smaller label:</p>
+<pre class="qml"><span class="type"><a href="../QtQuick.Row/index.html">Row</a></span> {
+    <span class="type">Label</span> {
+        <span class="name">id</span>: <span class="name">speedLabel</span>
+        <span class="name">text</span>: <span class="string">&quot;Speed: 5&quot;</span>
+        <span class="name">Accessible</span>.ignored: <span class="number">true</span>
+    }
+    <span class="type">Label</span> {
+        <span class="name">text</span>: <span class="name">qsTr</span>(<span class="string">&quot;m/s&quot;</span>)
+        <span class="name">Accessible</span>.ignored: <span class="number">true</span>
+    }
+    <span class="name">Accessible</span>.role: <span class="name">Accessible</span>.<span class="name">StaticText</span>
+    <span class="name">Accessible</span>.name: <span class="name">speedLabel</span>.<span class="name">text</span> <span class="operator">+</span> <span class="string">&quot; meters per second&quot;</span>
+}</pre>
+<p>By default this property is <code>false</code>.</p>
+<p>This QML property was introduced in  Qt 5.4.</p>
+</div></div><!-- @@@ignored -->
+<br/>
+<!-- $$$multiLine -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="multiLine-prop"><td class="tblQmlPropNode"><p><a name="multiLine-prop"></a><span class="name">multiLine</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds whether this item has multiple text lines.</p>
+<p>By default this property is <code>false</code>.</p>
+</div></div><!-- @@@multiLine -->
+<br/>
+<!-- $$$name -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="name-prop"><td class="tblQmlPropNode"><p><a name="name-prop"></a><span class="name">name</span> : <span class="type">string</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property sets an accessible name. For a button for example, this should have a binding to its text. In general this property should be set to a simple and concise but human readable name. Do not include the type of control you want to represent but just the name.</p>
+</div></div><!-- @@@name -->
+<br/>
+<!-- $$$passwordEdit -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="passwordEdit-prop"><td class="tblQmlPropNode"><p><a name="passwordEdit-prop"></a><span class="name">passwordEdit</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds whether this item is a password text edit.</p>
+<p>By default this property is <code>false</code>.</p>
+</div></div><!-- @@@passwordEdit -->
+<br/>
+<!-- $$$pressed -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="pressed-prop"><td class="tblQmlPropNode"><p><a name="pressed-prop"></a><span class="name">pressed</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds whether this item is pressed (for example a button during a mouse click).</p>
+<p>By default this property is <code>false</code>.</p>
+</div></div><!-- @@@pressed -->
+<br/>
+<!-- $$$readOnly -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="readOnly-prop"><td class="tblQmlPropNode"><p><a name="readOnly-prop"></a><span class="name">readOnly</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property indicates that a text field is read only.</p>
+<p>It is relevant when the role is QAccessible::EditableText and set to be read-only. By default this property is <code>false</code>.</p>
+</div></div><!-- @@@readOnly -->
+<br/>
+<!-- $$$role -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="role-prop"><td class="tblQmlPropNode"><p><a name="role-prop"></a><span class="name">role</span> : <span class="type">enumeration</span></p></td></tr></table></div></div><div class="qmldoc"><p>This flags sets the semantic type of the widget. A button for example would have &quot;Button&quot; as type. The value must be one of QAccessible::Role.</p>
+<p>Some roles have special semantics. In order to implement check boxes for example a &quot;checked&quot; property is expected.</p>
+<div class="table"><table class="generic">
+ <thead><tr class="qt-style"><th ><b>Role</b></th><th ><b>Properties and signals</b></th><th ><b>Explanation</b></th></tr></thead>
+<tr valign="top" class="odd"><td >All interactive elements</td><td ><a href="index.html#focusable-prop">focusable</a> and <a href="index.html#focused-prop">focused</a></td><td >All elements that the user can interact with should have focusable set to <code>true</code> and set focus to <code>true</code> when they have the focus. This is important even for applications that run on touch-only devices since screen readers often implement a virtual focus that can be moved from item to item.</td></tr>
+<tr valign="top" class="even"><td >Button, CheckBox, RadioButton</td><td ><a href="index.html#pressAction-signal">Accessible.pressAction</a></td><td >A button should have a signal handler with the name <code>onPressAction</code>. This signal may be emitted by an assistive tool such as a screen-reader. The implementation needs to behave the same as a mouse click or tap on the button.</td></tr>
+<tr valign="top" class="odd"><td >CheckBox, RadioButton</td><td ><a href="index.html#checkable-prop">checkable</a>, <a href="index.html#checked-prop">checked</a>, <a href="index.html#toggleAction-signal">Accessible.toggleAction</a></td><td >The check state of the check box. Updated on Press, Check and Uncheck actions.</td></tr>
+<tr valign="top" class="even"><td >Slider, SpinBox, Dial, ScrollBar</td><td ><code>value</code>, <code>minimumValue</code>, <code>maximumValue</code>, <code>stepSize</code></td><td >These properties reflect the state and possible values for the elements.</td></tr>
+<tr valign="top" class="odd"><td >Slider, SpinBox, Dial, ScrollBar</td><td ><a href="index.html#increaseAction-signal">Accessible.increaseAction</a>, <a href="index.html#decreaseAction-signal">Accessible.decreaseAction</a></td><td >Actions to increase and decrease the value of the element.</td></tr>
+</table></div>
+</div></div><!-- @@@role -->
+<br/>
+<!-- $$$searchEdit -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="searchEdit-prop"><td class="tblQmlPropNode"><p><a name="searchEdit-prop"></a><span class="name">searchEdit</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds whether this item is input for a search query. This property will only affect editable text.</p>
+<p>By default this property is <code>false</code>.</p>
+</div></div><!-- @@@searchEdit -->
+<br/>
+<!-- $$$selectable -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="selectable-prop"><td class="tblQmlPropNode"><p><a name="selectable-prop"></a><span class="name">selectable</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds whether this item can be selected.</p>
+<p>By default this property is <code>false</code>.</p>
+<p><b>See also </b><a href="index.html#selected-prop">selected</a>.</p>
+</div></div><!-- @@@selectable -->
+<br/>
+<!-- $$$selectableText -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="selectableText-prop"><td class="tblQmlPropNode"><p><a name="selectableText-prop"></a><span class="name">selectableText</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds whether this item contains selectable text.</p>
+<p>By default this property is <code>false</code>.</p>
+</div></div><!-- @@@selectableText -->
+<br/>
+<!-- $$$selected -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="selected-prop"><td class="tblQmlPropNode"><p><a name="selected-prop"></a><span class="name">selected</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds whether this item is selected.</p>
+<p>By default this property is <code>false</code>.</p>
+<p><b>See also </b><a href="index.html#selectable-prop">selectable</a>.</p>
+</div></div><!-- @@@selected -->
+<br/>
+<h2>Signal Documentation</h2>
+<!-- $$$decreaseAction -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="decreaseAction-signal"><td class="tblQmlFuncNode"><p><a name="decreaseAction-signal"></a><span class="name">decreaseAction</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when a decrease action is received from an assistive tool such as a screen-reader.</p>
+<p>The corresponding handler is <code>onDecreaseAction</code>.</p>
+</div></div><!-- @@@decreaseAction -->
+<br/>
+<!-- $$$increaseAction -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="increaseAction-signal"><td class="tblQmlFuncNode"><p><a name="increaseAction-signal"></a><span class="name">increaseAction</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when a increase action is received from an assistive tool such as a screen-reader.</p>
+<p>The corresponding handler is <code>onIncreaseAction</code>.</p>
+</div></div><!-- @@@increaseAction -->
+<br/>
+<!-- $$$pressAction -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="pressAction-signal"><td class="tblQmlFuncNode"><p><a name="pressAction-signal"></a><span class="name">pressAction</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when a press action is received from an assistive tool such as a screen-reader.</p>
+<p>The corresponding handler is <code>onPressAction</code>.</p>
+</div></div><!-- @@@pressAction -->
+<br/>
+<!-- $$$toggleAction -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="toggleAction-signal"><td class="tblQmlFuncNode"><p><a name="toggleAction-signal"></a><span class="name">toggleAction</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when a toggle action is received from an assistive tool such as a screen-reader.</p>
+<p>The corresponding handler is <code>onToggleAction</code>.</p>
+</div></div><!-- @@@toggleAction -->
+<br/>
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

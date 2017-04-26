@@ -1,0 +1,910 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Places (QML) | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a class="sub-nav-item" href="../index.html">SDK 15.04</a> &rsaquo;</li>
+
+<li><a class="sub-nav-item" href="../QtLocation/index.html">QtLocation</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Places (QML)</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qtlocation-places-example.html -->
+	<!-- Source Format: qdoc -->
+<h1>Places (QML)</h1>
+<div id="page_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$places-description -->
+<div class="descr"> <a name="details"></a>
+<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/f74b5bb4-e06a-4e27-9ad5-4673e8fce2d3-api/apps/qml/sdk-15.04/qtlocation-places-example/images/qml-places.png" alt="" /></p><a name="overview"></a>
+<h2 id="overview">Overview</h2>
+<p>The Places example presents an application window displaying a map. At the top of the window is a search box, which is used to enter a place search query. To search for a place enter a search term into the text box and click the magnifying glass icon. To search for a place by category, click the category icon to display the list of available categories and select the desired category. The place search query will be for places that are near the current location shown on the map.</p>
+<p>The search box provides search term suggestions when three or more characters are entered. Selecting one of the suggestions will cause a place search to be performed with the selected search text.</p>
+<p>Search results are available from the slide out tab on the left. Clicking on a search result will display details about the place. If a places has rich content (editorials, reviews and images), these can be accessed by the buttons on the details page. To find similar places click the &quot;Find similar&quot; button. If the current Geo service provider supports it, buttons to edit and remove a place will also be available.</p>
+<p>The geo service provider can be changed by accessing the &quot;Provider&quot; menu at the bottom of the window. Depending on the features supported by the provider, the &quot;New&quot; menu allows creating new Places and Categories. To create a new place, select &quot;Place&quot; from the &quot;New&quot; menu and fill in the fields. Click &quot;Go!&quot; to save the place. To create a new category, select &quot;Category&quot; from the &quot;New&quot; menu and fill in the fields. Click &quot;Go!&quot; to save the category.</p>
+<p>The Places example can work with any of the available geo services plugins. However, some plugins may require additional <a href="../QtLocation.PluginParameter/index.html">plugin parameters</a> in order to function correctly. <a href="../QtLocation.PluginParameter/index.html">Plugin parameters</a> can be passed on the command line using the <code>--plugin</code> argument, which takes the form:</p>
+<pre class="cpp"><span class="operator">-</span><span class="operator">-</span>plugin<span class="operator">.</span><span class="operator">&lt;</span>parameter name<span class="operator">&gt;</span> <span class="operator">&lt;</span>parameter value<span class="operator">&gt;</span></pre>
+<p>Refer to the documentation for each of the geo services plugins for details on what plugin parameters they support. The Nokia services plugin supplied with Qt requires an <i>app_id</i> and <i>token</i> pair. See &quot;<a href="../QtLocation.location-plugin-nokia/index.html">Qt Location Nokia Plugin</a>&quot; for details.</p>
+<a name="displaying-categories"></a>
+<h2 id="displaying-categories">Displaying Categories</h2>
+<p>Before search by category can be performed, the list of available categories needs to be retrieved. This is achieved by creating a <a href="../QtLocation.CategoryModel/index.html">CategoryModel</a>.</p>
+<pre class="qml"><span class="type"><a href="../QtLocation.CategoryModel/index.html">CategoryModel</a></span> {
+    <span class="name">id</span>: <span class="name">categoryModel</span>
+    <span class="name">plugin</span>: <span class="name">placesPlugin</span>
+    <span class="name">hierarchical</span>: <span class="number">true</span>
+}</pre>
+<p>The <a href="../QtLocation.CategoryModel/index.html">CategoryModel</a> type provides a model of the available categories. It can provide either a flat list or a hierarchical tree model. In this example, we use a hierarchical tree model, by setting the <a href="../QtLocation.CategoryModel/index.html#hierarchical-prop">hierarchical</a> property to <i>true</i>. The <a href="../QtLocation.CategoryModel/index.html#plugin-prop">plugin</a> property is set to <i>placesPlugin</i> which is the <i>identifier</i> of the <a href="../QtLocation.location-places-qml/index.html#plugin">Plugin</a> object used for place search throughout the example.</p>
+<p>Next we create a view to display the category model.</p>
+<pre class="qml"><span class="type">ListView</span> {
+    <span class="name">id</span>: <span class="name">root</span>
+    property <span class="type">bool</span> <span class="name">showSave</span>: <span class="number">true</span>
+    property <span class="type">bool</span> <span class="name">showRemove</span>: <span class="number">true</span>
+    property <span class="type">bool</span> <span class="name">showChildren</span>: <span class="number">true</span>
+    signal <span class="type">categoryClicked</span>(variant category)
+    signal <span class="type">editClicked</span>(variant category)
+    <span class="name">header</span>: <span class="name">IconButton</span> {
+        <span class="name">source</span>: <span class="string">&quot;../../resources/left.png&quot;</span>
+        <span class="name">pressedSource</span>: <span class="string">&quot;../../resources/left_pressed.png&quot;</span>
+        <span class="name">onClicked</span>: <span class="name">categoryListModel</span>.<span class="name">rootIndex</span> <span class="operator">=</span> <span class="name">categoryListModel</span>.<span class="name">parentModelIndex</span>()
+    }
+    <span class="name">model</span>: <span class="name">VisualDataModel</span> {
+        <span class="name">id</span>: <span class="name">categoryListModel</span>
+        <span class="name">model</span>: <span class="name">categoryModel</span>
+        <span class="name">delegate</span>: <span class="name">CategoryDelegate</span> {
+            <span class="name">id</span>: <span class="name">categoryDelegate</span>
+            <span class="name">showSave</span>: <span class="name">root</span>.<span class="name">showSave</span>
+            <span class="name">showRemove</span>: <span class="name">root</span>.<span class="name">showRemove</span>
+            <span class="name">showChildren</span>: <span class="name">root</span>.<span class="name">showChildren</span>
+            <span class="name">onClicked</span>: <span class="name">root</span>.<span class="name">categoryClicked</span>(<span class="name">category</span>);
+            <span class="name">onArrowClicked</span>: <span class="name">categoryListModel</span>.<span class="name">rootIndex</span> <span class="operator">=</span> <span class="name">categoryListModel</span>.<span class="name">modelIndex</span>(<span class="name">index</span>)
+            <span class="name">onCrossClicked</span>: <span class="name">category</span>.<span class="name">remove</span>();
+            <span class="name">onEditClicked</span>: <span class="name">root</span>.<span class="name">editClicked</span>(<span class="name">category</span>);
+        }
+    }
+}</pre>
+<p>Because a hierarchical model is being used, a DelegateModel is needed to provide navigation functionality. If flat list model was being used the view could use the <a href="../QtLocation.CategoryModel/index.html">CategoryModel</a> directly.</p>
+<p>The view contains a header item that is used as a back button to navigate up the category tree. The <i>onClicked</i> handler sets the root index of the DelegateModel to the parent of the current index. Categories are displayed by the <i>CategoryDelegate</i>, which provides four signals. The <i>onArrowClicked</i> handler sets the root index to the current index causing the sub categories of the selected category to be displayed. The <i>onClicked</i> handler emits the <b>categoryClicked()</b> signal with a category parameter indicating which specific category has been chosen. The <i>onCrossClicked</i> handler will invoke the categories <a href="../QtLocation.Category/index.html#remove-method">remove()</a> method. The <i>onEditClicked</i> handler invokes the <b>editClicked()</b> signal of the root item, this is used to notify which particular category is to be edited.</p>
+<p>The <i>CategoryDelegate</i> displays the category name and emits the <i>clicked</i> signal when the text is clicked:</p>
+<pre class="qml"><span class="type">Text</span> {
+    <span class="name">id</span>: <span class="name">name</span>
+    <span class="name">anchors</span>.left: <span class="name">icon</span>.<span class="name">right</span>
+    <span class="name">anchors</span>.verticalCenter: <span class="name">parent</span>.<span class="name">verticalCenter</span>
+    <span class="name">anchors</span>.right: <span class="name">parent</span>.<span class="name">right</span>
+    <span class="name">verticalAlignment</span>: <span class="name">Text</span>.<span class="name">AlignVCenter</span>
+    <span class="name">text</span>: <span class="name">category</span>.<span class="name">name</span>
+    <span class="name">elide</span>: <span class="name">Text</span>.<span class="name">ElideRight</span>
+}
+<span class="type">MouseArea</span> {
+    <span class="name">anchors</span>.fill: <span class="name">parent</span>
+    <span class="name">onClicked</span>: <span class="name">root</span>.<span class="name">clicked</span>()
+}</pre>
+<p>The <i>CategoryDelegate</i> also displays icons for editing, removing and displaying child categories. These icons are shown as desired when the <i>showSave</i> and <i>showRemove</i> and <i>showChildren</i> properties are set and only then in cases where the function is supported.</p>
+<pre class="qml"><span class="type">IconButton</span> {
+    <span class="name">id</span>: <span class="name">edit</span>
+    <span class="name">anchors</span>.right: <span class="name">cross</span>.<span class="name">left</span>
+    <span class="name">anchors</span>.verticalCenter: <span class="name">parent</span>.<span class="name">verticalCenter</span>
+    <span class="name">visible</span>: (<span class="name">placesPlugin</span>.<span class="name">name</span> <span class="operator">!=</span> <span class="string">&quot;&quot;</span> ? <span class="name">placesPlugin</span>.<span class="name">supportsPlaces</span>(<span class="name">Plugin</span>.<span class="name">SaveCategoryFeature</span>) : <span class="number">false</span>)
+             <span class="operator">&amp;&amp;</span> <span class="name">showSave</span>
+    <span class="name">source</span>: <span class="string">&quot;../../resources/pencil.png&quot;</span>
+    <span class="name">hoveredSource</span>: <span class="string">&quot;../../resources/pencil_hovered.png&quot;</span>
+    <span class="name">pressedSource</span>: <span class="string">&quot;../../resources/pencil_pressed.png&quot;</span>
+    <span class="name">onClicked</span>: <span class="name">root</span>.<span class="name">editClicked</span>()
+}
+<span class="type">IconButton</span> {
+    <span class="name">id</span>: <span class="name">cross</span>
+    <span class="name">anchors</span>.right: <span class="name">arrow</span>.<span class="name">left</span>
+    <span class="name">anchors</span>.verticalCenter: <span class="name">parent</span>.<span class="name">verticalCenter</span>
+    <span class="name">visible</span>: (<span class="name">placesPlugin</span>.<span class="name">name</span> <span class="operator">!=</span> <span class="string">&quot;&quot;</span> ? <span class="name">placesPlugin</span>.<span class="name">supportsPlaces</span>(<span class="name">Plugin</span>.<span class="name">RemoveCategoryFeature</span>) : <span class="number">false</span>)
+             <span class="operator">&amp;&amp;</span> <span class="name">showRemove</span>
+    <span class="name">source</span>: <span class="string">&quot;../../resources/cross.png&quot;</span>
+    <span class="name">hoveredSource</span>: <span class="string">&quot;../../resources/cross_hovered.png&quot;</span>
+    <span class="name">pressedSource</span>: <span class="string">&quot;../../resources/cross_pressed.png&quot;</span>
+    <span class="name">onClicked</span>: <span class="name">root</span>.<span class="name">crossClicked</span>()
+}
+<span class="type">IconButton</span> {
+    <span class="name">id</span>: <span class="name">arrow</span>
+    <span class="name">anchors</span>.right: <span class="name">parent</span>.<span class="name">right</span>
+    <span class="name">anchors</span>.verticalCenter: <span class="name">parent</span>.<span class="name">verticalCenter</span>
+    <span class="name">visible</span>: <span class="name">model</span>.<span class="name">hasModelChildren</span> <span class="operator">&amp;&amp;</span> <span class="name">showChildren</span>
+    <span class="name">source</span>: <span class="string">&quot;../../resources/right.png&quot;</span>
+    <span class="name">pressedSource</span>: <span class="string">&quot;../../resources/right_pressed.png&quot;</span>
+    <span class="name">onClicked</span>: <span class="name">root</span>.<span class="name">arrowClicked</span>()
+}</pre>
+<a name="presenting-search-suggestions"></a><a name="presenting-search-suggestions"></a>
+<h2 id="presenting-search-suggestions">Presenting Search Suggestions</h2>
+<p>The <a href="../QtLocation.PlaceSearchSuggestionModel/index.html">PlaceSearchSuggestionModel</a> type is used to fetch suggested search terms based on a partially entered search term.</p>
+<p>A new suggestion search is triggered whenever the entered search term is changed.</p>
+<pre class="qml"><span class="name">onTextChanged</span>: {
+    <span class="keyword">if</span> (<span class="name">searchRectangle</span>.<span class="name">suggestionsEnabled</span>) {
+        <span class="keyword">if</span> (<span class="name">text</span>.<span class="name">length</span> <span class="operator">&gt;=</span> <span class="number">3</span>) {
+            <span class="keyword">if</span> (<span class="name">suggestionModel</span> <span class="operator">!=</span> <span class="number">null</span>) {
+                <span class="name">suggestionModel</span>.<span class="name">searchTerm</span> <span class="operator">=</span> <span class="name">text</span>;
+                <span class="name">suggestionModel</span>.<span class="name">update</span>();
+            }
+        } <span class="keyword">else</span> {
+            <span class="name">searchRectangle</span>.<span class="name">state</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;
+        }
+    }
+}</pre>
+<p>The <i>suggestionsEnabled</i> property is used to temporarily disable search suggestions when a suggestion is selected (selecting it updates the search term text). Suggestions are only queried if the length of the search term is three or more characters, otherwise the search boxes state is reset.</p>
+<p>When the status of the <a href="../QtLocation.PlaceSearchSuggestionModel/index.html">PlaceSearchSuggestionModel</a> changes, the state of the search box is changed to display the search suggestions.</p>
+<pre class="qml"><span class="type"><a href="../QtLocation.PlaceSearchSuggestionModel/index.html">PlaceSearchSuggestionModel</a></span> {
+    <span class="name">id</span>: <span class="name">suggestionModel</span>
+    <span class="name">plugin</span>: <span class="name">placesPlugin</span>
+    <span class="name">searchArea</span>: <span class="name">placeSearchModel</span>.<span class="name">searchArea</span>
+    <span class="name">onStatusChanged</span>: {
+        <span class="keyword">if</span> (<span class="name">status</span> <span class="operator">==</span> <span class="name">PlaceSearchSuggestionModel</span>.<span class="name">Ready</span>)
+            <span class="name">searchRectangle</span>.<span class="name">state</span> <span class="operator">=</span> <span class="string">&quot;SuggestionsShown&quot;</span>;
+    }
+}</pre>
+<p>The main object in the &quot;SuggestionsShown&quot; state is the ListView showing the search suggestions.</p>
+<pre class="qml"><span class="type">ListView</span> {
+    <span class="name">id</span>: <span class="name">suggestionView</span>
+    <span class="name">model</span>: <span class="name">suggestionModel</span>
+    <span class="name">delegate</span>: <span class="name">Text</span> {
+        <span class="name">text</span>: <span class="name">suggestion</span>
+        <span class="name">width</span>: <span class="name">parent</span>.<span class="name">width</span>
+        <span class="type">MouseArea</span> {
+            <span class="name">anchors</span>.fill: <span class="name">parent</span>
+            <span class="name">onClicked</span>: {
+                <span class="name">suggestionsEnabled</span> <span class="operator">=</span> <span class="number">false</span>;
+                <span class="name">searchBox</span>.<span class="name">text</span> <span class="operator">=</span> <span class="name">suggestion</span>;
+                <span class="name">suggestionsEnabled</span> <span class="operator">=</span> <span class="number">true</span>;
+                <span class="name">placeSearchModel</span>.<span class="name">searchForText</span>(<span class="name">suggestion</span>);
+                <span class="name">searchRectangle</span>.<span class="name">state</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;
+            }
+        }
+    }
+}</pre>
+<p>A Text object is used as the delegate to display the suggestion text. Clicking on the suggested search term updates the search term and triggers a place search using the search suggestion.</p>
+<a name="searching-for-places"></a>
+<h2 id="searching-for-places">Searching for Places</h2>
+<p>The <a href="../QtLocation.PlaceSearchModel/index.html">PlaceSearchModel</a> type is used to search for places.</p>
+<pre class="qml"><span class="type"><a href="../QtLocation.PlaceSearchModel/index.html">PlaceSearchModel</a></span> {
+    <span class="name">id</span>: <span class="name">placeSearchModel</span>
+    <span class="name">plugin</span>: <span class="name">placesPlugin</span>
+    <span class="name">searchArea</span>: <span class="name">searchRegion</span>
+    <span class="keyword">function</span> <span class="name">searchForCategory</span>(<span class="name">category</span>) {
+        <span class="name">searchTerm</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;
+        <span class="name">categories</span> <span class="operator">=</span> <span class="name">category</span>;
+        <span class="name">recommendationId</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;
+        <span class="name">searchArea</span> <span class="operator">=</span> <span class="name">searchRegion</span>
+        <span class="name">limit</span> <span class="operator">=</span> -<span class="number">1</span>;
+        <span class="name">update</span>();
+    }
+    <span class="keyword">function</span> <span class="name">searchForText</span>(<span class="name">text</span>) {
+        <span class="name">searchTerm</span> <span class="operator">=</span> <span class="name">text</span>;
+        <span class="name">categories</span> <span class="operator">=</span> <span class="number">null</span>;
+        <span class="name">recommendationId</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;
+        <span class="name">searchArea</span> <span class="operator">=</span> <span class="name">searchRegion</span>
+        <span class="name">limit</span> <span class="operator">=</span> -<span class="number">1</span>;
+        <span class="name">update</span>();
+    }
+    <span class="keyword">function</span> <span class="name">searchForRecommendations</span>(<span class="name">placeId</span>) {
+        <span class="name">searchTerm</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;
+        <span class="name">categories</span> <span class="operator">=</span> <span class="number">null</span>;
+        <span class="name">recommendationId</span> <span class="operator">=</span> <span class="name">placeId</span>;
+        <span class="name">searchArea</span> <span class="operator">=</span> <span class="number">null</span>;
+        <span class="name">limit</span> <span class="operator">=</span> -<span class="number">1</span>;
+        <span class="name">update</span>();
+    }
+    <span class="name">onStatusChanged</span>: {
+        <span class="keyword">switch</span> (<span class="name">status</span>) {
+        <span class="keyword">case</span> <span class="name">PlaceSearchModel</span>.<span class="name">Ready</span>:
+            <span class="name">searchResultView</span>.<span class="name">showSearchResults</span>();
+            <span class="keyword">break</span>;
+        <span class="keyword">case</span> <span class="name">PlaceSearchModel</span>.<span class="name">Error</span>:
+            <span class="name">console</span>.<span class="name">log</span>(<span class="name">errorString</span>());
+        }
+    }
+}</pre>
+<p>First some of the model's properties are set, which will be used to form the search request. The <a href="../QtLocation.PlaceSearchModel/index.html#searchArea-prop">searchArea</a> property is set to the <i>searchRegion</i> object which is a GeoCircle with a center that is linked to the current location displayed on the <a href="../QtLocation.Map/index.html">Map</a>.</p>
+<p>Finally, we define two helper functions <b>searchForCategory()</b> and <b>searchForText()</b>, which set either the <a href="../QtLocation.PlaceSearchModel/index.html#categories-prop">categories</a> or <a href="../QtLocation.PlaceSearchModel/index.html#searchTerm-prop">searchTerm</a> properties and invokes the <a href="../QtLocation.PlaceSearchModel/index.html#update-method">update()</a> method to start the place search. The search results are displayed in a ListView.</p>
+<pre class="qml"><span class="type">ListView</span> {
+    <span class="name">id</span>: <span class="name">searchView</span>
+    <span class="name">anchors</span>.fill: <span class="name">parent</span>
+    <span class="name">model</span>: <span class="name">placeSearchModel</span>
+    <span class="name">delegate</span>: <span class="name">SearchResultDelegate</span> {
+        <span class="name">onDisplayPlaceDetails</span>: <span class="name">showPlaceDetails</span>(<span class="name">data</span>)
+        <span class="name">onSearchFor</span>: <span class="name">placeSearchModel</span>.<span class="name">searchForText</span>(<span class="name">query</span>);
+    }
+    <span class="name">footer</span>: <span class="name">Item</span> {
+        <span class="name">width</span>: <span class="name">searchView</span>.<span class="name">width</span>
+        <span class="name">height</span>: <span class="name">childrenRect</span>.<span class="name">height</span>
+        <span class="type">Button</span> {
+            <span class="name">text</span>: <span class="name">qsTr</span>(<span class="string">&quot;Previous&quot;</span>)
+            <span class="name">enabled</span>: <span class="name">placeSearchModel</span>.<span class="name">previousPagesAvailable</span>
+            <span class="name">onClicked</span>: <span class="name">placeSearchModel</span>.<span class="name">previousPage</span>()
+            <span class="name">anchors</span>.left: <span class="name">parent</span>.<span class="name">left</span>
+        }
+        <span class="type">Button</span> {
+            <span class="name">text</span>: <span class="name">qsTr</span>(<span class="string">&quot;Clear&quot;</span>)
+            <span class="name">onClicked</span>: <span class="name">placeSearchModel</span>.<span class="name">reset</span>()
+            <span class="name">anchors</span>.horizontalCenter: <span class="name">parent</span>.<span class="name">horizontalCenter</span>
+        }
+        <span class="type">Button</span> {
+            <span class="name">text</span>: <span class="name">qsTr</span>(<span class="string">&quot;Next&quot;</span>)
+            <span class="name">enabled</span>: <span class="name">placeSearchModel</span>.<span class="name">nextPagesAvailable</span>
+            <span class="name">onClicked</span>: <span class="name">placeSearchModel</span>.<span class="name">nextPage</span>()
+            <span class="name">anchors</span>.right: <span class="name">parent</span>.<span class="name">right</span>
+        }
+    }
+}</pre>
+<p>The delegate used in the ListView, <i>SearchResultDelegate</i>, is designed to handle multiple search result types via a Loader object. For results of type <i>PlaceResult</i> the delegate is:</p>
+<pre class="qml"><span class="type">Component</span> {
+    <span class="name">id</span>: <span class="name">placeComponent</span>
+    <span class="type">Item</span> {
+        <span class="name">id</span>: <span class="name">placeRoot</span>
+        <span class="name">height</span>: <span class="name">childrenRect</span>.<span class="name">height</span>
+        <span class="name">width</span>: <span class="name">parent</span>.<span class="name">width</span>
+        <span class="type">Rectangle</span> {
+            <span class="name">anchors</span>.fill: <span class="name">parent</span>
+            <span class="name">color</span>: <span class="string">&quot;#dbffde&quot;</span>
+            <span class="name">visible</span>: <span class="name">model</span>.<span class="name">sponsored</span> <span class="operator">!==</span> <span class="name">undefined</span> ? <span class="name">model</span>.<span class="name">sponsored</span> : <span class="number">false</span>
+            <span class="type">Text</span> {
+                <span class="name">text</span>: <span class="name">qsTr</span>(<span class="string">&quot;Sponsored result&quot;</span>)
+                <span class="name">horizontalAlignment</span>: <span class="name">Text</span>.<span class="name">AlignRight</span>
+                <span class="name">anchors</span>.right: <span class="name">parent</span>.<span class="name">right</span>
+                <span class="name">anchors</span>.bottom: <span class="name">parent</span>.<span class="name">bottom</span>
+                <span class="name">font</span>.pixelSize: <span class="number">8</span>
+                <span class="name">visible</span>: <span class="name">model</span>.<span class="name">sponsored</span> <span class="operator">!==</span> <span class="name">undefined</span> ? <span class="name">model</span>.<span class="name">sponsored</span> : <span class="number">false</span>
+            }
+        }
+        <span class="type">Row</span> {
+            <span class="type">Image</span> {
+                <span class="name">source</span>: <span class="name">place</span>.<span class="name">favorite</span> ? <span class="string">&quot;../../resources/star.png&quot;</span> : <span class="name">place</span>.<span class="name">icon</span>.<span class="name">url</span>()
+            }
+            <span class="type">Column</span> {
+                <span class="name">anchors</span>.verticalCenter: <span class="name">parent</span>.<span class="name">verticalCenter</span>
+                <span class="type">Text</span> {
+                    <span class="name">id</span>: <span class="name">placeName</span>
+                    <span class="name">text</span>: <span class="name">place</span>.<span class="name">favorite</span> ? <span class="name">place</span>.<span class="name">favorite</span>.<span class="name">name</span> : <span class="name">place</span>.<span class="name">name</span>
+                }
+                <span class="type">Text</span> {
+                    <span class="name">id</span>: <span class="name">distanceText</span>
+                    <span class="name">font</span>.italic: <span class="number">true</span>
+                    <span class="name">text</span>: <span class="name">PlacesUtils</span>.<span class="name">prettyDistance</span>(<span class="name">distance</span>)
+                }
+            }
+        }
+        <span class="type">MouseArea</span> {
+            <span class="name">anchors</span>.fill: <span class="name">parent</span>
+            <span class="name">onPressed</span>: <span class="name">placeRoot</span>.<span class="name">state</span> <span class="operator">=</span> <span class="string">&quot;Pressed&quot;</span>
+            <span class="name">onReleased</span>: <span class="name">placeRoot</span>.<span class="name">state</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>
+            <span class="name">onCanceled</span>: <span class="name">placeRoot</span>.<span class="name">state</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>
+            <span class="name">onClicked</span>: {
+                <span class="keyword">if</span> (<span class="name">model</span>.<span class="name">type</span> <span class="operator">===</span> <span class="name">undefined</span> <span class="operator">||</span> <span class="name">type</span> <span class="operator">===</span> <span class="name">PlaceSearchModel</span>.<span class="name">PlaceResult</span>) {
+                    <span class="keyword">if</span> (!<span class="name">place</span>.<span class="name">detailsFetched</span>)
+                        <span class="name">place</span>.<span class="name">getDetails</span>();
+                    <span class="name">root</span>.<span class="name">displayPlaceDetails</span>({
+                                             distance: <span class="name">model</span>.<span class="name">distance</span>,
+                                             place: <span class="name">model</span>.<span class="name">place</span>,
+                });
+                }
+            }
+        }
+        <span class="name">states</span>: [
+            <span class="type">State</span> {
+                <span class="name">name</span>: <span class="string">&quot;&quot;</span>
+            },
+            <span class="type">State</span> {
+                <span class="name">name</span>: <span class="string">&quot;Pressed&quot;</span>
+                <span class="type">PropertyChanges</span> { <span class="name">target</span>: <span class="name">placeName</span>; <span class="name">color</span>: <span class="string">&quot;#1C94FC&quot;</span>}
+                <span class="type">PropertyChanges</span> { <span class="name">target</span>: <span class="name">distanceText</span>; <span class="name">color</span>: <span class="string">&quot;#1C94FC&quot;</span>}
+            }
+        ]
+    }
+}</pre>
+<a name="displaying-place-content"></a>
+<h2 id="displaying-place-content">Displaying Place Content</h2>
+<p>Places can have additional rich content, including editorials, reviews and images. Rich content is accessed via a set of models. Content models are generally not created directly by the application developer, instead models are obtained from the <a href="../QtLocation.Place/index.html#editorialModel-prop">editorialModel</a>, <a href="../QtLocation.Place/index.html#reviewModel-prop">reviewModel</a> and <a href="../QtLocation.Place/index.html#imageModel-prop">imageModel</a> properties of the <a href="../QtLocation.location-cpp-qml/index.html#place">Place</a> type.</p>
+<pre class="qml"><span class="type">ListView</span> {
+    <span class="name">anchors</span>.fill: <span class="name">parent</span>
+    <span class="name">model</span>: <span class="name">place</span>.<span class="name">editorialModel</span>
+    <span class="name">delegate</span>: <span class="name">EditorialDelegate</span> { }
+}</pre>
+<a name="place-and-category-creation"></a>
+<h2 id="place-and-category-creation">Place and Category Creation</h2>
+<p>Some backends may support creation and saving of new places and categories. Plugin support can be checked an run-time with the <a href="../QtLocation.Plugin/index.html#supportsPlaces-method">Plugin::supportsPlaces</a>() method.</p>
+<p>To save a new place, first create a new <a href="../QtLocation.location-cpp-qml/index.html#place">Place</a> object, using the Qt.createQmlObject() method. Assign the appropriate plugin and place properties and invoke the <a href="../QtLocation.Place/index.html#save-method">save()</a> method.</p>
+<pre class="qml">        <span class="name">locationPlace</span>.<span class="name">plugin</span> <span class="operator">=</span> <span class="name">placesPlugin</span>;
+        <span class="name">locationPlace</span>.<span class="name">name</span> <span class="operator">=</span> <span class="name">dataFieldsModel</span>.<span class="name">get</span>(<span class="number">0</span>).<span class="name">inputText</span>;
+        <span class="name">locationPlace</span>.<span class="name">location</span>.<span class="name">address</span>.<span class="name">street</span> <span class="operator">=</span> <span class="name">dataFieldsModel</span>.<span class="name">get</span>(<span class="number">1</span>).<span class="name">inputText</span>;
+        <span class="name">locationPlace</span>.<span class="name">location</span>.<span class="name">address</span>.<span class="name">district</span> <span class="operator">=</span> <span class="name">dataFieldsModel</span>.<span class="name">get</span>(<span class="number">2</span>).<span class="name">inputText</span>;
+        <span class="name">locationPlace</span>.<span class="name">location</span>.<span class="name">address</span>.<span class="name">city</span> <span class="operator">=</span> <span class="name">dataFieldsModel</span>.<span class="name">get</span>(<span class="number">3</span>).<span class="name">inputText</span>;
+        <span class="name">locationPlace</span>.<span class="name">location</span>.<span class="name">address</span>.<span class="name">county</span> <span class="operator">=</span> <span class="name">dataFieldsModel</span>.<span class="name">get</span>(<span class="number">4</span>).<span class="name">inputText</span>;
+        <span class="name">locationPlace</span>.<span class="name">location</span>.<span class="name">address</span>.<span class="name">state</span> <span class="operator">=</span> <span class="name">dataFieldsModel</span>.<span class="name">get</span>(<span class="number">5</span>).<span class="name">inputText</span>;
+        <span class="name">locationPlace</span>.<span class="name">location</span>.<span class="name">address</span>.<span class="name">countryCode</span> <span class="operator">=</span> <span class="name">dataFieldsModel</span>.<span class="name">get</span>(<span class="number">6</span>).<span class="name">inputText</span>;
+        <span class="name">locationPlace</span>.<span class="name">location</span>.<span class="name">address</span>.<span class="name">country</span> <span class="operator">=</span> <span class="name">dataFieldsModel</span>.<span class="name">get</span>(<span class="number">7</span>).<span class="name">inputText</span>;
+        <span class="name">locationPlace</span>.<span class="name">location</span>.<span class="name">address</span>.<span class="name">postalCode</span> <span class="operator">=</span> <span class="name">dataFieldsModel</span>.<span class="name">get</span>(<span class="number">8</span>).<span class="name">inputText</span>;
+        var <span class="name">c</span> = <span class="name">QtPositioning</span>.<span class="name">coordinate</span>(<span class="name">parseFloat</span>(<span class="name">dataFieldsModel</span>.<span class="name">get</span>(<span class="number">9</span>).<span class="name">inputText</span>),
+                                      <span class="name">parseFloat</span>(<span class="name">dataFieldsModel</span>.<span class="name">get</span>(<span class="number">10</span>).<span class="name">inputText</span>));
+        <span class="name">locationPlace</span>.<span class="name">location</span>.<span class="name">coordinate</span> <span class="operator">=</span> <span class="name">c</span>;
+        var <span class="name">phone</span> = <span class="name">Qt</span>.<span class="name">createQmlObject</span>(<span class="string">'import QtLocation 5.3; ContactDetail { }'</span>, <span class="name">locationPlace</span>);
+        <span class="name">phone</span>.<span class="name">label</span> <span class="operator">=</span> <span class="string">&quot;Phone&quot;</span>;
+        <span class="name">phone</span>.<span class="name">value</span> <span class="operator">=</span> <span class="name">dataFieldsModel</span>.<span class="name">get</span>(<span class="number">11</span>).<span class="name">inputText</span>;
+        <span class="name">locationPlace</span>.<span class="name">contactDetails</span>.<span class="name">phone</span> <span class="operator">=</span> <span class="name">phone</span>;
+        var <span class="name">fax</span> = <span class="name">Qt</span>.<span class="name">createQmlObject</span>(<span class="string">'import QtLocation 5.3; ContactDetail { }'</span>, <span class="name">locationPlace</span>);
+        <span class="name">fax</span>.<span class="name">label</span> <span class="operator">=</span> <span class="string">&quot;Fax&quot;</span>;
+        <span class="name">fax</span>.<span class="name">value</span> <span class="operator">=</span> <span class="name">dataFieldsModel</span>.<span class="name">get</span>(<span class="number">12</span>).<span class="name">inputText</span>;
+        <span class="name">locationPlace</span>.<span class="name">contactDetails</span>.<span class="name">fax</span> <span class="operator">=</span> <span class="name">fax</span>;
+        var <span class="name">email</span> = <span class="name">Qt</span>.<span class="name">createQmlObject</span>(<span class="string">'import QtLocation 5.3; ContactDetail { }'</span>, <span class="name">locationPlace</span>);
+        <span class="name">email</span>.<span class="name">label</span> <span class="operator">=</span> <span class="string">&quot;Email&quot;</span>;
+        <span class="name">email</span>.<span class="name">value</span> <span class="operator">=</span> <span class="name">dataFieldsModel</span>.<span class="name">get</span>(<span class="number">13</span>).<span class="name">inputText</span>;
+        <span class="name">locationPlace</span>.<span class="name">contactDetails</span>.<span class="name">email</span> <span class="operator">=</span> <span class="name">email</span>;
+        var <span class="name">website</span> = <span class="name">Qt</span>.<span class="name">createQmlObject</span>(<span class="string">'import QtLocation 5.3; ContactDetail { }'</span>, <span class="name">locationPlace</span>);
+        <span class="name">website</span>.<span class="name">label</span> <span class="operator">=</span> <span class="string">&quot;Website&quot;</span>;
+        <span class="name">website</span>.<span class="name">value</span> <span class="operator">=</span> <span class="name">dataFieldsModel</span>.<span class="name">get</span>(<span class="number">14</span>).<span class="name">inputText</span>;
+        <span class="name">locationPlace</span>.<span class="name">contactDetails</span>.<span class="name">website</span> <span class="operator">=</span> <span class="name">website</span>;
+        <span class="name">locationPlace</span>.<span class="name">categories</span> <span class="operator">=</span> <span class="name">__categories</span>;
+        <span class="name">locationPlace</span>.<span class="name">statusChanged</span>.<span class="name">connect</span>(<span class="name">processStatus</span>);
+        <span class="name">locationPlace</span>.<span class="name">save</span>();</pre>
+<p>Category creation is similar:</p>
+<pre class="qml"><span class="name">onGoButtonClicked</span>: {
+    var <span class="name">modifiedCategory</span> = <span class="name">category</span> ? <span class="name">category</span> : <span class="name">Qt</span>.<span class="name">createQmlObject</span>(<span class="string">'import QtLocation 5.3; Category { }'</span>, <span class="name">page</span>);
+    <span class="name">modifiedCategory</span>.<span class="name">plugin</span> <span class="operator">=</span> <span class="name">placesPlugin</span>;
+    <span class="name">modifiedCategory</span>.<span class="name">name</span> <span class="operator">=</span> <span class="name">dialogModel</span>.<span class="name">get</span>(<span class="number">0</span>).<span class="name">inputText</span>;
+    <span class="name">category</span> <span class="operator">=</span> <span class="name">modifiedCategory</span>;
+    <span class="name">category</span>.<span class="name">save</span>();
+}</pre>
+<p>Support for place and category removal can be checked at run-time by using the <a href="../QtLocation.Plugin/index.html#supportsPlaces-method">Plugin::supportsPlaces</a> method, passing in a <a href="../QtLocation.Plugin/index.html#supportsPlaces-method">Plugin::PlacesFeatures</a> flag and getting back <i>true</i> if the feature is supported. For example one would invoke <i>supportsPlaces(Plugin.RemovePlaceFeature)</i> to check if the <i>Plugin.RemovePlaceFeature</i> is supported.</p>
+<p>To remove a place, invoke its <a href="../QtLocation.Place/index.html#remove-method">remove()</a> method. To remove a category, invoke its <a href="../QtLocation.Category/index.html#remove-method">remove()</a> method.</p>
+<a name="running-the-example"></a>
+<h2 id="running-the-example">Running the Example</h2>
+<p>The example detects which plugins are available and has an option to show them in the via the Provider button.</p>
+<p>Files:</p>
+<ul>
+<li>places/places.qml</li>
+<li>places/qmlplaceswrapper.cpp</li>
+<li>places/content/places/CategoryDelegate.qml</li>
+<li>places/content/places/CategoryDialog.qml</li>
+<li>places/content/places/CategoryView.qml</li>
+<li>places/content/places/EditorialDelegate.qml</li>
+<li>places/content/places/EditorialPage.qml</li>
+<li>places/content/places/Group.qml</li>
+<li>places/content/places/MapComponent.qml</li>
+<li>places/content/places/OptionsDialog.qml</li>
+<li>places/content/places/PlaceDelegate.qml</li>
+<li>places/content/places/PlaceDialog.qml</li>
+<li>places/content/places/PlaceEditorials.qml</li>
+<li>places/content/places/PlaceImages.qml</li>
+<li>places/content/places/PlaceReviews.qml</li>
+<li>places/content/places/PlacesUtils.js</li>
+<li>places/content/places/RatingView.qml</li>
+<li>places/content/places/ReviewDelegate.qml</li>
+<li>places/content/places/ReviewPage.qml</li>
+<li>places/content/places/SearchBox.qml</li>
+<li>places/content/places/SearchResultDelegate.qml</li>
+<li>places/content/places/SearchResultView.qml</li>
+<li>places/places.pro</li>
+<li>places/placeswrapper.qrc</li>
+</ul>
+</div>
+<!-- @@@places -->
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

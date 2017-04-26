@@ -1,0 +1,676 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Import Statements | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a class="sub-nav-item" href="../index.html">SDK 15.04.1</a> &rsaquo;</li>
+
+<li><a class="sub-nav-item" href="../QtQml/index.html">QtQml</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Import Statements</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qtqml-syntax-imports.html -->
+	<!-- Source Format: qdoc -->
+<h1>Import Statements</h1>
+<div id="page_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$qtqml-syntax-imports.html-description -->
+<div class="descr"> <a name="details"></a>
+<a name="syntax-of-an-import-statement"></a>
+<h2 id="syntax-of-an-import-statement">Syntax of an Import Statement</h2>
+<p>An import statement allows clients to tell the engine which modules, JavaScript resources and component directories are used within a QML document. The types which may be used within a document depends on which modules, resources and directories are imported by the document.</p>
+<a name="import-types"></a>
+<h3 >Import Types</h3>
+<p>There are three different types of imports. Each import type has a slightly different syntax, and different semantics apply to different import types.</p>
+<a name="module-namespace-imports"></a>
+<h4 >Module (Namespace) Imports</h4>
+<p>The most common type of import is a module import. Clients can import <a href="../QtQml.qtqml-modules-identifiedmodules/index.html">QML modules</a> which register QML object types and JavaScript resources into a given namespace.</p>
+<p>The generic form of a module import is as follows:</p>
+<pre class="cpp">import <span class="operator">&lt;</span>ModuleIdentifier<span class="operator">&gt;</span> <span class="operator">&lt;</span>Version<span class="operator">.</span>Number<span class="operator">&gt;</span> <span class="operator">[</span>as <span class="operator">&lt;</span>Qualifier<span class="operator">&gt;</span><span class="operator">]</span></pre>
+<ul>
+<li>The <code>&lt;ModuleIdentifier&gt;</code> is an identifier specified in dotted URI notation, which uniquely identifies the type namespace provided by the module.</li>
+<li>The <code>&lt;Version.Number&gt;</code> is a version of the form <code>MajorVersion.MinorVersion</code> which specifies which definitions of various object types and JavaScript resources will be made available due to the import.</li>
+<li>The <code>&lt;Qualifier&gt;</code> is an optional local namespace identifier into which the object types and JavaScript resources provided by the module will be installed, if given. If omitted, the object types and JavaScript resources provided by the module will be installed into the global namespace.</li>
+</ul>
+<p>An example of an unqualified module import is as follows:</p>
+<pre class="cpp">import <span class="type">QtQuick</span> <span class="number">2.0</span></pre>
+<p>This import allows the use of all of the types provided by the <code>QtQuick</code> module without needing to specify a qualifier. For example, the client code to create a rectangle is as follows:</p>
+<pre class="qml">import QtQuick 2.0
+<span class="type">Rectangle</span> {
+    <span class="name">width</span>: <span class="number">200</span>
+    <span class="name">height</span>: <span class="number">100</span>
+    <span class="name">color</span>: <span class="string">&quot;red&quot;</span>
+}</pre>
+<p>An example of a qualified module import is as follows:</p>
+<pre class="cpp">import <span class="type">QtQuick</span> <span class="number">2.0</span> as Quick</pre>
+<p>This import allows multiple modules which provide conflicting type names to be imported at the same time, however since each usage of a type provided by a module which was imported into a qualified namespace must be preceded by the qualifier, the conflict is able to be resolved unambiguously by the QML engine.</p>
+<p>An example of client code which creates a rectangle after using a qualified module import is as follows:</p>
+<pre class="qml">import QtQuick 2.0 as Quick
+<span class="type">Quick</span>.Rectangle {
+    <span class="name">width</span>: <span class="number">200</span>
+    <span class="name">height</span>: <span class="number">100</span>
+    <span class="name">color</span>: <span class="string">&quot;red&quot;</span>
+}</pre>
+<p>For more information about qualified imports, see the upcoming section on <a href="index.html#importing-into-a-qualified-local-namespace">Importing Into A Qualified Local Namespace</a>.</p>
+<p>Note that if a QML document does not import a module which provides a particular QML object type, but attempts to use that object type anyway, an error will occur. For example, the following QML document does not import <code>QtQuick</code> and thus attempting to use the <code>Rectangle</code> type will fail:</p>
+<pre class="qml"><span class="type">Rectangle</span> {
+    <span class="name">width</span>: <span class="number">200</span>
+    <span class="name">height</span>: <span class="number">100</span>
+    <span class="name">color</span>: <span class="string">&quot;red&quot;</span>
+}</pre>
+<p>In this case, the engine will emit an error and refuse to load the file.</p>
+<a name="non-module-namespace-imports"></a>
+<h5 >Non-module Namespace Imports</h5>
+<p>Types can also be registered into namespaces directly via the various registration functions in C++ (such as qmlRegisterType()). The types which have been registered into a namespace in this way may be imported by importing the namespace, as if the namespace was a module identifier.</p>
+<p>This is most common in client applications which define their own QML object types in C++ and register them with the QML type system manually.</p>
+<a name="importing-into-a-qualified-local-namespace"></a>
+<h5 >Importing into a Qualified Local Namespace</h5>
+<p>The <code>import</code> statement may optionally use the <code>as</code> keyword to specify that the types should be imported into a particular document-local namespace. If a namespace is specified, then any references to the types made available by the import must be prefixed by the local namespace qualifier.</p>
+<p>Below, the <code>QtQuick</code> module is imported into the namespace &quot;CoreItems&quot;. Now, any references to types from the <code>QtQuick</code> module must be prefixed with the <code>CoreItems</code> name:</p>
+<pre class="qml">import QtQuick 2.0 as CoreItems
+<span class="type">CoreItems</span>.Rectangle {
+    <span class="name">width</span>: <span class="number">100</span>; <span class="name">height</span>: <span class="number">100</span>
+    <span class="type">CoreItems</span>.Text { <span class="name">text</span>: <span class="string">&quot;Hello, world!&quot;</span> }
+    <span class="comment">// WRONG! No namespace prefix - the Text type won't be found</span>
+    <span class="type">Text</span> { <span class="name">text</span>: <span class="string">&quot;Hello, world!&quot;</span> }
+}</pre>
+<p>A namespace acts as an identifier for a module within the scope of the file. The namespace does not become an attribute of the root object that can be referred to externally as can be done with properties, signals and methods.</p>
+<p>The namespaced import is useful if there is a requirement to use two QML types that have the same name but are located in different modules. In this case the two modules can be imported into different namespaces to ensure the code is referring to the correct type:</p>
+<pre class="qml">import QtQuick 2.0 as CoreItems
+import &quot;../textwidgets&quot; as MyModule
+<span class="type">CoreItems</span>.Rectangle {
+    <span class="name">width</span>: <span class="number">100</span>; <span class="name">height</span>: <span class="number">100</span>
+    <span class="type">MyModule</span>.Text { <span class="name">text</span>: <span class="string">&quot;Hello from my custom text item!&quot;</span> }
+    <span class="type">CoreItems</span>.Text { <span class="name">text</span>: <span class="string">&quot;Hello from Qt Quick!&quot;</span> }
+}</pre>
+<p>Note that multiple modules can be imported into the same namespace in the same way that multiple modules can be imported into the global namespace. For example:</p>
+<pre class="qml">import QtQuick 2.0 as Project
+import QtMultimedia 5.0 as Project
+<span class="type">Project</span>.Rectangle {
+    <span class="name">width</span>: <span class="number">100</span>; <span class="name">height</span>: <span class="number">50</span>
+    <span class="type">Project</span>.Audio {
+        <span class="name">source</span>: <span class="string">&quot;music.wav&quot;</span>
+        <span class="name">autoPlay</span>: <span class="number">true</span>
+    }
+}</pre>
+<a name="directory-imports"></a>
+<h4 >Directory Imports</h4>
+<p>A directory which contains QML documents may also be imported directly in a QML document. This provides a simple way for QML types to be segmented into reusable groupings: directories on the filesystem.</p>
+<p>The generic form of a directory import is as follows:</p>
+<pre class="qml">import &quot;&lt;DirectoryPath&gt;&quot; [as &lt;Qualifier&gt;]</pre>
+<p><b>Note: </b>Import paths are network transparent: applications can import documents from remote paths just as simply as documents from local paths. See the general URL resolution rules for <a href="../QtQml.qtqml-documents-networktransparency/index.html">Network Transparency</a> in QML documents. If the directory is remote, it must contain a <a href="../QtQml.qtqml-syntax-directoryimports/index.html#directory-listing-qmldir-files">directory import listing qmldir file</a> as the QML engine cannot determine the contents of a remote directory if that <code>qmldir</code> file does not exist.</p><p>Similar semantics for the <code>&lt;Qualifier&gt;</code> apply to directory imports as for module imports; for more information on the topic, please see the previous section about <a href="index.html#importing-into-a-qualified-local-namespace">Importing into a Qualified Local Namespace</a>.</p>
+<p>For more information about directory imports, please see the in-depth documentation about <a href="../QtQml.qtqml-syntax-directoryimports/index.html">directory imports</a>.</p>
+<a name="javascript-resource-imports"></a>
+<h4 >JavaScript Resource Imports</h4>
+<p>JavaScript resources may be imported directly in a QML document. Every JavaScript resource must have an identifier by which it is accessed.</p>
+<p>The generic form of a JavaScript resource import is as follows:</p>
+<pre class="cpp">import <span class="string">&quot;&lt;JavaScriptFile&gt;&quot;</span> as <span class="operator">&lt;</span>Identifier<span class="operator">&gt;</span></pre>
+<p>Note that the <code>&lt;Identifier&gt;</code> must be unique within a QML document, unlike the local namespace qualifier which can be applied to module imports.</p>
+<a name="javascript-resources-from-modules"></a>
+<h5 >JavaScript Resources from Modules</h5>
+<p>Javascript files can be provided by modules, by adding identifier definitions to the <code>qmldir</code> file which specifies the module.</p>
+<p>For example, if the <code>projects.MyQMLProject.MyFunctions</code> module is specified with the following <code>qmldir</code> file, and installed into the QML import path:</p>
+<pre class="cpp">module projects<span class="operator">.</span>MyQMLProject<span class="operator">.</span>MyFunctions
+SystemFunctions <span class="number">1.0</span> SystemFunctions<span class="operator">.</span>js
+UserFunctions <span class="number">1.0</span> UserFunctions<span class="operator">.</span>js</pre>
+<p>a client application is able to import the JavaScript resources declared in the module by importing the module and using the identifier associated with a declared resource:</p>
+<pre class="qml">import QtQuick 2.0
+import projects.MyQMLProject.MyFunctions 1.0
+<span class="type">Item</span> {
+    <span class="name">Component</span>.onCompleted: { <span class="name">SystemFunctions</span>.<span class="name">cleanUp</span>(); }
+}</pre>
+<p>If the module was imported into a document-local namespace, the JavaScript resource identifiers must be prefixed with the namespace qualifier in order to be used:</p>
+<pre class="qml">import QtQuick 2.0
+import projects.MyQMLProject.MyFunctions 1.0 as MyFuncs
+import org.example.Functions 1.0 as TheirFuncs
+<span class="type">Item</span> {
+    <span class="name">Component</span>.onCompleted: {
+        <span class="name">MyFuncs</span>.<span class="name">SystemFunctions</span>.<span class="name">cleanUp</span>();
+        <span class="name">TheirFuncs</span>.<span class="name">SystemFunctions</span>.<span class="name">shutdown</span>();
+    }
+}</pre>
+<a name="further-information"></a>
+<h5 >Further Information</h5>
+<p>For more information about JavaScript resources, please see the documentation about <a href="../QtQml.qtqml-javascript-resources/index.html">defining JavaScript resources in QML</a>, and for more information about how to import JavaScript resources, and how imports can be used from within JavaScript resources, please see the in-depth documentation about <a href="../QtQml.qtqml-javascript-imports/index.html">importing JavaScript resources in QML</a>.</p>
+<a name="qml-import-path"></a>
+<h2 id="qml-import-path">QML Import Path</h2>
+<p>When an <a href="../QtQml.qtqml-modules-identifiedmodules/index.html">identified module</a> is imported, the QML engine searches the <i>import path</i> for a matching module.</p>
+<p>This import path, as returned by QQmlEngine::importPathList(), defines the default locations to be searched by the engine. By default, this list contains:</p>
+<ul>
+<li>The directory of the current file</li>
+<li>The location specified by QLibraryInfo::Qml2ImportsPath</li>
+<li>Paths specified by the <code>QML2_IMPORT_PATH</code> environment variable</li>
+</ul>
+<p>Additional import paths can be added through QQmlEngine::addImportPath() or the <code>QML2_IMPORT_PATH</code> environment variable. When running the qmlscene tool, you can also use the <code>-I</code> option to add an import path.</p>
+<a name="debugging"></a>
+<h2 id="debugging">Debugging</h2>
+<p>The <code>QML_IMPORT_TRACE</code> environment variable can be useful for debugging when there are problems with finding and loading modules. See Debugging module imports for more information.</p>
+</div>
+<!-- @@@qtqml-syntax-imports.html -->
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,688 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>DelegateModelGroup [sdk-15.04.4/QtQml.DelegateModelGroup] | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a href="../index.html">SDK 15.04.4</a> &rsaquo;</li>
+
+<li><a href="../QtQml/index.html">QtQml</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">DelegateModelGroup</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qml-qtqml-models-delegatemodelgroup.html -->
+	<!-- Source Format: qdoc -->
+<h1>DelegateModelGroup</h1>
+<div id="element_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$DelegateModelGroup-brief -->
+<p>Encapsulates a filtered set of visual data items More...</p>
+<!-- @@@DelegateModelGroup -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import QtQml.Models 2.1</td></tr></table></div><ul>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#count-prop">count</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#includeByDefault-prop">includeByDefault</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#name-prop">name</a></b></b> : string</li>
+</ul>
+<a name="signals"></a>
+<h2 id="signals">Signals</h2>
+<ul>
+<li class="fn">void <b><b><a href="index.html#changed-signal">changed</a></b></b>(array <i>removed</i>, array <i>inserted</i>)</li>
+</ul>
+<a name="methods"></a>
+<h2 id="methods">Methods</h2>
+<ul>
+<li class="fn">void <b><b><a href="index.html#addGroups-method">addGroups</a></b></b>(int <i>index</i>, int <i>count</i>, stringlist <i>groups</i>)</li>
+<li class="fn">void <b><b><a href="index.html#create-method-3">create</a></b></b>(jsdict <i>data</i>, array <i>groups</i>)</li>
+<li class="fn">void <b><b><a href="index.html#create-method-2">create</a></b></b>(int <i>index</i>, jsdict <i>data</i>, array <i>groups</i>)</li>
+<li class="fn">void <b><b><a href="index.html#create-method">create</a></b></b>(int <i>index</i>)</li>
+<li class="fn">object <b><b><a href="index.html#get-method">get</a></b></b>(int <i>index</i>)</li>
+<li class="fn">void <b><b><a href="index.html#insert-method-2">insert</a></b></b>(jsdict <i>data</i>, var <i>groups</i>)</li>
+<li class="fn">void <b><b><a href="index.html#insert-method">insert</a></b></b>(int <i>index</i>, jsdict <i>data</i>, array <i>groups</i>)</li>
+<li class="fn">void <b><b><a href="index.html#move-method">move</a></b></b>(var <i>from</i>, var <i>to</i>, int <i>count</i>)</li>
+<li class="fn">void <b><b><a href="index.html#remove-method">remove</a></b></b>(int <i>index</i>, int <i>count</i>)</li>
+<li class="fn">void <b><b><a href="index.html#removeGroups-method">removeGroups</a></b></b>(int <i>index</i>, int <i>count</i>, stringlist <i>groups</i>)</li>
+<li class="fn">void <b><b><a href="index.html#resolve-method">resolve</a></b></b>(int <i>from</i>, int <i>to</i>)</li>
+<li class="fn">void <b><b><a href="index.html#setGroups-method-2">setGroups</a></b></b>(int <i>index</i>, int <i>count</i>, stringlist <i>groups</i>)</li>
+<li class="fn">void <b><b><a href="index.html#setGroups-method">setGroups</a></b></b>(int <i>index</i>, int <i>count</i>, stringlist <i>groups</i>)</li>
+</ul>
+<!-- $$$DelegateModelGroup-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<p>The <a href="index.html">DelegateModelGroup</a> type provides a means to address the model data of a <a href="../QtQml.DelegateModel/index.html">DelegateModel</a>'s delegate items, as well as sort and filter these delegate items.</p>
+<p>The initial set of instantiable delegate items in a <a href="../QtQml.DelegateModel/index.html">DelegateModel</a> is represented by its <a href="../QtQml.DelegateModel/index.html#items-prop">items</a> group, which normally directly reflects the contents of the model assigned to <a href="../QtQml.DelegateModel/index.html#model-attached-prop">DelegateModel::model</a>. This set can be changed to the contents of any other member of <a href="../QtQml.DelegateModel/index.html#groups-attached-prop">DelegateModel::groups</a> by assigning the <a href="index.html#name-prop">name</a> of that <a href="index.html">DelegateModelGroup</a> to the <a href="../QtQml.DelegateModel/index.html#filterOnGroup-prop">DelegateModel::filterOnGroup</a> property.</p>
+<p>The data of an item in a <a href="index.html">DelegateModelGroup</a> can be accessed using the <a href="index.html#get-method">get()</a> function, which returns information about group membership and indexes as well as model data. In combination with the <a href="index.html#move-method">move()</a> function this can be used to implement view sorting, with <a href="index.html#remove-method">remove()</a> to filter items out of a view, or with <a href="index.html#setGroups-method">setGroups()</a> and <a href="../QtQml.Package/index.html">Package</a> delegates to categorize items into different views.</p>
+<p>Data from models can be supplemented by inserting data directly into a <a href="index.html">DelegateModelGroup</a> with the <a href="index.html#insert-method">insert()</a> function. This can be used to introduce mock items into a view, or placeholder items that are later <a href="index.html#resolve-method">resolved</a> to real model data when it becomes available.</p>
+<p>Delegate items can also be instantiated directly from a <a href="index.html">DelegateModelGroup</a> using the <a href="index.html#create-method">create()</a> function, making it possible to use <a href="../QtQml.DelegateModel/index.html">DelegateModel</a> without an accompanying view type or to cherry-pick specific items that should be instantiated irregardless of whether they're currently within a view's visible area.</p>
+<p><b>Note: </b>This type is also available as <a href="../QtQml.VisualDataGroup/index.html">VisualDataGroup</a> in the <a href="../QtQml.qtqml-index/index.html">Qt QML</a> module due to compatibility reasons.</p><p><b>See also </b>QML Dynamic View Ordering Tutorial.</p>
+<!-- @@@DelegateModelGroup -->
+<h2>Property Documentation</h2>
+<!-- $$$count -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="count-prop"><td class="tblQmlPropNode"><p><a name="count-prop"></a><span class="name">count</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the number of items in the group.</p>
+</div></div><!-- @@@count -->
+<br/>
+<!-- $$$includeByDefault -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="includeByDefault-prop"><td class="tblQmlPropNode"><p><a name="includeByDefault-prop"></a><span class="name">includeByDefault</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds whether new items are assigned to this group by default.</p>
+</div></div><!-- @@@includeByDefault -->
+<br/>
+<!-- $$$name -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="name-prop"><td class="tblQmlPropNode"><p><a name="name-prop"></a><span class="name">name</span> : <span class="type">string</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the name of the group.</p>
+<p>Each group in a model must have a unique name starting with a lower case letter.</p>
+</div></div><!-- @@@name -->
+<br/>
+<h2>Signal Documentation</h2>
+<!-- $$$changed -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="changed-signal"><td class="tblQmlFuncNode"><p><a name="changed-signal"></a><span class="type">void</span> <span class="name">changed</span>(<span class="type">array</span><i> removed</i>, <span class="type">array</span><i> inserted</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when items have been removed from or inserted into the group.</p>
+<p>Each object in the <i>removed</i> and <i>inserted</i> arrays has two values; the <i>index</i> of the first item inserted or removed and a <i>count</i> of the number of consecutive items inserted or removed.</p>
+<p>Each index is adjusted for previous changes with all removed items preceding any inserted items.</p>
+<p>The corresponding handler is <code>onChanged</code>.</p>
+</div></div><!-- @@@changed -->
+<br/>
+<h2>Method Documentation</h2>
+<!-- $$$addGroups -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="addGroups-method"><td class="tblQmlFuncNode"><p><a name="addGroups-method"></a><span class="type">void</span> <span class="name">addGroups</span>(<span class="type">int</span><i> index</i>, <span class="type">int</span><i> count</i>, <span class="type">stringlist</span><i> groups</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Adds <i>count</i> items starting at <i>index</i> to <i>groups</i>.</p>
+</div></div><!-- @@@addGroups -->
+<br/>
+<!-- $$$create -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="create-method-3"><td class="tblQmlFuncNode"><p><a name="create-method-3"></a><span class="type">void</span> <span class="name">create</span>(<span class="type">jsdict</span><i> data</i>, <span class="type">array</span><i> groups</i> = undefined)</p></td></tr></table></div></div><div class="qmldoc"><p>Returns a reference to the instantiated item at <i>index</i> in the group.</p>
+<p>If a <i>data</i> object is provided it will be <a href="index.html#insert-method">inserted</a> at <i>index</i> and an item referencing this new entry will be returned. The optional <i>groups</i> parameter identifies the groups the new entry should belong to, if unspecified this is equal to the group <a href="index.html#create-method">create()</a> was called on.</p>
+<p>All items returned by create are added to the <a href="../QtQml.DelegateModel/index.html#persistedItems-prop">persistedItems</a> group. Items in this group remain instantiated when not referenced by any view.</p>
+</div></div><!-- @@@create -->
+<br/>
+<!-- $$$create -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="create-method-2"><td class="tblQmlFuncNode"><p><a name="create-method-2"></a><span class="type">void</span> <span class="name">create</span>(<span class="type">int</span><i> index</i>, <span class="type">jsdict</span><i> data</i>, <span class="type">array</span><i> groups</i> = undefined)</p></td></tr></table></div></div><div class="qmldoc"><p>Returns a reference to the instantiated item at <i>index</i> in the group.</p>
+<p>If a <i>data</i> object is provided it will be <a href="index.html#insert-method">inserted</a> at <i>index</i> and an item referencing this new entry will be returned. The optional <i>groups</i> parameter identifies the groups the new entry should belong to, if unspecified this is equal to the group <a href="index.html#create-method">create()</a> was called on.</p>
+<p>All items returned by create are added to the <a href="../QtQml.DelegateModel/index.html#persistedItems-prop">persistedItems</a> group. Items in this group remain instantiated when not referenced by any view.</p>
+</div></div><!-- @@@create -->
+<br/>
+<!-- $$$create -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="create-method"><td class="tblQmlFuncNode"><p><a name="create-method"></a><span class="type">void</span> <span class="name">create</span>(<span class="type">int</span><i> index</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Returns a reference to the instantiated item at <i>index</i> in the group.</p>
+<p>If a <i>data</i> object is provided it will be <a href="index.html#insert-method">inserted</a> at <i>index</i> and an item referencing this new entry will be returned. The optional <i>groups</i> parameter identifies the groups the new entry should belong to, if unspecified this is equal to the group create() was called on.</p>
+<p>All items returned by create are added to the <a href="../QtQml.DelegateModel/index.html#persistedItems-prop">persistedItems</a> group. Items in this group remain instantiated when not referenced by any view.</p>
+</div></div><!-- @@@create -->
+<br/>
+<!-- $$$get -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="get-method"><td class="tblQmlFuncNode"><p><a name="get-method"></a><span class="type">object</span> <span class="name">get</span>(<span class="type">int</span><i> index</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Returns a javascript object describing the item at <i>index</i> in the group.</p>
+<p>The returned object contains the same information that is available to a delegate from the <a href="../QtQml.DelegateModel/index.html">DelegateModel</a> attached as well as the model for that item. It has the properties:</p>
+<ul>
+<li><b>model</b> The model data of the item. This is the same as the model context property in a delegate</li>
+<li><b>groups</b> A list the of names of groups the item is a member of. This property can be written to change the item's membership.</li>
+<li><b>inItems</b> Whether the item belongs to the <a href="../QtQml.DelegateModel/index.html#items-prop">items</a> group. Writing to this property will add or remove the item from the group.</li>
+<li><b>itemsIndex</b> The index of the item within the <a href="../QtQml.DelegateModel/index.html#items-prop">items</a> group.</li>
+<li><b>in&lt;GroupName&gt;</b> Whether the item belongs to the dynamic group <i>groupName</i>. Writing to this property will add or remove the item from the group.</li>
+<li><b>&lt;groupName&gt;Index</b> The index of the item within the dynamic group <i>groupName</i>.</li>
+<li><b>isUnresolved</b> Whether the item is bound to an index in the model assigned to <a href="../QtQml.DelegateModel/index.html#model-attached-prop">DelegateModel::model</a>. Returns true if the item is not bound to the model, and false if it is.</li>
+</ul>
+</div></div><!-- @@@get -->
+<br/>
+<!-- $$$insert -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="insert-method-2"><td class="tblQmlFuncNode"><p><a name="insert-method-2"></a><span class="type">void</span> <span class="name">insert</span>(<span class="type">jsdict</span><i> data</i>, <span class="type">var</span><i> groups</i> = undefined)</p></td></tr></table></div></div><div class="qmldoc"><p>Creates a new entry at <i>index</i> in a DelegateModel with the values from <i>data</i> that correspond to roles in the model assigned to DelegateModel::model.</p>
+<p>If no index is supplied the data is appended to the model.</p>
+<p>The optional <i>groups</i> parameter identifies the groups the new entry should belong to, if unspecified this is equal to the group insert was called on.</p>
+<p>Data inserted into a <a href="../QtQml.DelegateModel/index.html">DelegateModel</a> can later be merged with an existing entry in <a href="../QtQml.DelegateModel/index.html#model-attached-prop">DelegateModel::model</a> using the <a href="index.html#resolve-method">resolve()</a> function. This can be used to create placeholder items that are later replaced by actual data.</p>
+</div></div><!-- @@@insert -->
+<br/>
+<!-- $$$insert -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="insert-method"><td class="tblQmlFuncNode"><p><a name="insert-method"></a><span class="type">void</span> <span class="name">insert</span>(<span class="type">int</span><i> index</i>, <span class="type">jsdict</span><i> data</i>, <span class="type">array</span><i> groups</i> = undefined)</p></td></tr></table></div></div><div class="qmldoc"><p>Creates a new entry at <i>index</i> in a <a href="../QtQml.DelegateModel/index.html">DelegateModel</a> with the values from <i>data</i> that correspond to roles in the model assigned to <a href="../QtQml.DelegateModel/index.html#model-attached-prop">DelegateModel::model</a>.</p>
+<p>If no index is supplied the data is appended to the model.</p>
+<p>The optional <i>groups</i> parameter identifies the groups the new entry should belong to, if unspecified this is equal to the group insert was called on.</p>
+<p>Data inserted into a <a href="../QtQml.DelegateModel/index.html">DelegateModel</a> can later be merged with an existing entry in <a href="../QtQml.DelegateModel/index.html#model-attached-prop">DelegateModel::model</a> using the <a href="index.html#resolve-method">resolve()</a> function. This can be used to create placeholder items that are later replaced by actual data.</p>
+</div></div><!-- @@@insert -->
+<br/>
+<!-- $$$move -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="move-method"><td class="tblQmlFuncNode"><p><a name="move-method"></a><span class="type">void</span> <span class="name">move</span>(<span class="type">var</span><i> from</i>, <span class="type">var</span><i> to</i>, <span class="type">int</span><i> count</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Moves <i>count</i> at <i>from</i> in a group <i>to</i> a new position.</p>
+</div></div><!-- @@@move -->
+<br/>
+<!-- $$$remove -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="remove-method"><td class="tblQmlFuncNode"><p><a name="remove-method"></a><span class="type">void</span> <span class="name">remove</span>(<span class="type">int</span><i> index</i>, <span class="type">int</span><i> count</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Removes <i>count</i> items starting at <i>index</i> from the group.</p>
+</div></div><!-- @@@remove -->
+<br/>
+<!-- $$$removeGroups -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="removeGroups-method"><td class="tblQmlFuncNode"><p><a name="removeGroups-method"></a><span class="type">void</span> <span class="name">removeGroups</span>(<span class="type">int</span><i> index</i>, <span class="type">int</span><i> count</i>, <span class="type">stringlist</span><i> groups</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Removes <i>count</i> items starting at <i>index</i> from <i>groups</i>.</p>
+</div></div><!-- @@@removeGroups -->
+<br/>
+<!-- $$$resolve -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="resolve-method"><td class="tblQmlFuncNode"><p><a name="resolve-method"></a><span class="type">void</span> <span class="name">resolve</span>(<span class="type">int</span><i> from</i>, <span class="type">int</span><i> to</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Binds an unresolved item at <i>from</i> to an item in <a href="../QtQml.DelegateModel/index.html#model-attached-prop">DelegateModel::model</a> at index <i>to</i>.</p>
+<p>Unresolved items are entries whose data has been <a href="index.html#insert-method">inserted</a> into a <a href="index.html">DelegateModelGroup</a> instead of being derived from a <a href="../QtQml.DelegateModel/index.html#model-attached-prop">DelegateModel::model</a> index. Resolving an item will replace the item at the target index with the unresolved item. A resolved an item will reflect the data of the source model at its bound index and will move when that index moves like any other item.</p>
+<p>If a new item is replaced in the <a href="index.html">DelegateModelGroup</a> onChanged() handler its insertion and replacement will be communicated to views as an atomic operation, creating the appearance that the model contents have not changed, or if the unresolved and model item are not adjacent that the previously unresolved item has simply moved.</p>
+</div></div><!-- @@@resolve -->
+<br/>
+<!-- $$$setGroups -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="setGroups-method-2"><td class="tblQmlFuncNode"><p><a name="setGroups-method-2"></a><span class="type">void</span> <span class="name">setGroups</span>(<span class="type">int</span><i> index</i>, <span class="type">int</span><i> count</i>, <span class="type">stringlist</span><i> groups</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Sets the <i>groups</i> <i>count</i> items starting at <i>index</i> belong to.</p>
+</div></div><!-- @@@setGroups -->
+<br/>
+<!-- $$$setGroups -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="setGroups-method"><td class="tblQmlFuncNode"><p><a name="setGroups-method"></a><span class="type">void</span> <span class="name">setGroups</span>(<span class="type">int</span><i> index</i>, <span class="type">int</span><i> count</i>, <span class="type">stringlist</span><i> groups</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Sets the <i>groups</i> <i>count</i> items starting at <i>index</i> belong to.</p>
+</div></div><!-- @@@setGroups -->
+<br/>
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,772 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Canvas [sdk-15.04.5/QtQuick.Canvas] | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a href="../index.html">SDK 15.04.5</a> &rsaquo;</li>
+
+<li><a href="../QtQuick/index.html">QtQuick</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Canvas</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qml-qtquick-canvas.html -->
+	<!-- Source Format: qdoc -->
+<h1>Canvas</h1>
+<div id="element_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$Canvas-brief -->
+<p>Provides a 2D canvas item enabling drawing via JavaScript More...</p>
+<!-- @@@Canvas -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import QtQuick 2.4</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Since:</td><td class="memItemRight bottomAlign">  Qt 5.0</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="../QtQuick.Item/index.html">Item</a></p>
+</td></tr></table></div><ul>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#available-prop">available</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#canvasSize-prop">canvasSize</a></b></b> : size</li>
+<li class="fn"><b><b><a href="index.html#canvasWindow-prop">canvasWindow</a></b></b> : rect</li>
+<li class="fn"><b><b><a href="index.html#context-prop">context</a></b></b> : object</li>
+<li class="fn"><b><b><a href="index.html#contextType-prop">contextType</a></b></b> : string</li>
+<li class="fn"><b><b><a href="index.html#renderStrategy-prop">renderStrategy</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="index.html#renderTarget-prop">renderTarget</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="index.html#tileSize-prop">tileSize</a></b></b> : size</li>
+</ul>
+<a name="signals"></a>
+<h2 id="signals">Signals</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#imageLoaded-signal">imageLoaded</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#paint-signal">paint</a></b></b>(rect <i>region</i>)</li>
+<li class="fn"><b><b><a href="index.html#painted-signal">painted</a></b></b>()</li>
+</ul>
+<a name="methods"></a>
+<h2 id="methods">Methods</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#cancelRequestAnimationFrame-method">cancelRequestAnimationFrame</a></b></b>(long <i>handle</i>)</li>
+<li class="fn">object <b><b><a href="index.html#getContext-method">getContext</a></b></b>(string <i>contextId</i>, ... <i>args</i>)</li>
+<li class="fn"><b><b><a href="index.html#isImageError-method">isImageError</a></b></b>(url <i>image</i>)</li>
+<li class="fn"><b><b><a href="index.html#isImageLoaded-method">isImageLoaded</a></b></b>(url <i>image</i>)</li>
+<li class="fn"><b><b><a href="index.html#isImageLoading-method">isImageLoading</a></b></b>(url <i>image</i>)</li>
+<li class="fn"><b><b><a href="index.html#loadImage-method">loadImage</a></b></b>(url <i>image</i>)</li>
+<li class="fn"><b><b><a href="index.html#markDirty-method">markDirty</a></b></b>(rect <i>area</i>)</li>
+<li class="fn">long <b><b><a href="index.html#requestAnimationFrame-method">requestAnimationFrame</a></b></b>(callback)</li>
+<li class="fn"><b><b><a href="index.html#requestPaint-method">requestPaint</a></b></b>()</li>
+<li class="fn">bool <b><b><a href="index.html#save-method">save</a></b></b>(string <i>filename</i>)</li>
+<li class="fn">string <b><b><a href="index.html#toDataURL-method">toDataURL</a></b></b>(string <i>mimeType</i>)</li>
+<li class="fn"><b><b><a href="index.html#unloadImage-method">unloadImage</a></b></b>(url <i>image</i>)</li>
+</ul>
+<!-- $$$Canvas-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<p>The Canvas item allows drawing of straight and curved lines, simple and complex shapes, graphs, and referenced graphic images. It can also add text, colors, shadows, gradients, and patterns, and do low level pixel operations. The Canvas output may be saved as an image file or serialized to a URL.</p>
+<p>To define a drawing area in the Canvas item set the <code>width</code> and <code>height</code> properties. For example, the following code creates a Canvas item which has a drawing area with a height of 100 pixels and width of 200 pixels:</p>
+<pre class="qml">import QtQuick 2.0
+<span class="type"><a href="index.html">Canvas</a></span> {
+    <span class="name">id</span>: <span class="name">mycanvas</span>
+    <span class="name">width</span>: <span class="number">100</span>
+    <span class="name">height</span>: <span class="number">200</span>
+}</pre>
+<p>Currently the Canvas item only supports the two-dimensional rendering context.</p>
+<a name="threaded-rendering-and-render-target"></a>
+<h2 id="threaded-rendering-and-render-target">Threaded Rendering and Render Target</h2>
+<p>The Canvas item supports two render targets: <code>Canvas.Image</code> and <code>Canvas.FramebufferObject</code>.</p>
+<p>The <code>Canvas.Image</code> render target is a <i>QImage</i> object. This render target supports background thread rendering, allowing complex or long running painting to be executed without blocking the UI.</p>
+<p>The Canvas.FramebufferObject render target utilizes OpenGL hardware acceleration rather than rendering into system memory, which in many cases results in faster rendering. Canvas.FramebufferObject relies on the OpenGL extensions <code>GL_EXT_framebuffer_multisample</code> and <code>GL_EXT_framebuffer_blit</code> for antialiasing. It will also use more graphics memory when rendering strategy is anything other than Canvas.Cooperative.</p>
+<p>The default render target is Canvas.Image and the default <a href="index.html#renderStrategy-prop">renderStrategy</a> is Canvas.Immediate.</p>
+<a name="tiled-canvas"></a>
+<h2 id="tiled-canvas">Tiled Canvas</h2>
+<p>The Canvas item supports tiled rendering by setting <a href="index.html#canvasSize-prop">canvasSize</a>, <a href="index.html#tileSize-prop">tileSize</a> and <a href="index.html#canvasWindow-prop">canvasWindow</a> properties.</p>
+<p>Tiling allows efficient display of a very large virtual canvas via a smaller canvas window. The actual memory consumption is in relation to the canvas window size. The painting code can draw within the virtual canvas without handling coordinate system transformations.</p>
+<p>The tiles overlapping with the canvas window may be cached eliminating the need to redraw, which can lead to significantly improved performance in some situations.</p>
+<a name="pixel-operations"></a>
+<h2 id="pixel-operations">Pixel Operations</h2>
+<p>All HTML5 2D context pixel operations are supported. In order to ensure improved pixel reading/writing performance the <i>Canvas.Image</i> render target should be chosen. The <i>Canvas.FramebufferObject</i> render target requires the pixel data to be exchanged between the system memory and the graphic card, which is significantly more expensive. Rendering may also be synchronized with the V-sync signal (to avoid <a href="http://en.wikipedia.org/wiki/Screen_tearing">screen tearing</a>) which will further impact pixel operations with <code>Canvas.FrambufferObject</code> render target.</p>
+<a name="tips-for-porting-existing-html5-canvas-applications"></a>
+<h2 id="tips-for-porting-existing-html5-canvas-applications">Tips for Porting Existing HTML5 Canvas Applications</h2>
+<p>Although the Canvas item is provides a HTML5 like API, HTML5 canvas applications need to be modified to run in the Canvas item:</p>
+<ul>
+<li>Replace all DOM API calls with QML property bindings or Canvas item methods.</li>
+<li>Replace all HTML event handlers with the <a href="../QtQuick.MouseArea/index.html">MouseArea</a> item.</li>
+<li>Change setInterval/setTimeout function calls with the Timer item or the use of <a href="index.html#requestAnimationFrame-method">requestAnimationFrame()</a>.</li>
+<li>Place painting code into the <code>onPaint</code> handler and trigger painting by calling the <a href="index.html#markDirty-method">markDirty()</a> or <a href="index.html#requestPaint-method">requestPaint()</a> methods.</li>
+<li>To draw images, load them by calling the Canvas's <a href="index.html#loadImage-method">loadImage()</a> method and then request to paint them in the <code>onImageLoaded</code> handler.</li>
+</ul>
+<p>Starting Qt 5.4, the Canvas is a texture provider and can be used directly in ShaderEffects and other classes that consume texture providers.</p>
+<p><b>See also </b><a href="../QtQuick.Context2D/index.html">Context2D</a>.</p>
+<!-- @@@Canvas -->
+<h2>Property Documentation</h2>
+<!-- $$$available -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="available-prop"><td class="tblQmlPropNode"><p><a name="available-prop"></a><span class="name">available</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>Indicates when Canvas is able to provide a drawing context to operate on.</p>
+</div></div><!-- @@@available -->
+<br/>
+<!-- $$$canvasSize -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="canvasSize-prop"><td class="tblQmlPropNode"><p><a name="canvasSize-prop"></a><span class="name">canvasSize</span> : <span class="type">size</span></p></td></tr></table></div></div><div class="qmldoc"><p>Holds the logical canvas size that the context paints on.</p>
+<p>By default, the canvas size is the same size as the current canvas item size.</p>
+<p>By setting the canvasSize, <a href="index.html#tileSize-prop">tileSize</a> and <a href="index.html#canvasWindow-prop">canvasWindow</a>, the Canvas item can act as a large virtual canvas with many separately rendered tile rectangles. Only those tiles within the current canvas window are painted by the Canvas render engine.</p>
+<p><b>See also </b><a href="index.html#tileSize-prop">tileSize</a> and <a href="index.html#canvasWindow-prop">canvasWindow</a>.</p>
+</div></div><!-- @@@canvasSize -->
+<br/>
+<!-- $$$canvasWindow -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="canvasWindow-prop"><td class="tblQmlPropNode"><p><a name="canvasWindow-prop"></a><span class="name">canvasWindow</span> : <span class="type">rect</span></p></td></tr></table></div></div><div class="qmldoc"><p>Holds the current canvas visible window.</p>
+<p>By default the canvasWindow size is the same as the Canvas item size with the top-left point as (0, 0).</p>
+<p>If the <a href="index.html#canvasSize-prop">canvasSize</a> is different to the Canvas item size, the Canvas item can display different visible areas by changing the canvas windowSize and/or position.</p>
+<p><b>See also </b><a href="index.html#canvasSize-prop">canvasSize</a> and <a href="index.html#tileSize-prop">tileSize</a>.</p>
+</div></div><!-- @@@canvasWindow -->
+<br/>
+<!-- $$$context -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="context-prop"><td class="tblQmlPropNode"><p><a name="context-prop"></a><span class="name">context</span> : <span class="type">object</span></p></td></tr></table></div></div><div class="qmldoc"><p>Holds the active drawing context.</p>
+<p>If the canvas is ready and there has been a successful call to <a href="index.html#getContext-method">getContext()</a> or the <a href="index.html#contextType-prop">contextType</a> property has been set with a supported context type, this property will contain the current drawing context, otherwise null.</p>
+</div></div><!-- @@@context -->
+<br/>
+<!-- $$$contextType -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="contextType-prop"><td class="tblQmlPropNode"><p><a name="contextType-prop"></a><span class="name">contextType</span> : <span class="type">string</span></p></td></tr></table></div></div><div class="qmldoc"><p>The type of drawing context to use.</p>
+<p>This property is set to the name of the active context type.</p>
+<p>If set explicitly the canvas will attempt to create a context of the named type after becoming available.</p>
+<p>The type name is the same as used in the <a href="index.html#getContext-method">getContext()</a> call, for the 2d canvas the value will be &quot;2d&quot;.</p>
+<p><b>See also </b><a href="index.html#getContext-method">getContext()</a> and <a href="index.html#available-prop">available</a>.</p>
+</div></div><!-- @@@contextType -->
+<br/>
+<!-- $$$renderStrategy -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="renderStrategy-prop"><td class="tblQmlPropNode"><p><a name="renderStrategy-prop"></a><span class="name">renderStrategy</span> : <span class="type">enumeration</span></p></td></tr></table></div></div><div class="qmldoc"><p>Holds the current canvas rendering strategy.</p>
+<ul>
+<li>Canvas.Immediate - context will perform graphics commands immediately in the main UI thread.</li>
+<li>Canvas.Threaded - context will defer graphics commands to a private rendering thread.</li>
+<li>Canvas.Cooperative - context will defer graphics commands to the applications global render thread.</li>
+</ul>
+<p>This hint is supplied along with <a href="index.html#renderTarget-prop">renderTarget</a> to the graphics context to determine the method of rendering. A renderStrategy, <a href="index.html#renderTarget-prop">renderTarget</a> or a combination may not be supported by a graphics context, in which case the context will choose appropriate options and Canvas will signal the change to the properties.</p>
+<p>Configuration or runtime tests may cause the QML Scene Graph to render in the GUI thread. Selecting <code>Canvas.Cooperative</code>, does not guarantee rendering will occur on a thread separate from the GUI thread.</p>
+<p>The default value is <code>Canvas.Immediate</code>.</p>
+<p><b>See also </b><a href="index.html#renderTarget-prop">renderTarget</a>.</p>
+</div></div><!-- @@@renderStrategy -->
+<br/>
+<!-- $$$renderTarget -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="renderTarget-prop"><td class="tblQmlPropNode"><p><a name="renderTarget-prop"></a><span class="name">renderTarget</span> : <span class="type">enumeration</span></p></td></tr></table></div></div><div class="qmldoc"><p>Holds the current canvas render target.</p>
+<ul>
+<li>Canvas.Image - render to an in memory image buffer.</li>
+<li>Canvas.FramebufferObject - render to an OpenGL frame buffer</li>
+</ul>
+<p>This hint is supplied along with <a href="index.html#renderStrategy-prop">renderStrategy</a> to the graphics context to determine the method of rendering. A <a href="index.html#renderStrategy-prop">renderStrategy</a>, renderTarget or a combination may not be supported by a graphics context, in which case the context will choose appropriate options and Canvas will signal the change to the properties.</p>
+<p>The default render target is <code>Canvas.Image</code>.</p>
+</div></div><!-- @@@renderTarget -->
+<br/>
+<!-- $$$tileSize -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="tileSize-prop"><td class="tblQmlPropNode"><p><a name="tileSize-prop"></a><span class="name">tileSize</span> : <span class="type">size</span></p></td></tr></table></div></div><div class="qmldoc"><p>Holds the canvas rendering tile size.</p>
+<p>The Canvas item enters tiled mode by setting <a href="index.html#canvasSize-prop">canvasSize</a>, tileSize and the <a href="index.html#canvasWindow-prop">canvasWindow</a>. This can improve rendering performance by rendering and caching tiles instead of rendering the whole canvas every time.</p>
+<p>Memory will be consumed only by those tiles within the current visible region.</p>
+<p>By default the tileSize is the same as the <a href="index.html#canvasSize-prop">canvasSize</a>.</p>
+<p><b>See also </b><a href="index.html#canvasSize-prop">canvasSize</a> and <a href="index.html#canvasWindow-prop">canvasWindow</a>.</p>
+</div></div><!-- @@@tileSize -->
+<br/>
+<h2>Signal Documentation</h2>
+<!-- $$$imageLoaded -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="imageLoaded-signal"><td class="tblQmlFuncNode"><p><a name="imageLoaded-signal"></a><span class="name">imageLoaded</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when an image has been loaded.</p>
+<p>The corresponding handler is <code>onImageLoaded</code>.</p>
+<p><b>See also </b><a href="index.html#loadImage-method">loadImage()</a>.</p>
+</div></div><!-- @@@imageLoaded -->
+<br/>
+<!-- $$$paint -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="paint-signal"><td class="tblQmlFuncNode"><p><a name="paint-signal"></a><span class="name">paint</span>(<span class="type">rect</span><i> region</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when the <i>region</i> needs to be rendered. If a context is active it can be referenced from the context property.</p>
+<p>This signal can be triggered by markdirty(), <a href="index.html#requestPaint-method">requestPaint()</a> or by changing the current canvas window.</p>
+<p>The corresponding handler is <code>onPaint</code>.</p>
+</div></div><!-- @@@paint -->
+<br/>
+<!-- $$$painted -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="painted-signal"><td class="tblQmlFuncNode"><p><a name="painted-signal"></a><span class="name">painted</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted after all context painting commands are executed and the Canvas has been rendered.</p>
+<p>The corresponding handler is <code>onPainted</code>.</p>
+</div></div><!-- @@@painted -->
+<br/>
+<h2>Method Documentation</h2>
+<!-- $$$cancelRequestAnimationFrame -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="cancelRequestAnimationFrame-method"><td class="tblQmlFuncNode"><p><a name="cancelRequestAnimationFrame-method"></a><span class="name">cancelRequestAnimationFrame</span>(<span class="type">long</span><i> handle</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>This function will cancel the animation callback referenced by <i>handle</i>.</p>
+</div></div><!-- @@@cancelRequestAnimationFrame -->
+<br/>
+<!-- $$$getContext -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="getContext-method"><td class="tblQmlFuncNode"><p><a name="getContext-method"></a><span class="type">object</span> <span class="name">getContext</span>(<span class="type">string</span><i> contextId</i>, ...<i> args</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Returns a drawing context, or <code>null</code> if no context is available.</p>
+<p>The <i>contextId</i> parameter names the required context. The Canvas item will return a context that implements the required drawing mode. After the first call to getContext, any subsequent call to getContext with the same contextId will return the same context object.</p>
+<p>If the context type is not supported or the canvas has previously been requested to provide a different and incompatible context type, <code>null</code> will be returned.</p>
+<p>Canvas only supports a 2d context.</p>
+</div></div><!-- @@@getContext -->
+<br/>
+<!-- $$$isImageError -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="isImageError-method"><td class="tblQmlFuncNode"><p><a name="isImageError-method"></a><span class="name">isImageError</span>(<span class="type">url</span><i> image</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Returns true if the <i>image</i> failed to load.</p>
+<p><b>See also </b><a href="index.html#loadImage-method">loadImage()</a>.</p>
+</div></div><!-- @@@isImageError -->
+<br/>
+<!-- $$$isImageLoaded -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="isImageLoaded-method"><td class="tblQmlFuncNode"><p><a name="isImageLoaded-method"></a><span class="name">isImageLoaded</span>(<span class="type">url</span><i> image</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Returns true if the <i>image</i> is successfully loaded and ready to use.</p>
+<p><b>See also </b><a href="index.html#loadImage-method">loadImage()</a>.</p>
+</div></div><!-- @@@isImageLoaded -->
+<br/>
+<!-- $$$isImageLoading -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="isImageLoading-method"><td class="tblQmlFuncNode"><p><a name="isImageLoading-method"></a><span class="name">isImageLoading</span>(<span class="type">url</span><i> image</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Returns true if the <i>image</i> is currently loading.</p>
+<p><b>See also </b><a href="index.html#loadImage-method">loadImage()</a>.</p>
+</div></div><!-- @@@isImageLoading -->
+<br/>
+<!-- $$$loadImage -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="loadImage-method"><td class="tblQmlFuncNode"><p><a name="loadImage-method"></a><span class="name">loadImage</span>(<span class="type">url</span><i> image</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Loads the given <code>image</code> asynchronously.</p>
+<p>When the image is ready, <a href="index.html#imageLoaded-signal">imageLoaded</a> will be emitted. The loaded image can be unloaded by the <a href="index.html#unloadImage-method">unloadImage()</a> method.</p>
+<p>Note: Only loaded images can be painted on the Canvas item.</p>
+<p><b>See also </b><a href="index.html#unloadImage-method">unloadImage</a>, <a href="index.html#imageLoaded-signal">imageLoaded</a>, <a href="index.html#isImageLoaded-method">isImageLoaded()</a>, <a href="../QtQuick.Context2D/index.html#createImageData-method">Context2D::createImageData()</a>, and <a href="../QtQuick.Context2D/index.html#drawImage-method">Context2D::drawImage()</a>.</p>
+</div></div><!-- @@@loadImage -->
+<br/>
+<!-- $$$markDirty -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="markDirty-method"><td class="tblQmlFuncNode"><p><a name="markDirty-method"></a><span class="name">markDirty</span>(<span class="type">rect</span><i> area</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Mark the given <i>area</i> as dirty, so that when this area is visible the canvas renderer will redraw it. This will trigger the <code>paint</code> signal.</p>
+<p><b>See also </b><a href="index.html#paint-signal">paint</a> and <a href="index.html#requestPaint-method">requestPaint()</a>.</p>
+</div></div><!-- @@@markDirty -->
+<br/>
+<!-- $$$requestAnimationFrame -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="requestAnimationFrame-method"><td class="tblQmlFuncNode"><p><a name="requestAnimationFrame-method"></a><span class="type">long</span> <span class="name">requestAnimationFrame</span>(<span class="type">callback</span>)</p></td></tr></table></div></div><div class="qmldoc"><p>This function schedules callback to be invoked before composing the Qt Quick scene.</p>
+</div></div><!-- @@@requestAnimationFrame -->
+<br/>
+<!-- $$$requestPaint -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="requestPaint-method"><td class="tblQmlFuncNode"><p><a name="requestPaint-method"></a><span class="name">requestPaint</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Request the entire visible region be re-drawn.</p>
+<p><b>See also </b><a href="index.html#markDirty-method">markDirty()</a>.</p>
+</div></div><!-- @@@requestPaint -->
+<br/>
+<!-- $$$save -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="save-method"><td class="tblQmlFuncNode"><p><a name="save-method"></a><span class="type">bool</span> <span class="name">save</span>(<span class="type">string</span><i> filename</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Save the current canvas content into an image file <i>filename</i>. The saved image format is automatically decided by the <i>filename</i>'s suffix.</p>
+<p>Note: calling this method will force painting the whole canvas, not just the current canvas visible window.</p>
+<p><b>See also </b><a href="index.html#canvasWindow-prop">canvasWindow</a>, <a href="index.html#canvasSize-prop">canvasSize</a>, and <a href="index.html#toDataURL-method">toDataURL()</a>.</p>
+</div></div><!-- @@@save -->
+<br/>
+<!-- $$$toDataURL -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="toDataURL-method"><td class="tblQmlFuncNode"><p><a name="toDataURL-method"></a><span class="type">string</span> <span class="name">toDataURL</span>(<span class="type">string</span><i> mimeType</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Returns a data URL for the image in the canvas.</p>
+<p>The default <i>mimeType</i> is &quot;image/png&quot;.</p>
+<p><b>See also </b><a href="index.html#save-method">save()</a>.</p>
+</div></div><!-- @@@toDataURL -->
+<br/>
+<!-- $$$unloadImage -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="unloadImage-method"><td class="tblQmlFuncNode"><p><a name="unloadImage-method"></a><span class="name">unloadImage</span>(<span class="type">url</span><i> image</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Unloads the <code>image</code>.</p>
+<p>Once an image is unloaded it cannot be painted by the canvas context unless it is loaded again.</p>
+<p><b>See also </b><a href="index.html#loadImage-method">loadImage()</a>, <a href="index.html#imageLoaded-signal">imageLoaded</a>, <a href="index.html#isImageLoaded-method">isImageLoaded()</a>, <a href="../QtQuick.Context2D/index.html#createImageData-method">Context2D::createImageData()</a>, and <a href="../QtQuick.Context2D/index.html#drawImage-method">Context2D::drawImage</a>.</p>
+</div></div><!-- @@@unloadImage -->
+<br/>
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

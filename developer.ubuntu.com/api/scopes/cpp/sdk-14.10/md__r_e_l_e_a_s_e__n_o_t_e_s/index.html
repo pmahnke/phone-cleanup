@@ -1,0 +1,672 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Release notes | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/doxygen.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Scopes</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">C++</a> &rsaquo;</li>
+<li><a class="sub-nav-item" href="../index.html">SDK 14.10</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Release notes</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: md__r_e_l_e_a_s_e__n_o_t_e_s.html -->
+	<!-- Source Format: doxygen -->
+<h1>Release notes</h1>
+<div id="page_content" class="doxygen">
+<!-- Start Element Content -->
+<div class="textblock"><h1>Changes in version 0.6.7 </h1>
+<ul>
+<li>OnlineAccountClient fixes: run the internal event loop within its own context to avoid clashing with external main loop (LP: #1377147).</li>
+<li>Introduced new dependencies on dbus-test-runner and libdbustest1-dev.</li>
+<li>Fix for Zmq infinite reconnection problem (LP: #1374206)</li>
+</ul>
+<h1>Changes in version 0.6.6 </h1>
+<ul>
+<li>Added support for online accounts (via new OnlineAccountClient class).</li>
+</ul>
+<h1>Changes in version 0.6.5 </h1>
+<ul>
+<li>Implemented support for expandable preview widgets. See the documentation of PreviewWidget for details of the new widget type.</li>
+</ul>
+<h1>Changes in version 0.6.3 </h1>
+<ul>
+<li>Fix scope cache path for confined scopes.</li>
+</ul>
+<h1>Changes in version 0.6.2 </h1>
+<ul>
+<li>Move scope configuration to ~/.config/unity-scopes/</li>
+<li>New setting to enable/disable of location data being fed to scopes.</li>
+<li>New DebugMode scope configuration option.</li>
+</ul>
+<h1>Changes in version 0.6.1 </h1>
+<ul>
+<li>Clear any signal masks inherited from the parent process when forking.</li>
+<li>Allow timeout value of -1 to disable the scope idle timeout, reaper timeouts, and two-way invocation timeout.</li>
+</ul>
+<h1>Changes in version 0.6.0 </h1>
+<ul>
+<li>Added tmp_directory() method to ScopeBase, so a scope can find out where it can write temporary files.</li>
+<li>Added cache_directory() method to ScopeBase, so a scope can find out where it can write its files.</li>
+<li>Upgraded finished() callback to be more flexible and expandable.</li>
+<li>Refactored scoperunner and ScopeLoader. ScopeLoader no longer knows about the registry and scoperunner now calls RuntimeImpl::run_scope() to set the scope running, instead of duplicating lots of functionality.</li>
+<li>Removed registry parameter from ScopeBase::start(). The registry is now available via a registry() accessor on ScopeBase. The original start() method is still present, but deprecated. The default implementation of the new start() method forwards to the old one so, if a scope implements only the old one but not the new one, things still work.</li>
+<li>Made methods on ScopeBase virtual, so the testing framework can override them in a test scope.</li>
+<li>Added support for additional query reply info.</li>
+<li>Introduced QueryMetadata base for shared functionality of *Metadata classes.</li>
+<li>Added set_internet_connectivity() and internet_connectivity() to QueryMetadata.</li>
+</ul>
+<h1>Changes in version 0.5.2 </h1>
+<ul>
+<li>Added CannedQuery parameter to Category.</li>
+<li>Added support for scope settings.</li>
+<li>Added Registry.Timeout configuration parameter to Zmq.ini.</li>
+</ul>
+<h1>Changes in version 0.5.1 </h1>
+<ul>
+<li>Support nested dictionaries in appearance attributes of scope metadata. To define nested dictionary, use dots in key names in [Appearance] section of scope .ini file, e.g. "PageHeader.Logo" = "logo.svg" creates "Logo" attribute inside "PageHeader" dictionary of appearance attributes.</li>
+</ul>
+<h1>Changes in version 0.5.0 </h1>
+<ul>
+<li>Changed ScopeBase::start() method to return void instead of int, and made both start() and stop() methods virtual instead of pure virtual.</li>
+<li>Moved all filter classes except for OptionSelectorFilter into experimental namespace, since they are not currently supported by the Shell and their API may get changed.</li>
+<li>Moved Annotation class into experimental namespace. Annotations are not currently supported by the shell and should not be used as their API may change or get removed.</li>
+<li>removed deprecated SearchReply::register_annotation() method.</li>
+<li>Changes to departments API: SearchReply::register_departments() method now takes parent department argument only, and uses Department::SCPtr for it. SearchListenerBase::push() method for departments got changed to match as well. Removed constructors of Department and added static create() methods instead. Changed DepartmentList to hold Department pointers instead of values. Changed Department::set_has_subdepartments() method to take bool value (true by default).</li>
+<li>Changed parameter type for pushing categories on SearchListenerBase to Category::SCPtr const&amp;.</li>
+<li>Changed constructor of SearchQueryBase to take CannedQuery and SearchMetadata arguments. Changed constructor of PreviewQueryBase to take Result and ActionMetadata arguments. Changed ActivationQueryBase constructor to take Result, widget id and action id argument. All the constructor arguments are then available via respective getters of the base classes.</li>
+</ul>
+<h1>Changes in version 0.4.8 </h1>
+<ul>
+<li>Introduced Dir/ScopesWatcher classes to watch for updates to the scope install directories, and added API to subscribe to changes in registry.</li>
+</ul>
+<h1>Changes in version 0.4.7 </h1>
+<ul>
+<li>Implemented RatingFilter and RadioButtonsFilter.</li>
+<li>changed create() methods of OptionSelectorFilter and RangeInputFilter to return unique_ptr (UPtr) instead of shared pointers.</li>
+</ul>
+<h1>Changes in version 0.4.6 </h1>
+<ul>
+<li>Added method to get and set display hints for filters (at this moment the only display hint available is Primary hint).</li>
+<li>Added has_subdepartments flag and alternate label to Department class.</li>
+<li>Added TTL option for scope results.</li>
+</ul>
+<h1>Changes in version 0.4.5 </h1>
+<ul>
+<li>Implemented RangeInputFilter.</li>
+</ul>
+<h1>Changes in version 0.4.4 </h1>
+<ul>
+<li>The register_annotation() method of SearchReply is now deprecated - push(Annotation const&amp;) should be used instead. The display order of annotations with respect to results and categories got updated in the documentation of that method.</li>
+<li>Simplified configuration with sensible defaults for all values.</li>
+<li>scoperunner, scoperegistry, and smartscopesproxy are now install in /usr/lib/&lt;arch&gt; (instead of in a subdirectory of &lt;arch&gt;).</li>
+<li>Runtime::run_scope() now has an overload to accept a path to Runtime.ini. If no file name is passed, the system-wide Runtime.ini is used.</li>
+<li>UNIX domain sockets for Zmq are now placed under /user/run/&lt;uid&gt;/zmq by default.</li>
+</ul>
+<h1>Changes in version 0.4.2 </h1>
+<ul>
+<li>Made the scope search, activate, perform_action, and preview methods non-blocking. A (fake) QueryCtrl is returned immediately from these methods now. Calling cancel() before the server has finished creating the query remembers the cancel and sends it to the server once the server has returned the real QueryCtrl. This change should be transparent to application code (the only difference being that these methods complete faster now).</li>
+<li>CannedQuery class can now be converted to and from a scopes:// uri with to_uri() and from_uri() methods. These methods replace to_string() and from_string() methods that got removed.</li>
+</ul>
+<h1>Changes in version 0.4.0 </h1>
+<ul>
+<li>Re-factored proxy class implementation. These changes are API compatible, but not ABI compatible.</li>
+<li><p class="startli">Renaming of various API elements for consistency and clarity:</p>
+<p class="startli">PreviewWidget::add_attribute() -&gt; PreviewWidget::add_attribute_value() PreviewWidget::attributes() -&gt; PreviewWidget::attribute_values() PreviewWidget::add_component() -&gt; PreviewWidget::add_attribute_mapping() PreviewWidget::components() -&gt; PreviewWidget::attribute_mappings()</p>
+<p class="startli">ActivationListener -&gt; ActivationListenerBase ActivationListenerBase::activation_response() -&gt; ActivationListenerBase::activated()</p>
+<p class="startli">PreviewListener -&gt; PreviewListenerBase</p>
+<p class="startli">SearchListener -&gt; SearchListenerBase</p>
+<p class="startli">PreviewQuery -&gt; PreviewQueryBase</p>
+<p class="startli">SearchQuery -&gt; SearchQueryBase</p>
+<p class="startli">ActivationBase -&gt; ActivationQueryBase</p>
+<p class="startli">ReplyBase -&gt; Reply</p>
+<p class="startli">RegistryBase -&gt; Registry</p>
+<p class="startli">Query -&gt; CannedQuery CannedQuery::scope_name() -&gt; CannedQuery::scope_id()</p>
+<p class="startli">ScopeMetadata::scope_name() -&gt; CannedQuery::scope_id()</p>
+<p class="startli">Scope::create_query() -&gt; Scope::search()</p>
+<p class="startli">ScopeBase::create_query() -&gt; ScopeBase::search()</p>
+<p class="startli">SearchQuery::create_subquery() -&gt; SearchQuery::subsearch()</p>
+<p class="startli">Variant::Type: changed ordinal values of enumerators</p>
+</li>
+</ul>
+<h1>Changes in version 0.3.2 </h1>
+<ul>
+<li>ActivationResponse::set_scope_data(Variant const&amp;) and scope_data() methods have been added; they are meant to replace setHints() and hints() and use Variant instead of VariantMap for arbitrary scope data. The existing ActivationResponse::setHints(VariantMap const&amp;) and hints() methods have been marked as deprecated and for removal in 0.4.0.</li>
+</ul>
+<h1>Changes in version 0.3.1 </h1>
+<ul>
+<li>Scope::activate_preview_action() and ScopeBase::activate_preview_action() were renamed to perform_action(). They now also require widget identifier along with action id and hints.</li>
+<li>Added SearchMetadata and ActionMetadata classes; these classes are now passed to create_query(), activate(), perform_action(), preview() methods of ScopeBase and Scope (ScopeProxy) instead of a plain VariantMap.</li>
+<li>The 'Handled' state was removed from ActivationResponse::Status and two new values were added instead: ShowDash and HideDash.</li>
+<li>Annotation API changes: annotations of 'Card' type were removed and Annotation doesn't support category attribute anymore. SearchReply::push() method for annotations was renamed to register_annotation(). Annotations are now going to be displayed in the order they were registered by scopes.</li>
+<li>Result::activation_scope_name() method was renamed to target_scope_proxy() and it now returns ScopeProxy instead of a string. Client code can now use that proxy for result activation or preview calls, instead of having to do an extra registry lookup.</li>
+</ul>
+<h1>Changes in version 0.3.0 </h1>
+<ul>
+<li>Preliminary API for filters has been added via OptionSelectorFilter and FilterState classes. This part of the API is not yet supported by Unity shell and should be considered highly experimental.</li>
+<li>ScopeBase::create_query() method now takes Query object instance instead of just a search query string. Search query string is now encapsulated in the Query class and can be retrieved via Query::query_string().</li>
+<li>ScopeProxy class provides overloaded create_query methods for passing filter state and department id. Note: departments are not yet supported across the API.</li>
+<li><p class="startli">The scoperegistry allows extra scopes to be added on the command line now:</p>
+<p class="startli">$ scoperegistry some/path/Runtime.ini some/other/path/Fred.ini Joe.ini</p>
+<p class="startli">This loads Fred and Joe scopes in addition to any scopes picked up via the normal configuration. If Fred or Joe appear in configuration as well as on the command line, the config file on the command line takes precedence. The .so for additional scopes is expected to be in the same directory as the corresponding .ini file. </p>
+</li>
+</ul>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

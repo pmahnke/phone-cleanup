@@ -1,0 +1,863 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Qt Quick Demo - RSS News | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a class="sub-nav-item" href="../index.html">SDK 15.04.6</a> &rsaquo;</li>
+
+<li><a class="sub-nav-item" href="../QtQuick/index.html">QtQuick</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Qt Quick Demo - RSS News</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qtquick-demos-rssnews-example.html -->
+	<!-- Source Format: qdoc -->
+<h1>Qt Quick Demo - RSS News</h1>
+<div id="page_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$demos/rssnews-description -->
+<div class="descr"> <a name="details"></a>
+<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/351ca38c-ca83-421e-856b-7b2452266d61-api/apps/qml/sdk-15.04.6/qtquick-demos-rssnews-example/images/qtquick-demo-rssnews-small.png" alt="" /></p><p><i>RSS News</i> demonstrates the following <a href="../QtQuick.qtquick-index/index.html">Qt Quick</a> features:</p>
+<ul>
+<li>Using custom types to create screens and screen controls.</li>
+<li>Using list models and list elements to represent data.</li>
+<li>Using XML list models to download XML data.</li>
+<li>Using list views to display data.</li>
+<li>Using the Component type to create a footer for the news item list view.</li>
+<li>Using the <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04.6/QtQuick.imageelements/#image">Image</a> type to create a button for closing the app.</li>
+</ul>
+<a name="running-the-example"></a>
+<h2 id="running-the-example">Running the Example</h2>
+<p>To run the example from Qt Creator, open the <b>Welcome</b> mode and select the example from <b>Examples</b>. For more information, visit Building and Running an Example.</p>
+<a name="using-custom-types"></a>
+<h2 id="using-custom-types">Using Custom Types</h2>
+<p>In the RSS News app, we use the following custom types that are each defined in a separate .qml file:</p>
+<ul>
+<li><code>BusyIndicator.qml</code></li>
+<li><code>CategoryDelegate.qml</code></li>
+<li><code>NewsDelegate.qml</code></li>
+<li><code>RssFeeds.qml</code></li>
+<li><code>ScrollBar.qml</code></li>
+</ul>
+<p>To use the custom types, we add an import statement to the main QML file, rssnews.qml that imports the folder called <code>content</code> where the types are located:</p>
+<pre class="qml">import &quot;./content&quot;</pre>
+<a name="creating-the-main-window"></a>
+<h2 id="creating-the-main-window">Creating the Main Window</h2>
+<p>In rssnews.qml, we use a <a href="../QtQuick.Rectangle/index.html">Rectangle</a> type with custom properties to create the app main window:</p>
+<pre class="qml"><span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> {
+    <span class="name">id</span>: <span class="name">window</span>
+    <span class="name">width</span>: <span class="number">800</span>
+    <span class="name">height</span>: <span class="number">480</span>
+    property <span class="type">string</span> <span class="name">currentFeed</span>: <span class="name">rssFeeds</span>.<span class="name">get</span>(<span class="number">0</span>).<span class="name">feed</span>
+    property <span class="type">bool</span> <span class="name">loading</span>: <span class="name">feedModel</span>.<span class="name">status</span> <span class="operator">===</span> <span class="name">XmlListModel</span>.<span class="name">Loading</span>
+    property <span class="type">bool</span> <span class="name">isPortrait</span>: <span class="name">Screen</span>.<span class="name">primaryOrientation</span> <span class="operator">===</span> <span class="name">Qt</span>.<span class="name">PortraitOrientation</span></pre>
+<p>We will use the custom properties later for loading XML data and for adjusting the screen layout depending on its orientation.</p>
+<a name="creating-a-category-list"></a>
+<h2 id="creating-a-category-list">Creating a Category List</h2>
+<p>In rssnews.qml, we use the RssFeeds custom type that we specify in RssFeeds.qml to create a list of feed categories:</p>
+<pre class="qml">    <span class="type">RssFeeds</span> { <span class="name">id</span>: <span class="name">rssFeeds</span> }</pre>
+<p>In RssFeeds.qml, we use a <a href="../QtQuick.qtquick-modelviewsdata-modelview/index.html#listmodel">ListModel</a> type with a ListElement type to create a category list where list elements represent feed categories:</p>
+<pre class="qml"><span class="type">ListModel</span> {
+    <span class="type">ListElement</span> { <span class="name">name</span>: <span class="string">&quot;Top Stories&quot;</span>; <span class="name">feed</span>: <span class="string">&quot;news.yahoo.com/rss/topstories&quot;</span>; <span class="name">image</span>: <span class="string">&quot;images/TopStories.jpg&quot;</span> }
+    <span class="type">ListElement</span> { <span class="name">name</span>: <span class="string">&quot;World&quot;</span>; <span class="name">feed</span>: <span class="string">&quot;news.yahoo.com/rss/world&quot;</span>; <span class="name">image</span>: <span class="string">&quot;images/World.jpg&quot;</span> }
+    <span class="type">ListElement</span> { <span class="name">name</span>: <span class="string">&quot;Europe&quot;</span>; <span class="name">feed</span>: <span class="string">&quot;news.yahoo.com/rss/europe&quot;</span>; <span class="name">image</span>: <span class="string">&quot;images/Europe.jpg&quot;</span> }
+    <span class="type">ListElement</span> { <span class="name">name</span>: <span class="string">&quot;Asia&quot;</span>; <span class="name">feed</span>: <span class="string">&quot;news.yahoo.com/rss/asia&quot;</span>; <span class="name">image</span>: <span class="string">&quot;images/Asia.jpg&quot;</span> }
+    <span class="type">ListElement</span> { <span class="name">name</span>: <span class="string">&quot;U.S. National&quot;</span>; <span class="name">feed</span>: <span class="string">&quot;news.yahoo.com/rss/us&quot;</span>; <span class="name">image</span>: <span class="string">&quot;images/USNational.jpg&quot;</span>  }
+    <span class="type">ListElement</span> { <span class="name">name</span>: <span class="string">&quot;Politics&quot;</span>; <span class="name">feed</span>: <span class="string">&quot;news.yahoo.com/rss/politics&quot;</span>; <span class="name">image</span>: <span class="string">&quot;images/Politics.jpg&quot;</span> }
+    <span class="type">ListElement</span> { <span class="name">name</span>: <span class="string">&quot;Business&quot;</span>; <span class="name">feed</span>: <span class="string">&quot;news.yahoo.com/rss/business&quot;</span>; <span class="name">image</span>: <span class="string">&quot;images/Business.jpg&quot;</span> }
+    <span class="type">ListElement</span> { <span class="name">name</span>: <span class="string">&quot;Technology&quot;</span>; <span class="name">feed</span>: <span class="string">&quot;news.yahoo.com/rss/tech&quot;</span>; <span class="name">image</span>: <span class="string">&quot;images/Technology.jpg&quot;</span> }
+    <span class="type">ListElement</span> { <span class="name">name</span>: <span class="string">&quot;Entertainment&quot;</span>; <span class="name">feed</span>: <span class="string">&quot;news.yahoo.com/rss/entertainment&quot;</span>; <span class="name">image</span>: <span class="string">&quot;images/Entertainment.jpg&quot;</span> }
+    <span class="type">ListElement</span> { <span class="name">name</span>: <span class="string">&quot;Health&quot;</span>; <span class="name">feed</span>: <span class="string">&quot;news.yahoo.com/rss/health&quot;</span>; <span class="name">image</span>: <span class="string">&quot;images/Health.jpg&quot;</span> }
+    <span class="type">ListElement</span> { <span class="name">name</span>: <span class="string">&quot;Science&quot;</span>; <span class="name">feed</span>: <span class="string">&quot;news.yahoo.com/rss/science&quot;</span>; <span class="name">image</span>: <span class="string">&quot;images/Science.jpg&quot;</span> }
+    <span class="type">ListElement</span> { <span class="name">name</span>: <span class="string">&quot;Sports&quot;</span>; <span class="name">feed</span>: <span class="string">&quot;news.yahoo.com/rss/sports&quot;</span>; <span class="name">image</span>: <span class="string">&quot;images/Sports.jpg&quot;</span> }
+}</pre>
+<p>List elements are defined like other QML types except that they contain a collection of <i>role</i> definitions instead of properties. Roles both define how the data is accessed and include the data itself.</p>
+<p>For each list element, we use the <code>name</code> role to specify the category name, the <code>feed</code> role to specify the URL to load the data from, and the <code>image</code> role to display an image for the category.</p>
+<p>In rssnews.qml, we use a <a href="../QtQuick.ListView/index.html">ListView</a> type to display the category list:</p>
+<pre class="qml">    <span class="type"><a href="../QtQuick.ListView/index.html">ListView</a></span> {
+        <span class="name">id</span>: <span class="name">categories</span>
+        property <span class="type">int</span> <span class="name">itemWidth</span>: <span class="number">190</span>
+        <span class="name">width</span>: <span class="name">isPortrait</span> ? <span class="name">parent</span>.<span class="name">width</span> : <span class="name">itemWidth</span>
+        <span class="name">height</span>: <span class="name">isPortrait</span> ? <span class="name">itemWidth</span> : <span class="name">parent</span>.<span class="name">height</span>
+        <span class="name">orientation</span>: <span class="name">isPortrait</span> ? <span class="name">ListView</span>.<span class="name">Horizontal</span> : <span class="name">ListView</span>.<span class="name">Vertical</span>
+        <span class="name">anchors</span>.top: <span class="name">parent</span>.<span class="name">top</span>
+        <span class="name">model</span>: <span class="name">rssFeeds</span>
+        <span class="name">delegate</span>: <span class="name">CategoryDelegate</span> { <span class="name">itemSize</span>: <span class="name">categories</span>.<span class="name">itemWidth</span> }
+        <span class="name">spacing</span>: <span class="number">3</span>
+    }</pre>
+<p>To lay out the category list horizontally at the top of the window in portrait orientation and vertically on the left side in landscape orientation, we use the <code>orientation</code> property. Based on the orientation, we bind either the width or the height of the list to a fixed value (<code>itemWidth</code>).</p>
+<p>We use the <code>anchors.top</code> property to position the list view at the top of the screen in both orientations.</p>
+<p>We use the <code>model</code> property to load XML data from the <code>rssFeeds</code> model, and <code>CategoryDelegate</code> as the delegate to instantiate each item in the list.</p>
+<a name="creating-list-elements"></a>
+<h2 id="creating-list-elements">Creating List Elements</h2>
+<p>In CategoryDelegate.qml, we use the <a href="../QtQuick.Rectangle/index.html">Rectangle</a> type with custom properties to create list elements:</p>
+<pre class="qml"><span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> {
+    <span class="name">id</span>: <span class="name">delegate</span>
+    property <span class="type">bool</span> <span class="name">selected</span>: <span class="name">ListView</span>.<span class="name">isCurrentItem</span></pre>
+<p>We set the <code>selected</code> property to the <code>ListView.isCurrentItem</code> attached property to specify that <code>selected</code> is <code>true</code> if <code>delegate</code> is the current item.</p>
+<p>We use the <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04.6/QtQuick.imageelements/#image">Image</a> type <code>source</code> property to display the image, centered in the delegate, specified for the list element by the <code>image</code> role in the <code>rssFeeds</code> list model:</p>
+<pre class="qml">    <span class="type"><a href="../QtQuick.Image/index.html">Image</a></span> {
+        <span class="name">anchors</span>.centerIn: <span class="name">parent</span>
+        <span class="name">source</span>: <span class="name">image</span>
+    }</pre>
+<p>We use a <a href="../QtQuick.qtquick-releasenotes/index.html#text">Text</a> type to add titles to list elements:</p>
+<pre class="qml">    <span class="type"><a href="../QtQuick.Text/index.html">Text</a></span> {
+        <span class="name">id</span>: <span class="name">titleText</span>
+        <span class="type">anchors</span> {
+            <span class="name">left</span>: <span class="name">parent</span>.<span class="name">left</span>; <span class="name">leftMargin</span>: <span class="number">20</span>
+            <span class="name">right</span>: <span class="name">parent</span>.<span class="name">right</span>; <span class="name">rightMargin</span>: <span class="number">20</span>
+            <span class="name">top</span>: <span class="name">parent</span>.<span class="name">top</span>; <span class="name">topMargin</span>: <span class="number">20</span>
+        }
+        <span class="type">font</span> { <span class="name">pixelSize</span>: <span class="number">18</span>; <span class="name">bold</span>: <span class="number">true</span> }
+        <span class="name">text</span>: <span class="name">name</span>
+        <span class="name">color</span>: <span class="name">selected</span> ? <span class="string">&quot;#ffffff&quot;</span> : <span class="string">&quot;#ebebdd&quot;</span>
+        <span class="name">scale</span>: <span class="name">selected</span> ? <span class="number">1.15</span> : <span class="number">1.0</span>
+        Behavior on <span class="name">color</span> { <span class="type"><a href="../QtQuick.ColorAnimation/index.html">ColorAnimation</a></span> { <span class="name">duration</span>: <span class="number">150</span> } }
+        Behavior on <span class="name">scale</span> { <span class="type"><a href="../QtQuick.PropertyAnimation/index.html">PropertyAnimation</a></span> { <span class="name">duration</span>: <span class="number">300</span> } }</pre>
+<p>We use the <code>anchors</code> property to position the title at the top of the list element, with a 20-pixel margin. We use <code>font</code> properties to adjust font size and text formatting.</p>
+<p>We use the <code>color</code> property to brighten the text and to scale it slightly larger when the list item is the current item. By applying a <a href="../QtQuick.Behavior/index.html">Behavior</a> to the property, we animate the actions of selecting and deselecting list items.</p>
+<p>We use a <a href="../QtQuick.MouseArea/index.html">MouseArea</a> type to download XML data when users tap a category list element:</p>
+<pre class="qml">    <span class="type"><a href="../QtQuick.MouseArea/index.html">MouseArea</a></span> {
+        <span class="name">anchors</span>.fill: <span class="name">delegate</span>
+        <span class="name">onClicked</span>: {
+            <span class="name">delegate</span>.<span class="name">ListView</span>.<span class="name">view</span>.<span class="name">currentIndex</span> <span class="operator">=</span> <span class="name">index</span>
+            <span class="keyword">if</span> (<span class="name">window</span>.<span class="name">currentFeed</span> <span class="operator">==</span> <span class="name">feed</span>)
+                <span class="name">feedModel</span>.<span class="name">reload</span>()
+            <span class="keyword">else</span>
+                <span class="name">window</span>.<span class="name">currentFeed</span> <span class="operator">=</span> <span class="name">feed</span>
+        }
+    }</pre>
+<p>The <code>anchors.fill</code> property is set to <code>delegate</code> to enable users to tap anywhere within the list element.</p>
+<p>We use the <code>onClicked</code> signal handler to load the XML data for the category list. If the tapped category is already current, the <code>reload()</code> function is called to reload the data.</p>
+<a name="downloading-xml-data"></a>
+<h2 id="downloading-xml-data">Downloading XML Data</h2>
+<p>In rssnews.qml, we use an <a href="../QtQuick.qtquick-modelviewsdata-modelview/index.html#xmllistmodel">XmlListModel</a> type as a data source for <a href="../QtQuick.ListView/index.html">ListView</a> elements to display news items in the selected category:</p>
+<pre class="qml">    <span class="type"><a href="../QtQuick.XmlListModel.XmlListModel/index.html">XmlListModel</a></span> {
+        <span class="name">id</span>: <span class="name">feedModel</span>
+        <span class="name">source</span>: <span class="string">&quot;http://&quot;</span> <span class="operator">+</span> <span class="name">window</span>.<span class="name">currentFeed</span>
+        <span class="name">query</span>: <span class="string">&quot;/rss/channel/item[child::media:content]&quot;</span>
+        <span class="name">namespaceDeclarations</span>: <span class="string">&quot;declare namespace media = 'http://search.yahoo.com/mrss/';&quot;</span></pre>
+<p>We use the <code>source</code> property and the <code>window.currentFeed</code> custom property to fetch news items for the selected category.</p>
+<p>The <code>query</code> property specifies that the <a href="../QtQuick.qtquick-modelviewsdata-modelview/index.html#xmllistmodel">XmlListModel</a> generates a model item for each <code>&lt;item&gt;</code> in the XML document.</p>
+<p>We use the <a href="../QtQuick.XmlListModel.XmlRole/index.html">XmlRole</a> type to specify the model item attributes. Each model item has the <code>title</code>, <code>description</code>, <code>image</code>, <code>link</code>, and <code>pubDate</code> attributes that match the values of the corresponding <code>&lt;item&gt;</code> in the XML document:</p>
+<pre class="qml">        <span class="type"><a href="../QtQuick.XmlListModel.XmlRole/index.html">XmlRole</a></span> { <span class="name">name</span>: <span class="string">&quot;title&quot;</span>; <span class="name">query</span>: <span class="string">&quot;title/string()&quot;</span> }
+        <span class="comment">// Remove any links from the description</span>
+        <span class="type"><a href="../QtQuick.XmlListModel.XmlRole/index.html">XmlRole</a></span> { <span class="name">name</span>: <span class="string">&quot;description&quot;</span>; <span class="name">query</span>: <span class="string">&quot;fn:replace(description/string(), '\&amp;lt;a href=.*\/a\&amp;gt;', '')&quot;</span> }
+        <span class="type"><a href="../QtQuick.XmlListModel.XmlRole/index.html">XmlRole</a></span> { <span class="name">name</span>: <span class="string">&quot;image&quot;</span>; <span class="name">query</span>: <span class="string">&quot;media:content/@url/string()&quot;</span> }
+        <span class="type"><a href="../QtQuick.XmlListModel.XmlRole/index.html">XmlRole</a></span> { <span class="name">name</span>: <span class="string">&quot;link&quot;</span>; <span class="name">query</span>: <span class="string">&quot;link/string()&quot;</span> }
+        <span class="type"><a href="../QtQuick.XmlListModel.XmlRole/index.html">XmlRole</a></span> { <span class="name">name</span>: <span class="string">&quot;pubDate&quot;</span>; <span class="name">query</span>: <span class="string">&quot;pubDate/string()&quot;</span> }
+    }</pre>
+<p>We use the <code>feedModel</code> model in a <a href="../QtQuick.ListView/index.html">ListView</a> type to display the data:</p>
+<pre class="qml">    <span class="type"><a href="../QtQuick.ListView/index.html">ListView</a></span> {
+        <span class="name">id</span>: <span class="name">list</span>
+        <span class="name">anchors</span>.left: <span class="name">isPortrait</span> ? <span class="name">window</span>.<span class="name">left</span> : <span class="name">categories</span>.<span class="name">right</span>
+        <span class="name">anchors</span>.right: <span class="name">closeButton</span>.<span class="name">left</span>
+        <span class="name">anchors</span>.top: <span class="name">isPortrait</span> ? <span class="name">categories</span>.<span class="name">bottom</span> : <span class="name">window</span>.<span class="name">top</span>
+        <span class="name">anchors</span>.bottom: <span class="name">window</span>.<span class="name">bottom</span>
+        <span class="name">anchors</span>.leftMargin: <span class="number">30</span>
+        <span class="name">anchors</span>.rightMargin: <span class="number">4</span>
+        <span class="name">clip</span>: <span class="name">isPortrait</span>
+        <span class="name">model</span>: <span class="name">feedModel</span>
+        <span class="name">footer</span>: <span class="name">footerText</span>
+        <span class="name">delegate</span>: <span class="name">NewsDelegate</span> {}
+    }</pre>
+<p>To list the news items below the category list in portrait orientation and to its right in landscape orientation, we use the <code>isPortrait</code> custom property to anchor the top of the news items list to the left of <code>window</code> and bottom of <code>categories</code> in portrait orientation and to the right of <code>categories</code> and bottom of <code>window</code> in landscape orientation.</p>
+<p>We use the <code>anchors.bottom</code> property to anchor the bottom of the list view to the bottom of the window in both orientations.</p>
+<p>In portrait orientation, we clip the painting of the news items to the bounding rectangle of the list view to avoid graphical artifacts when news items are scrolled over other items. In landscape, this is not required, because the list spans the entire screen vertically.</p>
+<p>We use the <code>model</code> property to load XML data from the <code>feedModel</code> model, and use <code>NewsDelegate</code> as the delegate to instantiate each item in the list.</p>
+<p>In NewsDelegate.qml, we use a <a href="../QtQuick.qtquick-positioning-layouts/index.html#column">Column</a> type to lay out the XML data:</p>
+<pre class="qml"><span class="type"><a href="../QtQuick.Column/index.html">Column</a></span> {
+    <span class="name">id</span>: <span class="name">delegate</span>
+    <span class="name">width</span>: <span class="name">delegate</span>.<span class="name">ListView</span>.<span class="name">view</span>.<span class="name">width</span>
+    <span class="name">spacing</span>: <span class="number">8</span></pre>
+<p>Within the column, we use a <a href="../QtQuick.qtquick-positioning-layouts/index.html#row">Row</a> and another column to position images and title text:</p>
+<pre class="qml">    <span class="type"><a href="../QtQuick.Row/index.html">Row</a></span> {
+        <span class="name">width</span>: <span class="name">parent</span>.<span class="name">width</span>
+        <span class="name">spacing</span>: <span class="number">8</span>
+        <span class="type"><a href="../QtQuick.Column/index.html">Column</a></span> {
+            <span class="type"><a href="../QtQuick.Item/index.html">Item</a></span> {
+                <span class="name">width</span>: <span class="number">4</span>
+                <span class="name">height</span>: <span class="name">titleText</span>.<span class="name">font</span>.<span class="name">pixelSize</span> <span class="operator">/</span> <span class="number">4</span>
+            }
+            <span class="type"><a href="../QtQuick.Image/index.html">Image</a></span> {
+                <span class="name">id</span>: <span class="name">titleImage</span>
+                <span class="name">source</span>: <span class="name">image</span>
+            }
+        }
+        <span class="type"><a href="../QtQuick.Text/index.html">Text</a></span> {
+            <span class="name">id</span>: <span class="name">titleText</span>
+            <span class="name">text</span>: <span class="name">title</span>
+            <span class="name">width</span>: <span class="name">delegate</span>.<span class="name">width</span> <span class="operator">-</span> <span class="name">titleImage</span>.<span class="name">width</span>
+            <span class="name">wrapMode</span>: <span class="name">Text</span>.<span class="name">WordWrap</span>
+            <span class="name">font</span>.pixelSize: <span class="number">26</span>
+            <span class="name">font</span>.bold: <span class="number">true</span>
+        }
+    }</pre>
+<p>We generate a textual representation of how long ago the item was posted using the <code>timeSinceEvent()</code> JavaScript function:</p>
+<pre class="qml">    <span class="type"><a href="../QtQuick.Text/index.html">Text</a></span> {
+        <span class="name">width</span>: <span class="name">delegate</span>.<span class="name">width</span>
+        <span class="name">font</span>.pixelSize: <span class="number">12</span>
+        <span class="name">textFormat</span>: <span class="name">Text</span>.<span class="name">RichText</span>
+        <span class="name">font</span>.italic: <span class="number">true</span>
+        <span class="name">text</span>: <span class="name">timeSinceEvent</span>(<span class="name">pubDate</span>) <span class="operator">+</span> <span class="string">&quot; (&lt;a href=\&quot;&quot;</span> <span class="operator">+</span> <span class="name">link</span> <span class="operator">+</span> <span class="string">&quot;\&quot;&gt;Link&lt;/a&gt;)&quot;</span>
+        <span class="name">onLinkActivated</span>: {
+            <span class="name">Qt</span>.<span class="name">openUrlExternally</span>(<span class="name">link</span>)
+        }
+    }</pre>
+<p>We use the <code>onLinkActivated</code> signal handler to open the URL in an external browser when users select the link.</p>
+<a name="providing-feedback-to-users"></a>
+<h2 id="providing-feedback-to-users">Providing Feedback to Users</h2>
+<p>In CategoryDelegate.qml, we use the <code>BusyIndicator</code> custom type to indicate activity while the XML data is being loaded:</p>
+<pre class="qml">    <span class="type">BusyIndicator</span> {
+        <span class="name">scale</span>: <span class="number">0.8</span>
+        <span class="name">visible</span>: <span class="name">delegate</span>.<span class="name">ListView</span>.<span class="name">isCurrentItem</span> <span class="operator">&amp;&amp;</span> <span class="name">window</span>.<span class="name">loading</span>
+        <span class="name">anchors</span>.centerIn: <span class="name">parent</span>
+    }</pre>
+<p>We use the <code>scale</code> property to reduce the indicator size to <code>0.8</code>. We bind the <code>visible</code> property to the <code>isCurrentItem</code> attached property of the <code>delegate</code> list view and <code>loading</code> property of the main window to display the indicator image when a category list item is the current item and XML data is being loaded.</p>
+<p>We define the <code>BusyIndicator</code> type in <code>BusyIndicator.qml</code>. We use an <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04.6/QtQuick.imageelements/#image">Image</a> type to display an image and apply a <a href="../QtQuick.NumberAnimation/index.html">NumberAnimation</a> to its <code>rotation</code> property to rotate the image in an infinite loop:</p>
+<pre class="qml"><span class="type"><a href="../QtQuick.Image/index.html">Image</a></span> {
+    <span class="name">id</span>: <span class="name">container</span>
+    <span class="name">source</span>: <span class="string">&quot;images/busy.png&quot;</span>;
+    NumberAnimation on <span class="name">rotation</span> {
+        <span class="name">running</span>: <span class="name">container</span>.<span class="name">visible</span>
+        <span class="name">from</span>: <span class="number">0</span>; <span class="name">to</span>: <span class="number">360</span>;
+        <span class="name">loops</span>: <span class="name">Animation</span>.<span class="name">Infinite</span>;
+        <span class="name">duration</span>: <span class="number">1200</span>
+    }
+}</pre>
+<p>In your apps, you can also use the BusyIndicator type from the Qt Quick Controls module.</p>
+<a name="creating-scroll-bars"></a>
+<h2 id="creating-scroll-bars">Creating Scroll Bars</h2>
+<p>In rssnews.qml, we use our own custom <code>ScrollBar</code> type to create scroll bars in the category and news item list views. In your apps, you can also use the ScrollView type from the Qt Quick Controls module.</p>
+<p>First, we create a scroll bar in the category list view. We bind the <code>orientation</code> property to the <code>isPortrait</code> property and to the <code>Horizontal</code> value of the <code>Qt::Orientation</code> enum type to display a horizontal scroll bar in portrait orientation and to the <code>Vertical</code> value to display a vertical scroll bar in landscape orientation:</p>
+<pre class="qml">    <span class="type">ScrollBar</span> {
+        <span class="name">id</span>: <span class="name">listScrollBar</span>
+        <span class="name">orientation</span>: <span class="name">isPortrait</span> ? <span class="name">Qt</span>.<span class="name">Horizontal</span> : <span class="name">Qt</span>.<span class="name">Vertical</span>
+        <span class="name">height</span>: <span class="name">isPortrait</span> ? <span class="number">8</span> : <span class="name">categories</span>.<span class="name">height</span>;
+        <span class="name">width</span>: <span class="name">isPortrait</span> ? <span class="name">categories</span>.<span class="name">width</span> : <span class="number">8</span>
+        <span class="name">scrollArea</span>: <span class="name">categories</span>;
+        <span class="name">anchors</span>.right: <span class="name">categories</span>.<span class="name">right</span>
+    }</pre>
+<p>Same as with the <code>categories</code> list view, we adjust the width and height of the scroll bar based on the <code>isPortrait</code> property.</p>
+<p>We use the <code>scrollArea</code> property to display the scroll bar in the <code>categories</code> list view.</p>
+<p>We use the <code>anchors.right</code> property to anchor the scroll bar to the right side of the category list.</p>
+<pre class="qml">    <span class="type">ScrollBar</span> {
+        <span class="name">scrollArea</span>: <span class="name">list</span>
+        <span class="name">width</span>: <span class="number">8</span>
+        <span class="name">anchors</span>.right: <span class="name">window</span>.<span class="name">right</span>
+        <span class="name">anchors</span>.top: <span class="name">isPortrait</span> ? <span class="name">categories</span>.<span class="name">bottom</span> : <span class="name">window</span>.<span class="name">top</span>
+        <span class="name">anchors</span>.bottom: <span class="name">window</span>.<span class="name">bottom</span>
+    }</pre>
+<p>Second, we create another scroll bar in the news item list view. We want a vertical scroll bar to appear on the right side of the view regardless of screen orientation, so we can set the <code>width</code> property to <code>8</code> and bind the <code>anchors.right</code> property to the <code>window.right</code> property. We use the <code>anchors.top</code> property to anchor the scroll bar top to the bottom of the category list in portrait orientation and to the top of the news item list in landscape orientation. We use the <code>anchors.bottom</code> property to anchor the scroll bar bottom to the list view bottom in both orientations.</p>
+<p>We define the <code>ScrollBar</code> type in <code>ScrollBar.qml</code>. We use an <a href="../QtQuick.Item/index.html">Item</a> type with custom properties to create a container for the scroll bar:</p>
+<pre class="qml"><span class="type"><a href="../QtQuick.Item/index.html">Item</a></span> {
+    <span class="name">id</span>: <span class="name">container</span>
+    property <span class="type">variant</span> <span class="name">scrollArea</span>
+    property <span class="type">int</span> <span class="name">orientation</span>: <span class="name">Qt</span>.<span class="name">Vertical</span>
+    <span class="name">opacity</span>: <span class="number">0</span></pre>
+<p>We use a <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04.6/QtQuick.imageelements/#borderimage">BorderImage</a> type to display the scroll bar thumb at the x and y position that we calculate by using the <code>position()</code> function:</p>
+<pre class="qml">    <span class="type"><a href="../QtQuick.BorderImage/index.html">BorderImage</a></span> {
+        <span class="name">source</span>: <span class="string">&quot;images/scrollbar.png&quot;</span>
+        <span class="type">border</span> { <span class="name">left</span>: <span class="number">1</span>; <span class="name">right</span>: <span class="number">1</span>; <span class="name">top</span>: <span class="number">1</span>; <span class="name">bottom</span>: <span class="number">1</span> }
+        <span class="name">x</span>: <span class="name">container</span>.<span class="name">orientation</span> <span class="operator">==</span> <span class="name">Qt</span>.<span class="name">Vertical</span> ? <span class="number">2</span> : <span class="name">position</span>()
+        <span class="name">y</span>: <span class="name">container</span>.<span class="name">orientation</span> <span class="operator">==</span> <span class="name">Qt</span>.<span class="name">Vertical</span> ? <span class="name">position</span>() : <span class="number">2</span>
+        <span class="name">width</span>: <span class="name">container</span>.<span class="name">orientation</span> <span class="operator">==</span> <span class="name">Qt</span>.<span class="name">Vertical</span> ? <span class="name">container</span>.<span class="name">width</span> <span class="operator">-</span> <span class="number">4</span> : <span class="name">size</span>()
+        <span class="name">height</span>: <span class="name">container</span>.<span class="name">orientation</span> <span class="operator">==</span> <span class="name">Qt</span>.<span class="name">Vertical</span> ? <span class="name">size</span>() : <span class="name">container</span>.<span class="name">height</span> <span class="operator">-</span> <span class="number">4</span>
+    }</pre>
+<p>We use the <code>size</code> function to calculate the thumb width and height depending on the screen orientation.</p>
+<p>We use <code>states</code> to make the scroll bar visible when the users move the scroll area:</p>
+<pre class="qml">    <span class="name">states</span>: <span class="name">State</span> {
+        <span class="name">name</span>: <span class="string">&quot;visible&quot;</span>
+        <span class="name">when</span>: <span class="name">container</span>.<span class="name">orientation</span> <span class="operator">==</span> <span class="name">Qt</span>.<span class="name">Vertical</span> ?
+                  <span class="name">scrollArea</span>.<span class="name">movingVertically</span> :
+                  <span class="name">scrollArea</span>.<span class="name">movingHorizontally</span>
+        <span class="type"><a href="../QtQuick.PropertyChanges/index.html">PropertyChanges</a></span> { <span class="name">target</span>: <span class="name">container</span>; <span class="name">opacity</span>: <span class="number">1.0</span> }
+    }</pre>
+<p>We use <code>transitions</code> to apply a <a href="../QtQuick.NumberAnimation/index.html">NumberAnimation</a> to the <code>&quot;opacity&quot;</code> property when the state changes from &quot;visible&quot; to the default state:</p>
+<pre class="qml">    <span class="name">transitions</span>: <span class="name">Transition</span> {
+        <span class="name">from</span>: <span class="string">&quot;visible&quot;</span>; <span class="name">to</span>: <span class="string">&quot;&quot;</span>
+        <span class="type"><a href="../QtQuick.NumberAnimation/index.html">NumberAnimation</a></span> { <span class="name">properties</span>: <span class="string">&quot;opacity&quot;</span>; <span class="name">duration</span>: <span class="number">600</span> }
+    }
+}</pre>
+<a name="creating-footers"></a>
+<h2 id="creating-footers">Creating Footers</h2>
+<p>In rssnews.qml, we use a Component type with a <a href="../QtQuick.Rectangle/index.html">Rectangle</a> type to create a footer for the news list view:</p>
+<pre class="qml">    <span class="type">Component</span> {
+        <span class="name">id</span>: <span class="name">footerText</span>
+        <span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> {
+            <span class="name">width</span>: <span class="name">parent</span>.<span class="name">width</span>
+            <span class="name">height</span>: <span class="name">closeButton</span>.<span class="name">height</span>
+            <span class="name">color</span>: <span class="string">&quot;lightgray&quot;</span>
+            <span class="type"><a href="../QtQuick.Text/index.html">Text</a></span> {
+                <span class="name">text</span>: <span class="string">&quot;RSS Feed from Yahoo News&quot;</span>
+                <span class="name">anchors</span>.centerIn: <span class="name">parent</span>
+                <span class="name">font</span>.pixelSize: <span class="number">14</span>
+            }
+        }
+    }</pre>
+<p>We bind the <code>width</code> of the footer to the width of the component and the <code>height</code> to the of close button to align them when no news items are displayed.</p>
+<a name="creating-buttons"></a>
+<h2 id="creating-buttons">Creating Buttons</h2>
+<p>In rssnews.qml, we use an <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04.6/QtQuick.imageelements/#image">Image</a> type to create a simple push button that users can tap to close the app:</p>
+<pre class="qml">    <span class="type"><a href="../QtQuick.Image/index.html">Image</a></span> {
+        <span class="name">id</span>: <span class="name">closeButton</span>
+        <span class="name">source</span>: <span class="string">&quot;content/images/btn_close.png&quot;</span>
+        <span class="name">scale</span>: <span class="number">0.8</span>
+        <span class="name">anchors</span>.top: <span class="name">parent</span>.<span class="name">top</span>
+        <span class="name">anchors</span>.right: <span class="name">parent</span>.<span class="name">right</span>
+        <span class="name">anchors</span>.margins: <span class="number">4</span>
+        <span class="name">opacity</span>: (<span class="name">isPortrait</span> <span class="operator">&amp;&amp;</span> <span class="name">categories</span>.<span class="name">moving</span>) ? <span class="number">0.2</span> : <span class="number">1.0</span>
+        Behavior on <span class="name">opacity</span> {
+            <span class="type"><a href="../QtQuick.NumberAnimation/index.html">NumberAnimation</a></span> { <span class="name">duration</span>: <span class="number">300</span>; <span class="name">easing</span>.type: <span class="name">Easing</span>.<span class="name">OutSine</span> }
+        }
+        <span class="type"><a href="../QtQuick.MouseArea/index.html">MouseArea</a></span> {
+            <span class="name">anchors</span>.fill: <span class="name">parent</span>
+            <span class="name">onClicked</span>: {
+                <span class="name">Qt</span>.<span class="name">quit</span>()
+            }
+        }
+    }</pre>
+<p>We use <code>anchors</code> to position the close button in the top right corner of the news list view, with 4-pixel margins. Because the close button overlaps the category list in portrait orientation, we animate the <code>opacity</code> property to make the button almost fully transparent when users are scrolling the category list.</p>
+<p>We use the <code>onClicked</code> signal handler within a <a href="../QtQuick.MouseArea/index.html">MouseArea</a> to call the <code>quit()</code> function when users select the close button.</p>
+<p>Files:</p>
+<ul>
+<li>demos/rssnews/rssnews.qml</li>
+<li>demos/rssnews/content/BusyIndicator.qml</li>
+<li>demos/rssnews/content/CategoryDelegate.qml</li>
+<li>demos/rssnews/content/NewsDelegate.qml</li>
+<li>demos/rssnews/content/RssFeeds.qml</li>
+<li>demos/rssnews/content/ScrollBar.qml</li>
+<li>demos/rssnews/main.cpp</li>
+<li>demos/rssnews/rssnews.pro</li>
+<li>demos/rssnews/rssnews.qmlproject</li>
+<li>demos/rssnews/rssnews.qrc</li>
+</ul>
+</div>
+<p><b>See also </b>QML Applications.</p>
+<!-- @@@demos/rssnews -->
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

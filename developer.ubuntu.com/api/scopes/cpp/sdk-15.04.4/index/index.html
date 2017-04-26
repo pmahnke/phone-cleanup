@@ -1,0 +1,1443 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Unity Scopes API | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/doxygen.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Scopes</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">C++</a> &rsaquo;</li>
+<li><a class="sub-nav-item" href="../index.html">SDK 15.04.4</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Unity Scopes API</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: index.html -->
+	<!-- Source Format: doxygen -->
+<h1>Unity Scopes API</h1>
+<div id="page_content" class="doxygen">
+<!-- Start Element Content -->
+<div class="textblock"><h1><a class="anchor" id="overview"></a>
+What are scopes</h1>
+<h2><a class="anchor" id="intro"></a>
+Introduction</h2>
+<p>One of Unity’s core features on the desktop is the Dash. The Dash allows users to search for and discover virtually anything, from local files and applications to web content and other online data. The Dash achieves this by interfacing with one or more search plug-ins called “scopes”, such as “Apps”, “Music”, “Videos”, “Amazon”, “Wikipedia”, and “Youtube”.</p>
+<p>On the phone and tablet, scopes make up the central user interface, as they provide everything a user needs from an operating system. Scopes enable users to locate and launch applications, access local files, play music and videos, search the web, manage their favourite social network, keep up with the latest news, and much more.</p>
+<p>Each scope is a dedicated search engine for the category of data it represents. The data source could be a local database, a web service, or even an aggregation of other scopes. (For example, the “Music” scope aggregates “Local Music” and “Online Music” scopes). A scope is responsible for performing the actual search and returning the best possible results for each query it receives.</p>
+<p>This document describes how to implement, test, and package your own scope using the Unity Scopes C++ API (unity-scopes-api).</p>
+<h1><a class="anchor" id="develop"></a>
+Developing scopes</h1>
+<h2><a class="anchor" id="starting"></a>
+Getting started</h2>
+<p>A simple C++ scope template with a cmake build system is currently available as part of the Ubuntu SDK IDE. To use it, install the packages required for scope development:</p>
+<pre class="fragment">sudo apt-get install libunity-scopes-dev
+</pre><p>Now you are ready to explore and modify the sample code in the src/ directory.</p>
+<h2><a class="anchor" id="click"></a>
+Click packaging</h2>
+<p>To register your scope, you must use the "scope" click hook, and point it to a directory containing your .ini file and .so file. In the template, a manifest such as the following is used:</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  <span class="stringliteral">&quot;description&quot;</span>: <span class="stringliteral">&quot;Net scope description&quot;</span>,</div>
+<div class="line">  <span class="stringliteral">&quot;framework&quot;</span>: <span class="stringliteral">&quot;ubuntu-sdk-14.10-dev1&quot;</span>,</div>
+<div class="line">  <span class="stringliteral">&quot;hooks&quot;</span>: {</div>
+<div class="line">    <span class="stringliteral">&quot;myscope&quot;</span>: {</div>
+<div class="line">      <span class="stringliteral">&quot;scope&quot;</span>: <span class="stringliteral">&quot;myscope&quot;</span>, &lt;-- Point to directory in build tree with .ini and .so</div>
+<div class="line">      <span class="stringliteral">&quot;apparmor&quot;</span>: <span class="stringliteral">&quot;scope-security.json&quot;</span> &lt;-- Point to AppArmor manifest in build tree</div>
+<div class="line">    }</div>
+<div class="line">  }</div>
+<div class="line">  <span class="stringliteral">&quot;maintainer&quot;</span>: <span class="stringliteral">&quot;Some Guy &lt;some.guy@ubuntu.com&gt;&quot;</span>,</div>
+<div class="line">  <span class="stringliteral">&quot;name&quot;</span>: <span class="stringliteral">&quot;com.ubuntu.developer.username.net-scope&quot;</span>,</div>
+<div class="line">  <span class="stringliteral">&quot;title&quot;</span>: <span class="stringliteral">&quot;Some scope&quot;</span>,</div>
+<div class="line">  <span class="stringliteral">&quot;version&quot;</span>: <span class="stringliteral">&quot;0.1&quot;</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><h3><a class="anchor" id="multiarch_click"></a>
+Multi-arch click packages</h3>
+<p>The search path for the shared library inside a click package is as follows:</p>
+<ul>
+<li>
+${SCOPE_DIRECTORY}/${DEB_HOST_MULTIARCH}/lib${SCOPE_NAME}.so </li>
+<li>
+${SCOPE_DIRECTORY}/${DEB_HOST_MULTIARCH}/${SCOPE_NAME}.so </li>
+<li>
+${SCOPE_DIRECTORY}/${DEB_HOST_MULTIARCH}/scope.so </li>
+<li>
+${SCOPE_DIRECTORY}/lib${SCOPE_NAME}.so </li>
+<li>
+${SCOPE_DIRECTORY}/${SCOPE_NAME}.so </li>
+<li>
+${SCOPE_DIRECTORY}/scope.so </li>
+</ul>
+<p>Therefore click packges can be made multi-arch aware by compiling your targets for multiple architectures, and creating, e.g. the following directory structure:</p>
+<div class="fragment"><div class="line">├── testscopeA.ini</div>
+<div class="line">├── testscopeA-settings.ini</div>
+<div class="line">├── x86_64-linux-gnu</div>
+<div class="line">|   └── libtestscopeA.so</div>
+<div class="line">└── arm-linux-gnueabihf</div>
+<div class="line">    └── libtestscopeA.so</div>
+</div><!-- fragment --><p>You must also update the manifest file 'architecture' property to enumerate the included architectures, as follows:</p>
+<div class="fragment"><div class="line"><span class="stringliteral">&quot;architecture&quot;</span>: [<span class="stringliteral">&quot;armhf&quot;</span>, <span class="stringliteral">&quot;amd64&quot;</span>]</div>
+</div><!-- fragment --><h3><a class="anchor" id="multiarch-scoperunner"></a>
+Multi-arch scope runner</h3>
+<p>Similarly to the shared libraries, when a relative path is provided the search path for custom scope runners is as follows:</p>
+<ul>
+<li>
+${SCOPE_DIRECTORY}/${DEB_HOST_MULTIARCH}/${CUSTOM_SCOPERUNNER} </li>
+<li>
+${SCOPE_DIRECTORY}/${CUSTOM_SCOPERUNNER} </li>
+</ul>
+<h3><a class="anchor" id="apparmor"></a>
+Apparmor manifest</h3>
+<p>Scopes that are packaged using click are inherently untrusted and must be confined. At present, there is only a single type of scope that can be defined: </p><ul>
+<li>
+Network scope - can access the network / internet, but is not allowed to use APIs that provide access to the user's data. </li>
+</ul>
+<p>The security manifest for this type of scope should be as follows:</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    <span class="stringliteral">&quot;template&quot;</span>: <span class="stringliteral">&quot;ubuntu-scope-network&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;policy_groups&quot;</span>: [],</div>
+<div class="line">    <span class="stringliteral">&quot;policy_version&quot;</span>: 1.2</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="impl"></a>
+Implementing a scope</h2>
+<p>This short tutorial covers the basic steps and building blocks needed to implement a scope in C++ with unity-scopes-api. For complete examples of various scopes, see the <code>demo/scopes</code> subdirectory of the unity-scopes-api source project.</p>
+<p>A typical scope implementation needs to implement interfaces of the following classes from the Scopes API: </p><ul>
+<li>
+<a class="el" href="../unity.scopes.ScopeBase/index.html" title="Base class for a scope implementation. ">unity::scopes::ScopeBase</a> - the main scope class and entry point for all incoming requests </li>
+<li>
+<a class="el" href="../unity.scopes.SearchQueryBase/index.html" title="Abstract base class to represent a particular query. ">unity::scopes::SearchQueryBase</a> - the handler for search requests </li>
+<li>
+<a class="el" href="../unity.scopes.PreviewQueryBase/index.html" title="Abstract base class to represent a particular preview. ">unity::scopes::PreviewQueryBase</a> - the handler for preview requests (only if handling previews) </li>
+<li>
+<a class="el" href="../unity.scopes.ActivationQueryBase/index.html" title="Base class for an activation request that is executed inside a scope. ">unity::scopes::ActivationQueryBase</a> - the handler for activation and preview action requests (only if handling previews and activation) </li>
+<li>
+<a class="el" href="../unity.scopes.SearchListenerBase/index.html" title="Abstract base interface for a client to receive the results of a query. ">unity::scopes::SearchListenerBase</a> - the handler for search replies (only in aggreagator scopes, to pull results from other scopes) </li>
+</ul>
+<p>The following sections show explaing these in more detail.</p>
+<h3><a class="anchor" id="simplescope"></a>
+Case 1: A simple (non-aggregating) scope</h3>
+<p>This is the typical case: a scope that connects to a remote or local backend, such as a database, and provides results in response to search queries coming from a client (that is, the Unity Dash or another scope).</p>
+<h4><a class="anchor" id="scopebase"></a>
+Implementing ScopeBase</h4>
+<p>You must create a class that derives from <a class="el" href="../unity.scopes.ScopeBase/index.html">ScopeBase</a> and implement a few methods. As a minimum, you must provide implementations of the <a class="el" href="../unity.scopes.ScopeBase/index.html#a0e4969ff26dc1d396d74c56d896fd564">search()</a> and <a class="el" href="../unity.scopes.ScopeBase/index.html#a154b9b4cfc0f40572cfec60dd819396f">preview()</a> methods.</p>
+<div class="fragment"><div class="line"><span class="keyword">using</span> <a class="code" href="../unity.scopes/index.html">unity::scopes</a>;</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">class </span>MyScope : <span class="keyword">public</span> ScopeBase</div>
+<div class="line">{</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> start(std::string <span class="keyword">const</span>&amp; scope_id) <span class="keyword">override</span>;  <span class="comment">// optional, dflt impl does nothing</span></div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> stop() <span class="keyword">override</span>;                              <span class="comment">// optional, dflt impl does nothing</span></div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> run() <span class="keyword">override</span>;                               <span class="comment">// optional, dflt impl does nothing</span></div>
+<div class="line">    <span class="keyword">virtual</span> SearchQueryBase::UPtr search(CannedQuery <span class="keyword">const</span>&amp; query,</div>
+<div class="line">                                         SearchMetadata <span class="keyword">const</span>&amp; metadata) <span class="keyword">override</span>;</div>
+<div class="line">    <span class="keyword">virtual</span> PreviewQueryBase::UPtr preview(Result <span class="keyword">const</span>&amp; result,</div>
+<div class="line">                                           ActionMetadata <span class="keyword">const</span>&amp; metadata) <span class="keyword">override</span>;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>The scopes runtime calls <a class="el" href="../unity.scopes.ScopeBase/index.html#ac25f3f326e2cf25de2f2eca18de5926c">start()</a> once prior to sending any queries. You can use it to perform one-time initialization for your scope. Note that you should not perform any lengthy operations in <code>start()</code>. Your implementation must return as quickly as possible (in a fraction of the second), so do not, for example, make synchronous network requests as part of <code>start()</code>.</p>
+<p>The scope ID passed to <code>start()</code> is taken from the name your scope's <code>.ini</code> configuration file.</p>
+<p>The scopes runtime calls <a class="el" href="../unity.scopes.ScopeBase/index.html#a80c5fec9e985dbb315d780ef2a56bfbf">stop()</a> to inform your scope that it should shut down. You can use this method to perform any one-time clean-up.</p>
+<p>Prior to sending any queries, the scopes runtime calls <a class="el" href="../unity.scopes.ScopeBase/index.html#a386e99b98318a70f25db84bbe11c0292">run()</a> if your <code>start()</code> method completed successfully (did not throw an exception). The <code>run()</code> method is called by a separate thread that you can use for your own purposes, for example, to run an event loop. The scopes runtime has no further interest in this thread, but you must ensure that, if you do not return from <code>run()</code>, you must return from <code>run()</code> in response to a call to <code>stop()</code>.</p>
+<p>For typical and simple cases, you can ignore <code>run()</code>.</p>
+<h4><a class="anchor" id="handlingsearch"></a>
+Handling search</h4>
+<p>The <a class="el" href="../unity.scopes.ScopeBase/index.html#a0e4969ff26dc1d396d74c56d896fd564" title="Called by the scopes runtime when a scope needs to instantiate a query. ">unity::scopes::ScopeBase::search()</a> method is called once for each query. Its purpose is to instantiate and return a new C++ instance that encapsulates the query, that is, <code>search()</code> is a factory method. (Do not start execution of the query as part of <code>search()</code>; the query object has a separate method for this.)</p>
+<p><code>search()</code> must return an instance of an object that implements the <a class="el" href="../unity.scopes.SearchQueryBase/index.html" title="Abstract base class to represent a particular query. ">unity::scopes::SearchQueryBase</a> interface, for example:</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>MyQuery : <span class="keyword">public</span> SearchQueryBase { ... };</div>
+<div class="line"></div>
+<div class="line">SearchQueryBase::UPtr MyScope::search(CannedQuery <span class="keyword">const</span>&amp; query, SearchMetadata <span class="keyword">const</span>&amp; metadata)</div>
+<div class="line">{</div>
+<div class="line">    SearchQueryBase::UPtr q(<span class="keyword">new</span> MyQuery(query, metadata));</div>
+<div class="line">    <span class="keywordflow">return</span> q;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>The search() method receives two arguments: a <a class="el" href="../unity.scopes.CannedQuery/index.html" title="Parameters of a search query. ">unity::scopes::CannedQuery</a> query object that (among other information) carries the actual query string, and additional parameters for the search request, passed as <a class="el" href="../unity.scopes.SearchMetadata/index.html" title="Metadata passed with search requests. ">unity::scopes::SearchMetadata</a>. The metadata includes information such as the current locale string, the form factor, and the query cardinality.</p>
+<p>Cardinality is the maximum number of results expected from a query (a value of 0 indicates no limit). For optimal performance, do not return more results than indicated by the cardinality. If you more than the requested number of results, you are wasting resources. (The scopes runtime ignores the additional results.)</p>
+<h4><a class="anchor" id="handlingaggregation"></a>
+Handling aggregation</h4>
+<p>As previously stated, SearchMetadata contains additional information about the search requests you receive, including the methods:</p>
+<ul>
+<li>
+<a class="el" href="../unity.scopes.SearchMetadata/index.html#ab999e0fd62e31b4c5e3095264ed81672">is_aggregated()</a> - true if the request was initiated by an aggregator, </li>
+<li>
+and <a class="el" href="../unity.scopes.SearchMetadata/index.html#ab00673c4b1264388e0673d525e6d883e">aggregated_keywords()</a> - the list of keywords used by the aggregator to find your scope. </li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>Please refer to the <a href="https://developer.ubuntu.com/en/scopes/tutorials/scope-keywords/">Scope Keywords</a> tutorial document for more detail on using keywords in your scope.</dd></dl>
+<p>You can use the is_aggregated() method from within <a class="el" href="../unity.scopes.SearchQueryBase/index.html#afc4f15b2266838d7da75b05ea37d504b">SearchQueryBase::run()</a> in order to ensure that an appropriate set of results are returned when queried by an aggregator:</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> MyQuery::run(SearchReplyProxy <span class="keyword">const</span>&amp; reply)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">if</span> (metadata_.is_aggregated())</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keyword">auto</span> category = reply-&gt;register_category(<span class="stringliteral">&quot;agg_cat&quot;</span>,</div>
+<div class="line">                                                 <span class="stringliteral">&quot;MyScope Featured&quot;</span>,</div>
+<div class="line">                                                 agg_icon);</div>
+<div class="line">        do_aggregated_search(reply, category);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">else</span></div>
+<div class="line">    {</div>
+<div class="line">        do_normal_search(reply);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>You may notice in the code snippet above that for each aggregated search we receive, we register a specific results category. Although aggregators may be willing to accept more than one category from its child scopes, they are only required to accept the first.</p>
+<p>Thereafter, an aggregator may choose to ignore any additional categories the child scope registers. It is therefore recommended that scope authors follow the above method of handling aggregated searches. It is also recommended that your scope provide a decent category title (e.g. "MyScope Featured"). An aggregator is likely to display this category title as is within its result set, so try to keep it clean and descriptive.</p>
+<h4><a class="anchor" id="surfacingmode"></a>
+Surfacing mode</h4>
+<p>The query string may be the empty string. If so, the UI is asking your scope to produce default results that are shown in what is known as <em>surfacing mode</em>. These are the results the UI displays if the user navigates to your scope, but has not entered a query yet. What results to show here depends on how your scope works. For example, for a music scope, the default results could be something like "Most Popular" and "Recently Played"; similarly, for a weather scope, the default results could be for the weather report for the current location. As the scope author, you need to decide what is most appropriate to show in surfacing mode. In the interests of a good user experience, it is important to show <em>something</em> here (if at all possible), so the user gets to see at least some results (instead of being confronted with a blank screen).</p>
+<p>The runtime automatically saves the results of the most recent surfacing query. If a scope cannot produce a result for a surfacing query (presumably, due to connectivity problems), calling <a class="el" href="../unity.scopes.SearchReply/index.html#a4ba805136164b11bb358917070cde24d">push_surfacing_results_from_cache()</a> pushes the results that were produced by the most recent successful surfacing query from the cache. If your scope cannot produce surfacing results, you can call this method to "replay" the results of the previous surfacing query. In turn, this avoids the user being presented with an empty screen if he/she swipes to the scope while the device does not have connectivity.</p>
+<p><code>push_surfacing_results_from_cache()</code> has an effect only if called for a surfacing query (that is, a query with an empty query string). If called for a non-empty query, it does nothing.</p>
+<p>You must call this method before calling <a class="el" href="../unity.scopes.Reply/index.html#a9ca653d5d7f7c97a781bc362f2af7749">finished()</a>, otherwise no cached results will be pushed. (<code>push_surfacing_results_from_cache() implicitly calls</code>finished()`);</p>
+<h4><a class="anchor" id="querybase"></a>
+Implementing QueryBase</h4>
+<p>You must implement a class that derives from <a class="el" href="../unity.scopes.SearchQueryBase/index.html">SearchQueryBase</a> and return an instance of this class from <code>search()</code>. Your class must implement a <a class="el" href="../unity.scopes.SearchQueryBase/index.html#afc4f15b2266838d7da75b05ea37d504b">run()</a> method. The scopes runtime calls <code>run()</code> to execute the query.</p>
+<p>The <a class="el" href="../unity.scopes/index.html#a9cd604d9b842ac3b2b8636c2165dec1f">SearchReplyProxy</a> that is passed to <code>run()</code> is an invocation handle that allows you to push results for the query back towards the client. (<code>SearchReplyProxy</code> is a <code>shared_ptr</code> to a <a class="el" href="../unity.scopes.SearchReply/index.html">SearchReply</a> object.)</p>
+<p>Two important methods of <code>SerchReply</code> are <a class="el" href="../unity.scopes.SearchReply/index.html#aaa061806a96f50ff66abc6184135ea66">register_category()</a> and <a class="el" href="../unity.scopes.SearchReply/index.html#a63d6de93152b3a972901c2d406ef5760">push()</a>.</p>
+<p><code>register_category()</code> is a factory method that registers new categories for the results of this query (see <a class="el" href="../unity.scopes.Category/index.html">unity::scopes::Category</a>). You can create new categories at any point during query processing. Categories serve to visually group query results in some way; when you push results for a query, you indicate which category each particular result belongs to, and the UI renders that result in the corresponding visual group. Categories are rendered in the order in which they are encountered by the UI as you push your results. If you want to control the order in which categories are rendered (for examples, such that a "Breaking News" category always appears first), you may need to buffer the results you receive from your back-end data source until you get a result for that category, and then push that result, plus any other buffered results.</p>
+<p>Pre-registering categories is the preferred approach because it allows the UI to reserve space and perform layout chores before any query results arrive. (In turn, this permits the UI to optimize its operation.) However, for some data sources, it may not be possible to determine all of the possible categories in advance, in which case you have no choice but to create new categories as they arrive in the data from your scope's data source.</p>
+<p>Do <em>not</em> wait for all results for a query to arrive in an attempt to buffer them and order them by category. If you do, this prevents incremental rendering, and the user sees nothing until your scope has processed <em>all</em> results. To create a positive user experience, your scope should push results as soon as possible.</p>
+<p>The UI uses categories to incrementally render the display after a refresh of search results. This relies on categories staying the same from query to query. If your scope has, say, a "News" category, you need to make sure that the category ID and name stay the same from query to query. In particular, do <em>not</em> create category IDs that are artificially unique per query (such as by appending a sequence number).</p>
+<p>When you create a category, you can provide a <a class="el" href="../unity.scopes.CategoryRenderer/index.html">unity::scopes::CategoryRenderer</a> instance. The category renderer determines the visual appearance of the results in that category (such as display in a grid or in a carousel layout).</p>
+<p>You must wrap each actual search result inside a <a class="el" href="../unity.scopes.CategorisedResult/index.html">CategorisedResult</a> object and pass the result instance to <a class="el" href="../unity.scopes.SearchReply/index.html#a63d6de93152b3a972901c2d406ef5760">push</a>.</p>
+<p>A typical implementation of <code>run()</code> might look like this:</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> MyQuery::run(SearchReplyProxy <span class="keyword">const</span>&amp; reply)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">if</span> (!valid())</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">return</span>;  <span class="comment">// Query was cancelled</span></div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">    <span class="keyword">auto</span> category = reply-&gt;register_category(<span class="stringliteral">&quot;recommended&quot;</span>, <span class="stringliteral">&quot;Recommended&quot;</span>, icon);</div>
+<div class="line">    <span class="comment">//... query a local or remote backend</span></div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keyword">auto</span> res : backend.get_results(query().query_string())) <span class="comment">// for every result returned by a backend</span></div>
+<div class="line">    {</div>
+<div class="line">        ...</div>
+<div class="line">        CategorisedResult result(category); <span class="comment">// create a result item in &quot;recommended&quot; category</span></div>
+<div class="line">        result.set_uri(...);</div>
+<div class="line">        result.set_title(...);</div>
+<div class="line">        result.set_art(...);</div>
+<div class="line">        result.set_dnd_uri(...);</div>
+<div class="line">        result[<span class="stringliteral">&quot;my-custom-attribute&quot;</span>] = Variant(...); <span class="comment">// add arbitrary data as needed</span></div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">if</span> (!reply-&gt;push(result)) <span class="comment">// send result to the client</span></div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">break</span>; <span class="comment">// false from push() means that the search was cancelled</span></div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>As far as the UI is concerned, the query is complete when <code>run()</code> returns. (While the query can potentially return more results, the UI shows a spinner or similar, to indicate that the query is not complete yet.)</p>
+<p>It is possible for you to return from <code>run()</code> <em>without</em> having the query complete automatically. The life time of the query is controlled not only by <code>run()</code>, but also by the life time of the <code>SearchReplyProxy</code> that is passed to <code>run()</code>. The scopes runtime monitors the reply proxy and informs the UI that the query is complete when <em>either</em> <code>run()</code> returns <em>or</em> the last reply proxy for the query goes out of scope. This allows you to, for example, pass the reply proxy to a different thread that pushes results (as you might want to do if you need to run a separate event loop). That thread can then also react to query cancellation. The important point is that, if you keep copies of the reply proxy, the query will remain alive until you destroy all copies of the reply proxy for that query (or explicitly call <code>finished()</code> on the reply proxy yourself, which explicitly ends the query).</p>
+<h4><a class="anchor" id="cancellation"></a>
+Query cancellation</h4>
+<p>It is possible for the UI to cancel a query before the query has completed and is still running in your scope, potentially producing additional results. Typically, this happens because the user has typed a few characters as the search term (which creates a query for the string up to that point); shortly after this, the user might type another character or two, extending the search string. After a short idle period, the UI cancels the original query and creates a new query for the extended search string. However, the second query will not start until <em>after</em> the previous query has completed.</p>
+<dl class="section note"><dt>Note</dt><dd><em>Query cancellation happens frequently, and it is important for your scope to react quickly to cancellation!</em></dd></dl>
+<p>The scopes runtime provides several ways for your implementation to react to cancellation:</p>
+<ul>
+<li>
+A <code>false</code> return value from <code>SearchReply::push</code>. If <code>push</code> returns <code>false</code>, there is no point in continuing to provide more results. </li>
+<li>
+You can poll for cancellation by calling <a class="el" href="../unity.scopes.QueryBase/index.html#a095e61eabe2042eeea5c4df1a444d7d4">QueryBase::valid()</a>. <code>valid()</code> returns <code>false</code> once a query is cancelled or has exceeded its cardinality limit. </li>
+<li>
+Your query implementation class must override the <a class="el" href="../unity.scopes.QueryBase/index.html#a596b19dbfd6efe96b834be75a9b64c68">QueryBase::cancelled()</a> method. The scopes runtime calls <code>cancelled()</code> if the UI has cancelled the query. (Note that calls to <code>cancelled()</code> are made by a separate thread.) </li>
+</ul>
+<p>Testing the return value from <code>push()</code> is reasonable only if you know that results for your scope will arrive quickly (no more than 0.1 seconds apart). Otherwise, you should push results asynchronously from a separate thread and arrange for the query to complete (return from <code>run()</code>) in response to the scopes runtime calling <code>cancelled()</code>.</p>
+<p>Note that it is possible for a call to <code>cancelled()</code> to arrive before the scopes runtime has called <code>run()</code> (because <code>cancelled()</code> and <code>run()</code> are called by different threads and, therefore, can be dispatched out of order).</p>
+<h4><a class="anchor" id="filters"></a>
+Filters</h4>
+<p>Scopes API offers support for filter widgets, which provide means for filtering search results based on user input other than search query string alone. Filter widgets need to be defined by creating appropriate filters inside the overriden SearchQueryBase::run() method, and then pushed to the UI. It is recommended to push filters early before search results are pushed for best user experience.</p>
+<p>Here is an example of how filters can be created:</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> run(SearchReplyProxy <span class="keyword">const</span>&amp; reply)</div>
+<div class="line">{</div>
+<div class="line">    OptionSelectorFilter::UPtr filter1 = OptionSelectorFilter::create(<span class="stringliteral">&quot;brand&quot;</span>, <span class="stringliteral">&quot;Brand&quot;</span>);</div>
+<div class="line">    filter1-&gt;add_option(<span class="stringliteral">&quot;audi&quot;</span>, <span class="stringliteral">&quot;Audi&quot;</span>);</div>
+<div class="line">    filter1-&gt;add_option(<span class="stringliteral">&quot;bmw&quot;</span>, <span class="stringliteral">&quot;BMW&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    RangeInputFilter::SPtr filter2 = RangeInputFilter::create(<span class="stringliteral">&quot;price&quot;</span>, Variant(0.0f), Variant::null(), <span class="stringliteral">&quot;Min&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;Max&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line">    ValueSliderFilter::SPtr filter3 = ValueSliderFilter::create(<span class="stringliteral">&quot;horsepower&quot;</span>, 1, 135, 50, ValueSliderLabels(<span class="stringliteral">&quot;Min&quot;</span>, <span class="stringliteral">&quot;Max&quot;</span>));</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="../unity.scopes/index.html#adab58c13cf604e0e64bd6b1a745364d3">Filters</a> filters;</div>
+<div class="line">    filters.push_back(filter1);</div>
+<div class="line">    filters.push_back(filter2);</div>
+<div class="line">    filters.push_back(filter3);</div>
+<div class="line"></div>
+<div class="line">    reply-&gt;push(filters, query().filter_state());</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// push search results here</span></div>
+</div><!-- fragment --><p>Scopes are free to change filters at any time - with every execution of search the scope can omit any of the previously visible filters or add new ones, if that makes sense for particular use cases.</p>
+<p>Filters act only as UI widgets - it is the responsibility of the scope to check their state and actually apply them to search results. The current value of a filter becomes just another parameter of the search query that needs to be taken into account in the implementation of search handling inside run().</p>
+<p>To examine current state of the filters, pass the instance of <a class="el" href="../unity.scopes.FilterState/index.html" title="Stores the state of multiple filters. ">unity::scopes::FilterState</a> received with search query to respective methods of the filters. For example:</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> run(SearchReplyProxy <span class="keyword">const</span>&amp; reply)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// filter creation code omitted here</span></div>
+<div class="line">    <span class="keyword">auto</span> state = query().filter_state();</div>
+<div class="line">    <span class="keywordtype">int</span> search_start = 0;</div>
+<div class="line">    <span class="keywordtype">int</span> search_end = 1000;</div>
+<div class="line">    <span class="keywordflow">if</span> (rangefilter-&gt;has_start_value(state)) {</div>
+<div class="line">        search_start = rangefilter-&gt;start_value(state);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">if</span> (rangefilter-&gt;has_end_value(state)) {</div>
+<div class="line">        search_end = rangefilter-&gt;end_value(state);</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// apply search_start and search_end to search logic</span></div>
+</div><!-- fragment --><p>The scope may nominate a single filter to act as "primary navigation". This is only possible if departments are not used at the same time (in which case departments become a primary navigation tool). An attempt to nominate a filter to be a "primary navigation" while departments are present is ignored by the UI and the filter acts as a regular filter. Also, only a single-selection OptionSelectorFilter can currently be promoted to be primary navigation. To do this, set the display hints to FilterBase::DisplayHints::Primary:</p>
+<div class="fragment"><div class="line">OptionSelectorFilter::UPtr filter1 = OptionSelectorFilter::create(<span class="stringliteral">&quot;brand&quot;</span>, <span class="stringliteral">&quot;Brand&quot;</span>);</div>
+<div class="line">filter1-&gt;set_display_hints(FilterBase::DisplayHints::Primary);</div>
+<div class="line">filter1-&gt;add_option(<span class="stringliteral">&quot;audi&quot;</span>, <span class="stringliteral">&quot;Audi&quot;</span>);</div>
+</div><!-- fragment --><p>When a filter becomes a primary navigation filter, it gets displayed in the search box drop-down, below recent searches, so it's readily available for quick access. Also, currently selected option is displayed as a "brick" in the search box, hinting the user about the context of current search. All the other filters can be revealed via the filters panel icon.</p>
+<h4><a class="anchor" id="handlingpreview"></a>
+Handling previews</h4>
+<p>Your scope is responsible for handling preview requests for results it has returned; you implement this by overriding the <a class="el" href="../unity.scopes.ScopeBase/index.html#a154b9b4cfc0f40572cfec60dd819396f" title="Invoked when a scope is requested to create a preview for a particular result. ">unity::scopes::ScopeBase::preview()</a> method:</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>MyScope : <span class="keyword">public</span> <a class="code" href="../unity.scopes.ScopeBase/index.html">unity::scopes::ScopeBase</a></div>
+<div class="line">{</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    ...</div>
+<div class="line">    <span class="keyword">virtual</span> PreviewQueryBase::UPtr <a class="code" href="../unity.scopes.ScopeBase/index.html#a154b9b4cfc0f40572cfec60dd819396f">preview</a>(Result <span class="keyword">const</span>&amp; result, ActionMetadata <span class="keyword">const</span>&amp; metadata) <span class="keyword">override</span>;</div>
+<div class="line">    ...</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>This method must return an instance derived from <a class="el" href="../unity.scopes.PreviewQueryBase/index.html" title="Abstract base class to represent a particular preview. ">unity::scopes::PreviewQueryBase</a>. Like <code>search()</code>, <code>preview()</code> is a factory method; the scopes runtime initiates the actual preview by calling <a class="el" href="../unity.scopes.PreviewQueryBase/index.html#a81b89daf29cd1ada55286f2a3a871347">run()</a> on the instance you return. Your <code>run()</code> method is responsible for gathering preview data (from local or remote sources) and passing it to the UI along with the definition of the visual appearance of the preview by calling <a class="el" href="../unity.scopes.PreviewReply/index.html#a9fc593618b83ec444fb6c9b2b298764a">push()</a> on the reply proxy that is passed to <code>run()</code>. (This is analogous to returning results from <code>search()</code>.)</p>
+<p>A preview consists of one or more preview widgets. Preview widgets are the basic building blocks for previews, such as a header with a title and subtitle, an image, a gallery with multiple images, a list of audio tracks, and so on.(See <a class="el" href="../unity.scopes.PreviewWidget/index.html" title="A widget for a preview. ">unity::scopes::PreviewWidget</a> for a list of supported widget types.) Your implementation of <a class="el" href="../unity.scopes.PreviewQueryBase/index.html#a81b89daf29cd1ada55286f2a3a871347">run()</a> must create and populate one or more preview widgets and push them to the UI.</p>
+<p>Each preview widget has a unique identifier, a type name, and a set of attributes determined by the widget's type. For example, a widget of "image" type expects two attributes: "source" (a URI that should point at an image), and a "zoomable" flag that determines if the image should be zoomable. You can specify the values of these attributes explicitly, or you can arrange for the values to be taken from a result that the corresponding query returned earlier, by referencing the corresponding <a class="el" href="../unity.scopes.Result/index.html">Result</a> instance. You can also push the value for a referenced attribute separately as part of your implementation of <code>run()</code>.</p>
+<p>You provide attributes explicitly by calling <a class="el" href="../unity.scopes.PreviewWidget/index.html#a42dd64704890d72bcc6ecbd7bccbfcd9">PreviewWidget::add_attribute_value()</a>:</p>
+<div class="fragment"><div class="line">PreviewWidget image_widget(<span class="stringliteral">&quot;myimage&quot;</span>, <span class="stringliteral">&quot;image&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">image_widget.add_attribute_value(<span class="stringliteral">&quot;source&quot;</span>, Variant(<span class="stringliteral">&quot;file:///tmp/image.jpg&quot;</span>));</div>
+<div class="line">image_widget.add_attribute_value(<span class="stringliteral">&quot;zoomable&quot;</span>, Variant(<span class="keyword">false</span>));</div>
+</div><!-- fragment --><p>To reference values from results or arbitrary values that you push separately, use <a class="el" href="../unity.scopes.PreviewWidget/index.html#a8bb890267a69dd6bb5ca70b663c75e74">PreviewWidget::add_attribute_mapping()</a>:</p>
+<div class="fragment"><div class="line">PreviewWidget image_widget(<span class="stringliteral">&quot;myimage&quot;</span>, <span class="stringliteral">&quot;image&quot;</span>);</div>
+<div class="line">image_widget.add_attribute_mapping(<span class="stringliteral">&quot;source&quot;</span>, <span class="stringliteral">&quot;art&quot;</span>); <span class="comment">// use &#39;art&#39; attribute from the result</span></div>
+<div class="line">image_widget.add_attribute_mapping(<span class="stringliteral">&quot;zoomable&quot;</span>, <span class="stringliteral">&quot;myzoomable&quot;</span>); <span class="comment">// &#39;myzoomable&#39; not specified, but pushed below</span></div>
+<div class="line">reply-&gt;push(<span class="stringliteral">&quot;myzoomable&quot;</span>, Variant(<span class="keyword">true</span>));</div>
+</div><!-- fragment --><p>To push preview widgets to the client, use <a class="el" href="../unity.scopes.PreviewReply/index.html#a9fc593618b83ec444fb6c9b2b298764a">PreviewReply::push()</a>:</p>
+<div class="fragment"><div class="line">PreviewWidget image_widget(<span class="stringliteral">&quot;myimage&quot;</span>, <span class="stringliteral">&quot;image&quot;</span>);</div>
+<div class="line">PreviewWidget header_widget(<span class="stringliteral">&quot;myheader&quot;</span>, <span class="stringliteral">&quot;header&quot;</span>);</div>
+<div class="line"><span class="comment">// fill in widget attributes</span></div>
+<div class="line">...</div>
+<div class="line">PreviewWidgetList widgets { image_widget, header_widget };</div>
+<div class="line">reply-&gt;push(widgets);</div>
+</div><!-- fragment --><h4><a class="anchor" id="previewactions"></a>
+Preview actions</h4>
+<p>Previews can have actions, such as buttons that the user can press. Actions are supported by a preview widget of type "actions". An actions widget holds one or more action button definitions, where each definition has a unique identifier, a label, and an optional icon. For example, a widget with two buttons, "Open" and "Download", can be defined as follows (using the <a class="el" href="../unity.scopes.VariantBuilder/index.html">VariantBuilder</a> helper class):</p>
+<div class="fragment"><div class="line">PreviewWidget buttons(<span class="stringliteral">&quot;mybuttons&quot;</span>, <span class="stringliteral">&quot;actions&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">VariantBuilder builder;</div>
+<div class="line">builder.add_tuple({</div>
+<div class="line">    {<span class="stringliteral">&quot;id&quot;</span>, Variant(<span class="stringliteral">&quot;open&quot;</span>)},</div>
+<div class="line">    {<span class="stringliteral">&quot;label&quot;</span>, Variant(<span class="stringliteral">&quot;Open&quot;</span>)}</div>
+<div class="line">});</div>
+<div class="line">builder.add_tuple({</div>
+<div class="line">    {<span class="stringliteral">&quot;id&quot;</span>, Variant(<span class="stringliteral">&quot;download&quot;</span>)},</div>
+<div class="line">    {<span class="stringliteral">&quot;label&quot;</span>, Variant(<span class="stringliteral">&quot;Download&quot;</span>)}</div>
+<div class="line">});</div>
+<div class="line"></div>
+<div class="line">buttons.add_attribute_value(<span class="stringliteral">&quot;actions&quot;</span>, builder.end());</div>
+</div><!-- fragment --><p>To respond to activation of preview actions, your scope must implement <a class="el" href="../unity.scopes.ScopeBase/index.html#a2f4d476fa790349c9a7de52be3232d11">ScopeBase::perform_action</a>:</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>MyScope : <span class="keyword">public</span> ScopeBase</div>
+<div class="line">{</div>
+<div class="line">    ...</div>
+<div class="line">    <span class="keyword">virtual</span> ActivationQueryBase::UPtr perform_action(Result <span class="keyword">const</span>&amp; result,</div>
+<div class="line">                                                     ActionMetadata <span class="keyword">const</span>&amp; metadata,</div>
+<div class="line">                                                     std::string <span class="keyword">const</span>&amp; widget_id,</div>
+<div class="line">                                                     std::string <span class="keyword">const</span>&amp; action_id) <span class="keyword">override</span></div>
+<div class="line">    ...</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Like <code>search()</code> and <code>preview()</code>, <code>perform_action()</code> is a factory method. It must return an instance that derives from <a class="el" href="../unity.scopes.ActivationQueryBase/index.html">ActivationQueryBase</a>. Your derived class must implement the <a class="el" href="../unity.scopes.ActivationQueryBase/index.html#a61ed49d8bc56e677ff2eb1f30e6a6b6b">activate()</a> method, whose job it is to respond to the activation (that is, the user pressing a button). <code>activate</code> must return an <a class="el" href="../unity.scopes.ActivationResponse/index.html">ActivationResponse</a>, which tells the UI how it should behave in response to the activation. For example, your <code>activate()</code> could direct the UI to run a new search as follows:</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>MyActivation : <span class="keyword">public</span> ActivationQueryBase</div>
+<div class="line">{</div>
+<div class="line">    MyActivation(Result <span class="keyword">const</span>&amp; result, <a class="code" href="../unity.scopes.ActionMetadata/index.html">unity::scopes::ActionMetadata</a> <span class="keyword">const</span>&amp; metadata) :</div>
+<div class="line">        ActivationQueryBase(result, metadata)</div>
+<div class="line">    {</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">    <span class="keyword">virtual</span> ActivationResponse activate()<span class="keyword"> override</span></div>
+<div class="line"><span class="keyword">    </span>{</div>
+<div class="line">        ...</div>
+<div class="line">        <span class="keywordflow">if</span> (action_id() == <span class="stringliteral">&quot;search-grooveshark&quot;</span>)</div>
+<div class="line">        {</div>
+<div class="line">            CannedQuery query(<span class="stringliteral">&quot;com.canonical.scopes.grooveshark&quot;</span>);</div>
+<div class="line">            query.set_query_string(<span class="stringliteral">&quot;metal&quot;</span>);</div>
+<div class="line">            <span class="keywordflow">return</span> ActivationResponse(query);</div>
+<div class="line">        }</div>
+<div class="line">        ...</div>
+<div class="line">    }</div>
+<div class="line">};</div>
+</div><!-- fragment --><h4><a class="anchor" id="handlingactivation"></a>
+Handling result activation</h4>
+<p>In many cases, the user can activate search results directly, by tapping on them, provided the result's schema (such as "http://") has a handler in the system. If this is the case, you need not do anything for activation. However, if your scope uses schemas without a handler, the shell will ignore the activation. (Nothing happens in response to a tap by the user.)</p>
+<p>If you want to intercept such activations (either for schemas without a handler, or to generally intercept result activation), you must implement the <a class="el" href="../unity.scopes.ScopeBase/index.html#a49a0b9ada0eeb4c71e6a2181c3d8c9e7">ScopeBase::activate()</a> method:</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>MyScope : <span class="keyword">public</span> ScopeBase</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">virtual</span> ActivationQueryBase::UPtr activate(Result <span class="keyword">const</span>&amp; result,</div>
+<div class="line">                                               ActionMetadata <span class="keyword">const</span>&amp; metadata) <span class="keyword">override</span>;</div>
+<div class="line">    ...</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>In addition, you must call <a class="el" href="../unity.scopes.Result/index.html#a5a132eb82702829e2fd026e088e4aa08">Result::set_intercept_activation()</a> for all results that should trigger a call to your <code>activate()</code> method. Your implementation of <code>activate()</code> should follow the same guidelines as for <code>perform_action()</code> (except that widget and action identifiers do not apply to result activation).</p>
+<h4><a class="anchor" id="export"></a>
+Exporting a scope</h4>
+<p>Your scope must be compiled into a <code>.so</code> shared library and, to be successfully loaded at runtime, it must provide two C functions to create and destroy it. A typical code snippet to do this looks as follows:</p>
+<div class="fragment"><div class="line"><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span></div>
+<div class="line">{</div>
+<div class="line">    unity::scopes::ScopeBase* UNITY_SCOPE_CREATE_FUNCTION()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> MyScope();</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordtype">void</span> UNITY_SCOPE_DESTROY_FUNCTION(unity::scopes::ScopeBase* scope_base)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keyword">delete</span> scope_base;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><h4><a class="anchor" id="inlineplayback"></a>
+Inline music playback</h4>
+<p>Results which represent music (songs, albums etc.) can contain an extra data about audio content and can then be played directly from the Dash. Such results have a "play" button overlaid on them. To create results that support this functionality two conditions must be met: </p><ul>
+<li>
+Category renderer definition must contain the "quick-preview-type" key with the value of "audio" in the "template" section; </li>
+<li>
+Results in the respective category must contain a "quick-preview-data" attribute, each of them is a dictionary with the extra playback data described below. </li>
+</ul>
+<p>The data assigned to "quick-preview-data" attribute of a Result needs to contain the following keys: </p><ul>
+<li>
+uri - a playable uri of a media file (path of a local file, or http uri). </li>
+<li>
+duration - the duration of the media file, in seconds. </li>
+<li>
+playlist - an array of uris of additional songs, e.g. songs from same album; they will be played in sequence when the main song denoted by 'uri' finishes. </li>
+</ul>
+<p>Here is an example of a category renderer for inline playback, which uses component mapping to map quick-preview-data to audio-data attribute of a result: </p><div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> CATEGORY_RENDERER[] = R<span class="stringliteral">&quot;(</span></div>
+<div class="line"><span class="stringliteral">{</span></div>
+<div class="line"><span class="stringliteral">  &quot;schema-version&quot;: 1,</span></div>
+<div class="line"><span class="stringliteral">  &quot;template&quot;: {</span></div>
+<div class="line"><span class="stringliteral">    &quot;category-layout&quot;: &quot;grid&quot;,</span></div>
+<div class="line"><span class="stringliteral">    &quot;card-size&quot;: &quot;large&quot;,</span></div>
+<div class="line"><span class="stringliteral">    &quot;card-layout&quot; : &quot;horizontal&quot;,</span></div>
+<div class="line"><span class="stringliteral">    &quot;quick-preview-type&quot; : &quot;audio&quot;</span></div>
+<div class="line"><span class="stringliteral">  },</span></div>
+<div class="line"><span class="stringliteral">  &quot;components&quot;: {</span></div>
+<div class="line"><span class="stringliteral">    &quot;title&quot;: &quot;title&quot;,</span></div>
+<div class="line"><span class="stringliteral">    &quot;art&quot;: {</span></div>
+<div class="line"><span class="stringliteral">      &quot;field&quot;: &quot;art&quot;</span></div>
+<div class="line"><span class="stringliteral">    },</span></div>
+<div class="line"><span class="stringliteral">    &quot;subtitle&quot;: &quot;artist&quot;,</span></div>
+<div class="line"><span class="stringliteral">    &quot;quick-preview-data&quot;: {</span></div>
+<div class="line"><span class="stringliteral">        &quot;field&quot;: &quot;audio-data&quot;</span></div>
+<div class="line"><span class="stringliteral">    }</span></div>
+<div class="line"><span class="stringliteral">  }</span></div>
+<div class="line"><span class="stringliteral">}</span></div>
+<div class="line"><span class="stringliteral">)&quot;;</span></div>
+</div><!-- fragment --><p>A sample code that creates a result card representing a song and all songs from same album in a background playlist may look this way: </p><div class="fragment"><div class="line">CategorisedResult res(category);</div>
+<div class="line">res.set_uri(uri);</div>
+<div class="line">res.set_title(media.getTitle());</div>
+<div class="line">...</div>
+<div class="line"></div>
+<div class="line">VariantMap inline_playback_data;</div>
+<div class="line">inline_playback_data[<span class="stringliteral">&quot;uri&quot;</span>] = uri;</div>
+<div class="line">inline_playback_data[<span class="stringliteral">&quot;duration&quot;</span>] = song_duration_in_seconds;</div>
+<div class="line"><a class="code" href="../unity.scopes/index.html#aa3bf32d584efd902bca79698a07dd934">VariantArray</a> playlist;</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keyword">const</span> std::string&amp; song: album_songs)</div>
+<div class="line">{</div>
+<div class="line">    playlist.push_back(Variant(song.getUri()));</div>
+<div class="line">}</div>
+<div class="line">inline_playback_data[<span class="stringliteral">&quot;playlist&quot;</span>] = playlist;</div>
+<div class="line">res[<span class="stringliteral">&quot;audio-data&quot;</span>] = inline_playback_data;</div>
+</div><!-- fragment --><h3><a class="anchor" id="aggscope"></a>
+Case 2: An aggregating scope</h3>
+<p>Aggregating scopes are scopes that collect results from other scopes and possibly consolidate, modify, or re-categorise the results in some way. In other words, for an aggregating scope, the data source(s) are other scopes rather than, say, a remote web service.</p>
+<p>To receive results from its child scopes, your scope must implement a class that derives from <a class="el" href="../unity.scopes.SearchListenerBase/index.html">SearchListenerBase</a>. You provide an instance of this class to each sub-query; the scopes runtime invokes callback methods on this class to let you know when a new result or status update arrives, and when a query completes.</p>
+<h4><a class="anchor" id="childscopes"></a>
+Finding child scopes</h4>
+<p>To send queries to its child scopes, your scope must obtain a proxy for each child scope. The scopes runtime runs a registry process. The job of the registry (among other things) is to provide information about available scopes (whether they are local scopes or remote scopes in the Smartscopes server).</p>
+<p>You can obtain the proxy for a child scope by calling <a class="el" href="../unity.scopes.Registry/index.html#a63778ac090804a1fb85dc48fccbc2822">get_metadata()</a> on the registry, supplying the ID of the child scope. The return value is an instance of type <a class="el" href="../unity.scopes.ScopeMetadata/index.html">ScopeMetadata</a> that describes the scope and also provides access to the proxy for the scope.</p>
+<p>You can also aggregate scopes indirectly via keyword(s). Keywords describe the type of content a scope provides (e.g. a scope with the keyword "music" will return music results, the "video" keyword indicates video content, and so on). You can obtain child scopes via keywords by calling <a class="el" href="../unity.scopes.Registry/index.html#aa15baf0154c4b58decf27f2e5815d680">list_if()</a> on the registry, supplying a predicate function. The return value is a map containing only those scopes for which the predicate returns true. Therefore, your predicate function should return true for all scopes matching the keyword(s) you wish to aggregate.</p>
+<dl class="section note"><dt>Note</dt><dd>Please refer to the <a href="https://developer.ubuntu.com/en/scopes/tutorials/scope-keywords/">Scope Keywords</a> tutorial document for a list of recommended keywords to use.</dd></dl>
+<p>As an aggregator scope author you must provide an implementation of the virtual <a class="el" href="../unity.scopes.ScopeBase/index.html#abc864e2fa714b9424a89293fea6972bc">ScopeBase::find_child_scopes()</a> method. All logic for finding your aggregator's child scopes should be implemented within this method. The return value is of type <a class="el" href="../unity.scopes/index.html#a4daaa9ad07daf596af4dacd6e0b7be9a">ChildScopeList</a> and must contain an instance of <a class="el" href="../unity.scopes.ChildScope/index.html">ChildScope</a> for each scope your aggregator may collect results from.</p>
+<p>Here is how you could implement find_child_scopes() to return all scopes in the registry that contain the keywords "sports" and "news":</p>
+<div class="fragment"><div class="line"><a class="code" href="../unity.scopes/index.html#a4daaa9ad07daf596af4dacd6e0b7be9a">ChildScopeList</a> MyScope::find_child_scopes()<span class="keyword"> const override</span></div>
+<div class="line"><span class="keyword"></span>{</div>
+<div class="line">    <span class="keyword">auto</span> sportsnews_scopes = registry()-&gt;list_if([](ScopeMetadata <span class="keyword">const</span>&amp; item)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keyword">auto</span> keywords = item.keywords();</div>
+<div class="line">        <span class="keywordflow">return</span> (keywords.find(<span class="stringliteral">&quot;sports&quot;</span>) != keywords.end()) &amp;&amp;</div>
+<div class="line">               (keywords.find(<span class="stringliteral">&quot;news&quot;</span>) != keywords.end());</div>
+<div class="line">    });</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="../unity.scopes/index.html#a4daaa9ad07daf596af4dacd6e0b7be9a">ChildScopeList</a> list;</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keyword">auto</span> <span class="keyword">const</span>&amp; sportsnews_scope : sportsnews_scopes)</div>
+<div class="line">    {</div>
+<div class="line">        list.emplace_back(ChildScope{sportsnews_scope.first,  <span class="comment">// Child scope ID</span></div>
+<div class="line">                                     sportsnews_scope.second, <span class="comment">// Child scope metadata</span></div>
+<div class="line">                                     <span class="keyword">true</span>,                    <span class="comment">// Default enabled state (when first discovered)</span></div>
+<div class="line">                                     {<span class="stringliteral">&quot;sports&quot;</span>, <span class="stringliteral">&quot;news&quot;</span>}});    <span class="comment">// Keywords used to aggregate this scope</span></div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> list;</div>
+<div class="line">}</div>
+</div><!-- fragment --><h4><a class="anchor" id="subquery"></a>
+Sub-queries</h4>
+<p>To send a query to another scope, use one of the <code>subsearch()</code> overloads of <a class="el" href="../unity.scopes.SearchQueryBase/index.html">unity::scopes::SearchQueryBase</a> inside your implementation of <a class="el" href="../unity.scopes.SearchQueryBase/index.html#afc4f15b2266838d7da75b05ea37d504b">SearchQueryBase::run()</a>. This method requires a handle to the child scope to query (either via proxy or ChildScope handle), the query details (<a class="el" href="../unity.scopes.CannedQuery/index.html">CannedQuery</a>), plus an instance of your <code>SearchListenerBase</code> implementation that will receive the query results.</p>
+<dl class="section note"><dt>Note</dt><dd><code>subsearch()</code> is identical to <a class="el" href="../unity.scopes.ScopeBase/index.html#a0e4969ff26dc1d396d74c56d896fd564">search()</a> but, for <code>subsearch()</code>, the scopes runtime transparently forwards query cancellation to child scopes, so your implementation of <a class="el" href="../unity.scopes.QueryBase/index.html#a596b19dbfd6efe96b834be75a9b64c68">QueryBase::cancelled()</a> does not need to forward cancellation to its children. (However, your query class still needs to react to cancellation and should terminate the current query is quickly as possible in response to a cancelled message.)</dd></dl>
+<p>You should always call <a class="el" href="../unity.scopes.ScopeBase/index.html#a4016075ab95bbf1b5dfa1444e9d750e0">ScopeBase::child_scopes()</a> from within your aggregator's <a class="el" href="../unity.scopes.ScopeBase/index.html#a0e4969ff26dc1d396d74c56d896fd564">search()</a> method in order to retrieve the latest child scopes list containing the most recent "enabled" states. You can then pass this list into your instantiation of SearchQueryBase for later use.</p>
+<dl class="section note"><dt>Note</dt><dd>An aggregator must respect the "enabled" states of its child scopes, querying only the child scopes that are enabled.</dd></dl>
+<p>Here is how you could implement an aggregating scope that passes a query to a single child scope "scope-A":</p>
+<div class="fragment"><div class="line"><a class="code" href="../unity.scopes/index.html#a4daaa9ad07daf596af4dacd6e0b7be9a">ChildScopeList</a> MyScope::find_child_scopes()<span class="keyword"> const override</span></div>
+<div class="line"><span class="keyword"></span>{</div>
+<div class="line">    <span class="keyword">auto</span> reg = registry();  <span class="comment">// Up-call into base class</span></div>
+<div class="line">    <span class="keywordflow">if</span> (!reg)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">throw</span> ConfigException(scope_id + <span class="stringliteral">&quot;: No registry available, cannot locate child scopes&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="../unity.scopes/index.html#a4daaa9ad07daf596af4dacd6e0b7be9a">ChildScopeList</a> list;</div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        <span class="keyword">auto</span> meta = reg-&gt;get_metadata(<span class="stringliteral">&quot;scope-A&quot;</span>);</div>
+<div class="line">        list.emplace_back(ChildScope{<span class="stringliteral">&quot;scope-A&quot;</span>,  meta});</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (NotFoundException <span class="keyword">const</span>&amp; e)</div>
+<div class="line">    {</div>
+<div class="line">        ...</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> list;</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line">QueryBase::UPtr MyScope::search(CannedQuery <span class="keyword">const</span>&amp; query,</div>
+<div class="line">                                SearchMetadata <span class="keyword">const</span>&amp; metadata)</div>
+<div class="line">{</div>
+<div class="line">    SearchQueryBase::UPtr q(<span class="keyword">new</span> MyQuery(query, metadata, child_scopes()));</div>
+<div class="line">    <span class="keywordflow">return</span> q;</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line">...</div>
+<div class="line"></div>
+<div class="line">void MyQuery::run(SearchReplyProxy <span class="keyword">const</span>&amp; upstream_reply) </div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Continue only if our child scope is installed AND enabled</span></div>
+<div class="line">    <span class="keywordflow">if</span> (!child_scopes_.empty() &amp;&amp; child_scopes_.front().enabled)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keyword">auto</span> category = reply-&gt;register_category(<span class="stringliteral">&quot;recommended&quot;</span>, <span class="stringliteral">&quot;Recommended&quot;</span>, icon, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line">        SearchListenerBase::SPtr reply(<span class="keyword">new</span> MyReceiver(upstream_reply, category));</div>
+<div class="line">        subsearch(child_scopes_.front(), query_, reply);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Note that the <code>subsearch()</code> call is asynchronous and returns immediately. Despite this, your <code>MyQuery</code> instance is kept alive because the scopes runtime does not delete it until the child query has completed. (The runtime tracks the <code>reply</code> proxy for the query and holds the query alive until it receives a finished message from the child scope.)</p>
+<h4><a class="anchor" id="receiver"></a>
+Receiving sub-query results</h4>
+<p>Here is a simple implementation of a receiver that passes all child categories and results through to its parent without change. Of course, a more realistic aggregating scope will typically aggregate from more than one child and probably de-duplicate, collate, or otherwise modify child results before passing them upstream.</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>MyReceiver: <span class="keyword">public</span> SearchListenerBase</div>
+<div class="line">{</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> push(Category::SCPtr <span class="keyword">const</span>&amp; category)<span class="keyword"> override</span></div>
+<div class="line"><span class="keyword">    </span>{</div>
+<div class="line">        upstream_reply_-&gt;register_category(category);</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> push(CategorisedResult result)<span class="keyword"> override</span></div>
+<div class="line"><span class="keyword">    </span>{</div>
+<div class="line">        upstream_reply_-&gt;push(std::move(result));</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">    MyReceiver(SearchReplyProxy <span class="keyword">const</span>&amp; upstream_reply) :</div>
+<div class="line">        upstream_reply_(upstream_reply)</div>
+<div class="line">    {</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">private</span>:</div>
+<div class="line">    <a class="code" href="../unity.scopes/index.html#a9cd604d9b842ac3b2b8636c2165dec1f">SearchReplyProxy</a> upstream_reply_;</div>
+<div class="line">};</div>
+</div><!-- fragment --><h4><a class="anchor" id="aggbuffering"></a>
+Controlling category order</h4>
+<p>Categories are displayed in the order their results are pushed. This can pose a challenge for aggregator scopes because results from child scopes often arrive in random order. To control the order in which categories are rendered, the aggregator must buffer and potentially re-order results by category before pushing them.</p>
+<p><a class="el" href="../unity.scopes.utility.BufferedResultForwarder/index.html">BufferedResultForwarder</a> makes it easier to do this. To use the class, you create one instance for each child scope and chain the instances together in the desired order of categories. Each forwarder buffers results until its predecessor in the chain indicates that it has completed its category ordering, at which point it itself pushes any results it has buffered so far and indicates to its follower that it is ready.</p>
+<p>By default, a forwarder indicates that it it is ready (has completed ordering) as soon as it has received a single result. This is useful if an aggregator has child scopes that produce results for a single category each. In this case, the order of the forwarders determines which category (the one used by child A or by child B) appears first when the results are rendered.</p>
+<p>If an aggregator collates results from children that each produce results for more than one category, you can override the default implementation of <a class="el" href="../unity.scopes.utility.BufferedResultForwarder/index.html#af712d8a72e6cd0818ab9d2c3274b25e6">push()</a> to change categories for results from its child, and/or indicate that it is ready only once the child has provided results for all expected categories. (See <a class="el" href="../unity.scopes.utility.BufferedResultForwarder/index.html">BufferedResultForwarder</a> for more details.)</p>
+<h4><a class="anchor" id="aggactiv"></a>
+Activation and preview</h4>
+<p>If an aggregator scope simply forwards the results it receives from other scopes (possibly changing their category), the aggregator need not do anything special for previews, preview actions, or result activation. In this case, previews, preview actions, and result activation are sent to the scope that produced the corresponding result.</p>
+<p>If, however, an aggregator scope changes attributes of results (or creates completely new results that "replace" received results), you must take extra care: </p><ul>
+<li>
+<p class="startli">If the original original scope should still handle preview (and activation) requests for a modified result, you must store a copy of the original result in the modified (or new) result by calling <a class="el" href="../unity.scopes.Result/index.html#a744776333a9748ba41dace7c6943ca4d">Result::store()</a>. Preview requests for such a result will automatically trigger the scope that created the innermost stored result.</p>
+<dl class="section note"><dt>Note</dt><dd>Making changes to a receive result but failing to store the original result with the change can cause in unexpected behavior: a scope could receive a modified result and, depending the exact changes, may not be able to correctly deal with the result.</dd></dl>
+</li>
+<li>
+If an aggregator creates a completely new result that replaces the original result but does not also store a copy of the original result, the aggregator <em>must</em> handle preview and activation requests (if the intercept flag is set). The actions to take are the same as for a non-aggregating scope (see <a class="el" href="index.html#handlingpreview">Handling previews</a> and <a class="el" href="index.html#handlingactivation">Handling result activation</a>). </li>
+</ul>
+<p>Here is an example <code>push()</code> implementation that modifies a result and stores a copy, so the original scope can handle preview and activation:</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> MyReceiver::push(CategorisedResult original_result)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// agg_category is a category that aggregates all results from other scopes</span></div>
+<div class="line">    CategorisedResult result(agg_category);</div>
+<div class="line">    result.set_uri(original_result.uri());</div>
+<div class="line">    result.set_title(original_result.title() + <span class="stringliteral">&quot; (aggregated)&quot;</span>);</div>
+<div class="line">    result.set_art(original_result.art());</div>
+<div class="line">    result.store(original_result);</div>
+<div class="line"></div>
+<div class="line">    upstream_-&gt;push(std::move(result));</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="threading"></a>
+Threading model</h2>
+<p>It is important to understand how the runtime uses threads to call methods on scopes and clients. The runtime maintains a number of threads that each call one or more methods. Methods in the same group are always called by the same thread. This means that methods in the same group do not run concurrently, but methods in different groups <em>do</em> run concurrently. If you share state between methods in different groups, you <em>must</em> synchronize access to that state, otherwise your code will suffer from race conditions.</p>
+<p>The following lists shows how methods are grouped. Each group has a single dedicated dispatch thread.</p>
+<ul>
+<li>
+UNITY_SCOPE_CREATE_FUNCTION(), ScopeBase::start(), ScopeBase::stop(), and UNITY_SCOPE_DESTROY_FUNCTION(). </li>
+<li>
+<a class="el" href="../unity.scopes.ScopeBase/index.html#a0e4969ff26dc1d396d74c56d896fd564">ScopeBase::search()</a>, <a class="el" href="../unity.scopes.ScopeBase/index.html#a154b9b4cfc0f40572cfec60dd819396f">ScopeBase::preview()</a>, and <a class="el" href="../unity.scopes.ScopeBase/index.html#a2f4d476fa790349c9a7de52be3232d11">ScopeBase::perform_action()</a>. </li>
+<li>
+<a class="el" href="../unity.scopes.SearchQueryBase/index.html#afc4f15b2266838d7da75b05ea37d504b">SearchQueryBase::run()</a>, <a class="el" href="../unity.scopes.PreviewQueryBase/index.html#a81b89daf29cd1ada55286f2a3a871347">PreviewQueryBase::run()</a>, and <a class="el" href="../unity.scopes.ActivationQueryBase/index.html#a61ed49d8bc56e677ff2eb1f30e6a6b6b">ActivationQueryBase::activate()</a>. </li>
+<li>
+<a class="el" href="../unity.scopes.QueryBase/index.html#a596b19dbfd6efe96b834be75a9b64c68">QueryBase::cancelled()</a>. </li>
+<li>
+<a class="el" href="../unity.scopes.SearchListenerBase/index.html#a93ba33c6e1a0064ac9756134ccb11705">SearchListenerBase::push()</a>, <a class="el" href="../unity.scopes.PreviewListenerBase/index.html#a5e9fe1fa664cbb65a0389e5a39caf78b">PreviewListenerBase::push()</a>, <a class="el" href="../unity.scopes.ActivationListenerBase/index.html#a52106ae2856a2dc7fd6035707bd0bee2">ActivationListenerBase::activated()</a>, <a class="el" href="../unity.scopes.ListenerBase/index.html#afb44937749b61c9e3ebfa20ec6e4634b">ListenerBase::finished()</a>, <a class="el" href="../unity.scopes.ListenerBase/index.html#a3b38fa642754142f40968f3ff8d1bdc8">ListenerBase::info()</a>. </li>
+</ul>
+<p>For your scope implementation, keep in mind that <code>cancelled()</code> is <em>not</em> called by the same thread that called, for example, <code>search()</code> or <code>run()</code>. This means that any state you established in <code>search()</code> or <code>run()</code> must be synchronized if you use that state in <code>cancelled()</code>.</p>
+<p>Similar considerations apply for aggregating scopes, which act as both client and server: you must synchronize any state that is shared between the client side and the server side. For example, you must synchronize state established in <code>search()</code> and accessed from <code>push()</code> or <code>finished()</code>.</p>
+<h2><a class="anchor" id="scopesettings"></a>
+Settings</h2>
+<p>A scope can provide for simple customizations, such as allowing the user to configure an email address or select a distance unit as metric or imperial.</p>
+<h3><a class="anchor" id="settings_definitions"></a>
+Defining settings</h3>
+<p>You can define such settings in a configuration file. The file must be placed into the same directory as the scope's normal configuration file, with the name <code>&lt;scope-name&gt;-settings.ini</code>. For example, for a scope with ID <code>com.acme.myscope</code>, the normal configuration file is <code>com.acme.myscope.ini</code>, and the settings definition file is <code>com.acme.myscope-settings.ini</code>. Both files must be installed in the same directory (together with the scope's <code>.so</code> file).</p>
+<p>The shell constructs a user interface from the settings definitions. The user can change settings via that UI. The scope can retrieve the actual setting values at run time (see <a class="el" href="index.html#read_settings">Accessing settings</a>).</p>
+<p>The following types are supported for settings:</p>
+<ul>
+<li>
+<code>string</code> - a string value </li>
+<li>
+<code>number</code> - a numeric value (integer or floating point) </li>
+<li>
+<code>boolean</code> - <code>true</code> or <code>false</code> </li>
+<li>
+<code>list</code> - a list of alternatives to choose from (single-choice) </li>
+</ul>
+<p>It is possible to optionally define a default value for each setting.</p>
+<p>Here are the contents of an example definition file: </p><div class="fragment"><div class="line">[location]</div>
+<div class="line">type = <span class="keywordtype">string</span></div>
+<div class="line">defaultValue = London</div>
+<div class="line">displayName = Location</div>
+<div class="line"></div>
+<div class="line">[distanceUnit]</div>
+<div class="line">type = list</div>
+<div class="line">defaultValue = 1</div>
+<div class="line">displayName = Distance Unit</div>
+<div class="line">displayName[de] = Entfernungseinheit</div>
+<div class="line">displayValues = Kilometers;Miles</div>
+<div class="line">displayValues[de] = Kilometer;Meilen</div>
+<div class="line"></div>
+<div class="line">[age]</div>
+<div class="line">type = number</div>
+<div class="line">defaultValue = 23</div>
+<div class="line">displayName = Age</div>
+<div class="line"></div>
+<div class="line">[enabled]</div>
+<div class="line">type = <span class="keywordtype">boolean</span></div>
+<div class="line">defaultValue = <span class="keyword">true</span></div>
+<div class="line">displayName = Enabled</div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor"># Setting without a default value</span></div>
+<div class="line">[color]</div>
+<div class="line">type = <span class="keywordtype">string</span></div>
+<div class="line">displayName = Color</div>
+</div><!-- fragment --><p>The file must contain a group for each setting. The order of the groups determines the display order for the user interface that is constructed by the shell. The group name is the ID of the corresponding setting.</p>
+<p>Each setting definition must contain at least the following mandatory definitions: </p><ul>
+<li>
+<code>type</code> - Defines the type of the setting (<code>string</code>, <code>number</code>, <code>boolean</code>, or <code>list</code>). </li>
+<li>
+<code>displayName</code> - Defines a display name that is shown for this setting by the shell. </li>
+</ul>
+<p>The defaultValue field is optional. If present, it defines a default value that is provided to the scope if the user has not changed anything (or has never used the settings UI before using the scope). It is possible to test for settings that do not have a default value and were never set by the user (see <a class="el" href="index.html#read_settings">Accessing settings</a>).</p>
+<p>For settings of type <code>list</code>, the <code>displayValues</code> field is mandatory. It must contain an array that lists the available choices. If you provide a default value, it must be in the range <code>0..max-1</code> (where <code>max</code> is the number of choices).</p>
+<p>The <code>displayName</code> and <code>displayValues</code> fields can be localized by appending a locale identifier in square brackets. If no entry can be found that matches the current locale, the non-localized value is used.</p>
+<h3><a class="anchor" id="read_settings"></a>
+Accessing settings</h3>
+<p>The settings that are currently in effect are available to a scope via the <a class="el" href="../unity.scopes.ScopeBase/index.html#acddeebb3357c6941b3b77617133cda23" title="Returns a dictionary with the scope&#39;s current settings. ">unity::scopes::ScopeBase::settings()</a> and <a class="el" href="../unity.scopes.QueryBase/index.html#ab6a25ba587387a7f490b8b5a081e9ed6" title="Returns a dictionary with the scope&#39;s current settings. ">unity::scopes::QueryBase::settings()</a> methods. These methods return a <a class="el" href="../unity.scopes/index.html#ad5d8ccfa11a327fca6f3e4cee11f4c10" title="A dictionary of (string, Variant) pairs. ">unity::scopes::VariantMap</a> with one entry per setting. The map contains an entry for each setting (using the group name as the key). The lookup value is a <a class="el" href="../unity.scopes.Variant/index.html" title="Simple variant class that can hold an integer, boolean, string, double, dictionary, array or null value. ">unity::scopes::Variant</a> that holds the current value of the setting.</p>
+<p>If a setting has a value, the corresponding entry in the map contains a string (for settings of type <code>string</code>, a boolean (for settings of type <code>boolean</code>), or an integer (for settings of type <code>number</code> and <code>list</code>). (If the user did not provide a particular value, but the settings definition provided a default value, the <code>Variant</code> contains the default value.</p>
+<p>If a setting does not have a default value, and the user did not establish a value for the setting, the corresponding entry is absent from the map.</p>
+<p>When you use settings in your scope implementation, do not cache the values and re-use them for a different query. If you do, any setting changes made by the user will not take effect until your scope is re-started by the runtime. (Because the user cannot know when that happens, this can be highly confusing.) Instead, call <code>settings()</code> each time you need to use the value of a setting. That way, your scope will react to any change made by the user as soon as it receives another query.</p>
+<p>Here is an example of how to read the current settings values for the definition in <a class="el" href="index.html#settings_definitions">Defining settings</a> :</p>
+<div class="fragment"><div class="line"><span class="comment">// In your `ScopeBase` or `QueryBase` implementation:</span></div>
+<div class="line"></div>
+<div class="line"><a class="code" href="../unity.scopes/index.html#ad5d8ccfa11a327fca6f3e4cee11f4c10">unity::scopes::VariantMap</a> s = settings();  <span class="comment">// The settings method is provided by the base class</span></div>
+<div class="line"></div>
+<div class="line">cout &lt;&lt; s[<span class="stringliteral">&quot;location&quot;</span>].get_string();        <span class="comment">// Prints &quot;London&quot; unless the user changed the value</span></div>
+<div class="line"></div>
+<div class="line"><span class="keyword">auto</span> it = s.find(<span class="stringliteral">&quot;color&quot;</span>);</div>
+<div class="line"><span class="keywordflow">if</span> (it != s.end())                         <span class="comment">// Setting does not have a default value, need to test</span></div>
+<div class="line">{</div>
+<div class="line">    cout &lt;&lt; it-&gt;second.get_string();       <span class="comment">// Prints the user-established value</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="directories"></a>
+File system access</h2>
+<p>Scopes that are installed from click packages are subject to confinement and are not allowed to access most parts of the file system. However, a few locations are available to a scope. You can access these paths by calling methods on <a class="el" href="../unity.scopes.ScopeBase/index.html">ScopeBase</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>Do not call these methods from the constructor of your <code>ScopeBase</code> implementation. If you do, these methods throw <code>LogicException</code>. Instead, call them from <a class="el" href="../unity.scopes.ScopeBase/index.html#ac25f3f326e2cf25de2f2eca18de5926c">start()</a> or any time thereafter.</dd></dl>
+<p><a class="el" href="../unity.scopes.ScopeBase/index.html#a32744a21076d9dacc98362412c6a63d5">scope_directory()</a> returns the path of the installation directory of the scope. This directory contains the scope's <code>.so</code> and <code>.ini</code> files, plus whatever other files you decide to package with your scope. The scope has read-only permission for this directory.</p>
+<p><a class="el" href="../unity.scopes.ScopeBase/index.html#a36cfdda42db58da399390e7c5df2385e">cache_directory()</a> returns the path of a directory that is (exclusively) writable for the scope. You can use this directory to store persistent information, such as a cache of results.</p>
+<p><a class="el" href="../unity.scopes.ScopeBase/index.html#a4f54564b752a3451e05bd11171abb27e">app_directory()</a> returns the path of a read-only directory. If the scope is packaged together with an app, the app has permission to write files in this location, that is, this directory can be used make information provided by the app available to the scope (but not vice versa).</p>
+<p><a class="el" href="../unity.scopes.ScopeBase/index.html#ade8de1dca94e10aa9788624710ab49eb">tmp_directory()</a> returns the path of a read-only directory that is (exclusively) writable for the scope. This directory is periodically cleaned of unused files. The exact amount of time may vary, but is on the order of a few hours. The directory is also cleaned during reboot.</p>
+<h2><a class="anchor" id="online_accounts"></a>
+Online Accounts</h2>
+<p>A scope may require access to an online account in order to evaluate particular results, perform certain actions, or perhaps even operate at all. The following section describes how to use online account services from your scope.</p>
+<h3><a class="anchor" id="oa_step1"></a>
+Step 1: Update Apparmor manifest.</h3>
+<p>Firstly, in order for your scope to be granted access to the online accounts backend, the "accounts" policy group needs to be added to your Apparmor manifest file, as follows:</p>
+<h4><a class="anchor" id="oa_apparmor"></a>
+Example Apparmor manifest file:</h4>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    <span class="stringliteral">&quot;template&quot;</span>: <span class="stringliteral">&quot;ubuntu-scope-network&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;policy_groups&quot;</span>: [</div>
+<div class="line">        <span class="stringliteral">&quot;accounts&quot;</span></div>
+<div class="line">    ],</div>
+<div class="line">    <span class="stringliteral">&quot;policy_version&quot;</span>: 1.2</div>
+<div class="line">}</div>
+</div><!-- fragment --><h3><a class="anchor" id="oa_step2"></a>
+Step 2: Account service configuration.</h3>
+<p>Scopes access accounts at a service level (E.g. YouTube service under a Google account, Ubuntu Store service under an Ubuntu One account, etc.), therefore each scope must provide some config to specify its account service requirements.</p>
+<p>There are 2 additional files that a scope must supply:</p><ol type="1">
+<li>A .service file to specify a method of accessing its particular account provider.</li>
+<li>A .application file to link one or more services to your scope.</li>
+</ol>
+<h4><a class="anchor" id="oa_service"></a>
+Example .service file:</h4>
+<div class="fragment"><div class="line">&lt;?xml version=<span class="stringliteral">&quot;1.0&quot;</span> encoding=<span class="stringliteral">&quot;UTF-8&quot;</span>?&gt;</div>
+<div class="line">&lt;service <span class="keywordtype">id</span>=<span class="stringliteral">&quot;com.ubuntu.scopes.youtube_youtube&quot;</span>&gt;</div>
+<div class="line">  &lt;type&gt;sharing&lt;/type&gt;</div>
+<div class="line">  &lt;icon&gt;youtube&lt;/icon&gt;</div>
+<div class="line">  &lt;name&gt;YouTube&lt;/name&gt;</div>
+<div class="line">  &lt;provider&gt;google&lt;/provider&gt;</div>
+<div class="line">  &lt;translations&gt;<a class="code" href="../unity/index.html">unity</a>-scope-youtube&lt;/translations&gt;</div>
+<div class="line">  &lt;<span class="keyword">template</span>&gt;</div>
+<div class="line">    &lt;group name=<span class="stringliteral">&quot;auth&quot;</span>&gt;</div>
+<div class="line">      &lt;setting name=<span class="stringliteral">&quot;method&quot;</span>&gt;oauth2&lt;/setting&gt;</div>
+<div class="line">      &lt;setting name=<span class="stringliteral">&quot;mechanism&quot;</span>&gt;web_server&lt;/setting&gt;</div>
+<div class="line">      &lt;group name=<span class="stringliteral">&quot;oauth2&quot;</span>&gt;</div>
+<div class="line">        &lt;group name=<span class="stringliteral">&quot;web_server&quot;</span>&gt;</div>
+<div class="line">          &lt;setting name=<span class="stringliteral">&quot;Host&quot;</span>&gt;accounts.google.com&lt;/setting&gt;</div>
+<div class="line">          &lt;setting name=<span class="stringliteral">&quot;AuthPath&quot;</span>&gt;o/oauth2/auth?access_type=offline&lt;/setting&gt;</div>
+<div class="line">          &lt;setting name=<span class="stringliteral">&quot;TokenPath&quot;</span>&gt;o/oauth2/token&lt;/setting&gt;</div>
+<div class="line">          &lt;setting name=<span class="stringliteral">&quot;RedirectUri&quot;</span>&gt;https:<span class="comment">//wiki.ubuntu.com/&lt;/setting&gt;</span></div>
+<div class="line">          &lt;setting name=<span class="stringliteral">&quot;ResponseType&quot;</span>&gt;code&lt;/setting&gt;</div>
+<div class="line">          &lt;setting type=<span class="stringliteral">&quot;as&quot;</span> name=<span class="stringliteral">&quot;Scope&quot;</span>&gt;[<span class="stringliteral">&#39;https://www.googleapis.com/auth/youtube.readonly&#39;</span>]&lt;/setting&gt;</div>
+<div class="line">          &lt;setting name=<span class="stringliteral">&quot;ClientId&quot;</span>&gt;xxxx&lt;/setting&gt;</div>
+<div class="line">          &lt;setting name=<span class="stringliteral">&quot;ClientSecret&quot;</span>&gt;xxxx&lt;/setting&gt;</div>
+<div class="line">          &lt;setting type=<span class="stringliteral">&quot;as&quot;</span> name=<span class="stringliteral">&quot;AllowedSchemes&quot;</span>&gt;[<span class="stringliteral">&#39;https&#39;</span>,<span class="stringliteral">&#39;http&#39;</span>]&lt;/setting&gt;</div>
+<div class="line">        &lt;/group&gt;</div>
+<div class="line">      &lt;/group&gt;</div>
+<div class="line">    &lt;/group&gt;</div>
+<div class="line">  &lt;/<span class="keyword">template</span>&gt;</div>
+<div class="line">&lt;/service&gt;</div>
+</div><!-- fragment --><h4><a class="anchor" id="oa_application"></a>
+Example .application file:</h4>
+<div class="fragment"><div class="line">&lt;?xml version=<span class="stringliteral">&quot;1.0&quot;</span> encoding=<span class="stringliteral">&quot;UTF-8&quot;</span>?&gt;</div>
+<div class="line">&lt;application <span class="keywordtype">id</span>=<span class="stringliteral">&quot;com.ubuntu.scopes.youtube_youtube&quot;</span>&gt;</div>
+<div class="line">  &lt;description&gt;YouTube&lt;/description&gt;</div>
+<div class="line">  &lt;desktop-entry&gt;com.ubuntu.scopes.youtube_youtube.desktop&lt;/desktop-entry&gt;</div>
+<div class="line">  &lt;services&gt;</div>
+<div class="line">    &lt;service <span class="keywordtype">id</span>=<span class="stringliteral">&quot;com.ubuntu.scopes.youtube_youtube&quot;</span>&gt;</div>
+<div class="line">      &lt;description&gt;Watch your favorite YouTube videos&lt;/description&gt;</div>
+<div class="line">    &lt;/service&gt;</div>
+<div class="line">  &lt;/services&gt;</div>
+<div class="line">&lt;/application&gt;</div>
+</div><!-- fragment --><h3><a class="anchor" id="oa_step3"></a>
+Step 3: Update Click manifest.</h3>
+<p>Now that we have added the new files from the previous step to our project, we need to update our click manifest file to include them:</p>
+<h4><a class="anchor" id="oa_click"></a>
+Example Click manifest file:</h4>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    <span class="stringliteral">&quot;description&quot;</span>: <span class="stringliteral">&quot;YouTube scope&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;framework&quot;</span>: <span class="stringliteral">&quot;ubuntu-sdk-14.10-dev2&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;architecture&quot;</span>: <span class="stringliteral">&quot;armhf&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;hooks&quot;</span>: {</div>
+<div class="line">        <span class="stringliteral">&quot;youtube&quot;</span>: {</div>
+<div class="line">            <span class="stringliteral">&quot;scope&quot;</span>: <span class="stringliteral">&quot;youtube&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;apparmor&quot;</span>: <span class="stringliteral">&quot;apparmor.json&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;account-application&quot;</span>: <span class="stringliteral">&quot;youtube.application&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;account-service&quot;</span>: <span class="stringliteral">&quot;youtube.service&quot;</span></div>
+<div class="line">        }</div>
+<div class="line">    },</div>
+<div class="line">    <span class="stringliteral">&quot;icon&quot;</span>: <span class="stringliteral">&quot;youtube/icon.png&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;maintainer&quot;</span>: <span class="stringliteral">&quot;Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;name&quot;</span>: <span class="stringliteral">&quot;com.ubuntu.scopes.youtube&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;title&quot;</span>: <span class="stringliteral">&quot;YouTube scope&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;version&quot;</span>: <span class="stringliteral">&quot;1.0.12&quot;</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><h3><a class="anchor" id="oa_step4"></a>
+Step 4: Utilize the OnlineAccountClient class.</h3>
+<p>Finally, we can access online account services from within our scope implementation.</p>
+<p>The first thing we need to do is instantiate a <a class="el" href="../unity.scopes.OnlineAccountClient/index.html" title="A simple interface for integrating online accounts access and monitoring into scopes. ">unity::scopes::OnlineAccountClient</a> object. On construction we must specify our account service name, service type, and provider name (These correspond to the values of the "service_id", "type", and "provider" entries in your .service file).</p>
+<p>Via this object we can get the statuses of all account services, set a callback for status updates, and register results and widgets that require authorization (See: <a class="el" href="../unity.scopes.OnlineAccountClient/index.html" title="A simple interface for integrating online accounts access and monitoring into scopes. ">unity::scopes::OnlineAccountClient</a> class documentation for more detail).</p>
+<p>Here's a simple example of how one could return a "Log-in" result to the dash (Selecting this result from the dash will trigger an authorization request to the user before executing one of the 2 post-login actions):</p>
+<h4><a class="anchor" id="oa_usage"></a>
+Example OnlineAccountClient usage:</h4>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> Query::run(<a class="code" href="../unity.scopes/index.html#a9cd604d9b842ac3b2b8636c2165dec1f">unity::scopes::SearchReplyProxy</a> <span class="keyword">const</span>&amp; reply)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Instantiate a unity::scopes::OnlineAccountClient object</span></div>
+<div class="line">    <a class="code" href="../unity.scopes.OnlineAccountClient/index.html">unity::scopes::OnlineAccountClient</a> oa_client(<span class="stringliteral">&quot;com.ubuntu.scopes.youtube_youtube&quot;</span>, <span class="stringliteral">&quot;sharing&quot;</span>, <span class="stringliteral">&quot;google&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// Check if our service is authenticated under at least one account</span></div>
+<div class="line">    <span class="keywordtype">bool</span> service_authenticated = <span class="keyword">false</span>;</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keyword">auto</span> <span class="keyword">const</span>&amp; status : oa_client.get_service_statuses())</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span> (status.service_authenticated)</div>
+<div class="line">        {</div>
+<div class="line">            service_authenticated = <span class="keyword">true</span>;</div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// If our service is not authenticated, return a &quot;Log-in&quot; result</span></div>
+<div class="line">    <span class="keywordflow">if</span> (!service_authenticated)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keyword">auto</span> cat = reply-&gt;register_category(<span class="stringliteral">&quot;youtube_login&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line">        <a class="code" href="../unity.scopes.CategorisedResult/index.html">unity::scopes::CategorisedResult</a> res(cat);</div>
+<div class="line">        res.set_title(<span class="stringliteral">&quot;Log-in to YouTube&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">        oa_client.register_account_login_item(res,</div>
+<div class="line">                                              query(),</div>
+<div class="line">                                              <a class="code" href="../unity.scopes.OnlineAccountClient/index.html#a4505ad39c78dcc9fbb78a594c33b9a22a4096156be602a8dd697c5a2f1d834cec">unity::scopes::OnlineAccountClient::InvalidateResults</a>,</div>
+<div class="line">                                              <a class="code" href="../unity.scopes.OnlineAccountClient/index.html#a4505ad39c78dcc9fbb78a594c33b9a22a20868ed64ce21f859aae50ec76aa738d">unity::scopes::OnlineAccountClient::DoNothing</a>);</div>
+<div class="line">        reply-&gt;push(res);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="scopetesting"></a>
+Testing</h2>
+<p>The Unity Scopes API provides testing helpers based on the well-known and established testing frameworks, <a href="https://code.google.com/p/googletest/">googletest</a> and <a href="https://code.google.com/p/googlemock/">googlemock</a>. Please see the respective documentation of these framework for general information on how to use them.</p>
+<p>The testing helper classes are in the unity::scopes::testing namespace. The most important ones are: </p><ul>
+<li>
+unity::scopes::testing::TypedScopeFixture - A template class that takes your scope class name as a template argument and creates a test fixture that can be used in tests. </li>
+<li>
+unity::scopes::testing::MockSearchReply - A mock of unity::scopes::SearchReply that makes it possible to intercept responses to search request sent from the scope to a client, so you can test if your scope returns the expected data. </li>
+<li>
+unity::scopes::testing::MockPreviewReply - A mock of unity::scopes::PreviewReply that makes it possible to intercept and test responses to preview request sent from the scope to a client. </li>
+<li>
+<a class="el" href="../unity.scopes.testing.Result/index.html" title="A simple class implementation of unity::scopes::Result that provides a default constructor. ">unity::scopes::testing::Result</a> - A simple Result class derived from <a class="el" href="../unity.scopes.Result/index.html" title="The attributes of a result returned by a Scope. ">unity::scopes::Result</a> that provides a default constructor, so you can create dummy results (without attributes) for testing purposes. </li>
+<li>
+unity::scopes::testing::category - A simple class derived from <a class="el" href="../unity.scopes.Category/index.html" title="A set of related results returned by a scope and displayed within a single pane in the Unity dash...">unity::scopes::Category</a> that makes it possible to create dummy categories (which otherwise would require an instance of <a class="el" href="../unity.scopes.SearchReply/index.html">SearchReply</a> and a call to <a class="el" href="../unity.scopes.SearchReply/index.html#aaa061806a96f50ff66abc6184135ea66">register_category()</a>). </li>
+</ul>
+<p>Here is a test that checks if <code>MyScope</code> calls appropriate methods of <a class="el" href="../unity.scopes.SearchReply/index.html" title="Allows the results of a search query to be sent to the query source. ">unity::scopes::SearchReply</a>. Note that the test only checks that the correct methods are called and uses <code>_</code> matchers that match any value. For a proper test, you will need to substitute values appropriate for your scope.</p>
+<div class="fragment"><div class="line"><span class="keyword">typedef</span> unity::scopes::testing::TypedScopeFixture&lt;MyScope&gt; TestScopeFixture;</div>
+<div class="line"><span class="keyword">using namespace </span>::testing;</div>
+<div class="line"></div>
+<div class="line">TEST_F(TestScopeFixture, search_results)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">const</span> <a class="code" href="../unity.scopes.CategoryRenderer/index.html">unity::scopes::CategoryRenderer</a> renderer;</div>
+<div class="line"></div>
+<div class="line">    NiceMock&lt;unity::scopes::testing::MockSearchReply&gt; reply;</div>
+<div class="line">    EXPECT_CALL(reply, register_departments(_, _)).Times(1);</div>
+<div class="line">    EXPECT_CALL(reply, register_category(_, _, _, _))</div>
+<div class="line">            .Times(1)</div>
+<div class="line">            .WillOnce(</div>
+<div class="line">                Return(</div>
+<div class="line">                    unity::scopes::Category::SCPtr(<span class="keyword">new</span> <a class="code" href="../unity.scopes.testing.Category/index.html">unity::scopes::testing::Category</a>(<span class="stringliteral">&quot;id&quot;</span>, <span class="stringliteral">&quot;title&quot;</span>, <span class="stringliteral">&quot;icon&quot;</span>, renderer))</div>
+<div class="line">                )</div>
+<div class="line">            );</div>
+<div class="line">    EXPECT_CALL(reply, push(Matcher&lt;unity::scopes::Annotation const&amp;&gt;(_)))</div>
+<div class="line">            .Times(1)</div>
+<div class="line">            .WillOnce(Return(<span class="keyword">true</span>));</div>
+<div class="line">    EXPECT_CALL(reply, push(Matcher&lt;unity::scopes::CategorisedResult const&amp;&gt;(_)))</div>
+<div class="line">            .Times(1)</div>
+<div class="line">            .WillOnce(Return(<span class="keyword">true</span>));</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// note: this is a std::shared_ptr with empty deleter</span></div>
+<div class="line">    <a class="code" href="../unity.scopes/index.html#a9cd604d9b842ac3b2b8636c2165dec1f">unity::scopes::SearchReplyProxy</a> reply_proxy(&amp;reply, [](unity::scopes::SearchReplyBase*) {});</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="../unity.scopes.CannedQuery/index.html">unity::scopes::CannedQuery</a> query(scope_id, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line">    <a class="code" href="../unity.scopes.SearchMetadata/index.html">unity::scopes::SearchMetadata</a> meta_data(<span class="stringliteral">&quot;en_EN&quot;</span>, <span class="stringliteral">&quot;phone&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="keyword">auto</span> search_query = scope-&gt;search(query, meta_data);</div>
+<div class="line">    ASSERT_NE(<span class="keyword">nullptr</span>, search_query);</div>
+<div class="line">    search_query-&gt;run(reply_proxy);</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="deployment"></a>
+Deployment</h2>
+<p>Installing a scope is as simple as running <code>make install</code> when using the scope template. You might need to restart the global scope registry when a new scope is installed by running:</p>
+<pre class="fragment">restart scope-registry
+</pre><p>Scopes are installed under one of the "scopes directories" scanned by the scope registry. Currently these default to:</p>
+<ul>
+<li>
+/usr/lib/${arch}/unity-scopes </li>
+<li>
+/custom/lib/${arch}/unity-scopes </li>
+<li>
+$HOME/.local/share/unity-scopes </li>
+</ul>
+<p>The <code>/usr/lib</code> directory is for scopes that are pre-installed by Canonical. The <code>/custom/lib</code> directory is for scopes that pre-installed by OEMs. The <code>$HOME/.local</code> directory is for scopes that are installed from click packages.</p>
+<p>Individual scopes are installed into subdirectories of these installation directories. The name of the subdirectory containing a scope's <code>.ini</code> and <code>.so</code> files can be anything but, to avoid name clashes, we strongly suggest something that is unique, such as <code>com.canonical.scopes.scopename</code>. At a minimum, the directory structure must contain the following: </p><pre class="fragment">-+- ${scopesdir}
+ `-+- subdirectory
+   |--- scopename.ini
+   `--- &lt;library&gt;.so
+</pre><p>That is, each subdirectory must contain a scope <code>.ini</code> file and a shared library containing the scope code. You are free to ship additional data in this directory, such as a settings definition file (if your scope uses settings) or icon files and screenshots.</p>
+<p>The name of the scope's <code>.ini</code> file <em>must</em> be a unique ID for the scope. We <em>strongly</em> suggest to use a unique identifier, such as <code>com.canonical.scopes.scopename</code>, to avoid clashes with scopes created by other developers.</p>
+<p>The name of of the scope's <code>.so</code> file can be <code>libscopename.so</code>, <code>scopename.so</code>, or simply <code>scope.so</code>. For example, for a scope named <code>Fred</code>, the names <code>libFred.so</code>, <code>Fred.so</code>, and <code>scope.so</code> are acceptable. (No other library names are valid.)</p>
+<p>The scope <code>.ini</code> file uses the standard <code>.ini</code> file format, with the following keys: </p><pre class="fragment">[ScopeConfig]
+DisplayName = human readable name of scope
+Description = description of scope
+Author = Author
+Version = 1
+Icon = path to icon representing the scope
+Art = path to screenshot of the scope
+SearchHint = hint text displayed to user when viewing scope
+HotKey =
+ResultsTtlType = None, Small, Medium, or Large
+Keywords =
+IsAggregator = true or false
+IdleTimeout = idle timeout in seconds
+LocationDataNeeded = true or false
+ScopeRunner = path_to_scope_runner args... %R %S
+[Appearance]
+ForegroundColor = default text color (defaults to theme-provided foreground color)
+BackgroundColor = color of scope background (default is transparent)
+ShapeImages = whether to use Ubuntu-shape for all cards and artwork (defaults to true)
+CategoryHeaderBackground = background scheme of the results categories
+PreviewButtonColor = color of preview buttons (defaults to theme-provided color)
+LogoOverlayColor = color for the overlay in scopes overview (defaults to semi-transparent black)
+PageHeader.Logo = image containing scope's logo
+PageHeader.ForegroundColor = default header text color (defaults to the overall foreground color)
+PageHeader.Background = background scheme of the header
+PageHeader.DividerColor = color of the header divider
+PageHeader.NavigationBackground = background scheme of the navigation bar
+</pre><p>The <code>ScopeConfig</code> group is mandatory. The information in this group makes the scope known to the registry. In addition, this information controls how the scope appears in the "Scopes" scope.</p>
+<p>The <code>ScopeConfig</code> group must contain settings for at least <code>DisplayName</code>, <code>Description</code>, and <code>Author</code>. <code>DisplayName</code> and <code>Description</code> can (and should) be localized. For example:</p>
+<p><code>Description[de_DE] = Fu&szlig;ballergebnisse</code></p>
+<p>The <code>Version</code> key is optional, but we strongly recommend that you set it. If the behavior of your scope changes in any way that is visible to the query source (such having added or removed a result attribute), you should increment the version number. This allows an aggregating scope to adjust its behavior according to which version of your scope is installed. If not set, the default value is 0. You can set the value to any integer &gt;= 1.</p>
+<p>The <code>SearchHint</code> key provides text that may be shown by the UI, such as "Enter a city name".</p>
+<p>The <code>Keywords</code> key is optional, but we recommend that you use it. Keywords are used by aggregators to collect results from scopes of similar type (E.g. The Music scope will aggregate scopes with the keyword "music", and so on). The value of <code>Keywords</code> should specify a list of keywords your scope falls under. This value must be a semicolon separated list (E.g. <code>Keywords = music;video</code>).</p>
+<p>The <code>IsAggregator</code> key must be set to <code>true</code> for aggregating scopes. The default value is <code>false</code>.</p>
+<p>The <code>IdleTimeout</code> key controls how long a scope can remain idle before it is told to stop by the registry (or killed if it does not stop within 4 seconds). The default idle timeout is 40 seconds, meaning that a scope will be told to stop if no query was sent to it for that amount of time.</p>
+<p><code>ResultTtl</code> determines how long results should be cached by the UI before they are considered "stale" and should be refreshed. <code>None</code> indicates that results remain valid indefinitely; <code>Small</code> indicates results are valid for around a minute; <code>Medium</code> indicates that results are valid for a few minutes; <code>Large</code> indicates that results remain valid for around an hour.</p>
+<p><code>LocationDataNeeded</code> should be set to <code>true</code> if the scope requires location data. In that case, the <a class="el" href="../unity.scopes.SearchMetadata/index.html">SearchMetadata</a> provides access to <a class="el" href="../unity.scopes.Location/index.html">Location</a> information (assuming the user has granted location permission to the scope). If not set, the default value is <code>false</code>.</p>
+<p>The <code>Scoperunner</code> key defines a command line to be executed when the scope is started by the registry. Typically, scopes do not need to change this setting. It is provided mainly to allow scopes implemented in languages other than C++ to be started, as well as for debugging. For example, the following setting causes a scope to be run under <code>gdb</code>:</p>
+<p><code>ScopeRunner = /usr/bin/gdb --ex run --args /usr/lib/x86_64-linux-gnu/unity-scopes/scoperunner R S</code></p>
+<p>The <code>R</code> expands to the path to the <code>Runtime.ini</code> config file, and <code>S</code> expands to the scope's <code>.ini</code> file.</p>
+<p>The <code>Appearance</code> group and all keys within it are optional and can be used to customize the look of the scope. Some of the <code>Appearance</code> keys (such as <code>PageHeader.Background</code>) require background scheme URIs. Valid URIs for these keys include:</p>
+<ul>
+<li>
+color:///#aarrggbb </li>
+<li>
+color:///black </li>
+<li>
+gradient:///#aarrggbb/#aarrggbb </li>
+<li>
+/absolute/path/to/image </li>
+<li>
+<a href="http://remote-server.com/path/to/image">http://remote-server.com/path/to/image</a> </li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>Please refer to the <a href="https://developer.ubuntu.com/en/scopes/tutorials/scope-keywords/">Scope Keywords</a> tutorial document for more detail on using keywords in your scope.</dd></dl>
+<h2><a class="anchor" id="scopetool"></a>
+The scope tool</h2>
+<p>The Unity Scope Tool is a stand-alone rendering tool that allows you to see how the dash will render your scope.</p>
+<p>You can install the tool from the Ubuntu archive using: </p><pre class="fragment">sudo apt-get install unity-scope-tool
+</pre><p>After installation, you can run the scope-tool with a parameter specifying the path to your scope configuration file (for example <code>unity-scope-tool ~/dev/myscope/build/myscope.ini</code>). If a binary for your scope can be found in the same directory, the scope-tool displays surfacing and search results provided by your scope, and it allows you to perform searches, invoke previews, and perform actions within previews.</p>
+<p>Note that the scope-tool uses the same rendering mechanism as Unity itself and, therefore, what you see in the scope-tool is what you get in Unity. The tool can also be used to fine-tune category definitions, as it allows you to manipulate the definitions on the fly. Once you are satisfied with the result, you can just copy the JSON definition back into your scope (see <a class="el" href="../unity.scopes.CategoryRenderer/index.html#a046414ae2092968686ee4ee00629054a" title="Creates a CategoryRenderer from a JSON string. ">unity::scopes::CategoryRenderer::CategoryRenderer()</a>).</p>
+<p>The scope-tool supports a few command line arguments: </p><ul>
+<li>By default (without any arguments) it will communicate with all scopes installed on the system and available on the smart scopes server. </li>
+<li>When a path to a scope configuration file is provided, only that scope is initialized, but you can either pass multiple configuration files or the <code>--include-system-scopes</code> / <code>--include-server-scopes</code> option to allow development of aggregating scopes. </li>
+</ul>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

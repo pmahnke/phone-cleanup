@@ -1,0 +1,695 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Using C++ Models with Qt Quick Views | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a class="sub-nav-item" href="../index.html">SDK 15.04.5</a> &rsaquo;</li>
+
+<li><a class="sub-nav-item" href="../QtQuick/index.html">QtQuick</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Using C++ Models with Qt Quick Views</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qtquick-modelviewsdata-cppmodels.html -->
+	<!-- Source Format: qdoc -->
+<h1>Using C++ Models with Qt Quick Views</h1>
+<div id="page_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$qtquick-modelviewsdata-cppmodels.html-description -->
+<div class="descr"> <a name="details"></a>
+<a name="data-provided-in-a-custom-c-model"></a>
+<h2 id="data-provided-in-a-custom-c-model">Data Provided In A Custom C++ Model</h2>
+<p>Models can be defined in C++ and then made available to QML. This is useful for exposing existing C++ data models or otherwise complex datasets to QML.</p>
+<p>A C++ model class can be defined as a QStringList, a QObjectList or a <a href="index.html#qabstractitemmodel">QAbstractItemModel</a>. The first two are useful for exposing simpler datasets, while <a href="index.html#qabstractitemmodel">QAbstractItemModel</a> provides a more flexible solution for more complex models.</p>
+<a name="qstringlist-based-model"></a>
+<h3 >QStringList-based Model</h3>
+<p>A model may be a simple QStringList, which provides the contents of the list via the <i>modelData</i> role.</p>
+<p>Here is a <a href="../QtQuick.ListView/index.html">ListView</a> with a delegate that references its model item's value using the <code>modelData</code> role:</p>
+<pre class="qml"><span class="type"><a href="../QtQuick.ListView/index.html">ListView</a></span> {
+    <span class="name">width</span>: <span class="number">100</span>; <span class="name">height</span>: <span class="number">100</span>
+    <span class="name">model</span>: <span class="name">myModel</span>
+    <span class="name">delegate</span>: <span class="name">Rectangle</span> {
+        <span class="name">height</span>: <span class="number">25</span>
+        <span class="name">width</span>: <span class="number">100</span>
+        <span class="type"><a href="../QtQuick.Text/index.html">Text</a></span> { <span class="name">text</span>: <span class="name">modelData</span> }
+    }
+}</pre>
+<p>A Qt application can load this QML document and set the value of <code>myModel</code> to a QStringList:</p>
+<pre class="cpp">    <span class="type">QStringList</span> dataList;
+    dataList<span class="operator">.</span>append(<span class="string">&quot;Item 1&quot;</span>);
+    dataList<span class="operator">.</span>append(<span class="string">&quot;Item 2&quot;</span>);
+    dataList<span class="operator">.</span>append(<span class="string">&quot;Item 3&quot;</span>);
+    dataList<span class="operator">.</span>append(<span class="string">&quot;Item 4&quot;</span>);
+    <span class="type">QQuickView</span> view;
+    <span class="type">QQmlContext</span> <span class="operator">*</span>ctxt <span class="operator">=</span> view<span class="operator">.</span>rootContext();
+    ctxt<span class="operator">-</span><span class="operator">&gt;</span>setContextProperty(<span class="string">&quot;myModel&quot;</span><span class="operator">,</span> <span class="type">QVariant</span><span class="operator">::</span>fromValue(dataList));</pre>
+<p>The complete source code for this example is available in <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04.5/QtQuick.models-stringlistmodel/">examples/quick/models/stringlistmodel</a> within the Qt install directory.</p>
+<p><b>Note:</b> There is no way for the view to know that the contents of a QStringList have changed. If the QStringList changes, it will be necessary to reset the model by calling QQmlContext::setContextProperty() again.</p>
+<a name="qobjectlist-based-model"></a>
+<h3 >QObjectList-based model</h3>
+<p>A list of QObject* values can also be used as a model. A QList&lt;QObject*&gt; provides the properties of the objects in the list as roles.</p>
+<p>The following application creates a <code>DataObject</code> class with Q_PROPERTY values that will be accessible as named roles when a QList&lt;DataObject*&gt; is exposed to QML:</p>
+<pre class="cpp"><span class="keyword">class</span> DataObject : <span class="keyword">public</span> <span class="type">QObject</span>
+{
+    Q_OBJECT
+    Q_PROPERTY(<span class="type">QString</span> name READ name WRITE setName NOTIFY nameChanged)
+    Q_PROPERTY(<span class="type">QString</span> color READ color WRITE setColor NOTIFY colorChanged)
+    ...
+};
+<span class="type">int</span> main(<span class="type">int</span> argc<span class="operator">,</span> <span class="type">char</span> <span class="operator">*</span><span class="operator">*</span> argv)
+{
+    <span class="type">QGuiApplication</span> app(argc<span class="operator">,</span> argv);
+    <span class="type">QList</span><span class="operator">&lt;</span><span class="type">QObject</span><span class="operator">*</span><span class="operator">&gt;</span> dataList;
+    dataList<span class="operator">.</span>append(<span class="keyword">new</span> DataObject(<span class="string">&quot;Item 1&quot;</span><span class="operator">,</span> <span class="string">&quot;red&quot;</span>));
+    dataList<span class="operator">.</span>append(<span class="keyword">new</span> DataObject(<span class="string">&quot;Item 2&quot;</span><span class="operator">,</span> <span class="string">&quot;green&quot;</span>));
+    dataList<span class="operator">.</span>append(<span class="keyword">new</span> DataObject(<span class="string">&quot;Item 3&quot;</span><span class="operator">,</span> <span class="string">&quot;blue&quot;</span>));
+    dataList<span class="operator">.</span>append(<span class="keyword">new</span> DataObject(<span class="string">&quot;Item 4&quot;</span><span class="operator">,</span> <span class="string">&quot;yellow&quot;</span>));
+    <span class="type">QQuickView</span> view;
+    view<span class="operator">.</span>setResizeMode(<span class="type">QQuickView</span><span class="operator">::</span>SizeRootObjectToView);
+    <span class="type">QQmlContext</span> <span class="operator">*</span>ctxt <span class="operator">=</span> view<span class="operator">.</span>rootContext();
+    ctxt<span class="operator">-</span><span class="operator">&gt;</span>setContextProperty(<span class="string">&quot;myModel&quot;</span><span class="operator">,</span> <span class="type">QVariant</span><span class="operator">::</span>fromValue(dataList));
+    ...</pre>
+<p>The QObject* is available as the <code>modelData</code> property. As a convenience, the properties of the object are also made available directly in the delegate's context. Here, <code>view.qml</code> references the <code>DataModel</code> properties in the <a href="../QtQuick.ListView/index.html">ListView</a> delegate:</p>
+<pre class="qml"><span class="type"><a href="../QtQuick.ListView/index.html">ListView</a></span> {
+    <span class="name">width</span>: <span class="number">100</span>; <span class="name">height</span>: <span class="number">100</span>
+    <span class="name">model</span>: <span class="name">myModel</span>
+    <span class="name">delegate</span>: <span class="name">Rectangle</span> {
+        <span class="name">height</span>: <span class="number">25</span>
+        <span class="name">width</span>: <span class="number">100</span>
+        <span class="name">color</span>: <span class="name">model</span>.<span class="name">modelData</span>.<span class="name">color</span>
+        <span class="type"><a href="../QtQuick.Text/index.html">Text</a></span> { <span class="name">text</span>: <span class="name">name</span> }
+    }
+}</pre>
+<p>Note the use of <code>color</code> property with qualifier. The properties of the object are not replicated in the <code>model</code> object, as they are easily available via the <code>modelData</code> object.</p>
+<p>The complete source code for this example is available in <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04.5/QtQuick.models-objectlistmodel/">examples/quick/models/objectlistmodel</a> within the Qt install directory.</p>
+<p>Note: There is no way for the view to know that the contents of a QList has changed. If the QList changes, it is necessary to reset the model by calling QQmlContext::setContextProperty() again.</p>
+<a name="qabstractitemmodel"></a>
+<h3 >QAbstractItemModel</h3>
+<p>A model can be defined by subclassing <a href="index.html#qabstractitemmodel">QAbstractItemModel</a>. This is the best approach if you have a more complex model that cannot be supported by the other approaches. A <a href="index.html#qabstractitemmodel">QAbstractItemModel</a> can also automatically notify a QML view when the model data changes.</p>
+<p>The roles of a <a href="index.html#qabstractitemmodel">QAbstractItemModel</a> subclass can be exposed to QML by reimplementing QAbstractItemModel::roleNames().</p>
+<p>Here is an application with a QAbstractListModel subclass named <code>AnimalModel</code>, which exposes the <i>type</i> and <i>sizes</i> roles. It reimplements QAbstractItemModel::roleNames() to expose the role names, so that they can be accessed via QML:</p>
+<pre class="cpp"><span class="keyword">class</span> Animal
+{
+<span class="keyword">public</span>:
+    Animal(<span class="keyword">const</span> <span class="type">QString</span> <span class="operator">&amp;</span>type<span class="operator">,</span> <span class="keyword">const</span> <span class="type">QString</span> <span class="operator">&amp;</span>size);
+    ...
+};
+<span class="keyword">class</span> AnimalModel : <span class="keyword">public</span> <span class="type">QAbstractListModel</span>
+{
+    Q_OBJECT
+<span class="keyword">public</span>:
+    <span class="keyword">enum</span> AnimalRoles {
+        TypeRole <span class="operator">=</span> <span class="type">Qt</span><span class="operator">::</span>UserRole <span class="operator">+</span> <span class="number">1</span><span class="operator">,</span>
+        SizeRole
+    };
+    AnimalModel(<span class="type">QObject</span> <span class="operator">*</span>parent <span class="operator">=</span> <span class="number">0</span>);
+    ...
+};
+<span class="type">QHash</span><span class="operator">&lt;</span><span class="type">int</span><span class="operator">,</span> <span class="type">QByteArray</span><span class="operator">&gt;</span> AnimalModel<span class="operator">::</span>roleNames() <span class="keyword">const</span> {
+    <span class="type">QHash</span><span class="operator">&lt;</span><span class="type">int</span><span class="operator">,</span> <span class="type">QByteArray</span><span class="operator">&gt;</span> roles;
+    roles<span class="operator">[</span>TypeRole<span class="operator">]</span> <span class="operator">=</span> <span class="string">&quot;type&quot;</span>;
+    roles<span class="operator">[</span>SizeRole<span class="operator">]</span> <span class="operator">=</span> <span class="string">&quot;size&quot;</span>;
+    <span class="keyword">return</span> roles;
+}
+<span class="type">int</span> main(<span class="type">int</span> argc<span class="operator">,</span> <span class="type">char</span> <span class="operator">*</span><span class="operator">*</span> argv)
+{
+    <span class="type">QGuiApplication</span> app(argc<span class="operator">,</span> argv);
+    AnimalModel model;
+    model<span class="operator">.</span>addAnimal(Animal(<span class="string">&quot;Wolf&quot;</span><span class="operator">,</span> <span class="string">&quot;Medium&quot;</span>));
+    model<span class="operator">.</span>addAnimal(Animal(<span class="string">&quot;Polar bear&quot;</span><span class="operator">,</span> <span class="string">&quot;Large&quot;</span>));
+    model<span class="operator">.</span>addAnimal(Animal(<span class="string">&quot;Quoll&quot;</span><span class="operator">,</span> <span class="string">&quot;Small&quot;</span>));
+    <span class="type">QQuickView</span> view;
+    view<span class="operator">.</span>setResizeMode(<span class="type">QQuickView</span><span class="operator">::</span>SizeRootObjectToView);
+    <span class="type">QQmlContext</span> <span class="operator">*</span>ctxt <span class="operator">=</span> view<span class="operator">.</span>rootContext();
+    ctxt<span class="operator">-</span><span class="operator">&gt;</span>setContextProperty(<span class="string">&quot;myModel&quot;</span><span class="operator">,</span> <span class="operator">&amp;</span>model);
+    ...</pre>
+<p>This model is displayed by a <a href="../QtQuick.ListView/index.html">ListView</a> delegate that accesses the <i>type</i> and <i>size</i> roles:</p>
+<pre class="qml"><span class="type"><a href="../QtQuick.ListView/index.html">ListView</a></span> {
+    <span class="name">width</span>: <span class="number">200</span>; <span class="name">height</span>: <span class="number">250</span>
+    <span class="name">model</span>: <span class="name">myModel</span>
+    <span class="name">delegate</span>: <span class="name">Text</span> { <span class="name">text</span>: <span class="string">&quot;Animal: &quot;</span> <span class="operator">+</span> <span class="name">type</span> <span class="operator">+</span> <span class="string">&quot;, &quot;</span> <span class="operator">+</span> <span class="name">size</span> }
+}</pre>
+<p>QML views are automatically updated when the model changes. Remember the model must follow the standard rules for model changes and notify the view when the model has changed by using QAbstractItemModel::dataChanged(), QAbstractItemModel::beginInsertRows(), and so on. See the Model subclassing reference for more information.</p>
+<p>The complete source code for this example is available in <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04.5/QtQuick.models-abstractitemmodel/">examples/quick/models/abstractitemmodel</a> within the Qt install directory.</p>
+<p><a href="index.html#qabstractitemmodel">QAbstractItemModel</a> presents a hierarchy of tables, but the views currently provided by QML can only display list data. In order to display the child lists of a hierarchical model, use the DelegateModel QML type, which provides the following properties and functions to be used with list models of <a href="index.html#qabstractitemmodel">QAbstractItemModel</a> type:</p>
+<ul>
+<li><i>hasModelChildren</i> role property to determine whether a node has child nodes.</li>
+<li>DelegateModel::rootIndex allows the root node to be specified</li>
+<li>DelegateModel::modelIndex() returns a QModelIndex which can be assigned to DelegateModel::rootIndex</li>
+<li>DelegateModel::parentModelIndex() returns a QModelIndex which can be assigned to DelegateModel::rootIndex</li>
+</ul>
+<a name="exposing-c-data-models-to-qml"></a>
+<h3 >Exposing C++ Data Models to QML</h3>
+<p>The above examples use QQmlContext::setContextProperty() to set model values directly in QML components. An alternative to this is to register the C++ model class as a QML type (either directly from a C++ entry-point, or within the initialization function of a QML C++ plugin, as shown below). This would allow the model classes to be created directly as types within QML:</p>
+<div class="table"><table class="generic">
+ <tr valign="top" class="odd"><td ><pre class="cpp"><span class="keyword">class</span> MyModelPlugin : <span class="keyword">public</span> <span class="type">QQmlExtensionPlugin</span>
+{
+    Q_OBJECT
+    Q_PLUGIN_METADATA(IID <span class="string">&quot;org.qt-project.QmlExtension.MyModel&quot;</span> FILE <span class="string">&quot;mymodel.json&quot;</span>)
+<span class="keyword">public</span>:
+    <span class="type">void</span> registerTypes(<span class="keyword">const</span> <span class="type">char</span> <span class="operator">*</span>uri)
+    {
+        qmlRegisterType<span class="operator">&lt;</span>MyModel<span class="operator">&gt;</span>(uri<span class="operator">,</span> <span class="number">1</span><span class="operator">,</span> <span class="number">0</span><span class="operator">,</span>
+                <span class="string">&quot;MyModel&quot;</span>);
+    }
+}</pre>
+</td><td ><pre class="qml"><span class="type">MyModel</span> {
+    <span class="name">id</span>: <span class="name">myModel</span>
+    <span class="type">ListElement</span> { <span class="name">someProperty</span>: <span class="string">&quot;some value&quot;</span> }
+}</pre>
+<pre class="qml"><span class="type"><a href="../QtQuick.ListView/index.html">ListView</a></span> {
+    <span class="name">width</span>: <span class="number">200</span>; <span class="name">height</span>: <span class="number">250</span>
+    <span class="name">model</span>: <span class="name">myModel</span>
+    <span class="name">delegate</span>: <span class="name">Text</span> { <span class="name">text</span>: <span class="name">someProperty</span> }
+}</pre>
+</td></tr>
+</table></div>
+<p>See Writing QML Extensions with C++ for details on writing QML C++ plugins.</p>
+</div>
+<!-- @@@qtquick-modelviewsdata-cppmodels.html -->
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

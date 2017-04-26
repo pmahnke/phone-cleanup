@@ -1,0 +1,910 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Flickable [sdk-15.04.1/QtQuick.Flickable] | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a href="../index.html">SDK 15.04.1</a> &rsaquo;</li>
+
+<li><a href="../QtQuick/index.html">QtQuick</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Flickable</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qml-qtquick-flickable.html -->
+	<!-- Source Format: qdoc -->
+<h1>Flickable</h1>
+<div id="element_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$Flickable-brief -->
+<p>Provides a surface that can be &quot;flicked&quot; More...</p>
+<!-- @@@Flickable -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import QtQuick 2.4</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="../QtQuick.Item/index.html">Item</a></p>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="../QtQuick.GridView/index.html">GridView</a> and <a href="../QtQuick.ListView/index.html">ListView</a>.</p>
+</td></tr></table></div><ul>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#atXBeginning-prop">atXBeginning</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#atXEnd-prop">atXEnd</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#atYBeginning-prop">atYBeginning</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#atYEnd-prop">atYEnd</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#bottomMargin-prop">bottomMargin</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#boundsBehavior-prop">boundsBehavior</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="index.html#contentHeight-prop">contentHeight</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#contentItem-prop">contentItem</a></b></b> : Item</li>
+<li class="fn"><b><b><a href="index.html#contentWidth-prop">contentWidth</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#contentX-prop">contentX</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#contentY-prop">contentY</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#dragging-prop">dragging</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#draggingHorizontally-prop">draggingHorizontally</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#draggingVertically-prop">draggingVertically</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#flickDeceleration-prop">flickDeceleration</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#flickableDirection-prop">flickableDirection</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="index.html#flicking-prop">flicking</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#flickingHorizontally-prop">flickingHorizontally</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#flickingVertically-prop">flickingVertically</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#horizontalVelocity-prop">horizontalVelocity</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#interactive-prop">interactive</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#leftMargin-prop">leftMargin</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#maximumFlickVelocity-prop">maximumFlickVelocity</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#moving-prop">moving</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#movingHorizontally-prop">movingHorizontally</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#movingVertically-prop">movingVertically</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#originX-prop">originX</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#originY-prop">originY</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#pixelAligned-prop">pixelAligned</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#pressDelay-prop">pressDelay</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#rebound-prop">rebound</a></b></b> : Transition</li>
+<li class="fn"><b><b><a href="index.html#rightMargin-prop">rightMargin</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#topMargin-prop">topMargin</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#verticalVelocity-prop">verticalVelocity</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#visibleArea-prop">visibleArea</a></b></b><ul>
+<li class="fn"><b><b><a href="index.html#visibleArea.xPosition-prop">visibleArea.xPosition</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#visibleArea.widthRatio-prop">visibleArea.widthRatio</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#visibleArea.yPosition-prop">visibleArea.yPosition</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#visibleArea.heightRatio-prop">visibleArea.heightRatio</a></b></b> : real</li>
+</ul>
+</li>
+</ul>
+<a name="signals"></a>
+<h2 id="signals">Signals</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#flickEnded-signal">flickEnded</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#flickStarted-signal">flickStarted</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#movementEnded-signal">movementEnded</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#movementStarted-signal">movementStarted</a></b></b>()</li>
+</ul>
+<a name="methods"></a>
+<h2 id="methods">Methods</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#cancelFlick-method">cancelFlick</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#flick-method">flick</a></b></b>(qreal <i>xVelocity</i>, qreal <i>yVelocity</i>)</li>
+<li class="fn"><b><b><a href="index.html#resizeContent-method">resizeContent</a></b></b>(real <i>width</i>, real <i>height</i>, QPointF <i>center</i>)</li>
+<li class="fn"><b><b><a href="index.html#returnToBounds-method">returnToBounds</a></b></b>()</li>
+</ul>
+<!-- $$$Flickable-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<p>The Flickable item places its children on a surface that can be dragged and flicked, causing the view onto the child items to scroll. This behavior forms the basis of Items that are designed to show large numbers of child items, such as <a href="../QtQuick.ListView/index.html">ListView</a> and <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04.1/QtQuick.draganddrop/#gridview">GridView</a>.</p>
+<p>In traditional user interfaces, views can be scrolled using standard controls, such as scroll bars and arrow buttons. In some situations, it is also possible to drag the view directly by pressing and holding a mouse button while moving the cursor. In touch-based user interfaces, this dragging action is often complemented with a flicking action, where scrolling continues after the user has stopped touching the view.</p>
+<p>Flickable does not automatically clip its contents. If it is not used as a full-screen item, you should consider setting the <a href="../QtQuick.Item/index.html#clip-prop">clip</a> property to true.</p>
+<a name="example-usage"></a>
+<h2 id="example-usage">Example Usage</h2>
+<div class="float-right"><p><img src="https://developer.ubuntu.com/static/devportal_uploaded/98bee8dd-dcdc-4bcb-acc9-000be514e71d-api/apps/qml/sdk-15.04.1/QtQuick.Flickable/images/flickable.gif" alt="" /></p>
+</div><p>The following example shows a small view onto a large image in which the user can drag or flick the image in order to view different parts of it.</p>
+<pre class="qml">import QtQuick 2.0
+<span class="type"><a href="index.html">Flickable</a></span> {
+    <span class="name">width</span>: <span class="number">200</span>; <span class="name">height</span>: <span class="number">200</span>
+    <span class="name">contentWidth</span>: <span class="name">image</span>.<span class="name">width</span>; <span class="name">contentHeight</span>: <span class="name">image</span>.<span class="name">height</span>
+    <span class="type"><a href="../QtQuick.Image/index.html">Image</a></span> { <span class="name">id</span>: <span class="name">image</span>; <span class="name">source</span>: <span class="string">&quot;bigImage.png&quot;</span> }
+}</pre>
+<br style="clear: both" /><p>Items declared as children of a Flickable are automatically parented to the Flickable's <a href="index.html#contentItem-prop">contentItem</a>. This should be taken into account when operating on the children of the Flickable; it is usually the children of <code>contentItem</code> that are relevant. For example, the bound of Items added to the Flickable will be available by <code>contentItem.childrenRect</code></p>
+<a name="limitations"></a>
+<h2 id="limitations">Limitations</h2>
+<p><b>Note: </b>Due to an implementation detail, items placed inside a Flickable cannot anchor to it by <code>id</code>. Use <code>parent</code> instead.</p><!-- @@@Flickable -->
+<h2>Property Documentation</h2>
+<!-- $$$atXBeginning -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="atXBeginning-prop"><td class="tblQmlPropNode"><p><a name="atXBeginning-prop"></a><span class="name">atXBeginning</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>These properties are true if the flickable view is positioned at the beginning, or end respectively.</p>
+</div></div><!-- @@@atXBeginning -->
+<br/>
+<!-- $$$atXEnd -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="atXEnd-prop"><td class="tblQmlPropNode"><p><a name="atXEnd-prop"></a><span class="name">atXEnd</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>These properties are true if the flickable view is positioned at the beginning, or end respectively.</p>
+</div></div><!-- @@@atXEnd -->
+<br/>
+<!-- $$$atYBeginning -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="atYBeginning-prop"><td class="tblQmlPropNode"><p><a name="atYBeginning-prop"></a><span class="name">atYBeginning</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>These properties are true if the flickable view is positioned at the beginning, or end respectively.</p>
+</div></div><!-- @@@atYBeginning -->
+<br/>
+<!-- $$$atYEnd -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="atYEnd-prop"><td class="tblQmlPropNode"><p><a name="atYEnd-prop"></a><span class="name">atYEnd</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>These properties are true if the flickable view is positioned at the beginning, or end respectively.</p>
+</div></div><!-- @@@atYEnd -->
+<br/>
+<!-- $$$bottomMargin -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="bottomMargin-prop"><td class="tblQmlPropNode"><p><a name="bottomMargin-prop"></a><span class="name">bottomMargin</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>These properties hold the margins around the content. This space is reserved in addition to the <a href="index.html#contentWidth-prop">contentWidth</a> and <a href="index.html#contentHeight-prop">contentHeight</a>.</p>
+</div></div><!-- @@@bottomMargin -->
+<br/>
+<!-- $$$boundsBehavior -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="boundsBehavior-prop"><td class="tblQmlPropNode"><p><a name="boundsBehavior-prop"></a><span class="name">boundsBehavior</span> : <span class="type">enumeration</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds whether the surface may be dragged beyond the Flickable's boundaries, or overshoot the Flickable's boundaries when flicked.</p>
+<p>This enables the feeling that the edges of the view are soft, rather than a hard physical boundary.</p>
+<p>The <code>boundsBehavior</code> can be one of:</p>
+<ul>
+<li>Flickable.StopAtBounds - the contents can not be dragged beyond the boundary of the flickable, and flicks will not overshoot.</li>
+<li>Flickable.DragOverBounds - the contents can be dragged beyond the boundary of the Flickable, but flicks will not overshoot.</li>
+<li>Flickable.DragAndOvershootBounds (default) - the contents can be dragged beyond the boundary of the Flickable, and can overshoot the boundary when flicked.</li>
+</ul>
+</div></div><!-- @@@boundsBehavior -->
+<br/>
+<!-- $$$contentHeight -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="contentHeight-prop"><td class="tblQmlPropNode"><p><a name="contentHeight-prop"></a><span class="name">contentHeight</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>The dimensions of the content (the surface controlled by Flickable). This should typically be set to the combined size of the items placed in the Flickable.</p>
+<p>The following snippet shows how these properties are used to display an image that is larger than the Flickable item itself:</p>
+<pre class="qml">import QtQuick 2.0
+<span class="type"><a href="index.html">Flickable</a></span> {
+    <span class="name">width</span>: <span class="number">200</span>; <span class="name">height</span>: <span class="number">200</span>
+    <span class="name">contentWidth</span>: <span class="name">image</span>.<span class="name">width</span>; <span class="name">contentHeight</span>: <span class="name">image</span>.<span class="name">height</span>
+    <span class="type"><a href="../QtQuick.Image/index.html">Image</a></span> { <span class="name">id</span>: <span class="name">image</span>; <span class="name">source</span>: <span class="string">&quot;bigImage.png&quot;</span> }
+}</pre>
+<p>In some cases, the content dimensions can be automatically set based on the <a href="../QtQuick.Item/index.html#childrenRect.width-prop">childrenRect.width</a> and <a href="../QtQuick.Item/index.html#childrenRect.height-prop">childrenRect.height</a> properties of the <a href="index.html#contentItem-prop">contentItem</a>. For example, the previous snippet could be rewritten with:</p>
+<pre class="cpp">contentWidth: contentItem<span class="operator">.</span>childrenRect<span class="operator">.</span>width; contentHeight: contentItem<span class="operator">.</span>childrenRect<span class="operator">.</span>height</pre>
+<p>Though this assumes that the origin of the childrenRect is 0,0.</p>
+</div></div><!-- @@@contentHeight -->
+<br/>
+<!-- $$$contentItem -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="contentItem-prop"><td class="tblQmlPropNode"><p><a name="contentItem-prop"></a><span class="name">contentItem</span> : <span class="type"><a href="../QtQuick.Item/index.html">Item</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>The internal item that contains the Items to be moved in the Flickable.</p>
+<p>Items declared as children of a Flickable are automatically parented to the Flickable's contentItem.</p>
+<p>Items created dynamically need to be explicitly parented to the <i>contentItem</i>:</p>
+<pre class="cpp">Flickable {
+    id: myFlickable
+    function addItem(file) {
+        var component <span class="operator">=</span> <span class="type">Qt</span><span class="operator">.</span>createComponent(file)
+        component<span class="operator">.</span>createObject(myFlickable<span class="operator">.</span>contentItem);
+    }
+}</pre>
+</div></div><!-- @@@contentItem -->
+<br/>
+<!-- $$$contentWidth -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="contentWidth-prop"><td class="tblQmlPropNode"><p><a name="contentWidth-prop"></a><span class="name">contentWidth</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>The dimensions of the content (the surface controlled by Flickable). This should typically be set to the combined size of the items placed in the Flickable.</p>
+<p>The following snippet shows how these properties are used to display an image that is larger than the Flickable item itself:</p>
+<pre class="qml">import QtQuick 2.0
+<span class="type"><a href="index.html">Flickable</a></span> {
+    <span class="name">width</span>: <span class="number">200</span>; <span class="name">height</span>: <span class="number">200</span>
+    <span class="name">contentWidth</span>: <span class="name">image</span>.<span class="name">width</span>; <span class="name">contentHeight</span>: <span class="name">image</span>.<span class="name">height</span>
+    <span class="type"><a href="../QtQuick.Image/index.html">Image</a></span> { <span class="name">id</span>: <span class="name">image</span>; <span class="name">source</span>: <span class="string">&quot;bigImage.png&quot;</span> }
+}</pre>
+<p>In some cases, the content dimensions can be automatically set based on the <a href="../QtQuick.Item/index.html#childrenRect.width-prop">childrenRect.width</a> and <a href="../QtQuick.Item/index.html#childrenRect.height-prop">childrenRect.height</a> properties of the <a href="index.html#contentItem-prop">contentItem</a>. For example, the previous snippet could be rewritten with:</p>
+<pre class="cpp">contentWidth: contentItem<span class="operator">.</span>childrenRect<span class="operator">.</span>width; contentHeight: contentItem<span class="operator">.</span>childrenRect<span class="operator">.</span>height</pre>
+<p>Though this assumes that the origin of the childrenRect is 0,0.</p>
+</div></div><!-- @@@contentWidth -->
+<br/>
+<!-- $$$contentX -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="contentX-prop"><td class="tblQmlPropNode"><p><a name="contentX-prop"></a><span class="name">contentX</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>These properties hold the surface coordinate currently at the top-left corner of the Flickable. For example, if you flick an image up 100 pixels, <code>contentY</code> will be 100.</p>
+</div></div><!-- @@@contentX -->
+<br/>
+<!-- $$$contentY -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="contentY-prop"><td class="tblQmlPropNode"><p><a name="contentY-prop"></a><span class="name">contentY</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>These properties hold the surface coordinate currently at the top-left corner of the Flickable. For example, if you flick an image up 100 pixels, <code>contentY</code> will be 100.</p>
+</div></div><!-- @@@contentY -->
+<br/>
+<!-- $$$dragging -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="dragging-prop"><td class="tblQmlPropNode"><p><a name="dragging-prop"></a><span class="name">dragging</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>These properties describe whether the view is currently moving horizontally, vertically or in either direction, due to the user dragging the view.</p>
+</div></div><!-- @@@dragging -->
+<br/>
+<!-- $$$draggingHorizontally -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="draggingHorizontally-prop"><td class="tblQmlPropNode"><p><a name="draggingHorizontally-prop"></a><span class="name">draggingHorizontally</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>These properties describe whether the view is currently moving horizontally, vertically or in either direction, due to the user dragging the view.</p>
+</div></div><!-- @@@draggingHorizontally -->
+<br/>
+<!-- $$$draggingVertically -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="draggingVertically-prop"><td class="tblQmlPropNode"><p><a name="draggingVertically-prop"></a><span class="name">draggingVertically</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>These properties describe whether the view is currently moving horizontally, vertically or in either direction, due to the user dragging the view.</p>
+</div></div><!-- @@@draggingVertically -->
+<br/>
+<!-- $$$flickDeceleration -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="flickDeceleration-prop"><td class="tblQmlPropNode"><p><a name="flickDeceleration-prop"></a><span class="name">flickDeceleration</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the rate at which a flick will decelerate.</p>
+<p>The default value is platform dependent.</p>
+</div></div><!-- @@@flickDeceleration -->
+<br/>
+<!-- $$$flickableDirection -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="flickableDirection-prop"><td class="tblQmlPropNode"><p><a name="flickableDirection-prop"></a><span class="name">flickableDirection</span> : <span class="type">enumeration</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property determines which directions the view can be flicked.</p>
+<ul>
+<li>Flickable.AutoFlickDirection (default) - allows flicking vertically if the <i>contentHeight</i> is not equal to the <i>height</i> of the Flickable. Allows flicking horizontally if the <i>contentWidth</i> is not equal to the <i>width</i> of the Flickable.</li>
+<li>Flickable.HorizontalFlick - allows flicking horizontally.</li>
+<li>Flickable.VerticalFlick - allows flicking vertically.</li>
+<li>Flickable.HorizontalAndVerticalFlick - allows flicking in both directions.</li>
+</ul>
+</div></div><!-- @@@flickableDirection -->
+<br/>
+<!-- $$$flicking -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="flicking-prop"><td class="tblQmlPropNode"><p><a name="flicking-prop"></a><span class="name">flicking</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>These properties describe whether the view is currently moving horizontally, vertically or in either direction, due to the user flicking the view.</p>
+</div></div><!-- @@@flicking -->
+<br/>
+<!-- $$$flickingHorizontally -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="flickingHorizontally-prop"><td class="tblQmlPropNode"><p><a name="flickingHorizontally-prop"></a><span class="name">flickingHorizontally</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>These properties describe whether the view is currently moving horizontally, vertically or in either direction, due to the user flicking the view.</p>
+</div></div><!-- @@@flickingHorizontally -->
+<br/>
+<!-- $$$flickingVertically -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="flickingVertically-prop"><td class="tblQmlPropNode"><p><a name="flickingVertically-prop"></a><span class="name">flickingVertically</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>These properties describe whether the view is currently moving horizontally, vertically or in either direction, due to the user flicking the view.</p>
+</div></div><!-- @@@flickingVertically -->
+<br/>
+<!-- $$$horizontalVelocity -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="horizontalVelocity-prop"><td class="tblQmlPropNode"><p><a name="horizontalVelocity-prop"></a><span class="name">horizontalVelocity</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>The instantaneous velocity of movement along the x and y axes, in pixels/sec.</p>
+<p>The reported velocity is smoothed to avoid erratic output.</p>
+<p>Note that for views with a large content size (more than 10 times the view size), the velocity of the flick may exceed the velocity of the touch in the case of multiple quick consecutive flicks. This allows the user to flick faster through large content.</p>
+</div></div><!-- @@@horizontalVelocity -->
+<br/>
+<!-- $$$interactive -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="interactive-prop"><td class="tblQmlPropNode"><p><a name="interactive-prop"></a><span class="name">interactive</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property describes whether the user can interact with the Flickable. A user cannot drag or flick a Flickable that is not interactive.</p>
+<p>By default, this property is true.</p>
+<p>This property is useful for temporarily disabling flicking. This allows special interaction with Flickable's children; for example, you might want to freeze a flickable map while scrolling through a pop-up dialog that is a child of the Flickable.</p>
+</div></div><!-- @@@interactive -->
+<br/>
+<!-- $$$leftMargin -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="leftMargin-prop"><td class="tblQmlPropNode"><p><a name="leftMargin-prop"></a><span class="name">leftMargin</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>These properties hold the margins around the content. This space is reserved in addition to the <a href="index.html#contentWidth-prop">contentWidth</a> and <a href="index.html#contentHeight-prop">contentHeight</a>.</p>
+</div></div><!-- @@@leftMargin -->
+<br/>
+<!-- $$$maximumFlickVelocity -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="maximumFlickVelocity-prop"><td class="tblQmlPropNode"><p><a name="maximumFlickVelocity-prop"></a><span class="name">maximumFlickVelocity</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the maximum velocity that the user can flick the view in pixels/second.</p>
+<p>The default value is platform dependent.</p>
+</div></div><!-- @@@maximumFlickVelocity -->
+<br/>
+<!-- $$$moving -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="moving-prop"><td class="tblQmlPropNode"><p><a name="moving-prop"></a><span class="name">moving</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>These properties describe whether the view is currently moving horizontally, vertically or in either direction, due to the user either dragging or flicking the view.</p>
+</div></div><!-- @@@moving -->
+<br/>
+<!-- $$$movingHorizontally -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="movingHorizontally-prop"><td class="tblQmlPropNode"><p><a name="movingHorizontally-prop"></a><span class="name">movingHorizontally</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>These properties describe whether the view is currently moving horizontally, vertically or in either direction, due to the user either dragging or flicking the view.</p>
+</div></div><!-- @@@movingHorizontally -->
+<br/>
+<!-- $$$movingVertically -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="movingVertically-prop"><td class="tblQmlPropNode"><p><a name="movingVertically-prop"></a><span class="name">movingVertically</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>These properties describe whether the view is currently moving horizontally, vertically or in either direction, due to the user either dragging or flicking the view.</p>
+</div></div><!-- @@@movingVertically -->
+<br/>
+<!-- $$$originX -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="originX-prop"><td class="tblQmlPropNode"><p><a name="originX-prop"></a><span class="name">originX</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>These properties hold the origin of the content. This value always refers to the top-left position of the content regardless of layout direction.</p>
+<p>This is usually (0,0), however <a href="../QtQuick.ListView/index.html">ListView</a> and <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04.1/QtQuick.draganddrop/#gridview">GridView</a> may have an arbitrary origin due to delegate size variation, or item insertion/removal outside the visible region.</p>
+</div></div><!-- @@@originX -->
+<br/>
+<!-- $$$originY -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="originY-prop"><td class="tblQmlPropNode"><p><a name="originY-prop"></a><span class="name">originY</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>These properties hold the origin of the content. This value always refers to the top-left position of the content regardless of layout direction.</p>
+<p>This is usually (0,0), however <a href="../QtQuick.ListView/index.html">ListView</a> and <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04.1/QtQuick.draganddrop/#gridview">GridView</a> may have an arbitrary origin due to delegate size variation, or item insertion/removal outside the visible region.</p>
+</div></div><!-- @@@originY -->
+<br/>
+<!-- $$$pixelAligned -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="pixelAligned-prop"><td class="tblQmlPropNode"><p><a name="pixelAligned-prop"></a><span class="name">pixelAligned</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property sets the alignment of <a href="index.html#contentX-prop">contentX</a> and <a href="index.html#contentY-prop">contentY</a> to pixels (<code>true</code>) or subpixels (<code>false</code>).</p>
+<p>Enable pixelAligned to optimize for still content or moving content with high constrast edges, such as one-pixel-wide lines, text or vector graphics. Disable pixelAligned when optimizing for animation quality.</p>
+<p>The default is <code>false</code>.</p>
+</div></div><!-- @@@pixelAligned -->
+<br/>
+<!-- $$$pressDelay -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="pressDelay-prop"><td class="tblQmlPropNode"><p><a name="pressDelay-prop"></a><span class="name">pressDelay</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the time to delay (ms) delivering a press to children of the Flickable. This can be useful where reacting to a press before a flicking action has undesirable effects.</p>
+<p>If the flickable is dragged/flicked before the delay times out the press event will not be delivered. If the button is released within the timeout, both the press and release will be delivered.</p>
+<p>Note that for nested Flickables with pressDelay set, the pressDelay of outer Flickables is overridden by the innermost Flickable. If the drag exceeds the platform drag threshold, the press event will be delivered regardless of this property.</p>
+<p><b>See also </b>QStyleHints.</p>
+</div></div><!-- @@@pressDelay -->
+<br/>
+<!-- $$$rebound -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="rebound-prop"><td class="tblQmlPropNode"><p><a name="rebound-prop"></a><span class="name">rebound</span> : <span class="type"><a href="../QtQuick.Transition/index.html">Transition</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This holds the transition to be applied to the content view when it snaps back to the bounds of the flickable. The transition is triggered when the view is flicked or dragged past the edge of the content area, or when <a href="index.html#returnToBounds-method">returnToBounds()</a> is called.</p>
+<pre class="qml">import QtQuick 2.0
+<span class="type"><a href="index.html">Flickable</a></span> {
+    <span class="name">width</span>: <span class="number">150</span>; <span class="name">height</span>: <span class="number">150</span>
+    <span class="name">contentWidth</span>: <span class="number">300</span>; <span class="name">contentHeight</span>: <span class="number">300</span>
+    <span class="name">rebound</span>: <span class="name">Transition</span> {
+        <span class="type"><a href="../QtQuick.NumberAnimation/index.html">NumberAnimation</a></span> {
+            <span class="name">properties</span>: <span class="string">&quot;x,y&quot;</span>
+            <span class="name">duration</span>: <span class="number">1000</span>
+            <span class="name">easing</span>.type: <span class="name">Easing</span>.<span class="name">OutBounce</span>
+        }
+    }
+    <span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> {
+        <span class="name">width</span>: <span class="number">300</span>; <span class="name">height</span>: <span class="number">300</span>
+        <span class="name">gradient</span>: <span class="name">Gradient</span> {
+            <span class="type"><a href="../QtQuick.GradientStop/index.html">GradientStop</a></span> { <span class="name">position</span>: <span class="number">0.0</span>; <span class="name">color</span>: <span class="string">&quot;lightsteelblue&quot;</span> }
+            <span class="type"><a href="../QtQuick.GradientStop/index.html">GradientStop</a></span> { <span class="name">position</span>: <span class="number">1.0</span>; <span class="name">color</span>: <span class="string">&quot;blue&quot;</span> }
+        }
+    }
+}</pre>
+<p>When the above view is flicked beyond its bounds, it will return to its bounds using the transition specified:</p>
+<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/2fbafe8f-a65d-48d2-aea1-021fe0b7b03d-api/apps/qml/sdk-15.04.1/QtQuick.Flickable/images/flickable-rebound.gif" alt="" /></p><p>If this property is not set, a default animation is applied.</p>
+</div></div><!-- @@@rebound -->
+<br/>
+<!-- $$$rightMargin -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="rightMargin-prop"><td class="tblQmlPropNode"><p><a name="rightMargin-prop"></a><span class="name">rightMargin</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>These properties hold the margins around the content. This space is reserved in addition to the <a href="index.html#contentWidth-prop">contentWidth</a> and <a href="index.html#contentHeight-prop">contentHeight</a>.</p>
+</div></div><!-- @@@rightMargin -->
+<br/>
+<!-- $$$topMargin -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="topMargin-prop"><td class="tblQmlPropNode"><p><a name="topMargin-prop"></a><span class="name">topMargin</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>These properties hold the margins around the content. This space is reserved in addition to the <a href="index.html#contentWidth-prop">contentWidth</a> and <a href="index.html#contentHeight-prop">contentHeight</a>.</p>
+</div></div><!-- @@@topMargin -->
+<br/>
+<!-- $$$verticalVelocity -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="verticalVelocity-prop"><td class="tblQmlPropNode"><p><a name="verticalVelocity-prop"></a><span class="name">verticalVelocity</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>The instantaneous velocity of movement along the x and y axes, in pixels/sec.</p>
+<p>The reported velocity is smoothed to avoid erratic output.</p>
+<p>Note that for views with a large content size (more than 10 times the view size), the velocity of the flick may exceed the velocity of the touch in the case of multiple quick consecutive flicks. This allows the user to flick faster through large content.</p>
+</div></div><!-- @@@verticalVelocity -->
+<br/>
+<!-- $$$visibleArea -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="even" id="visibleArea-prop"><th class="centerAlign"><p><a name="visibleArea-prop"></a><b>visibleArea group</b></p></th></tr><tr valign="top" class="odd" id="visibleArea.xPosition-prop"><td class="tblQmlPropNode"><p><a name="visibleArea.xPosition-prop"></a><span class="name">visibleArea.xPosition</span> : <span class="type">real</span></p></td></tr><tr valign="top" class="odd" id="visibleArea.widthRatio-prop"><td class="tblQmlPropNode"><p><a name="visibleArea.widthRatio-prop"></a><span class="name">visibleArea.widthRatio</span> : <span class="type">real</span></p></td></tr><tr valign="top" class="odd" id="visibleArea.yPosition-prop"><td class="tblQmlPropNode"><p><a name="visibleArea.yPosition-prop"></a><span class="name">visibleArea.yPosition</span> : <span class="type">real</span></p></td></tr><tr valign="top" class="odd" id="visibleArea.heightRatio-prop"><td class="tblQmlPropNode"><p><a name="visibleArea.heightRatio-prop"></a><span class="name">visibleArea.heightRatio</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>These properties describe the position and size of the currently viewed area. The size is defined as the percentage of the full view currently visible, scaled to 0.0 - 1.0&#x2e; The page position is usually in the range 0.0 (beginning) to 1.0 minus size ratio (end), i.e&#x2e; <code>yPosition</code> is in the range 0.0 to 1.0-<code>heightRatio</code>. However, it is possible for the contents to be dragged outside of the normal range, resulting in the page positions also being outside the normal range.</p>
+<p>These properties are typically used to draw a scrollbar. For example:</p>
+<pre class="qml"><span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> {
+    <span class="name">width</span>: <span class="number">200</span>; <span class="name">height</span>: <span class="number">200</span>
+    <span class="type"><a href="index.html">Flickable</a></span> {
+        <span class="name">id</span>: <span class="name">flickable</span>
+        ...
+    }
+    <span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> {
+        <span class="name">id</span>: <span class="name">scrollbar</span>
+        <span class="name">anchors</span>.right: <span class="name">flickable</span>.<span class="name">right</span>
+        <span class="name">y</span>: <span class="name">flickable</span>.<span class="name">visibleArea</span>.<span class="name">yPosition</span> <span class="operator">*</span> <span class="name">flickable</span>.<span class="name">height</span>
+        <span class="name">width</span>: <span class="number">10</span>
+        <span class="name">height</span>: <span class="name">flickable</span>.<span class="name">visibleArea</span>.<span class="name">heightRatio</span> <span class="operator">*</span> <span class="name">flickable</span>.<span class="name">height</span>
+        <span class="name">color</span>: <span class="string">&quot;black&quot;</span>
+    }
+}</pre>
+<p><b>See also </b><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04.1/QtQuick.customitems-scrollbar/">UI Components: Scrollbar Example</a>.</p>
+</div></div><!-- @@@visibleArea -->
+<br/>
+<h2>Signal Documentation</h2>
+<!-- $$$flickEnded -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="flickEnded-signal"><td class="tblQmlFuncNode"><p><a name="flickEnded-signal"></a><span class="name">flickEnded</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when the view stops moving due to a flick.</p>
+<p>The corresponding handler is <code>onFlickEnded</code>.</p>
+</div></div><!-- @@@flickEnded -->
+<br/>
+<!-- $$$flickStarted -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="flickStarted-signal"><td class="tblQmlFuncNode"><p><a name="flickStarted-signal"></a><span class="name">flickStarted</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when the view is flicked. A flick starts from the point that the mouse or touch is released, while still in motion.</p>
+<p>The corresponding handler is <code>onFlickStarted</code>.</p>
+</div></div><!-- @@@flickStarted -->
+<br/>
+<!-- $$$movementEnded -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="movementEnded-signal"><td class="tblQmlFuncNode"><p><a name="movementEnded-signal"></a><span class="name">movementEnded</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when the view stops moving due to user interaction. If a flick was generated, this signal will be emitted once the flick stops. If a flick was not generated, this signal will be emitted when the user stops dragging - i.e&#x2e; a mouse or touch release.</p>
+<p>The corresponding handler is <code>onMovementEnded</code>.</p>
+</div></div><!-- @@@movementEnded -->
+<br/>
+<!-- $$$movementStarted -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="movementStarted-signal"><td class="tblQmlFuncNode"><p><a name="movementStarted-signal"></a><span class="name">movementStarted</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>This signal is emitted when the view begins moving due to user interaction.</p>
+<p>The corresponding handler is <code>onMovementStarted</code>.</p>
+</div></div><!-- @@@movementStarted -->
+<br/>
+<h2>Method Documentation</h2>
+<!-- $$$cancelFlick -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="cancelFlick-method"><td class="tblQmlFuncNode"><p><a name="cancelFlick-method"></a><span class="name">cancelFlick</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Cancels the current flick animation.</p>
+</div></div><!-- @@@cancelFlick -->
+<br/>
+<!-- $$$flick -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="flick-method"><td class="tblQmlFuncNode"><p><a name="flick-method"></a><span class="name">flick</span>(<span class="type">qreal</span><i> xVelocity</i>, <span class="type">qreal</span><i> yVelocity</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Flicks the content with <i>xVelocity</i> horizontally and <i>yVelocity</i> vertically in pixels/sec.</p>
+</div></div><!-- @@@flick -->
+<br/>
+<!-- $$$resizeContent -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="resizeContent-method"><td class="tblQmlFuncNode"><p><a name="resizeContent-method"></a><span class="name">resizeContent</span>(<span class="type">real</span><i> width</i>, <span class="type">real</span><i> height</i>, <span class="type">QPointF</span><i> center</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Resizes the content to <i>width</i> x <i>height</i> about <i>center</i>.</p>
+<p>This does not scale the contents of the Flickable - it only resizes the <a href="index.html#contentWidth-prop">contentWidth</a> and <a href="index.html#contentHeight-prop">contentHeight</a>.</p>
+<p>Resizing the content may result in the content being positioned outside the bounds of the Flickable. Calling <a href="index.html#returnToBounds-method">returnToBounds()</a> will move the content back within legal bounds.</p>
+</div></div><!-- @@@resizeContent -->
+<br/>
+<!-- $$$returnToBounds -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="returnToBounds-method"><td class="tblQmlFuncNode"><p><a name="returnToBounds-method"></a><span class="name">returnToBounds</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Ensures the content is within legal bounds.</p>
+<p>This may be called to ensure that the content is within legal bounds after manually positioning the content.</p>
+</div></div><!-- @@@returnToBounds -->
+<br/>
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

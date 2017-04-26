@@ -1,0 +1,700 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>DialerHand [sdk-15.04/Ubuntu.Components.Pickers.DialerHand] | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a href="../index.html">SDK 15.04</a> &rsaquo;</li>
+
+<li><a href="../Ubuntu.Components.Pickers/index.html">Ubuntu.Components.Pickers</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">DialerHand</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qml-ubuntu-components-pickers-dialerhand.html -->
+	<!-- Source Format: qdoc -->
+<h1>DialerHand</h1>
+<div id="element_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$DialerHand-brief -->
+<p>DialerHand represents a value selector on a Dialer. More...</p>
+<!-- @@@DialerHand -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import Ubuntu.Components.Pickers 1.0</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="../Ubuntu.Components.StyledItem/index.html">StyledItem</a></p>
+</td></tr></table></div><ul>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#activeFocusOnPress-prop">activeFocusOnPress</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#dialer-prop">dialer</a></b></b> : Dialer</li>
+<li class="fn"><b><b><a href="index.html#hand-prop">hand</a></b></b> : DialerHandGroup</li>
+<li class="fn"><b><b><a href="index.html#hand.draggable-prop">hand.draggable</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#hand.height-prop">hand.height</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#hand.toCenterItem-prop">hand.toCenterItem</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#hand.visible-prop">hand.visible</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#hand.width-prop">hand.width</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#index-prop">index</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#overlay-prop">overlay</a></b></b> : list&lt;QtObject&gt;</li>
+<li class="fn"><b><b><a href="index.html#style-prop">style</a></b></b> : Component</li>
+<li class="fn"><b><b><a href="index.html#value-prop">value</a></b></b> : real</li>
+</ul>
+<!-- $$$DialerHand-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<p><a href="index.html">DialerHand</a> components have meaning only if those are placed inside Dialer components. The dialer hand presents a value selection from the given dialer's minimum and maximum values.</p>
+<p>By default all hands are placed on the dialer's hand space, on the outer dialer disk. By default all hands have teh same size, 0.5GU width and height same as the handSpace specified in <a href="../Ubuntu.Components.Pickers.Dialer/index.html">Dialer</a>, however themes can specify preset values for each hand.</p>
+<p>Hands can also be placed onto the inner disk by setting <i>hand.toCenterItem</i> property to true.</p>
+<pre class="qml"><span class="type"><a href="../Ubuntu.Components.Pickers.Dialer/index.html">Dialer</a></span> {
+    <span class="type"><a href="index.html">DialerHand</a></span> {
+        <span class="comment">// this dialer hand will take the space as defined by the theme.</span>
+    }
+    <span class="type"><a href="index.html">DialerHand</a></span> {
+        <span class="name">hand</span>.height: <span class="name">units</span>.<span class="name">gu</span>(<span class="number">3</span>)
+        <span class="comment">// this hand will have its width as defined by the theme</span>
+        <span class="comment">// but height as 3 GU</span>
+    }
+}</pre>
+<p>Items declared as children will be placed over the hands. These items will not be rotated togehther with the hand, these will always be shown horizontally. The hand can be hidden by setting false to <i>hand.visible</i> property, but that does not hide the overlay content.</p>
+<p>The following example demonstrates how to create a hidden dialer hand having an overlay component on the hand.</p>
+<pre class="qml"><span class="type"><a href="../Ubuntu.Components.Pickers.Dialer/index.html">Dialer</a></span> {
+    <span class="type"><a href="index.html">DialerHand</a></span> {
+        <span class="name">id</span>: <span class="name">selector</span>
+        <span class="name">hand</span>.visible: <span class="number">false</span>
+        <span class="type"><a href="../../sdk-14.10/QtQuick.Rectangle/index.html">Rectangle</a></span> {
+            <span class="name">anchors</span>.centerIn: <span class="name">parent</span>
+            <span class="name">width</span>: <span class="name">height</span>
+            <span class="name">height</span>: <span class="name">units</span>.<span class="name">gu</span>(<span class="number">3</span>)
+            <span class="name">radius</span>: <span class="name">width</span> <span class="operator">/</span> <span class="number">2</span>
+            <span class="name">color</span>: <span class="name">Theme</span>.<span class="name">palette</span>.<span class="name">normal</span>.<span class="name">background</span>
+            <span class="name">antialiasing</span>: <span class="number">true</span>
+            <span class="type"><a href="../Ubuntu.Components.Label/index.html">Label</a></span> {
+                <span class="name">text</span>: <span class="name">Math</span>.<span class="name">round</span>(<span class="name">selector</span>.<span class="name">value</span>)
+                <span class="name">anchors</span>.centerIn: <span class="name">parent</span>
+            }
+        }
+    }
+}</pre>
+<!-- @@@DialerHand -->
+<h2>Property Documentation</h2>
+<!-- $$$activeFocusOnPress -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="activeFocusOnPress-prop"><td class="tblQmlPropNode"><p><a name="activeFocusOnPress-prop"></a><span class="name">activeFocusOnPress</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>The property specifies whether the <a href="../Ubuntu.Components.StyledItem/index.html">StyledItem</a> can gain focus on a mouse press/touch or not. When the value is true, the focus will be set on the component when the mouse is pressed over it or touched. However if one of the component's ancestor <a href="../Ubuntu.Components.StyledItem/index.html">StyledItem</a> or derived is having the property value false, the focus will not be gained automatically.</p>
+<p>In the following example the <a href="../Ubuntu.Components.TextField/index.html">TextField</a> will stay focused when clicked on the red rectangle.</p>
+<pre class="qml">import QtQuick 2.4
+import Ubuntu.Components 1.2
+<span class="type"><a href="../../sdk-14.10/QtQuick.Column/index.html">Column</a></span> {
+    <span class="name">width</span>: <span class="name">units</span>.<span class="name">gu</span>(<span class="number">50</span>)
+    <span class="name">height</span>: <span class="name">units</span>.<span class="name">gu</span>(<span class="number">100</span>)
+    <span class="type"><a href="../Ubuntu.Components.StyledItem/index.html">StyledItem</a></span> {
+        <span class="name">objectName</span>: <span class="string">&quot;passiveScope&quot;</span>
+        <span class="name">width</span>: <span class="name">parent</span>.<span class="name">width</span>
+        <span class="name">height</span>: <span class="name">units</span>.<span class="name">gu</span>(<span class="number">30</span>)
+        <span class="type"><a href="../../sdk-14.10/QtQuick.Rectangle/index.html">Rectangle</a></span> {
+            <span class="name">anchors</span>.fill: <span class="name">parent</span>
+            <span class="name">color</span>: <span class="string">&quot;red&quot;</span>
+            <span class="type"><a href="../Ubuntu.Components.StyledItem/index.html">StyledItem</a></span> {
+                <span class="name">objectName</span>: <span class="string">&quot;activeScope&quot;</span>
+                <span class="name">activeFocusOnPress</span>: <span class="number">true</span>
+                <span class="name">anchors</span>.fill: <span class="name">parent</span>
+            }
+        }
+    }
+    <span class="type"><a href="../Ubuntu.Components.TextField/index.html">TextField</a></span> {
+        <span class="name">id</span>: <span class="name">input</span>
+        <span class="name">text</span>: <span class="string">&quot;The input stays focus even if red box is clicked&quot;</span>
+    }
+    <span class="name">Component</span>.onCompleted: <span class="name">input</span>.<span class="name">forceActiveFocus</span>()
+    <span class="type"><a href="../../sdk-14.10/QtQml.Connections/index.html">Connections</a></span> {
+        <span class="name">target</span>: <span class="name">window</span>
+        <span class="name">onActiveFocusItemChanged</span>: <span class="name">console</span>.<span class="name">debug</span>(<span class="string">&quot;focus on&quot;</span>, <span class="name">window</span>.<span class="name">activeFocusItem</span>)
+    }
+}</pre>
+<p>The default value is <code>false</code>.</p>
+<p>This QML property was introduced in  Ubuntu.Components 1.1.</p>
+</div></div><!-- @@@activeFocusOnPress -->
+<br/>
+<!-- $$$dialer -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="dialer-prop"><td class="tblQmlPropNode"><p><a name="dialer-prop"></a><span class="qmlreadonly">read-only</span><span class="name">dialer</span> : <span class="type"><a href="../Ubuntu.Components.Pickers.Dialer/index.html">Dialer</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>The property holds the dialer instance the hand is assigned to. This is a helper property to enable access to the dialer component hosting the hand.</p>
+</div></div><!-- @@@dialer -->
+<br/>
+<!-- $$$hand -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="hand-prop"><td class="tblQmlPropNode"><p><a name="hand-prop"></a><span class="name">hand</span> : <span class="type"><a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04/Ubuntu.Components.DialerHandGroup/">DialerHandGroup</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>The <b>hand.width</b> and <b>hand.height</b> properties define the size of the hand. The height of the hand must be in the [0..dialer.handSpace] range in order to have the hand displayed in the hand area, however there is no restriction applied on the size of the dialer hand. If no value is set, the width and height will be defined by the style.</p>
+<p><b>draggable</b> property specifies whether the hand is draggable or not. When set to not draggable, the hand is used only to indicate the given value. The default value is true.</p>
+<p><b>toCenterItem</b> property specifies whether the hand should be placed on the hand space (on the outer disk - false) or onto the center disk (inner disk - true). The default value is false, meaning the hand will be placed onto the hand space disk.</p>
+<p><b>visible</b> property specifies whether to show the hand marker or not. The default value is true.</p>
+</div></div><!-- @@@hand -->
+<br/>
+<!-- $$$hand.draggable -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="hand.draggable-prop"><td class="tblQmlPropNode"><p><a name="hand.draggable-prop"></a><span class="name">hand.draggable</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>The <b>hand.width</b> and <b>hand.height</b> properties define the size of the hand. The height of the hand must be in the [0..dialer.handSpace] range in order to have the hand displayed in the hand area, however there is no restriction applied on the size of the dialer hand. If no value is set, the width and height will be defined by the style.</p>
+<p><b>draggable</b> property specifies whether the hand is draggable or not. When set to not draggable, the hand is used only to indicate the given value. The default value is true.</p>
+<p><b>toCenterItem</b> property specifies whether the hand should be placed on the hand space (on the outer disk - false) or onto the center disk (inner disk - true). The default value is false, meaning the hand will be placed onto the hand space disk.</p>
+<p><b>visible</b> property specifies whether to show the hand marker or not. The default value is true.</p>
+</div></div><!-- @@@hand.draggable -->
+<br/>
+<!-- $$$hand.height -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="hand.height-prop"><td class="tblQmlPropNode"><p><a name="hand.height-prop"></a><span class="name">hand.height</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>The <b>hand.width</b> and <b>hand.height</b> properties define the size of the hand. The height of the hand must be in the [0..dialer.handSpace] range in order to have the hand displayed in the hand area, however there is no restriction applied on the size of the dialer hand. If no value is set, the width and height will be defined by the style.</p>
+<p><b>draggable</b> property specifies whether the hand is draggable or not. When set to not draggable, the hand is used only to indicate the given value. The default value is true.</p>
+<p><b>toCenterItem</b> property specifies whether the hand should be placed on the hand space (on the outer disk - false) or onto the center disk (inner disk - true). The default value is false, meaning the hand will be placed onto the hand space disk.</p>
+<p><b>visible</b> property specifies whether to show the hand marker or not. The default value is true.</p>
+</div></div><!-- @@@hand.height -->
+<br/>
+<!-- $$$hand.toCenterItem -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="hand.toCenterItem-prop"><td class="tblQmlPropNode"><p><a name="hand.toCenterItem-prop"></a><span class="name">hand.toCenterItem</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>The <b>hand.width</b> and <b>hand.height</b> properties define the size of the hand. The height of the hand must be in the [0..dialer.handSpace] range in order to have the hand displayed in the hand area, however there is no restriction applied on the size of the dialer hand. If no value is set, the width and height will be defined by the style.</p>
+<p><b>draggable</b> property specifies whether the hand is draggable or not. When set to not draggable, the hand is used only to indicate the given value. The default value is true.</p>
+<p><b>toCenterItem</b> property specifies whether the hand should be placed on the hand space (on the outer disk - false) or onto the center disk (inner disk - true). The default value is false, meaning the hand will be placed onto the hand space disk.</p>
+<p><b>visible</b> property specifies whether to show the hand marker or not. The default value is true.</p>
+</div></div><!-- @@@hand.toCenterItem -->
+<br/>
+<!-- $$$hand.visible -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="hand.visible-prop"><td class="tblQmlPropNode"><p><a name="hand.visible-prop"></a><span class="name">hand.visible</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>The <b>hand.width</b> and <b>hand.height</b> properties define the size of the hand. The height of the hand must be in the [0..dialer.handSpace] range in order to have the hand displayed in the hand area, however there is no restriction applied on the size of the dialer hand. If no value is set, the width and height will be defined by the style.</p>
+<p><b>draggable</b> property specifies whether the hand is draggable or not. When set to not draggable, the hand is used only to indicate the given value. The default value is true.</p>
+<p><b>toCenterItem</b> property specifies whether the hand should be placed on the hand space (on the outer disk - false) or onto the center disk (inner disk - true). The default value is false, meaning the hand will be placed onto the hand space disk.</p>
+<p><b>visible</b> property specifies whether to show the hand marker or not. The default value is true.</p>
+</div></div><!-- @@@hand.visible -->
+<br/>
+<!-- $$$hand.width -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="hand.width-prop"><td class="tblQmlPropNode"><p><a name="hand.width-prop"></a><span class="name">hand.width</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>The <b>hand.width</b> and <b>hand.height</b> properties define the size of the hand. The height of the hand must be in the [0..dialer.handSpace] range in order to have the hand displayed in the hand area, however there is no restriction applied on the size of the dialer hand. If no value is set, the width and height will be defined by the style.</p>
+<p><b>draggable</b> property specifies whether the hand is draggable or not. When set to not draggable, the hand is used only to indicate the given value. The default value is true.</p>
+<p><b>toCenterItem</b> property specifies whether the hand should be placed on the hand space (on the outer disk - false) or onto the center disk (inner disk - true). The default value is false, meaning the hand will be placed onto the hand space disk.</p>
+<p><b>visible</b> property specifies whether to show the hand marker or not. The default value is true.</p>
+</div></div><!-- @@@hand.width -->
+<br/>
+<!-- $$$index -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="index-prop"><td class="tblQmlPropNode"><p><a name="index-prop"></a><span class="qmlreadonly">read-only</span><span class="name">index</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>The property holds the index of the hand. Note that this is not the child index of the dialer children, this represents the index of the <a href="index.html">DialerHand</a> component added to the <a href="index.html#dialer-prop">dialer</a>.</p>
+</div></div><!-- @@@index -->
+<br/>
+<!-- $$$overlay -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="overlay-prop"><td class="tblQmlPropNode"><p><a name="overlay-prop"></a><span class="qmldefault">default</span><span class="name">overlay</span> : <span class="type">list</span>&lt;<span class="type"><a href="../../sdk-14.10/QtQml.QtObject/index.html">QtObject</a></span>&gt;</p></td></tr></table></div></div><div class="qmldoc"><p>The property holds the items that can be added on top of the hand. Note that these items will not be rotated together with the hand pointer and pointer visibility does not affect the overlay items visibility.</p>
+</div></div><!-- @@@overlay -->
+<br/>
+<!-- $$$style -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="style-prop"><td class="tblQmlPropNode"><p><a name="style-prop"></a><span class="name">style</span> : <span class="type"><a href="../../sdk-14.10/QtQml.Component/index.html">Component</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>Component instantiated immediately and placed below everything else.</p>
+</div></div><!-- @@@style -->
+<br/>
+<!-- $$$value -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="value-prop"><td class="tblQmlPropNode"><p><a name="value-prop"></a><span class="name">value</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>The property holds the selected value the dialer hand points to.</p>
+</div></div><!-- @@@value -->
+<br/>
+</div></div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

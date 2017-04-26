@@ -1,0 +1,629 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Positioning with Anchors | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a class="sub-nav-item" href="../index.html">SDK 15.04.6</a> &rsaquo;</li>
+
+<li><a class="sub-nav-item" href="../QtQuick/index.html">QtQuick</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Positioning with Anchors</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qtquick-positioning-anchors.html -->
+	<!-- Source Format: qdoc -->
+<h1>Positioning with Anchors</h1>
+<div id="page_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$qtquick-positioning-anchors.html-description -->
+<div class="descr"> <a name="details"></a>
+<a name="anchor-layout"></a><p>In addition to the more traditional <a href="../QtQuick.qtquick-positioning-layouts/index.html#grid">Grid</a>, <a href="../QtQuick.qtquick-positioning-layouts/index.html#row">Row</a>, and <a href="../QtQuick.qtquick-positioning-layouts/index.html#column">Column</a>, Qt Quick also provides a way to layout items using the concept of <i>anchors</i>. Each item can be thought of as having a set of 7 invisible &quot;anchor lines&quot;: <a href="../QtQuick.Item/index.html#anchors.left-prop">left</a>, <a href="../QtQuick.Item/index.html#anchors.horizontalCenter-prop">horizontalCenter</a>, <a href="../QtQuick.Item/index.html#anchors.right-prop">right</a>, <a href="../QtQuick.Item/index.html#anchors.top-prop">top</a>, <a href="../QtQuick.Item/index.html#anchors.verticalCenter-prop">verticalCenter</a>, <a href="../QtQuick.Item/index.html#anchors.baseline-prop">baseline</a>, and <a href="../QtQuick.Item/index.html#anchors.bottom-prop">bottom</a>.</p>
+<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/7ad550a8-a766-4fa2-927a-ceb8aa4ba8e9-api/apps/qml/sdk-15.04.6/qtquick-positioning-anchors/images/edges_qml.png" alt="" /></p><p>The baseline (not pictured above) corresponds to the imaginary line on which text would sit. For items with no text it is the same as <i>top</i>.</p>
+<p>The Qt Quick anchoring system allows you to define relationships between the anchor lines of different items. For example, you can write:</p>
+<pre class="cpp">Rectangle { id: rect1; <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span> }
+Rectangle { id: rect2; anchors<span class="operator">.</span>left: rect1<span class="operator">.</span>right; <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span> }</pre>
+<p>In this case, the left edge of <i>rect2</i> is bound to the right edge of <i>rect1</i>, producing the following:</p>
+<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/bd07f866-1c4a-498d-97a0-d35e1466c67a-api/apps/qml/sdk-15.04.6/qtquick-positioning-anchors/images/edge1.png" alt="" /></p><p>You can specify multiple anchors. For example:</p>
+<pre class="cpp">Rectangle { id: rect1; <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span> }
+Rectangle { id: rect2; anchors<span class="operator">.</span>left: rect1<span class="operator">.</span>right; anchors<span class="operator">.</span>top: rect1<span class="operator">.</span>bottom; <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span> }</pre>
+<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/968ce271-0c7c-43d2-9ed6-d5ca8962e711-api/apps/qml/sdk-15.04.6/qtquick-positioning-anchors/images/edge3.png" alt="" /></p><p>By specifying multiple horizontal or vertical anchors you can control the size of an item. Below, <i>rect2</i> is anchored to the right of <i>rect1</i> and the left of <i>rect3</i>. If either of the blue rectangles are moved, <i>rect2</i> will stretch and shrink as necessary:</p>
+<pre class="cpp">Rectangle { id: rect1; x: <span class="number">0</span>; <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span> }
+Rectangle { id: rect2; anchors<span class="operator">.</span>left: rect1<span class="operator">.</span>right; anchors<span class="operator">.</span>right: rect3<span class="operator">.</span>left; <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span> }
+Rectangle { id: rect3; x: <span class="number">150</span>; <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span> }</pre>
+<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/0e68c534-6dca-4e75-b4b6-bc08604797d4-api/apps/qml/sdk-15.04.6/qtquick-positioning-anchors/images/edge4.png" alt="" /></p><p>There are also some convenience anchors. anchors.fill is a convenience that is the same as setting the left,right,top and bottom anchors to the left,right,top and bottom of the target item. anchors.centerIn is another convenience anchor, and is the same as setting the verticalCenter and horizontalCenter anchors to the verticalCenter and horizontalCenter of the target item.</p>
+<a name="anchor-margins-and-offsets"></a>
+<h2 id="anchor-margins-and-offsets">Anchor Margins and Offsets</h2>
+<p>The anchoring system also allows <i>margins</i> and <i>offsets</i> to be specified for an item's anchors. Margins specify the amount of empty space to leave to the outside of an item's anchor, while offsets allow positioning to be manipulated using the center anchor lines. An item can specify its anchor margins individually through <a href="../QtQuick.Item/index.html#anchors.leftMargin-prop">leftMargin</a>, <a href="../QtQuick.Item/index.html#anchors.rightMargin-prop">rightMargin</a>, <a href="../QtQuick.Item/index.html#anchors.topMargin-prop">topMargin</a> and <a href="../QtQuick.Item/index.html#anchors.bottomMargin-prop">bottomMargin</a>, or use <a href="../QtQuick.Item/index.html#anchors.margins-prop">anchors.margins</a> to specify the same margin value for all four edges. Anchor offsets are specified using <a href="../QtQuick.Item/index.html#anchors.horizontalCenterOffset-prop">horizontalCenterOffset</a>, <a href="../QtQuick.Item/index.html#anchors.verticalCenterOffset-prop">verticalCenterOffset</a> and <a href="../QtQuick.Item/index.html#anchors.baselineOffset-prop">baselineOffset</a>.</p>
+<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/9c78d10e-3171-4e33-a8f2-2e912fd54129-api/apps/qml/sdk-15.04.6/qtquick-positioning-anchors/images/margins_qml.png" alt="" /></p><p>The following example specifies a left margin:</p>
+<pre class="cpp">Rectangle { id: rect1; <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span> }
+Rectangle { id: rect2; anchors<span class="operator">.</span>left: rect1<span class="operator">.</span>right; anchors<span class="operator">.</span>leftMargin: <span class="number">5</span>; <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span> }</pre>
+<p>In this case, a margin of 5 pixels is reserved to the left of <i>rect2</i>, producing the following:</p>
+<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/18a7e1dc-f5a5-4968-9134-8164ed356480-api/apps/qml/sdk-15.04.6/qtquick-positioning-anchors/images/edge2.png" alt="" /></p><p><b>Note: </b>Anchor margins only apply to anchors; they are <i>not</i> a generic means of applying margins to an <a href="../QtQuick.Item/index.html">Item</a>. If an anchor margin is specified for an edge but the item is not anchored to any item on that edge, the margin is not applied.</p><a name="changing-anchors"></a>
+<h2 id="changing-anchors">Changing Anchors</h2>
+<p>Qt Quick provides the <a href="../QtQuick.AnchorChanges/index.html">AnchorChanges</a> type for specifying the anchors in a state.</p>
+<pre class="qml"><span class="type"><a href="../QtQuick.State/index.html">State</a></span> {
+    <span class="name">name</span>: <span class="string">&quot;anchorRight&quot;</span>
+    <span class="type"><a href="../QtQuick.AnchorChanges/index.html">AnchorChanges</a></span> {
+        <span class="name">target</span>: <span class="name">rect2</span>
+        <span class="name">anchors</span>.right: <span class="name">parent</span>.<span class="name">right</span>
+        <span class="name">anchors</span>.left: <span class="name">undefined</span>  <span class="comment">//remove the left anchor</span>
+    }
+}</pre>
+<p><a href="../QtQuick.AnchorChanges/index.html">AnchorChanges</a> can be animated using the <a href="../QtQuick.AnchorAnimation/index.html">AnchorAnimation</a> type.</p>
+<pre class="qml"><span class="type"><a href="../QtQuick.Transition/index.html">Transition</a></span> {
+    <span class="type"><a href="../QtQuick.AnchorAnimation/index.html">AnchorAnimation</a></span> {}  <span class="comment">//animates any AnchorChanges in the corresponding state change</span>
+}</pre>
+<p>Anchors can also be changed imperatively within JavaScript. However, these changes should be carefully ordered, or they may produce unexpected outcomes. The following example illustrates the issue:</p>
+<div class="table"><table class="generic">
+ <tr valign="top" class="odd"><td ><pre class="cpp">    <span class="comment">//bad code</span>
+    Rectangle {
+        width: <span class="number">50</span>
+        anchors<span class="operator">.</span>left: parent<span class="operator">.</span>left
+        function reanchorToRight() {
+            anchors<span class="operator">.</span>right <span class="operator">=</span> parent<span class="operator">.</span>right
+            anchors<span class="operator">.</span>left <span class="operator">=</span> undefined
+        }
+    }</pre>
+</td><td ><p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/e4cb5d99-1151-46a9-8c71-8ce2d8c3c7fe-api/apps/qml/sdk-15.04.6/qtquick-positioning-anchors/images/anchor_ordering_bad.png" alt="" /></p></td></tr>
+</table></div>
+<p>When <code>reanchorToRight</code> is called, the function first sets the right anchor. At that point, both left and right anchors are set, and the item will be stretched horizontally to fill its parent. When the left anchor is unset, the new width will remain. Thus when updating anchors within JavaScript, you should first unset any anchors that are no longer required, and only then set any new anchors that are required, as shown below:</p>
+<div class="table"><table class="generic">
+ <tr valign="top" class="odd"><td ><pre class="qml">    <span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> {
+        <span class="name">width</span>: <span class="number">50</span>
+        <span class="name">anchors</span>.left: <span class="name">parent</span>.<span class="name">left</span>
+        <span class="keyword">function</span> <span class="name">reanchorToRight</span>() {
+            <span class="name">anchors</span>.<span class="name">left</span> <span class="operator">=</span> <span class="name">undefined</span>
+            <span class="name">anchors</span>.<span class="name">right</span> <span class="operator">=</span> <span class="name">parent</span>.<span class="name">right</span>
+        }
+    }</pre>
+</td><td ><p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/649e9a0c-31c8-4cad-abe5-e8fe9b8fa9ca-api/apps/qml/sdk-15.04.6/qtquick-positioning-anchors/images/anchor_ordering.png" alt="" /></p></td></tr>
+</table></div>
+<p>Because the evaluation order of bindings is not defined, it is not recommended to change anchors via conditional bindings, as this can lead to the ordering issue described above. In the following example the Rectangle will eventually grow to the full width of its parent, because both left and right anchors will be simultaneously set during binding update.</p>
+<pre class="cpp"><span class="comment">//bad code</span>
+Rectangle {
+    width: <span class="number">50</span>; height: <span class="number">50</span>
+    anchors<span class="operator">.</span>left: state <span class="operator">=</span><span class="operator">=</span> <span class="string">&quot;right&quot;</span> <span class="operator">?</span> undefined : parent<span class="operator">.</span>left;
+    anchors<span class="operator">.</span>right: state <span class="operator">=</span><span class="operator">=</span> <span class="string">&quot;right&quot;</span> <span class="operator">?</span> parent<span class="operator">.</span>right : undefined;
+}</pre>
+<p>This should be rewritten to use <a href="../QtQuick.AnchorChanges/index.html">AnchorChanges</a> instead, as <a href="../QtQuick.AnchorChanges/index.html">AnchorChanges</a> will automatically handle ordering issues internally.</p>
+<a name="restrictions"></a>
+<h2 id="restrictions">Restrictions</h2>
+<p>For performance reasons, you can only anchor an item to its siblings and direct parent. For example, the following anchor is invalid and would produce a warning:</p>
+<pre class="cpp"><span class="comment">//bad code</span>
+Item {
+    id: group1
+    Rectangle { id: rect1; <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span> }
+}
+Item {
+    id: group2
+    Rectangle { id: rect2; anchors<span class="operator">.</span>left: rect1<span class="operator">.</span>right; <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span> }    <span class="comment">// invalid anchor!</span>
+}</pre>
+<p>Also, anchor-based layouts cannot be mixed with absolute positioning. If an item specifies its <a href="../QtQuick.Item/index.html#x-prop">x</a> position and also sets <a href="../QtQuick.Item/index.html#anchors.left-prop">anchors.left</a>, or anchors its left and right edges but additionally sets a <a href="../QtQuick.Item/index.html#width-prop">width</a>, the result is undefined, as it would not be clear whether the item should use anchoring or absolute positioning. The same can be said for setting an item's <a href="../QtQuick.Item/index.html#y-prop">y</a> and <a href="../QtQuick.Item/index.html#height-prop">height</a> with <a href="../QtQuick.Item/index.html#anchors.top-prop">anchors.top</a> and <a href="../QtQuick.Item/index.html#anchors.bottom-prop">anchors.bottom</a>, or setting <a href="../QtQuick.Item/index.html#anchors.fill-prop">anchors.fill</a> as well as <a href="../QtQuick.Item/index.html#width-prop">width</a> or <a href="../QtQuick.Item/index.html#height-prop">height</a>. The same applies when using positioners such as Row and Grid, which may set the item's <a href="../QtQuick.Item/index.html#x-prop">x</a> and <a href="../QtQuick.Item/index.html#y-prop">y</a> properties. If you wish to change from using anchor-based to absolute positioning, you can clear an anchor value by setting it to <code>undefined</code>.</p>
+</div>
+<!-- @@@qtquick-positioning-anchors.html -->
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

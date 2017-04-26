@@ -1,0 +1,777 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Preview widget types | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/doxygen.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Scopes</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">C++</a> &rsaquo;</li>
+<li><a class="sub-nav-item" href="../index.html">SDK 15.04</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Preview widget types</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: previewwidgets.html -->
+	<!-- Source Format: doxygen -->
+<h1>Preview widget types</h1>
+<div id="page_content" class="doxygen">
+<!-- Start Element Content -->
+<div class="textblock"><h1><a class="anchor" id="previewtypes"></a>
+Recognized preview widget types</h1>
+<p>The following widget types are recognized by Unity: </p><ul>
+<li><code>audio</code> </li>
+<li><code>video</code> </li>
+<li><code>image</code> </li>
+<li><code>gallery</code> </li>
+<li><code>header</code> </li>
+<li><code>actions</code> </li>
+<li><code>progress</code> </li>
+<li><code>text</code> </li>
+<li><code>rating-input</code> </li>
+<li><code>reviews</code> </li>
+<li><code>expandable</code> </li>
+</ul>
+<h2><a class="anchor" id="audio"></a>
+audio widget</h2>
+<p>The audio widget displays a list of tracks with play/pause controls.</p>
+<p>List of attributes:</p>
+<ul>
+<li><code>tracks</code> A composite attribute containing an array of tuples, where each tuple has up to four fields: <code>title</code> (mandatory string), <code>subtitle</code> (optional string), <code>source</code> (mandatory URI), and <code>length</code> (optional integer specifying the track length in seconds)</li>
+</ul>
+<p>You can construct composite attributes with <a class="el" href="../unity.scopes.VariantBuilder/index.html" title="Helper class for creating and populating Variant containers. ">unity::scopes::VariantBuilder</a>:</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    PreviewWidget w1(<span class="stringliteral">&quot;tracks&quot;</span>, <span class="stringliteral">&quot;audio&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    VariantBuilder builder;</div>
+<div class="line">    builder.add_tuple({</div>
+<div class="line">        {<span class="stringliteral">&quot;title&quot;</span>, Variant(<span class="stringliteral">&quot;Track #1&quot;</span>)},</div>
+<div class="line">        {<span class="stringliteral">&quot;source&quot;</span>, Variant(<span class="stringliteral">&quot;file:///tmp/song1.mp3&quot;</span>)},</div>
+<div class="line">        {<span class="stringliteral">&quot;length&quot;</span>, Variant(194)}</div>
+<div class="line">    });</div>
+<div class="line">    builder.add_tuple({</div>
+<div class="line">        {<span class="stringliteral">&quot;title&quot;</span>, Variant(<span class="stringliteral">&quot;Track #2&quot;</span>)},</div>
+<div class="line">        {<span class="stringliteral">&quot;source&quot;</span>, Variant(<span class="stringliteral">&quot;file:///tmp/song2.mp3&quot;</span>)},</div>
+<div class="line">        {<span class="stringliteral">&quot;length&quot;</span>, Variant(207)}</div>
+<div class="line">    });</div>
+<div class="line"></div>
+<div class="line">    w1.add_attribute_value(<span class="stringliteral">&quot;tracks&quot;</span>, builder.end());</div>
+<div class="line">    ...</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="video"></a>
+video widget</h2>
+<p>The video widget displays a still from a video and allows playing the video.</p>
+<p>List of attributes:</p>
+<ul>
+<li><code>source</code> A URI pointing to the video </li>
+<li><code>screenshot</code> A URI pointing to a screenshot of the video (optional)</li>
+</ul>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    PreviewWidget w1(<span class="stringliteral">&quot;video1&quot;</span>, <span class="stringliteral">&quot;video&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    w1.add_attribute_value(<span class="stringliteral">&quot;source&quot;</span>, Variant(<span class="stringliteral">&quot;file:///tmp/video1.mp4&quot;</span>));</div>
+<div class="line">    ...</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="image"></a>
+image widget</h2>
+<p>The image widget displays a single image.</p>
+<p>List of attributes:</p>
+<ul>
+<li><code>source</code> A URI pointing to the image </li>
+<li><code>zoomable</code> A boolean specifying whether the image is zoomable (default: <code>false</code>) </li>
+<li><code>fallback</code> A fallback image to be used if the image URI cannot be retrieved (default: none)</li>
+</ul>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    PreviewWidget w1(<span class="stringliteral">&quot;img1&quot;</span>, <span class="stringliteral">&quot;image&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    w1.add_attribute_value(<span class="stringliteral">&quot;source&quot;</span>, Variant(<span class="stringliteral">&quot;http://example.com/image.jpg&quot;</span>));</div>
+<div class="line">    w1.add_attribute_value(<span class="stringliteral">&quot;fallback&quot;</span>, Variant(<span class="stringliteral">&quot;file:///tmp/image.jpg&quot;</span>));</div>
+<div class="line">    ...</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="gallery"></a>
+gallery widget</h2>
+<p>The gallery widget displays a set of images.</p>
+<p>List of attributes:</p>
+<ul>
+<li><code>sources</code> An array of image URIs </li>
+<li><code>fallback</code> A fallback image to be used if an image URI cannot be resolved (default: none)</li>
+</ul>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    PreviewWidget w1(<span class="stringliteral">&quot;gal&quot;</span>, <span class="stringliteral">&quot;gallery&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="../unity.scopes/index.html#aa3bf32d584efd902bca79698a07dd934">VariantArray</a> arr;</div>
+<div class="line">    arr.push_back(Variant(<span class="stringliteral">&quot;http://example.com/image1.jpg&quot;</span>));</div>
+<div class="line">    arr.push_back(Variant(<span class="stringliteral">&quot;file:///tmp/image2.jpg&quot;</span>));</div>
+<div class="line">    arr.push_back(Variant(<span class="stringliteral">&quot;file:///tmp/image3.jpg&quot;</span>));</div>
+<div class="line">    w1.add_attribute_value(<span class="stringliteral">&quot;sources&quot;</span>, Variant(arr));</div>
+<div class="line">    w1.add_attribute_value(<span class="stringliteral">&quot;fallback&quot;</span>, Variant(<span class="stringliteral">&quot;file:///tmp/fallback.png&quot;</span>));</div>
+<div class="line">    ...</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="header"></a>
+header widget</h2>
+<p>The header widget displays basic infomation about the result.</p>
+<p>List of attributes:</p>
+<ul>
+<li><code>title</code> A string specifying the title </li>
+<li><code>subtitle</code> A string specifying the subtitle </li>
+<li><code>mascot</code> A URI specifying the mascot </li>
+<li><code>fallback</code> A fallback image to be used if the mascot URI cannot be retrieved (default: none) </li>
+<li><code>emblem</code> A URI specifying the emblem</li>
+</ul>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    PreviewWidget w1(<span class="stringliteral">&quot;hdr&quot;</span>, <span class="stringliteral">&quot;header&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    w1.add_attribute_value(<span class="stringliteral">&quot;title&quot;</span>, Variant(<span class="stringliteral">&quot;Result item&quot;</span>));</div>
+<div class="line">    w1.add_attribute_value(<span class="stringliteral">&quot;mascot&quot;</span>, Variant(<span class="stringliteral">&quot;http://example.com/image.png&quot;</span>));</div>
+<div class="line">    w1.add_attribute_value(<span class="stringliteral">&quot;fallback&quot;</span>, Variant(<span class="stringliteral">&quot;file:///tmp/fallback_mascot.png&quot;</span>));</div>
+<div class="line">    ...</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="actions"></a>
+actions widget</h2>
+<p>The actions widget displays one or more buttons.</p>
+<p>List of attributes:</p>
+<ul>
+<li><code>actions</code> A composite attribute containing an array of tuples, where each tuple has at least these fields: <code>id</code> (a mandatory string that is passed to unity::scopes::ScopeBase::activate_preview_action()), <code>label</code> (mandatory string), and <code>icon</code> (optional URI).</li>
+</ul>
+<p>You can construct composite attributes with <a class="el" href="../unity.scopes.VariantBuilder/index.html" title="Helper class for creating and populating Variant containers. ">unity::scopes::VariantBuilder</a>:</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    PreviewWidget w1(<span class="stringliteral">&quot;buttons&quot;</span>, <span class="stringliteral">&quot;actions&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    VariantBuilder builder;</div>
+<div class="line">    builder.add_tuple({</div>
+<div class="line">        {<span class="stringliteral">&quot;id&quot;</span>, Variant(<span class="stringliteral">&quot;open&quot;</span>)},</div>
+<div class="line">        {<span class="stringliteral">&quot;label&quot;</span>, Variant(<span class="stringliteral">&quot;Open&quot;</span>)}</div>
+<div class="line">    });</div>
+<div class="line">    builder.add_tuple({</div>
+<div class="line">        {<span class="stringliteral">&quot;id&quot;</span>, Variant(<span class="stringliteral">&quot;download&quot;</span>)},</div>
+<div class="line">        {<span class="stringliteral">&quot;label&quot;</span>, Variant(<span class="stringliteral">&quot;Download&quot;</span>)}</div>
+<div class="line">    });</div>
+<div class="line"></div>
+<div class="line">    w1.add_attribute_value(<span class="stringliteral">&quot;actions&quot;</span>, builder.end());</div>
+<div class="line">    ...</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="progress"></a>
+progress widget</h2>
+<p>The progress widget displays the progress of an action, such as download progress.</p>
+<p>On completion, the scope receives a preview action activation with the id <code>"finished"</code> or <code>"failed"</code>, depending on the outcome of the operation.</p>
+<p>List of attributes:</p>
+<ul>
+<li><code>source</code> A tuple with keys understood by a progress provider</li>
+</ul>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    PreviewWidget w1(<span class="stringliteral">&quot;download&quot;</span>, <span class="stringliteral">&quot;progress&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="../unity.scopes/index.html#ad5d8ccfa11a327fca6f3e4cee11f4c10">VariantMap</a> tuple;</div>
+<div class="line">    tuple[<span class="stringliteral">&quot;dbus-name&quot;</span>] = <span class="stringliteral">&quot;com.canonical.DownloadManager&quot;</span>;</div>
+<div class="line">    tuple[<span class="stringliteral">&quot;dbus-object&quot;</span>] = <span class="stringliteral">&quot;/com/canonical/download/obj1&quot;</span>;</div>
+<div class="line">    w1.add_attribute_value(<span class="stringliteral">&quot;source&quot;</span>, Variant(tuple));</div>
+<div class="line">    ...</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="text"></a>
+text widget</h2>
+<p>A text widget can be used for text of any length (without formatting).</p>
+<p>List of attributes:</p>
+<ul>
+<li><code>title</code> Optional string </li>
+<li><code>text</code> A string containing the text</li>
+</ul>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    PreviewWidget w1(<span class="stringliteral">&quot;summary&quot;</span>, <span class="stringliteral">&quot;text&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    w1.add_attribute_value(<span class="stringliteral">&quot;text&quot;</span>, Variant(<span class="stringliteral">&quot;Lorem Ipsum ...&quot;</span>));</div>
+<div class="line">    ...</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="rating-input"></a>
+rating-input widget</h2>
+<p>The rating-input widget allows users to rate content. It consists of two types of widget: a star-based rating and an input field for the user to enter his/her review. It is possible to hide each widget as well as to require them to be filled in.</p>
+<p>When a user presses the "Send" button, the scope receives a preview action activation with the id <code>"rated"</code>. The actual rating and/or review can be accessed via <a class="el" href="../unity.scopes.ActionMetadata/index.html#a34777e687ce700a7b6313f3dad6d3340" title="Get data attached to this ActionMetadata. ">unity::scopes::ActionMetadata::scope_data</a>. The scope data will be a VariantMap with the following keys:</p>
+<ul>
+<li><code>"rating"</code> - a double holding the number of stars the user selected (1 to 5)</li>
+<li><code>"review"</code> - a string holding the free text review</li>
+</ul>
+<p>List of attributes:</p>
+<ul>
+<li><code>rating-label</code> String for the star-based rating (default: "Rate this") </li>
+<li><code>review-label</code> String for the review input (default: "Add a review") </li>
+<li><code>submit-label</code> String for the confirmation button (default: "Send") </li>
+<li><code>rating-icon-empty</code> URI for an empty rating icon </li>
+<li><code>rating-icon-full</code> URI for a full rating icon </li>
+<li><code>visible</code> String specifying which of the two widgets are visible (<code>"rating"</code>, <code>"review"</code> or default:<code>"both"</code>) </li>
+<li><code>required</code> String specifying which of the two widgets are required to be filled in (<code>"rating"</code>, <code>"review"</code> or default:<code>"both"</code>)</li>
+</ul>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    PreviewWidget w1(<span class="stringliteral">&quot;rating&quot;</span>, <span class="stringliteral">&quot;rating-input&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    w1.add_attribute_value(<span class="stringliteral">&quot;visible&quot;</span>, Variant(<span class="stringliteral">&quot;rating&quot;</span>));</div>
+<div class="line">    w1.add_attribute_value(<span class="stringliteral">&quot;required&quot;</span>, Variant(<span class="stringliteral">&quot;rating&quot;</span>));</div>
+<div class="line">    w1.add_attribute_value(<span class="stringliteral">&quot;rating-icon-empty&quot;</span>, Variant(<span class="stringliteral">&quot;file:///tmp/star-empty.svg&quot;</span>));</div>
+<div class="line">    w1.add_attribute_value(<span class="stringliteral">&quot;rating-icon-full&quot;</span>, Variant(<span class="stringliteral">&quot;file:///tmp/star-full.svg&quot;</span>));</div>
+<div class="line">    ...</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="reviews"></a>
+reviews widget</h2>
+<p>The reviews widget is used to display previously-rated content.</p>
+<p>List of attributes:</p>
+<ul>
+<li><code>rating-icon-empty</code> URI for an empty rating icon </li>
+<li><code>rating-icon-half</code> URI for an half-full rating icon </li>
+<li><code>rating-icon-full</code> URI for a full rating icon </li>
+<li><code>reviews</code> A composite attribute containing an array of tuples, where each tuple has up to three fields: <code>rating</code> (optional integer specifying the number of stars), <code>author</code> (mandatory string) and <code>review</code> (optional string).</li>
+</ul>
+<p>You can construct composite attributes with <a class="el" href="../unity.scopes.VariantBuilder/index.html" title="Helper class for creating and populating Variant containers. ">unity::scopes::VariantBuilder</a>:</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    PreviewWidget w1(<span class="stringliteral">&quot;summary&quot;</span>, <span class="stringliteral">&quot;reviews&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    w1.add_attribute_value(<span class="stringliteral">&quot;rating-icon-empty&quot;</span>, Variant(<span class="stringliteral">&quot;file:///tmp/star-empty.svg&quot;</span>));</div>
+<div class="line">    w1.add_attribute_value(<span class="stringliteral">&quot;rating-icon-full&quot;</span>, Variant(<span class="stringliteral">&quot;file:///tmp/star-full.svg&quot;</span>));</div>
+<div class="line"></div>
+<div class="line">    VariantBuilder builder;</div>
+<div class="line">    builder.add_tuple({</div>
+<div class="line">        {<span class="stringliteral">&quot;author&quot;</span>, Variant(<span class="stringliteral">&quot;John Doe&quot;</span>)},</div>
+<div class="line">        {<span class="stringliteral">&quot;rating&quot;</span>, Variant(3)}</div>
+<div class="line">    });</div>
+<div class="line">    builder.add_tuple({</div>
+<div class="line">        {<span class="stringliteral">&quot;author&quot;</span>, Variant(<span class="stringliteral">&quot;Mr. Smith&quot;</span>)},</div>
+<div class="line">        {<span class="stringliteral">&quot;rating&quot;</span>, Variant(5)}</div>
+<div class="line">    });</div>
+<div class="line"></div>
+<div class="line">    w1.add_attribute_value(<span class="stringliteral">&quot;reviews&quot;</span>, builder.end());</div>
+<div class="line">    ...</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="expandable"></a>
+expandable widget</h2>
+<p>The expandable widget is used to group several widgets into an expandable pane.</p>
+<p>List of attributes: </p><ul>
+<li><code>title</code> A string specifying the title </li>
+<li><code>collapsed-widgets</code> Optional number of collapsed widgets (0 makes all of them visible)</li>
+</ul>
+<div class="fragment"><div class="line">PreviewWidget expandable(<span class="stringliteral">&quot;exp&quot;</span>, <span class="stringliteral">&quot;expandable&quot;</span>);</div>
+<div class="line">expandable.add_attribute_value(<span class="stringliteral">&quot;title&quot;</span>, Variant(<span class="stringliteral">&quot;This is an expandable widget&quot;</span>));</div>
+<div class="line">expandable.add_attribute_value(<span class="stringliteral">&quot;collapsed-widgets&quot;</span>, Variant(0));</div>
+<div class="line"></div>
+<div class="line">PreviewWidget w1(<span class="stringliteral">&quot;w1&quot;</span>, <span class="stringliteral">&quot;text&quot;</span>);</div>
+<div class="line">w1.add_attribute_value(<span class="stringliteral">&quot;title&quot;</span>, Variant(<span class="stringliteral">&quot;Subwidget 1&quot;</span>));</div>
+<div class="line">w1.add_attribute_value(<span class="stringliteral">&quot;text&quot;</span>, Variant(<span class="stringliteral">&quot;A text&quot;</span>));</div>
+<div class="line">PreviewWidget w2(<span class="stringliteral">&quot;w2&quot;</span>, <span class="stringliteral">&quot;text&quot;</span>);</div>
+<div class="line">w2.add_attribute_value(<span class="stringliteral">&quot;title&quot;</span>, Variant(<span class="stringliteral">&quot;Subwidget 2&quot;</span>));</div>
+<div class="line">w2.add_attribute_value(<span class="stringliteral">&quot;text&quot;</span>, Variant(<span class="stringliteral">&quot;A text&quot;</span>));</div>
+<div class="line">expandable.add_widget(w1);</div>
+<div class="line">expandable.add_widget(w2);</div>
+<div class="line">...</div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

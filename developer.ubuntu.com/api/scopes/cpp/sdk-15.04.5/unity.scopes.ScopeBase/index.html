@@ -1,0 +1,1203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>ScopeBase [sdk-15.04.5/unity.scopes.ScopeBase] | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/doxygen.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Scopes</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">C++</a> &rsaquo;</li>
+<li><a href="../index.html">SDK 15.04.5</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">ScopeBase</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: classunity_1_1scopes_1_1_scope_base.html -->
+	<!-- Source Format: doxygen -->
+<h1>ScopeBase</h1>
+<div id="element_content" class="doxygen">
+<!-- Start Element Content -->
+<p>Base class for a scope implementation.  
+ <a href="index.html#details">More...</a></p>
+<p><code>#include &lt;unity/scopes/ScopeBase.h&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for unity::scopes::ScopeBase:</div>
+<div class="dyncontent">
+<div class="center"><img src="https://developer.ubuntu.com/static/devportal_uploaded/50e54091-1956-4ba3-a4ff-d6adedb43964-api/scopes/cpp/sdk-15.04.5/unity.scopes.ScopeBase/classunity_1_1scopes_1_1_scope_base__inherit__graph.png" border="0" usemap="#unity_1_1scopes_1_1_scope_base_inherit__map" alt="Inheritance graph"/></div>
+<map name="unity_1_1scopes_1_1_scope_base_inherit__map" id="unity_1_1scopes_1_1_scope_base_inherit__map">
+<area shape="rect" id="node3" href="https://developer.ubuntu.com/api/scopes/cpp/sdk-15.04.5/unity.scopes.ScopeBase/classunity_1_1scopes_1_1qt_1_1_q_scope_base_a_p_i.html" title="unity::scopes::qt::\lQScopeBaseAPI" alt="" coords="57,155,192,196"/><area shape="rect" id="node2" href="https://developer.ubuntu.com/api/scopes/cpp/sdk-15.04.5/unity.scopes.ScopeBase/classunity_1_1scopes_1_1_abstract_scope_base.html" title="Abstract base class for a scope implementation. " alt="" coords="5,5,244,32"/></map>
+<center><span class="legend">[legend]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ac25f3f326e2cf25de2f2eca18de5926c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#ac25f3f326e2cf25de2f2eca18de5926c">start</a> (std::string const &amp;scope_id)</td></tr>
+<tr class="memdesc:ac25f3f326e2cf25de2f2eca18de5926c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by the scopes runtime after the create function completes.  More...<br /></td></tr>
+<tr class="separator:ac25f3f326e2cf25de2f2eca18de5926c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80c5fec9e985dbb315d780ef2a56bfbf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a80c5fec9e985dbb315d780ef2a56bfbf">stop</a> ()</td></tr>
+<tr class="memdesc:a80c5fec9e985dbb315d780ef2a56bfbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by the scopes runtime when the scope should shut down.  More...<br /></td></tr>
+<tr class="separator:a80c5fec9e985dbb315d780ef2a56bfbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a386e99b98318a70f25db84bbe11c0292"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a386e99b98318a70f25db84bbe11c0292">run</a> ()</td></tr>
+<tr class="memdesc:a386e99b98318a70f25db84bbe11c0292"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by the scopes runtime after it has called start() to hand a thread of control to the scope.  More...<br /></td></tr>
+<tr class="separator:a386e99b98318a70f25db84bbe11c0292"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e4969ff26dc1d396d74c56d896fd564"><td class="memItemLeft" align="right" valign="top">virtual SearchQueryBase::UPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a0e4969ff26dc1d396d74c56d896fd564">search</a> (<a class="el" href="../unity.scopes.CannedQuery/index.html">CannedQuery</a> const &amp;query, <a class="el" href="../unity.scopes.SearchMetadata/index.html">SearchMetadata</a> const &amp;metadata)=0</td></tr>
+<tr class="memdesc:a0e4969ff26dc1d396d74c56d896fd564"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by the scopes runtime when a scope needs to instantiate a query.  More...<br /></td></tr>
+<tr class="separator:a0e4969ff26dc1d396d74c56d896fd564"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49a0b9ada0eeb4c71e6a2181c3d8c9e7"><td class="memItemLeft" align="right" valign="top">virtual ActivationQueryBase::UPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a49a0b9ada0eeb4c71e6a2181c3d8c9e7">activate</a> (<a class="el" href="../unity.scopes.Result/index.html">Result</a> const &amp;result, <a class="el" href="../unity.scopes.ActionMetadata/index.html">ActionMetadata</a> const &amp;metadata)</td></tr>
+<tr class="memdesc:a49a0b9ada0eeb4c71e6a2181c3d8c9e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by the scopes runtime when a scope needs to respond to a result activation request.  More...<br /></td></tr>
+<tr class="separator:a49a0b9ada0eeb4c71e6a2181c3d8c9e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f4d476fa790349c9a7de52be3232d11"><td class="memItemLeft" align="right" valign="top">virtual ActivationQueryBase::UPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a2f4d476fa790349c9a7de52be3232d11">perform_action</a> (<a class="el" href="../unity.scopes.Result/index.html">Result</a> const &amp;result, <a class="el" href="../unity.scopes.ActionMetadata/index.html">ActionMetadata</a> const &amp;metadata, std::string const &amp;widget_id, std::string const &amp;action_id)</td></tr>
+<tr class="memdesc:a2f4d476fa790349c9a7de52be3232d11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoked when a scope is requested to handle a preview action.  More...<br /></td></tr>
+<tr class="separator:a2f4d476fa790349c9a7de52be3232d11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a154b9b4cfc0f40572cfec60dd819396f"><td class="memItemLeft" align="right" valign="top">virtual PreviewQueryBase::UPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a154b9b4cfc0f40572cfec60dd819396f">preview</a> (<a class="el" href="../unity.scopes.Result/index.html">Result</a> const &amp;result, <a class="el" href="../unity.scopes.ActionMetadata/index.html">ActionMetadata</a> const &amp;metadata)=0</td></tr>
+<tr class="memdesc:a154b9b4cfc0f40572cfec60dd819396f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoked when a scope is requested to create a preview for a particular result.  More...<br /></td></tr>
+<tr class="separator:a154b9b4cfc0f40572cfec60dd819396f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32744a21076d9dacc98362412c6a63d5"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a32744a21076d9dacc98362412c6a63d5">scope_directory</a> () const final</td></tr>
+<tr class="memdesc:a32744a21076d9dacc98362412c6a63d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the directory that stores the scope's configuration files and shared library.  More...<br /></td></tr>
+<tr class="separator:a32744a21076d9dacc98362412c6a63d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36cfdda42db58da399390e7c5df2385e"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a36cfdda42db58da399390e7c5df2385e">cache_directory</a> () const final</td></tr>
+<tr class="memdesc:a36cfdda42db58da399390e7c5df2385e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a directory that is (exclusively) writable for the scope.  More...<br /></td></tr>
+<tr class="separator:a36cfdda42db58da399390e7c5df2385e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f54564b752a3451e05bd11171abb27e"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a4f54564b752a3451e05bd11171abb27e">app_directory</a> () const final</td></tr>
+<tr class="memdesc:a4f54564b752a3451e05bd11171abb27e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a directory that is shared with an app in the same click package.  More...<br /></td></tr>
+<tr class="separator:a4f54564b752a3451e05bd11171abb27e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade8de1dca94e10aa9788624710ab49eb"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#ade8de1dca94e10aa9788624710ab49eb">tmp_directory</a> () const final</td></tr>
+<tr class="memdesc:ade8de1dca94e10aa9788624710ab49eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a tmp directory that is (exclusively) writable for the scope.  More...<br /></td></tr>
+<tr class="separator:ade8de1dca94e10aa9788624710ab49eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af874b8b3c5c28dcaacc416076c9dfc35"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../unity.scopes/index.html#a45babc254d3548863d79ee54f266e84d">unity::scopes::RegistryProxy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#af874b8b3c5c28dcaacc416076c9dfc35">registry</a> () const final</td></tr>
+<tr class="memdesc:af874b8b3c5c28dcaacc416076c9dfc35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the proxy to the registry.  More...<br /></td></tr>
+<tr class="separator:af874b8b3c5c28dcaacc416076c9dfc35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acddeebb3357c6941b3b77617133cda23"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../unity.scopes/index.html#ad5d8ccfa11a327fca6f3e4cee11f4c10">VariantMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#acddeebb3357c6941b3b77617133cda23">settings</a> () const final</td></tr>
+<tr class="memdesc:acddeebb3357c6941b3b77617133cda23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a dictionary with the scope's current settings.  More...<br /></td></tr>
+<tr class="separator:acddeebb3357c6941b3b77617133cda23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc864e2fa714b9424a89293fea6972bc"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../unity.scopes/index.html#a4daaa9ad07daf596af4dacd6e0b7be9a">ChildScopeList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#abc864e2fa714b9424a89293fea6972bc">find_child_scopes</a> () const </td></tr>
+<tr class="memdesc:abc864e2fa714b9424a89293fea6972bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a defaulted list of child scopes aggregated by this scope.  More...<br /></td></tr>
+<tr class="separator:abc864e2fa714b9424a89293fea6972bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4016075ab95bbf1b5dfa1444e9d750e0"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../unity.scopes/index.html#a4daaa9ad07daf596af4dacd6e0b7be9a">ChildScopeList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a4016075ab95bbf1b5dfa1444e9d750e0">child_scopes</a> () const final</td></tr>
+<tr class="memdesc:a4016075ab95bbf1b5dfa1444e9d750e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current list of child scopes aggregated by this scope.  More...<br /></td></tr>
+<tr class="separator:a4016075ab95bbf1b5dfa1444e9d750e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ac39ca44f4790dd36900657692d0565"><td class="memItemLeft" align="right" valign="top">virtual ActivationQueryBase::UPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a7ac39ca44f4790dd36900657692d0565">activate_result_action</a> (<a class="el" href="../unity.scopes.Result/index.html">Result</a> const &amp;result, <a class="el" href="../unity.scopes.ActionMetadata/index.html">ActionMetadata</a> const &amp;metadata, std::string const &amp;action_id)</td></tr>
+<tr class="memdesc:a7ac39ca44f4790dd36900657692d0565"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoked when a scope is requested to handle a result in-card action.  More...<br /></td></tr>
+<tr class="separator:a7ac39ca44f4790dd36900657692d0565"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a4cbdf8cb790e6f44e388e70ab456e686"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4cbdf8cb790e6f44e388e70ab456e686"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a4cbdf8cb790e6f44e388e70ab456e686">runtime_version</a> (int &amp;v_major, int &amp;v_minor, int &amp;v_micro) noexcept</td></tr>
+<tr class="memdesc:a4cbdf8cb790e6f44e388e70ab456e686"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the version information for the scopes API that the scope was linked with. <br /></td></tr>
+<tr class="separator:a4cbdf8cb790e6f44e388e70ab456e686"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Base class for a scope implementation. </p>
+<p>Scopes are accessed by the scopes runtime as a shared library (one library per scope). Each scope must implement a class that derives from <a class="el" href="index.html" title="Base class for a scope implementation. ">ScopeBase</a>, for example:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;unity/scopes/ScopeBase.h&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keyword">class </span>MyScope : <span class="keyword">public</span> <a class="code" href="index.html">unity::scopes::ScopeBase</a></div>
+<div class="line">{</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    MyScope();</div>
+<div class="line">    <span class="keyword">virtual</span> ~MyScope();</div>
+<div class="line"></div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="index.html#ac25f3f326e2cf25de2f2eca18de5926c">start</a>(std::string <span class="keyword">const</span>&amp; scope_id);   <span class="comment">// Optional</span></div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="index.html#a80c5fec9e985dbb315d780ef2a56bfbf">stop</a>();                               <span class="comment">// Optional</span></div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="index.html#a386e99b98318a70f25db84bbe11c0292">run</a>();                                <span class="comment">// Optional</span></div>
+<div class="line">    <span class="comment">// ...</span></div>
+<div class="line">};</div>
+</div><!-- fragment --><p>In addition, the library must provide two functions with "C" linkage:</p><ul>
+<li>a create function that must return a pointer to the derived instance</li>
+<li>a destroy function that is passed the pointer returned by the create function</li>
+</ul>
+<p>Typically, the create and destroy functions will simply call <code>new</code> and <code>delete</code>, respectively. If the create function throws an exception, the destroy function will not be called. If the create function returns NULL, the destroy function <em>will</em> be called with NULL as its argument.</p>
+<p>Rather than hard-coding the names of the functions, use the UNITY_SCOPE_CREATE_FUNCTION and UNITY_SCOPE_DESTROY_FUNCTION macros, for example:</p>
+<div class="fragment"><div class="line"><a class="code" href="index.html">unity::scopes::ScopeBase</a>*</div>
+<div class="line">UNITY_SCOPE_CREATE_FUNCTION()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">return</span> <span class="keyword">new</span> MyScope;</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span></div>
+<div class="line">UNITY_SCOPE_DESTROY_FUNCTION(unity::scopes::ScopeBase* scope)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">delete</span> scope;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>After the scopes runtime has obtained a pointer to the class instance from the create function, it calls <a class="el" href="index.html#ac25f3f326e2cf25de2f2eca18de5926c" title="Called by the scopes runtime after the create function completes. ">start()</a>, which allows the scope to intialize itself. This is followed by a call to <a class="el" href="index.html#a386e99b98318a70f25db84bbe11c0292" title="Called by the scopes runtime after it has called start() to hand a thread of control to the scope...">run()</a>. The call to <a class="el" href="index.html#a386e99b98318a70f25db84bbe11c0292" title="Called by the scopes runtime after it has called start() to hand a thread of control to the scope...">run()</a> is made by a separate thread; its only purpose is to pass a thread of control to the scope, for example, to run an event loop. When the scope should complete its activities, the runtime calls <a class="el" href="index.html#a80c5fec9e985dbb315d780ef2a56bfbf" title="Called by the scopes runtime when the scope should shut down. ">stop()</a>. The calls to the create function, <a class="el" href="index.html#ac25f3f326e2cf25de2f2eca18de5926c" title="Called by the scopes runtime after the create function completes. ">start()</a>, <a class="el" href="index.html#a80c5fec9e985dbb315d780ef2a56bfbf" title="Called by the scopes runtime when the scope should shut down. ">stop()</a>, and the destroy function) are made by the same thread.</p>
+<p>The scope implementation, if it does not return from <a class="el" href="index.html#a386e99b98318a70f25db84bbe11c0292" title="Called by the scopes runtime after it has called start() to hand a thread of control to the scope...">run()</a>, is expected to return from <a class="el" href="index.html#a386e99b98318a70f25db84bbe11c0292" title="Called by the scopes runtime after it has called start() to hand a thread of control to the scope...">run()</a> in response to a call to <a class="el" href="index.html#a80c5fec9e985dbb315d780ef2a56bfbf" title="Called by the scopes runtime when the scope should shut down. ">stop()</a> in a timely manner. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a49a0b9ada0eeb4c71e6a2181c3d8c9e7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ActivationQueryBase::UPtr unity::scopes::ScopeBase::activate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.Result/index.html">Result</a> const &amp;&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.ActionMetadata/index.html">ActionMetadata</a> const &amp;&#160;</td>
+          <td class="paramname"><em>metadata</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Called by the scopes runtime when a scope needs to respond to a result activation request. </p>
+<p>This method must return an instance that is derived from <code><a class="el" href="../unity.scopes.ActivationQueryBase/index.html" title="Base class for an activation request that is executed inside a scope. ">ActivationQueryBase</a></code>. The implementation of this method must return in a timely manner, that is, it should perform only minimal initialization that is guaranteed to complete quickly. The call to <a class="el" href="index.html#a49a0b9ada0eeb4c71e6a2181c3d8c9e7" title="Called by the scopes runtime when a scope needs to respond to a result activation request...">activate()</a> is made by an arbitrary thread. The default implementation returns an instance of <a class="el" href="../unity.scopes.ActivationQueryBase/index.html" title="Base class for an activation request that is executed inside a scope. ">ActivationQueryBase</a> that responds with ActivationResponse::Status::NotHandled. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">result</td><td>The result that should be activated. </td></tr>
+    <tr><td class="paramname">metadata</td><td>additional data sent by the client. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The activation instance. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a7ac39ca44f4790dd36900657692d0565"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ActivationQueryBase::UPtr unity::scopes::ScopeBase::activate_result_action </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.Result/index.html">Result</a> const &amp;&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.ActionMetadata/index.html">ActionMetadata</a> const &amp;&#160;</td>
+          <td class="paramname"><em>metadata</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>action_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Invoked when a scope is requested to handle a result in-card action. </p>
+<p>This method must return an instance that is derived from <code><a class="el" href="../unity.scopes.ActivationQueryBase/index.html" title="Base class for an activation request that is executed inside a scope. ">ActivationQueryBase</a></code>. The implementation of this method must return in a timely manner, that is, it should perform only minimal initialization that is guaranteed to complete quickly. The call to <a class="el" href="index.html#a7ac39ca44f4790dd36900657692d0565" title="Invoked when a scope is requested to handle a result in-card action. ">activate_result_action()</a> is made by an arbitrary thread. The default implementation returns an instance of <a class="el" href="../unity.scopes.ActivationQueryBase/index.html" title="Base class for an activation request that is executed inside a scope. ">ActivationQueryBase</a> that responds with ActivationResponse::Status::NotHandled. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">result</td><td>The result whose action was activated. </td></tr>
+    <tr><td class="paramname">metadata</td><td>Additional data sent by the client. </td></tr>
+    <tr><td class="paramname">action_id</td><td>The identifier of the action that was activated. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The activation instance. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a4f54564b752a3451e05bd11171abb27e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string unity::scopes::ScopeBase::app_directory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a directory that is shared with an app in the same click package. </p>
+<p>If a scope and an app share a single click package, this directory and the files in it are writable by the app, and read-only to the scope. This allows the app to write information into the filesystem that can be read by the scope (but not vice versa).</p>
+<dl class="section note"><dt>Note</dt><dd>The app directory is available only after this <a class="el" href="index.html" title="Base class for a scope implementation. ">ScopeBase</a> is instantiated; do not call this method from the constructor!</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The root directory of a filesystem sub-tree that the scope shares with an application installed from the same click-package. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">LogicException</td><td>if called from the constructor of this instance. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a36cfdda42db58da399390e7c5df2385e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string unity::scopes::ScopeBase::cache_directory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a directory that is (exclusively) writable for the scope. </p>
+<p>This directory allows scopes to store persistent information, such as cached content or similar.</p>
+<dl class="section note"><dt>Note</dt><dd>The cache directory is available only after this <a class="el" href="index.html" title="Base class for a scope implementation. ">ScopeBase</a> is instantiated; do not call this method from the constructor!</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The root directory of a filesystem sub-tree that is writable for the scope. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">LogicException</td><td>if called from the constructor of this instance. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a4016075ab95bbf1b5dfa1444e9d750e0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../unity.scopes/index.html#a4daaa9ad07daf596af4dacd6e0b7be9a">ChildScopeList</a> unity::scopes::ScopeBase::child_scopes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the current list of child scopes aggregated by this scope. </p>
+<p>An aggregator should respect the "enabled" states of each child scope, returning results only for the child scopes that are enabled.</p>
+<dl class="section return"><dt>Returns</dt><dd>The list of child scopes aggregated by this scope. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="abc864e2fa714b9424a89293fea6972bc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../unity.scopes/index.html#a4daaa9ad07daf596af4dacd6e0b7be9a">ChildScopeList</a> unity::scopes::ScopeBase::find_child_scopes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a defaulted list of child scopes aggregated by this scope. </p>
+<p>The scope author must ensure that the list returned by this method contains all scopes that this aggregator may collect results from. The "enabled" state for each child returned should be set to a default value (i.e. whether the child is enabled or disabled by default when newly discovered).</p>
+<p>The default behaviour of this method is to simply return all available scopes on the system in enabled state. This translates to: "Any scope may potentially be aggregated
+by this scope".</p>
+<dl class="section note"><dt>Note</dt><dd>Only aggregator scopes should implement this method.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The list of child scopes aggregated by this scope. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a2f4d476fa790349c9a7de52be3232d11"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ActivationQueryBase::UPtr unity::scopes::ScopeBase::perform_action </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.Result/index.html">Result</a> const &amp;&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.ActionMetadata/index.html">ActionMetadata</a> const &amp;&#160;</td>
+          <td class="paramname"><em>metadata</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>widget_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>action_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Invoked when a scope is requested to handle a preview action. </p>
+<p>This method must return an instance that is derived from <code><a class="el" href="../unity.scopes.ActivationQueryBase/index.html" title="Base class for an activation request that is executed inside a scope. ">ActivationQueryBase</a></code>. The implementation of this method must return in a timely manner, that is, it should perform only minimal initialization that is guaranteed to complete quickly. The call to <a class="el" href="index.html#a49a0b9ada0eeb4c71e6a2181c3d8c9e7" title="Called by the scopes runtime when a scope needs to respond to a result activation request...">activate()</a> is made by an arbitrary thread. The default implementation returns an instance of <a class="el" href="../unity.scopes.ActivationQueryBase/index.html" title="Base class for an activation request that is executed inside a scope. ">ActivationQueryBase</a> that responds with ActivationResponse::Status::NotHandled. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">result</td><td>The result that was previewed. </td></tr>
+    <tr><td class="paramname">metadata</td><td>Additional data sent by client. </td></tr>
+    <tr><td class="paramname">widget_id</td><td>The identifier of the 'actions' widget of the activated action. </td></tr>
+    <tr><td class="paramname">action_id</td><td>The identifier of the action that was activated. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The activation instance. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a154b9b4cfc0f40572cfec60dd819396f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual PreviewQueryBase::UPtr unity::scopes::ScopeBase::preview </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.Result/index.html">Result</a> const &amp;&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.ActionMetadata/index.html">ActionMetadata</a> const &amp;&#160;</td>
+          <td class="paramname"><em>metadata</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Invoked when a scope is requested to create a preview for a particular result. </p>
+<p>This method must return an instance that is derived from <code><a class="el" href="../unity.scopes.PreviewQueryBase/index.html" title="Abstract base class to represent a particular preview. ">PreviewQueryBase</a></code>. The implementation of this method must return in a timely manner, that is, it should perform only minimal initialization that is guaranteed to complete quickly. The call to <a class="el" href="index.html#a49a0b9ada0eeb4c71e6a2181c3d8c9e7" title="Called by the scopes runtime when a scope needs to respond to a result activation request...">activate()</a> is made by an arbitrary thread. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">result</td><td>The result that should be previewed. </td></tr>
+    <tr><td class="paramname">metadata</td><td>Additional data sent by the client. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The preview instance. </dd></dl>
+<p>Implemented in <a class="el" href="../unity.scopes.qt.QScopeBaseAPI/index.html#a839ca01a0085c27edc5ee6fa060f7b75">unity::scopes::qt::QScopeBaseAPI</a>.</p>
+</div>
+</div>
+<a class="anchor" id="af874b8b3c5c28dcaacc416076c9dfc35"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../unity.scopes/index.html#a45babc254d3548863d79ee54f266e84d">RegistryProxy</a> unity::scopes::ScopeBase::registry </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the proxy to the registry. </p>
+<dl class="section note"><dt>Note</dt><dd>The registry proxy is available only after this <a class="el" href="index.html" title="Base class for a scope implementation. ">ScopeBase</a> is instantiated; do not call this method from the constructor!</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The proxy to the registry. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">LogicException</td><td>if called from the constructor of this instance. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a386e99b98318a70f25db84bbe11c0292"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unity::scopes::ScopeBase::run </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Called by the scopes runtime after it has called <a class="el" href="index.html#ac25f3f326e2cf25de2f2eca18de5926c" title="Called by the scopes runtime after the create function completes. ">start()</a> to hand a thread of control to the scope. </p>
+<p><a class="el" href="index.html#a386e99b98318a70f25db84bbe11c0292" title="Called by the scopes runtime after it has called start() to hand a thread of control to the scope...">run()</a> passes a thread of control to the scope to do with as it sees fit, for example, to run an event loop. During finalization, the scopes runtime joins with the thread that called <a class="el" href="index.html#a386e99b98318a70f25db84bbe11c0292" title="Called by the scopes runtime after it has called start() to hand a thread of control to the scope...">run()</a>. This means that, if the scope implementation does not return from <a class="el" href="index.html#a386e99b98318a70f25db84bbe11c0292" title="Called by the scopes runtime after it has called start() to hand a thread of control to the scope...">run()</a>, it is expected to arrange for <a class="el" href="index.html#a386e99b98318a70f25db84bbe11c0292" title="Called by the scopes runtime after it has called start() to hand a thread of control to the scope...">run()</a> to complete in a timely manner in response to a call to <a class="el" href="index.html#a80c5fec9e985dbb315d780ef2a56bfbf" title="Called by the scopes runtime when the scope should shut down. ">stop()</a>. Failure to do so will cause deadlock during finalization.</p>
+<p>If <a class="el" href="index.html#a386e99b98318a70f25db84bbe11c0292" title="Called by the scopes runtime after it has called start() to hand a thread of control to the scope...">run()</a> throws an exception, the runtime handles the exception and calls <a class="el" href="index.html#a80c5fec9e985dbb315d780ef2a56bfbf" title="Called by the scopes runtime when the scope should shut down. ">stop()</a> in response. </p>
+</div>
+</div>
+<a class="anchor" id="a32744a21076d9dacc98362412c6a63d5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string unity::scopes::ScopeBase::scope_directory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the directory that stores the scope's configuration files and shared library. </p>
+<dl class="section note"><dt>Note</dt><dd>The scope directory is available only after this <a class="el" href="index.html" title="Base class for a scope implementation. ">ScopeBase</a> is instantiated; do not call this method from the constructor!</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The scope's configuration directory. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">LogicException</td><td>if called from the constructor of this instance. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a0e4969ff26dc1d396d74c56d896fd564"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual SearchQueryBase::UPtr unity::scopes::ScopeBase::search </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.CannedQuery/index.html">CannedQuery</a> const &amp;&#160;</td>
+          <td class="paramname"><em>query</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.SearchMetadata/index.html">SearchMetadata</a> const &amp;&#160;</td>
+          <td class="paramname"><em>metadata</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Called by the scopes runtime when a scope needs to instantiate a query. </p>
+<p>This method must return an instance that is derived from <code><a class="el" href="../unity.scopes.QueryBase/index.html" title="Abstract server-side base interface for a query that is executed inside a scope. ">QueryBase</a></code>. The implementation of this method must return in a timely manner, that is, it should perform only minimal initialization that is guaranteed to complete quickly. The call to <a class="el" href="index.html#a0e4969ff26dc1d396d74c56d896fd564" title="Called by the scopes runtime when a scope needs to instantiate a query. ">search()</a> is made by an arbitrary thread. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">query</td><td>The query string to be executed by the returned object instance. </td></tr>
+    <tr><td class="paramname">metadata</td><td>additional data sent by the client. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The query instance. </dd></dl>
+<p>Implemented in <a class="el" href="../unity.scopes.qt.QScopeBaseAPI/index.html#ac5023d43f3169eb51283ebd6488da631">unity::scopes::qt::QScopeBaseAPI</a>.</p>
+</div>
+</div>
+<a class="anchor" id="acddeebb3357c6941b3b77617133cda23"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../unity.scopes/index.html#ad5d8ccfa11a327fca6f3e4cee11f4c10">unity::scopes::VariantMap</a> unity::scopes::ScopeBase::settings </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a dictionary with the scope's current settings. </p>
+<p>Instead of storing the return value, it is preferable to call <a class="el" href="index.html#acddeebb3357c6941b3b77617133cda23" title="Returns a dictionary with the scope&#39;s current settings. ">settings()</a> each time your implementation requires a settings value. This ensures that, if a user changes settings while the scope is running, the new settings take effect with the next query.</p>
+<dl class="section note"><dt>Note</dt><dd>The settings are available only after this <a class="el" href="index.html" title="Base class for a scope implementation. ">ScopeBase</a> is instantiated; do not call this method from the constructor!</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The scope's current settings. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">LogicException</td><td>if called from the constructor of this instance. </td></tr>
+    <tr><td class="paramname">ResourceException</td><td>if settings database file is corrupted. </td></tr>
+    <tr><td class="paramname">FileException</td><td>if settings database file is not readable. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ac25f3f326e2cf25de2f2eca18de5926c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unity::scopes::ScopeBase::start </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>scope_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Called by the scopes runtime after the create function completes. </p>
+<p>If <a class="el" href="index.html#ac25f3f326e2cf25de2f2eca18de5926c" title="Called by the scopes runtime after the create function completes. ">start()</a> throws an exception, <a class="el" href="index.html#a80c5fec9e985dbb315d780ef2a56bfbf" title="Called by the scopes runtime when the scope should shut down. ">stop()</a> will <em>not</em> be called.</p>
+<p>The call to <a class="el" href="index.html#ac25f3f326e2cf25de2f2eca18de5926c" title="Called by the scopes runtime after the create function completes. ">start()</a> is made by the same thread that calls the create function.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scope_id</td><td>The name of the scope as defined by the scope's configuration file. </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Reimplemented in <a class="el" href="../unity.scopes.qt.QScopeBaseAPI/index.html#aefcd8d1262a89d1c9b6c63dbdc8bfcea">unity::scopes::qt::QScopeBaseAPI</a>.</p>
+</div>
+</div>
+<a class="anchor" id="a80c5fec9e985dbb315d780ef2a56bfbf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unity::scopes::ScopeBase::stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Called by the scopes runtime when the scope should shut down. </p>
+<p>A scope should deallocate as many resources as possible when <a class="el" href="index.html#a80c5fec9e985dbb315d780ef2a56bfbf" title="Called by the scopes runtime when the scope should shut down. ">stop()</a> is called, for example, deallocate any caches and close network connections. In addition, if the scope implements <a class="el" href="index.html#a386e99b98318a70f25db84bbe11c0292" title="Called by the scopes runtime after it has called start() to hand a thread of control to the scope...">run()</a> and did not return from <a class="el" href="index.html#a386e99b98318a70f25db84bbe11c0292" title="Called by the scopes runtime after it has called start() to hand a thread of control to the scope...">run()</a>, it must return from <a class="el" href="index.html#a386e99b98318a70f25db84bbe11c0292" title="Called by the scopes runtime after it has called start() to hand a thread of control to the scope...">run()</a> in response to the call to <a class="el" href="index.html#a80c5fec9e985dbb315d780ef2a56bfbf" title="Called by the scopes runtime when the scope should shut down. ">stop()</a>.</p>
+<p>Exceptions from <a class="el" href="index.html#a80c5fec9e985dbb315d780ef2a56bfbf" title="Called by the scopes runtime when the scope should shut down. ">stop()</a> are ignored.</p>
+<p>The call to <a class="el" href="index.html#a80c5fec9e985dbb315d780ef2a56bfbf" title="Called by the scopes runtime when the scope should shut down. ">stop()</a> is made by the same thread that calls the create function and <a class="el" href="index.html#ac25f3f326e2cf25de2f2eca18de5926c" title="Called by the scopes runtime after the create function completes. ">start()</a>. </p>
+<p>Reimplemented in <a class="el" href="../unity.scopes.qt.QScopeBaseAPI/index.html#a7cfc17b94cc01761ac53acc1613ab8ce">unity::scopes::qt::QScopeBaseAPI</a>.</p>
+</div>
+</div>
+<a class="anchor" id="ade8de1dca94e10aa9788624710ab49eb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string unity::scopes::ScopeBase::tmp_directory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a tmp directory that is (exclusively) writable for the scope. </p>
+<p>This directory is periodically cleaned of unused files. The exact amount of time may vary, but is on the order of a few hours. The directory is also cleaned during reboot.</p>
+<dl class="section note"><dt>Note</dt><dd>The tmp directory is available only after this <a class="el" href="index.html" title="Base class for a scope implementation. ">ScopeBase</a> is instantiated; do not call this method from the constructor!</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A directory for temporary files. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">LogicException</td><td>if called from the constructor of this instance. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

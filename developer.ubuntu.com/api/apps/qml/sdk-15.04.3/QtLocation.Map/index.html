@@ -1,0 +1,723 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Map [sdk-15.04.3/QtLocation.Map] | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a href="../index.html">SDK 15.04.3</a> &rsaquo;</li>
+
+<li><a href="../QtLocation/index.html">QtLocation</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Map</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qml-qtlocation-map.html -->
+	<!-- Source Format: qdoc -->
+<h1>Map</h1>
+<div id="element_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$Map-brief -->
+<p>The Map type displays a map. More...</p>
+<!-- @@@Map -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import QtLocation 5.3</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Since:</td><td class="memItemRight bottomAlign">  Qt Location 5.0</td></tr></table></div><ul>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="../../sdk-15.04.1/QtLocation.Map/index.html#activeMapType-prop">activeMapType</a></b></b> : MapType</li>
+<li class="fn"><b><b><a href="../../sdk-15.04.1/QtLocation.Map/index.html#center-prop">center</a></b></b> : coordinate</li>
+<li class="fn"><b><b><a href="../../sdk-15.04.1/QtLocation.Map/index.html#gesture-prop">gesture</a></b></b> : MapGestureArea</li>
+<li class="fn"><b><b><a href="../../sdk-15.04.1/QtLocation.Map/index.html#mapItems-prop">mapItems</a></b></b> : list&lt;MapItem&gt;</li>
+<li class="fn"><b><b><a href="../../sdk-15.04.1/QtLocation.Map/index.html#maximumZoomLevel-prop">maximumZoomLevel</a></b></b> : real</li>
+<li class="fn"><b><b><a href="../../sdk-15.04.1/QtLocation.Map/index.html#minimumZoomLevel-prop">minimumZoomLevel</a></b></b> : real</li>
+<li class="fn"><b><b><a href="../../sdk-15.04.1/QtLocation.Map/index.html#plugin-prop">plugin</a></b></b> : Plugin</li>
+<li class="fn"><b><b><a href="../../sdk-15.04.1/QtLocation.Map/index.html#supportedMapTypes-prop">supportedMapTypes</a></b></b> : list&lt;MapType&gt;</li>
+<li class="fn"><b><b><a href="../../sdk-15.04.1/QtLocation.Map/index.html#zoomLevel-prop">zoomLevel</a></b></b> : real</li>
+</ul>
+<a name="methods"></a>
+<h2 id="methods">Methods</h2>
+<ul>
+<li class="fn"><b><b><a href="../../sdk-15.04.1/QtLocation.Map/index.html#addMapItem-method">addMapItem</a></b></b>(MapItem <i>item</i>)</li>
+<li class="fn">void <b><b><a href="../../sdk-15.04.1/QtLocation.Map/index.html#cameraStopped-method">cameraStopped</a></b></b>()</li>
+<li class="fn">void <b><b><a href="../../sdk-15.04.1/QtLocation.Map/index.html#clearMapItems-method">clearMapItems</a></b></b>()</li>
+<li class="fn"><b><b><a href="../../sdk-15.04.1/QtLocation.Map/index.html#fitViewportToGeoShape-method">fitViewportToGeoShape</a></b></b>(QGeoShape <i>shape</i>)</li>
+<li class="fn"><b><b><a href="../../sdk-15.04.1/QtLocation.Map/index.html#fitViewportToMapItems-method">fitViewportToMapItems</a></b></b>()</li>
+<li class="fn">void <b><b><a href="../../sdk-15.04.1/QtLocation.Map/index.html#pan-method">pan</a></b></b>(int <i>dx</i>, int <i>dy</i>)</li>
+<li class="fn">void <b><b><a href="../../sdk-15.04.1/QtLocation.Map/index.html#removeMapItem-method">removeMapItem</a></b></b>(MapItem <i>item</i>)</li>
+<li class="fn"><b><b><a href="../../sdk-15.04.1/QtLocation.Map/index.html#toCoordinate-method">toCoordinate</a></b></b>(QPointF <i>screenPosition</i>)</li>
+<li class="fn"><b><b><a href="../../sdk-15.04.1/QtLocation.Map/index.html#toScreenPosition-method">toScreenPosition</a></b></b>(coordinate <i>coordinate</i>)</li>
+</ul>
+<!-- $$$Map-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<p>The Map type is used to display a map or image of the Earth, with the capability to also display interactive objects tied to the map's surface.</p>
+<p>There are a variety of different ways to visualize the Earth's surface in a 2-dimensional manner, but all of them involve some kind of projection: a mathematical relationship between the 3D coordinates (latitude, longitude and altitude) and 2D coordinates (X and Y in pixels) on the screen.</p>
+<p>Different sources of map data can use different projections, and from the point of view of the Map type, we treat these as one replaceable unit: the Map plugin. A Map plugin consists of a data source, as well as all other details needed to display its data on-screen.</p>
+<p>The current Map plugin in use is contained in the <a href="../../sdk-15.04.1/QtLocation.location-places-qml/index.html#plugin">plugin</a> property of the Map item. In order to display any image in a Map item, you will need to set this property. See the <a href="../../sdk-15.04.1/QtLocation.location-places-qml/index.html#plugin">Plugin</a> type for a description of how to retrieve an appropriate plugin for use.</p>
+<p>The geographic region displayed in the Map item is referred to as its viewport, and this is defined by the properties <a href="../../sdk-15.04.1/QtLocation.Map/index.html#center-prop">center</a>, and <a href="../../sdk-15.04.1/QtLocation.Map/index.html#zoomLevel-prop">zoomLevel</a>. The <a href="../../sdk-15.04.1/QtLocation.Map/index.html#center-prop">center</a> property contains a coordinate specifying the center of the viewport, while <a href="../../sdk-15.04.1/QtLocation.Map/index.html#zoomLevel-prop">zoomLevel</a> controls the scale of the map. See each of these properties for further details about their values.</p>
+<p>When the map is displayed, each possible geographic coordinate that is visible will map to some pixel X and Y coordinate on the screen. To perform conversions between these two, Map provides the <a href="../../sdk-15.04.1/QtLocation.Map/index.html#toCoordinate-method">toCoordinate</a> and <a href="../../sdk-15.04.1/QtLocation.Map/index.html#toScreenPosition-method">toScreenPosition</a> functions, which are of general utility.</p>
+<a name="map-objects"></a>
+<h3 >Map Objects</h3>
+<p>Map related objects can be declared within the body of a Map object in Qt Quick and will automatically appear on the Map. To add objects programmatically, first be sure they are created with the Map as their parent (for example in an argument to Component::createObject), and then call the <a href="../../sdk-15.04.1/QtLocation.Map/index.html#addMapItem-method">addMapItem</a> method on the Map. A corresponding <a href="../../sdk-15.04.1/QtLocation.Map/index.html#removeMapItem-method">removeMapItem</a> method also exists to do the opposite and remove an object from the Map.</p>
+<p>Moving Map objects around, resizing them or changing their shape normally does not involve any special interaction with Map itself -- changing these details about a map object will automatically update the display.</p>
+<a name="interaction"></a>
+<h3 >Interaction</h3>
+<p>The Map type includes support for pinch and flick gestures to control zooming and panning. These are enabled by default, and available at any time by using the <a href="../../sdk-15.04.1/QtLocation.Map/index.html#gesture-prop">gesture</a> object. The actual GestureArea is constructed specially at startup and cannot be replaced or destroyed. Its properties can be altered, however, to control its behavior.</p>
+<a name="performance"></a>
+<h3 >Performance</h3>
+<p>Maps are rendered using OpenGL (ES) and the Qt Scene Graph stack, and as a result perform quite well where GL accelerated hardware is available.</p>
+<p>For &quot;online&quot; Map plugins, network bandwidth and latency can be major contributors to the user's perception of performance. Extensive caching is performed to mitigate this, but such mitigation is not always perfect. For &quot;offline&quot; plugins, the time spent retrieving the stored geographic data and rendering the basic map features can often play a dominant role. Some offline plugins may use hardware acceleration themselves to (partially) avert this.</p>
+<p>In general, large and complex Map items such as polygons and polylines with large numbers of vertices can have an adverse effect on UI performance. Further, more detailed notes on this are in the documentation for each map item type.</p>
+<a name="example-usage"></a>
+<h3 >Example Usage</h3>
+<p>The following snippet shows a simple Map and the necessary Plugin type to use it. The map is centered near Brisbane, Australia, zoomed out to the minimum zoom level, with gesture interaction enabled.</p>
+<pre class="cpp">Plugin {
+    id: somePlugin
+    <span class="comment">// code here to choose the plugin as necessary</span>
+}
+Map {
+    id: map
+    plugin: somePlugin
+    center {
+        latitude: <span class="operator">-</span><span class="number">27</span>
+        longitude: <span class="number">153</span>
+    }
+    zoomLevel: map<span class="operator">.</span>minimumZoomLevel
+    gesture<span class="operator">.</span>enabled: <span class="keyword">true</span>
+}</pre>
+<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/e9f72b88-8f7c-498f-99fd-ca18f7c3df2c-api/apps/qml/sdk-15.04.1/QtLocation.Map/images/api-map.png" alt="" /></p><!-- @@@Map -->
+<h2>Property Documentation</h2>
+<!-- $$$activeMapType -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="activeMapType-prop"><td class="tblQmlPropNode"><p><a name="activeMapType-prop"></a><span class="name">activeMapType</span> : <span class="type"><a href="../../sdk-15.04.1/QtLocation.MapType/index.html">MapType</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>Access to the currently active <a href="../../sdk-15.04.1/QtLocation.MapType/index.html">map type</a>.</p>
+<p>This property can be set to change the active <a href="../../sdk-15.04.1/QtLocation.MapType/index.html">map type</a>. See the <a href="../../sdk-15.04.1/QtLocation.Map/index.html#supportedMapTypes-prop">supportedMapTypes</a> property for possible values.</p>
+<p><b>See also </b><a href="../../sdk-15.04.1/QtLocation.MapType/index.html">MapType</a>.</p>
+</div></div><!-- @@@activeMapType -->
+<br/>
+<!-- $$$center -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="center-prop"><td class="tblQmlPropNode"><p><a name="center-prop"></a><span class="name">center</span> : <span class="type">coordinate</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the coordinate which occupies the center of the mapping viewport. Invalid center coordinates are ignored.</p>
+<p>The default value is an arbitrary valid coordinate.</p>
+</div></div><!-- @@@center -->
+<br/>
+<!-- $$$gesture -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="gesture-prop"><td class="tblQmlPropNode"><p><a name="gesture-prop"></a><span class="name">gesture</span> : <span class="type"><a href="../../sdk-15.04.1/QtLocation.MapGestureArea/index.html">MapGestureArea</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>Contains the <a href="../../sdk-15.04.1/QtLocation.MapGestureArea/index.html">MapGestureArea</a> created with the Map. This covers pan, flick and pinch gestures. Use <code>gesture.enabled: true</code> to enable basic gestures, or see <a href="../../sdk-15.04.1/QtLocation.MapGestureArea/index.html">MapGestureArea</a> for further details.</p>
+</div></div><!-- @@@gesture -->
+<br/>
+<!-- $$$mapItems -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="mapItems-prop"><td class="tblQmlPropNode"><p><a name="mapItems-prop"></a><span class="name">mapItems</span> : <span class="type">list</span>&lt;<span class="type">MapItem</span>&gt;</p></td></tr></table></div></div><div class="qmldoc"><p>Returns the list of all map items in no particular order. These items include items that were declared statically as part of the type declaration, as well as dynamical items (<a href="../../sdk-15.04.1/QtLocation.Map/index.html#addMapItem-method">addMapItem</a>, <a href="../../sdk-15.04.1/QtLocation.MapItemView/index.html">MapItemView</a>).</p>
+<p><b>See also </b><a href="../../sdk-15.04.1/QtLocation.Map/index.html#addMapItem-method">addMapItem</a>, <a href="../../sdk-15.04.1/QtLocation.Map/index.html#removeMapItem-method">removeMapItem</a>, and <a href="../../sdk-15.04.1/QtLocation.Map/index.html#clearMapItems-method">clearMapItems</a>.</p>
+</div></div><!-- @@@mapItems -->
+<br/>
+<!-- $$$maximumZoomLevel -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="maximumZoomLevel-prop"><td class="tblQmlPropNode"><p><a name="maximumZoomLevel-prop"></a><span class="name">maximumZoomLevel</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the maximum valid zoom level for the map.</p>
+<p>The maximum zoom level is defined by the <a href="../../sdk-15.04.1/QtLocation.location-places-qml/index.html#plugin">plugin</a> used. If a plugin supporting mapping is not set, -1.0 is returned.</p>
+</div></div><!-- @@@maximumZoomLevel -->
+<br/>
+<!-- $$$minimumZoomLevel -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="minimumZoomLevel-prop"><td class="tblQmlPropNode"><p><a name="minimumZoomLevel-prop"></a><span class="name">minimumZoomLevel</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the minimum valid zoom level for the map.</p>
+<p>The minimum zoom level is defined by the <a href="../../sdk-15.04.1/QtLocation.location-places-qml/index.html#plugin">plugin</a> used. If a plugin supporting mapping is not set, -1.0 is returned.</p>
+</div></div><!-- @@@minimumZoomLevel -->
+<br/>
+<!-- $$$plugin -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="plugin-prop"><td class="tblQmlPropNode"><p><a name="plugin-prop"></a><span class="name">plugin</span> : <span class="type"><a href="../../sdk-15.04.1/QtLocation.Plugin/index.html">Plugin</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the plugin which provides the mapping functionality.</p>
+<p>This is a write-once property. Once the map has a plugin associated with it, any attempted modifications of the plugin will be ignored.</p>
+</div></div><!-- @@@plugin -->
+<br/>
+<!-- $$$supportedMapTypes -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="supportedMapTypes-prop"><td class="tblQmlPropNode"><p><a name="supportedMapTypes-prop"></a><span class="name">supportedMapTypes</span> : <span class="type">list</span>&lt;<span class="type"><a href="../../sdk-15.04.1/QtLocation.MapType/index.html">MapType</a></span>&gt;</p></td></tr></table></div></div><div class="qmldoc"><p>This read-only property holds the set of <a href="../../sdk-15.04.1/QtLocation.MapType/index.html">map types</a> supported by this map.</p>
+<p><b>See also </b><a href="../../sdk-15.04.1/QtLocation.Map/index.html#activeMapType-prop">activeMapType</a>.</p>
+</div></div><!-- @@@supportedMapTypes -->
+<br/>
+<!-- $$$zoomLevel -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="zoomLevel-prop"><td class="tblQmlPropNode"><p><a name="zoomLevel-prop"></a><span class="name">zoomLevel</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the zoom level for the map.</p>
+<p>Larger values for the zoom level provide more detail. Zoom levels are always non-negative. The default value is 8.0&#x2e;</p>
+</div></div><!-- @@@zoomLevel -->
+<br/>
+<h2>Method Documentation</h2>
+<!-- $$$addMapItem -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="addMapItem-method"><td class="tblQmlFuncNode"><p><a name="addMapItem-method"></a><span class="name">addMapItem</span>(<span class="type">MapItem</span><i> item</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Adds the given <i>item</i> to the Map (for example <a href="../../sdk-15.04.1/QtLocation.MapQuickItem/index.html">MapQuickItem</a>, <a href="../../sdk-15.04.1/QtLocation.MapCircle/index.html">MapCircle</a>). If the object already is on the Map, it will not be added again.</p>
+<p>As an example, consider the case where you have a <a href="../../sdk-15.04.1/QtLocation.MapCircle/index.html">MapCircle</a> representing your current position:</p>
+<pre class="qml">import QtQuick 2.0
+import QtLocation 5.3
+<span class="type">PositionSource</span> {
+    <span class="name">id</span>: <span class="name">positionSource</span>
+}
+<span class="type"><a href="../../sdk-15.04.1/QtLocation.Map/index.html">Map</a></span> {
+    <span class="name">id</span>: <span class="name">map</span>
+    property <span class="type"><a href="../../sdk-15.04.1/QtLocation.MapCircle/index.html">MapCircle</a></span> <span class="name">circle</span>
+    <span class="name">Component</span>.onCompleted: {
+        <span class="name">circle</span> <span class="operator">=</span> <span class="name">Qt</span>.<span class="name">createQmlObject</span>(<span class="string">'import QtLocation 5.3; MapCircle {}'</span>, <span class="name">page</span>)
+        <span class="name">circle</span>.<span class="name">center</span> <span class="operator">=</span> <span class="name">positionSource</span>.<span class="name">position</span>.<span class="name">coordinate</span>
+        <span class="name">circle</span>.<span class="name">radius</span> <span class="operator">=</span> <span class="number">5000.0</span>
+        <span class="name">circle</span>.<span class="name">color</span> <span class="operator">=</span> <span class="string">'green'</span>
+        <span class="name">circle</span>.<span class="name">border</span>.<span class="name">width</span> <span class="operator">=</span> <span class="number">3</span>
+        <span class="name">map</span>.<span class="name">addMapItem</span>(<span class="name">circle</span>)
+    }
+}</pre>
+<p><b>Note: </b>MapItemViews cannot be added with this method.</p><p><b>See also </b><a href="../../sdk-15.04.1/QtLocation.Map/index.html#mapItems-prop">mapItems</a>, <a href="../../sdk-15.04.1/QtLocation.Map/index.html#removeMapItem-method">removeMapItem</a>, and <a href="../../sdk-15.04.1/QtLocation.Map/index.html#clearMapItems-method">clearMapItems</a>.</p>
+</div></div><!-- @@@addMapItem -->
+<br/>
+<!-- $$$cameraStopped -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="cameraStopped-method"><td class="tblQmlFuncNode"><p><a name="cameraStopped-method"></a><span class="type">void</span> <span class="name">cameraStopped</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Optional hint that allows the map to prefetch during this idle period</p>
+</div></div><!-- @@@cameraStopped -->
+<br/>
+<!-- $$$clearMapItems -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="clearMapItems-method"><td class="tblQmlFuncNode"><p><a name="clearMapItems-method"></a><span class="type">void</span> <span class="name">clearMapItems</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Removes all items from the map.</p>
+<p><b>See also </b><a href="../../sdk-15.04.1/QtLocation.Map/index.html#mapItems-prop">mapItems</a>, <a href="../../sdk-15.04.1/QtLocation.Map/index.html#addMapItem-method">addMapItem</a>, and <a href="../../sdk-15.04.1/QtLocation.Map/index.html#removeMapItem-method">removeMapItem</a>.</p>
+</div></div><!-- @@@clearMapItems -->
+<br/>
+<!-- $$$fitViewportToGeoShape -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="fitViewportToGeoShape-method"><td class="tblQmlFuncNode"><p><a name="fitViewportToGeoShape-method"></a><span class="name">fitViewportToGeoShape</span>(<span class="type">QGeoShape</span><i> shape</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Fits the current viewport to the boundary of the shape. The camera is positioned in the center of the shape, and at the largest integral zoom level possible which allows the whole shape to be visible on screen</p>
+</div></div><!-- @@@fitViewportToGeoShape -->
+<br/>
+<!-- $$$fitViewportToMapItems -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="fitViewportToMapItems-method"><td class="tblQmlFuncNode"><p><a name="fitViewportToMapItems-method"></a><span class="name">fitViewportToMapItems</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Fits the current viewport to the boundary of all map items. The camera is positioned in the center of the map items, and at the largest integral zoom level possible which allows all map items to be visible on screen</p>
+</div></div><!-- @@@fitViewportToMapItems -->
+<br/>
+<!-- $$$pan -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="pan-method"><td class="tblQmlFuncNode"><p><a name="pan-method"></a><span class="type">void</span> <span class="name">pan</span>(<span class="type">int</span><i> dx</i>, <span class="type">int</span><i> dy</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Starts panning the map by <i>dx</i> pixels along the x-axis and by <i>dy</i> pixels along the y-axis.</p>
+<p>Positive values for <i>dx</i> move the map right, negative values left. Positive values for <i>dy</i> move the map down, negative values up.</p>
+<p>During panning the <a href="../../sdk-15.04.1/QtLocation.Map/index.html#center-prop">center</a>, and <a href="../../sdk-15.04.1/QtLocation.Map/index.html#zoomLevel-prop">zoomLevel</a> may change.</p>
+</div></div><!-- @@@pan -->
+<br/>
+<!-- $$$removeMapItem -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="removeMapItem-method"><td class="tblQmlFuncNode"><p><a name="removeMapItem-method"></a><span class="type">void</span> <span class="name">removeMapItem</span>(<span class="type">MapItem</span><i> item</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Removes the given <i>item</i> from the Map (for example <a href="../../sdk-15.04.1/QtLocation.MapQuickItem/index.html">MapQuickItem</a>, <a href="../../sdk-15.04.1/QtLocation.MapCircle/index.html">MapCircle</a>). If the MapItem does not exist or was not previously added to the map, the method does nothing.</p>
+<p><b>See also </b><a href="../../sdk-15.04.1/QtLocation.Map/index.html#mapItems-prop">mapItems</a>, <a href="../../sdk-15.04.1/QtLocation.Map/index.html#addMapItem-method">addMapItem</a>, and <a href="../../sdk-15.04.1/QtLocation.Map/index.html#clearMapItems-method">clearMapItems</a>.</p>
+</div></div><!-- @@@removeMapItem -->
+<br/>
+<!-- $$$toCoordinate -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="toCoordinate-method"><td class="tblQmlFuncNode"><p><a name="toCoordinate-method"></a><span class="name">toCoordinate</span>(<span class="type">QPointF</span><i> screenPosition</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Returns the coordinate which corresponds to the screen position <i>screenPosition</i>.</p>
+<p>Returns an invalid coordinate if <i>screenPosition</i> is not within the current viewport.</p>
+</div></div><!-- @@@toCoordinate -->
+<br/>
+<!-- $$$toScreenPosition -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="toScreenPosition-method"><td class="tblQmlFuncNode"><p><a name="toScreenPosition-method"></a><span class="name">toScreenPosition</span>(<span class="type">coordinate</span><i> coordinate</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Returns the screen position which corresponds to the coordinate <i>coordinate</i>.</p>
+<p>Returns an invalid QPointF if <i>coordinate</i> is not within the current viewport.</p>
+</div></div><!-- @@@toScreenPosition -->
+<br/>
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,791 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Video [sdk-14.10/QtMultimedia.Video] | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a href="../index.html">SDK 14.10</a> &rsaquo;</li>
+
+<li><a href="../QtMultimedia/index.html">QtMultimedia</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Video</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qml-qtmultimedia-video.html -->
+	<!-- Source Format: qdoc -->
+<h1>Video</h1>
+<div id="element_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$Video-brief -->
+<p>A convenience type for showing a specified video. More...</p>
+<!-- @@@Video -->
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> </b><tt>import QtMultimedia 5.0</tt></td></tr></table><ul>
+</ul>
+<a name="properties"></a>
+<h2>Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#audioRole-prop">audioRole</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="index.html#autoLoad-prop">autoLoad</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#autoPlay-prop">autoPlay</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#availability-prop">availability</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="index.html#bufferProgress-prop">bufferProgress</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#duration-prop">duration</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#error-prop">error</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="index.html#errorString-prop">errorString</a></b></b> : string</li>
+<li class="fn"><b><b><a href="index.html#fillMode-prop">fillMode</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="index.html#hasAudio-prop">hasAudio</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#hasVideo-prop">hasVideo</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#metaData-prop">metaData</a></b></b> : alias</li>
+<li class="fn"><b><b><a href="index.html#muted-prop">muted</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#orientation-prop">orientation</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#playbackRate-prop">playbackRate</a></b></b> : real</li>
+<li class="fn"><b><b><a href="index.html#playbackState-prop">playbackState</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="index.html#position-prop">position</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#seekable-prop">seekable</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#source-prop">source</a></b></b> : url</li>
+<li class="fn"><b><b><a href="index.html#status-prop">status</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="index.html#volume-prop">volume</a></b></b> : real</li>
+</ul>
+<a name="signals"></a>
+<h2>Signals</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#paused-signal">paused</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#playing-signal">playing</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#stopped-signal">stopped</a></b></b>()</li>
+</ul>
+<a name="methods"></a>
+<h2>Methods</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#pause-method">pause</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#play-method">play</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#seek-method">seek</a></b></b>(<i>offset</i>)</li>
+<li class="fn"><b><b><a href="index.html#stop-method">stop</a></b></b>()</li>
+</ul>
+<!-- $$$Video-description -->
+<a name="details"></a>
+<h2>Detailed Description</h2>
+<p><tt>Video</tt> is a convenience type combining the functionality of a <a href="../QtMultimedia.MediaPlayer/index.html">MediaPlayer</a> and a <a href="../QtMultimedia.VideoOutput/index.html">VideoOutput</a> into one. It provides simple video playback functionality without having to declare multiple types.</p>
+<pre class="qml">import QtQuick 2.0
+import QtMultimedia 5.0
+<span class="type">Video</span> {
+    <span class="name">id</span>: <span class="name">video</span>
+    <span class="name">width</span> : <span class="number">800</span>
+    <span class="name">height</span> : <span class="number">600</span>
+    <span class="name">source</span>: <span class="string">&quot;video.avi&quot;</span>
+    <span class="type">MouseArea</span> {
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">onClicked</span>: {
+            <span class="name">video</span>.<span class="name">play</span>()
+        }
+    }
+    <span class="name">focus</span>: <span class="number">true</span>
+    <span class="name">Keys</span>.onSpacePressed: <span class="name">video</span>.<span class="name">playbackState</span> <span class="operator">==</span> <span class="name">MediaPlayer</span>.<span class="name">PlayingState</span> ? <span class="name">video</span>.<span class="name">pause</span>() : <span class="name">video</span>.<span class="name">play</span>()
+    <span class="name">Keys</span>.onLeftPressed: <span class="name">video</span>.<span class="name">seek</span>(<span class="name">video</span>.<span class="name">position</span> <span class="operator">-</span> <span class="number">5000</span>)
+    <span class="name">Keys</span>.onRightPressed: <span class="name">video</span>.<span class="name">seek</span>(<span class="name">video</span>.<span class="name">position</span> <span class="operator">+</span> <span class="number">5000</span>)
+}</pre>
+<p><tt>Video</tt> supports untransformed, stretched, and uniformly scaled video presentation. For a description of stretched uniformly scaled presentation, see the <a href="index.html#fillMode-prop">fillMode</a> property description.</p>
+<a name="screen-saver"></a>
+<h2>Screen Saver</h2>
+<p>If it is likely that an application will be playing video for an extended period of time without user interaction, it may be necessary to disable the platform's screen saver. The ScreenSaver (from QtSystemInfo) may be used to disable the screensaver in this fashion:</p>
+<pre class="qml">import QtSystemInfo 5.0
+<span class="type">ScreenSaver</span> { <span class="name">screenSaverEnabled</span>: <span class="number">false</span> }</pre>
+<p><b>See also </b><a href="../QtMultimedia.MediaPlayer/index.html">MediaPlayer</a> and <a href="../QtMultimedia.VideoOutput/index.html">VideoOutput</a>.</p>
+<!-- @@@Video -->
+<h2>Property Documentation</h2>
+<!-- $$$audioRole -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="audioRole-prop"></a><span class="name">audioRole</span> : <span class="type">enumeration</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the audio stream role (audio stream grouping). This is typically used to group audio streams into groups for distinct group volume control.</p>
+<ul>
+<li><a href="../QtMultimedia.MediaPlayer/index.html">MediaPlayer</a>.alarm - the audio stream is part of the alarm group</li>
+<li><a href="../QtMultimedia.MediaPlayer/index.html">MediaPlayer</a>.alert - the audio stream is part of the alert group</li>
+<li><a href="../QtMultimedia.MediaPlayer/index.html">MediaPlayer</a>.multimedia - the audio stream is part of the multimedia group (default)</li>
+<li><a href="../QtMultimedia.MediaPlayer/index.html">MediaPlayer</a>.phone - the audio stream is part of the phone group</li>
+</ul>
+<p>The default state is <a href="../QtMultimedia.MediaPlayer/index.html">MediaPlayer</a>.StoppedState.</p>
+</div></div><!-- @@@audioRole -->
+<br/>
+<!-- $$$autoLoad -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="autoLoad-prop"></a><span class="name">autoLoad</span> : <span class="type">bool</span></p></td></tr></table></div><div class="qmldoc"><p>This property indicates if loading of media should begin immediately.</p>
+<p>Defaults to true, if false media will not be loaded until playback is started.</p>
+</div></div><!-- @@@autoLoad -->
+<br/>
+<!-- $$$autoPlay -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="autoPlay-prop"></a><span class="name">autoPlay</span> : <span class="type">bool</span></p></td></tr></table></div><div class="qmldoc"><p>This property determines whether the media should begin playback automatically.</p>
+<p>Setting to <tt>true</tt> also sets <a href="index.html#autoLoad-prop">autoLoad</a> to <tt>true</tt>. The default is <tt>false</tt>.</p>
+</div></div><!-- @@@autoPlay -->
+<br/>
+<!-- $$$availability -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="availability-prop"></a><span class="name">availability</span> : <span class="type">enumeration</span></p></td></tr></table></div><div class="qmldoc"><p>Returns the availability state of the video instance.</p>
+<p>This is one of:</p>
+<table class="generic">
+ <thead><tr class="qt-style"><th >Value</th><th >Description</th></tr></thead>
+<tr valign="top" class="odd"><td ><a href="../QtMultimedia.MediaPlayer/index.html">MediaPlayer</a>.Available</td><td >The video player is available to use.</td></tr>
+<tr valign="top" class="even"><td ><a href="../QtMultimedia.MediaPlayer/index.html">MediaPlayer</a>.Busy</td><td >The video player is usually available, but some other process is utilizing the hardware necessary to play media.</td></tr>
+<tr valign="top" class="odd"><td ><a href="../QtMultimedia.MediaPlayer/index.html">MediaPlayer</a>.Unavailable</td><td >There are no supported video playback facilities.</td></tr>
+<tr valign="top" class="even"><td ><a href="../QtMultimedia.MediaPlayer/index.html">MediaPlayer</a>.ResourceMissing</td><td >There is one or more resources missing, so the video player cannot be used. It may be possible to try again at a later time.</td></tr>
+</table>
+</div></div><!-- @@@availability -->
+<br/>
+<!-- $$$bufferProgress -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="bufferProgress-prop"></a><span class="name">bufferProgress</span> : <span class="type">real</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds how much of the data buffer is currently filled, from 0.0 (empty) to 1.0 (full).</p>
+</div></div><!-- @@@bufferProgress -->
+<br/>
+<!-- $$$duration -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="duration-prop"></a><span class="name">duration</span> : <span class="type">int</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the duration of the media in milliseconds.</p>
+<p>If the media doesn't have a fixed duration (a live stream for example) this will be 0.</p>
+</div></div><!-- @@@duration -->
+<br/>
+<!-- $$$error -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="error-prop"></a><span class="name">error</span> : <span class="type">enumeration</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the error state of the video. It can be one of:</p>
+<ul>
+<li><a href="../QtMultimedia.MediaPlayer/index.html">MediaPlayer</a>.NoError - there is no current error.</li>
+<li><a href="../QtMultimedia.MediaPlayer/index.html">MediaPlayer</a>.ResourceError - the video cannot be played due to a problem allocating resources.</li>
+<li><a href="../QtMultimedia.MediaPlayer/index.html">MediaPlayer</a>.FormatError - the video format is not supported.</li>
+<li><a href="../QtMultimedia.MediaPlayer/index.html">MediaPlayer</a>.NetworkError - the video cannot be played due to network issues.</li>
+<li><a href="../QtMultimedia.MediaPlayer/index.html">MediaPlayer</a>.AccessDenied - the video cannot be played due to insufficient permissions.</li>
+<li><a href="../QtMultimedia.MediaPlayer/index.html">MediaPlayer</a>.ServiceMissing - the video cannot be played because the media service could not be instantiated.</li>
+</ul>
+</div></div><!-- @@@error -->
+<br/>
+<!-- $$$errorString -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="errorString-prop"></a><span class="name">errorString</span> : <span class="type">string</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds a string describing the current error condition in more detail.</p>
+</div></div><!-- @@@errorString -->
+<br/>
+<!-- $$$fillMode -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="fillMode-prop"></a><span class="name">fillMode</span> : <span class="type">enumeration</span></p></td></tr></table></div><div class="qmldoc"><p>Set this property to define how the video is scaled to fit the target area.</p>
+<ul>
+<li><a href="../QtMultimedia.VideoOutput/index.html">VideoOutput</a>.Stretch - the video is scaled to fit</li>
+<li><a href="../QtMultimedia.VideoOutput/index.html">VideoOutput</a>.PreserveAspectFit - the video is scaled uniformly to fit without cropping</li>
+<li><a href="../QtMultimedia.VideoOutput/index.html">VideoOutput</a>.PreserveAspectCrop - the video is scaled uniformly to fill, cropping if necessary</li>
+</ul>
+<p>Because this type is for convenience in QML, it does not support enumerations directly, so enumerations from <tt>VideoOutput</tt> are used to access the available fill modes.</p>
+<p>The default fill mode is preserveAspectFit.</p>
+</div></div><!-- @@@fillMode -->
+<br/>
+<!-- $$$hasAudio -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="hasAudio-prop"></a><span class="name">hasAudio</span> : <span class="type">bool</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds whether the current media has audio content.</p>
+</div></div><!-- @@@hasAudio -->
+<br/>
+<!-- $$$hasVideo -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="hasVideo-prop"></a><span class="name">hasVideo</span> : <span class="type">bool</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds whether the current media has video content.</p>
+</div></div><!-- @@@hasVideo -->
+<br/>
+<!-- $$$metaData -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="metaData-prop"></a><span class="name">metaData</span> : <span class="type">alias</span></p></td></tr></table></div><div class="qmldoc"></div></div><!-- @@@metaData -->
+<br/>
+<!-- $$$muted -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="muted-prop"></a><span class="name">muted</span> : <span class="type">bool</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds whether the audio output is muted.</p>
+</div></div><!-- @@@muted -->
+<br/>
+<!-- $$$orientation -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="orientation-prop"></a><span class="name">orientation</span> : <span class="type">int</span></p></td></tr></table></div><div class="qmldoc"><p>The orientation of the <tt>Video</tt> in degrees. Only multiples of 90 degrees is supported, that is 0, 90, 180, 270, 360, etc.</p>
+</div></div><!-- @@@orientation -->
+<br/>
+<!-- $$$playbackRate -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="playbackRate-prop"></a><span class="name">playbackRate</span> : <span class="type">real</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the rate at which video is played at as a multiple of the normal rate.</p>
+</div></div><!-- @@@playbackRate -->
+<br/>
+<!-- $$$playbackState -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="playbackState-prop"></a><span class="name">playbackState</span> : <span class="type">enumeration</span></p></td></tr></table></div><div class="qmldoc"><p>This read only property indicates the playback state of the media.</p>
+<ul>
+<li><a href="../QtMultimedia.MediaPlayer/index.html">MediaPlayer</a>.PlayingState - the media is playing</li>
+<li><a href="../QtMultimedia.MediaPlayer/index.html">MediaPlayer</a>.PausedState - the media is paused</li>
+<li><a href="../QtMultimedia.MediaPlayer/index.html">MediaPlayer</a>.StoppedState - the media is stopped</li>
+</ul>
+<p>The default state is <a href="../QtMultimedia.MediaPlayer/index.html">MediaPlayer</a>.StoppedState.</p>
+</div></div><!-- @@@playbackState -->
+<br/>
+<!-- $$$position -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="position-prop"></a><span class="name">position</span> : <span class="type">int</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the current playback position in milliseconds.</p>
+<p>To change this position, use the <a href="index.html#seek-method">seek()</a> method.</p>
+<p><b>See also </b><a href="index.html#seek-method">seek()</a>.</p>
+</div></div><!-- @@@position -->
+<br/>
+<!-- $$$seekable -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="seekable-prop"></a><span class="name">seekable</span> : <span class="type">bool</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds whether the playback position of the video can be changed.</p>
+<p>If true, calling the <a href="index.html#seek-method">seek()</a> method will cause playback to seek to the new position.</p>
+</div></div><!-- @@@seekable -->
+<br/>
+<!-- $$$source -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="source-prop"></a><span class="name">source</span> : <span class="type">url</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the source URL of the media.</p>
+</div></div><!-- @@@source -->
+<br/>
+<!-- $$$status -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="status-prop"></a><span class="name">status</span> : <span class="type">enumeration</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the status of media loading. It can be one of:</p>
+<ul>
+<li><a href="../QtMultimedia.MediaPlayer/index.html">MediaPlayer</a>.NoMedia - no media has been set.</li>
+<li><a href="../QtMultimedia.MediaPlayer/index.html">MediaPlayer</a>.Loading - the media is currently being loaded.</li>
+<li><a href="../QtMultimedia.MediaPlayer/index.html">MediaPlayer</a>.Loaded - the media has been loaded.</li>
+<li><a href="../QtMultimedia.MediaPlayer/index.html">MediaPlayer</a>.Buffering - the media is buffering data.</li>
+<li><a href="../QtMultimedia.MediaPlayer/index.html">MediaPlayer</a>.Stalled - playback has been interrupted while the media is buffering data.</li>
+<li><a href="../QtMultimedia.MediaPlayer/index.html">MediaPlayer</a>.Buffered - the media has buffered data.</li>
+<li><a href="../QtMultimedia.MediaPlayer/index.html">MediaPlayer</a>.EndOfMedia - the media has played to the end.</li>
+<li><a href="../QtMultimedia.MediaPlayer/index.html">MediaPlayer</a>.InvalidMedia - the media cannot be played.</li>
+<li><a href="../QtMultimedia.MediaPlayer/index.html">MediaPlayer</a>.UnknownStatus - the status of the media cannot be determined.</li>
+</ul>
+</div></div><!-- @@@status -->
+<br/>
+<!-- $$$volume -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="volume-prop"></a><span class="name">volume</span> : <span class="type">real</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the volume of the audio output, from 0.0 (silent) to 1.0 (maximum volume).</p>
+</div></div><!-- @@@volume -->
+<br/>
+<h2>Signal Documentation</h2>
+<!-- $$$paused -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="paused-signal"></a><span class="name">paused</span>()</p></td></tr></table></div><div class="qmldoc"><p>This signal is emitted when playback is paused.</p>
+<p>The corresponding handler is <tt>onPaused</tt>.</p>
+</div></div><!-- @@@paused -->
+<br/>
+<!-- $$$playing -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="playing-signal"></a><span class="name">playing</span>()</p></td></tr></table></div><div class="qmldoc"><p>This signal is emitted when playback is started or continued.</p>
+<p>The corresponding handler is <tt>onPlaying</tt>.</p>
+</div></div><!-- @@@playing -->
+<br/>
+<!-- $$$stopped -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="stopped-signal"></a><span class="name">stopped</span>()</p></td></tr></table></div><div class="qmldoc"><p>This signal is emitted when playback is stopped.</p>
+<p>The corresponding handler is <tt>onStopped</tt>.</p>
+</div></div><!-- @@@stopped -->
+<br/>
+<h2>Method Documentation</h2>
+<!-- $$$pause -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="pause-method"></a><span class="name">pause</span>()</p></td></tr></table></div><div class="qmldoc"><p>Pauses playback of the media.</p>
+</div></div><!-- @@@pause -->
+<br/>
+<!-- $$$play -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="play-method"></a><span class="name">play</span>()</p></td></tr></table></div><div class="qmldoc"><p>Starts playback of the media.</p>
+</div></div><!-- @@@play -->
+<br/>
+<!-- $$$seek -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="seek-method"></a><span class="name">seek</span>(<i> offset</i>)</p></td></tr></table></div><div class="qmldoc"><p>If the <a href="index.html#seekable-prop">seekable</a> property is true, seeks the current playback position to <i>offset</i>.</p>
+<p>Seeking may be asynchronous, so the <a href="index.html#position-prop">position</a> property may not be updated immediately.</p>
+<p><b>See also </b><a href="index.html#seekable-prop">seekable</a> and <a href="index.html#position-prop">position</a>.</p>
+</div></div><!-- @@@seek -->
+<br/>
+<!-- $$$stop -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="stop-method"></a><span class="name">stop</span>()</p></td></tr></table></div><div class="qmldoc"><p>Stops playback of the media.</p>
+</div></div><!-- @@@stop -->
+<br/>
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

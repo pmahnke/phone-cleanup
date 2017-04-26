@@ -1,0 +1,118 @@
+---
+Title: unity.scopes.FilterBase
+---
+        
+FilterBase
+==========
+
+Base class for all implementations of filters. [More...](#details)
+
+`#include <unity/scopes/FilterBase.h>`
+
+Inheritance diagram for unity::scopes::FilterBase:
+
+![Inheritance graph](https://developer.ubuntu.com/static/devportal_uploaded/9d4ad8a1-914f-41de-b71a-0effdd669ada-api/scopes/cpp/sdk-15.04/unity.scopes.FilterBase/classunity_1_1scopes_1_1_filter_base__inherit__graph.png)
+
+<span class="legend">\[legend\]</span>
+
+pub-types
+-----------------------------------------
+
+enum  
+<a href="#ab9e833d5e4029fed745d15ba63715159">DisplayHints</a> { <a href="#ab9e833d5e4029fed745d15ba63715159a277f24de7d0bcc7e8ec8bfe0639f356f">Default</a> = 0, <a href="#ab9e833d5e4029fed745d15ba63715159a8c8262ffd071c61b213ec489b64bdf56">Primary</a> = 1 }
+ 
+Display hints for the Shell UI. [More...](#ab9e833d5e4029fed745d15ba63715159)
+ 
+pub-methods
+------------------------------------------------------
+
+void 
+<a href="#ab4ab1b600ce3967dc50255e736c6d02e">set_display_hints</a> (int hints)
+ 
+Sets display hints for the Shell UI. More...
+ 
+int 
+<a href="#a8f20819591155edaab29d535c5c4c261">display_hints</a> () const
+ 
+Get display hints of this filter. More...
+ 
+std::string 
+<a href="#a1f2d96647b23af77b1ff1cffc80f3868">id</a> () const
+ 
+Get the identifier of this filter. More...
+ 
+std::string 
+<a href="#aadc7344c951961331dcbe67149d56c78">filter_type</a> () const
+ 
+Get the type name of this filter. More...
+ 
+<span id="details"></span>
+Detailed Description
+--------------------
+
+Base class for all implementations of filters.
+
+All implementations of <a href="index.html" title="Base class for all implementations of filters. ">FilterBase</a> define the "look" of a filter in the UI and do not hold any state information. The actual state of a filters is kept by a <a href="unity.scopes.FilterState.md" title="Captures state of multiple filters. ">FilterState</a> object.
+
+Member Enumeration Documentation
+--------------------------------
+
+<span id="ab9e833d5e4029fed745d15ba63715159" class="anchor"></span>
+|                                                                                                                    |
+|--------------------------------------------------------------------------------------------------------------------|
+| enum <a href="#ab9e833d5e4029fed745d15ba63715159">unity::scopes::FilterBase::DisplayHints</a> |
+
+Display hints for the Shell UI.
+
+Enumerator
+<span id="ab9e833d5e4029fed745d15ba63715159a277f24de7d0bcc7e8ec8bfe0639f356f" class="anchor"></span>Default 
+Default value (no hint)
+
+<span id="ab9e833d5e4029fed745d15ba63715159a8c8262ffd071c61b213ec489b64bdf56" class="anchor"></span>Primary 
+Display this filter at the top of the screen, if possible
+
+Member Function Documentation
+-----------------------------
+
+<span id="a8f20819591155edaab29d535c5c4c261" class="anchor"></span>
+|                                               |     |     |     |       |
+|-----------------------------------------------|-----|-----|-----|-------|
+| int unity::scopes::FilterBase::display\_hints | (   |     | )   | const |
+
+Get display hints of this filter.
+
+Returns  
+Display hints flags.
+
+<span id="aadc7344c951961331dcbe67149d56c78" class="anchor"></span>
+|                                                     |     |     |     |       |
+|-----------------------------------------------------|-----|-----|-----|-------|
+| std::string unity::scopes::FilterBase::filter\_type | (   |     | )   | const |
+
+Get the type name of this filter.
+
+Returns  
+The filter type string.
+
+<span id="a1f2d96647b23af77b1ff1cffc80f3868" class="anchor"></span>
+|                                           |     |     |     |       |
+|-------------------------------------------|-----|-----|-----|-------|
+| std::string unity::scopes::FilterBase::id | (   |     | )   | const |
+
+Get the identifier of this filter.
+
+Returns  
+The filter id.
+
+<span id="ab4ab1b600ce3967dc50255e736c6d02e" class="anchor"></span>
+|                                                     |     |      |         |     |     |
+|-----------------------------------------------------|-----|------|---------|-----|-----|
+| void unity::scopes::FilterBase::set\_display\_hints | (   | int  | *hints* | )   |     |
+
+Sets display hints for the Shell UI.
+
+Parameters  
+|       |                                                |
+|-------|------------------------------------------------|
+| hints | A combination of DisplayHints for this filter. |
+

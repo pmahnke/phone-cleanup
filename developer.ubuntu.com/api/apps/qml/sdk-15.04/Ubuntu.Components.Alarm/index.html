@@ -1,0 +1,734 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Alarm [sdk-15.04/Ubuntu.Components.Alarm] | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a href="../index.html">SDK 15.04</a> &rsaquo;</li>
+
+<li><a href="../Ubuntu.Components/index.html">Ubuntu.Components</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Alarm</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qml-ubuntu-components-alarm.html -->
+	<!-- Source Format: qdoc -->
+<h1>Alarm</h1>
+<div id="element_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$Alarm-brief -->
+<p>Alarm component is a representation of an alarm event. More...</p>
+<!-- @@@Alarm -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import Ubuntu.Components 1.2</td></tr></table></div><ul>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#date-prop">date</a></b></b> : Date</li>
+<li class="fn"><b><b><a href="index.html#daysOfWeek-prop">daysOfWeek</a></b></b> : DaysOfWeek</li>
+<li class="fn"><b><b><a href="index.html#enabled-prop">enabled</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="index.html#error-prop">error</a></b></b> : Error</li>
+<li class="fn"><b><b><a href="index.html#message-prop">message</a></b></b> : string</li>
+<li class="fn"><b><b><a href="index.html#sound-prop">sound</a></b></b> : url</li>
+<li class="fn"><b><b><a href="index.html#status-prop">status</a></b></b> : Status</li>
+<li class="fn"><b><b><a href="index.html#type-prop">type</a></b></b> : AlarmType</li>
+</ul>
+<a name="methods"></a>
+<h2 id="methods">Methods</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#cancel-method">cancel</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#reset-method">reset</a></b></b>()</li>
+<li class="fn"><b><b><a href="index.html#save-method">save</a></b></b>()</li>
+</ul>
+<!-- $$$Alarm-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<p>The Alarm element encapsulates alarm event data. Supports one time and repeating alarms, where repeating can be either daily or weekly on one or several selected days.</p>
+<p>The alarm data is validated upon <a href="index.html#save-method">save</a> operation, which can be used to save a new alarm or update existing alarm's properties.</p>
+<p>During data validation the alarm properties may suffer changes. These changes will be reported back to each changed property. See what changes can occurr at <a href="index.html#save-method">save</a> function documentation.</p>
+<p>Example usage:</p>
+<pre class="qml">import QtQuick 2.4
+import Ubuntu.Components 1.2
+<span class="type"><a href="../../sdk-14.10/QtQuick.Rectangle/index.html">Rectangle</a></span> {
+    <span class="name">width</span>: <span class="name">units</span>.<span class="name">gu</span>(<span class="number">40</span>)
+    <span class="name">height</span>: <span class="name">units</span>.<span class="name">gu</span>(<span class="number">20</span>)
+    <span class="type"><a href="index.html">Alarm</a></span>{
+        <span class="name">id</span>: <span class="name">alarm</span>
+    }
+    <span class="type"><a href="../../sdk-14.10/QtQuick.Column/index.html">Column</a></span> {
+        <span class="name">spacing</span>: <span class="name">units</span>.<span class="name">gu</span>(<span class="number">1</span>)
+        <span class="type"><a href="../QtQuick.Row/index.html">Row</a></span> {
+            <span class="name">spacing</span>: <span class="name">units</span>.<span class="name">gu</span>(<span class="number">1</span>)
+            <span class="type"><a href="../Ubuntu.Components.Label/index.html">Label</a></span> {
+                <span class="name">id</span>: <span class="name">date</span>
+                <span class="name">text</span>: <span class="string">&quot;Date:&quot;</span>
+                <span class="name">anchors</span>.verticalCenter: <span class="name">parent</span>.<span class="name">verticalCenter</span>
+            }
+            <span class="type"><a href="../Ubuntu.Components.TextField/index.html">TextField</a></span> {
+                <span class="name">text</span>: <span class="name">alarm</span>.<span class="name">date</span>.<span class="name">toString</span>()
+                <span class="name">onAccepted</span>: <span class="name">alarm</span>.<span class="name">date</span> <span class="operator">=</span> new <span class="name">Date</span>(<span class="name">text</span>)
+            }
+        }
+        <span class="type"><a href="../QtQuick.Row/index.html">Row</a></span> {
+            <span class="name">spacing</span>: <span class="name">units</span>.<span class="name">gu</span>(<span class="number">1</span>)
+            <span class="type"><a href="../Ubuntu.Components.Label/index.html">Label</a></span> {
+                <span class="name">id</span>: <span class="name">msg</span>
+                <span class="name">text</span>: <span class="string">&quot;Message:&quot;</span>
+                <span class="name">anchors</span>.verticalCenter: <span class="name">parent</span>.<span class="name">verticalCenter</span>
+            }
+            <span class="type"><a href="../Ubuntu.Components.TextField/index.html">TextField</a></span> {
+                <span class="name">text</span>: <span class="name">alarm</span>.<span class="name">message</span>
+                <span class="name">onAccepted</span>: <span class="name">alarm</span>.<span class="name">message</span> <span class="operator">=</span> <span class="name">text</span>
+            }
+        }
+        <span class="type"><a href="../Ubuntu.Components.Button/index.html">Button</a></span> {
+            <span class="name">text</span>: <span class="string">&quot;Save&quot;</span>
+            <span class="name">onClicked</span>: {
+                <span class="name">alarm</span>.<span class="name">save</span>();
+                <span class="keyword">if</span> (<span class="name">alarm</span>.<span class="name">error</span> <span class="operator">!=</span> <span class="name">Alarm</span>.<span class="name">NoError</span>)
+                    <span class="name">print</span>(<span class="string">&quot;Error saving alarm, code: &quot;</span> <span class="operator">+</span> <span class="name">alarm</span>.<span class="name">error</span>);
+            }
+        }
+    }
+}</pre>
+<p>An alarm can be cancelled using <a href="index.html#cancel-method">cancel</a> function but only if the event has previously been stored in the alarm collection.</p>
+<p>The <a href="index.html#reset-method">reset</a> function clears the properties of the alarm bringing them to the default values. In this way the same alarm component can be used to save several alarms at the same time.</p>
+<p><b>Note: </b>Do not call reset function on an alarm event object when that was returned by the <a href="../Ubuntu.Components.AlarmModel/index.html#get-method">AlarmModel::get</a> function, as that will reset the alarm cache data!</p><!-- @@@Alarm -->
+<h2>Property Documentation</h2>
+<!-- $$$date -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="date-prop"><td class="tblQmlPropNode"><p><a name="date-prop"></a><span class="name">date</span> : <span class="type"><a href="../../sdk-14.10/QtQml.Date/index.html">Date</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>The property holds the date the alarm will be triggered. The default value is the current date and time the alarm object was created. Further <a href="index.html#reset-method">reset</a> calls will bring the value back to the time the <a href="index.html#reset-method">reset</a> was called.</p>
+</div></div><!-- @@@date -->
+<br/>
+<!-- $$$daysOfWeek -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="daysOfWeek-prop"><td class="tblQmlPropNode"><p><a name="daysOfWeek-prop"></a><span class="name">daysOfWeek</span> : <span class="type">DaysOfWeek</span></p></td></tr></table></div></div><div class="qmldoc"><p>The property holds the days of the week the alarm is scheduled. This property can have only one day set for one time alarms and multiple days for repeating alarms. The following flags can be set:</p>
+<div class="table"><table class="generic">
+ <thead><tr class="qt-style"><th  colspan="3" rowspan=" 1">Alarm.DayOfWeek enum:</th></tr>
+<tr class="qt-style"><th >Type</th><th >Value</th><th >Description</th></tr></thead>
+<tr valign="top" class="odd"><td >Alarm.Monday</td><td >0x01</td><td >The alarm will kick on Mondays.</td></tr>
+<tr valign="top" class="even"><td >Alarm.Tuesday</td><td >0x02</td><td >The alarm will kick on Tuesdays.</td></tr>
+<tr valign="top" class="odd"><td >Alarm.Wednesday</td><td >0x04</td><td >The alarm will kick on Wednesdays.</td></tr>
+<tr valign="top" class="even"><td >Alarm.Thursday</td><td >0x08</td><td >The alarm will kick on Thursdays.</td></tr>
+<tr valign="top" class="odd"><td >Alarm.Friday</td><td >0x10</td><td >The alarm will kick on Fridays.</td></tr>
+<tr valign="top" class="even"><td >Alarm.Saturday</td><td >0x20</td><td >The alarm will kick on Saturdays.</td></tr>
+<tr valign="top" class="odd"><td >Alarm.Sunday</td><td >0x40</td><td >The alarm will kick on Sundays.</td></tr>
+<tr valign="top" class="even"><td >Alarm.AutoDetect</td><td >0x80</td><td >The alarm day will be detected from the alarm date at the time the alarm is saved.</td></tr>
+</table></div>
+<p>The default value is Alarm.AutoDetect.</p>
+</div></div><!-- @@@daysOfWeek -->
+<br/>
+<!-- $$$enabled -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="enabled-prop"><td class="tblQmlPropNode"><p><a name="enabled-prop"></a><span class="name">enabled</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>The property specifies whether the alarm is enabled or not. Disable dalarms are not scheduled. The default value is true;</p>
+</div></div><!-- @@@enabled -->
+<br/>
+<!-- $$$error -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="error-prop"><td class="tblQmlPropNode"><p><a name="error-prop"></a><span class="name">error</span> : <span class="type">Error</span></p></td></tr></table></div></div><div class="qmldoc"><p>The property holds the error code occurred during the last performed operation.</p>
+<div class="table"><table class="generic">
+ <thead><tr class="qt-style"><th >Error code</th><th >Value</th><th >Description</th></tr></thead>
+<tr valign="top" class="odd"><td >NoError</td><td >0</td><td >Successful operation completion.</td></tr>
+<tr valign="top" class="even"><td >InvalidDate</td><td >1</td><td >The date specified for the alarm was invalid.</td></tr>
+<tr valign="top" class="odd"><td >EarlyDate</td><td >2</td><td >The date specified for the alarm is an earlier date than the current one.</td></tr>
+<tr valign="top" class="even"><td >NoDaysOfWeek</td><td >3</td><td >The <a href="index.html#daysOfWeek-prop">daysOfWeek</a> parameter of the alarm was not specified.</td></tr>
+<tr valign="top" class="odd"><td >OneTimeOnMoreDays</td><td >4</td><td >The one-time alarm was set to be kicked in several days.</td></tr>
+<tr valign="top" class="even"><td >InvalidEvent</td><td >5</td><td >The alarm event is invalid.</td></tr>
+<tr valign="top" class="odd"><td >AdaptationError</td><td >100</td><td >The error occurred in alarm adaptation layer. Adaptations may define additional behind this value.</td></tr>
+</table></div>
+</div></div><!-- @@@error -->
+<br/>
+<!-- $$$message -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="message-prop"><td class="tblQmlPropNode"><p><a name="message-prop"></a><span class="name">message</span> : <span class="type">string</span></p></td></tr></table></div></div><div class="qmldoc"><p>The property holds the message string which will be displayed when the alarm is triggered. The default value is the localized &quot;Alarm&quot; text.</p>
+</div></div><!-- @@@message -->
+<br/>
+<!-- $$$sound -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="sound-prop"><td class="tblQmlPropNode"><p><a name="sound-prop"></a><span class="name">sound</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-url.html">url</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>The property holds the alarm's sound to be played when the alarm is triggered. An empty url will mean to play the default sound.</p>
+<p>The defaul tvalue is an empty url.</p>
+</div></div><!-- @@@sound -->
+<br/>
+<!-- $$$status -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="status-prop"><td class="tblQmlPropNode"><p><a name="status-prop"></a><span class="name">status</span> : <span class="type">Status</span></p></td></tr></table></div></div><div class="qmldoc"><p>The property holds the status of the last performed operation. It can take one of the following values:</p>
+<div class="table"><table class="generic">
+ <thead><tr class="qt-style"><th >Status code</th><th >Value</th><th >Description</th></tr></thead>
+<tr valign="top" class="odd"><td >Ready</td><td >1</td><td >Specifies either that the Alarm object is ready to perform any operation or that the previous operation has been successfully completed.</td></tr>
+<tr valign="top" class="even"><td >InProgress</td><td >2</td><td >Specifies that there is an operation pending on Alarm object.</td></tr>
+<tr valign="top" class="odd"><td >Fail</td><td >3</td><td >Specifies that the last alarm operation has failed. The failure code is set in <a href="index.html#error-prop">error</a> property.</td></tr>
+</table></div>
+<p>The notification signal has a parameter specifying the <i>operation</i> the status refers to. The operation can take the following values:</p>
+<div class="table"><table class="generic">
+ <thead><tr class="qt-style"><th >Operation code</th><th >Description</th></tr></thead>
+<tr valign="top" class="odd"><td >NoOperation</td><td >There is no operation pending. This may be set when an error occured in the alarm adapters and the operation cannot be determined.</td></tr>
+<tr valign="top" class="even"><td >Saving</td><td >The status reported refers to an operation requested through <a href="index.html#save-method">save()</a>.</td></tr>
+<tr valign="top" class="odd"><td >Canceling</td><td >The status reported refers to an operation requested through <a href="index.html#cancel-method">cancel()</a>.</td></tr>
+<tr valign="top" class="even"><td >Reseting</td><td >The status reported refers to an operation requested through <a href="index.html#reset-method">reset()</a>.</td></tr>
+</table></div>
+<p>For example an implementation which resets the alarm data whenever the save or cancel operations succeed would look as follows:</p>
+<pre class="qml"><span class="type"><a href="index.html">Alarm</a></span> {
+    <span class="name">onStatusChanged</span>: {
+        <span class="keyword">if</span> (<span class="name">status</span> <span class="operator">!==</span> <span class="name">Alarm</span>.<span class="name">Ready</span>)
+            <span class="keyword">return</span>;
+        <span class="keyword">if</span> ((<span class="name">operation</span> <span class="operator">&gt;</span> <span class="name">Alarm</span>.<span class="name">NoOperation</span>) <span class="operator">&amp;&amp;</span> (<span class="name">operation</span> <span class="operator">&lt;</span> <span class="name">Alarm</span>.<span class="name">Reseting</span>)) {
+            <span class="name">reset</span>();
+        }
+    }
+}</pre>
+</div></div><!-- @@@status -->
+<br/>
+<!-- $$$type -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="type-prop"><td class="tblQmlPropNode"><p><a name="type-prop"></a><span class="name">type</span> : <span class="type">AlarmType</span></p></td></tr></table></div></div><div class="qmldoc"><p>The property holds the type of the alarm, which can have one of the following values:</p>
+<div class="table"><table class="generic">
+ <thead><tr class="qt-style"><th  colspan="2" rowspan=" 1">Alarm.AlarmType enum:</th></tr>
+<tr class="qt-style"><th >Type</th><th >Description</th></tr></thead>
+<tr valign="top" class="odd"><td >Alarm.OneTime</td><td >The alarm occurs only once.</td></tr>
+<tr valign="top" class="even"><td >Alarm.Repeating</td><td >The alarm is a repeating one, either daily, weekly on a given day or on selected days.</td></tr>
+</table></div>
+<p>The default value is Alarm.OneTime.</p>
+</div></div><!-- @@@type -->
+<br/>
+<h2>Method Documentation</h2>
+<!-- $$$cancel -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="cancel-method"><td class="tblQmlFuncNode"><p><a name="cancel-method"></a><span class="name">cancel</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>The function removes the alarm from the collection. The function will fail for alarms which are not yet registered to the collection.</p>
+<p>The operation is asynchronous, and its status is reported through the <a href="index.html#status-prop">status</a> property. Further operations should wait till the previous operation is completed. The operation result is stored in the <a href="index.html#error-prop">error</a> property.</p>
+</div></div><!-- @@@cancel -->
+<br/>
+<!-- $$$reset -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="reset-method"><td class="tblQmlFuncNode"><p><a name="reset-method"></a><span class="name">reset</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>The function resets the alarm properties to its defaults. After this call the object can be used to create a new alarm event.</p>
+<p><b>Note</b>: do not call this function on alarm objects retrieved from <a href="../Ubuntu.Components.AlarmModel/index.html">AlarmModel</a>, as calling it will result in the model being out of sync from the alarm database.</p>
+</div></div><!-- @@@reset -->
+<br/>
+<!-- $$$save -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="save-method"><td class="tblQmlFuncNode"><p><a name="save-method"></a><span class="name">save</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Updates or adds an alarm to the alarm collection. The operation aligns properties according to the following rules:</p>
+<ul>
+<li>- the <a href="index.html#daysOfWeek-prop">daysOfWeek</a> will be set to the alarm day if the <a href="index.html#daysOfWeek-prop">daysOfWeek</a> was set to Alarm.AutoDetect.</li>
+<li>- if the <a href="index.html#daysOfWeek-prop">daysOfWeek</a> is set to a day other than the one specified in the <a href="index.html#date-prop">date</a> field, the <a href="index.html#date-prop">date</a> will be moved ahead to match the day from the <a href="index.html#daysOfWeek-prop">daysOfWeek</a>.</li>
+</ul>
+<p>The function will fail if</p>
+<ul>
+<li>- the <a href="index.html#date-prop">date</a> property is invalid</li>
+<li>- for one time alarm, the <a href="index.html#date-prop">date</a> property falue is earlier than the current time</li>
+<li>- the <a href="index.html#daysOfWeek-prop">daysOfWeek</a> property is set to multiple days for one time alarm</li>
+</ul>
+<p>The operation is asynchronous, and its status is reported through the <a href="index.html#status-prop">status</a> property. Further operations should wait till the previous operation is completed. The operation result is stored in the <a href="index.html#error-prop">error</a> property.</p>
+</div></div><!-- @@@save -->
+<br/>
+</div></div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

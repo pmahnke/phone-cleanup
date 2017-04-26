@@ -1,0 +1,782 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Runtime [sdk-15.04.4/unity.scopes.Runtime] | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/doxygen.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Scopes</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">C++</a> &rsaquo;</li>
+<li><a href="../index.html">SDK 15.04.4</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Runtime</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: classunity_1_1scopes_1_1_runtime.html -->
+	<!-- Source Format: doxygen -->
+<h1>Runtime</h1>
+<div id="element_content" class="doxygen">
+<!-- Start Element Content -->
+<p>The main object for query originators to access the scopes runtime.  
+ <a href="index.html#details">More...</a></p>
+<p><code>#include &lt;unity/scopes/Runtime.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a37009c392ed3a7c6ebaf37cdfdaf6d01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a37009c392ed3a7c6ebaf37cdfdaf6d01">destroy</a> ()</td></tr>
+<tr class="memdesc:a37009c392ed3a7c6ebaf37cdfdaf6d01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shuts down the runtime, reclaiming all associated resources.  More...<br /></td></tr>
+<tr class="separator:a37009c392ed3a7c6ebaf37cdfdaf6d01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc312448a4537b110bf1701bfb964501"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../unity.scopes/index.html#a45babc254d3548863d79ee54f266e84d">RegistryProxy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#afc312448a4537b110bf1701bfb964501">registry</a> () const </td></tr>
+<tr class="memdesc:afc312448a4537b110bf1701bfb964501"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a proxy to the Registry object.  More...<br /></td></tr>
+<tr class="separator:afc312448a4537b110bf1701bfb964501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8924298a103d43313fe1974c040e7736"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a8924298a103d43313fe1974c040e7736">run_scope</a> (<a class="el" href="../unity.scopes.ScopeBase/index.html">ScopeBase</a> *const scope_base, std::string const &amp;scope_ini_file)</td></tr>
+<tr class="memdesc:a8924298a103d43313fe1974c040e7736"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run a scope without going through the scope runner.  More...<br /></td></tr>
+<tr class="separator:a8924298a103d43313fe1974c040e7736"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24eec46bc15975c219642fcfe8e5357f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../unity.scopes/index.html#aa68ce1769f7a888d0b4b2951741ca75a">ObjectProxy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a24eec46bc15975c219642fcfe8e5357f">string_to_proxy</a> (std::string const &amp;s) const </td></tr>
+<tr class="memdesc:a24eec46bc15975c219642fcfe8e5357f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a string to a proxy.  More...<br /></td></tr>
+<tr class="separator:a24eec46bc15975c219642fcfe8e5357f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac96e508aa3d37d24eaf2aa65bdbfb43e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#ac96e508aa3d37d24eaf2aa65bdbfb43e">proxy_to_string</a> (<a class="el" href="../unity.scopes/index.html#aa68ce1769f7a888d0b4b2951741ca75a">ObjectProxy</a> const &amp;proxy) const </td></tr>
+<tr class="memdesc:ac96e508aa3d37d24eaf2aa65bdbfb43e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a proxy to a string.  More...<br /></td></tr>
+<tr class="separator:ac96e508aa3d37d24eaf2aa65bdbfb43e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96f5965eec2dd22c54cca9d99cb04653"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a96f5965eec2dd22c54cca9d99cb04653">~Runtime</a> ()</td></tr>
+<tr class="memdesc:a96f5965eec2dd22c54cca9d99cb04653"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys a Runtime instance.  More...<br /></td></tr>
+<tr class="separator:a96f5965eec2dd22c54cca9d99cb04653"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a0c24bf97fe98f57c4fc7ad04456bd40c"><td class="memItemLeft" align="right" valign="top">static UPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#a0c24bf97fe98f57c4fc7ad04456bd40c">create</a> (std::string const &amp;configfile=&quot;&quot;)</td></tr>
+<tr class="memdesc:a0c24bf97fe98f57c4fc7ad04456bd40c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiates the scopes runtime for a client with the given (optional) configuration file.  More...<br /></td></tr>
+<tr class="separator:a0c24bf97fe98f57c4fc7ad04456bd40c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa729688b3c887476118c0ab5ad6a5a54"><td class="memItemLeft" align="right" valign="top">static UPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index.html#aa729688b3c887476118c0ab5ad6a5a54">create_scope_runtime</a> (std::string const &amp;scope_id, std::string const &amp;configfile=&quot;&quot;)</td></tr>
+<tr class="memdesc:aa729688b3c887476118c0ab5ad6a5a54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a runtime for a scope.  More...<br /></td></tr>
+<tr class="separator:aa729688b3c887476118c0ab5ad6a5a54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The main object for query originators to access the scopes runtime. </p>
+<p>All interactions with the scopes runtime require a <a class="el" href="index.html" title="The main object for query originators to access the scopes runtime. ">Runtime</a> object to be instantiated first. The <a class="el" href="index.html" title="The main object for query originators to access the scopes runtime. ">Runtime</a> instance controls the overall life cycle; once a <a class="el" href="index.html" title="The main object for query originators to access the scopes runtime. ">Runtime</a> instance goes out of scope, the application must not make further calls on any instance obtained via the destroyed <a class="el" href="index.html" title="The main object for query originators to access the scopes runtime. ">Runtime</a>.</p>
+<p>The application must instantiate a <a class="el" href="index.html" title="The main object for query originators to access the scopes runtime. ">Runtime</a> object only after <code>main()</code> is entered, and it must destroy the instance before leaving <code>main()</code>; failure to do so results in undefined behavior.</p>
+<p>Note that scope implementations do not need to instantiate a <a class="el" href="index.html" title="The main object for query originators to access the scopes runtime. ">Runtime</a> instance. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a96f5965eec2dd22c54cca9d99cb04653"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unity::scopes::Runtime::~Runtime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Destroys a <a class="el" href="index.html" title="The main object for query originators to access the scopes runtime. ">Runtime</a> instance. </p>
+<p>The destructor implicitly calls <a class="el" href="index.html#a37009c392ed3a7c6ebaf37cdfdaf6d01" title="Shuts down the runtime, reclaiming all associated resources. ">destroy()</a> if the application code does not explicitly destroy the instance. You <em>must not</em> permit a <a class="el" href="index.html" title="The main object for query originators to access the scopes runtime. ">Runtime</a> instance to persist beyond the end of <code>main()</code>; doing so has undefined behavior. </p>
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a0c24bf97fe98f57c4fc7ad04456bd40c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Runtime::UPtr unity::scopes::Runtime::create </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>configfile</em> = <code>&quot;&quot;</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Instantiates the scopes runtime for a client with the given (optional) configuration file. </p>
+<p>The life time of the runtime is under control of the caller. Letting the returned <code>unique_ptr</code> go out of scope shuts down the runtime.</p>
+<p>You <em>must not</em> create a <a class="el" href="index.html" title="The main object for query originators to access the scopes runtime. ">Runtime</a> instance until after <code>main()</code> is entered, and you <em>must</em> destroy it before leaving <code>main()</code> (either by explicitly calling <a class="el" href="index.html#a37009c392ed3a7c6ebaf37cdfdaf6d01" title="Shuts down the runtime, reclaiming all associated resources. ">destroy()</a>, or by letting the returned <code>unique_ptr</code> go out of scope). Failure to do so causes undefined behavior.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">configfile</td><td>The path name of the configuration file to use.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>If configfile is the empty string, a default configuration is used. </p>
+</div>
+</div>
+<a class="anchor" id="aa729688b3c887476118c0ab5ad6a5a54"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Runtime::UPtr unity::scopes::Runtime::create_scope_runtime </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>scope_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>configfile</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Create a runtime for a scope. </p>
+<p>This method is provided for custom scoperunner implementations, for example, for scopes written in Go.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scope_id</td><td>The unique ID of the scope. If scope_id is empty, a unique ID is used. Calling <code>create_scope_runtime("", "Runtime.ini")</code> is equivalent to calling <code>create("Runtime.ini")</code>. </td></tr>
+    <tr><td class="paramname">configfile</td><td>The path to the runtime .ini file. If empty, the default configuration is used. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <code>unique_ptr</code> to the runtime instance. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a37009c392ed3a7c6ebaf37cdfdaf6d01"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unity::scopes::Runtime::destroy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Shuts down the runtime, reclaiming all associated resources. </p>
+<p>Calling <a class="el" href="index.html#a37009c392ed3a7c6ebaf37cdfdaf6d01" title="Shuts down the runtime, reclaiming all associated resources. ">destroy()</a> is optional; the destructor implicitly calls <a class="el" href="index.html#a37009c392ed3a7c6ebaf37cdfdaf6d01" title="Shuts down the runtime, reclaiming all associated resources. ">destroy()</a> if it was not called explicitly. However, no exceptions are thrown by the destructor. If you want to log or handle any exceptions during shutdown, call <a class="el" href="index.html#a37009c392ed3a7c6ebaf37cdfdaf6d01" title="Shuts down the runtime, reclaiming all associated resources. ">destroy()</a> explicitly before letting the <code>unique_ptr</code> returned by <a class="el" href="index.html#a0c24bf97fe98f57c4fc7ad04456bd40c" title="Instantiates the scopes runtime for a client with the given (optional) configuration file...">create()</a> go out of scope. </p>
+</div>
+</div>
+<a class="anchor" id="ac96e508aa3d37d24eaf2aa65bdbfb43e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string unity::scopes::Runtime::proxy_to_string </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../unity.scopes/index.html#aa68ce1769f7a888d0b4b2951741ca75a">ObjectProxy</a> const &amp;&#160;</td>
+          <td class="paramname"><em>proxy</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Converts a proxy to a string. </p>
+<p><a class="el" href="index.html#ac96e508aa3d37d24eaf2aa65bdbfb43e" title="Converts a proxy to a string. ">proxy_to_string()</a> converts the passed proxy to a string. Note that it is typically easier to call the ObjectProxy::to_string() method to achieve the same thing. However, <a class="el" href="index.html#ac96e508aa3d37d24eaf2aa65bdbfb43e" title="Converts a proxy to a string. ">proxy_to_string()</a> is needed in order to obtain a string for a null proxy (because it is not possible to invoke a member function on a null proxy).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">proxy</td><td>The proxy to convert to a string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The string representation of the proxy. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="afc312448a4537b110bf1701bfb964501"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../unity.scopes/index.html#a45babc254d3548863d79ee54f266e84d">RegistryProxy</a> unity::scopes::Runtime::registry </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns a proxy to the <a class="el" href="../unity.scopes.Registry/index.html" title="White pages service for available scopes. ">Registry</a> object. </p>
+<p>The returned proxy allows application code to interact with the registry, which provides access to the available scopes. </p>
+</div>
+</div>
+<a class="anchor" id="a8924298a103d43313fe1974c040e7736"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unity::scopes::Runtime::run_scope </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../unity.scopes.ScopeBase/index.html">ScopeBase</a> *const&#160;</td>
+          <td class="paramname"><em>scope_base</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>scope_ini_file</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Run a scope without going through the scope runner. </p>
+<p>This method is intended to run a scope that can not be loaded via the scope runner, such as those written in languages that cannot be dynamically loaded.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scope_base</td><td>The scope implementation </td></tr>
+    <tr><td class="paramname">scope_ini_file</td><td>The full path of scope configuration file </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a24eec46bc15975c219642fcfe8e5357f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../unity.scopes/index.html#aa68ce1769f7a888d0b4b2951741ca75a">ObjectProxy</a> unity::scopes::Runtime::string_to_proxy </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Convert a string to a proxy. </p>
+<p>This method is intended for testing purposes. Do not use <a class="el" href="index.html#a24eec46bc15975c219642fcfe8e5357f" title="Convert a string to a proxy. ">string_to_proxy()</a> in production code! <a class="el" href="index.html#a24eec46bc15975c219642fcfe8e5357f" title="Convert a string to a proxy. ">string_to_proxy()</a> converts a string to a proxy. The returned proxy must be down-cast using <code>dynamic_pointer_cast</code> to the correct type before it can be used.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>The string to convert into a proxy. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted proxy. It is possible for the return value to be <code>nullptr</code>, but only if the passed string represents a null proxy. Otherwise, the return value is a non-null proxy, or an exception (for example, if the proxy string did not parse correctly, or if the proxy could not be instantiated due to incorrect values inside the string). </dd></dl>
+</div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>

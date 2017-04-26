@@ -1,0 +1,718 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+
+  <title>Grid [sdk-15.04.4/QtQuick.Grid] | Ubuntu developer portal</title>
+
+  
+  <link rel="shortcut icon" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/favicon.ico" type="image/x-icon" />
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/assets/sites/guidelines/css/responsive/latest/ubuntu-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/beta/global-responsive.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/css/core-print.css" />
+  
+  
+  
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/developer_portal/css/devportal.css"/>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://developer.ubuntu.com/static/devportal_static/api_docs/css/qdoc.css"/>
+
+
+  
+  <!-- javascript -->
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/modernizr.2.7.1.js"></script>
+  <script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/Imager.js"></script>
+  <script>var website_assets="/assets/sites/ubuntu/latest/u";</script>
+  
+ 
+  
+  
+  
+
+
+    <script type="text/javascript">
+    if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+    heap.load("3280028620");
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>if(window.location.href.indexOf("cn.developer.ubuntu.com") == -1){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9KCMZ');
+    }</script>
+<!-- End Google Tag Manager -->
+
+
+
+        
+        <header class="banner global" role="banner">
+            
+            <nav role="navigation" class="nav-primary nav-right">
+                <div class="logo">
+                    <a class="logo-ubuntu" href="https://developer.ubuntu.com/">
+                        <img width="106" height="25" src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/logos/logo-ubuntu-orange.svg" alt="" />
+                        <span>developer</span>
+                    </a>
+                </div>
+
+                <ul>
+		 <li class="accessibility-aid"><a accesskey="s" href="index.html#main-content">Jump to content</a></li>
+                
+
+
+
+<li>
+	<a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/core" class="">Core</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/community/" class="">Community</a>
+	
+</li>
+
+<li>
+	<a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a>
+	
+</li>
+
+
+
+		
+		<li class="login">
+		    <a href="https://myapps.developer.ubuntu.com/">My Apps</a>
+		</li>		
+		
+                </ul>
+
+                
+                <form id="form-search" action="https://developer.ubuntu.com/en/search/" class="header-search">
+                    <label for="edit-keys" class="accessibility-aid">Search</label>
+                    <input type="search" maxlength="255" name="q" id="search" class="form-text" placeholder="Search" value="" />
+                    <button type="submit"><img src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/img/search-white.svg" alt="Search" height="28" /></button>
+                </form>
+                
+            </nav>
+            
+        </header>
+
+        
+        <div class="wrapper">
+            
+            <div id="main-content" class="inner-wrapper">
+
+                
+                <nav role="navigation" class="nav-secondary clearfix open">
+                    <ul class="breadcrumb">
+                        
+<li class=""><a href="../../../../index.html">APIs</a> &rsaquo;</li>
+<li class=""><a href="../../../index.html">Apps</a> &rsaquo;</li>
+<li class=""><a href="../../index.html">QML</a> &rsaquo;</li>
+<li><a href="../index.html">SDK 15.04.4</a> &rsaquo;</li>
+
+<li><a href="../QtQuick/index.html">QtQuick</a> &rsaquo;</li>
+
+
+                    </ul>
+                    <ul class="second-level-nav">
+                        
+<li class="active">Grid</li>
+
+                    </ul>
+                </nav>
+                
+
+                
+	<div class="row">
+		<div class="ten-col">
+	
+	<!-- Source File: qml-qtquick-grid.html -->
+	<!-- Source Format: qdoc -->
+<h1>Grid</h1>
+<div id="element_content" class="qdoc">
+<!-- Start Element Content -->
+<span class="subtitle"></span>
+<!-- $$$Grid-brief -->
+<p>Positions its children in grid formation More...</p>
+<!-- @@@Grid -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import QtQuick 2.4</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="../QtQuick.Item/index.html">Item</a></p>
+</td></tr></table></div><ul>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="index.html#add-prop">add</a></b></b> : Transition</li>
+<li class="fn"><b><b><a href="index.html#columnSpacing-prop">columnSpacing</a></b></b> : qreal</li>
+<li class="fn"><b><b><a href="index.html#columns-prop">columns</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#effectiveHorizontalItemAlignment-prop">effectiveHorizontalItemAlignment</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="index.html#effectiveLayoutDirection-prop">effectiveLayoutDirection</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="index.html#flow-prop">flow</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="index.html#horizontalItemAlignment-prop">horizontalItemAlignment</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="index.html#layoutDirection-prop">layoutDirection</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="index.html#move-prop">move</a></b></b> : Transition</li>
+<li class="fn"><b><b><a href="index.html#populate-prop">populate</a></b></b> : Transition</li>
+<li class="fn"><b><b><a href="index.html#rowSpacing-prop">rowSpacing</a></b></b> : qreal</li>
+<li class="fn"><b><b><a href="index.html#rows-prop">rows</a></b></b> : int</li>
+<li class="fn"><b><b><a href="index.html#spacing-prop">spacing</a></b></b> : qreal</li>
+<li class="fn"><b><b><a href="index.html#verticalItemAlignment-prop">verticalItemAlignment</a></b></b> : enumeration</li>
+</ul>
+<!-- $$$Grid-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<p>Grid is a type that positions its child items in grid formation.</p>
+<p>A Grid creates a grid of cells that is large enough to hold all of its child items, and places these items in the cells from left to right and top to bottom. Each item is positioned at the top-left corner of its cell with position (0, 0).</p>
+<p>A Grid defaults to four columns, and creates as many rows as are necessary to fit all of its child items. The number of rows and columns can be constrained by setting the <a href="index.html#rows-prop">rows</a> and <a href="index.html#columns-prop">columns</a> properties.</p>
+<p>For example, below is a Grid that contains five rectangles of various sizes:</p>
+<pre class="qml">import QtQuick 2.0
+<span class="type"><a href="index.html">Grid</a></span> {
+    <span class="name">columns</span>: <span class="number">3</span>
+    <span class="name">spacing</span>: <span class="number">2</span>
+    <span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> { <span class="name">color</span>: <span class="string">&quot;red&quot;</span>; <span class="name">width</span>: <span class="number">50</span>; <span class="name">height</span>: <span class="number">50</span> }
+    <span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> { <span class="name">color</span>: <span class="string">&quot;green&quot;</span>; <span class="name">width</span>: <span class="number">20</span>; <span class="name">height</span>: <span class="number">50</span> }
+    <span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> { <span class="name">color</span>: <span class="string">&quot;blue&quot;</span>; <span class="name">width</span>: <span class="number">50</span>; <span class="name">height</span>: <span class="number">20</span> }
+    <span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> { <span class="name">color</span>: <span class="string">&quot;cyan&quot;</span>; <span class="name">width</span>: <span class="number">50</span>; <span class="name">height</span>: <span class="number">50</span> }
+    <span class="type"><a href="../QtQuick.Rectangle/index.html">Rectangle</a></span> { <span class="name">color</span>: <span class="string">&quot;magenta&quot;</span>; <span class="name">width</span>: <span class="number">10</span>; <span class="name">height</span>: <span class="number">10</span> }
+}</pre>
+<p>The Grid automatically positions the child items in a grid formation:</p>
+<p class="centerAlign"><img src="https://developer.ubuntu.com/static/devportal_uploaded/a2507791-ceba-4cff-9b27-bfd08cc0923a-api/apps/qml/sdk-15.04.4/QtQuick.Grid/images/gridLayout_example.png" alt="" /></p><p>If an item within a Grid is not <a href="../QtQuick.Item/index.html#visible-prop">visible</a>, or if it has a width or height of 0, the item will not be laid out and it will not be visible within the column. Also, since a Grid automatically positions its children, a child item within a Grid should not set its <a href="../QtQuick.Item/index.html#x-prop">x</a> or <a href="../QtQuick.Item/index.html#y-prop">y</a> positions or anchor itself with any of the <a href="../QtQuick.Item/index.html#anchors-prop">anchor</a> properties.</p>
+<p>For more information on using Grid and other related positioner-types, see <a href="../QtQuick.qtquick-positioning-layouts/index.html">Item Positioners</a>.</p>
+<p><b>See also </b><a href="../QtQuick.qtquick-positioning-layouts/index.html#flow">Flow</a>, <a href="../QtQuick.qtquick-positioning-layouts/index.html#row">Row</a>, <a href="../QtQuick.qtquick-positioning-layouts/index.html#column">Column</a>, <a href="../QtQuick.Positioner/index.html">Positioner</a>, GridLayout, and <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04.4/QtQuick.positioners/">Qt Quick Examples - Positioners</a>.</p>
+<!-- @@@Grid -->
+<h2>Property Documentation</h2>
+<!-- $$$add -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="add-prop"><td class="tblQmlPropNode"><p><a name="add-prop"></a><span class="name">add</span> : <span class="type"><a href="../QtQuick.Transition/index.html">Transition</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the transition to be run for items that are added to this positioner. For a positioner, this applies to:</p>
+<ul>
+<li>Items that are created or reparented as a child of the positioner after the positioner has been created</li>
+<li>Child items that change their <a href="../QtQuick.Item/index.html#visible-prop">Item::visible</a> property from false to true, and thus are now visible</li>
+</ul>
+<p>The transition can use the <a href="../QtQuick.ViewTransition/index.html">ViewTransition</a> property to access more details about the item that is being added. See the <a href="../QtQuick.ViewTransition/index.html">ViewTransition</a> documentation for more details and examples on using these transitions.</p>
+<p><b>Note: </b>This transition is not applied to the items that already part of the positioner at the time of its creation. In this case, the <a href="index.html#populate-prop">populate</a> transition is applied instead.</p><p><b>See also </b><a href="index.html#populate-prop">populate</a>, <a href="../QtQuick.ViewTransition/index.html">ViewTransition</a>, and <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04.4/QtQuick.positioners/">Qt Quick Examples - Positioners</a>.</p>
+</div></div><!-- @@@add -->
+<br/>
+<!-- $$$columnSpacing -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="columnSpacing-prop"><td class="tblQmlPropNode"><p><a name="columnSpacing-prop"></a><span class="name">columnSpacing</span> : <span class="type">qreal</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the spacing in pixels between columns.</p>
+<p>If this property is not set, then spacing is used for the column spacing.</p>
+<p>By default this property is not set.</p>
+<p>This QML property was introduced in  Qt 5.0.</p>
+<p><b>See also </b><a href="index.html#rowSpacing-prop">rowSpacing</a>.</p>
+</div></div><!-- @@@columnSpacing -->
+<br/>
+<!-- $$$columns -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="columns-prop"><td class="tblQmlPropNode"><p><a name="columns-prop"></a><span class="name">columns</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the number of columns in the grid. The default number of columns is 4.</p>
+<p>If the grid does not have enough items to fill the specified number of columns, some columns will be of zero width.</p>
+</div></div><!-- @@@columns -->
+<br/>
+<!-- $$$effectiveHorizontalItemAlignment -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="effectiveHorizontalItemAlignment-prop"><td class="tblQmlPropNode"><p><a name="effectiveHorizontalItemAlignment-prop"></a><span class="name">effectiveHorizontalItemAlignment</span> : <span class="type">enumeration</span></p></td></tr></table></div></div><div class="qmldoc"><p>Sets the horizontal and vertical alignment of items in the Grid. By default, the items are vertically aligned to the top. Horizontal alignment follows the <a href="index.html#layoutDirection-prop">layoutDirection</a> of the Grid, for example when having a <a href="index.html#layoutDirection-prop">layoutDirection</a> from LeftToRight, the items will be aligned on the left.</p>
+<p>The valid values for <code>horizontalItemAlignment</code> are, <code>Grid.AlignLeft</code>, <code>Grid.AlignRight</code> and <code>Grid.AlignHCenter</code>.</p>
+<p>The valid values for <code>verticalItemAlignment</code> are <code>Grid.AlignTop</code>, <code>Grid.AlignBottom</code> and <code>Grid.AlignVCenter</code>.</p>
+<p>The below images show three examples of how to align items.</p>
+<div class="table"><table class="generic">
+ <tr valign="top" class="odd"><td ></td><td ><img src="https://developer.ubuntu.com/static/devportal_uploaded/fdf306b1-57f2-498a-8b82-afe40db8e4fd-api/apps/qml/sdk-15.04.4/QtQuick.Grid/images/gridLayout_aligntopleft.png" alt="" /></td><td ><img src="https://developer.ubuntu.com/static/devportal_uploaded/b981b5d4-7fd8-46d6-aa04-87e321606f73-api/apps/qml/sdk-15.04.4/QtQuick.Grid/images/gridLayout_aligntop.png" alt="" /></td><td ><img src="https://developer.ubuntu.com/static/devportal_uploaded/253f08f4-d22e-4a65-9a1e-a65c18dfe0a0-api/apps/qml/sdk-15.04.4/QtQuick.Grid/images/gridLayout_aligncenter.png" alt="" /></td></tr>
+<tr valign="top" class="even"><td >Horizontal alignment</td><td >AlignLeft</td><td >AlignHCenter</td><td >AlignHCenter</td></tr>
+<tr valign="top" class="odd"><td >Vertical alignment</td><td >AlignTop</td><td >AlignTop</td><td >AlignVCenter</td></tr>
+</table></div>
+<p>When mirroring the layout using either the attached property <a href="../QtQuick.LayoutMirroring/index.html#enabled-prop">LayoutMirroring::enabled</a> or by setting the <a href="index.html#layoutDirection-prop">layoutDirection</a>, the horizontal alignment of items will be mirrored as well. However, the property <code>horizontalItemAlignment</code> will remain unchanged. To query the effective horizontal alignment of items, use the read-only property <code>effectiveHorizontalItemAlignment</code>.</p>
+<p><b>See also </b><a href="index.html#layoutDirection-prop">Grid::layoutDirection</a> and <a href="../QtQuick.LayoutMirroring/index.html">LayoutMirroring</a>.</p>
+</div></div><!-- @@@effectiveHorizontalItemAlignment -->
+<br/>
+<!-- $$$effectiveLayoutDirection -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="effectiveLayoutDirection-prop"><td class="tblQmlPropNode"><p><a name="effectiveLayoutDirection-prop"></a><span class="name">effectiveLayoutDirection</span> : <span class="type">enumeration</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the effective layout direction of the grid.</p>
+<p>When using the attached property <a href="../QtQuick.LayoutMirroring/index.html#enabled-prop">LayoutMirroring::enabled</a> for locale layouts, the visual layout direction of the grid positioner will be mirrored. However, the property <a href="index.html#layoutDirection-prop">layoutDirection</a> will remain unchanged.</p>
+<p><b>See also </b><a href="index.html#layoutDirection-prop">Grid::layoutDirection</a> and <a href="../QtQuick.LayoutMirroring/index.html">LayoutMirroring</a>.</p>
+</div></div><!-- @@@effectiveLayoutDirection -->
+<br/>
+<!-- $$$flow -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="flow-prop"><td class="tblQmlPropNode"><p><a name="flow-prop"></a><span class="name">flow</span> : <span class="type">enumeration</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the flow of the layout.</p>
+<p>Possible values are:</p>
+<ul>
+<li>Grid.LeftToRight (default) - Items are positioned next to each other in the <a href="index.html#layoutDirection-prop">layoutDirection</a>, then wrapped to the next line.</li>
+<li>Grid.TopToBottom - Items are positioned next to each other from top to bottom, then wrapped to the next column.</li>
+</ul>
+</div></div><!-- @@@flow -->
+<br/>
+<!-- $$$horizontalItemAlignment -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="horizontalItemAlignment-prop"><td class="tblQmlPropNode"><p><a name="horizontalItemAlignment-prop"></a><span class="name">horizontalItemAlignment</span> : <span class="type">enumeration</span></p></td></tr></table></div></div><div class="qmldoc"><p>Sets the horizontal and vertical alignment of items in the Grid. By default, the items are vertically aligned to the top. Horizontal alignment follows the <a href="index.html#layoutDirection-prop">layoutDirection</a> of the Grid, for example when having a <a href="index.html#layoutDirection-prop">layoutDirection</a> from LeftToRight, the items will be aligned on the left.</p>
+<p>The valid values for <code>horizontalItemAlignment</code> are, <code>Grid.AlignLeft</code>, <code>Grid.AlignRight</code> and <code>Grid.AlignHCenter</code>.</p>
+<p>The valid values for <code>verticalItemAlignment</code> are <code>Grid.AlignTop</code>, <code>Grid.AlignBottom</code> and <code>Grid.AlignVCenter</code>.</p>
+<p>The below images show three examples of how to align items.</p>
+<div class="table"><table class="generic">
+ <tr valign="top" class="odd"><td ></td><td ><img src="https://developer.ubuntu.com/static/devportal_uploaded/6fbce5f8-290b-4dab-99fd-21aac66dfc6a-api/apps/qml/sdk-15.04.4/QtQuick.Grid/images/gridLayout_aligntopleft.png" alt="" /></td><td ><img src="https://developer.ubuntu.com/static/devportal_uploaded/dd9b79e3-ee1e-47e7-9ab8-f1ca7506c067-api/apps/qml/sdk-15.04.4/QtQuick.Grid/images/gridLayout_aligntop.png" alt="" /></td><td ><img src="https://developer.ubuntu.com/static/devportal_uploaded/0f56f6ac-52a6-4e06-8579-47428624ef72-api/apps/qml/sdk-15.04.4/QtQuick.Grid/images/gridLayout_aligncenter.png" alt="" /></td></tr>
+<tr valign="top" class="even"><td >Horizontal alignment</td><td >AlignLeft</td><td >AlignHCenter</td><td >AlignHCenter</td></tr>
+<tr valign="top" class="odd"><td >Vertical alignment</td><td >AlignTop</td><td >AlignTop</td><td >AlignVCenter</td></tr>
+</table></div>
+<p>When mirroring the layout using either the attached property <a href="../QtQuick.LayoutMirroring/index.html#enabled-prop">LayoutMirroring::enabled</a> or by setting the <a href="index.html#layoutDirection-prop">layoutDirection</a>, the horizontal alignment of items will be mirrored as well. However, the property <code>horizontalItemAlignment</code> will remain unchanged. To query the effective horizontal alignment of items, use the read-only property <code>effectiveHorizontalItemAlignment</code>.</p>
+<p><b>See also </b><a href="index.html#layoutDirection-prop">Grid::layoutDirection</a> and <a href="../QtQuick.LayoutMirroring/index.html">LayoutMirroring</a>.</p>
+</div></div><!-- @@@horizontalItemAlignment -->
+<br/>
+<!-- $$$layoutDirection -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="layoutDirection-prop"><td class="tblQmlPropNode"><p><a name="layoutDirection-prop"></a><span class="name">layoutDirection</span> : <span class="type">enumeration</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the layout direction of the layout.</p>
+<p>Possible values are:</p>
+<ul>
+<li>Qt.LeftToRight (default) - Items are positioned from the top to bottom, and left to right. The flow direction is dependent on the <a href="index.html#flow-prop">Grid::flow</a> property.</li>
+<li>Qt.RightToLeft - Items are positioned from the top to bottom, and right to left. The flow direction is dependent on the <a href="index.html#flow-prop">Grid::flow</a> property.</li>
+</ul>
+<p><b>See also </b><a href="../QtQuick.Flow/index.html#layoutDirection-prop">Flow::layoutDirection</a>, <a href="../QtQuick.Row/index.html#layoutDirection-prop">Row::layoutDirection</a>, and <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04.4/QtQuick.righttoleft/">Qt Quick Examples - Right to Left</a>.</p>
+</div></div><!-- @@@layoutDirection -->
+<br/>
+<!-- $$$move -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="move-prop"><td class="tblQmlPropNode"><p><a name="move-prop"></a><span class="name">move</span> : <span class="type"><a href="../QtQuick.Transition/index.html">Transition</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the transition to run for items that have moved within the positioner. For a positioner, this applies to:</p>
+<ul>
+<li>Child items that move when they are displaced due to the addition, removal or rearrangement of other items in the positioner</li>
+<li>Child items that are repositioned due to the resizing of other items in the positioner</li>
+</ul>
+<p>The transition can use the <a href="../QtQuick.ViewTransition/index.html">ViewTransition</a> property to access more details about the item that is being moved. Note, however, that for this move transition, the <a href="../QtQuick.ViewTransition/index.html">ViewTransition</a>.targetIndexes and <a href="../QtQuick.ViewTransition/index.html">ViewTransition</a>.targetItems lists are only set when this transition is triggered by the addition of other items in the positioner; in other cases, these lists will be empty. See the <a href="../QtQuick.ViewTransition/index.html">ViewTransition</a> documentation for more details and examples on using these transitions.</p>
+<p><b>Note: </b>In Qt Quick 1, this transition was applied to all items that were part of the positioner at the time of its creation. From <a href="../QtQuick.qtquick-index/index.html">QtQuick 2</a> onwards, positioners apply the <a href="index.html#populate-prop">populate</a> transition to these items instead.</p><p><b>See also </b><a href="index.html#add-prop">add</a>, <a href="../QtQuick.ViewTransition/index.html">ViewTransition</a>, and <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04.4/QtQuick.positioners/">Qt Quick Examples - Positioners</a>.</p>
+</div></div><!-- @@@move -->
+<br/>
+<!-- $$$populate -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="populate-prop"><td class="tblQmlPropNode"><p><a name="populate-prop"></a><span class="name">populate</span> : <span class="type"><a href="../QtQuick.Transition/index.html">Transition</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the transition to be run for items that are part of this positioner at the time of its creation. The transition is run when the positioner is first created.</p>
+<p>The transition can use the <a href="../QtQuick.ViewTransition/index.html">ViewTransition</a> property to access more details about the item that is being added. See the <a href="../QtQuick.ViewTransition/index.html">ViewTransition</a> documentation for more details and examples on using these transitions.</p>
+<p><b>See also </b><a href="index.html#add-prop">add</a>, <a href="../QtQuick.ViewTransition/index.html">ViewTransition</a>, and <a href="https://developer.ubuntu.com/api/apps/qml/sdk-15.04.4/QtQuick.positioners/">Qt Quick Examples - Positioners</a>.</p>
+</div></div><!-- @@@populate -->
+<br/>
+<!-- $$$rowSpacing -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="rowSpacing-prop"><td class="tblQmlPropNode"><p><a name="rowSpacing-prop"></a><span class="name">rowSpacing</span> : <span class="type">qreal</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the spacing in pixels between rows.</p>
+<p>If this property is not set, then spacing is used for the row spacing.</p>
+<p>By default this property is not set.</p>
+<p>This QML property was introduced in  Qt 5.0.</p>
+<p><b>See also </b><a href="index.html#columnSpacing-prop">columnSpacing</a>.</p>
+</div></div><!-- @@@rowSpacing -->
+<br/>
+<!-- $$$rows -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="rows-prop"><td class="tblQmlPropNode"><p><a name="rows-prop"></a><span class="name">rows</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the number of rows in the grid.</p>
+<p>If the grid does not have enough items to fill the specified number of rows, some rows will be of zero width.</p>
+</div></div><!-- @@@rows -->
+<br/>
+<!-- $$$spacing -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="spacing-prop"><td class="tblQmlPropNode"><p><a name="spacing-prop"></a><span class="name">spacing</span> : <span class="type">qreal</span></p></td></tr></table></div></div><div class="qmldoc"><p>The spacing is the amount in pixels left empty between adjacent items. The amount of spacing applied will be the same in the horizontal and vertical directions. The default spacing is 0.</p>
+<p>The below example places a Grid containing a red, a blue and a green rectangle on a gray background. The area the grid positioner occupies is colored white. The positioner on the left has the no spacing (the default), and the positioner on the right has a spacing of 6.</p>
+<p><img src="https://developer.ubuntu.com/static/devportal_uploaded/82996cc4-11db-4f3a-af19-db1b0ea49b97-api/apps/qml/sdk-15.04.4/QtQuick.Grid/images/qml-grid-no-spacing.png" alt="" /> <img src="https://developer.ubuntu.com/static/devportal_uploaded/faf79f17-a11f-4f63-b458-6c102b51ab91-api/apps/qml/sdk-15.04.4/QtQuick.Grid/images/qml-grid-spacing.png" alt="" /></p>
+<p><b>See also </b><a href="index.html#rows-prop">rows</a> and <a href="index.html#columns-prop">columns</a>.</p>
+</div></div><!-- @@@spacing -->
+<br/>
+<!-- $$$verticalItemAlignment -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="verticalItemAlignment-prop"><td class="tblQmlPropNode"><p><a name="verticalItemAlignment-prop"></a><span class="name">verticalItemAlignment</span> : <span class="type">enumeration</span></p></td></tr></table></div></div><div class="qmldoc"><p>Sets the horizontal and vertical alignment of items in the Grid. By default, the items are vertically aligned to the top. Horizontal alignment follows the <a href="index.html#layoutDirection-prop">layoutDirection</a> of the Grid, for example when having a <a href="index.html#layoutDirection-prop">layoutDirection</a> from LeftToRight, the items will be aligned on the left.</p>
+<p>The valid values for <code>horizontalItemAlignment</code> are, <code>Grid.AlignLeft</code>, <code>Grid.AlignRight</code> and <code>Grid.AlignHCenter</code>.</p>
+<p>The valid values for <code>verticalItemAlignment</code> are <code>Grid.AlignTop</code>, <code>Grid.AlignBottom</code> and <code>Grid.AlignVCenter</code>.</p>
+<p>The below images show three examples of how to align items.</p>
+<div class="table"><table class="generic">
+ <tr valign="top" class="odd"><td ></td><td ><img src="https://developer.ubuntu.com/static/devportal_uploaded/dd112003-9315-49c5-b5f7-28b4cc452046-api/apps/qml/sdk-15.04.4/QtQuick.Grid/images/gridLayout_aligntopleft.png" alt="" /></td><td ><img src="https://developer.ubuntu.com/static/devportal_uploaded/82c528e5-3db0-4ab2-acca-98a1d4dd2092-api/apps/qml/sdk-15.04.4/QtQuick.Grid/images/gridLayout_aligntop.png" alt="" /></td><td ><img src="https://developer.ubuntu.com/static/devportal_uploaded/928e5ee4-5caf-4658-9800-b64218b9dac9-api/apps/qml/sdk-15.04.4/QtQuick.Grid/images/gridLayout_aligncenter.png" alt="" /></td></tr>
+<tr valign="top" class="even"><td >Horizontal alignment</td><td >AlignLeft</td><td >AlignHCenter</td><td >AlignHCenter</td></tr>
+<tr valign="top" class="odd"><td >Vertical alignment</td><td >AlignTop</td><td >AlignTop</td><td >AlignVCenter</td></tr>
+</table></div>
+<p>When mirroring the layout using either the attached property <a href="../QtQuick.LayoutMirroring/index.html#enabled-prop">LayoutMirroring::enabled</a> or by setting the <a href="index.html#layoutDirection-prop">layoutDirection</a>, the horizontal alignment of items will be mirrored as well. However, the property <code>horizontalItemAlignment</code> will remain unchanged. To query the effective horizontal alignment of items, use the read-only property <code>effectiveHorizontalItemAlignment</code>.</p>
+<p><b>See also </b><a href="index.html#layoutDirection-prop">Grid::layoutDirection</a> and <a href="../QtQuick.LayoutMirroring/index.html">LayoutMirroring</a>.</p>
+</div></div><!-- @@@verticalItemAlignment -->
+<br/>
+        </div>
+       </div>
+   </div>
+   </div>
+
+<!-- End Element Content -->
+</div>
+
+
+		</div>
+	</div>
+
+
+            </div><!-- div.inner-wrapper -->
+        </div><!-- div.wrapper -->
+
+        
+        
+        <footer class="global clearfix no-global">
+    <div class="footer-c">
+        <p class="top-link"><a href="index.html#">Back to top</a>
+        </p>
+    </div>
+    <nav id="main-navigation" role="navigation" class="clearfix">
+        <div class="footer-a">
+            <div class="clearfix">
+                <ul>
+		    
+
+
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/desktop/" class="">Desktop</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/desktop/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="http://snapcraft.io/?utm_source=developer.ubuntu.com&amp;utm_medium=devportal&amp;utm_term=snaps%20snapcraft%20desktop&amp;utm_content=menu&amp;utm_campaign=duc_snappers" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://github.com/ubuntu/snappy-playpen" class="">Examples</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/phone/" class="">Phone</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/phone/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/scopes/" class="">Scopes</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/apps/" class="">Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/web/" class="">Web Apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/platform/" class="">Platform</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/phone/devices/" class="">Devices</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/core" class="">Core</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/core" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/get-started" class="">Get started</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/tutorials" class="">Tutorials</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/examples" class="">Examples</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/publish-and-distribute" class="">Publish and distribute</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/documentation" class="">Documentation</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/core/troubleshooting" class="">Troubleshooting</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/community/" class="">Community</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/community/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/training/" class="">App development training</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/core-apps/" class="">Core apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/community/blog/" class="">Blog</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+<li>
+	<h2><a href="https://developer.ubuntu.com/en/publish/" class="">Publish</a></h2>
+	
+	<ul class="second-level-nav">
+    	<li class="first"><a href="https://developer.ubuntu.com/en/publish/" >Overview</a></li>
+		
+
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/application-states/" class="">Application states</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/packaging-click-apps/" class="">Packaging click apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/creating-a-good-icon/" class="">Creating a good icon</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/web/" class="">Web</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/security-policy-groups/" class="">Security policy groups</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/choosing-a-license/" class="">Choosing a license</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/other-forms-of-submitting-apps/" class="">Other forms of submitting apps</a>
+</li>
+
+<li class="">
+	<a href="https://developer.ubuntu.com/en/publish/scopes/" class="">Scopes</a>
+</li>
+
+
+	</ul>
+	
+</li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.footer-a -->
+        <div class="footer-b inline-lists">
+            <ul class="clearfix">
+            <li>
+            
+
+
+
+
+                    <h2>View in:</h2>
+                    <ul class="second-level-nav">
+					
+					<li class="lang active">
+						<a href="index.html" title="Change to language: English">English</a>
+					</li>
+					
+					<li class="lang">
+						<a href="index.html" title="Change to language: Simplified Chinese">Simplified Chinese</a>
+					</li>
+					
+                    </ul>
+
+
+
+            </li>
+            
+<li>
+	<h2><a href="http://ubuntu.com/download/">Download</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/download">Overview</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/cloud">Cloud</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/server">Server</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/desktop">Desktop</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/ubuntu-kylin">Ubuntu Kylin</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/download/alternative-downloads">Alternative downloads</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/support/">Support</a></h2>
+                    <ul class="second-level-nav">
+                        <li class="first"><a href="http://ubuntu.com/support">Overview</a>
+                        </li>
+                        <li><a href="http://www.ubuntu.com/usn/">Security notices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="http://ubuntu.com/about/">About</a></h2>
+                    <ul class="second-level-nav">
+                        <li><a href="http://ubuntu.com/about/about-ubuntu">About Ubuntu</a>
+                        </li>
+                        <li><a href="http://www.canonical.com/careers">Careers</a>
+                        </li>
+                        <li><a href="http://ubuntu.com/about/canonical-and-ubuntu">Canonical and Ubuntu</a>
+                        </li>
+                        <li><a accesskey="7" href="http://ubuntu.com/about/contact-us">Contact us</a>
+                        </li>
+                        <li><a accesskey="2" href="http://insights.ubuntu.com/feed/">Canonical news feed</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+    </nav>
+
+    <div class="legal clearfix has-cookie">
+	
+       <p class="twelve-col">© 2015 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+        <ul class="inline clear">
+            <li><a href="http://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li><a href="https://bugs.launchpad.net/developer-ubuntu-com/">Report a bug on this site</a>
+            </li>
+        </ul>
+        <span class="accessibility-aid"><a href="index.html#">Go to the top of the page</a></span>
+
+    </div>
+    <!-- /.legal -->
+</footer>
+        
+
+    
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shCore.js?ver=3.0.83c'></script>
+<script type='text/javascript' src='https://developer.ubuntu.com/static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0.83c'></script>
+<script type='text/javascript'>
+    (function(){
+	    var corecss = document.createElement('link');
+	    var themecss = document.createElement('link');
+	    var corecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+	    if ( corecss.setAttribute ) {
+			    corecss.setAttribute( "rel", "stylesheet" );
+			    corecss.setAttribute( "type", "text/css" );
+			    corecss.setAttribute( "href", corecssurl );
+	    } else {
+			    corecss.rel = "stylesheet";
+			    corecss.href = corecssurl;
+	    }
+	    document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+	    var themecssurl = "/static/devportal_static/developer_portal/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+	    if ( themecss.setAttribute ) {
+			    themecss.setAttribute( "rel", "stylesheet" );
+			    themecss.setAttribute( "type", "text/css" );
+			    themecss.setAttribute( "href", themecssurl );
+	    } else {
+			    themecss.rel = "stylesheet";
+			    themecss.href = themecssurl;
+	    }
+	    //document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+	    document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+    })();
+    SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+    SyntaxHighlighter.config.strings.help = '?';
+    SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+    SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+    SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+    SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.autoloader(
+      'js jscript javascript  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushJScript.js',
+      'c cpp                  /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushCpp.js',
+      'xml html               /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushXml.js',
+      'bash                   /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushBash.js',
+      'python                 /static/devportal_static/developer_portal/syntaxhighlighter3/scripts/shBrushPython.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+
+
+    
+
+
+<!-- Use this only until Modernizr fixes Opera Mini background-size detection -->
+<script>
+	var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
+	if(isOperaMini) {
+		var root = document.documentElement;
+		root.className += " opera-mini";
+	}
+</script>
+
+<script>
+	if(!core){ var core = {}; }
+	core.globalPrepend = 'body';
+</script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/yui-combined.min.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+
+<script src="https://developer.ubuntu.com/assets/sites/guidelines/js/responsive/core.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/global.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/scratch.js"></script>
+<script src="https://developer.ubuntu.com/assets/sites/ubuntu/latest/u/js/plugins/respond.min.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+      
+    /* Save to developer.ubuntu.com profile */	
+    _gaq.push(['_setAccount', 'UA-1018242-33']);
+    _gaq.push(['_setDomainName', '.ubuntu.com']);
+    _gaq.push(['_trackPageview']);
+
+    /* Save to www.ubuntu.com profile */	
+    _gaq.push(['b._setAccount', 'UA-1018242-4']);
+    _gaq.push(['b._setDomainName', '.ubuntu.com']);
+    _gaq.push(['b._trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+
+</html>
